@@ -1,0 +1,17 @@
+replace_path="history/states"
+replace_path="map/strategicregions"
+version="1"
+tags={
+	"Historical"
+	"Gameplay"
+	"Events"
+	"Alternative History"
+	"National Focuses"
+	"Map"
+	"Technologies"
+	"Ideologies"
+	"Military"
+}
+name="Rise of Nations Redux"
+picture="Rise_of_Nations.gif"
+supported_version="1.17.*"
