@@ -421,9 +421,8 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = boxer_protocols_visible
+			add_ideas = QIN_boxer_protocols
 			hidden_effect = {
-				add_ideas = boxer_protocols
 				if = {
 					limit = {
 						NOT = {
@@ -819,7 +818,6 @@ focus_tree = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.20
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 
 			#event about political situation
@@ -862,7 +860,6 @@ focus_tree = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.05
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			add_political_power = 50
 			add_popularity = {
@@ -1550,7 +1547,6 @@ focus_tree = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.05
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			add_popularity = {
 				ideology = democratic
@@ -1587,7 +1583,6 @@ focus_tree = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.10
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			add_popularity = {
 				ideology = democratic
@@ -1888,7 +1883,6 @@ focus_tree = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.10
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			#TODO: Make a Coup event against the Cixi government
 			CHI = {
@@ -1902,21 +1896,20 @@ focus_tree = {
 				transfer_state = 613
 				load_oob = GXC_1936
 				declare_war_on = {
-				target = QIN
-				type = civil_war
+					target = QIN
+					type = civil_war
 				}
 				set_politics = {
 					ruling_party = fascism
 					elections_allowed = no
-					}
-			add_ideas = strike_movement_4
+				}
 
 			}
 			322 = { add_resistance = 100 }
 			758 = { add_resistance = 100 }
 			757 = { add_resistance = 100 }
-			release  = MAN
-			release  = ETR
+			release = MAN
+			release = ETR
 			ETR = {
 				transfer_state = 1015
 				transfer_state = 329
@@ -2786,7 +2779,6 @@ add_power_balance_value = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.30
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 		}
 	}
@@ -2929,7 +2921,7 @@ add_power_balance_value = {
 				}
 				if = {
 					limit = {
-						has_idea = boxer_protocols
+						has_idea = QIN_boxer_protocols
 					}
 					unlock_decision_category_tooltip = QIN_smuggling_weapons
 				}
@@ -4043,7 +4035,6 @@ tooltip_side = QIN_centralization_bop_democracy
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.10
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			JAP= {
 				custom_effect_tooltip = will_be_allowed_to_expand_their_influence_tt
@@ -4132,7 +4123,6 @@ tooltip_side = QIN_centralization_bop_democracy
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.10
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			add_political_power = -20
 			add_stability = -0.05
@@ -5202,7 +5192,6 @@ focus = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.10
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			add_stability = -0.05
 			add_political_power = 25
@@ -5245,7 +5234,6 @@ focus = {
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = -0.20
-				tooltip_side = QIN_centralization_bop_collapse
 			}
 			add_stability = -0.05
 			add_political_power = -25

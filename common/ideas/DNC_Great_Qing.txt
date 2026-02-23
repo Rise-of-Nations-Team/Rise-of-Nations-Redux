@@ -66,7 +66,7 @@ ideas = {
 				resistance_activity = 0.50
 				required_garrison_factor = 0.2
 				political_power_factor = -0.2
-				 
+				
 			}
 		}
 		QIN_minority_revolts = {
@@ -85,7 +85,7 @@ ideas = {
 				resistance_activity = 0.50
 				required_garrison_factor = 0.2
 				political_power_factor = -0.2
-				 
+				
 			}
 		}
 		QIN_minority_revolts_2 = {
@@ -104,7 +104,7 @@ ideas = {
 				resistance_activity = 0.30
 				required_garrison_factor = 0.15
 				political_power_factor = -0.15
-				 
+				
 			}
 		}
 		QIN_minority_revolts_3 = {
@@ -212,7 +212,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = -0.2
 				production_speed_arms_factory_factor = -0.15
-				 
+				
 			}
 		}
 		QIN_foreign_influence_zones = {
@@ -291,98 +291,98 @@ ideas = {
 		}
 		
 		QIN_legacy_sino_japanese_war = {
-            picture = QIN_legacy_sino_japanese_war
+			picture = QIN_legacy_sino_japanese_war
 
-            allowed ={
-                tag = QIN
-            }
+			allowed ={
+				tag = QIN
+			}
 			cancel = {
 				date > 1920.1.1
 			}
-            modifier = {
-                stability_factor = -0.05
-                war_support_factor = -0.1
-                experience_gain_navy = -0.05
-                naval_coordination = -0.3
-                naval_critical_score_chance_factor = -0.15
-                naval_damage_factor = -0.33
-                naval_hit_chance = -0.33
-                naval_speed_factor = -0.25
-                naval_retreat_speed = -0.33
-                naval_morale_factor = -0.2
-                experience_gain_heavy_cruiser_combat_factor = -0.3
-                command_power_gain = -0.5
-            }
-        }
-        
-        QIN_low_legitimacy = {
-            picture = man_low_legitimacy
-            allowed ={
-                tag = QIN
-            }
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				experience_gain_navy = -0.05
+				naval_coordination = -0.3
+				naval_critical_score_chance_factor = -0.15
+				naval_damage_factor = -0.33
+				naval_hit_chance = -0.33
+				naval_speed_factor = -0.25
+				naval_retreat_speed = -0.33
+				naval_morale_factor = -0.2
+				experience_gain_heavy_cruiser_combat_factor = -0.3
+				command_power_gain = -0.5
+			}
+		}
+		
+		QIN_low_legitimacy = {
+			picture = man_low_legitimacy
+			allowed ={
+				tag = QIN
+			}
 			cancel = {
 				date > 1920.1.1
 			}
-            modifier = {
-                stability_factor = -0.3
-                war_support_factor = -0.2
-                army_org = -10
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.2
+				army_org = -10
 
-        }
-    }
+		}
+	}
 	QIN_low_legitimacy_2 = {
-            picture = man_low_legitimacy
-            allowed ={
-                tag = QIN
-            }
-            modifier = {
-                stability_factor = 0.05
-                war_support_factor = 0.05
-        }
-    }
+			picture = man_low_legitimacy
+			allowed ={
+				tag = QIN
+			}
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+		}
+	}
 	QIN_foot_binding_outlawed = {
-            picture = EQS_royal_family_imprisoned
-            allowed ={
-                tag = QIN
-            }
-            modifier = {
-                stability_factor = 0.05
-                war_support_factor = 0.05
+			picture = EQS_royal_family_imprisoned
+			allowed ={
+				tag = QIN
+			}
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
 				political_power_factor = 0.15
-        }
-    }
-    
-    QIN_agrarian_society = {
-        picture = QIN_agrarian_society
-        allowed = {
-            tag = QIN
-        }
+		}
+	}
+	
+	QIN_agrarian_society = {
+		picture = QIN_agrarian_society
+		allowed = {
+			tag = QIN
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-        modifier = {
-            industrial_capacity_factory = -0.15
-            industrial_capacity_dockyard = -0.3
+		modifier = {
+			industrial_capacity_factory = -0.15
+			industrial_capacity_dockyard = -0.3
 			industry_repair_factor = -0.25
-            production_speed_buildings_factor = -0.5
-            production_factory_efficiency_gain_factor = -0.25 
-            production_factory_max_efficiency_factor = -0.25
-            production_oil_factor = -0.15
-            production_lack_of_resource_penalty_factor = 0.3
-            research_speed_factor = -0.4
-            political_power_factor = -0.25
-            }
+			production_speed_buildings_factor = -0.5
+			production_factory_efficiency_gain_factor = -0.25 
+			production_factory_max_efficiency_factor = -0.25
+			production_oil_factor = -0.15
+			production_lack_of_resource_penalty_factor = 0.3
+			research_speed_factor = -0.4
+			political_power_factor = -0.25
+			}
 
-        }
-    QIN_outdated_army = {
-        picture = chi_army_corruption
-        allowed = {
-            tag = QIN
-        }
+		}
+	QIN_outdated_army = {
+		picture = chi_army_corruption
+		allowed = {
+			tag = QIN
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-       
+	
 		modifier = {
 			experience_loss_factor = 0.15
 			#experience_gain_army = -1
@@ -407,127 +407,127 @@ ideas = {
 			ai_focus_military_advancements_factor = -0.5
 	
 		}
-    }
-    QIN_opium_addictions = {
-        picture = QIN_opium_trade
-        allowed = {
-            tag = QIN
-        }
+	}
+	QIN_opium_addictions = {
+		picture = QIN_opium_trade
+		allowed = {
+			tag = QIN
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-        modifier = {
-            stability_factor = -0.05
-            war_support_factor = -0.1
-            army_org_regain = -0.1
-            research_speed_factor = -0.2
-            political_power_factor = -0.15
+		modifier = {
+			stability_factor = -0.05
+			war_support_factor = -0.1
+			army_org_regain = -0.1
+			research_speed_factor = -0.2
+			political_power_factor = -0.15
 
-            }
-        }
-    QIN_foreign_concessions = {
-        picture = QIN_foreign_concessions
-        allowed = {
-            tag = QIN
-        }
+			}
+		}
+	QIN_foreign_concessions = {
+		picture = QIN_foreign_concessions
+		allowed = {
+			tag = QIN
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-        modifier = {
-            consumer_goods_factor = 0.1
-            stability_factor = -0.05
-            production_speed_buildings_factor = 0.1
-            war_support_factor = -0.05
-            army_speed_factor = -0.4
+		modifier = {
+			consumer_goods_factor = 0.1
+			stability_factor = -0.05
+			production_speed_buildings_factor = 0.1
+			war_support_factor = -0.05
+			army_speed_factor = -0.4
 
-            }
-        }
+			}
+		}
 		QIN_3_principles  = {
-        picture = FIN_socialist_welfare
-        allowed = {
-            tag = QIN
-        }
-        modifier = {
-            consumer_goods_factor = -0.1
-            stability_factor = 0.05
-            production_speed_buildings_factor = 0.1
-            war_support_factor = 0.05
-            army_speed_factor = 0.1
+		picture = FIN_socialist_welfare
+		allowed = {
+			tag = QIN
+		}
+		modifier = {
+			consumer_goods_factor = -0.1
+			stability_factor = 0.05
+			production_speed_buildings_factor = 0.1
+			war_support_factor = 0.05
+			army_speed_factor = 0.1
 
-            }
-        }
+			}
+		}
 		QIN_homoseuxality  = {
-        picture = bra_monarchist_uprising
-        allowed = {
-            tag = QIN
-        }
-        modifier = {
-            recruitable_population = 0.05
-            stability_factor = 0.05
-            production_speed_buildings_factor = 0.05
-            war_support_factor = 0.05
+		picture = bra_monarchist_uprising
+		allowed = {
+			tag = QIN
+		}
+		modifier = {
+			recruitable_population = 0.05
+			stability_factor = 0.05
+			production_speed_buildings_factor = 0.05
+			war_support_factor = 0.05
 
-            }
-        }
-   
-   QIN_foreign_concessions_2 = {
-        picture = QIN_foreign_concessions
-        allowed = {
-            tag = QIN
-        }
+			}
+		}
+
+QIN_foreign_concessions_2 = {
+		picture = QIN_foreign_concessions
+		allowed = {
+			tag = QIN
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-        modifier = {
-            consumer_goods_factor = 0.2
-            stability_factor = -0.1
-            production_speed_buildings_factor = 0.05
-            war_support_factor = -0.1
-            army_speed_factor = -0.4
+		modifier = {
+			consumer_goods_factor = 0.2
+			stability_factor = -0.1
+			production_speed_buildings_factor = 0.05
+			war_support_factor = -0.1
+			army_speed_factor = -0.4
 
-            }
-    }
+			}
+	}
 
-    QIN_beiyang_army_modern = {
-        picture = QIN_beiyang_modernization
-        allowed = {
-            QIN = {
-               # has_completed_focus = QIN_1900_modernizing_the_beiyang_army
-			   # //TODO: create QIN_1900_modernizing_the_beiyang_army focus
-            }
-        }
+	QIN_beiyang_army_modern = {
+		picture = QIN_beiyang_modernization
+		allowed = {
+			QIN = {
+			# has_completed_focus = QIN_1900_modernizing_the_beiyang_army
+			# //TODO: create QIN_1900_modernizing_the_beiyang_army focus
+			}
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-        modifier = {
-            stability_factor = 0.1
-            war_support_factor = 0.1
-            army_attack_factor = 0.05
-            army_morale = 5
-            political_power_factor = 0.10
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			army_attack_factor = 0.05
+			army_morale = 5
+			political_power_factor = 0.10
 
-            }
-        }
-    QIN_boxer_protocols = {
-        picture = generic_victors_of_ww1
-        allowed = {
-            QIN = {
-               has_country_flag = QIN_1900_boxers_lost
-            }
-        }
+			}
+		}
+	QIN_boxer_protocols = {
+		picture = generic_victors_of_ww1
+		allowed = {
+			QIN = {
+			has_country_flag = QIN_1900_boxers_lost
+			}
+		}
 		cancel = {
 				date > 1920.1.1
 			}
-        modifier = {
-            consumer_goods_factor = 0.1
-            war_support_factor = -0.3
-            stability_factor = -0.2
-            production_factory_efficiency_gain_factor = -0.5
-            industrial_capacity_factory = -0.3
-            production_speed_arms_factory_factor = -0.5
-            
-            }
-        }
+		modifier = {
+			consumer_goods_factor = 0.1
+			war_support_factor = -0.3
+			stability_factor = -0.2
+			production_factory_efficiency_gain_factor = -0.5
+			industrial_capacity_factory = -0.3
+			production_speed_arms_factory_factor = -0.5
+			
+			}
+		}
 
 
 	}
