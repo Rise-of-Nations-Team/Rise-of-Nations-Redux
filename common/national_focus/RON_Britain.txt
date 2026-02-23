@@ -2816,8 +2816,8 @@ focus_tree = {
 			}
 		completion_reward = {
 			hidden_effect = {
-				#I used VIF as platagenet 
-				VIF = {
+				#I used VIC as platagenet 
+				VIC = {
 					set_cosmetic_tag = ENG_PLATAGENET
 				}
 			}
@@ -2887,13 +2887,13 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						country_exists = VIF
-						VIF = {
+						country_exists = VIC
+						VIC = {
 							has_cosmetic_tag = ENG_PLATAGENET
 						}
 					}
 					ENG = {
-						annex_country = { target = VIF transfer_troops = yes }
+						annex_country = { target = VIC transfer_troops = yes }
 					}
 				}
 			}
@@ -3278,7 +3278,7 @@ focus_tree = {
 				OR = {
 					NOT = { country_exists = FRA }
 					FRA = { is_subject_of = ROOT }
-					VIF = { is_subject_of = ROOT }
+					VIC = { is_subject_of = ROOT }
 					FRA = { is_in_faction_with = ROOT }
 				}
 			}

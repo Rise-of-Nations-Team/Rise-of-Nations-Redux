@@ -1,0 +1,1548 @@
+focus_tree = {
+	id = Spain_DNC
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = SPR
+			date < 1910.1.1
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 700 y = 950 }
+
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	##########DNC FOCUS############################################################################################################
+	#################1900-1910#####################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+
+	focus = {
+        id = SPRDNC_the_regency
+        icon = GFX_focus_POL_end_the_regency
+        x = 24
+        y = 0
+
+		mutually_exclusive = {
+			focus = SPRDNC_legacy_of_the_carlist_wars
+			focus = SPRDNC_power_to_the_people
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				is_historical_focus_on = yes
+			}
+		}
+
+        cost = 2
+
+		completion_reward = {
+			add_political_power = 50
+			hidden_effect = {
+				news_event = {
+					id = DNC_Spain_News.2
+					days = 791
+				}
+			}
+		}
+    }
+
+	focus = {
+		id = SPRDNC_repopulation_act
+		icon = GFX_goal_Generic_Pass_Legislation
+		x = 4
+		y = 1
+		relative_position_id = SPRDNC_the_regency
+
+		cost = 10
+
+		prerequisite = {
+			focus = SPRDNC_the_regency
+		}
+
+		completion_reward = {
+			176 = {
+				add_manpower = 25000
+			}
+			175 = {
+				add_manpower = 17500
+			}
+			170 = {
+				add_manpower = 12500
+			}
+			166 = {
+				add_manpower = 10000
+			}
+			174 = {
+				add_manpower = 7500
+			}
+			168 = {
+				add_manpower = 7500
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_social_reforms
+		icon = GFX_generic_focus_treaty_sign
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_the_regency
+
+		prerequisite = {
+			focus = SPRDNC_the_regency
+		}
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_social_unrest_idea
+				add_idea = SPR_social_unrest_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_election_rigging
+		icon = GFX_focus_usa_voter_registration_act
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_social_reforms
+
+		prerequisite = {
+			focus = SPRDNC_social_reforms
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_look_to_the_future
+		icon = GFX_generic_unite_the_people
+		x = 2
+		y = 1
+		relative_position_id = SPRDNC_election_rigging
+
+		prerequisite = {
+			focus = SPRDNC_election_rigging
+		}
+		prerequisite = {
+			focus = SPRDNC_aid_for_the_farmers
+		}
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_an_empire_in_decline_idea
+				add_idea = SPR_an_empire_in_decline_idea1
+			}
+		}
+	}
+
+
+	focus = {
+		id = SPRDNC_control_the_press
+		icon = GFX_goal_generic_restrict_press
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_election_rigging
+
+		prerequisite = {
+			focus = SPRDNC_election_rigging
+		}
+
+		bypass = {
+			OR = {
+				has_idea = press_censored
+				has_idea = press_state
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_stability = -0.025
+			add_ideas = {
+				press_censored
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_the_carlist_threat
+		icon = GFX_focus_spa_eliminate_the_carlists
+		x = -4
+		y = 1
+		relative_position_id = SPRDNC_the_regency
+
+		prerequisite = {
+			focus = SPRDNC_the_regency
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 10
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_servicio_de_inteligencia_militar
+		icon = GFX_focus_generic_secret_service_agency
+		x = 0
+		y = 3
+		relative_position_id = SPRDNC_the_carlist_threat
+
+		prerequisite = {
+			focus = SPRDNC_the_carlist_threat
+		}
+		prerequisite = {
+			focus = SPRDNC_control_the_press
+		}
+
+		bypass = {
+			has_intelligence_agency = yes
+		}
+
+		cost = 5
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				create_intelligence_agency = {
+					name = "Servicio de Inteligencia Militar"
+					icon = GFX_intelligence_agency_logo_spr
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					uses = 1
+					bonus = 1
+					category = decryption_tech
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_aid_for_the_farmers
+		icon = GFX_goal_generic_farming
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_repopulation_act
+
+		prerequisite = {
+			focus = SPRDNC_repopulation_act
+		}
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_agarian_economy_idea
+				add_idea = SPR_agarian_economy_idea1
+			}
+			add_timed_idea = {
+				idea = SPR_farm_aid_idea
+				days = 120
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_slow_the_communists
+		icon = communism8
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_election_rigging
+
+		prerequisite = {
+			focus = SPRDNC_election_rigging
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_el_rey_politico
+		icon = GFX_focus_AUS_bring_back_the_habsburg_rule
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_slow_the_communists
+
+		available = {
+			NOT = {
+				has_idea = SPR_the_regency_of_maria_christina_idea
+			}
+		}
+
+		bypass = {
+			NOT = {
+				has_government = neutrality
+			}
+		}
+
+		prerequisite = {
+			focus = SPRDNC_slow_the_communists
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_country_leader_trait = SPR_el_rey_politico
+		}
+	}
+
+	focus = {
+		id = SPRDNC_trust_the_king
+		icon = national_unity_red
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_el_rey_politico
+
+		prerequisite = {
+			focus = SPRDNC_el_rey_politico
+		}
+
+		cost = 7.2
+
+		completion_reward = {
+			remove_ideas = {
+				SPR_social_unrest_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_rae
+		icon = GFX_focus_NORDIC_mon_research
+		x = 2
+		y = 1
+		relative_position_id = SPRDNC_el_rey_politico
+
+		prerequisite = {
+			focus = SPRDNC_el_rey_politico
+		}
+		prerequisite = {
+			focus = SPRDNC_look_to_the_future
+		}
+
+		available = {
+			num_of_factories > 49
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SPRDNC_ley_de_jurisdicciones
+		icon = GFX_focus_BRA_repeale_national_security_law
+		x = 0
+		y = 2
+		relative_position_id = SPRDNC_trust_the_king
+
+		prerequisite = {
+			focus = SPRDNC_trust_the_king
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = {
+				SPR_ley_de_jurisdicciones_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_armed_neutrality
+		icon = small_arms_dnc
+		x = -3
+		y = 1
+		relative_position_id = SPRDNC_trust_the_king
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				is_historical_focus_on = yes
+			}
+		}
+
+		prerequisite = {
+			focus = SPRDNC_trust_the_king
+		}
+		mutually_exclusive = {
+			focus = SPRDNC_irredentism
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = SPRDNC_reconciliation
+		icon = GFX_Goal_USA_befriend_america
+		x = 1
+		y = 1
+		relative_position_id = SPRDNC_armed_neutrality
+
+		prerequisite = {
+			focus = SPRDNC_armed_neutrality
+		}
+
+		available = {
+			NOT = {
+				has_idea = SPR_the_regency_of_maria_christina_idea
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			remove_opinion_modifier = {
+				target = USA
+				modifier = spanish_american_war
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_recognize_cuban_independence
+		icon = GFX_goal_CUB_coat_of_arms
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_reconciliation
+
+		prerequisite = {
+			focus = SPRDNC_reconciliation
+		}
+
+		available = {
+			CUB = {
+				is_subject = no
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 25
+			add_opinion_modifier = {
+				target = CUB
+				modifier = recognized_cuban_independence
+			}
+			reverse_add_opinion_modifier = {
+				target = CUB
+				modifier = recognized_cuban_independence
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_a_new_normal
+		icon = GFX_focus_spa_save_the_alcazar
+		x = 0
+		y = 6
+		relative_position_id = SPRDNC_armed_neutrality
+
+		available = {
+			has_completed_focus = SPRDNC_revitalize_the_army
+		}
+
+		cost = 10
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_memories_of_the_spanish_american_war_idea3
+				add_idea = SPR_a_new_normal_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_irredentism
+		icon = war3
+		x = 3
+		y = 1
+		relative_position_id = SPRDNC_trust_the_king
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		prerequisite = {
+			focus = SPRDNC_trust_the_king
+		}
+		mutually_exclusive = {
+			focus = SPRDNC_armed_neutrality
+		}
+
+		completion_reward = {
+			add_stability = 1
+		}
+	}
+
+	focus = {
+		id = SPRDNC_recover_the_homefront
+		icon = GFX_RUS_political_soldiers
+		x = -1
+		y = 1
+		relative_position_id = SPRDNC_irredentism
+
+		prerequisite = {
+			focus = SPRDNC_irredentism
+		}
+
+		available = {
+			has_completed_focus = SPRDNC_revitalize_the_army
+		}
+
+		cost = 10
+
+		completion_reward = {
+			remove_ideas = {
+				SPR_memories_of_the_spanish_american_war_idea3
+			}
+		}
+	}
+
+	### Democracy // Communism
+	focus = {
+		id = SPRDNC_power_to_the_people
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 46
+		y= 0
+
+		mutually_exclusive = {
+			focus = SPRDNC_the_regency
+			focus = SPRDNC_legacy_of_the_carlist_wars
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+
+	### Communism
+	focus = {
+		id = SPRDNC_rally_the_unions
+		icon = GFX_focus_SOV_support_spanish_poum
+		x = -3
+		y = 1
+		relative_position_id = SPRDNC_power_to_the_people
+
+		prerequisite = {
+			focus = SPRDNC_power_to_the_people
+		}
+
+		mutually_exclusive = {
+			focus = SPRDNC_demand_return_of_democratic_institutions
+		}
+
+		cost = 5
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SPR_union_activity_idea
+				remove_idea = SPR_social_unrest_idea
+			}
+			custom_effect_tooltip = idea_remove_25_stab
+		}
+	}
+
+	### Democracy
+	focus = {
+		id = SPRDNC_demand_return_of_democratic_institutions
+		icon = GFX_goal_spr_democracy_in_our_country
+		x = 3
+		y = 1
+		relative_position_id = SPRDNC_power_to_the_people
+
+		prerequisite = {
+			focus = SPRDNC_power_to_the_people
+		}
+
+		mutually_exclusive = {
+			focus = SPRDNC_rally_the_unions
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.175
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_social_promises
+		icon = alliance_teal
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_demand_return_of_democratic_institutions
+
+		prerequisite = {
+			focus = SPRDNC_demand_return_of_democratic_institutions
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			remove_ideas = {
+				SPR_social_unrest_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_bolster_democratic_sentiment
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_demand_return_of_democratic_institutions
+
+		cost = 5
+
+		prerequisite = {
+			focus = SPRDNC_demand_return_of_democratic_institutions
+		}
+	}
+
+	focus = {
+		id = SPRDNC_reject_monarchist_ideals
+		icon = GFX_goal_dismantle_the_monarchy
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_bolster_democratic_sentiment
+
+		prerequisite = {
+			focus = SPRDNC_bolster_democratic_sentiment
+		}
+	}
+
+	focus = {
+		id = SPRDNC_la_republica
+		icon = GFX_CNT_let_the_people_choose
+		x = 0
+		y = 2
+		relative_position_id = SPRDNC_reject_monarchist_ideals
+
+		prerequisite = {
+			focus = SPRDNC_reject_monarchist_ideals
+		}
+	}
+	
+	### Carlism
+	focus = {
+		id = SPRDNC_legacy_of_the_carlist_wars
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		x = 2
+		y = 0
+
+		mutually_exclusive = {
+			focus = SPRDNC_the_regency
+			focus = SPRDNC_power_to_the_people
+		}
+
+		available = {
+			tag = SPR
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 15
+			custom_effect_tooltip = legacy_of_the_carlist_wars_tt
+			hidden_effect = {
+				activate_mission = SPR_isabeline_crackdown
+				172 = {
+					set_state_flag = SPRDNC_carlist_control
+				}
+				add_to_variable = {
+					var = SPRDNC_carlist_states
+					value = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_expand_our_influence
+		icon = GFX_goal_restore_constitutional_monarchy
+		x = 2
+		y = 1
+		relative_position_id = SPRDNC_legacy_of_the_carlist_wars
+
+		prerequisite = {
+			focus = SPRDNC_legacy_of_the_carlist_wars
+		}
+		available = {
+			NOT = {
+				has_country_flag = SPRDNC_carlist_war
+			}
+			NOT = {
+				has_country_flag = SPR_carlist_war_over
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = SPRDNC_expand_our_influence_tt
+		}
+	}
+
+	focus = {
+		id = SPRDNC_heroes_of_the_3rd_carlist_war
+		icon = GFX_focus_generic_hill_training
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_legacy_of_the_carlist_wars
+
+		prerequisite = {
+			focus = SPRDNC_legacy_of_the_carlist_wars
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = SPRDNC_carlist_war
+			}
+			NOT = {
+				has_country_flag = SPR_carlist_war_over
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			custom_effect_tooltip = upon_start_of_the_carlist_war
+			effect_tooltip = {
+				add_manpower = 75000
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_lessons_of_the_past
+		icon = GFX_goal_Generic_Coalition_Army
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_heroes_of_the_3rd_carlist_war
+
+		prerequisite = {
+			focus = SPRDNC_heroes_of_the_3rd_carlist_war
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = SPRDNC_carlist_war
+			}
+			NOT = {
+				has_country_flag = SPR_carlist_war_over
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			custom_effect_tooltip = upon_start_of_the_carlist_war
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = SPR_lessons_from_the_past_idea
+					days = 180
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_the_4th_carlist_war
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		x = 0
+		y = 3
+		relative_position_id = SPRDNC_legacy_of_the_carlist_wars
+
+		prerequisite = {
+			focus = SPRDNC_legacy_of_the_carlist_wars
+		}
+
+		available = {
+			has_country_flag = SPRDNC_carlist_war
+		}
+
+		cost = 1
+
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+
+	focus = {
+		id = SPRDNC_carlist_militia
+		icon = GFX_focus_AFG_adopt_nufus
+		x = -1
+		y = 1
+		relative_position_id = SPRDNC_the_4th_carlist_war
+
+		prerequisite = {
+			focus = SPRDNC_the_4th_carlist_war
+		}
+
+		available = {
+			controls_state = 172
+			NOT = {
+				has_country_flag = SPR_carlist_war_over
+			}
+		}
+
+		cost = 2
+
+		completion_reward = {
+			custom_effect_tooltip = SPRDNC_carlist_militia_tt
+			hidden_effect = {
+				load_oob = SPR_carlist_militia
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_the_return_of_an_empire
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		x = 0
+		y = 2
+		relative_position_id = SPRDNC_the_4th_carlist_war
+
+		prerequisite = {
+			focus = SPRDNC_the_4th_carlist_war
+		}
+
+		cost = 10
+
+		available = {
+			has_war = no
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_an_empire_in_decline_idea
+				add_idea = SPR_memories_of_empire_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_central_american_diplomacy
+		icon = improve_relations_dark_green
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_the_return_of_an_empire
+
+		prerequisite = {
+			focus = SPRDNC_the_return_of_an_empire
+		}
+
+		cost = 5
+
+		completion_reward = {
+			custom_effect_tooltip = SPR_central_american_diplomacy_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						exists = yes
+						is_subject = no
+						capital_scope = {
+							OR = {
+								region = 205
+								region = 34
+								region = 53
+							}
+						}
+					}
+					add_opinion_modifier = {
+						target = SPR
+						modifier = central_american_diplomacy
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_reestablish_the_viceroyalties
+		icon = GFX_focus_BRA_north_and_south_america
+		x = -1
+		y = 1
+		relative_position_id = SPRDNC_central_american_diplomacy
+
+		prerequisite = {
+			focus = SPRDNC_central_american_diplomacy
+		}
+
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = SPRDNC_reestablish_the_viceroyalties_tt
+		}
+	}
+
+	focus = {
+		id = SPRDNC_return_to_the_americas
+		icon = GFX_focus_mex_redeem_aztlan
+		x = 1
+		y = 1
+		relative_position_id = SPRDNC_central_american_diplomacy
+
+		prerequisite = {
+			focus = SPRDNC_central_american_diplomacy
+		}
+
+		available = {
+			has_navy_size = {
+				size > 19
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			every_country = {
+			limit = {
+					exists = yes
+					is_subject = no
+					capital_scope = {
+						OR = {
+							region = 205
+							region = 34
+							region = 53
+						}
+					}
+				}
+				country_event = dnc_carlism.4
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_recolonize_colombia
+		icon = GFX_goal_spr_recolonize_colombia
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_return_to_the_americas
+
+		prerequisite = {
+			focus = SPRDNC_return_to_the_americas
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = COL
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					country_exists = PAN
+				}
+				create_wargoal = {
+					target = PAN
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_through_the_jungle
+		icon = attack_venezuela
+		x = -1
+		y = 1
+		relative_position_id = SPRDNC_recolonize_colombia
+
+		prerequisite = {
+			focus = SPRDNC_recolonize_colombia
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = VEN
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_across_the_andes
+		icon = GFX_focus_AFG_mountain_training
+		x = 0
+		y = 2
+		relative_position_id = SPRDNC_recolonize_colombia
+
+		prerequisite = {
+			focus = SPRDNC_recolonize_colombia
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = ECU
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = PRU
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_crush_bolivars_memory
+		icon = GFX_focus_generic_attack_bolivia
+		x = 0
+		y = 1
+		relative_position_id = SPRDNC_across_the_andes
+
+		prerequisite = {
+			focus = SPRDNC_across_the_andes
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = BOL
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_along_the_western_mountains
+		icon = GFX_focus_generic_attack_chile
+		x = -1
+		y = 1
+		relative_position_id = SPRDNC_crush_bolivars_memory
+
+		prerequisite = {
+			focus = SPRDNC_crush_bolivars_memory
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = CHL
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_into_la_plata
+		icon = GFX_goal_ARG_sun
+		x = 1
+		y = 1
+		relative_position_id = SPRDNC_crush_bolivars_memory
+
+		prerequisite = {
+			focus = SPRDNC_crush_bolivars_memory
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = ARG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = PAR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = URG
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_new_spain
+		icon = GFX_goal_MEX_contact_mexican_rebels
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_return_to_the_americas
+
+		prerequisite = {
+			focus = SPRDNC_return_to_the_americas
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = MEX
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_restore_the_union
+		icon = GFX_por_focus_the_kings_portugal
+		x = 2
+		y = 1
+		relative_position_id = SPRDNC_the_return_of_an_empire
+
+		available = {
+			country_exists = POR
+		}
+
+		prerequisite = {
+			focus = SPRDNC_the_return_of_an_empire
+		}
+
+		cost = 10
+
+		completion_reward = {
+			POR = {
+				country_event = dnc_carlism.3
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_recover_brazil
+		icon = GFX_goal_BRA_monarchy
+		x = 0
+		y = 3
+		relative_position_id = SPRDNC_restore_the_union
+
+		prerequisite = {
+			focus = SPRDNC_restore_the_union
+		}
+
+		prerequisite = {
+			focus = SPRDNC_recolonize_colombia
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				target = BRA
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_retake_gibraltar
+		icon = GFX_goal_spr_take_back_gibraltar
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_the_return_of_an_empire
+
+		prerequisite = {
+			focus = SPRDNC_the_return_of_an_empire
+		}
+
+		bypass = {
+			controls_state = 118
+		}
+
+		cost = 10
+
+		completion_reward = {
+			118 = {
+				controller = {
+					country_event = dnc_carlism.5
+				}
+			}
+		}
+	}
+
+	shared_focus = SPRVR_imperio_espanol
+
+	focus = {
+		id = SPRDNC_war_of_vengeance
+		icon = GFX_focus_spa_the_war_of_vengeance
+		x = 0
+		y = 3
+		relative_position_id = SPRDNC_new_spain
+
+		prerequisite = {
+			focus = SPRDNC_new_spain
+		}
+
+		available = {
+			has_completed_focus = SPRDNC_revitalize_the_army
+			country_exists = VRS
+			country_exists = USA
+		}
+
+		cost = 10
+
+		completion_reward = {
+			remove_ideas = {
+				SPR_memories_of_the_spanish_american_war_idea3
+			}
+			create_wargoal = {
+				type = topple_government
+				target = USA
+			}
+		}
+	}
+
+	### Armed forces
+	focus = {
+		id = SPRDNC_el_desastre_del_98
+		icon = GFX_Goal_USA_arsenal_of_democracy
+		x = 60
+		y = 0
+
+		available = {
+			OR = {
+				has_completed_focus = SPRDNC_the_regency
+				has_completed_focus = SPRDNC_legacy_of_the_carlist_wars
+				has_completed_focus = SPRDNC_power_to_the_people
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_memories_of_the_spanish_american_war_idea
+				add_idea = SPR_memories_of_the_spanish_american_war_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_restore_trust
+		icon = GFX_goal_spr_recruitment_drive
+		x = 0
+		y = 2
+		relative_position_id = SPRDNC_el_desastre_del_98
+
+		prerequisite = {
+			focus = SPRDNC_el_desastre_del_98
+		}
+
+		available = {
+			OR = {
+				has_war = no
+				AND = {
+					has_war = yes
+					enemies_strength_ratio < 0.75
+				}
+			}
+			has_army_manpower = {
+				size > 350000
+			}
+			has_navy_size = {
+				size > 24
+			}
+			has_navy_size = {
+				size > 5
+				type = capital_ship
+			}
+			OR = {
+				NOT = {
+					has_completed_focus = SPRDNC_legacy_of_the_carlist_wars
+				}
+				AND = {
+					has_completed_focus = SPRDNC_legacy_of_the_carlist_wars
+					has_completed_focus = SPRDNC_the_4th_carlist_war
+				}
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_memories_of_the_spanish_american_war_idea1
+				add_idea = SPR_memories_of_the_spanish_american_war_idea2
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_revitalize_the_army
+		icon = GFX_spain_army
+		x = 0
+		y = 2
+		relative_position_id = SPRDNC_restore_trust
+
+		prerequisite = {
+			focus = SPRDNC_restore_trust
+		}
+
+		available = {
+			OR = {
+				has_war = no
+				AND = {
+					has_war = yes
+					enemies_strength_ratio < 0.75
+				}
+			}
+			has_army_manpower = {
+				size > 500000
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_memories_of_the_spanish_american_war_idea2
+				add_idea = SPR_memories_of_the_spanish_american_war_idea3
+			}
+		}
+	}
+
+	### Army
+	focus = {
+		id = SPRDNC_ejercito_espanol
+		icon = GFX_arm_people
+		x = -4
+		y = 1
+		relative_position_id = SPRDNC_el_desastre_del_98
+
+		prerequisite = {
+			focus = SPRDNC_el_desastre_del_98
+		}
+
+		cost = 5
+
+		completion_reward = {
+			army_experience = 40
+		}
+	}
+
+	### Navy
+	focus = {
+		id = SPRDNC_armada_espanola
+		icon = GFX_focus_ron_patrol_boats
+		x = 4
+		y = 1
+		relative_position_id = SPRDNC_el_desastre_del_98
+
+		prerequisite = {
+			focus = SPRDNC_el_desastre_del_98
+		}
+
+		cost = 5
+
+		completion_reward = {
+			navy_experience = 40
+		}
+	}
+
+	focus = {
+		id = SPRDNC_battlefleet
+		icon = GFX_focus_ron_grand_fleet
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_armada_espanola
+
+		prerequisite = {
+			focus = SPRDNC_armada_espanola
+		}
+
+		mutually_exclusive = {
+			focus = SPRDNC_raiding_fleet
+		}
+
+		cost = 10
+	}
+
+	focus = {
+		id = SPRDNC_raiding_fleet
+		icon = wolf_packs
+		x = 2
+		y = 1
+		relative_position_id = SPRDNC_armada_espanola
+
+		prerequisite = {
+			focus = SPRDNC_armada_espanola
+		}
+
+		mutually_exclusive = {
+			focus = SPRDNC_battlefleet
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = {
+				SPR_raiding_fleet_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_small_vessels
+		x = -2
+		y = 1
+		relative_position_id = SPRDNC_raiding_fleet
+
+		prerequisite = {
+			focus = SPRDNC_raiding_fleet
+			focus = SPRDNC_battlefleet
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	### Industry
+	focus = {
+		id = SPRDNC_la_nueva_industria
+		icon = GFX_goal_generic_improve_industry
+		x = 80
+		y = 0
+
+		available = {
+			OR = {
+				has_completed_focus = SPRDNC_the_regency
+				has_completed_focus = SPRDNC_the_4th_carlist_war
+				has_completed_focus = SPRDNC_power_to_the_people
+			}
+			has_war = no
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = SPRDNC_rapid_industrialization
+		icon = GFX_idea_trade_deal
+		x = 4
+		y = 1
+		relative_position_id = SPRDNC_la_nueva_industria
+
+		cost = 10
+
+		prerequisite = {
+			focus = SPRDNC_la_nueva_industria
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SPRDNC_rapid_industrialization_idea
+				days = 365
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

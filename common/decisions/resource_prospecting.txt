@@ -571,260 +571,260 @@ prospect_for_resources = {
 		}
 	}
 
-#	develop_luzon_chromium_deposits = { #623
-#
-#		icon = chromium
-#
-#		allowed = {
-#
-#		}
-#
-#		available = {
-#			owns_state = 623
-#			controls_state = 623
-#			num_of_civilian_factories_available_for_projects > 2
-#			has_tech = excavation3
-#		}
-#		highlight_states = {
-#			highlight_state_targets = {
-#				state = 623
-#			}
-#		}
-#
-#		visible = {
-#			owns_state = 623
-#			controls_state = 623
-#			623 = {
-#				NOT = {
-#					has_state_flag = luzon_chromium_developed
-#				}
-#			}
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = 25
-#		days_remove = 60
-#
-#		modifier = {
-#			civilian_factory_use = 3
-#		}
-#
-#		ai_will_do = {
-#			base = 0.5
-#			modifier = {
-#				factor = 10 #5 was the basic default AI weight before, meant for Chinas.
-#				OR = {
-#					is_literally_china = yes
-#					original_tag = MAN
-#					original_tag = MEN
-#					original_tag = JAP
-#				}
-#			}
-#			modifier = {
-#				factor = 0
-#				OR = {
-#					AND = { #Ultimatum decisions are available and we should prio them
-#						original_tag = SOV
-#						SOV_we_want_to_send_ultimatums = yes
-#					}
-#					AND = { #Too low MP we need to save PP for the laws
-#						has_manpower < 10000
-#						NOT = { has_idea = scraping_the_barrel }
-#					}
-#				}
-#			}
-#			modifier = {  # Too low PP
-#				factor = 0.5
-#					has_political_power < 80
-#			}
-#			modifier = { #We have plenty of PP, avanti!
-#				factor = 3
-#				has_political_power > 200
-#			}
-#			modifier = { #Running out of the stuff, need more!
-#				factor = 5
-#				has_resources_in_country = {
-#					resource = chromium
-#					amount < 1
-#				}
-#			}
-#		}
-#		remove_effect = {
-#			623 = { set_state_flag = luzon_chromium_developed }
-#			623 = {
-#				add_resource = {
-#					type = chromium
-#					amount = 8
-#				}
-#			}
-#		}
-#	}
-#
-#	develop_mindanao_steel_deposits = { #627
-#
-#		icon = steel
-#
-#		allowed = {
-#
-#		}
-#
-#		highlight_states = {
-#			highlight_state_targets = {
-#				state = 627
-#			}
-#		}
-#
-#		available = {
-#			has_tech = excavation4
-#			num_of_civilian_factories_available_for_projects > 2
-#			owns_state = 627
-#			controls_state = 627
-#		}
-#
-#		visible = {
-#			owns_state = 627
-#			controls_state = 627
-#			627 = {
-#				NOT = {
-#					has_state_flag = mindanao_steel_developed
-#				}
-#			}
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = 25
-#		days_remove = 60
-#
-#		modifier = {
-#			civilian_factory_use = 3
-#		}
-#
-#		ai_will_do = {
-#			base = 0.3
-#			modifier = {
-#				factor = 0
-#				OR = {
-#					AND = { #Ultimatum decisions are available and we should prio them
-#						original_tag = SOV
-#						SOV_we_want_to_send_ultimatums = yes
-#					}
-#					AND = { #Too low MP we need to save PP for the laws
-#						has_manpower < 10000
-#						NOT = { has_idea = scraping_the_barrel }
-#					}
-#				}
-#			}
-#			modifier = {  # Too low PP
-#				factor = 0.5
-#					has_political_power < 80
-#			}
-#			modifier = { #We have plenty of PP, avanti!
-#				factor = 3
-#				has_political_power > 200
-#			}
-#			modifier = { #Running out of the stuff, need more!
-#				factor = 5
-#				has_resources_in_country = {
-#					resource = steel
-#					amount < 1
-#				}
-#			}
-#		}
-#		remove_effect = {
-#			627 = { set_state_flag = mindanao_steel_developed }
-#			627 = {
-#				add_resource = {
-#					type = steel
-#					amount = 8
-#				}
-#			}
-#		}
-#	}
-#
-#	develop_samar_steel_deposits = { #625
-#
-#		icon = steel
-#
-#		allowed = {
-#
-#		}
-#
-#		available = {
-#			has_tech = excavation3
-#			num_of_civilian_factories_available_for_projects > 2
-#			owns_state = 625
-#			controls_state = 625
-#		}
-#
-#		highlight_states = {
-#			highlight_state_targets = {
-#				state = 625
-#			}
-#		}
-#
-#		visible = {
-#			owns_state = 625
-#			controls_state = 625
-#			625 = {
-#				NOT = {
-#					has_state_flag = samar_steel_developed
-#				}
-#			}
-#		}
-#
-#		fire_only_once = yes
-#
-#		cost = 25
-#		days_remove = 60
-#
-#		modifier = {
-#			civilian_factory_use = 3
-#		}
-#
-#		ai_will_do = {
-#			base = 0.3
-#			modifier = {
-#				factor = 0
-#				OR = {
-#					AND = { #Ultimatum decisions are available and we should prio them
-#						original_tag = SOV
-#						SOV_we_want_to_send_ultimatums = yes
-#					}
-#					AND = { #Too low MP we need to save PP for the laws
-#						has_manpower < 10000
-#						NOT = { has_idea = scraping_the_barrel }
-#					}
-#				}
-#			}
-#			modifier = {  # Too low PP
-#				factor = 0.5
-#					has_political_power < 80
-#			}
-#			modifier = { #We have plenty of PP, avanti!
-#				factor = 3
-#				has_political_power > 200
-#			}
-#			modifier = { #Running out of the stuff, need more!
-#				factor = 5
-#				has_resources_in_country = {
-#					resource = steel
-#					amount < 1
-#				}
-#			}
-#		}
-#
-#		remove_effect = {
-#			625 = { set_state_flag = samar_steel_developed }
-#			625 = {
-#				add_resource = {
-#					type = steel
-#					amount = 6
-#				}
-#			}
-#		}
-#	}
+	develop_luzon_chromium_deposits = { #623
+
+		icon = chromium
+
+		allowed = {
+
+		}
+
+		available = {
+			owns_state = 623
+			controls_state = 623
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation3
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 623
+			}
+		}
+
+		visible = {
+			owns_state = 623
+			controls_state = 623
+			623 = {
+				NOT = {
+					has_state_flag = luzon_chromium_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.5
+			modifier = {
+				factor = 10 #5 was the basic default AI weight before, meant for Chinas.
+				OR = {
+					is_literally_china = yes
+					original_tag = MAN
+					original_tag = MEN
+					original_tag = JAP
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = chromium
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			623 = { set_state_flag = luzon_chromium_developed }
+			623 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+	}
+
+	develop_mindanao_steel_deposits = { #627
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 627
+			}
+		}
+
+		available = {
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 627
+			controls_state = 627
+		}
+
+		visible = {
+			owns_state = 627
+			controls_state = 627
+			627 = {
+				NOT = {
+					has_state_flag = mindanao_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			627 = { set_state_flag = mindanao_steel_developed }
+			627 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	develop_samar_steel_deposits = { #625
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 625
+			controls_state = 625
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 625
+			}
+		}
+
+		visible = {
+			owns_state = 625
+			controls_state = 625
+			625 = {
+				NOT = {
+					has_state_flag = samar_steel_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			625 = { set_state_flag = samar_steel_developed }
+			625 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+			}
+		}
+	}
 
 	develop_nauru_tungsten_deposits = { #725
 
@@ -10347,7 +10347,7 @@ prospect_for_resources = {
 	expand_german_coal_mines = {
 		icon = coal
 		allowed = {
-
+			always = no
 		}
 		state_target = yes
 		targets = { 51 42 65 60 66 }
@@ -10371,12 +10371,12 @@ prospect_for_resources = {
 			}
 		}
 		target_root_trigger = {
-			OR = {
-				NOT = {
-					original_tag = GER
-				}
-				has_completed_focus = GER_autarky_efforts
-			}
+			#OR = {
+			#	NOT = {
+			#		original_tag = GER
+			#	}
+			#	has_completed_focus = GER_autarky_efforts
+			#}
 		}
 		highlight_states = {
 			highlight_state_targets = {
