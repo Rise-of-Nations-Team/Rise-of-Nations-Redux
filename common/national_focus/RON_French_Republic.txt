@@ -1,0 +1,1310 @@
+focus_tree = {
+	id = France_DNC
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = FRA
+			date < 1910.1.1
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 50 y = 3000 }
+ 	focus = {
+		id = FRA_pierres_cabinet
+		icon = GFX_focus_generic_strengthen_cabinet
+		x = 7
+		y = 0
+
+		cost = 4
+
+		available = {
+			
+		}
+
+		bypass = {
+			has_idea = FRA_political_violence 
+		}
+		allow_branch = {
+			date < 1910.1.1 
+		}
+		completion_reward = {
+			add_ideas = FRA_political_violence 
+			add_political_power = 3
+		}
+	}
+
+	focus = {
+		id = FRA_one_language_nation
+		icon = GFX_PRC_red_army
+		x = 6
+		y = 1
+
+		cost = 10
+		prerequisite = { focus = FRA_pierres_cabinet } 
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = fralang				
+		hidden_effect = {
+		every_state = {
+			limit = {
+				is_on_continent = africa
+				OR = {
+				is_owned_by = FRA 
+				is_controlled_by = FRA
+				} 
+			}
+				force_enable_resistance = FRA
+				add_resistance = 10
+
+		}
+		}
+			add_popularity = {
+				popularity = 0.1
+				ideology = islamism
+			}		
+		}
+	}
+
+	focus = {
+		id = FRA_appease_socialists
+		icon = GFX_focus_generic_socialism
+		x = 8
+		y = 1
+
+		cost = 10
+		prerequisite = { focus = FRA_pierres_cabinet }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+			add_ideas = accessible_education
+			add_timed_idea = { idea = socialist_education days = 120 }
+
+		} 
+	}
+
+	focus = {
+		id = FRA_association_bill_of_date
+		icon = GFX_RUS_the_russian_bill_of_rights
+		x = 7
+		y = 2
+
+		cost = 10
+		prerequisite = { focus = FRA_one_language_nation focus = FRA_appease_socialists }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = "We will vote on the bill!"
+			hidden_effect = {
+				random_list = {
+					50 = { 
+					 complete_national_focus = FRA_the_bill_passes
+					}
+					50 = {
+								complete_national_focus = FRA_the_bill_fails
+					}
+
+				}		}
+		}
+	}
+
+	focus = {
+		id = FRA_the_bill_passes
+		icon = GFX_GER_focus_textiles
+		x = 5
+		y = 3
+
+		cost = 10
+		prerequisite = { focus = FRA_association_bill_of_date }
+		mutually_exclusive = { focus = FRA_the_bill_fails }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+		add_ideas = religious_liberties_mon 
+			add_popularity = {
+				popularity = 0.1
+				ideology = islamism
+			}				
+		}
+	}
+
+	focus = {
+		id = FRA_begin_closing_catholic_schools
+		icon = GFX_goal_aus_catholic_sympathies
+		x = 4
+		y = 4
+
+		cost = 10
+		prerequisite = { focus = FRA_the_bill_passes }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					industrial_complex > 0
+				}
+			remove_building = {
+ 						type = industrial_complex
+ 						level = 1
+ 					}				
+			}
+		random_core_state = {
+				limit = {
+					industrial_complex > 0
+				}
+			remove_building = {
+ 						type = industrial_complex
+ 						level = 1
+ 					}				
+			}
+		random_core_state = {
+				limit = {
+					industrial_complex > 0
+				}
+			remove_building = {
+ 						type = industrial_complex
+ 						level = 1
+ 					}				
+			}						
+		}
+	}
+
+	focus = {
+		id = FRA_nationalize_church_property
+		icon = GFX_focus_bra_national_security_law
+		x = 6
+		y = 4
+
+		cost = 10
+		prerequisite = { focus = FRA_the_bill_passes }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = RON_Roman_Catholicism
+				}
+						add_opinion_modifier = { target = FRA modifier = medium_decrease  } 
+
+			}
+			random_core_state = {
+			add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}				
+			}
+			random_core_state = {
+			add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}				
+			}
+			random_core_state = {
+			add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}				
+			}						
+		}
+	}
+
+	focus = {
+		id = FRA_a_more_secular_society
+		icon = GFX_focus_bra_national_security_law
+		x = 5
+		y = 5
+
+		cost = 10
+		prerequisite = { focus = FRA_begin_closing_catholic_schools focus = FRA_nationalize_church_property }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+		add_ideas = RON_Atheism
+
+		}
+	}
+
+	focus = {
+		id = FRA_the_bill_fails
+		icon = GFX_GER_focus_artillery_tactics
+		x = 9
+		y = 3
+
+		cost = 10
+		prerequisite = { focus = FRA_association_bill_of_date }
+		mutually_exclusive = { focus = FRA_the_bill_passes }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+				add_stability = 0.15
+				add_popularity = { ideology = neutrality popularity = -0.1 }
+				add_popularity = { ideology = fascism popularity = -0.1 }
+		add_popularity = {
+				popularity = 0.1
+				ideology = islamism
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_legislative_elections_of_1902
+		icon = GFX_SOV_focus_state_duma
+		x = 7
+		y = 6
+
+		cost = 10
+		prerequisite = { focus = FRA_a_more_secular_society focus = FRA_the_bill_fails }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		} 
+
+		completion_reward = {
+            custom_effect_tooltip = FRA_snap_election_tt
+			add_popularity = {
+				popularity = 0.1
+				ideology = islamism
+			}		            
+			clear_parliament_gui_arrays = yes
+	add_to_array = { parliament_seat_array = 0 } # SFIC
+	add_to_array = { parliament_seat_array = 0 } # PRRRS-PRS
+	add_to_array = { parliament_seat_array = 0 } # SFIO
+	add_to_array = { parliament_seat_array = 0 } # AD
+	add_to_array = { parliament_seat_array = 0 } # PDP
+	add_to_array = { parliament_seat_array = 0 } # FR
+	add_to_array = { parliament_seat_array = 200 } # INDEP
+	add_to_array = { parliament_seat_array = 0 } #AF
+
+	# parliament_member_array stores the list of parties
+	# This basically assigns an id for each party, so Party A = 1, Party B = 2, etc. (must start from 1 and is in order)
+	add_to_array = { parliament_member_array = 1 } # SFIC
+	add_to_array = { parliament_member_array = 2 } # PRRRS
+	add_to_array = { parliament_member_array = 3 } # SFIO
+	add_to_array = { parliament_member_array = 4 } # AD
+	add_to_array = { parliament_member_array = 5 } # PDP
+	add_to_array = { parliament_member_array = 6 } # FR
+	add_to_array = { parliament_member_array = 7 } # INDEP
+	add_to_array = { parliament_member_array = 8 } # AF
+	# Set up the positions of the dots for the semicircle parliament
+	parliament_gui_positions = yes
+
+	# Modify what shows up in the gui
+	reload_parliament_gui = yes
+	parliament_gui_positions = yes
+	hidden_effect = {
+reload_parl = yes
+	}
+	# Modify what shows up in the gui
+	reload_parliament_gui = yes 
+		} 
+	}
+
+	focus = {
+		id = FRA_victory_of_bloc_des_gauches
+		icon = GFX_goal_cuba_victory_for_gomez
+		x = 4
+		y = 7
+
+		cost = 10
+		prerequisite = { focus = FRA_legislative_elections_of_1902 }
+		mutually_exclusive = { focus = FRA_victory_of_the_parliamentary_right }
+
+		available = {
+custom_trigger_tooltip = {
+    tooltip = LOC_left_wing_majority
+    
+    check_variable = { var_left_wing_total > var_right_wing_total }
+}			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+add_popularity = {
+    ideology = communism
+    popularity = 0.05
+}
+		}
+	}
+
+	focus = {
+		id = FRA_emiles_radical_cabinet
+		icon = GFX_focus_generic_strengthen_cabinet
+		x = 4
+		y = 8
+
+		cost = 10
+		prerequisite = { focus = FRA_victory_of_bloc_des_gauches }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = redshirts
+			set_rule = { can_create_factions = yes }
+			add_country_leader_trait = prince_of_terror
+		}
+	}
+
+	focus = {
+		id = FRA_social_reforms
+		icon = GFX_goal_social_reforms
+		x = 2
+		y = 9
+
+		cost = 10
+		prerequisite = { focus = FRA_emiles_radical_cabinet }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+add_ideas = Social_Reformer_CW
+		}
+	}
+
+	focus = {
+		id = FRA_reduce_working_hours
+		icon = GFX_GER_focus_the_new_course
+		x = 1
+		y = 10
+
+		cost = 10
+		prerequisite = { focus = FRA_social_reforms }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+add_ideas = workers_compromise
+		}
+	}
+
+	focus = {
+		id = FRA_reduce_military_mandatory_time
+		icon = GFX_goal_generic_military_factories
+		x = 3
+		y = 10
+
+		cost = 10
+		prerequisite = { focus = FRA_social_reforms }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = disarmed_nation
+		}
+	}
+
+	focus = {
+		id = FRA_medical_reform
+		icon = GFX_goal_social_reforms
+		x = 2
+		y = 11
+
+		cost = 10
+		prerequisite = { focus = FRA_reduce_working_hours focus = FRA_reduce_military_mandatory_time }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = SER_medical_reforms
+				category = hospital_tech
+				bonus = 1.0
+				uses = 2
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_continue_the_separation_policy
+		icon = GFX_Focus_Military_Mobilisation
+		x = 6
+		y = 9
+
+		cost = 10
+		prerequisite = { focus = FRA_emiles_radical_cabinet }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_Separate_Church_And_State
+		}
+	}
+
+	focus = {
+		id = FRA_enforce_the_bill
+		icon = GFX_PRC_ingore_the_island
+		x = 6
+		y = 10
+
+		cost = 10
+		prerequisite = { focus = FRA_continue_the_separation_policy }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = political_loyalty_spirit 
+		}
+	}
+
+	focus = {
+		id = FRA_religious_teaching_law
+		icon = GFX_focus_religious
+		x = 6
+		y = 11
+
+		cost = 10
+		prerequisite = { focus = FRA_enforce_the_bill }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = RAJ_supress_religion
+		}
+	}
+
+	focus = {
+		id = FRA_enforce_the_new_law
+		icon = GFX_por_focus_pharmacies_law
+		x = 6
+		y = 12
+
+		cost = 10
+		prerequisite = { focus = FRA_religious_teaching_law }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.1
+				ideology = islamism
+			}
+		add_ideas = police_budget4
+
+		add_ideas = security_police_state
+
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = FRA_the_collation_dissolves
+		icon = ENG_dismantle_assembly
+		x = 4
+		y = 13
+
+		cost = 10
+		prerequisite = { focus = FRA_medical_reform }
+		prerequisite = { focus = FRA_enforce_the_new_law }
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = fra_collapse
+			clear_parliament_gui_arrays = yes
+	add_to_array = { parliament_seat_array = 0 } # SFIC
+	add_to_array = { parliament_seat_array = 0 } # PRRRS-PRS
+	add_to_array = { parliament_seat_array = 0 } # SFIO
+	add_to_array = { parliament_seat_array = 0 } # AD
+	add_to_array = { parliament_seat_array = 0 } # PDP
+	add_to_array = { parliament_seat_array = 0 } # FR
+	add_to_array = { parliament_seat_array = 200 } # INDEP
+	add_to_array = { parliament_seat_array = 0 } #AF
+
+	# parliament_member_array stores the list of parties
+	# This basically assigns an id for each party, so Party A = 1, Party B = 2, etc. (must start from 1 and is in order)
+	add_to_array = { parliament_member_array = 1 } # SFIC
+	add_to_array = { parliament_member_array = 2 } # PRRRS
+	add_to_array = { parliament_member_array = 3 } # SFIO
+	add_to_array = { parliament_member_array = 4 } # AD
+	add_to_array = { parliament_member_array = 5 } # PDP
+	add_to_array = { parliament_member_array = 6 } # FR
+	add_to_array = { parliament_member_array = 7 } # INDEP
+	add_to_array = { parliament_member_array = 8 } # AF
+	# Set up the positions of the dots for the semicircle parliament
+	parliament_gui_positions = yes
+
+	# Modify what shows up in the gui
+	reload_parliament_gui = yes
+	parliament_gui_positions = yes
+	hidden_effect = {
+reload_parl = yes
+	}
+	# Modify what shows up in the gui
+	reload_parliament_gui = yes 
+	
+
+
+		}
+	}
+
+	focus = {
+		id = FRA_combos_resigns
+		icon = GFX_eye_focus_crush_resistance
+		x = 4
+		y = 14
+
+		cost = 10
+		prerequisite = { focus = FRA_the_collation_dissolves }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = government_chaos
+		}
+	}
+
+	focus = {
+		id = FRA_appoint_new_prime_minister
+		icon = GFX_GER_focus_new_cruisers
+		x = 4
+		y = 15
+
+		cost = 10
+		prerequisite = { focus = FRA_combos_resigns }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			retire_country_leader = yes
+		}
+	}
+
+	focus = {
+		id = FRA_maurcies_cabinet
+		icon = GFX_dark_focus_african_recruits
+		x = 4
+		y = 16
+
+		cost = 10
+		prerequisite = { focus = FRA_appoint_new_prime_minister }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			remove_ideas = government_chaos
+			remove_ideas = FRA_disjointed_government
+		}
+	}
+
+	focus = {
+		id = FRA_continue_previous_policies
+		icon = GFX_ENG_focus_continue_isolationism
+		x = 4
+		y = 17
+
+		cost = 10
+		prerequisite = { focus = FRA_maurcies_cabinet }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = DDR_focus_on_civilian_industry
+		}
+	}
+
+	focus = {
+		id = FRA_the_seperation_is_complete
+		icon = GFX_ENG_focus_continue_isolationism
+		x = 2
+		y = 18
+
+		cost = 10
+		prerequisite = { focus = FRA_continue_previous_policies }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+				add_popularity = {
+				popularity = -1.0
+				ideology = islamism
+			}		
+		}
+	}
+
+	focus = {
+		id = FRA_fiscal_reform2
+		icon = GFX_goal_social_reforms
+		x = 4
+		y = 18
+
+		cost = 10
+		prerequisite = { focus = FRA_continue_previous_policies }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = RI_liberal_economy2
+		}
+	}
+
+
+	focus = {
+		id = FRA_victory_of_the_parliamentary_right
+		icon = GFX_URG_focus_switzerland_of_the_americas
+		x = 10
+		y = 7
+
+		cost = 10
+		prerequisite = { focus = FRA_legislative_elections_of_1902 }
+		mutually_exclusive = { focus = FRA_victory_of_bloc_des_gauches }
+
+		available = {
+custom_trigger_tooltip = {
+    tooltip = LOC_right_wing_majority
+    
+    check_variable = { var_left_wing_total < var_right_wing_total }
+}					
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+add_popularity = {
+    ideology = neutrality
+    popularity = 0.05
+}
+		}
+	}
+
+	focus = {
+		id = FRA_a_rightist_cabinet
+		icon = GFX_focus_generic_strengthen_cabinet
+		x = 10
+		y = 8
+
+		cost = 10
+		prerequisite = { focus = FRA_victory_of_the_parliamentary_right }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = AST_nationalism
+				days = 100
+			}
+			add_ideas = RON_Roman_Catholicism
+		}
+	}
+
+	focus = {
+		id = FRA_gain_support_from_the_church
+		icon = GFX_GER_focus_support_equip
+		x = 10
+		y = 9
+
+		cost = 10
+		prerequisite = { focus = FRA_a_rightist_cabinet }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+add_ideas =tblra_church_support
+
+		}
+	}
+
+	focus = {
+		id = FRA_fiscal_reform
+		icon = GFX_goal_social_reforms
+		x = 9
+		y = 10
+
+		cost = 10
+		prerequisite = { focus = FRA_gain_support_from_the_church }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_country_leader_trait = liberal_grandee
+		}
+	}
+
+	focus = {
+		id = FRA_catholic_schools
+		icon = GFX_goal_aus_catholic_sympathies
+		x = 11
+		y = 10
+
+		cost = 10
+		prerequisite = { focus = FRA_gain_support_from_the_church }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = tdlra_catholic_schools
+		}
+	}
+
+	focus = {
+		id = FRA_church_subsidy
+		icon = GFX_focus_fra_french_union
+		x = 11
+		y = 11
+
+		cost = 10
+		prerequisite = { focus = FRA_catholic_schools }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_country_leader_trait = catholic_block
+			add_ideas = catholic_volunteers
+		}
+	}
+
+	focus = {
+		id = FRA_send_missionaries_to_the_colonies
+		icon = GFX_goal_indochina_troupes_coloniales
+		x = 10
+		y = 12
+
+		cost = 10
+		prerequisite = { focus = FRA_fiscal_reform }
+		prerequisite = { focus = FRA_church_subsidy }
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = "If We have african colonies we will give them cathloic propaganda"
+			every_country = {
+				limit = {
+					capital_scope = {
+					is_on_continent = africa
+					}
+					OR = {
+						is_subject_of = FRA
+						is_subject_of = FRA
+					}
+				}
+					add_ideas = FRA_Catholic_Controlled_Press
+
+				}
+			}
+		}
+
+	focus = {
+		id = FRA_a_conservative_france
+		icon = GFX_goal_LUX_conservative_victory
+		x = 10
+		y = 13
+
+		cost = 10
+		prerequisite = { focus = FRA_send_missionaries_to_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			add_country_leader_trait = SWI_conservative_democrat
+		}
+	}
+
+
+	######### COLONIAL BRANCH #########
+
+	focus = {
+		id = FRA_finish_colonization_of_chad
+		icon = GFX_goal_nazbol_nationalization_of_economy
+		x = 16 
+		y = 0
+		allow_branch = {
+			date < 1910.1.1 
+		}
+		cost = 10
+		#prerequisite = { focus = FRA_send_missionaries_to_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			CHA = {
+			transfer_state = 660
+			transfer_state = 774
+			add_ideas = ITA_country_seperatism_occupation_1
+			transfer_state = 898
+			}
+			add_tech_bonus = {
+				name = occupation_troops_bonus
+				bonus = 1
+				uses = 2
+				category = military_police_tech
+				category = engineers_tech
+			}			
+			puppet = CHA
+			add_ideas = FRA_Colonial_Holdings
+		}
+	}
+
+	focus = {
+		id = FRA_treaty_of_paris
+		icon = GFX_RUS_the_bear_roars
+		x = 16
+		y = 1
+
+		cost = 10
+		prerequisite = { focus = FRA_finish_colonization_of_chad }
+		available = {
+
+					}
+
+		bypass = {
+			NOT = {
+				country_exists = MOR
+				MOR = {
+					is_subject_of = GER
+					is_subject_of = GER
+				}
+			}
+		}
+
+		completion_reward = {
+			release_puppet = GAB
+			release_puppet = ALG
+			release_puppet = TUN
+			release_puppet = CHA 
+			release_puppet = CAY
+			release_puppet = MAD 
+			release_puppet = NGR
+			release_puppet = MLI
+			release_puppet = MRT			
+		} 
+	}
+	focus = {
+		id = FRA_develop_the_colonies
+		icon = GFX_GER_focus_develop_colonies
+		x = 16
+		y = 2
+
+		cost = 10
+		prerequisite = { focus = FRA_treaty_of_paris }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					capital_scope = {
+					is_on_continent = africa
+					}
+					OR = {
+						is_subject_of = FRA
+						is_subject_of = FRA
+					}
+				}
+					add_ideas = extensive_conscription 
+					add_ideas = harsh_occupation
+
+				}
+		}
+	}
+
+	focus = {
+		id = FRA_develop_indochina
+		icon = GFX_focus_FRA_developp_indochina
+		x = 13
+		y = 3
+
+		cost = 10
+		prerequisite = { focus = FRA_develop_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			VIN = {
+random_state = {
+					limit = {
+					
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+		}
+		}
+	}
+
+	focus = {
+		id = FRA_develop_west_africa
+		icon = trade_with_america
+		x = 15
+		y = 3
+
+		cost = 10
+		prerequisite = { focus = FRA_develop_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					capital_scope = {
+					is_on_continent = africa
+					}
+					OR = {
+						is_subject_of = FRA
+						is_subject_of = FRA
+					}
+				}
+
+random_state = {
+					limit = {
+					
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				}
+		}
+	}
+
+	focus = {
+		id = FRA_develop_north_africa
+		icon = trade_with_america
+		x = 17
+		y = 3
+
+		cost = 10
+		prerequisite = { focus = FRA_develop_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+	every_country = {
+				limit = {
+					capital_scope = {
+					is_on_continent = africa
+					}
+					OR = {
+						is_subject_of = FRA
+						is_subject_of = FRA
+					}
+				}
+
+random_state = {
+					limit = {
+					
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				}
+		}
+	}
+
+	focus = {
+		id = FRA_increase_immigration_to_algeria
+		icon = GFX_GER_focus_increase_mil_budget
+		x = 17
+		y = 4
+
+		cost = 10
+		prerequisite = { focus = FRA_develop_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+			ALG = {
+				add_ideas = DNC_immigration
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_develop_french_equatorial_africa
+		icon = GFX_NATFRA_africa
+		x = 19
+		y = 3
+
+		cost = 10
+		prerequisite = { focus = FRA_develop_the_colonies }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		completion_reward = {
+							add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				} 
+		}
+	}
+
+
+}

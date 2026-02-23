@@ -1,0 +1,122 @@
+RON_game_settings = {
+
+	RON_open_settings = {
+		icon = generic_form_nation
+
+		complete_effect = {
+			set_country_flag = show_settings
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	GER_censor_nazi_flag = {
+		icon = generic_arrest
+		#allowed = {
+		#	is_ai = no			
+		#}
+		available = {
+			GER = {
+				has_government = fascism
+			}
+			custom_trigger_tooltip = {
+				tooltip = TT_change_nazi_flag
+				OR = {
+					AND = {
+						GER = {
+							is_ai = yes
+						}
+						NOT = {
+							tag = GER
+						}
+					}
+					AND = {
+						GER = {
+							is_ai = no
+						}
+						tag = GER
+					}
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		visible = {
+			GER = {
+				has_government = fascism
+			}
+		}
+		complete_effect = {
+			GER = {
+				set_cosmetic_tag = GER_CENSORED
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	reject_all_sphere_requests = {
+
+		icon = generic_civil_support
+
+		visible = {
+			always = yes
+			is_ai = no
+			NOT = {
+				has_country_flag = rejectspheresystem
+			}
+		}
+
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = rejectspheresystem
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	RON_d_load_correct_trees = {
+		icon = generic_form_nation
+
+		visible = {
+			is_debug = yes
+		} 
+		complete_effect = {
+			RON_handle_focus_trees = yes
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
+RON_backup_era_change = {
+	RON_era_change_backup_decision = {
+		icon = generic_form_nation
+
+		visible = {
+			OR = {
+				is_wrong_era = yes
+				is_debug = yes
+			}
+		}
+
+		available = {
+			is_wrong_era = yes
+		}
+
+		complete_effect = {
+			country_event = change_era.1
+		}
+		
+		ai_will_do = {
+			base = 10000
+		}
+	}
+}
