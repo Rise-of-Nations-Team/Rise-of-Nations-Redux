@@ -1,3 +1,4 @@
+replace_path="common/bookmarks"
 replace_path="history/states"
 replace_path="map/strategicregions"
 version="1"
