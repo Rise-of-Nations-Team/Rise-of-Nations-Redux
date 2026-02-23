@@ -1,10 +1,8 @@
 on_actions = {
+
 	on_startup = {
+
 		effect = {
-			every_country = {
-				update_all_pop = yes
-				HOUSE_init_parliament = yes
-			}
 			every_country = { 
 				limit = {
 					is_ai = no
@@ -13,14 +11,6 @@ on_actions = {
 					array = global.players
 				}
 			}
-
-			#######Set Up Marpac Executive Council#####
-			#add_to_array = { global.marpac_executive_array = ENG }
-			#add_to_array = { global.marpac_executive_array = GER }
-			#add_to_array = { global.marpac_executive_array = FRA }
-			#add_to_array = { global.marpac_executive_array = USA }
-			#add_to_array = { global.marpac_executive_array = ITA }
-			#add_to_array = { global.marpac_executive_array = SOV }
 
 			if = {
 				limit = {
@@ -43,16 +33,6 @@ on_actions = {
 				}
 
 			}
-
-			#every_state = {
-			#	limit = {
-			#		is_core_of = USA
-			#	}
-			#	remove_core_of = UWA
-			#	remove_core_of = KOA
-			#	remove_core_of = SSA
-			#	remove_core_of = JSA
-			#}
 
 			if = {
 				limit = {
@@ -113,14 +93,8 @@ on_actions = {
 		}
 	}
 
-	on_monthly_FRA = {
-		effect = {
-			FRA_calculate_parliament = yes
-		}
-	}
-
 	on_monthly_USA = {
-		
+
 		effect = {
 			predection_house = yes
 
@@ -132,52 +106,6 @@ on_actions = {
 				RON_give_russian_winter_event = yes
 			}
 
-			if = {
-				limit = {
-					OR = {
-						has_decision = interplanetary_transfer_decision
-						has_decision = martian_orbit_decision
-					}
-				}
-				random_list = {
-					30 = {
-						modifier = {
-							factor = 0.5
-							check_variable = { life_support_test_count > 5}
-						}
-						modifier = {
-							factor = 0.1
-							check_variable = { life_support_test_count > 7}
-						}
-						#RIP, accident happen
-
-						random_list = {
-							50 = {
-								#decompression
-								country_event = {
-									id = space_race.12
-								}
-							}
-							50 = {
-								#signal lost
-								country_event = {
-									id = space_race.13
-								}
-							}
-							50 = {
-								#fire
-								country_event = {
-									id = space_race.14
-								}
-							}
-						}
-					}
-
-					70 = {
-
-					}
-				}
-			}
 			if = {
 				# Checks for if it is Janurary (Year of previous month is a different year of current year)
 				limit = { NOT = { check_variable = { global.last_year = global.year } } }
@@ -206,8 +134,13 @@ on_actions = {
 					log = "[THIS.GetName] number of years remaining: [?THIS.years_of_service]"
 				}
 			}
-			
-	
+		}
+	}
+
+	on_monthly_QIN = {
+
+		effect = {
+
 			if = {
 				limit = {
 					country_exists = CHI

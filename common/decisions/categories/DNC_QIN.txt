@@ -39,12 +39,12 @@ QIN_boxer_war_mission = {
 QIN_smuggling_weapons = {
 	priority = 200
 	allowed = {
+		is_literally_china = yes
 	}
 	visible = {
 		OR = {
 			AND = {
 				OR = {
-			
 					has_completed_focus = DNC_QIN_arming_soldiers
 					has_completed_focus = DNC_QIN_resupply_arsenals
 				}
@@ -72,4 +72,38 @@ QIN_gather_support_for_republicans = {
 		}
 	}
 
+}
+
+QIN_fight_warlords = {
+	allowed = {
+		original_tag = QIN
+	}
+	visible = {
+		has_completed_focus = DNC_QIN_fight_warlords
+	}
+}
+
+china_influence_sphere = {
+	allowed = {
+		original_tag = QIN
+	}
+	visible = {
+		OR = {
+			country_exists = QIN
+			country_exists = CHI
+			is_major = yes
+			is_literally_china = yes
+		}
+	}
+	priority = 500
+
+}
+
+QIN_army_reforms = {
+	allowed = {
+		original_tag = QIN
+	}
+	visible = {
+		has_completed_focus = DNC_QIN_westernization_movement
+	}
 }
