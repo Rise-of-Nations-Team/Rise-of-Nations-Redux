@@ -107,3 +107,34 @@ QIN_army_reforms = {
 		has_completed_focus = DNC_QIN_westernization_movement
 	}
 }
+
+Civil_war_support = {
+
+
+	allowed = {
+		original_tag = QIN
+	}
+
+	visible = {
+		has_country_flag = splitted
+	}
+
+}
+
+chinese_revolution = {
+	priority = 1000
+	allowed = {
+		OR = {
+			original_tag = QIN
+			original_tag = CHI
+			original_tag = BOX
+		}
+	}
+	visible = {
+		date < 1920.1.1
+		NOT = { has_country_flag = revolution_started }
+	}
+}
+
+chinese_revolution_QIN = {}
+chinese_revolution_CHI = {}
