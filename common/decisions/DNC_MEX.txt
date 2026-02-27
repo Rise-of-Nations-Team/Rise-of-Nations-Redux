@@ -1,0 +1,532 @@
+MEX_latifundios = {
+########## A WAY TO COMPENSATE FOR HUGE STABILITY LOSES ###########
+	MEX_promote_better_deals = {
+		icon = 
+		available = {
+			original_tag = MEX
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 70
+		modifier = {
+			stability_weekly = 0.02
+			consumer_goods_factor = 0.05
+		}
+		days_re_enable = 70
+		ai_will_do = {
+			factor = 1
+		}
+	}
+############## LOS LATIFUNDIOS DE CHIAPAS LE PERTENECERÀN A LOS ALEMANES YA QUE ESTOS FUERON LOS
+############## PRINCIPALES INVERSORES EN CHIAPAS	
+	MEX_stablish_latifundios_Chiapas = {
+		icon = opression
+		highlight_states = {
+			state = 475
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 475
+			controls_state = 475
+		}
+		visible = {
+			owns_state = 475
+			controls_state = 475
+			475 = {
+				NOT = {
+					has_state_flag = Chiapas_latifundios_stablished
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 15
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			475 = { set_state_flag = Chiapas_latifundios_stablished }
+			475 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.05
+			add_political_power = 50
+			GER= {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = MEX_foreing_companies_stablished
+				}
+			}
+		}
+	}
+	MEX_latifundios_Chiapas_expanded_1 = {
+		icon = opression
+		highlight_states = {
+			state = 475
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 475
+			controls_state = 475
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 475
+			controls_state = 475
+			475 = {
+				has_state_flag = Chiapas_latifundios_stablished
+				NOT = {
+					has_state_flag = Chiapas_latifundios_expanded_1
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			475 = { set_state_flag = Chiapas_latifundios_expanded_1 }
+			475 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			add_stability = -0.1
+			add_political_power = 50
+			}
+		}
+	}
+	MEX_latifundios_Chiapas_expanded_2 = {
+		icon = opression
+		highlight_states = {
+			state = 475
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			owns_state = 475
+			controls_state = 475
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 475
+			controls_state = 475
+			475 = {
+				has_state_flag = Chiapas_latifundios_expanded_1
+				NOT = {
+					has_state_flag = Chiapas_latifundios_expanded_2
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			475 = { set_state_flag = Chiapas_latifundios_expanded_2 }
+			475 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			add_stability = -0.15
+			add_political_power = 50
+			}
+		}
+	}
+	MEX_latifundios_Chiapas_expanded_3 = {
+		icon = opression
+		highlight_states = {
+			state = 475
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+			owns_state = 475
+			controls_state = 475
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 475
+			controls_state = 475
+			475 = {
+				has_state_flag = Chiapas_latifundios_expanded_2
+				NOT = {
+					has_state_flag = Chiapas_latifundios_expanded_3
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 35
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			475 = { set_state_flag = Chiapas_latifundios_expanded_3 }
+			475 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			add_stability = -0.2
+			add_political_power = 50
+			}
+		}
+	}
+	MEX_latifundios_Chiapas_expanded_4 = {
+		icon = opression
+		highlight_states = {
+			state = 475
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			owns_state = 475
+			controls_state = 475
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 475
+			controls_state = 475
+			475 = {
+				has_state_flag = Chiapas_latifundios_expanded_3
+				NOT = {
+					has_state_flag = Veracruz_latifundios_expanded_4
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 40
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			475 = { set_state_flag = Chiapas_latifundios_expanded_4 }
+			475 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			add_stability = -0.25
+			add_political_power = 50
+			}
+		}
+	}
+############# LOS PRINCIPALES INVERSORES EN EL NORTE DE MEXICO 
+############# FUERON EVIDENTEMENTE LOS GRINGOS
+	MEX_stablish_latifundios_Coahuila = {
+		icon = opression
+		highlight_states = {
+			state = 480
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 480
+			controls_state = 480
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 480
+			controls_state = 480
+			480 = {
+				NOT = {
+					has_state_flag = Coahuila_latifundios_stablished
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 15
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			480 = { set_state_flag = Coahuila_latifundios_developed }
+			480 = {
+
+			}
+			add_stability = -0.05
+			add_political_power = 50
+		}
+	}
+###### LOS LATIFUNDIOS VERACRUZ SERÁN BRITÁNICOS #########
+	MEX_stablish_latifundios_Veracruz = {
+		icon = opression
+		highlight_states = {
+			state = 477
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 477
+			controls_state = 477
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 477
+			controls_state = 477
+			477 = {
+				NOT = {
+					has_state_flag = Veracruz_latifundios_stablished
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 10
+		days_remove = 15
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		remove_effect = {
+			477 = { set_state_flag = Veracruz_latifundios_stablished }
+			477 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.05
+			add_political_power = 50
+			ENG= {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = MEX_foreing_companies_stablished
+				}
+			}
+		}
+	}
+	MEX_latifundios_Veracruz_expanded_1 = {
+		icon = opression
+		highlight_states = {
+			state = 477
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 477
+			controls_state = 477
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 477
+			controls_state = 477
+			477 = {
+				has_state_flag = Veracruz_latifundios_stablished
+				NOT = {
+					has_state_flag = Veracruz_latifundios_expanded_1
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			477 = { set_state_flag = Veracruz_latifundios_expanded_1 }
+			477 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			add_stability = -0.1
+			add_political_power = 50
+			}
+		}
+	}
+	MEX_latifundios_Veracruz_expanded_2 = {
+		icon = opression
+		highlight_states = {
+			state = 477
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			owns_state = 477
+			controls_state = 477
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 477
+			controls_state = 477
+			477 = {
+				has_state_flag = Veracruz_latifundios_expanded_1
+				NOT = {
+					has_state_flag = Veracruz_latifundios_expanded_2
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			477 = { set_state_flag = Veracruz_latifundios_expanded_2 }
+			477 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			add_stability = -0.15
+			add_political_power = 50
+			}
+		}
+	}
+	MEX_latifundios_Veracruz_expanded_3 = {
+		icon = opression
+		highlight_states = {
+			state = 477
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+			owns_state = 477
+			controls_state = 477
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 477
+			controls_state = 477
+			477 = {
+				has_state_flag = Veracruz_latifundios_expanded_2
+				NOT = {
+					has_state_flag = Veracruz_latifundios_expanded_3
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 35
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			477 = { set_state_flag = Veracruz_latifundios_expanded_3 }
+			477 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			add_stability = -0.2
+			add_political_power = 50
+			}
+		}
+	}
+	MEX_latifundios_Veracruz_expanded_4 = {
+		icon = opression
+		highlight_states = {
+			state = 477
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 8
+			owns_state = 477
+			controls_state = 477
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 477
+			controls_state = 477
+			477 = {
+				has_state_flag = Veracruz_latifundios_expanded_3
+				NOT = {
+					has_state_flag = Veracruz_latifundios_expanded_4
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 40
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			477 = { set_state_flag = Veracruz_latifundios_expanded_4 }
+			477 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_stability = -0.25
+			add_political_power = 50
+		}
+	}
+}
