@@ -1,3 +1,4 @@
+#!gfx:interface/RON_goals.gfx
 focus_tree = {
 	id = Japan_DNC
 	
@@ -188,17 +189,17 @@ focus_tree = {
 			}
 		}
 		
-		completion_reward = { 
-		send_equipment = {
-	equipment = infantry_equipment_0
-	amount = 5000
-	target = USA
-}	
-		send_equipment = {
-	equipment = infantry_equipment_1
-	amount = 5000
-	target = FRA
-}	
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment_0
+				amount = 5000
+				target = USA
+			}
+			send_equipment = {
+				equipment = infantry_equipment_1
+				amount = 5000
+				target = FRA
+			}
 		}
 	}
 
@@ -252,7 +253,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_the_manchurian_crisis
-		icon = GFX_JAP_focus_the_manchurian_crisis
+		icon = GFX_goal_JAP_the_manchurian_crisis
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 17
 		y = 0
@@ -482,7 +483,7 @@ focus_tree = {
 		completion_reward = { 
 			remove_ideas = JAP_wooden_constructions
 
-530 = {
+			530 = {
 				add_building_construction = {
 					type = bunker
 					level = 2
@@ -544,11 +545,10 @@ focus_tree = {
 		}
 		
 		completion_reward = { 
-		create_wargoal = {		
-		expire = 250
-	type = puppet_wargoal_focus
-	target = CHI
-}			
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHI
+			}
 		}
 	}
 
@@ -714,7 +714,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_alliance_with_britain
-		icon = GFX_JAP_focus_anglo_jap_alliance
+		icon = GFX_goal_JAP_anglo_jap_alliance
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 13
 		y = 2
@@ -1011,19 +1011,19 @@ focus_tree = {
 		}
 		
 		completion_reward = { 
-					remove_ideas = JAP_wooden_constructions	
+			remove_ideas = JAP_wooden_constructions	
 			1036 = { set_demilitarized_zone = yes }
 			527 = { set_demilitarized_zone = yes }
 			add_ai_strategy = {
-	type = ignore
-	id = CHI
-	value = 200
-}
-add_ai_strategy = {
-	type = ignore
-	id = RUS
-	value = 200
-}
+				type = ignore
+				id = CHI
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = RUS
+				value = 200
+			}
 		}
 	}
 
@@ -1056,29 +1056,25 @@ add_ai_strategy = {
 						has_war_with = FRA
 					}
 				}
-						create_wargoal = {			
-				expire = 250 type = annex_everything target = GER }
+						create_wargoal = {	 type = annex_everything target = GER }
 			}
 			if = {
 				limit = {
 					country_exists = SRE
 				}
-						create_wargoal = {			
-				expire = 250 type = annex_everything target = SRE }
+						create_wargoal = {	 type = annex_everything target = SRE }
 			}
 			if = {
 				limit = {
 					country_exists = INS
 				}
-						create_wargoal = {			
-				expire = 250 type = annex_everything target = INS }
+						create_wargoal = {	 type = annex_everything target = INS }
 			}			
 			if = {
 				limit = {
 					country_exists = DER
 				}
-						create_wargoal = {			
-				expire = 250 type = annex_everything target = DER }
+						create_wargoal = {	 type = annex_everything target = DER }
 			}
 		}
 	}
@@ -1243,7 +1239,7 @@ add_ai_strategy = {
 
 	focus = {
 		id = JAP_the_manchurian_question
-		icon = GFX_JAP_focus_the_manchurian_question
+		icon = GFX_goal_JAP_the_manchurian_question
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 12
 		y = 7
@@ -1263,7 +1259,7 @@ add_ai_strategy = {
 
 	focus = {
 		id = JAP_genjo
-		icon = GFX_JAP_focus_genjo
+		icon = GFX_goal_JAP_genjo
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 33
 		y = 0
@@ -1284,7 +1280,7 @@ add_ai_strategy = {
 
 	focus = {
 		id = JAP_japanese_superiority
-		icon = GFX_JAP_focus_samurai_sun
+		icon = GFX_goal_JAP_samurai_sun
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 32
 		y = 1
@@ -1423,7 +1419,7 @@ add_ai_strategy = {
 
 	focus = {
 		id = JAP_the_tokugawa_restoration
-		icon = GFX_goal_JAP_samurai
+		icon = GFX_goal_JAP_tokugawa
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		x = 36
 		y = 1
@@ -1586,68 +1582,64 @@ add_ai_strategy = {
 			add_country_leader_trait = central_asian_ambitions
 			if = {
 				limit = {
-				country_exists = PHI
-								NOT = {
-					PHI = {
-						is_subject_of = USA
+					country_exists = PHI
+					NOT = {
+						PHI = {
+							is_subject_of = USA
+						}
+					}
+					NOT = {
+						PHI = {
+							is_subject_of = JAP
+						}
 					}
 				}
-				NOT = {
-					PHI = {
-						is_subject_of = JAP
-					}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = PHI
 				}
-				}
-						create_wargoal = {			
-				expire = 250
-	type = puppet_wargoal_focus
-	target = PHI
-}
-			}				
+			}
 			if = {
 				limit = {
-				country_exists = BOX
-				NOT = {
-					BOX = {
-						is_subject_of = JAP
+					country_exists = BOX
+					NOT = {
+						BOX = {
+							is_subject_of = JAP
+						}
 					}
 				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = BOX
 				}
-						create_wargoal = {			
-				expire = 250
-	type = puppet_wargoal_focus
-	target = BOX
-}
-			}			
+			}
 			if = {
 				limit = {
-				country_exists = QIN
-				NOT = {
-					QIN = {
-						is_subject_of = JAP
+					country_exists = QIN
+					NOT = {
+						QIN = {
+							is_subject_of = JAP
+						}
 					}
 				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = QIN
 				}
-						create_wargoal = {			
-				expire = 250
-	type = puppet_wargoal_focus
-	target = QIN
-}
-			}			
+			}
 			if = {
 				limit = {
-				country_exists = KOR
-				NOT = {
-					KOR = {
-						is_subject_of = JAP
+					country_exists = KOR
+					NOT = {
+						KOR = {
+							is_subject_of = JAP
+						}
 					}
 				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = KOR
 				}
-						create_wargoal = {			
-				expire = 250
-	type = puppet_wargoal_focus
-	target = KOR
-}
 			}
 		}
 	}
