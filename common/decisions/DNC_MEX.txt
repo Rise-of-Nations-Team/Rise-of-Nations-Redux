@@ -1,7 +1,11 @@
 MEX_latifundios = {
 ########## A WAY TO COMPENSATE FOR HUGE STABILITY LOSES ###########
 	MEX_promote_better_deals = {
+<<<<<<< Updated upstream
 		icon = 
+=======
+		icon = opression
+>>>>>>> Stashed changes
 		available = {
 			original_tag = MEX
 		}
@@ -298,17 +302,205 @@ MEX_latifundios = {
 					level = 1
 					instant_build = yes
 				}
+<<<<<<< Updated upstream
 				USA= {
+=======
+				add_resource = {
+					type = steel
+					amount = 22
+				}
+			}
+			USA= {
+>>>>>>> Stashed changes
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = MEX_foreing_companies_stablished
 				}
 			}
+<<<<<<< Updated upstream
 			}
+=======
+>>>>>>> Stashed changes
 			add_stability = -0.05
 			add_political_power = 50
 		}
 	}
+<<<<<<< Updated upstream
+=======
+	MEX_stablish_latifundios_Durango = {
+		icon = opression
+		highlight_states = {
+			state = 481
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 481
+			controls_state = 481
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 481
+			controls_state = 481
+			481 = {
+				NOT = {
+					has_state_flag = Durango_latifundios_stablished
+				}
+			}
+			480 = {
+				has_state_flag = Coahuila_latifundios_stablished
+			}
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			481 = { set_state_flag = Durango_latifundios_stablished }
+			481 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 29
+				}
+			}
+			add_stability = -0.1
+			add_political_power = 50
+		}
+	}
+	MEX_stablish_latifundios_Aguascalientes = {
+		# Aguascalientes doesn't exist in the game so it will be Jalisco instead
+		icon = opression
+		highlight_states = {
+			state = 478
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 478
+			controls_state = 478
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 478
+			controls_state = 478
+			478 = {
+				NOT = {
+					has_state_flag = Aguascalientes_latifundios_stablished
+				}
+			}
+			480 = {
+				has_state_flag = Coahuila_latifundios_stablished
+			}
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			478 = { set_state_flag = Aguascalientes_latifundios_stablished }
+			478 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 25
+				}
+			}
+			add_stability = -0.1
+			add_political_power = 50
+		}
+	}
+	MEX_stablish_latifundios_San_Luis_Potosi = {
+		# San Luis Potosi doesn't exist in the game so it will be Tamaulipas instead
+		icon = opression
+		highlight_states = {
+			state = 479
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 479
+			controls_state = 479
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 479
+			controls_state = 479
+			479 = {
+				NOT = {
+					has_state_flag = San_Luis_Potosi_latifundios_stablished
+				}
+			}
+			480 = {
+				has_state_flag = Coahuila_latifundios_stablished
+			}
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			479 = { set_state_flag = San_Luis_Potosi_latifundios_stablished }
+			479 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminum
+					amount = 24
+				}
+			}
+			add_stability = -0.1
+			add_political_power = 50
+		}
+	}
+>>>>>>> Stashed changes
 	MEX_stablish_latifundios_Chihuahua = {
 		icon = opression
 		highlight_states = {
@@ -357,6 +549,13 @@ MEX_latifundios = {
 					level = 1
 					instant_build = yes
 				}
+<<<<<<< Updated upstream
+=======
+				add_resource = {
+					type = chromium
+					amount = 21
+				}
+>>>>>>> Stashed changes
 			}
 			add_stability = -0.1
 			add_political_power = 50
@@ -414,7 +613,11 @@ MEX_latifundios = {
 			}
 		}
 	}
+<<<<<<< Updated upstream
 	MEX_latifundios_Veracruz_expanded_1 = {
+=======
+	MEX_latifundios_Veracruz_expand_1 = {
+>>>>>>> Stashed changes
 		icon = opression
 		highlight_states = {
 			state = 477
@@ -455,12 +658,23 @@ MEX_latifundios = {
 					level = 1
 					instant_build = yes
 				}
+<<<<<<< Updated upstream
+=======
+				add_resource = {
+					type = rubber
+					amount = 15
+				}
+>>>>>>> Stashed changes
 			add_stability = -0.1
 			add_political_power = 50
 			}
 		}
 	}
+<<<<<<< Updated upstream
 	MEX_latifundios_Veracruz_expanded_2 = {
+=======
+	MEX_latifundios_Veracruz_expand_2 = {
+>>>>>>> Stashed changes
 		icon = opression
 		highlight_states = {
 			state = 477
@@ -501,6 +715,14 @@ MEX_latifundios = {
 					level = 1
 					instant_build = yes
 				}
+<<<<<<< Updated upstream
+=======
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+>>>>>>> Stashed changes
 			add_stability = -0.15
 			add_political_power = 50
 			}
@@ -547,6 +769,13 @@ MEX_latifundios = {
 					level = 2
 					instant_build = yes
 				}
+<<<<<<< Updated upstream
+=======
+				add_resource = {
+					type = oil
+					amount = 24
+				}
+>>>>>>> Stashed changes
 			add_stability = -0.2
 			add_political_power = 50
 			}
@@ -593,6 +822,14 @@ MEX_latifundios = {
 					level = 2
 					instant_build = yes
 				}
+<<<<<<< Updated upstream
+=======
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+>>>>>>> Stashed changes
 			}
 			add_stability = -0.25
 			add_political_power = 50
