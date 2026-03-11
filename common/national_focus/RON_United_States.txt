@@ -152,18 +152,18 @@ focus_tree = {
 			date < 1910.1.1
 			NOT = {
 				OR = {
-has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}
-has_country_leader = {
-name = "William Jennings Bryan"
-ruling_only = yes
-}
-has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}
+					has_country_leader = {
+						name = "William McKinley"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "William Jennings Bryan"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "William McKinley"
+						ruling_only = yes
+					}
 				}
 			}
 		}
@@ -211,13 +211,13 @@ ruling_only = yes
 		available = {
 			country_exists = PAN
 			not = { has_war_with = COL }
-						custom_trigger_tooltip = {
+			custom_trigger_tooltip = {
 				tooltip = "You need 220 representatives who approve of your government to pass this act"
-
-        check_variable = { representatives_support > 220 }
-						}		}
+       			check_variable = { representatives_support > 220 }
+			}
+		}
 		completion_reward = {
-		USA_medium_neutrality_loss = yes
+			USA_medium_neutrality_loss = yes
 			country_event = {
 				days = 5
 				id = eoanbm.13
@@ -414,11 +414,13 @@ focus = {
 	}
 	completion_reward = {
 		add_political_power = 30
-USA_medium_neutrality_loss = yes
-			custom_effect_tooltip = "This will increase black anger"
-			add_to_variable = { blackanger = 15 }
-			clamp_variable = { blackanger = 100 }	
-
+		USA_medium_neutrality_loss = yes
+		custom_effect_tooltip = "This will increase black anger"
+		add_to_variable = { blackanger = 15 }
+		clamp_variable = {
+			var = blackanger
+			max = 100
+		}	
 	}
 }
 
@@ -447,7 +449,7 @@ focus = {
 		}
 	}
 	completion_reward = {
-remove_ideas = usa_php_repayment		
+		remove_ideas = usa_php_repayment		
 		add_timed_idea = {
 			idea = usa_php_reapyment2
 			days = 300
@@ -468,12 +470,11 @@ focus = {
         factor = 1
     }
     available = {
-						custom_trigger_tooltip = {
-				tooltip = "You need 80 senators and 230 representatives who approve of your government to pass this act"
-
+		custom_trigger_tooltip = {
+		tooltip = "You need 80 senators and 230 representatives who approve of your government to pass this act"
         check_variable = { senators_support > 80 }
         check_variable = { representatives_support > 230 }
-						}
+		}
     }
     completion_reward = {
         add_political_power = 200
@@ -494,12 +495,11 @@ focus = {
 		factor = 1
 	}
 	available = {
-						custom_trigger_tooltip = {
-				tooltip = "You need 60 senators and 200 representatives who approve of your government to pass this act"
-
-        check_variable = { senators_support > 60 }
-        check_variable = { representatives_support > 200 }
-						}
+		custom_trigger_tooltip = {
+			tooltip = "You need 60 senators and 200 representatives who approve of your government to pass this act"
+        	check_variable = { senators_support > 60 }
+        	check_variable = { representatives_support > 200 }
+		}
 	}
 	completion_reward = {
 		add_ideas = usa_php_repayment
@@ -546,7 +546,6 @@ focus = {
 			random_owned_state = {
 				add_building_construction = {
 					type = industrial_complex
-				
 					level = 2
 					instant_build = no
 				} 
@@ -561,7 +560,6 @@ focus = {
 				} 
 			}
 		}
-
 		PHI = { add_ideas = American_Dollar }
 	}
 }
@@ -604,15 +602,15 @@ focus = {
 	}
 	completion_reward = {
 		add_political_power = 50
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a358democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a366democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a367democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a368democratic_support = 10 }
-USA_medium_CP_gain = yes
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a358democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a366democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a367democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a368democratic_support = 10 }
+		USA_medium_CP_gain = yes
 	}
 }
 
@@ -720,29 +718,28 @@ focus = {
 		}
 	}
 	completion_reward = {
-			custom_effect_tooltip = "This will increase black anger"
-			add_to_variable = { blackanger = 15 }
-			clamp_variable = { blackanger = 100 }	
+		custom_effect_tooltip = "This will increase black anger"
+		add_to_variable = { blackanger = 15 }
+		clamp_variable = { var = blackanger max = 100 }	
 
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a261democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a357democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a358democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a359democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a360democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a844democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a362democratic_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a363democratic_support = 10 }			
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a261democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a357democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a358democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a359democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a360democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a844democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a362democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a363democratic_support = 10 }			
 		release_puppet = PHI
-				USA_medium_neutrality_loss = yes
-
+		USA_medium_neutrality_loss = yes
 	}
 }
 
@@ -929,7 +926,7 @@ focus = {
 			days = 1
 			id = eoanbm.16
 		}
-USA_medium_neutrality_loss = yes
+		USA_medium_neutrality_loss = yes
 	}
 }
 
@@ -995,16 +992,18 @@ focus = {
 		FRA = { is_in_faction = yes }
 		custom_trigger_tooltip = {
 			tooltip = "Support for the Entente must be over 90%"
-		check_variable = { USA_ENT_support < 90 }		
+			check_variable = { USA_ENT_support < 90 }		
 		}
 	}
 	completion_reward = {
-USA_medium_ENT_gain = yes		
+		USA_medium_ENT_gain = yes		
 
-		FRA = { country_event = {
-			days = 1
-			id = generic.2
-		} }
+		FRA = { 
+			country_event = {
+				days = 1
+				id = generic.2
+			} 
+		}
 	}
 }
 
@@ -1089,12 +1088,11 @@ focus = {
         factor = 1
     }
     available = {
-						custom_trigger_tooltip = {
-				tooltip = "You need 30 senators and 80 representatives who approve of your government to pass this act"
-
-        check_variable = { senators_support > 30 }
-        check_variable = { representatives_support > 80 }
-						}
+		custom_trigger_tooltip = {
+			tooltip = "You need 30 senators and 80 representatives who approve of your government to pass this act"
+        	check_variable = { senators_support > 30 }
+        	check_variable = { representatives_support > 80 }
+		}
     }
     completion_reward = {
         country_event = {
@@ -1117,12 +1115,11 @@ focus = {
         factor = 1
     }
     available = {
-						custom_trigger_tooltip = {
-				tooltip = "You need 40 senators and 120 representatives who approve of your government to pass this act"
-
-        check_variable = { senators_support > 40 }
-        check_variable = { representatives_support > 120 }
-						}
+		custom_trigger_tooltip = {
+			tooltip = "You need 40 senators and 120 representatives who approve of your government to pass this act"
+        	check_variable = { senators_support > 40 }
+        	check_variable = { representatives_support > 120 }
+		}
     }
     completion_reward = {
         country_event = {
@@ -1197,10 +1194,10 @@ focus = {
 			days = 1
 			id = eoanbm.15
 		}
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a384republican_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a360republican_support = 10 }		
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a384republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a360republican_support = 10 }		
 	}
 }
 
@@ -1382,12 +1379,11 @@ focus = {
 		has_global_flag = DNC_william_howard_taft
 	}
 	available = {
-						custom_trigger_tooltip = {
-				tooltip = "You need 80 senators and 200 representatives who approve of your government to pass this act"
-
-        check_variable = { senators_support > 80 }
-        check_variable = { representatives_support > 200 }
-						}
+		custom_trigger_tooltip = {
+			tooltip = "You need 80 senators and 200 representatives who approve of your government to pass this act"
+        	check_variable = { senators_support > 80 }
+        	check_variable = { representatives_support > 200 }
+		}
 	}
 	completion_reward = {
 		PHI = {
@@ -1422,7 +1418,7 @@ focus = {
 			target = ENG
 			modifier = large_increase
 		}
-USA_medium_ENT_gain = yes		
+		USA_medium_ENT_gain = yes		
 	}
 }
 
@@ -1447,8 +1443,7 @@ focus = {
 			target = GER
 			modifier = large_increase
 		}
-USA_medium_CP_gain = yes
-
+		USA_medium_CP_gain = yes
 	}
 }
 
@@ -1497,25 +1492,23 @@ focus = {
 	available = {
 		NOT = { PHI = { is_puppet = yes } }
 		PHI = { exists = yes } 
-						custom_trigger_tooltip = {
-				tooltip = "You need 30 senators and 80 representatives who approve of your government to pass this act"
-
-        check_variable = { senators_support > 30 }
-        check_variable = { representatives_support > 80 }
-						}
+		custom_trigger_tooltip = {
+			tooltip = "You need 30 senators and 80 representatives who approve of your government to pass this act"
+        	check_variable = { senators_support > 30 }
+        	check_variable = { representatives_support > 80 }
+		}
 	}
 	completion_reward = {
-	360 = { USA_gop_up = yes }
-844 = { USA_gop_up = yes }
-362 = { USA_gop_up = yes }
-375 = { USA_gop_up = yes }
+		360 = { USA_gop_up = yes }
+		844 = { USA_gop_up = yes }
+		362 = { USA_gop_up = yes }
+		375 = { USA_gop_up = yes }
 		remove_ideas = Philippine_Resistance
 		country_event = {
 			days = 1
 			id = eoanbm.17
 		}
-USA_medium_neutrality_loss = yes
-
+		USA_medium_neutrality_loss = yes
 	}
 }
 
@@ -1542,16 +1535,16 @@ focus = {
 	}
 	available = {
 		NOT = { PHI = { is_puppet = yes } }
-						custom_trigger_tooltip = {
-				tooltip = "You need 217 representatives who approve of your government to pass this act"
-        check_variable = { representatives_support > 217 }
-						}		
+		custom_trigger_tooltip = {
+			tooltip = "You need 217 representatives who approve of your government to pass this act"
+        	check_variable = { representatives_support > 217 }
+		}		
 	}
 	completion_reward = {
-358 = { USA_gop_up = yes }
-359 = { USA_gop_up = yes }
-360 = { USA_gop_up = yes }
-844 = { USA_gop_up = yes }
+		358 = { USA_gop_up = yes }
+		359 = { USA_gop_up = yes }
+		360 = { USA_gop_up = yes }
+		844 = { USA_gop_up = yes }
 		add_opinion_modifier = {
 			target = PHI
 			modifier = medium_increase
@@ -1596,18 +1589,18 @@ focus = {
 		factor = 1
 	}
 	completion_reward = {
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a357republican_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a836republican_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a838republican_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a358republican_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a837republican_support = 10 }
-custom_effect_tooltip = "Party support will be changed in some states"
-add_to_variable = { a359republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a357republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a836republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a838republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a358republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a837republican_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+			add_to_variable = { a359republican_support = 10 }
 	}
 }
 
@@ -1634,62 +1627,54 @@ focus = {
 	}
 }
 focus = {
-id = USA_president_mckinley
-icon = GFX_goal_PAL_majlis_elections
-x = 55
-y = 1
+	id = USA_president_mckinley
+	icon = GFX_goal_PAL_majlis_elections
+	x = 55
+	y = 1
 
-cost = 10
-prerequisite = {
-	focus = USADNC_dawn_of_a_new_decade
-}
-available = {
-country_exists = USA
-
-}
-allow_branch = { 
-has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}
-date < 1910.1.1
-}
-available = {
-has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}	
-}
-completion_reward = {
-add_political_power = 50
-}
+	cost = 10
+	prerequisite = {
+		focus = USADNC_dawn_of_a_new_decade
+	}
+	available = {
+	country_exists = USA
+	}
+	available = {
+		has_country_leader = {
+			name = "William McKinley"
+			ruling_only = yes
+		}	
+	}
+	completion_reward = {
+		add_political_power = 50
+	}
 }
 
 focus = {
-id = USA_mckinleys_inauguration
-icon = GFX_goal_SOV_red_new_local_elections
-x = 55
-y = 2
+	id = USA_mckinleys_inauguration
+	icon = GFX_goal_SOV_red_new_local_elections
+	x = 55
+	y = 2
 
-cost = 10
-prerequisite = { focus = USA_president_mckinley }
-available = {
-has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}
-}
+	cost = 10
+	prerequisite = { focus = USA_president_mckinley }
+	available = {
+		has_country_leader = {
+			name = "William McKinley"
+			ruling_only = yes
+		}
+	}
 
-completion_reward = {
-country_event = { id = USADNC.4 }
-}
+	completion_reward = {
+		country_event = { id = USADNC.4 }
+	}
 }
 
 focus = {
-id = USA_the_civil_rights_issue
-icon = GFX_focus_bo_blackshirts
-x = 52
-y = 3
+	id = USA_the_civil_rights_issue
+	icon = GFX_focus_bo_blackshirts
+	x = 52
+	y = 3
 
 cost = 10
 prerequisite = { focus = USA_mckinleys_inauguration }

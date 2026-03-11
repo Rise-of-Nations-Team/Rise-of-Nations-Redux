@@ -1950,20 +1950,7 @@ political_actions = {
     	icon = generic_civil_support
 
     	visible = {
-    		OR = {
-				NOT = { has_government = fascism }
-				AND = {
-					original_tag = RAJ
-					has_idea = idea_RAJ_kingmaker	
-				}
-			}
-			IF = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-					original_tag = AUS
-				}
-				NOT = { has_completed_focus = AUS_reinstate_the_imperial_council }
-			}
+			NOT = { has_government = fascism }
 		}
 
 		available = {
@@ -2077,13 +2064,7 @@ political_actions = {
     	icon = generic_civil_support
 
     	visible = {
-    		OR = {
-				NOT = { has_government = democratic }
-    			AND = {
-    				original_tag = RAJ
-    				has_idea = idea_RAJ_kingmaker	
-    			}
-			}
+			NOT = { has_government = democratic }
 		}
 
 		available = {
@@ -2123,13 +2104,7 @@ political_actions = {
     	icon = generic_civil_support
 
     	visible = {
-    		OR = {
-				NOT = { has_government = communism }
-    			AND = {
-    				original_tag = RAJ
-    				has_idea = idea_RAJ_kingmaker	
-    			}
-			}
+			NOT = { has_government = communism }
 		}
 
 		available = {
@@ -2190,15 +2165,7 @@ political_actions = {
     	}
 
     	visible = {
-    		OR = { # has_focus_tree is not allwoed in the allowed trigger
-    			has_focus_tree = austro_hungarian_releasable_focus
-    			has_focus_tree = generic_focus
-    			has_idea = idea_RAJ_kingmaker
-    		}
-    		OR = {
-				NOT = { has_government = neutrality }
-    			original_tag = RAJ
-			}
+			NOT = { has_government = neutrality }
 		}
 
 		available = {
