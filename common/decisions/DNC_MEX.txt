@@ -19,7 +19,7 @@ MEX_latifundios = {
 	}
 ############## LOS LATIFUNDIOS DE CHIAPAS LE PERTENECERÁN A LOS ALEMANES YA QUE ESTOS FUERON LOS
 ############## PRINCIPALES INVERSORES EN CHIAPAS	
-	MEX_stablish_latifundios_Chiapas = {
+	MEX_establish_latifundios_Chiapas = {
 		icon = opression
 		highlight_states = {
 			state = 475
@@ -34,7 +34,7 @@ MEX_latifundios = {
 			controls_state = 475
 			475 = {
 				NOT = {
-					has_state_flag = Chiapas_latifundios_stablished
+					has_state_flag = Chiapas_latifundios_established
 				}
 			}
 		}
@@ -48,7 +48,7 @@ MEX_latifundios = {
 			factor = 1
 		}
 		remove_effect = {
-			475 = { set_state_flag = Chiapas_latifundios_stablished }
+			475 = { set_state_flag = Chiapas_latifundios_established }
 			475 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -62,7 +62,7 @@ MEX_latifundios = {
 			GER= {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = MEX_foreing_companies_stablished
+					modifier = MEX_foreing_companies_established
 				}
 			}
 		}
@@ -84,7 +84,7 @@ MEX_latifundios = {
 			owns_state = 475
 			controls_state = 475
 			475 = {
-				has_state_flag = Chiapas_latifundios_stablished
+				has_state_flag = Chiapas_latifundios_established
 				NOT = {
 					has_state_flag = Chiapas_latifundios_expanded_1
 				}
@@ -253,7 +253,7 @@ MEX_latifundios = {
 	}
 ############# LOS PRINCIPALES INVERSORES EN EL NORTE DE MEXICO 
 ############# FUERON EVIDENTEMENTE LOS GRINGOS
-	MEX_stablish_latifundios_Coahuila = {
+	MEX_establish_latifundios_Coahuila = {
 		icon = opression
 		highlight_states = {
 			state = 480
@@ -271,7 +271,7 @@ MEX_latifundios = {
 			controls_state = 480
 			480 = {
 				NOT = {
-					has_state_flag = Coahuila_latifundios_stablished
+					has_state_flag = Coahuila_latifundios_established
 				}
 			}
 		}
@@ -285,7 +285,7 @@ MEX_latifundios = {
 			factor = 1
 		}
 		remove_effect = {
-			480 = { set_state_flag = Coahuila_latifundios_stablished }
+			480 = { set_state_flag = Coahuila_latifundios_established }
 			480 = {
 				add_building_construction = {
 					type = infrastructure
@@ -306,14 +306,14 @@ MEX_latifundios = {
 			USA= {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = MEX_foreing_companies_stablished
+					modifier = MEX_foreing_companies_established
 				}
 			}
 			add_stability = -0.05
 			add_political_power = 50
 		}
 	}
-	MEX_stablish_latifundios_Durango = {
+	MEX_establish_latifundios_Durango = {
 		icon = opression
 		highlight_states = {
 			state = 481
@@ -331,11 +331,11 @@ MEX_latifundios = {
 			controls_state = 481
 			481 = {
 				NOT = {
-					has_state_flag = Durango_latifundios_stablished
+					has_state_flag = Durango_latifundios_established
 				}
 			}
 			480 = {
-				has_state_flag = Coahuila_latifundios_stablished
+				has_state_flag = Coahuila_latifundios_established
 			}
 		}
 		fire_only_once = yes
@@ -348,7 +348,7 @@ MEX_latifundios = {
 			factor = 1
 		}
 		remove_effect = {
-			481 = { set_state_flag = Durango_latifundios_stablished }
+			481 = { set_state_flag = Durango_latifundios_established }
 			481 = {
 				add_building_construction = {
 					type = infrastructure
@@ -370,7 +370,7 @@ MEX_latifundios = {
 			add_political_power = 50
 		}
 	}
-	MEX_stablish_latifundios_Aguascalientes = {
+	MEX_establish_latifundios_Aguascalientes = {
 		# Aguascalientes doesn't exist in the game so it will be Jalisco instead
 		icon = opression
 		highlight_states = {
@@ -389,11 +389,11 @@ MEX_latifundios = {
 			controls_state = 478
 			478 = {
 				NOT = {
-					has_state_flag = Aguascalientes_latifundios_stablished
+					has_state_flag = Aguascalientes_latifundios_established
 				}
 			}
 			480 = {
-				has_state_flag = Coahuila_latifundios_stablished
+				has_state_flag = Coahuila_latifundios_established
 			}
 		}
 		fire_only_once = yes
@@ -406,7 +406,7 @@ MEX_latifundios = {
 			factor = 1
 		}
 		remove_effect = {
-			478 = { set_state_flag = Aguascalientes_latifundios_stablished }
+			478 = { set_state_flag = Aguascalientes_latifundios_established }
 			478 = {
 				add_building_construction = {
 					type = infrastructure
@@ -428,7 +428,7 @@ MEX_latifundios = {
 			add_political_power = 50
 		}
 	}
-	MEX_stablish_latifundios_San_Luis_Potosi = {
+	MEX_establish_latifundios_San_Luis_Potosi = {
 		# San Luis Potosi doesn't exist in the game so it will be Tamaulipas instead
 		icon = opression
 		highlight_states = {
@@ -447,11 +447,11 @@ MEX_latifundios = {
 			controls_state = 479
 			479 = {
 				NOT = {
-					has_state_flag = San_Luis_Potosi_latifundios_stablished
+					has_state_flag = San_Luis_Potosi_latifundios_established
 				}
 			}
 			480 = {
-				has_state_flag = Coahuila_latifundios_stablished
+				has_state_flag = Coahuila_latifundios_established
 			}
 		}
 		fire_only_once = yes
@@ -464,7 +464,7 @@ MEX_latifundios = {
 			factor = 1
 		}
 		remove_effect = {
-			479 = { set_state_flag = San_Luis_Potosi_latifundios_stablished }
+			479 = { set_state_flag = San_Luis_Potosi_latifundios_established }
 			479 = {
 				add_building_construction = {
 					type = infrastructure
@@ -486,7 +486,7 @@ MEX_latifundios = {
 			add_political_power = 50
 		}
 	}
-	MEX_stablish_latifundios_Chihuahua = {
+	MEX_establish_latifundios_Chihuahua = {
 		icon = opression
 		highlight_states = {
 			state = 482
@@ -504,11 +504,11 @@ MEX_latifundios = {
 			controls_state = 482
 			482 = {
 				NOT = {
-					has_state_flag = Chihuahua_latifundios_stablished
+					has_state_flag = Chihuahua_latifundios_established
 				}
 			}
 			480 = {
-				has_state_flag = Coahuila_latifundios_stablished
+				has_state_flag = Coahuila_latifundios_established
 			}
 		}
 		fire_only_once = yes
@@ -521,7 +521,7 @@ MEX_latifundios = {
 			factor = 1
 		}
 		remove_effect = {
-			482 = { set_state_flag = Chihuahua_latifundios_stablished }
+			482 = { set_state_flag = Chihuahua_latifundios_established }
 			482 = {
 				add_building_construction = {
 					type = infrastructure
@@ -544,7 +544,7 @@ MEX_latifundios = {
 		}
 	}
 ###### LOS LATIFUNDIOS VERACRUZ SERÁN BRITÁNICOS #########
-	MEX_stablish_latifundios_Veracruz = {
+	MEX_establish_latifundios_Veracruz = {
 		icon = opression
 		highlight_states = {
 			state = 477
@@ -562,7 +562,7 @@ MEX_latifundios = {
 			controls_state = 477
 			477 = {
 				NOT = {
-					has_state_flag = Veracruz_latifundios_stablished
+					has_state_flag = Veracruz_latifundios_established
 				}
 			}
 		}
@@ -612,7 +612,7 @@ MEX_latifundios = {
 			owns_state = 477
 			controls_state = 477
 			477 = {
-				has_state_flag = Veracruz_latifundios_stablished
+				has_state_flag = Veracruz_latifundios_established
 				NOT = {
 					has_state_flag = Veracruz_latifundios_expanded_1
 				}
@@ -696,7 +696,7 @@ MEX_latifundios = {
 			add_political_power = 50
 		}
 	}
-	MEX_latifundios_Veracruz_expanded_3 = {
+	MEX_latifundios_Veracruz_expand_3 = {
 		icon = opression
 		highlight_states = {
 			state = 477
@@ -746,7 +746,7 @@ MEX_latifundios = {
 			add_political_power = 50
 		}
 	}
-	MEX_latifundios_Veracruz_expanded_4 = {
+	MEX_latifundios_Veracruz_expand_4 = {
 		icon = opression
 		highlight_states = {
 			state = 477
