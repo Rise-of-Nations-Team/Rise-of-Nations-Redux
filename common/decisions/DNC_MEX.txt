@@ -1,8 +1,7 @@
 MEX_latifundios = {
-	icon = RAJ_decision_investment_civs_icon
 ########## A WAY TO COMPENSATE FOR HUGE STABILITY LOSES ###########
 	MEX_promote_better_deals = {
-		icon = opression
+		icon = oppression
 		available = {
 			original_tag = MEX
 		}
@@ -21,16 +20,25 @@ MEX_latifundios = {
 ############## LOS LATIFUNDIOS DE CHIAPAS LE PERTENECERÁN A LOS ALEMANES YA QUE ESTOS FUERON LOS
 ############## PRINCIPALES INVERSORES EN CHIAPAS	
 	MEX_establish_latifundios_Chiapas = {
-		icon = opression
+		icon = ger_mefo_bills
+		cosmetic_tag = GER
+
 		highlight_states = {
 			state = 475
 		}
 		available = {
+			original_tag = MEX
 			num_of_civilian_factories_available_for_projects > 0
 			owns_state = 475
 			controls_state = 475
+			MEX = {
+				has_government = neutrality
+			}
 		}
 		visible = {
+			MEX = {
+				has_government = neutrality
+			}
 			owns_state = 475
 			controls_state = 475
 			475 = {
@@ -255,7 +263,7 @@ MEX_latifundios = {
 ############# LOS PRINCIPALES INVERSORES EN EL NORTE DE MEXICO 
 ############# FUERON EVIDENTEMENTE LOS GRINGOS
 	MEX_establish_latifundios_Coahuila = {
-		icon = oppression
+		icon = ger_mefo_bills
 		highlight_states = {
 			state = 480
 		}
@@ -546,7 +554,7 @@ MEX_latifundios = {
 	}
 ###### LOS LATIFUNDIOS VERACRUZ SERÁN BRITÁNICOS #########
 	MEX_establish_latifundios_Veracruz = {
-		icon = opression
+		icon = ger_mefo_bills
 		highlight_states = {
 			state = 477
 		}
@@ -894,7 +902,7 @@ MEX_latifundios = {
 		}
 	}
 	MEX_latifundios_Oaxaca_expansion_2 = {
-		icon = opression
+		icon = infiltrate_state
 		highlight_states = {
 			state = 476
 		}
@@ -994,7 +1002,7 @@ MEX_latifundios = {
 		}
 	}
 	MEX_latifundios_Oaxaca_expansion_4 = {
-		icon = opression
+		icon = infiltrate_state
 		highlight_states = {
 			state = 476
 		}
