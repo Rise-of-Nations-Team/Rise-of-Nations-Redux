@@ -149,7 +149,6 @@ focus_tree = {
 			always = no
 		}
 		allow_branch = {
-			date < 1910.1.1
 			NOT = {
 				OR = {
 					has_country_leader = {
@@ -1637,13 +1636,16 @@ focus = {
 		focus = USADNC_dawn_of_a_new_decade
 	}
 	available = {
-	country_exists = USA
-	}
-	available = {
 		has_country_leader = {
 			name = "William McKinley"
 			ruling_only = yes
-		}	
+		}
+	}
+	allow_branch = {
+		has_country_leader = {
+			name = "William McKinley"
+			ruling_only = yes
+		}
 	}
 	completion_reward = {
 		add_political_power = 50
@@ -3385,8 +3387,7 @@ allow_branch = {
 has_country_leader = {
 name = "William Jennings Bryan"
 ruling_only = yes
-}	
-date < 1910.1.1
+}
 }
 	completion_reward = {
 		add_political_power = 50
@@ -4206,9 +4207,6 @@ focus = {
 	y = 0
 	cost = 5
 	available_if_capitulated = yes
-	allow_branch = {
-		date < 1910.1.1
-	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -4236,13 +4234,12 @@ focus = {
 	available = {
 		not = { has_country_flag = DNC_William_Jennings_Bryan }
 	}
-allow_branch = { 
-has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}
-date < 1910.1.1
-}
+	allow_branch = {
+		has_country_leader = {
+		name = "William McKinley"
+		ruling_only = yes
+		}
+	}
 	completion_reward = {
 		add_political_power = 21
 	}
@@ -4513,18 +4510,17 @@ focus = {
 		icon = GFX_focus_bra_voice_of_brasil
 		x = 76
 		y = 1
-			allow_branch = {
-		date < 1910.1.1
-		NOT = {
-			has_completed_focus = USA_jeffersons_vision
+		allow_branch = {
+			NOT = {
+				has_completed_focus = USA_jeffersons_vision
+			}
 		}
-	}
-	available = {
-		has_country_leader = {
-name = "William McKinley"
-ruling_only = yes
-}		
-	}
+		available = {
+			has_country_leader = {
+				name = "William McKinley"
+				ruling_only = yes
+			}
+		}
 		cost = 10
 		
 		mutually_exclusive = { focus = USA_jeffersons_vision }
@@ -4540,19 +4536,17 @@ ruling_only = yes
 		x = 80
 		y = 1
 		cost = 10
-	allow_branch = {
-		date < 1910.1.1
-		NOT = {
-			has_completed_focus = USA_gilded_age
+		allow_branch = {
+			NOT = {
+				has_completed_focus = USA_gilded_age
+			}
 		}
-	}
-	available = {
-	has_country_leader = {
-	name = "William Jennings Bryan" ############ un comment this
-	ruling_only = yes
-	}				
-	}
-	
+		available = {
+			has_country_leader = {
+				name = "William Jennings Bryan"
+				ruling_only = yes
+			}
+		}
 		mutually_exclusive = { focus = USA_gilded_age }
 		completion_reward = {
 			add_political_power = 100
@@ -4912,7 +4906,6 @@ add_to_variable = { a396democratic_support = 10 }
 		cost = 5
 
 		available = {
-			country_exists = USA
 			has_country_flag = USA_gold_standard
 		}
 
@@ -5119,10 +5112,6 @@ add_to_variable = { a382democratic_support = 10 }
 		y = 6
 
 		cost = 10
-
-		available = {
-			country_exists = USA
-		}
 
 		prerequisite = {
 			focus = USA_compromise_with_farmers
@@ -5562,9 +5551,6 @@ add_to_variable = { a382democratic_support = 10 }
 		y = 10
 		cost = 5
 
-		allow_branch = {
-		date < 1910.1.1
-	}	
 		
 		completion_reward = {
 			custom_effect_tooltip = "Party support will be changed in some states"
@@ -7550,7 +7536,6 @@ remove_ideas = USA_the_two_party_system
 		cost = 1
 
 		available = {
-			country_exists = USA
 			has_idea = immigration_open_country
 		}
 
@@ -7572,7 +7557,6 @@ remove_ideas = USA_the_two_party_system
 		cost = 10
 
 		available = {
-			country_exists = USA
 			always = no
 		}
 
@@ -7729,9 +7713,6 @@ remove_ideas = USA_the_two_party_system
 		icon = GFX_goal_USA_coa_army
 		x = 95
 		y = 1
-		allow_branch = {
-		date < 1910.1.1
-	}	
 		cost = 5
 
 		
