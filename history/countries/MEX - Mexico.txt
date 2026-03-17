@@ -214,6 +214,33 @@ set_popularities = {
 	neutrality = 65
 }
 
+# Pre-Revolution Party Names
+if = {
+	limit = {
+		has_start_date < 1911.1.1
+	}
+	set_party_name = {
+		ideology = democratic
+		long_name = MEX_democratic_party_DNC_long
+		name = MEX_democratic_party_DNC
+	}
+	set_party_name = {
+		ideology = neutrality
+		long_name = MEX_neutrality_party_DNC_long
+		name = MEX_neutrality_party_DNC
+	}
+	set_party_name = {
+		ideology = communism
+		long_name = MEX_communism_party_DNC_long
+		name = MEX_communism_party_DNC
+	}
+	set_party_name = {
+		ideology = fascism
+		long_name = MEX_fascism_party_DNC_long
+		name = MEX_fascism_party_DNC
+	}
+}
+
 1910.1.1 = {
 	oob = "MEX_1910"
 	every_owned_state = {
