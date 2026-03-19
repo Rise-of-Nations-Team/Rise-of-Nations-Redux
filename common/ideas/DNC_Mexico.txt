@@ -21,24 +21,42 @@ ideas = {
             }
         }
 
+        MEX_mexican_unity = {
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MEX
+                NOT = {
+                    has_idea = MEX_very_fragmented_nation
+                }
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = 0.20
+                war_support_factor = 0.20
+                defensive_war_stability_factor = 0.50
+                stability_weekly = 0.01
+            }
+        }
+
         MEX_agressive_modernization = {
             removal_cost = -1
 
             allowed = {
                 original_tag = MEX
-                AND = {
-                    MEX = {
-                        has_government = neutrality
-                    }
-                }
             }
             allowed_civil_war = {
                 always = no
             }
 
             modifier = {
-                stability_weekly = -0.02
+                stability_weekly = -0.03
                 political_power_gain = 0.5
+                production_speed_buildings_factor = 0.10
+                trade_opinion_factor = 0.20
+                research_speed_factor = 0.05
             }
         }
 
@@ -58,15 +76,30 @@ ideas = {
             }
 
             modifier = {
-                political_power_gain = 0.25
+                political_power_gain = 0.20
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_infrastructure_factor = 0.10
+                stability_weekly = -0.01
+
             }
         }
 
-        MEX_fragmented_nation
-        MEX_the_bandit_problem
-        MEX_the_halcones_initiative
-        MEX_porfirian_railways_system
-        MEX_finally_a_modern_nation
-        MEX_going_back_to_the_ancient_roots
+        MEX_the_bandit_problem = {
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MEX
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                conscription_factor = -0.40
+                stability_factor = -0.10
+                recon_factor = -0.25
+                local_non_core_supply_impact_factor = 0.50
+                local_non_core_manpower = -0.25
+            }
+        }
     }
 }
