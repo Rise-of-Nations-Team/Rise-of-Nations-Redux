@@ -1,0 +1,31 @@
+MEX_modernization_balance = {
+    initial_value = -0.30
+    left_side = MEX_the_way_of_the_old
+    right_side = MEX_occidentalization
+    decision_category = MEX_latifundios
+    ### Mid ###
+    range = {
+        id = MEX_debate_range
+        min = -0.15
+        max = 0.15
+        modifier = {
+            war_support_factor = 0
+            research_speed_factor = 0
+            political_power_factor = 0
+            max_command_power_mult = 0
+            consumer_goods_factor = 0
+            custom_modifier_tooltip = MEX_debate_range_tt
+        }
+        on_activate = {
+            set_variable = { MEX_state_modernization_building_slots = 0 }
+            set_variable = { MEX_state_modernization_infraestructure = 0.00 }
+            set_variable = { MEX_state_modernization_resources = 0 }
+            set_variable = { MEX_state_modernization_manpower_grow_factor = 0 }
+            set_variable = { MEX_state_modernization_attack = 0 }
+            set_variable = { MEX_state_modernization_defence = 0 }
+            set_variable = { MEX_state_modernization_army_speed = 0 }
+        }
+        on_deactivate = {
+        }
+    }
+}
