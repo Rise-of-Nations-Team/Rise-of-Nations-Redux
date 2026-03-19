@@ -48,6 +48,7 @@ ideas = {
 
         MEX_agressive_modernization = {
             removal_cost = -1
+            picture = man_five_year_plan_industry
 
             allowed = {
                 original_tag = MEX
@@ -123,10 +124,29 @@ ideas = {
                 always = yes
             }
             modifier = {
-                conscription_factor = 0.20
-                cavalry_attack_factor = 0.20
-                cavalry_defence_factor = 0.20
+                conscription_factor = -0.20
+                cavalry_attack_factor = 0.10
+                cavalry_defence_factor = 0.10
                 modifier_army_sub_unit_cavalry_speed_factor = 0.10
+            }
+        }
+
+        MEX_a_proper_mexican_and_modern_army= {
+            removal_cost = -1
+            picture = AFG_adopt_nufus
+
+            allowed = {
+                original_tag = MEX
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                army_strength_factor = 0.10
+                army_attack_factor = 0.15
+                army_defence_factor = 0.15
+                army_speed_factor = 0.20
+                training_time_factor = 0.10
             }
         }
     }
