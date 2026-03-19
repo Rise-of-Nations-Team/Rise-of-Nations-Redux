@@ -20,7 +20,7 @@ MEX_latifundios = {
 ############## LOS LATIFUNDIOS DE CHIAPAS LE PERTENECERÁN A LOS ALEMANES YA QUE ESTOS FUERON LOS
 ############## PRINCIPALES INVERSORES EN CHIAPAS	
 	MEX_establish_latifundios_Chiapas = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_hol_attract_foreign_investors
 		cosmetic_tag = GER
 
 		highlight_states = {
@@ -263,7 +263,7 @@ MEX_latifundios = {
 ############# LOS PRINCIPALES INVERSORES EN EL NORTE DE MEXICO 
 ############# FUERON EVIDENTEMENTE LOS GRINGOS
 	MEX_establish_latifundios_Coahuila = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_hol_attract_foreign_investors
 		cosmetic_tag = USA
 
 		highlight_states = {
@@ -554,9 +554,67 @@ MEX_latifundios = {
 			add_political_power = 50
 		}
 	}
+	MEX_establish_latifundios_Sonora = {
+	# Copper mine in Cananea, lore needed
+		icon = steel
+		highlight_states = {
+			state = 483
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 483
+			controls_state = 483
+			MEX = {
+				has_government = neutrality
+			}
+		}
+		visible = {
+			owns_state = 483
+			controls_state = 483
+			483 = {
+				NOT = {
+					has_state_flag = Sonora_latifundios_established
+				}
+			}
+			480 = {
+				has_state_flag = Coahuila_latifundios_established
+			}
+		}
+		fire_only_once = yes
+		cost = 15
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 3
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			483 = { set_state_flag = Sonora_latifundios_established }
+			483 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+			}
+			add_stability = -0.1
+			add_political_power = 50
+		}
+	}
 ###### LOS LATIFUNDIOS VERACRUZ SERÁN BRITÁNICOS #########
 	MEX_establish_latifundios_Veracruz = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_hol_attract_foreign_investors
 		cosmetic_tag = ENG
 
 		highlight_states = {
@@ -609,7 +667,7 @@ MEX_latifundios = {
 		}
 	}
 	MEX_latifundios_Veracruz_expansion_1 = {
-		icon = opression
+		icon = rubber
 		highlight_states = {
 			state = 477
 		}
@@ -659,7 +717,7 @@ MEX_latifundios = {
 		}
 	}
 	MEX_latifundios_Veracruz_expansion_2 = {
-		icon = opression
+		icon = GFX_decision_generic_merge_plant_ship
 		highlight_states = {
 			state = 477
 		}
@@ -710,7 +768,7 @@ MEX_latifundios = {
 		}
 	}
 	MEX_latifundios_Veracruz_expansion_3 = {
-		icon = opression
+		icon = GFX_decision_generic_construction
 		highlight_states = {
 			state = 477
 		}
@@ -736,7 +794,7 @@ MEX_latifundios = {
 		cost = 35
 		days_remove = 30
 		modifier = {
-			civilian_factory_use = 1
+			civilian_factory_use = 7
 		}
 		ai_will_do = {
 			factor = 1
@@ -744,15 +802,11 @@ MEX_latifundios = {
 		remove_effect = {
 			477 = { set_state_flag = Veracruz_latifundios_expanded_3 }
 			477 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
-				}
-				add_resource = {
-					type = oil
-					amount = 24
 				}
 			}
 			add_stability = -0.2
@@ -760,7 +814,7 @@ MEX_latifundios = {
 		}
 	}
 	MEX_latifundios_Veracruz_expansion_4 = {
-		icon = opression
+		icon = GFX_decision_generic_merge_plant_ship
 		highlight_states = {
 			state = 477
 		}
@@ -794,7 +848,7 @@ MEX_latifundios = {
 		remove_effect = {
 			477 = { set_state_flag = Veracruz_latifundios_expanded_4 }
 			477 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
 					level = 2
@@ -812,7 +866,7 @@ MEX_latifundios = {
 	}
 ####### PRINCIPAL INVESTORS IN OAXACA WERE SPANISH
 	MEX_establish_latifundios_Oaxaca = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_hol_attract_foreign_investors
 		cosmetic_tag = SPR
 
 		highlight_states = {
