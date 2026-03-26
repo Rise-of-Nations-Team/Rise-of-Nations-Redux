@@ -1,11 +1,11 @@
 MEX_modernization_balance = {
     initial_value = -0.33
-    left_side = MEX_the_way_of_the_ancient
+    left_side = MEX_an_ancient_empire
     right_side = MEX_modernity
     decision_category = MEX_latifundios
     ### Mid ###
     range = {
-        id = MEX_debate_range
+        id = MEX_rural_country
         min = -0.15
         max = 0.15
         modifier = {
@@ -14,7 +14,8 @@ MEX_modernization_balance = {
             political_power_factor = 0
             max_command_power_mult = 0
             consumer_goods_factor = 0
-            custom_modifier_tooltip = MEX_debate_range_tt
+
+            custom_modifier_tooltip = MEX_rural_country_development_range_tt
         }
         on_activate = {
             set_variable = { MEX_state_modernization_building_slots = 0 }
@@ -26,6 +27,37 @@ MEX_modernization_balance = {
             set_variable = { MEX_state_modernization_army_speed = 0 }
         }
         on_deactivate = {
+        }
+    }
+    side = {
+        id = MEX_an_ancient_empire
+        range = {
+            id = MEX_ancient_traditions_total_development_range
+            min = -1
+            max = -0.9
+            modifier = {
+                war_support_factor = 0.20
+                max_command_power_mult = 0.30
+                conscription_factor = 0.25
+                consumer_goods_factor = -0.20
+                research_speed_factor = -0.20
+                political_power_factor = -0.20
+
+                custom_modifier_tooltip = MEX_ancient_traditions_total_development_range_tt
+            }
+            on_activate = {
+
+            }
+            on_deactivate = {
+
+            }
+        }
+        range = {
+            min = -0.90
+            max = -0.65
+            modifier = {
+                
+            }
         }
     }
 }
