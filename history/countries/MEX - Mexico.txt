@@ -79,21 +79,21 @@ recruit_character = MEX_heriberto_corona
 recruit_character = MEX_alberto_pani
 recruit_character = MEX_jose_vasconcelos
 
-create_dynamic_country = { #Napoleonistas
-    original_tag = MEX
-    copy_tag = MEX
-	set_cosmetic_tag = MEB_napoleonists
-	set_country_flag = MEB_napoleonists
-	reserve_dynamic_country = yes
+#create_dynamic_country = { #Napoleonistas
+#    original_tag = MEX
+#    copy_tag = MEX
+#	set_cosmetic_tag = MEB_napoleonists
+#	set_country_flag = MEB_napoleonists
+#	reserve_dynamic_country = yes
 	
-	recruit_character = MEB_Victor_Napoleon
-	set_politics = {
-		ruling_party = neutrality
-	}
-	set_popularities = {
-		neutrality = 100
-	}
-}
+#	recruit_character = MEB_Victor_Napoleon
+#	set_politics = {
+#		ruling_party = neutrality
+#	}
+#	set_popularities = {
+#		neutrality = 100
+#	}
+#}
 
 create_dynamic_country = { #Maderistas
     original_tag = MEX
@@ -256,6 +256,11 @@ if = {
 		ideology = fascism
 		long_name = MEX_fascism_party_DNC_long
 		name = MEX_fascism_party_DNC
+	}
+	set_party_name = {
+		ideology = islamism
+		long_name = MEX_islamism_party_DNC_long
+		name = MEX_islamism_party_DNC
 	}
 }
 

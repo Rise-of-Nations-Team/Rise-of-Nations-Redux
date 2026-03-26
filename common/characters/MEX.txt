@@ -42,21 +42,21 @@ characters = {
 		}
 	}	
 
-	MEX_porfirio_diaz={
+	MEX_porfirio_diaz = {
 		name = MEX_porfirio_diaz
-		portraits={
-			civilian={
-				large="gfx/leaders/MEX/DNC/MEX_Porfirio_Diaz.dds"
-				#small="gfx/interface/ideas/MEX/idea_MEX_porfirio_diaz.dds"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/DNC/MEX_Porfirio_Diaz.dds"
+				#small = "gfx/interface/ideas/MEX/idea_MEX_porfirio_diaz.dds"
 			}
 		}
-		field_marshal={
-			traits={ war_hero offensive_doctrine }
-			skill=2
-			attack_skill=3
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=1
+		field_marshal = {
+			traits = { war_hero offensive_doctrine }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
 			visible = {
 				date < 1916.1.1				
 				has_country_leader = {
@@ -64,10 +64,12 @@ characters = {
 				}
 			}	
 		}
-		country_leader={
-			ideology= militarism
+		country_leader = {
+			ideology = militarism
 			desc = "POLITICS_PORFIRIO_DIAZ_DESC"			
-			traits = { dictator }			
+			traits = { 
+				MEX_ruthless_modernizer
+			}			
 		}
 	}
 	
@@ -97,32 +99,32 @@ characters = {
 		}
 	}
 
-	MEX_francisco_madero={
+	MEX_francisco_madero = {
 		name = MEX_francisco_madero
-		portraits={
-			civilian={
-				large="gfx/leaders/MEX/WW1/Portrait_Mexico_Francisco_Madero.dds"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/WW1/Portrait_Mexico_Francisco_Madero.dds"
 			}
 		}
-		country_leader={
-			ideology=liberalism	
+		country_leader = {
+			ideology = liberalism	
 			desc = "POLITICS_MADERO_DESC"			
 		}
 	}
 
-	MEX_bernardo_reyes={
-		name= MEX_bernardo_reyes
-		portraits={
+	MEX_bernardo_reyes = {
+		name = MEX_bernardo_reyes
+		portraits = {
 			army = {
 				large="gfx/leaders/MEX/DNC/MEX_Bernardo_Reyes.dds"
-				#small="gfx/interface/ideas/MEX/idea_MEX_bernardo_reyes.dds"
+				small="gfx/interface/ideas/MEX/idea_MEX_bernardo_reyes.dds"
 			}
 		}
 		advisor = {
 			idea_token = MEX_bernardo_reyes
-			slot = army_chief
+			slot = political_advisor
 			traits = {
-				army_chief_reform_3
+				MEX_cientifico_reformista
 			}
 			cost = 200
 			allowed = {
@@ -154,8 +156,8 @@ characters = {
 				date < 1925.1.1						
 			}
 		}
-		country_leader={
-			ideology=rw_nationalism
+		country_leader = {
+			ideology = rw_nationalism
 		}
 	}
 
