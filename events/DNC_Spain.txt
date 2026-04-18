@@ -94,6 +94,8 @@ news_event = {
 	title = DNC_Spain_News.4.t
 	desc = DNC_Spain_News.4.desc
 
+	fire_only_once = yes
+
 	trigger = {
 		tag = SPR
 		has_completed_focus = SPRDNC_the_regency
@@ -359,6 +361,46 @@ country_event = {
 		}
 		complete_national_focus = SPRDNC_the_4th_carlist_war
 
+		add_corps_commander_role = {
+   	 		character = SPR_alfonso_carlos_i
+			traits = { trait_royal infantry_leader hill_fighter urban_assault_specialist }
+    		skill = 3
+    		attack_skill = 3
+    		defense_skill = 1
+    		planning_skill = 2
+    		logistics_skill = 5
+			visible = {
+				date < 1937.1.1
+				has_cosmetic_tag = SPR_carlist_spain
+			}
+		}	
+		add_corps_commander_role = {
+   	 		character = SPR_manuel_santa_cruz
+			traits = { urban_assault_specialist skilled_staffer trickster guerilla_fighter }
+    		skill = 2
+    		attack_skill = 2
+    		defense_skill = 2
+    		planning_skill = 4
+    		logistics_skill = 1
+			visible = {
+				date < 1926.1.1
+				has_cosmetic_tag = SPR_carlist_spain
+			}
+		}
+		add_corps_commander_role = {
+   	 			character = SPR_Jaime_III
+				traits = { trait_royal cavalry_leader hill_fighter infantry_leader }
+    			skill = 3
+    			attack_skill = 4
+    			defense_skill = 3
+    			planning_skill = 2
+    			logistics_skill = 1
+				visible = {
+					date < 1932.1.1
+					has_cosmetic_tag = SPR_carlist_spain
+				}
+			}	
+
 		every_state = {
 			clr_state_flag = SPRDNC_carlist_control
 		}
@@ -520,6 +562,10 @@ news_event = { # Death of Carlos VII
 			}
 			else = {
 				add_country_leader_trait = SPR_carlist_pretender
+			}
+			set_country_leader_name = {
+				character = SPR_Jaime_III
+				name = "Jaime III"
 			}
 		}
 	}
