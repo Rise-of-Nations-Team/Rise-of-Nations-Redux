@@ -2,79 +2,6 @@ ideas = {
 
 	country = {
 
-		OTT_military_on_the_rise = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-
-			picture = random
-
-			modifier = {
-				fascism_drift = 0.03
-			}
-		}
-
-		OTT_lenient_military_idea = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = donthave
-
-			modifier = {
-				army_org_factor = -0.2
-				political_power_factor = 0.15
-			}
-		}
-
-		OTT_outdated_military = {
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				date > 1910.1.1
-			}
-
-			modifier = {
-				experience_gain_army = -0.25
-				experience_gain_navy = -0.5
-				planning_speed = -0.2
-				naval_coordination = -0.1
-				naval_hit_chance = -0.1
-				mobilization_speed = -0.1
-			}
-		}
-		OTT_sickman_of_europe = {
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				date > 1910.1.1
-			}
-
-			modifier = {
-				stability_factor = -0.3
-				political_power_gain = -0.1
-			}
-		}
-
-		############################################
-		### OTTOMAN REWORK BY XAELOR AND POZITOX ###
-		############################################
-
 		OTT_the_hamidian_regime_ns = {
 
 			picture = generic_oppression
@@ -95,6 +22,73 @@ ideas = {
 				army_chief_cost_factor = -0.1
 				navy_chief_cost_factor = -0.1
 				air_chief_cost_factor = -0.1
+			}
+
+		}
+
+		OTT_persecution_of_intelectuals_ns = {
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = -0.1
+				democratic_drift = 0.02
+				research_speed_factor = -0.05
+				custom_modifier_tooltip = OTT_persecution_of_intelectuals_ns_tt
+			}
+
+		}
+
+		OTT_outdated_military_ns = {
+
+			picture = OTT_outdated_military
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#TODO - POZITOX
+			}
+
+		}
+
+		OTT_purged_naval_forces_ns = {
+
+			picture = SOV_conspiracy_in_the_academy_navy
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#TODO - POZITOX
+			}
+
+		}
+
+		OTT_the_public_debt_administration_ns = {
+
+			picture = gre_debt_to_the_ifc
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				#TODO - POZITOX
 			}
 
 		}
@@ -138,26 +132,6 @@ ideas = {
 			}
 
 		}
-
-		OTT_persecution_of_intelectuals_ns = {
-
-			picture = FRA_scw_intervention_republicans_focus
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				drift_defence_factor = -0.1
-				democratic_drift = 0.02
-				research_speed_factor = -0.05
-				custom_modifier_tooltip = OTT_persecution_of_intelectuals_ns_tt
-			}
-
-		}
-
 
 	}
 }

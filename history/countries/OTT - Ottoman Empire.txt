@@ -25,9 +25,23 @@ add_ideas = {
 }
 
 add_ideas = {
-	OTT_outdated_military
-	sick_man_europe
+	OTT_the_hamidian_regime_ns
+	OTT_persecution_of_intelectuals_ns
+	OTT_outdated_military_ns
+	OTT_purged_naval_forces_ns
+	OTT_the_public_debt_administration_ns
+	RUS_high_iliteracy2
 	ww1_Scramble_for_Africa
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	add_ideas = OTT_rule_thourgh_intrigue_ns
+	else = {
+		add_ideas = OTT_rule_thourgh_intrigue_nolar_ns
+	}
 }
 
 if = {
