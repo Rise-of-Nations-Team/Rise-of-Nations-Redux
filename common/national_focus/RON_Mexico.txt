@@ -21,4 +21,491 @@ focus_tree = {
 	###############################################################################
 	###############################################################################
 	###############################################################################
+
+    ####### Focus to plan Porfirio's succession ########
+    focus = {
+        id = MEXDNC_focus_choose_a_successor
+        icon = GFX_goal_generic_political_actions
+        x = 5
+        y = 1
+        cost = 10
+        prerequisite = {
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        completion_reward = {
+            add_political_power = 100
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.05
+            }
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.05
+            }
+        }
+    }
+
+    #Focus for picking Leon de la Barra as successor
+    focus = {
+        id = MEXDNC_focus_the_secretary_of_exterior
+        icon = GFX_goal_generic_political_actions
+        x = 2
+        y = 2
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_choose_a_successor }
+        mutually_exclusive = {
+            focus = MEXDNC_focus_the_secretary_of_economy
+            focus = MEXDNC_focus_the_secretary_of_defense
+            focus = MEXDNC_focus_the_young_general
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.10
+            }
+        }
+    }
+
+    #Focus to start commerce with Southamerica and Centralamerica
+    focus = {
+        id = MEXDNC_focus_commerce_with_the_south
+        icon = GFX_goal_generic_political_actions
+        x = 1
+        y = 4
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_secretary_of_exterior }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+
+        }
+    }
+
+    #Focus to promote immigration with Southamerica and Centralamerica
+    focus = {
+        id = MEXDNC_focus_reinforce_immigration_policy
+        icon = GFX_goal_generic_political_actions
+        x = 1
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_commerce_with_the_south }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+
+        }
+    }
+
+    #Focus to hire foreign naval instructors
+    focus = {
+        id = MEXDNC_focus_hire_naval_instructors
+        icon = GFX_goal_generic_political_actions
+        x = 2
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_secretary_of_exterior }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            every_navy_leader = {
+                add_skill_level = 1
+            }
+        }
+    }
+
+    #Focus to early establish the Mexican Merchant Navy
+    focus = {
+        id = MEXDNC_focus_mexican_merchant_navy
+        icon = GFX_goal_generic_political_actions
+        x = 2
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_hire_naval_instructors }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_ideas = { MEX_marina_mercante_mexicana }
+        }
+    }
+
+    #Focus liberate the market (De La Barra OR Limantour)
+    focus = {
+        id = MEXDNC_focus_liberate_the_markets
+        icon = GFX_goal_generic_political_actions
+        x = 3
+        y = 4
+        cost = 10
+        prerequisite = {
+            focus = MEXDNC_focus_the_secretary_of_exterior
+            focus = MEXDNC_focus_the_secretary_of_economy
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+
+        }
+    }
+
+    #Focus to establish trading routes Japan and Asia (De La Barra OR Limantour)
+    focus = {
+        id = MEXDNC_focus_trade_with_asia
+        icon = GFX_goal_generic_political_actions
+        x = 3
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_liberate_the_markets }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+
+        }
+    }
+
+    #Focus The Legacy of Leon de la Barra
+    focus = {
+        id = MEXDNC_focus_a_trading_nation
+        icon = GFX_goal_generic_political_actions
+        x = 2
+        y = 8
+        cost = 70
+        prerequisite = { focus = MEXDNC_focus_reinforce_immigration_policy }
+        prerequisite = { focus = MEXDNC_focus_mexican_merchant_navy }
+        prerequisite = { focus = MEXDNC_focus_trade_with_asia }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            
+        }
+    }
+
+    #Focus for picking Jose Yves Limantour as successor
+    focus = {
+        id = MEXDNC_focus_the_secretary_of_economy
+        icon = GFX_goal_generic_political_actions
+        x = 4
+        y = 2
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_choose_a_successor }
+        mutually_exclusive = {
+            focus = MEXDNC_focus_the_secretary_of_exterior
+            focus = MEXDNC_focus_the_secretary_of_defense
+            focus = MEXDNC_focus_the_young_general
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+
+        }
+    }
+
+    #Focus to expand public services
+    focus = {
+        id = MEXDNC_focus_expand_public_services
+        icon = GFX_focus_generic_public_works
+        x = 4
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_secretary_of_economy }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+                add_ideas = { MEX_modern_public_services }
+        }
+    }
+
+    #Focus to set the Gold standard
+    focus = {
+        id = MEXDNC_focus_the_gold_standard
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 4
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_expand_public_services }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_ideas = { MEX_the_gold_standard }
+        }
+    }
+
+    #Focus to recruit Matilde Montoya into the government (Limantour OR Reyes)
+    focus = {
+        id = MEXDNC_focus_recruit_montoya
+        icon = GFX_goal_generic_political_actions
+        x = 5
+        y = 4
+        cost = 10
+        prerequisite = { 
+            focus = MEXDNC_focus_the_secretary_of_economy 
+            focus = MEXDNC_focus_the_secretary_of_defense
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            
+        }
+    }
+
+    #Focus to allow women go to school (Limantour OR Reyes)
+    focus = {
+        id = MEXDNC_focus_school_for_women
+        icon = GFX_goal_generic_political_actions
+        x = 5
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_recruit_montoya }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_ideas = { MEX_the_women_school }
+        }
+    }
+
+    #Focus for he Legacy of Limantour
+    focus = {
+        id = MEXDNC_focus_a_modern_republic
+        icon = GFX_goal_generic_political_actions
+        x = 4
+        y = 8
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_trade_with_asia }
+        prerequisite = { focus = MEXDNC_focus_the_gold_standard }
+        prerequisite = { focus = MEXDNC_focus_school_for_women }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            
+        }
+    }
+
+    #Focus to choose Bernardo Reyes as successor
+    focus = {
+        id = MEXDNC_focus_the_secretary_of_defense
+        icon = GFX_goal_generic_political_actions
+        x = 6
+        y = 2
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_choose_a_successor }
+        mutually_exclusive = {
+            focus = MEXDNC_focus_the_secretary_of_exterior
+            focus = MEXDNC_focus_the_secretary_of_economy
+            focus = MEXDNC_focus_the_young_general
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            
+        }
+    }
+
+    #Focus to negotiate with the Oppositors
+    focus = {
+        id = MEXDNC_focus_negotiate_with_the_opposition
+        icon = GFX_focus_BRA_reach_out_to_military_dem
+        x = 6
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_secretary_of_defense }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_stability = 0.10
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.05
+            }
+        }
+    }
+
+    #Focus to Recruit Francisco I. Madero (Prevents the Revolution)
+    focus = {
+        id = MEXDNC_focus_recruit_madero
+        icon = GFX_focus_recruit_madero
+        x = 6
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_negotiate_with_the_opposition }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.05
+            }
+        }
+    }
+
+    #Focus to invest in the Heroico Colegio Militar (Reyes OR Diaz)
+    focus = {
+        id = MEXDNC_focus_invest_on_mexican_heroic_military_school
+        icon = GFX_goal_generic_military_sphere
+        x = 7
+        y = 4
+        cost = 10
+        prerequisite = { 
+            focus = MEXDNC_focus_the_secretary_of_defense
+            focus = MEXDNC_focus_the_young_general
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            
+        }
+    }
+
+    #Focus to recruit Villa into the active service (Reyes OR Diaz)
+    focus = {
+        id = MEXDNC_focus_loyalty_of_bandits
+        icon = GFX_focus_BRA_deal_with_the_cangaco
+        x = 7
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_invest_on_mexican_heroic_military_school }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_manpower = 50000
+            add_ideas = { MEX_a_mexican_army }
+        }
+    }
+
+    #Focus to the Legacy of Bernardo Reyes
+    focus = {
+        id = MEXDNC_focus_a_united_nation
+        icon = GFX_goal_generic_national_unity
+        x = 6
+        y = 8
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_loyalty_of_bandits }
+        prerequisite = { focus = MEXDNC_focus_recruit_madero }
+        prerequisite = { focus = MEXDNC_focus_school_for_women }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_stability = 0.20
+            add_ideas = { MEX_mexican_unity }
+        }
+    }
+
+    #Focus to choose Felix Diaz as successor
+    focus = {
+        id = MEXDNC_focus_the_young_general
+        icon = GFX_goal_generic_political_actions
+        x = 8
+        y = 2
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_choose_a_successor }
+        mutually_exclusive = {
+            focus = MEXDNC_focus_the_secretary_of_exterior
+            focus = MEXDNC_focus_the_secretary_of_economy
+            focus = MEXDNC_focus_the_secretary_of_defense
+        }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_stability = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+        }
+    }
+
+    #Focus to improve the skills of all generals
+    focus = {
+        id = MEXDNC_focus_more_reforms_to_the_army_staff
+        icon = GFX_focus_chi_army_reform
+        x = 8
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_young_general }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            every_army_leader ={
+                add_skill_level = 1
+                add_logistics = 1
+            }
+        }
+    }
+
+    #Focus to supress the oposition (Revolution guarantee - US dennounces)
+    focus = {
+        id = MEXDNC_focus_supress_the_opposition
+        icon = GFX_goal_continuous_suppression
+        x = 8
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_more_reforms_to_the_army_staff }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_stability = -0.10
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+        }
+    }
+
+    #Focus to dennounce US interventionism (Can lead to war against the US)
+    focus = {
+        id = MEXDNC_focus_dennounce_us_intervention
+        icon = GFX_focus_ARG_anti_american_propaganda
+        x = 9
+        y = 4
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_young_general }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_war_support = 0.10
+            add_political_power = 100
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+            USA = {
+                remove_opinion_modifier = {
+                    target = ROOT
+                    modifier = MEX_foreign_companies_established_op_mod
+                }
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = MEX_they_dennounced_us_op_mod
+                }
+            }
+        }
+    }
+
+    #Focus to militarize society (War preparations)
+    focus = {
+        id = MEXDNC_focus_militarize_the_society
+        icon = GFX_focus_generic_advanced_military_studies
+        x = 9
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_dennounce_us_intervention }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_war_support = 0.15
+            add_manpower = 200000
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.20
+            }
+        }
+    }
+
+    #Focus for the Legacy of Felix Diaz
+    focus = {
+        id = MEXDNC_focus_an_strong_nation
+        icon = GFX_focus_generic_military_dictatorship
+        x = 8
+        y = 8
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_loyalty_of_bandits }
+        prerequisite = { focus = MEXDNC_focus_supress_the_opposition }
+        prerequisite = { focus = MEXDNC_focus_militarize_the_society }
+        ai_will_do = { factor = 0 }
+        completion_reward = {
+            add_stability = 0.10
+            add_war_support = 0.10
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+            add_ideas = { MEX_a_modern_mexican_army }
+        }
+    }
+
+    ####### Focus tree about the Ley Lerdo ########
 }

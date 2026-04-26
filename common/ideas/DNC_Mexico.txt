@@ -32,9 +32,6 @@ ideas = {
 
             allowed = {
                 original_tag = MEX
-                NOT = {
-                    has_idea = MEX_very_fragmented_nation
-                }
             }
             allowed_civil_war = {
                 always = yes
@@ -43,11 +40,28 @@ ideas = {
                 stability_factor = 0.20
                 war_support_factor = 0.20
                 defensive_war_stability_factor = 0.50
-                stability_weekly = 0.01
+                stability_weekly = 0.025
             }
         }
 
-        MEX_agressive_modernization = {
+        MEX_trading_nation = {
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MEX
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = 0.15
+                trade_opinion_factor = 0.50
+                political_power_gain = 0.10
+                consumer_goods_factor = -0.25
+            }
+        }
+
+        MEX_aggressive_modernization = {
             removal_cost = -1
             picture = man_five_year_plan_industry
 
@@ -60,11 +74,11 @@ ideas = {
 
             modifier = {
                 consumer_goods_factor = 0.10
-                political_power_gain = 0.50
+                political_power_gain = 0.25
                 production_speed_buildings_factor = 0.20
                 research_speed_factor = 0.10
                 trade_opinion_factor = 0.50
-                consumer_goods_factor = 0.10
+                local_resources_factor = 0.20
                 stability_weekly = -0.015
                 power_balance_weekly = 0.03
             }
@@ -87,12 +101,13 @@ ideas = {
 
             modifier = {
                 consumer_goods_factor = 0.25
-                political_power_gain = 0.20
+                political_power_gain = 0.15
                 production_speed_industrial_complex_factor = 0.10
                 production_speed_infrastructure_factor = 0.10
                 research_speed_factor = 0.05
                 trade_opinion_factor = 0.25
-                stability_weekly = -0.01
+                local_resources_factor = 0.10
+                stability_weekly = -0.005
                 power_balance_weekly = 0.01
 
             }
@@ -149,7 +164,7 @@ ideas = {
                 army_attack_factor = 0.10
                 army_defence_factor = 0.10
                 army_speed_factor = 0.15
-                training_time_factor = 0.10
+                training_time_factor = 0.05
             }
         }
         
@@ -167,7 +182,62 @@ ideas = {
                 army_attack_factor = 0.25
                 army_defence_factor = 0.25
                 army_speed_factor = 0.20
-                training_time_factor = 0.20
+                training_time_factor = 0.10
+            }
+        }
+
+        MEX_modern_public_services = {
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MEX
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                local_resources_factor = 0.20
+                factory_energy_consumption = -0.15
+                production_speed_buildings_factor = 0.20
+            }
+        }
+
+        MEX_marina_mercante_mexicana = {
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MEX
+            }
+            allowed_civil_war = { always = yes }
+            modifier = {
+                convoy_escort_efficiency = 0.50
+                navy_screen_attack_factor = 0.10
+                experience_gain_navy = 0.01
+            }
+        }
+
+        MEX_the_gold_standard = {
+            removal_cost = -1
+
+            allowed = { original_tag = MEX }
+            allowed_civil_war = { always = yes }
+            modifier = {
+                political_power_gain = 0.15
+                weekly_stability = 0.025
+                trade_laws_cost_factor = -0.25
+            }
+        }
+
+        MEX_the_women_school = {
+            removal_cost = -1 
+
+            allowed = { original_tag = MEX }
+            allowed_civil_war = { always = yes }
+            modifier = {
+                democratic_drift = 0.02
+                weekly_stability = 0.01
+                research_speed_factor = 0.05
+                experience_loss_factor = -0.10
             }
         }
     }
