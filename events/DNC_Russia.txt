@@ -9,15 +9,10 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.1.a
-		ai_chance = { base = 100 }
-        add_political_power = 50
+		add_political_power = 50
 	}
 }
 
@@ -27,31 +22,36 @@ country_event = {
 	desc = DNC_Russia.5.d
 	picture = GFX_event_chi_quest
 
-	fire_only_once = no
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.5.a
-		ai_chance = { base = 20 }
-        hidden_effect = {   
+		ai_chance = {
+			base = 20
+		}
+		hidden_effect = {  
 			declare_war_on = {
 				target = QIN
 				type = annex_everything
-			} 
+			}
 		}
-
-		custom_effect_tooltip = blitz_man			 
+		custom_effect_tooltip = blitz_man			
 		set_country_flag = rus_man_inv
-	    hidden_effect = { RUS = { country_event = { id = dgk_news.4 days = 2} } }
+		#hidden_effect = { #TODO event - doesn't exist
+		#	RUS = {
+		#		news_event = {
+		#			id = dnc_news.4
+		#			days = 2
+		#		}
+		#	}
+		#}
 	}
 	option = {
 		name = DNC_Russia.5.b
-		ai_chance = { base = 80 }
-        add_political_power = 150
+		ai_chance = {
+			base = 80
+		}
+		add_political_power = 150
 		add_war_support = -0.05
 	}		
 }
@@ -65,24 +65,21 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-        tag = RUS
-	}
-
 	option = {
 		name = DNC_Russia.8.a
-		ai_chance = { base = 20 }
-        white_peace = {
+		ai_chance = {
+			base = 20
+		}
+		white_peace = {
 			tag = QIN
 			message = rus_occ_man
 		}
-
 		set_country_flag = rus_chi_won
 		clr_country_flag = rus_man_inv
-        hidden_effect = {
+		hidden_effect = {
 			RUS = {
 				transfer_state = 328
-				transfer_state = 717  
+				transfer_state = 717 
 				transfer_state = 714
 				transfer_state = 715
 				transfer_state = 716
@@ -101,19 +98,22 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-        tag = RUS
-	}
-
 	option = {
 		name = DNC_Russia.10.a
-		ai_chance = { base = 80 }
-        hidden_effect = {  release = MAN  puppet = MAN }
+		ai_chance = {
+			base = 80
+		}
+		hidden_effect = {
+			release = MAN
+			puppet = MAN
+		}
 	}
 	option = {
 		name = DNC_Russia.10.b
-		ai_chance = { base = 20 }
-        add_political_power = -50
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = -50
 		add_stability = -0.05
 	}
 }
@@ -126,72 +126,45 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.9.a
-		ai_chance = { base = 100 }
-        add_political_power = -50
-         white_peace = {
-             tag = QIN
-             message = rus_fail_man
-                       }
-}
-	option = {
-		name = DNC_Russia.9.b
-		ai_chance = { base = 100 }
-        add_political_power = -200
-		add_ideas = RUS_army_demoral
-    }
-}
-
-#ott 
-
-country_event = {
-	id = DNC_Russia.4
-	title = DNC_Russia.4.t
-	desc = DNC_Russia.4.d
-	picture = GFX_event_rus_prop
-    hidden = yes
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	trigger = {
-        tag = RUS
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = -50
+		white_peace = {
+			tag = QIN
+			message = rus_fail_man
+		}
 	}
 
-	immediate = { load_oob = RUS_1900_OTT }
-
+	option = {
+		name = DNC_Russia.9.b
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = -200
+		add_ideas = RUS_army_demoral
+	}
 }
 
-
 #Dynamic Stuff
-
 country_event = {
 	id = DNC_Russia.3
 	title = DNC_Russia.3.t
 	desc = DNC_Russia.3.d
 	picture = GFX_event_rus_prop
-    hidden = yes
+	hidden = yes
 
-	fire_only_once = no
 	is_triggered_only = yes
 
-	trigger = {
-        tag = RUS
-	}
-	
-	immediate = { 
+	immediate = {
 		mark_focus_tree_layout_dirty = yes
 		set_country_flag = boxer_reb_over
 		set_country_flag = rus_japwar_over
 		load_oob = RUS_1900_OTT
 	}
-
 }
 
 #hidden stuff
@@ -203,20 +176,18 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
+
+	immediate = {
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = DNC_Russia.ott.sit
 	}
 
 	option = {
 		name = DNC_Russia.2.a
-		ai_chance = { base = 100 }
-        add_war_support = 0.05
-	}
-	
-	immediate = {
-		mark_focus_tree_layout_dirty = yes
-		set_country_flag = DNC_Russia.ott.sit
+		ai_chance = {
+			base = 100
+		}
+		add_war_support = 0.05
 	}
 }
 
@@ -229,18 +200,16 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.6.a
-		ai_chance = { base = 100 }
-        add_political_power = 100
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = 100
 		add_stability = 0.1
 	}
-    immediate = {
+	immediate = {
 		mark_focus_tree_layout_dirty = yes
 		set_country_flag = DNC_Russia.jap
 		set_country_flag = DNC_Russia.jap.won
@@ -258,20 +227,19 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-        tag = RUS
 		date < 1910.1.1
 	}
 
 	option = {
 		name = DNC_Russia.7.a
 		ai_chance = { base = 100 }
-        add_political_power = -200
+		add_political_power = -200
 		add_ideas = RUS_mass_prot
 		add_ideas = RUS_shat_army
 		add_ideas = RUS_shat_navy
 	}
 
-    immediate = { 
+	immediate = {
 		mark_focus_tree_layout_dirty = yes
 		set_country_flag = DNC_Russia.jap
 		set_country_flag = DNC_Russia.jap.lost
@@ -286,12 +254,6 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
-
-    
 
 	option = {
 		name = DNC_Russia.11.a
@@ -308,20 +270,19 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.900.a
-		ai_chance = { base = 100 }
-        add_opinion_modifier = {
+		ai_chance = {
+			base = 100
+		}
+		add_opinion_modifier = {
 			target = GER
 			modifier = HUN_refused_alliance
 		}
 	}
 }
+
 country_event = {
 	id = DNC_Russia.901
 	title = DNC_Russia.901.t
@@ -330,14 +291,12 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.901.a
-		ai_chance = { base = 100 }
+		ai_chance = {
+			base = 100
+		}
 		RUS = {
 			add_timed_idea = {
 				idea = RUS_trade_deficit_GER
@@ -357,14 +316,12 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-	trigger = {
-        tag = RUS
-	}
 
 	option = {
 		name = DNC_Russia.998.a
-		ai_chance = { base = 100 }
-        add_stability = -0.02
+		ai_chance = {
+			base = 100
+		}
+		add_stability = -0.02
 	}
 }
