@@ -8,26 +8,24 @@ MEX_latifundios = {
 		visible = {
 			owns_state = 277
 			controls_state = 277
+			has_completed_focus = MEXDNC_focus_the_palaces_of_mexico
 			277 = {
 				NOT = { has_state_flag = boker_building_added }
-			}
-			MEX = {
-				has_idea = MEX_aggressive_modernization
-				OR = { has_idea = MEX_progressive_modernization }
 			}
 		}
 		fire_only_once = yes
 		allowed = {
 			MEX = {
-				has_idea = MEX_aggressive_modernization
-				OR = { has_idea = MEX_progressive_modernization }
+				OR = { 
+					has_idea = MEX_progressive_modernization
+					has_idea = MEX_aggressive_modernization
+				}
 			}
 		}
 		cost = 100
 		days_remove = 120
 		modifier = { civilian_factory_use = 5 }
 		remove_effect = {
-			add_stability = 0.05
 			277 = {
 				if = {
 					limit = {
@@ -50,12 +48,15 @@ MEX_latifundios = {
 		visible = {
 			owns_state = 277
 			controls_state = 277
+			has_completed_focus = MEXDNC_focus_the_palaces_of_mexico
 			277 = {
 				NOT = { has_state_flag = juarez_theater_added }
 			}
 			MEX = {
-				has_idea = MEX_aggressive_modernization
-				OR = { has_idea = MEX_progressive_modernization }
+				OR = { 
+					has_idea = MEX_progressive_modernization
+					has_idea = MEX_aggressive_modernization
+				}
 			}
 		}
 		fire_only_once = yes
@@ -69,7 +70,6 @@ MEX_latifundios = {
 		days_remove = 120
 		modifier = { civilian_factory_use = 5 }
 		remove_effect = {
-			add_stability = 0.05
 			277 = {
 				if = {
 					limit = {
@@ -80,44 +80,6 @@ MEX_latifundios = {
 				set_state_flag = juarez_theater_added
 			}
 			country_event = { id = MEXDNC_Juarez_Theater.1 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	MEX_parish_sagrada_familia = {
-		icon = GFX_decision_hol_draw_up_staff_plans
-		available = {
-			original_tag = MEX
-			num_of_civilian_factories > 4
-		}
-		visible = {
-			owns_state = 277
-			controls_state = 277
-			277 = {
-				NOT = { has_state_flag = sagrada_familia_added }
-			}
-		}
-		fire_only_once = yes
-		allowed = {
-			MEX = {
-				has_idea = MEX_aggressive_modernization
-				OR = { has_idea = MEX_progressive_modernization }
-			}
-		}
-		cost = 100
-		days_remove = 120
-		modifier = { civilian_factory_use = 5 }
-		remove_effect = {
-			add_stability = 0.05
-			277 = {
-				if = {
-					limit = {
-						NOT = { has_state_category = large_city }
-					}
-					set_state_category = large_city
-				}
-				set_state_flag = sagrada_familia_added
-			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -134,7 +96,6 @@ MEX_latifundios = {
 		visible = {
 			owns_state = 277
 			controls_state = 277
-			
 			NOT = {
 				has_country_flag = MEX_mexican_investors_promoted
 			}
@@ -206,9 +167,6 @@ MEX_latifundios = {
 	}
 	MEX_latifundios_Yucatan_expansion_1 = {
 		icon = infiltrate_state
-		highlight_states = {
-			state = 474
-		}
 		available = {
 			owns_state = 474
 			controls_state = 474

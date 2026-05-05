@@ -35,7 +35,7 @@ focus_tree = {
             factor = 0
         }
         completion_reward = {
-            add_political_power = 100
+            add_political_power = 50
             add_popularity = {
                 ideology = democratic
                 popularity = 0.05
@@ -507,5 +507,215 @@ focus_tree = {
         }
     }
 
-    ####### Focus tree about the Ley Lerdo ########
+    ####### Industrial Focus tree 'Keep the Lerdo Law' ########
+
+    ### Keep the Lerdo Law
+    focus = {
+        id = MEXDNC_focus_keep_lerdo_law
+        icon = GFX_focus_generic_public_works
+        x = 11
+        y = 1
+        cost = 10
+        prerequisite = {  }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+
+        }
+    }
+
+    ### Focus to gain some PP for further development
+    focus = {
+        id = MEXDNC_focus_concessions_to_the_government
+        icon = GFX_focus_generic_public_works
+        x = 11
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_keep_lerdo_law }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            add_political_power = 200
+        }
+    }
+
+    ### Focus to unlock the decisions to construct the Palaces of Porfirio
+    focus = {
+        id = MEXDNC_focus_the_palaces_of_mexico
+        icon = GFX_focus_generic_public_works
+        x = 11
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_concessions_to_the_government }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+
+        }
+    }
+
+    ### Focus to Technical College
+    focus = {
+        id = MEXDNC_focus_technical_school
+        icon = GFX_focus_generic_public_works
+        x = 11
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_palaces_of_mexico }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    ### Focus to set the Tehuantepec Railway
+    focus = {
+        id = MEXDNC_focus_tehuantepec_railway
+        icon = GFX_focus_generic_public_works
+        x = 11
+        y = 7
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_technical_school }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            
+        }
+    }
+
+    ### Focus to build Universidad Nacional de Mexica
+    focus = {
+        id = MEXDNC_focus_universidad_nacional_de_mexico
+        icon = GFX_focus_generic_public_works
+        x = 11
+        y = 8
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_tehuantepec_railway }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    ### Focus to allow investment of the Mexican Families
+    focus = {
+        id = MEXDNC_focus_concessions_to_mexicans
+        icon = GFX_focus_generic_public_works
+        x = 14
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_keep_lerdo_law }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            add_political_power = 200
+        }
+    }
+
+    ### Focus to allow the increase the resources of Oaxaca, Yucatan and Guerrero
+    focus = {
+        id = MEXDNC_focus_the_southtern_families
+        icon = GFX_focus_generic_public_works
+        x = 13
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_concessions_to_mexicans }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+
+        }
+    }
+
+    ### Focus to increase the state level of Yucatan
+    focus = {
+        id = MEXDNC_focus_the_urbanization_of_merida
+        icon = GFX_focus_generic_public_works
+        x = 13
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_southtern_families }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            474 = {
+                set_state_category = city
+            }
+        }
+    }
+
+    ### Focus to allow the increase the resources of Nuevo Leon, Sonora and Tamaulipas
+    focus = {
+        id = MEXDNC_focus_the_northtern_families
+        icon = GFX_focus_generic_public_works
+        x = 15
+        y = 5
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_concessions_to_mexicans }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            
+        }
+    }
+
+    ### Focus to increase the state level of Nuevo Leon
+    focus = {
+        id = MEXDNC_focus_the_urbanization_of_monterrey
+        icon = GFX_focus_generic_public_works
+        x = 15
+        y = 6
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_northtern_families }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            480 = {
+                set_state_category = large_city
+            }
+        }
+    }
+
+    ### Focus to add production to Distrito Federal
+    focus = {
+        id = MEXDNC_focus_expand_capital_public_services
+        icon = GFX_focus_generic_public_works
+        x = 14
+        y = 7
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_the_urbanization_of_monterrey }
+        prerequisite = { focus = MEXDNC_focus_the_urbanization_of_merida }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+
+        }
+    }
+
+    ### Focus to add up the state category of Distrito Federal
+    focus = {
+        id = MEXDNC_focus_the_mass_urbanization_of_distrito_federal
+        icon = GFX_focus_generic_public_works
+        x = 14
+        y = 8
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_expand_capital_public_services }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            add_political_power = -100
+            277 = {
+                if = {
+                    limit = { has_state_category = city }
+                    set_state_category = large_city
+                }
+                if = {
+                    limit = { has_state_category = large_city }
+                    set_state_category = metropolis
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = MEXDNC_focus_concessions_to_foreigns
+        icon = GFX_focus_generic_public_works
+        x = 18
+        y = 3
+        cost = 10
+        prerequisite = { focus = MEXDNC_focus_keep_lerdo_law }
+        ai_will_do = { factor = 1000 }
+        completion_reward = {
+            add_political_power = 200
+        }
+    }
 }

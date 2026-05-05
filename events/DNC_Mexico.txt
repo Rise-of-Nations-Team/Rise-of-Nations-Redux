@@ -1,5 +1,5 @@
-add_namespace = DNC_Mexico
-add_namespace = DNC_Mexico_News
+add_namespace = MEXDNC_Mexico
+add_namespace = MEXDNC_Mexico_News
 
 news_event = {
     id = MEXDNC_Mexico_News.1
@@ -32,6 +32,16 @@ country_event = {
         name = MEXDNC_Boker_Building.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }
     }
 }
 
@@ -47,21 +57,20 @@ country_event = {
         name = MEXDNC_Juarez_Theater.1.a
         add_stability = 0.05
         add_political_power = 25
-    }
-}
-
-country_event = {
-    id = MEXDNC_Independance_Angel.1
-    picture = GFX_Independance_Angel_event
-    title = MEXDNC_Independance_Angel.1.t
-    desc = MEXDNC_Independance_Angel.1.desc
-
-    fire_only_once = yes
-
-    option = {
-        name = MEXDNC_Independance_Angel.1.a
-        add_stability = 0.05
-        add_political_power = 25
+        478 = {
+            if = {
+                limit = { has_state_category = town }
+                set_state_category = large_town
+            }
+            if = {
+                limit = { has_state_category = large_town }
+                set_state_category = city
+            }
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+        }
     }
 }
 
@@ -77,6 +86,16 @@ country_event = {
         name = MEXDNC_Parish_Sagrada_Familia.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }
     }
 }
 
@@ -92,6 +111,16 @@ country_event = {
         name = MEXDNC_Postal_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }
     }
 }
 
@@ -107,6 +136,16 @@ country_event = {
         name = MEXDNC_Lecumberri_Black_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }
     }
 }
 
@@ -122,6 +161,16 @@ country_event = {
         name = MEXDNC_Venustiano_Carranza_Lighthouse.1.a
         add_stability = 0.05
         add_political_power = 25
+        477 = {
+            if = {
+                limit = { has_state_category = town }
+                set_state_category = large_town
+            }
+            if = {
+                limit = { has_state_category = large_town }
+                set_state_category = city
+            }
+        }
     }
 }
 
@@ -137,6 +186,16 @@ country_event = {
         name = MEXDNC_Paris_Cinema_Building.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }   
     }
 }
 
@@ -152,6 +211,16 @@ country_event = {
         name = MEXDNC_Donceles_Legislative_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }
     }
 }
 
@@ -167,6 +236,20 @@ country_event = {
         name = MEXDNC_Velasco_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        478 = {
+            if = {
+                limit = { has_state_category = town }
+                set_state_category = large_town
+            }
+            if = {
+                limit = { has_state_category = large_town }
+                set_state_category = city
+            }
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+        }
     }
 }
 
@@ -182,6 +265,16 @@ country_event = {
         name = MEXDNC_Bellas_Artes_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        277 = {
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+            if = {
+                limit = { has_state_category = large_city }
+                set_state_category = metropolis
+            }
+        }
     }
 }
 
@@ -197,6 +290,16 @@ country_event = {
         name = MEXDNC_Puebla_Municipal_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        477 = {
+            if = {
+                limit = { has_state_category = town }
+                set_state_category = large_town
+            }
+            if = {
+                limit = { has_state_category = large_town }
+                set_state_category = city
+            }
+        }
     }
 }
 
@@ -212,5 +315,35 @@ country_event = {
         name = MEXDNC_Rafael_Ortiz_Palace.1.a
         add_stability = 0.05
         add_political_power = 25
+        478 = {
+            if = {
+                limit = { has_state_category = town }
+                set_state_category = large_town
+            }
+            if = {
+                limit = { has_state_category = large_town }
+                set_state_category = city
+            }
+            if = {
+                limit = { has_state_category = city }
+                set_state_category = large_city
+            }
+        }
+    }
+}
+
+country_event = {
+    id = MEXDNC_Independance_Angel.1
+    picture = GFX_Independance_Angel_event
+    title = MEXDNC_Independance_Angel.1.t
+    desc = MEXDNC_Independance_Angel.1.desc
+
+    fire_only_once = yes
+
+    option = {
+        name = MEXDNC_Independance_Angel.1.a
+        add_stability = 0.10
+        add_war_support = 0.10
+        add_political_power = 500
     }
 }
