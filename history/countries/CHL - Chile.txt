@@ -1,0 +1,885 @@
+RON_universal_setup = yes
+
+
+
+capital = 279
+oob = "CHL_1900"
+add_ideas = {
+	export_focus
+	tax_low
+	tariffs_average
+	civilian_economy
+	press_regulated
+	key_industries
+	fdi_allowed
+	security_minor_restrictions
+	foreign_volunteers
+	train_none
+	officer_train_none
+	education_budget2
+	health_budget2
+	foreign_isolationism
+}
+
+set_country_flag = monroe_doctrine
+set_convoys = 20
+
+1900.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1896.9.18"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 51
+		neutrality = 49
+	}
+
+	recruit_character = CHL_federico_errazuriz_echaurren
+	set_party_name = { ideology = democratic  long_name = CHL_coalicion name = CHL_coalicion }
+
+	recruit_character = CHL_malaquias_concha_ortiz
+	set_party_name = { ideology = communism  long_name = CHL_partido_democrata_long name = CHL_partido_democrata }
+
+	set_party_name = { ideology = neutrality  long_name = CHL_junta_long name = CHL_junta }
+
+	recruit_character = CHL_federico_errazuriz_echaurren
+	recruit_character = CHL_german_riesco_errazuriz		
+	recruit_character = CHL_pedro_montt_montt
+	recruit_character = CHL_elias_fernandez		
+	recruit_character = CHL_ramon_barros_luco	
+	recruit_character = CHL_juan_luis_sanfuentes_andonaegui	
+	recruit_character = CHL_alberto_edwards_vives
+	recruit_character = CHL_jorge_montt	
+	recruit_character = CHL_malaquias_concha_ortiz		
+	recruit_character = CHL_luis_emilio_recabarren	
+
+	recruit_character = CHL_jorge_boonen
+	recruit_character = CHL_pedro_dartnell
+	recruit_character = CHL_aristides_pinto_concha	
+	recruit_character = CHL_elias_yanez	
+	recruit_character = CHL_sofanor_parra_hermosilla
+	recruit_character = CHL_roberto_silva_renard	
+	recruit_character = CHL_vicente_palacios
+	recruit_character = CHL_guillermo_armstrong	
+	recruit_character = CHL_luis_felipe_brieba	
+	recruit_character = CHL_wilhelm_ekdahl_anglin	
+	recruit_character = CHL_emilio_korner_henze	
+	
+	recruit_character = CHL_joaquin_munoz_hurtado	
+	recruit_character = CHL_arturo_wilson_navarrete	
+	recruit_character = CHL_francisco_nef	
+	recruit_character = CHL_luis_gomez_carreno		
+}
+
+1905.1.1 = {
+    promote_character = CHL_german_riesco_errazuriz	
+	retire_character = CHL_federico_errazuriz_echaurren			
+}
+
+1910.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1906.6.25"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 62
+		neutrality = 32
+		communism = 1
+		fascism = 5
+	}
+    promote_character = CHL_pedro_montt_montt
+	promote_character = CHL_luis_emilio_recabarren	
+
+	set_party_name = { ideology = communism  long_name = CHL_partido_democrata_long name = CHL_partido_democrata }
+
+	recruit_character = CHL_tancredo_pinochet
+	promote_character = CHL_tancredo_pinochet
+	set_party_name = { ideology = fascism  long_name = CHL_un_long name = CHL_un }
+
+	set_party_name = { ideology = democratic  long_name = CHL_alianza_liberal_long name = CHL_alianza_liberal }
+
+	set_technology = {
+		tech_support = 1
+		early_infantry_weapons = 1
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
+	}
+
+	recruit_character = CHL_juan_pablo_bennett
+	recruit_character = CHL_luis_altamirano	
+	recruit_character = CHL_francisco_diaz_valderrama
+	recruit_character = CHL_jose_luis_sanchez_besa	
+	recruit_character = CHL_juan_esteban_montero	
+	recruit_character = CHL_arturo_alessandri	
+	recruit_character = CHL_pedro_aguirre_cerda
+	recruit_character = CHL_senado_2		
+	
+	recruit_character = CHL_juan_pablo_bennett
+	retire_character = CHL_emilio_korner_henze	
+}
+
+1910.12.23 = {
+	retire_character = CHL_senado_2	
+}
+
+1914.1.1 = {
+	oob = "CHL_1914"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1910.12.23"
+		election_frequency = 60
+		elections_allowed = yes
+	}	
+	retire_character = CHL_pedro_montt_montt	
+	retire_character = CHL_elias_fernandez	
+	retire_character = CHL_elias_yanez		
+	
+	promote_character = CHL_ramon_barros_luco
+	recruit_character = CHL_c_j_de_la_motte		
+}
+
+1915.1.1 = {
+	retire_character = CHL_jorge_montt		
+}
+
+1919.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1915.6.25"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 49
+		neutrality = 50
+		communism = 1
+	}
+	promote_character = CHL_juan_luis_sanfuentes_andonaegui
+	promote_character = CHL_tancredo_pinochet	
+	retire_character = CHL_ramon_barros_luco
+	retire_character = CHL_joaquin_munoz_hurtado	
+	retire_character = CHL_german_riesco_errazuriz		
+	recruit_character = CHL_emiliano_figueroa	
+	set_party_name = { ideology = democratic  long_name = CHL_coalicion name = CHL_coalicion }
+
+	
+	recruit_character = CHL_carlos_davila_espinoza
+	set_party_name = { ideology = communism  long_name = CHL_PS_long name = CHL_PS }
+	
+	set_party_name = { ideology = neutrality  long_name = CHL_union_liberal_long name = CHL_union_liberal }
+
+	set_party_name = { ideology = fascism  long_name = CHL_regimen_long name = CHL_regimen }	
+
+	recruit_character = CHL_luis_villarroel_de_la_rosa
+	recruit_character = CHL_bartolome_blanche_espejo
+	recruit_character = CHL_arturo_puga_osorio	
+	recruit_character = CHL_guillermo_barrios_tirado	
+	recruit_character = CHL_carlos_ibanez_del_campo	
+	recruit_character = CHL_marmaduke_grove		
+	
+	set_portraits = {
+		character = CHL_pedro_dartnell
+		army = {
+			large = "gfx/leaders/CHL/portrait_CHL_pedro_dartnell.dds"
+		}		
+	}		
+}
+
+1920.1.1 = {
+	retire_character = CHL_malaquias_concha_ortiz
+	retire_character = CHL_roberto_silva_renard		
+	recruit_character = CHL_carlos_contreras_labarca
+	recruit_character = CHL_oscar_otarola					
+}
+
+1925.1.1 = {
+	retire_character = CHL_jorge_boonen	
+	retire_character = CHL_aristides_pinto_concha	
+	retire_character = CHL_luis_emilio_recabarren
+	retire_character = CHL_malaquias_concha_ortiz
+	retire_character = CHL_sofanor_parra_hermosilla
+	retire_character = CHL_wilhelm_ekdahl_anglin
+	retire_character = CHL_arturo_wilson_navarrete			
+	
+	promote_character = CHL_carlos_contreras_labarca	
+
+	recruit_character = CHL_julio_allard_pinto
+	recruit_character = CHL_olegario_reyes_del_rio
+	recruit_character = CHL_vicente_merino_bielich
+	recruit_character = CHL_daniel_herrera	
+	recruit_character = CHL_ramon_canas_montalva
+	recruit_character = CHL_carlos_fuentes_rabe											
+}
+
+1930.1.1 = {
+	recruit_character = CHL_oscar_fuentes_pantoja
+	recruit_character = CHL_diego_aracena_aguilar		
+	recruit_character = CHL_gregorio_tascon	
+	recruit_character = CHL_jorge_gonzalez_von_marees
+	recruit_character = CHL_arturo_espinoza_mujica
+	recruit_character = CHL_jorge_videla_cobo	
+	retire_character = CHL_juan_pablo_bennett	
+	retire_character = CHL_vicente_palacios	
+	retire_character = CHL_francisco_nef
+	retire_character = CHL_luis_gomez_carreno		
+
+	CHL_francisco_diaz_valderrama = {
+		promote_leader = yes
+	    add_field_marshal_role = {
+		    traits={ unyielding_defender meticulous old_guard politically_connected skilled_staffer }		
+            skill = 4
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 5
+		    visible = {
+			    NOT = {
+				    has_government = communism
+				    has_government = democratic	
+				    date > 1912.1.1				
+				    date < 1949.1.1														
+			    }
+		    }		
+        }
+	}
+}
+
+1933.1.1 = {
+	set_air_oob = "CHL_1936_air_bba"
+	oob = "CHL_1933"
+	set_naval_oob = "CHL_1933_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1932.6.25"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 55
+		neutrality = 27
+		communism = 18
+	}
+
+	retire_character = CHL_emiliano_figueroa
+	retire_character = CHL_juan_luis_sanfuentes_andonaegui	
+	retire_character = CHL_alberto_edwards_vives
+	retire_character = CHL_guillermo_armstrong	
+	retire_character = CHL_luis_felipe_brieba		
+	
+	recruit_character = CHL_rafael_fernandez_reyes		
+
+	set_party_name = { ideology = democratic  long_name = CHL_frente_popular_long name = CHL_frente_popular }
+
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	promote_character = CHL_jorge_gonzalez_von_marees
+	set_party_name = { ideology = fascism  long_name = CHL_MNS_long name = CHL_MNS }
+
+	set_party_name = { ideology = neutrality  long_name = CHL_partido_liberal_long name = CHL_partido_liberal }
+
+	recruit_character = CHL_francisco_o_ryan_orrego	
+
+	set_portraits = {
+		character = CHL_arturo_alessandri
+		civilian = {
+			large = "GFX_Portrait_chile_arturo_alessandri"
+		}		
+	}		
+
+	promote_character = CHL_arturo_alessandri
+
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1949.01.01
+		}
+		add_ideas = {
+			CHL_pacts_of_may_idea
+			CHL_dissident_activity
+			CHL_depression1
+			CHL_agrarian_reform
+			prussian_ethos
+			milicia_republicana
+			paramilitary_police	
+		}
+	}
+	recruit_character = CHL_gustavo_ross_santa_maria
+	recruit_character = CHL_silvestre_urizar_banderas		
+}
+
+1936.1.1 = {
+	set_air_oob = "CHL_1936_air_bba"
+	### VARIANTS ###
+	# 1936 Start #
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Capitán O'Brien Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Serrano Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+	oob = "CHL_1936"
+	set_naval_oob = "CHL_1936_naval_legacy"
+	# Starting tech
+	set_technology = {
+		infantry_weapons = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1932.6.25"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 70
+		neutrality = 30
+		communism = 0
+		fascism = 1
+	}
+	set_party_name = { ideology = democratic  long_name = CHL_frente_popular_long name = CHL_frente_popular }
+
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	set_party_name = { ideology = fascism  long_name = CHL_alianza_popular_libertadora_long name = CHL_alianza_popular_libertadora }
+
+	set_party_name = { ideology = neutrality  long_name = CHL_partido_liberal_long name = CHL_partido_liberal }
+
+	recruit_character = CHL_salvador_allende	
+	recruit_character = CHL_francisco_javier_diaz_ww2
+	recruit_character = CHL_emilio_daroch_soto
+	recruit_character = CHL_oscar_izurieta_molina
+	recruit_character = CHL_carlos_prats
+	recruit_character = CHL_rene_schneider	
+	recruit_character = CHL_juan_antonio			
+}
+
+1938.1.1 = {
+	retire_character = CHL_luis_altamirano				
+}
+
+1938.2.1 = {
+	recruit_character = CHL_jeronimo_mendez			
+}
+
+1939.1.1 = {
+	oob = "CHL_1939"
+	set_naval_oob = "CHL_1939_naval_legacy"
+	retire_character = CHL_diego_aracena_aguilar
+	promote_character = CHL_pedro_aguirre_cerda
+	
+	set_portraits = {
+		character = CHL_carlos_ibanez_del_campo
+		civilian = {
+			large = "gfx/leaders/CHL/portrait_CHL_carlos_ibanez.dds"
+		}			
+		army = {
+			large = "gfx/leaders/CHL/portrait_CHL_carlos_ibanez_army.dds"
+		}		
+	}		
+
+}
+
+1940.1.1 = {
+	oob = "CHL_1940"
+	set_naval_oob = "CHL_1940_naval_legacy"
+}
+
+1941.11.25 = {
+	retire_character = CHL_pedro_aguirre_cerda					
+}
+
+1941.11.26 = {
+					
+}
+
+1942.7.1 = {
+	retire_character = CHL_pedro_aguirre_cerda	
+	promote_character = CHL_juan_antonio					
+}
+
+1943.1.1 = {
+	retire_character = CHL_luis_villarroel_de_la_rosa
+	retire_character = CHL_pedro_dartnell	
+}
+
+1944.1.1 = {
+	retire_character = CHL_julio_allard_pinto
+	retire_character = CHL_arturo_espinoza_mujica	
+	retire_character = CHL_arturo_puga_osorio		
+}
+
+1945.1.1 = {
+	retire_character = CHL_c_j_de_la_motte	
+}
+
+1946.1.1 = {
+	recruit_character = CHL_alfredo_duhalde	
+	recruit_character = CHL_augusto_pinochet	
+}
+
+1946.6.27 = {
+	recruit_character = CHL_gabriel_gonzalez_videla	
+	retire_character = CHL_juan_antonio
+}
+
+1946.11.3 = {
+	retire_character = CHL_alfredo_duhalde
+}
+
+1949.1.1 = {
+	oob = "CHL_1949"
+	set_naval_oob = "CHL_1949_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1946.6.25"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 20
+		neutrality = 27
+		communism = 6
+		fascism = 47
+	}
+
+	retire_character = CHL_tancredo_pinochet
+	retire_character = CHL_juan_esteban_montero
+	retire_character = CHL_francisco_diaz_valderrama
+	retire_character = CHL_oscar_fuentes_pantoja
+	retire_character = CHL_carlos_fuentes_rabe		
+	retire_character = CHL_marmaduke_grove
+	retire_character = CHL_jose_luis_sanchez_besa	
+	retire_character = CHL_bartolome_blanche_espejo	
+	retire_character = CHL_jeronimo_mendez							
+
+	recruit_character = CHL_jorge_alessandri
+	recruit_character = CHL_jose_toribio_merino	
+
+	set_party_name = { ideology = democratic  long_name = CHL_frente_popular_long name = CHL_frente_popular }
+
+	promote_character = CHL_salvador_allende
+	set_party_name = { ideology = communism  long_name = CHL_frente_nacional_long name = CHL_frente_nacional }
+
+	promote_character = CHL_carlos_ibanez_del_campo
+	set_party_name = { ideology = fascism  long_name = CHL_agrario_laborista_long name = CHL_agrario_laborista }
+
+	promote_character = CHL_jorge_alessandri
+	retire_character = CHL_arturo_alessandri_WW2
+	set_party_name = { ideology = neutrality  long_name = CHL_alessandri_long name = CHL_alessandri }	
+	
+	set_portraits = {
+		character = CHL_carlos_ibanez_del_campo
+		civilian = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_carlos_ibanez_cw.dds"
+		}			
+		army = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_carlos_ibanez_army_cw.dds"
+		}		
+	}	
+
+	
+}
+
+1952.1.1 = {
+	retire_character = CHL_daniel_herrera
+}
+
+1955.1.1 = {
+	retire_character = CHL_jorge_videla_cobo
+	retire_character = CHL_guillermo_barrios_tirado	
+    retire_character = CHL_olegario_reyes_del_rio	
+
+	recruit_character = CHL_bernardo_leighton
+	recruit_character = CHL_luis_corvalan	
+
+	set_portraits = {
+		character = CHL_francisco_o_ryan_orrego
+		army = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_Francisco_Ryan_cw.dds"
+		}		
+	}	
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1958.6.25"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 46
+		communism = 29
+		fascism = 5
+		neutrality = 20
+	}	
+
+	set_portraits = {
+		character = CHL_augusto_pinochet
+		civilian = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_augusto_pinochet_inbetween_cw.dds"
+		}		
+		army = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_augusto_pinochet_inbetween_cw.dds"
+		}
+	}	
+
+	set_portraits = {
+		character = CHL_carlos_prats
+		army = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_carlos_prats_cw.dds"
+		}		
+	}	
+	
+	set_portraits = {
+		character = CHL_rene_schneider
+		army = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_rene_schneider_cw.dds"
+		}		
+	}		
+    promote_character = CHL_jorge_alessandri	
+	recruit_character = CHL_eduardo_frei_montalva
+	recruit_character = CHL_manuel_contreras	
+	retire_character = CHL_gabriel_gonzalez_videla
+	retire_character = CHL_vicente_merino_bielich	
+	retire_character = CHL_carlos_davila_espinoza
+	retire_character = CHL_jorge_gonzalez_von_marees
+	retire_character = CHL_oscar_otarola
+	retire_character = CHL_ramon_canas_montalva			
+	
+	set_party_name = { ideology = democratic  long_name = CHL_alessandri_long name = CHL_alessandri }
+
+	promote_character = CHL_salvador_allende
+	retire_character = CHL_carlos_contreras_labarca
+	set_party_name = { ideology = communism  long_name = CHL_unidad_popular_long name = CHL_unidad_popular }
+
+	promote_character = CHL_augusto_pinochet
+	retire_character = CHL_carlos_ibanez_del_campo
+	set_party_name = { ideology = fascism  long_name = CHL_junta_pinochet_long name = CHL_junta_pinochet }
+
+	retire_character = CHL_emilio_daroch_soto
+	retire_character = CHL_gustavo_ross_santa_maria			
+}
+
+1965.1.1 = {
+	recruit_character = CHL_cesar_mendoza	
+}
+
+1970.1.1 = {
+	oob = "CHL_1970"
+	set_naval_oob = "CHL_1970_naval_legacy"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1964.9.4"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 23
+		neutrality = 30
+		communism = 32
+		fascism = 15
+	}
+
+	recruit_character = CHL_francisco_javier_errazuriz
+	promote_character = CHL_eduardo_frei_montalva
+	recruit_character = CHL_raul_iturriaga	
+	retire_character = CHL_gabriel_gonzalez_videla
+	retire_character = CHL_silvestre_urizar_banderas
+	retire_character = CHL_francisco_o_ryan_orrego		
+	retire_character = CHL_rafael_fernandez_reyes	
+	
+	set_party_name = { ideology = democratic  long_name = CHL_democrata_cristiano_long name = CHL_democrata_cristiano }
+
+	promote_character = CHL_salvador_allende
+	set_party_name = { ideology = communism  long_name = CHL_unidad_popular_long name = CHL_unidad_popular }
+
+	set_party_name = { ideology = fascism  long_name = CHL_junta_pinochet_long name = CHL_junta_pinochet }
+
+	recruit_character = CHL_gladys_marin	
+	retire_character = CHL_gregorio_tascon		
+}
+
+1976.1.1 = {
+	retire_character = CHL_oscar_izurieta_molina	
+	recruit_character = CHL_eduardo_frei_ruiz_tagle
+	recruit_character = CHL_pablo_rodriguez_grez
+	recruit_character = CHL_joaquin_lavin_infante	
+}
+
+1980.1.1 = {
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1977.9.4"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 15
+		neutrality = 10
+		communism = 5
+		fascism = 70
+	}
+	promote_character = CHL_bernardo_leighton
+	retire_character = CHL_eduardo_frei_montalva
+	retire_character = CHL_rene_schneider	
+	retire_character = CHL_manuel_contreras	
+	
+	set_party_name = { ideology = democratic  long_name = CHL_democrata_cristiano_long name = CHL_democrata_cristiano }
+
+	promote_character = CHL_luis_corvalan
+	retire_character = CHL_salvador_allende
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	set_party_name = { ideology = fascism  long_name = CHL_junta_pinochet_long name = CHL_junta_pinochet }
+
+	promote_character = CHL_francisco_javier_errazuriz
+	retire_character = CHL_jorge_alessandri
+	set_party_name = { ideology = neutrality  long_name = CHL_liberal_socialista_long name = CHL_liberal_socialista }
+
+	set_portraits = {
+		character = CHL_augusto_pinochet
+		civilian = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_augusto_pinochet_late_cw.dds"
+		}
+		army = {
+			large = "gfx/leaders/CHL/CW/portrait_CHL_augusto_pinochet_late_cw.dds"
+		}		
+	}	
+
+	retire_character = CHL_carlos_prats
+
+}
+
+1990.1.1 = {
+	set_politics = {
+		ruling_party = fascism
+		last_election = "1986.3.11"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 55
+		communism = 0
+		fascism = 29
+		neutrality = 16
+	}
+	recruit_character = CHL_patricio_aylwin_azocar
+	promote_character = CHL_patricio_aylwin_azocar
+	retire_character = CHL_bernardo_leighton
+	retire_character = CHL_raul_iturriaga		
+	retire_character = CHL_cesar_mendoza
+	retire_character = CHL_jose_toribio_merino		
+
+	set_party_name = { ideology = democratic  long_name = CHL_concertacion_long name = CHL_concertacion }
+
+	recruit_character = CHL_pedro_vuskovic
+	promote_character = CHL_pedro_vuskovic
+	retire_character = CHL_luis_corvalan
+	set_party_name = { ideology = communism  long_name = CHL_movimiento_allendista_long name = CHL_movimiento_allendista }
+
+	set_party_name = { ideology = fascism  long_name = CHL_junta_pinochet_long name = CHL_junta_pinochet }
+
+	promote_character = CHL_francisco_javier_errazuriz
+	retire_character = CHL_jorge_alessandri
+	set_party_name = { ideology = neutrality  long_name = CHL_liberal_socialista_long name = CHL_liberal_socialista }
+}
+
+2000.1.1 = {
+	oob = "CHL_2000"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2000.3.11"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 48
+		communism = 4
+		fascism = 1
+		neutrality = 47
+	}
+	promote_character = CHL_eduardo_frei_ruiz_tagle
+	retire_character = CHL_patricio_aylwin_azocar
+	set_party_name = { ideology = democratic  long_name = CHL_concertacion_long name = CHL_concertacion }
+
+	promote_character = CHL_gladys_marin
+	retire_character = CHL_pedro_vuskovic
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	promote_character = CHL_pablo_rodriguez_grez
+	retire_character = CHL_augusto_pinochet
+	set_party_name = { ideology = fascism  long_name = CHL_fnpl_long name = CHL_fnpl }
+
+	promote_character = CHL_joaquin_lavin_infante
+	retire_character = CHL_francisco_javier_errazuriz
+	set_party_name = { ideology = neutrality  long_name = CHL_coalicion_pinera_long name = CHL_coalicion_pinera }
+}
+2008.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2005.12.11"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 48
+		communism = 1
+		neutrality = 51
+	}
+	recruit_character = CHL_michelle_bachelet_jeria
+	promote_character = CHL_michelle_bachelet_jeria
+	retire_character = CHL_eduardo_frei_ruiz_tagle
+	set_party_name = { ideology = democratic  long_name = CHL_concertacion_long name = CHL_concertacion }
+
+	promote_character = CHL_gladys_marin
+	retire_character = CHL_pedro_vuskovic
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	promote_character = CHL_pablo_rodriguez_grez
+	retire_character = CHL_augusto_pinochet
+	set_party_name = { ideology = fascism  long_name = CHL_fnpl_long name = CHL_fnpl }
+
+	recruit_character = CHL_sebastian_pinera
+	promote_character = CHL_sebastian_pinera
+	retire_character = CHL_joaquin_lavin_infante
+	set_party_name = { ideology = neutrality  long_name = CHL_coalicion_pinera_long name = CHL_coalicion_pinera }
+}
+
+2013.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2009.12.13"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 48
+		communism = 1
+		neutrality = 51
+	}
+	recruit_character = CHL_michelle_bachelet_jeria
+	promote_character = CHL_michelle_bachelet_jeria
+	retire_character = CHL_eduardo_frei_ruiz_tagle
+	set_party_name = { ideology = democratic  long_name = CHL_concertacion_long name = CHL_concertacion }
+
+	recruit_character = CHL_guillermo_teillier
+	promote_character = CHL_guillermo_teillier
+	retire_character = CHL_gladys_marin
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	recruit_character = CHL_roberto_thieme
+	promote_character = CHL_roberto_thieme
+	retire_character = CHL_pablo_rodriguez_grez
+	set_party_name = { ideology = fascism  long_name = CHL_fnpl_long name = CHL_fnpl }
+
+	recruit_character = CHL_sebastian_pinera
+	promote_character = CHL_sebastian_pinera
+	retire_character = CHL_joaquin_lavin_infante
+	set_party_name = { ideology = neutrality  long_name = CHL_coalicion_pinera_long name = CHL_coalicion_pinera }
+}
+
+2016.1.1 = {
+	oob = "CHL_2016"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2013.12.13"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 45
+		communism = 0
+		neutrality = 55
+	}
+	recruit_character = CHL_michelle_bachelet_jeria
+	promote_character = CHL_michelle_bachelet_jeria
+	retire_character = CHL_eduardo_frei_ruiz_tagle
+	set_party_name = { ideology = democratic  long_name = CHL_nueva_mayoria_long name = CHL_nueva_mayoria }
+
+	recruit_character = CHL_guillermo_teillier
+	promote_character = CHL_guillermo_teillier
+	retire_character = CHL_gladys_marin
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	recruit_character = CHL_roberto_thieme
+	promote_character = CHL_roberto_thieme
+	retire_character = CHL_pablo_rodriguez_grez
+	set_party_name = { ideology = fascism  long_name = CHL_fnpl_long name = CHL_fnpl }
+
+	recruit_character = CHL_sebastian_pinera
+	promote_character = CHL_sebastian_pinera
+	retire_character = CHL_joaquin_lavin_infante
+	set_party_name = { ideology = neutrality  long_name = CHL_vamos_long name = CHL_vamos }
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2013.12.13"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 45
+		communism = 0
+		neutrality = 55
+	}
+	recruit_character = CHL_gabriel_boric
+	promote_character = CHL_gabriel_boric
+	retire_character = CHL_michelle_bachelet_jeria
+	set_party_name = { ideology = democratic  long_name = CHL_ad_long name = CHL_ad }
+
+	recruit_character = CHL_guillermo_teillier
+	promote_character = CHL_guillermo_teillier
+	retire_character = CHL_gladys_marin
+	set_party_name = { ideology = communism  long_name = CHL_partido_comunista_long name = CHL_partido_comunista }
+
+	recruit_character = CHL_roberto_thieme
+	promote_character = CHL_roberto_thieme
+	retire_character = CHL_pablo_rodriguez_grez
+	set_party_name = { ideology = fascism  long_name = CHL_fnpl_long name = CHL_fnpl }
+
+	recruit_character = CHL_sebastian_pinera
+	promote_character = CHL_sebastian_pinera
+	retire_character = CHL_joaquin_lavin_infante
+	set_party_name = { ideology = neutrality  long_name = CHL_vamos_long name = CHL_vamos }
+}
