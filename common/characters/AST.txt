@@ -1,0 +1,1553 @@
+characters={
+
+	### DNC
+
+	AST_edmund_barton={
+		name=AST_edmund_barton
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/DNC/AST_Edmund_Barton_Liberalism.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ backed_by_political_coalition liberal_reformer }			
+			expire="1920.1.7"
+		}
+	}
+	AST_eric_campbell={
+		name=AST_eric_campbell
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/Portrait_Australia_Eric_Campbell.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERIC_CAMPBELL_DESC"
+			ideology=fascism_ideology
+			expire="1970.9.2"
+		}
+	}
+	AST_richard_dixon={
+		name=AST_richard_dixon
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/Portrait_Australia_Richard_Dixon.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RICHARD_DIXON_DESC"
+			ideology=stalinism
+			expire="1976.3.7"
+		}
+	}
+	AST_earle_page={
+		name=AST_earle_page
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/Portrait_Australia_Earle_Page.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_EARLE_PAGE_DESC"
+			ideology=agrarianism
+			expire="1961.12.20"
+		}
+	}
+
+	### WW1
+
+	AST_alfred_deakin={
+		name=AST_alfred_deakin
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/WW1/Portrait_Australia_Alfred_Deakin.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ALFRED_DEAKIN_DESC"
+			ideology=conservatism
+			expire="1919.10.7"
+		}
+	}
+
+	AST_andrew_fisher={
+		name=AST_andrew_fisher
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/WW1/AST_andrew_fisher.dds"
+			}
+		}
+		country_leader={
+			ideology=democratic_socialism
+			traits={ labour_man }
+			expire="1929.1.1"			
+		}
+	}	
+
+	AST_billy_hughes={
+		name=AST_billy_hughes
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/WW1/Australia_BillyHughes.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ little_digger }			
+			expire="1952.10.28"
+		}
+	}
+	### WW1
+
+	AST_john_monash={
+		name=AST_john_monash
+		portraits={
+			army={
+				large="gfx/leaders/AST/WW1/AST_John_Monash.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer naval_invader brilliant_strategist career_officer }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			visible = {		
+				date < 1932.1.1
+			}					
+		}
+		country_leader={
+			ideology=stratocracy
+			expire="1932.1.1"					
+		}
+	}	
+
+	AST_harry_chauvel={
+		name=AST_harry_chauvel
+		portraits={
+			army={
+				large="gfx/leaders/AST/WW1/AST_Harry_Chauvel.dds"
+				small="gfx/interface/ideas/AST/AST_harry_chauvel.dds"
+			}
+		}		
+		advisor={
+			slot = army_chief
+			idea_token = AST_harry_chauvel
+			allowed  = {
+				original_tag  = AST 
+			}
+			ledger  = army 
+			traits  = {
+				army_chief_maneuver_2 
+			}
+			cost = 100
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = {		
+				date < 1945.1.1
+			}			
+		}
+		field_marshal={
+			traits={ cavalry_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1	
+			visible = {		
+				date < 1945.1.1
+			}				
+		}
+	}	
+
+	AST_talbot_hobbs={
+		name=AST_talbot_hobbs
+		portraits={
+			army={
+				large="gfx/leaders/AST/WW1/AST_Talbot_Hobbs.dds"
+				small="gfx/interface/ideas/AST/AST_talbot_hobbs.dds"
+			}
+		}
+		corps_commander={
+			traits={ artillery_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			visible = {		
+				date < 1927.1.1
+			}			
+		}
+	}	
+
+	AST_harold_elliott={
+		name=AST_harold_elliott
+		portraits={
+			army={
+				large="gfx/leaders/AST/WW1/AST_Harold_Elliott.dds"
+				small="gfx/interface/ideas/AST/AST_harold_elliott.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			visible = {		
+				date < 1932.1.1
+			}			
+		}
+	}	
+
+	AST_james_w_mccay={
+		name=AST_james_w_mccay
+		portraits={
+			army={
+				large="gfx/leaders/AST/WW1/AST_James_McCay.dds"
+				small="gfx/interface/ideas/AST/AST_james_mccay.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer politically_connected }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3		
+			visible = {		
+				date < 1927.1.1
+			}					
+		}
+	}	
+
+	AST_william_bridges={
+		name=AST_william_bridges
+		portraits={
+			army={
+				large="gfx/leaders/AST/WW1/AST_William_Bridges.dds"
+				small="gfx/interface/ideas/AST/AST_william_bridges.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = AST_william_bridges
+			allowed  = {
+				original_tag  = AST 
+			}
+			traits  = {
+				army_chief_offensive_1 
+			}
+			available = {
+				date < 1919.1.1
+			}
+			visible = {
+				date < 1919.1.1
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2	
+			visible = {
+				date < 1919.1.1
+			}	
+		}
+	}
+
+	### WW2
+	AST_leslie_morshead={
+		name=AST_leslie_morshead
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_leslie_morshead.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Leslie_Morshead.dds"
+			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=5
+			logistics_skill=2
+			traits = { commando desert_fox }
+			visible = {
+				has_country_flag = AST_leslie_morshead_visible
+				date > 1926.1.1				
+				date < 1959.1.1
+			}
+		}
+	}
+	AST_henry_wynter={
+		name=AST_henry_wynter
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_henry_wynter.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Henry_Wynter.dds"
+			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+			visible = {
+				date > 1923.1.1
+				date < 1949.1.1
+			}
+		}
+	}
+	AST_alan_vasey={
+		name=AST_alan_vasey
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_alan_vasey.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Alan_Vasey.dds"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				date > 1928.1.1
+				date < 1949.1.1
+			}
+		}
+	}
+	AST_horace_robertson={
+		name=AST_horace_robertson
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_horace_robertson.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Horace_Robertson.dds"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+			visible = {
+				date > 1925.1.1
+				date < 1955.1.1
+			}
+		}
+	}
+	AST_john_northcott={
+		name=AST_john_northcott
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_john_northcott.dds"
+				large="gfx/leaders/AST/Portrait_Australia_John_Northcott.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				date > 1927.1.1
+				date < 1949.1.1
+			}
+		}
+	}
+	AST_thomas_blamey = {
+		name =AST_thomas_blamey
+		portraits = {
+			army = {
+				large="gfx/leaders/AST/Portrait_Australia_Thomas_Blamey.dds"
+				small="gfx/interface/ideas/AST/AST_thomas_blamey.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				decided_planner
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+			visible = {
+				date > 1925.1.1
+				date < 1951.1.1
+			}			
+		}
+	}
+
+	AST_harold_farncomb={
+		name=AST_harold_farncomb
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_harold_farncomb.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Harold_Farncomb.dds"
+			}
+		}
+		navy_leader={
+			traits={ aviation_enthusiast naval_lineage }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=0
+			visible = {
+				date > 1925.1.1
+				date < 1952.1.1
+			}
+		}
+	}
+	AST_victor_crutchley={
+		name=AST_victor_crutchley
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_victor_crutchley.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Victor_Crutchley.dds"
+			}
+		}
+		navy_leader={
+			traits={ bold }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=0
+			visible = {
+				date > 1926.1.1
+				date < 1949.1.1
+			}
+		}
+	}
+
+	##leaders
+	AST_joseph_lyons = {
+		name =AST_joseph_lyons
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AST/INT/portrait_AST_Joseph_Lyons.dds"
+				small="gfx/interface/ideas/AST/AST_joseph_lyons.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_joseph_lyons
+			traits = {
+				ARG_harsh_democrat 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = AST_joseph_lyons
+					}
+				}				
+				date > 1923.1.1
+				date < 1940.1.1
+			}
+			visible = {
+				date > 1923.1.1
+				date < 1940.1.1
+			}
+		}		
+		country_leader = {
+			ideology = liberalism
+			expire = "1940.1.1"
+			id = -1
+			traits = {
+				liberal_grandee
+				popular_figurehead2
+			}
+		}
+	}	
+	AST_john_curtin={
+		name=AST_john_curtin
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/Portrait_Australia_John_Curtin.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JOHN_CURTIN_DESC"
+			ideology=socialism
+			expire="1945.7.5"
+		}
+	}
+	AST_hallam_anderson={
+		name=AST_hallam_anderson
+		portraits={
+			civilian={
+				large="gfx/leaders/RON_Generic/Islamic_European3.dds"
+			}
+		}
+		country_leader={
+			ideology=islamic_authoritarian
+			traits={ ger_armaments_organizer ger_industrialist_genius }
+			expire="1943.1.1.12"
+			id=-1
+		}
+	}
+
+	##advisors
+
+	##theorists
+	AST_norman_makin={
+		name=AST_norman_makin
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_norman_makin.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = AST_norman_makin
+			ledger = navy
+			allowed = {
+				original_tag = AST
+			}
+			
+			traits = {
+				naval_theorist
+			}
+			visible = {
+				date > 1929.1.1
+				date < 1963.1.1
+			}
+		}		
+	}
+
+	AST_james_fairbairn={
+		name=AST_james_fairbairn
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_james_fairbairn.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = AST_james_fairbairn
+			ledger = air
+			allowed = {
+				original_tag = AST
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+			visible = {
+				date > 1932.1.1
+				date < 1949.1.1
+			}
+		}
+	}
+
+	##Political advisors
+
+	AST_alexander_hore_ruthven={
+		name=AST_alexander_hore_ruthven
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/Portrait_Australia_Alexander_Hore_Ruthven.dds"
+				small="gfx/interface/ideas/AST/AST_alexander_hore_ruthven.dds"
+			}			
+			army={
+				large="gfx/leaders/AST/Portrait_Australia_Alexander_Hore_Ruthven.dds"
+				small="gfx/interface/ideas/AST/AST_alexander_hore_ruthven_army.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_alexander_hore_ruthven
+			traits = {
+				quartermaster_general 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_completed_focus = AST_military_logistics
+				date > 1928.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1928.1.1
+				date < 1949.1.1
+			}
+		}
+		navy_leader = {
+			traits = { bold }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = {
+				date > 1928.1.1
+				date < 1949.1.1
+			}			
+		}				
+	}
+	
+	AST_robert_g_menzies={
+		name=AST_robert_g_menzies
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/AST/AST_robert_g_menzies.dds"
+				large="gfx/leaders/AST/CW/Australia_Robert_Menzies.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_robert_g_menzies
+			traits = {
+				backroom_backstabber 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = AST_robert_g_menzies
+					}
+				}				
+				date > 1928.1.1
+				date < 1966.1.1
+			}
+			visible = {
+				date > 1928.1.1
+				date < 1966.1.1
+			}
+		}		
+	}
+
+	AST_arthur_william_fadden = {
+		name = AST_arthur_william_fadden
+		portraits = {
+			civilian = {
+				small="gfx/interface/ideas/AST/AST_arthur_william_fadden.dds"
+				large="gfx/leaders/AST/CW/Australia_Arthur_William_Fadden.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AST_arthur_william_fadden
+			allowed = {
+				original_tag = AST
+			}			
+			traits = { 
+				BUL_economic_stabilizer 
+			}
+			available = {
+				date > 1930.1.1
+				date < 1959.1.1
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = AST_arthur_william_fadden
+					}
+				}				
+			}			
+			visible = {
+				date > 1930.1.1
+				date < 1959.1.1			
+			}			
+		}
+	}	
+
+	AST_ben_chifley={
+		name=AST_ben_chifley
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/CW/Australia_Ben_Chifley.dds"
+				small="gfx/interface/ideas/AST/AST_ben_chifley.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_ben_chifley
+			cost = 100.000
+			traits = {
+				captain_of_industry
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_completed_focus = AST_urban_planning
+				date > 1928.1.1
+				date < 1952.1.1
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = AST_ben_chifley
+					}
+				}				
+			}
+			visible = {
+				date > 1928.1.1
+				date < 1952.1.1
+			
+			}
+		}		
+	}
+
+	AST_herbert_v_evatt={
+		name=AST_herbert_v_evatt
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_herbert_v_evatt.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_herbert_v_evatt
+			cost = 100.000
+			traits = {
+				silent_workhorse 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_completed_focus = AST_stay_commonwealth 
+				date > 1930.1.1
+				date < 1962.1.1
+			}
+			visible = {
+				date > 1930.1.1
+				date < 1962.1.1
+			}
+		}		
+	}
+
+	AST_jack_beasley={
+		name=AST_jack_beasley
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_Jack_Beasley.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_jack_beasley
+			traits = {
+				war_industrialist 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1928.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1928.1.1
+				date < 1949.1.1
+			}
+		}		
+	}
+
+	AST_frank_forde={
+		name=AST_frank_forde
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_frank_forde
+			traits = {
+				compassionate_gentleman 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1932.1.1
+				date < 1957.1.1
+			}
+			visible = {
+				date > 1932.1.1
+				date < 1957.1.1
+			}
+		}	
+	}
+
+	AST_lance_sharkey={
+		name=AST_lance_sharkey
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_lance_sharkey.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_lance_sharkey
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_completed_focus = AST_communism_focus 
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				date > 1928.1.1
+				date < 1965.1.1
+			}
+			visible = {
+				date > 1928.1.1
+				date < 1965.1.1
+			}
+			traits = {
+				communist_revolutionary 
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}		
+	}
+	
+	AST_arthur_calwell={
+		name=AST_arthur_calwell
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_arthur_calwell.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_arthur_calwell
+			traits = {
+				democratic_reformer 
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_completed_focus = AST_fortification
+				has_completed_focus = AST_stay_commonwealth 
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				date > 1930.1.1
+				date < 1967.1.1
+			}
+			visible = {
+				date > 1930.1.1
+				date < 1967.1.1
+			}
+			
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}		
+	}
+
+	AST_adela_pankhurst = {
+		name = AST_adela_pankhurst
+		portraits = {
+			civilian = {
+                small="gfx/interface/ideas/AST/AST_Adela_Pankhurst.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AST_adela_pankhurst
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1910.1.1
+				date < 1949.1.1				
+			}
+			visible = {
+				date > 1910.1.1
+				date < 1949.1.1
+			}			
+			traits = {
+				black_suffragette
+			}
+		}
+	}	
+
+	AST_alexander_rud_mills = {
+		name = AST_alexander_rud_mills
+		portraits = {
+			civilian = {
+                small="gfx/interface/ideas/AST/AST_Alexander_Rud_Mills.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AST_alexander_rud_mills
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_government = fascism
+				date > 1919.1.1
+				date < 1960.1.1				
+			}
+			visible = {
+				date > 1919.1.1
+				date < 1960.1.1
+			}			
+			traits = {
+				odinist
+			}
+		}
+	}	
+
+	AST_william_ferguson = {
+		name = AST_william_ferguson
+		portraits = {
+			civilian = {
+                small="gfx/interface/ideas/AST/AST_William_Ferguson.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AST_william_ferguson
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1919.1.1
+				date < 1950.1.1		
+			}
+			visible = {
+				date > 1919.1.1
+				date < 1950.1.1		
+			}			
+			traits = {
+				aboriginal_rights_activist
+			}
+		}
+	}	
+
+	AST_jack_lang = {
+		name = AST_jack_lang
+		portraits = {
+			civilian = {
+                small="gfx/interface/ideas/AST/AST_Jack_Lang.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AST_jack_lang
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_government = democratic
+			}
+			visible = {
+				date > 1909.1.1
+				date < 1960.1.1		
+			}			
+			traits = {
+				ideological_crusader
+			}
+		}
+	}
+
+	##high command
+
+	AST_arthur_allen={
+		name=AST_arthur_allen
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_arthur_allen.dds"
+			}
+		}
+		advisor={		
+			slot = high_command
+			idea_token = AST_arthur_allen
+			ledger = army
+			
+			traits = {
+				army_infantry_3
+			}
+			cost = 200
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	AST_clive_caldwell={
+		name=AST_clive_caldwell
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_clive_caldwell.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AST_clive_caldwell
+			ledger = air
+			traits = {
+				air_air_superiority_3
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1933.1.1
+				date < 1949.1.1
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+	AST_john_collins={
+		name=AST_john_collins
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_john_collins.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AST_john_collins
+			ledger = navy
+			traits = {
+				navy_capital_ship_2
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1936.1.1
+				date < 1956.1.1
+			}
+			visible = {
+				date > 1936.1.1
+				date < 1956.1.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	AST_edmund_herring={
+		name=AST_edmund_herring
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_edmund_herring.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AST_edmund_herring
+			ledger = army
+			traits = {
+				army_artillery_2
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1922.1.1
+				date < 1952.1.1
+			}
+			visible = {
+				date > 1922.1.1
+				date < 1952.1.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	AST_arthur_drakeford={
+		name=AST_arthur_drakeford
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_Arthur_Drakeford.dds"
+			}
+		}
+		advisor={			
+			slot = high_command
+			idea_token = AST_arthur_drakeford
+			ledger = air
+			traits = {
+				air_air_combat_training_2
+			}
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1914.1.1
+				date < 1955.1.1
+			}
+			visible = {
+				date > 1914.1.1
+				date < 1955.1.1
+			}
+			cost = 100
+		}		
+	}
+	
+	AST_cederic_hicks={
+		name=AST_cederic_hicks
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_cederic_hicks.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = AST_cederic_hicks
+			ledger = army
+			cost = 150.000
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1927.1.1
+				date < 1957.1.1
+				has_completed_focus = AST_armament_3
+			}
+			visible = {
+				date > 1927.1.1
+				date < 1957.1.1
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	##army chiefs
+
+	AST_john_lavarack={
+		name=AST_john_lavarack
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_john_lavarack.dds"
+				large="gfx/leaders/AST/Portrait_AST_John_Lavarack.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = AST_john_lavarack
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1926.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1926.1.1
+				date < 1949.1.1
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { artillery_officer old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				date > 1926.1.1
+				date < 1949.1.1
+			}			
+		}		
+	}
+
+	AST_sydney_rowell={
+		name=AST_sydney_rowell
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_sydney_rowell.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = AST_sydney_rowell
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1926.1.1
+				date < 1955.1.1
+			}
+			visible = {
+				date > 1926.1.1
+				date < 1955.1.1
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	AST_vernon_sturdee={
+		name=AST_vernon_sturdee
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_vernon_sturdee.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Vernon_Sturdee.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = AST_vernon_sturdee
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1924.1.1
+				date < 1955.1.1
+			}
+			visible = {
+				date > 1924.1.1
+				date < 1955.1.1
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { offensive_doctrine aggressive_assaulter infantry_leader hill_fighter }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}		
+	}
+
+	###navy chiefs
+
+	AST_ragnar_colvin={
+		name=AST_ragnar_colvin
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_ragnar_colvin.dds"
+				large="gfx/leaders/AST/Portrait_Australia_Ragnar_Musgrave_Colvin.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = AST_ragnar_colvin
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1922.1.1
+				date < 1954.1.1
+			}
+			visible = {
+				date > 1922.1.1
+				date < 1954.1.1
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 2
+			visible = {
+				date > 1922.1.1
+				date < 1954.1.1
+			}			
+		}		
+	}
+
+	AST_jack_crace={
+		name=AST_jack_crace
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_jack_crace.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = AST_jack_crace
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1925.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1925.1.1
+				date < 1949.1.1
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+
+	###air chiefs
+
+	AST_richard_williams={
+		name=AST_richard_williams
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_richard_williams.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = AST_richard_williams
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1922.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1922.1.1
+				date < 1949.1.1
+			}
+			traits = {
+				air_chief_safety_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	AST_charles_burnett={
+		name=AST_charles_burnett
+		portraits={
+			army={
+				small="gfx/interface/ideas/AST/AST_charles_burnett.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = AST_charles_burnett
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				date > 1919.1.1
+				date < 1949.1.1
+			}
+			visible = {
+				date > 1919.1.1
+				date < 1949.1.1
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	### COLD WAR
+
+	AST_john_gorton={
+		name=AST_john_gorton
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/CW/Australia_JohnGorton.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2002.5.19"
+		}
+	}
+	AST_malcolm_fraser={
+		name=AST_malcolm_fraser
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/CW/Australia_Malcolm_Fraser.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2019.5.16"
+		}
+	}
+	AST_bob_hawke={
+		name=AST_bob_hawke
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/CW/Australia_Malcolm_Fraser.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="2015.3.20"
+		}
+	}
+
+	### Modern Day
+
+	AST_john_howard={
+		name=AST_john_howard
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/MD/Australia_John_Howard.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2060.1.1"
+		}
+	}
+
+	AST_kevin_rudd={
+		name=AST_kevin_rudd
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/MD/Australia_Kevin_Rudd.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2060.1.1"
+		}
+	}
+
+	AST_malcolm_turnball={
+		name=AST_malcolm_turnball
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/MD/Australia_Malcolm_Turnball.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2060.1.1"
+		}
+	}
+
+	AST_scott_morrison={
+		name=AST_scott_morrison
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/MD/AST_Scott_Morrison_Liberalism.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2060.1.1"
+		}
+	}
+}

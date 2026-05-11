@@ -1,0 +1,420 @@
+RON_universal_setup = yes
+
+
+
+capital = 271
+oob = "ETH_1900"
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+add_ideas = {
+ extensive_conscription
+}
+
+recruit_character = ETH_menelik_ii
+recruit_character = ETH_lij_iyasu
+recruit_character = ETH_zewditu
+recruit_character = ETH_tafari_makonnen
+recruit_character = ETH_fitawrari_yeebio_woldai
+recruit_character = ETH_balcha_safo
+recruit_character = ETH_hailu_tekle_haymanot
+recruit_character = ETH_habte_giyorgis_dinagde
+recruit_character = ETH_heruy_wolde_selassie
+recruit_character = ETH_mulugeta_yeggazu_of_illubabor
+
+1910.1.1 = {
+	oob = "ETH_1910"
+
+	if = {
+		limit = {
+			has_start_date > 1909.1.1
+			has_start_date < 1911.1.1
+		}
+		country_event = { id = ww1_ethiopia.1 days = 1442 }
+	}
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1889.3.10"
+		election_frequency = 60
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		neutrality = 100
+	}
+
+	set_technology = {
+		tech_support = 1
+		early_infantry_weapons = 1
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
+	}
+
+    recruit_character = ETH_desta_damtew
+	recruit_character = ETH_workneh_eshete	
+}
+
+1913.12.12 = {
+retire_character = ETH_menelik_ii
+}
+
+1914.1.1 = {
+	oob = "ETH_1914"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1913.12.12"
+		election_frequency = 48
+		elections_allowed = no
+	}
+ recruit_character = ETH_tekle_hawariat_tekle_mariyam				
+}
+
+1916.9.27 = {
+retire_character = ETH_lij_iyasu
+}
+
+1919.1.1 = {
+	oob = "ETH_1919"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1916.9.27"
+		election_frequency = 48
+		elections_allowed = no
+	}		
+    recruit_character = ETH_abba_jofir
+	recruit_character = ETH_wehib_pasha	
+}
+
+1926.1.1 = {
+retire_character = ETH_habte_giyorgis_dinagde
+}
+
+1930.4.1 = {
+recruit_character = ETH_haile_selassie
+}
+
+1930.4.2 = {
+retire_character = ETH_zewditu
+retire_character = ETH_tafari_makonnen
+recruit_character = ETH_menen_asfaw
+}
+
+
+1933.1.1 = {
+	set_air_oob = "ETH_1936_air_bba"
+	oob = "ETH_1933"
+	set_war_support = 0.30 # People are beginning to lose heart a bit
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1930.4.2"
+		election_frequency = 48
+		elections_allowed = no
+	}	
+	set_popularities = {
+		democratic = 6
+		fascism = 1
+		communism = 4
+		neutrality = 89
+	}
+
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1949.01.01
+		}
+
+		add_ideas = {
+			war_economy
+			all_adults_serve #to get to historical army size of about 800,000 and have some reserves
+			ETH_african_expertise
+			ETH_gas_attacks
+			ETH_medieval_warfare1
+			ETH_bad_encryption
+			public_iliteracy
+		}
+	}
+
+	recruit_character = ETH_gabriel_zawde_gilaneh
+	recruit_character = ETH_woldemeskal_tariku
+	recruit_character = ETH_ras_kebbede
+	recruit_character = ETH_wondossen_kassa
+	recruit_character = ETH_dedja_zinatch_nadeon
+	recruit_character = ETH_haile_abba_mersa
+	recruit_character = ETH_ras_seyum
+	recruit_character = ETH_mesfin_sileshi
+	recruit_character = ETH_lij_abiye_abebe
+	recruit_character = ETH_lij_johannes
+	recruit_character = ETH_fitauri_zawde_gobena
+	recruit_character = ETH_bedjironde_tekle_hawariate
+    recruit_character = ETH_alemework_beyene
+   
+    # Generals 
+    recruit_character = ETH_seyoum_mengesha
+    recruit_character = ETH_ras_kassa 
+	recruit_character = ETH_abebe_aregai
+	recruit_character = ETH_ayalew_birru
+	recruit_character = ETH_beyene_merid
+	recruit_character = ETH_nasibu_zeamanuel
+    recruit_character = ETH_ras_imru_haile_selassie		
+    
+	# Political Advisors
+    recruit_character = ETH_makonnen_endelkatchew
+	recruit_character = ETH_abuna_qerellos_iv
+	#recruit_character = IA_emma_goldman
+	recruit_character = ETH_getachew_abate
+	#recruit_character = IA_sakutaro_iwasa
+	#recruit_character = IA_sanshiro_ishikawa
+	recruit_character = ETH_tadesse_birru
+	recruit_character = ETH_yilma_deressa
+	recruit_character = ETH_abuna_abraham
+	recruit_character = ETH_senedu_gebru
+	recruit_character = ETH_anarchist_council
+	recruit_character = ETH_prov_mil_admin	
+    
+	# Military Advisors
+    recruit_character = ETH_john_robinson	
+	recruit_character = ETH_viking_tamm
+	recruit_character = ETH_carl_gustav_von_rosen
+	recruit_character = ETH_domenico_mondelli
+	recruit_character = ETH_feodor_konovalov			
+}
+
+1935.10.3 = {
+    set_global_flag = second_italo_ethiopian_war_flag
+    clr_global_flag = second_italo_ethiopian_war_flag
+}
+
+1936.1.1 = {
+	set_air_oob = "ETH_1936_air_bba"
+    oob = "ETH_1936"	
+
+	recruit_character = ETH_amha_selassie
+
+	# Starting tech
+	set_technology = {
+		infantry_weapons = 1
+		tech_mountaineers = 1
+	}
+	# A colony of Italy in 1939, however if independent it would have the same politics as in 1936
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1930.4.2"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		neutrality = 70
+		fascism = 20 
+		democratic = 5
+		communism = 5
+	}
+
+    retire_character = ETH_mulugeta_yeggazu_of_illubabor
+    retire_character = ETH_balcha_safo	
+}
+
+1937.2.24 = {
+	retire_character = ETH_desta_damtew
+	if = {
+		limit = {
+			has_start_date > 1930.01.01
+			has_start_date < 1949.01.01
+		}
+
+		add_ideas = {
+			limited_conscription #Capitulated
+		}
+	}
+}
+
+1938.1.1 = {
+retire_character = ETH_heruy_wolde_selassie
+}
+
+1939.1.1 = {
+	
+	set_technology = {
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+1944.1.1 = {
+retire_character = ETH_fitawrari_yeebio_woldai	
+}
+
+1945.1.1 = {
+retire_character = ETH_ayalew_birru
+}
+
+1949.1.1 = {
+	oob = "ETH_1949"
+ recruit_character = ETH_aman_andom	
+ retire_character = ETH_hailu_tekle_haymanot
+ retire_character = ETH_abuna_qerellos_iv  
+ retire_character = ETH_abuna_abraham	 
+}
+
+1952.2.1 = {
+retire_character = ETH_workneh_eshete	
+retire_character = ETH_getachew_abate	
+recruit_character = ETH_haile_selassie_cw
+}
+
+1952.2.2 = {
+retire_character = ETH_haile_selassie
+}
+
+1954.1.1 = {
+retire_character = ETH_john_robinson
+}
+
+1955.1.1 = {
+retire_character = ETH_viking_tamm
+retire_character = ETH_domenico_mondelli
+retire_character = ETH_feodor_konovalov	
+retire_character = IA_sakutaro_iwasa
+retire_character = IA_sanshiro_ishikawa
+}
+
+1960.1.1 = {
+	oob = "ETH_1960"
+ recruit_character = ETH_iskinder_desta
+ recruit_character = ETH_mengistu_haile_mariam
+ retire_character = ETH_seyoum_mengesha 
+ retire_character = ETH_abebe_aregai 
+}
+
+1962.2.15 = {
+retire_character = ETH_menen_asfaw
+}
+
+1970.1.1 = {
+	oob = "ETH_1970"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1970.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+ retire_character = ETH_tekle_hawariat_tekle_mariyam
+ retire_character = ETH_carl_gustav_von_rosen
+}
+
+1979.1.1 = {
+retire_character = ETH_yilma_deressa
+}
+
+1980.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		last_election = "1980.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		communism = 100
+	}
+}
+
+2000.1.1 = {
+	oob = "ETH_2000"
+	set_politics = {
+		ruling_party = communism
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+	create_country_leader = {
+		name = "Meles Zenawi"
+		picture = "gfx/leaders/ETH/MD/Ethiopia_Meles_Zenawi.dds"
+		
+		ideology = lw_socialism
+	}
+	create_country_leader = {
+		name = "Mulatu Teshome"
+		picture = "gfx/leaders/ETH/MD/Ethiopia_MulatuTeshome.dds"
+		
+		ideology = democratic_socialism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Girma Wolde Giorgis"
+		picture = "gfx/leaders/ETH/MD/Ethiopia_Girma_Wolde_Giorgis.dds"
+		
+		ideology = democratic_independent
+	}
+}
+
+2016.1.1 = {
+	oob = "ETH_2016"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "Sahle-Work Zewde"
+		picture = "gfx/leaders/ETH/MD/ETH_Sahle-Work_Zewde_Independent.dds"
+		
+		ideology = democratic_independent
+	}
+}
