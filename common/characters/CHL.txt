@@ -1,0 +1,2526 @@
+characters={
+	### 1900 ###
+	
+	CHL_federico_errazuriz_echaurren={
+		name=CHL_federico_errazuriz_echaurren
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/DNC/CHL_Federico_Errazuriz_Echaurren.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1902.1.12"
+			id=-1
+		}
+	}
+
+	CHL_german_riesco_errazuriz={
+		name=CHL_german_riesco_errazuriz
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/DNC/CHL_German_Riesco_Errazuriz.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1917.1.1"			
+			id=-1
+		}				
+	}	
+
+	CHL_malaquias_concha_ortiz={
+		name=CHL_malaquias_concha_ortiz
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/DNC/CHL_Malaquias_Concha_Ortiz.dds"
+			}
+		}
+		country_leader={
+			ideology=lw_socialism
+			expire="1922.1.1"
+			id=-1
+		}
+	}
+
+	CHL_luis_emilio_recabarren={
+		name=CHL_luis_emilio_recabarren
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/WW1/CHL_Luis_Emilio_Recabarren.dds"
+				small="gfx/interface/ideas/CHL/CHL_luis_emilio_recabarren_dnc.dds"				
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_luis_emilio_recabarren
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				communist_theorist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = { 
+				date < 1925.1.1
+		    }			
+		}		
+		country_leader={
+			ideology=lw_socialism
+			traits  = {
+				political_commissar communist_revolutionary
+			}			
+			expire="1925.1.1"
+			id=-1
+		}
+	}	
+
+	CHL_jorge_montt={
+		name=CHL_jorge_montt
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/DNC/CHL_Jorge_Montt_Alvarez.dds"
+				small="gfx/interface/ideas/CHL/CHL_jorge_montt_alvarez.dds"				
+			}
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Jorge_Montt_Alvarez.dds"
+				small="gfx/interface/ideas/CHL/CHL_jorge_montt_alvarez.dds"                
+			}            
+        }
+		country_leader={
+			ideology=militarism
+			expire="1923.1.1"			
+			id=-1	
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = CHL_jorge_montt
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 50
+			ai_will_do = {
+				base = 1.000
+			}
+		}		
+		navy_leader={
+			traits={ navy_career_officer politically_connected war_hero superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=2	
+			visible = { 
+				date < 1923.1.1
+		    }				
+		}		
+	}
+
+	CHL_alberto_edwards_vives={
+		name="Alberto Edwards Vives" 
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/DNC/CHL_Alberto_Edwards_Vives.dds"				
+				small="gfx/interface/ideas/CHL/CHL_Alberto_Edwards_Vives.png"
+			}
+		}		
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_alberto_edwards_vives
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+					has_country_leader = {
+						character = CHL_alberto_edwards_vives
+					}
+				}
+			}
+			traits  = {
+				nationalist_journalist
+			}
+		}
+		country_leader={
+			ideology=rw_nationalism
+			traits={ IRQ_nationalist_lawyer }				
+			expire="1933.1.1"
+			id=-1
+		}		
+	}	
+
+	CHL_pedro_montt_montt={
+		name=CHL_pedro_montt_montt #Not a mistake, he had the same surname twice
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/WW1/Portrait_Chile_Pedro_Montt.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ railroad_enthusiast the_absentee_president }				
+			expire="1910.8.16"
+			id=-1
+		}
+	}
+
+	CHL_elias_fernandez={
+		name=CHL_elias_fernandez #Vice President of Montt
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/WW1/Elias_Fernandez_Albano.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1910.9.6"
+			id=-1
+		}
+	}	
+
+	CHL_pedro_dartnell={
+		name=CHL_pedro_dartnell
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/CHL/CHL_pedro_pablo_dartnell_civ.dds"
+			}			
+			army={
+				small="gfx/interface/ideas/CHL/CHL_pedro_pablo_dartnell.dds"
+				large="gfx/leaders/CHL/DNC/CHL_Pedro_Pablo_Dartnell.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_pedro_dartnell
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				captain_of_industry 
+			}
+			visible = { 
+				date < 1932.1.1
+		    }				
+		}		
+		advisor={
+			slot = air_chief
+			idea_token = CHL_pedro_dartnell
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				air_chief_reform_2
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = { 
+				date < 1932.1.1
+		    }			
+		}
+		field_marshal={
+			skill=3
+			traits = {
+				old_guard engineer_officer naval_liason
+			}
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			visible = { 
+				date < 1932.1.1
+		    }			
+		}
+	}
+
+	CHL_jorge_boonen={
+		name=CHL_jorge_boonen
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_jorge_boonen.dds"
+				large="gfx/leaders/CHL/DNC/CHL_Jorge_Boonen_Rivera.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_jorge_boonen
+			allowed  = {
+					original_tag  = CHL
+				}
+				traits  = {
+					quartermaster_general
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		field_marshal={
+			skill=3
+			traits = {
+				old_guard career_officer politically_connected
+			}
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			visible = { 
+				date < 1922.1.1
+		    }				
+		}
+	}	
+
+	###1900 Army###
+
+	CHL_elias_yanez={
+		name="Elias Yañez Ponce de Leon"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Elias_Yañez.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			traits={ brilliant_strategist war_hero trait_reckless ranger swamp_fox trait_mountaineer }
+			attack_skill=3
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=2
+		}
+	}		
+
+	CHL_sofanor_parra_hermosilla={
+		name="Sofanor Parra Hermosilla"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Sofanor_Parra_Hermosilla.dds"
+				small="gfx/interface/ideas/CHL/CHL_Sofanor_Parra_Hermosilla.png"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CHL_sofanor_parra_hermosilla
+			allowed  = {
+					original_tag  = CHL
+				}
+				traits  = {
+					army_chief_morale_3 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		field_marshal={
+			traits={ war_hero trait_reckless media_personality desert_fox adaptable trait_mountaineer }			
+			skill=2
+			attack_skill=3
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=2
+		}
+	}	
+
+	CHL_roberto_silva_renard={
+		name="Roberto Silva Renard"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Roberto_Silva_Renard.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer war_hero harsh_leader infantry_officer }			
+			skill=2
+			attack_skill=3
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=2
+		}
+	}	
+
+	CHL_vicente_palacios={
+		name="Vicente Palacios Baeza"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Vicente_Palacios.dds"
+				small="gfx/interface/ideas/CHL/CHL_Vicente_Palacios.png"
+			}
+		}		
+		advisor={
+			slot = high_command
+			idea_token = CHL_vicente_palacios
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ledger  = army 
+			traits  = {	army_logistics_2 }
+			cost = 100
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist war_hero trait_reckless ranger trait_mountaineer }			
+			skill=2
+			attack_skill=3
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=2
+		}
+	}	
+
+	CHL_guillermo_armstrong={
+		name="Guillermo Armstrong Ramirez"
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_Guillermo_Armstrong_Ramirez.png"
+				large="gfx/leaders/CHL/DNC/CHL_Guillermo_Armstrong_Ramirez.dds"
+			}
+		}
+		corps_commander={
+			traits = { old_guard }			
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=1
+		}
+	}		
+
+	CHL_luis_felipe_brieba={
+		name="Luis Felipe Brieba"
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_Luis_Felipe_Brieba_Aran.png"
+				large="gfx/leaders/CHL/DNC/CHL_Luis_Felipe_Brieba.dds"
+			}
+		}
+		corps_commander={
+			traits = { war_hero old_guard infantry_officer infantry_leader }			
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	
+	CHL_wilhelm_ekdahl_anglin={
+		name="Wilhelm Ekdahl Anglin"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Wilhelm_Ekdahl_Anglin.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}	
+
+	CHL_emilio_korner_henze={
+		name="Emilio Korner Henze"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Emilio_Korner_Henze.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CHL_korner
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				army_chief_reform_3
+			}
+			cost = 200
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}		
+		field_marshal={
+			traits={ politically_connected infantry_expert war_hero superior_tactician }
+			skill=5
+			attack_skill=3
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=3
+		}
+	}	
+
+	### 1900 ADMIRALS ###
+
+	CHL_joaquin_munoz_hurtado={
+		name="Joaquin Muñoz Hurtado"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_navy_2.png"
+				large="gfx/leaders/CHL/DNC/CHL_Joaquin_Muñoz_Hurtado.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=4
+		}
+	}
+
+	CHL_arturo_wilson_navarrete={
+		name="Arturo Wilson Navarrete"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_navy_2.png"
+				large="gfx/leaders/CHL/DNC/CHL_Arturo_Wilson_Navarrete.dds"
+			}
+		}
+		navy_leader={
+			traits = { war_hero blockade_runner superior_tactician }			
+			skill=2
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=5
+			coordination_skill=3
+		}
+	}	
+
+	CHL_francisco_nef={
+		name="Francisco Nef Jara"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/DNC/CHL_Francisco_Nef_Jara.dds"
+				small="gfx/interface/ideas/CHL/Idea_CHL_Francisco_Nef_Jara.png"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = CHL_francisco_nef
+			allowed  = {
+					original_tag  = CHL
+				}
+				traits  = {
+					navy_chief_maneuver_2 
+				}
+				cost = 100
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		navy_leader={
+			traits = { politically_connected }			
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=5
+			coordination_skill=2
+		}
+	}	
+
+	CHL_luis_gomez_carreno={
+		name="Luis Gomez Carreño"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_navy_3.dds"
+				large="gfx/leaders/CHL/DNC/CHL_Luis_Gomez_Carreño.dds"
+			}
+		}
+		navy_leader={
+			traits = { media_personality }			
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+		}
+	}	
+
+	### 1910 ###
+
+	CHL_ramon_barros_luco={
+		name=CHL_ramon_barros_luco
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/WW1/Chile_Ramon_Barros_Luco.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1920.1.1"
+			id=-1
+		}
+	}
+
+	CHL_tancredo_pinochet={
+		name=CHL_tancredo_pinochet
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/WW1/CHL_Tancredo_Pinochet.dds"
+				small="gfx/interface/ideas/CHL/CHL_tancredo_pinochet.dds"				
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = { education_reformer }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_tancredo_pinochet
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				right_wing_journalist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = { 
+				date < 1949.1.1
+		    }			
+		}		
+	}	
+
+	CHL_juan_pablo_bennett = {
+		name = CHL_juan_pablo_bennett
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/CHL/CHL_juan_pablo_bennett.dds"
+				large = "gfx/leaders/CHL/INT/Portrait_CHL_Bennett.dds"				
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected inflexible_strategist harsh_leader trait_mountaineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = { 
+				date < 1926.1.1
+		    }			
+		}
+		advisor = {
+			idea_token = CHL_juan_pablo_bennett
+			slot = high_command
+			traits = { 
+				army_chief_defensive_2
+			}
+			cost = 100
+			visible = { 
+				date < 1949.1.1
+		    }			
+		}
+	}	
+
+	### 1919 ###
+
+	CHL_juan_luis_sanfuentes_andonaegui={
+		name=CHL_juan_luis_sanfuentes_andonaegui
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/WW1/Chile_JuanLuisSanfuentes.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1931.1.1"
+			id=-1
+		}
+	}
+
+	CHL_emiliano_figueroa={
+		name=CHL_emiliano_figueroa
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/INT/Emiliano_Figueroa_Larrain.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1932.1.1"
+			id=-1
+		}
+	}
+
+	CHL_juan_esteban_montero={ #1932 President
+		name=CHL_juan_esteban_montero
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/INT/Portrait_CHL_Juan_Esteban_Montero.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2060.1.1"
+			id=-1
+		}
+	}		
+
+	CHL_carlos_ibanez_del_campo={
+		name=CHL_carlos_ibanez_del_campo
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/INT/Carlos_Ibanez.dds"
+			}
+			army={
+				large="gfx/leaders/CHL/INT/Carlos_Ibanez.dds"
+			}			
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_carlos_ibanez_del_campo
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				JUNO_ibanismo
+			}
+			available = {
+				NOT = {		
+					has_government = communism
+				}
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CHL_carlos_ibanez_del_campo
+					}
+				}
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+				date > 1925.1.1				
+				date < 1961.1.1							
+			}
+		}		
+		country_leader={
+			ideology=rw_populism
+			expire="1961.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ trait_mountaineer urban_assault_specialist harsh_leader politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			visible = { 
+				date > 1919.1.1				
+				date < 1961.1.1
+		    }			
+		}		
+	}
+
+	CHL_arturo_alessandri={
+		name="Arturo Alessandri Palma"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/INT/Arturo_Alessandri.dds"
+			}
+		}
+		country_leader={
+			ideology = liberalism
+			traits = { JUNO_the_lion_of_tarapaca }
+			expire="1951.1.1"
+			id=-1
+		}
+	}
+
+	CHL_luis_altamirano={
+		name=CHL_luis_altamirano
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_luis_altamirano.dds"
+				large="gfx/leaders/CHL/INT/Luis_Altamirano.dds"
+			}
+			civilian={
+				small="gfx/interface/ideas/CHL/CHL_luis_altamirano_civ.dds"
+			}			
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_luis_altamirano
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				militant_minister
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+			visible = { 
+				date < 1939.1.1
+		    }				
+		}
+		corps_commander={
+			skill=2
+			traits = {
+				old_guard artillery_officer organizer
+			}
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			visible = { 
+				date < 1933.1.1
+		    }				
+		}
+	}
+
+	CHL_francisco_diaz_valderrama={
+		name=CHL_francisco_diaz_valderrama
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_francisco_javier_diaz_int.dds"
+				large="gfx/leaders/CHL/INT/Francisco_Javier_Diaz_INT.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_francisco_valderrama_advisor
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				has_government = fascism
+				not_already_hired_except_as = political_advisor
+			}
+			visible = {
+				has_government = fascism
+				date > 1912.1.1				
+				date < 1949.1.1				
+			}
+			traits  = {
+				JUNO_defender_of_the_race 
+			}
+		}		
+		advisor = {
+			slot = army_chief
+			idea_token = CHL_francisco_valderrama_army_chief
+			allowed  = {
+				original_tag  = CHL
+			}
+			cost = 100
+			available = {
+				not_already_hired_except_as = army_chief
+			}
+			visible = {
+				date > 1912.1.1				
+				date < 1949.1.1
+			}
+			traits  = {
+				army_chief_organizational_1
+			}
+		}		
+		corps_commander={
+			traits = {
+				politically_connected media_personality trait_reckless
+			}			
+			skill=1
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = { 
+				date > 1912.1.1				
+				date < 1949.1.1
+		    }			
+		}
+	}
+
+	CHL_aristides_pinto_concha={
+		name=CHL_aristides_pinto_concha
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_aristides_pinto.dds"
+				large="gfx/leaders/CHL/DNC/CHL_Aristides_Pinto_Concha.dds"
+			}
+		}
+		corps_commander={
+			traits={ war_hero old_guard brilliant_strategist urban_assault_specialist }			
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+			visible = { 
+				date < 1925.1.1
+		    }				
+		}
+		advisor={
+			slot = theorist
+			cost = 100
+			idea_token = CHL_aristides_pinto_concha
+			ledger  = army 
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				military_theorist 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = { 
+				date < 1925.1.1
+		    }			
+		}
+	}
+
+	CHL_marmaduke_grove={
+	 	name="Marmaduke Grove"
+	 	portraits={
+			civilian = {
+				large = GFX_portrait_CHL_marmaduke_grove_leader
+			}			
+	 		army={
+				large = GFX_portrait_CHL_marmaduke_grove
+	 			small="gfx/interface/ideas/CHL/CHL_marmaduke_grove_army.dds"
+	 		}
+	 	}		
+	 	advisor={
+			slot = air_chief
+			idea_token = CHL_marmaduke_grove
+			allowed  = {
+				original_tag  = CHL
+			}
+	 		traits  = {
+				air_chief_old_guard 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = { 
+				date > 1919.1.1				
+				date < 1955.1.1
+		    }			
+		}
+	}
+	
+	CHL_carlos_davila_espinoza={
+		name=CHL_carlos_davila_espinoza
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/INT/Carlos_Davila_Espinoza.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CHL_carlos_davila_espinoza
+			allowed  = {
+				original_tag  = CHL
+			}
+			traits  = {
+				left_wing_journalist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = { 
+				date > 1919.1.1				
+				date < 1956.1.1
+		    }			
+		}		
+		country_leader={
+			ideology=lw_socialism
+			traits = {
+				sharp_tongued_lawyer
+			}			
+			expire="1956.1.1"
+			id=-1
+		}
+	}	
+
+	### 1933 ###
+
+	CHL_pedro_aguirre_cerda={
+		name=CHL_pedro_aguirre_cerda
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/Portrait_CHL_Pedro_Aguirre_Cerda.dds"
+				small = GFX_portrait_CHL_pedro_aguirre_cerda_small				
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_pedro_aguirre_cerda
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CHL_pedro_aguirre_cerda
+					}
+				}
+			}
+			visible = {
+				date > 1917.1.1					
+				date < 1942.1.1				
+			}
+			traits  = {
+				JUNO_father_of_industrialization 
+			}
+		}		
+		country_leader={
+			ideology=socialism
+			traits  = {
+				JUNO_gobernar_es_educar
+			}			
+			expire="1942.1.1"
+			id=-1
+		}
+	}
+
+	CHL_jeronimo_mendez={ 
+		name=CHL_jeronimo_mendez
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/Jeronimo_Mendez.dds"
+				small = GFX_portrait_CHL_jeronimo_mendez_small				
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_jeronimo_mendez
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				has_government = democratic
+			}
+			visible = {
+				has_government = democratic
+				date > 1930.1.1					
+				date < 1945.1.1					
+			}
+			traits  = {
+				minister_of_the_interior_aregai
+			}
+		}		
+		country_leader={
+			ideology=socialism
+			traits={  }
+			expire="1965.1.1"
+			id=-1
+		}
+	}
+
+	CHL_juan_antonio={
+		name=CHL_juan_antonio
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/Portrait_CHL_Juan_Antonio_Rios.dds"
+				small = GFX_portrait_CHL_juan_antonio_rios_small				
+			}
+		}
+		country_leader={
+			desc = "POLITICS_JUAN_ANTONIO_DESC"
+			ideology=socialism
+			traits={ JUNO_spearhead_of_the_alianza_democratica }
+			expire="1946.6.27"
+			id=-1
+		}
+	}
+
+	CHL_alfredo_duhalde={
+		name=CHL_alfredo_duhalde
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/Alfredo_Duhalde.dds"
+				small="gfx/interface/ideas/CHL/CHL_alfredo_duhalde.dds"
+			}			
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			id=-1
+		}
+	}
+
+	CHL_senado={
+		name=CHL_senado
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/CHL_Senado.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			id=-1
+		}
+	}
+
+	CHL_senado_2={
+		name=CHL_senado_2
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/CHL_Senado.dds"
+			}
+		}
+		country_leader={
+			ideology=nonaligned_conservatism
+			traits={  }
+			id=-1
+		}
+	}
+
+	CHL_senado_3={
+		name=CHL_senado_3
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/CHL_Senado.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={  }
+			id=-1
+		}
+	}						
+
+	CHL_carlos_contreras_labarca={
+		name=CHL_carlos_contreras_labarca
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/portrait_CHL_carlos_contreras_labarca.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_carlos_contreras_labarca
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				has_government = communism
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CHL_carlos_contreras_labarca
+					}
+				}
+			}
+			visible = {
+				has_government = communism
+				date > 1925.1.1					
+				date < 1960.1.1					
+			}
+			traits  = {
+				leftist_intellectual 
+			}
+		}		
+		country_leader={
+			ideology=marxism
+			traits={
+				veteran_communist
+			}			
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_jorge_gonzalez_von_marees={
+		name=CHL_jorge_gonzalez_von_marees
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/portrait_CHL_jorge_gonzalez_von_marees.dds"
+				small="gfx/interface/ideas/CHL/CHL_jorge_gonzalez_von_marees.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={
+				fascist_militia_leader
+				r56_trait_opposed_to_communism
+				JUNO_el_jefe
+			}			
+			expire="1963.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_jorge_gonzalez_von_marees
+			allowed = {
+				original_tag =  CHL
+			}  
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			traits = { 
+				JUNO_el_jefe_advisor_trait political_manipulator
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CHL_jorge_gonzalez_von_marees
+					}
+				}
+			}			
+			visible = {
+				date > 1931.1.1					
+				date < 1963.1.1					
+			}			
+		}	
+		field_marshal = {
+			traits = { politically_connected harsh_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1 
+			visible = {
+				has_government = fascism
+				date > 1931.1.1					
+				date < 1963.1.1					
+			}
+		}			
+	}
+
+	CHL_gustavo_ross_santa_maria={ 
+		name=CHL_gustavo_ross_santa_maria
+		portraits={
+			civilian={
+				large= GFX_portrait_CHL_gustavo_ross_santa_maria
+				small="gfx/interface/ideas/CHL/CHL_gustavo_ross.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_gustavo_ross_santa_maria
+			allowed = {
+				original_tag =  CHL
+			}  
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			traits = { 
+				JUNO_stock_market_financier
+			}
+		}
+	}
+
+	CHL_oscar_otarola={
+		name=CHL_oscar_otarola
+		portraits={
+			army={
+				large = GFX_portrait_CHL_escudero_oscar_otarola
+				small="gfx/interface/ideas/CHL/CHL_oscar_escudero_otarola.dds"
+			}
+		}
+			advisor = {
+			slot = high_command
+			idea_token = CHL_escudero_oscar_otárola
+			ledger = army
+			allowed = {
+				original_tag = CHL
+			}
+			visible = {
+				date > 1925.1.1					
+				date < 1958.1.1	
+			}
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		advisor = {
+			slot = army_chief
+			idea_token = CHL_oscar_otarola
+			allowed = {
+				original_tag =  CHL
+			}  
+			cost = 100
+			traits = { 
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				date > 1925.1.1					
+				date < 1958.1.1	
+			}			
+		}
+		corps_commander={
+			traits = { 
+				career_officer
+				trait_mountaineer
+				inflexible_strategist
+			}		
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				date > 1925.1.1					
+				date < 1958.1.1	
+			}			
+		}
+	}
+
+	CHL_bartolome_blanche_espejo={
+		name=CHL_bartolome_blanche_espejo
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_bartolome_blanche.dds"
+				large = GFX_portrait_CHL_bartolome_blanche
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CHL_bartolome_blanche
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			traits  = {
+				army_chief_old_guard 
+			}
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+				date > 1919.1.1					
+				date < 1949.1.1					
+			}			
+		}		
+		field_marshal={
+			traits={ promising winter_specialist brilliant_strategist defensive_doctrine cavalry_leader old_guard }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				date > 1919.1.1					
+				date < 1949.1.1	
+			}			
+		}
+	}
+
+	CHL_silvestre_urizar_banderas={
+		name=CHL_silvestre_urizar_banderas
+		portraits={
+			army={
+				large= "gfx/leaders/CHL/portrait_CHL_Silvestre_Urizar_Banderas.dds"
+				small="gfx/interface/ideas/CHL/CHL_silvestre_urizar.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious infantry_officer infantry_expert }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			visible = {
+				date > 1934.1.1					
+				date < 1960.1.1	
+			}			
+		}
+	}
+
+	CHL_ramon_canas_montalva={
+		name="Ramon Cañas Montalva"
+		portraits={
+			army={
+				large= "gfx/leaders/CHL/portrait_CHL_Ramon_Cañas_Montalva.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer brilliant_strategist career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			visible = {
+				date > 1925.1.1					
+				date < 1960.1.1	
+			}			
+		}
+	}	
+
+	CHL_arturo_espinoza_mujica={
+		name=CHL_arturo_espinoza_mujica
+		portraits={
+			army={
+				large = GFX_portrait_CHL_arturo_espinoza_mujica
+				small="gfx/interface/ideas/CHL/CHL_arturo_espinoza.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CHL_arturo_espinoza_mujica
+			allowed = {
+				original_tag =  CHL
+			}  
+			cost = 100
+			traits = { 
+				army_artillery_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}	
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}					
+		}
+		corps_commander={ 
+			traits = { 
+				politically_connected
+				career_officer
+				artillerist
+			}			
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				NOT = {
+					has_government = communism		
+				}
+			}			
+		}
+	}	
+
+	CHL_arturo_puga_osorio={
+		name=CHL_arturo_puga_osorio
+		portraits={
+			army={
+				large= "gfx/leaders/CHL/INT/Portrait_Chile_Arturo_Puga.dds"
+				small="gfx/interface/ideas/CHL/CHL_arturo_puga.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected inspirational_leader organizer infantry_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+
+	CHL_rafael_fernandez_reyes={
+		name=CHL_rafael_fernandez_reyes
+		portraits={
+			army={
+				large = GFX_portrait_CHL_rafael_reyes
+				small="gfx/interface/ideas/CHL/CHL_rafael_fernandez_reyes.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_rafael_reyes
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			visible = {
+
+			}
+			traits  = {
+				army_commando_1 
+			}
+		}		
+		corps_commander={
+			traits={ hill_fighter infantry_officer commando career_officer artillerist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				NOT = {
+					has_government = communism				
+				}
+			}			
+		}
+	}	
+
+	CHL_oscar_fuentes_pantoja={
+		name=CHL_oscar_fuentes_pantoja
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_oscar_fuentes_pantoja.dds"
+				large = GFX_portrait_CHL_oscar_fuentes_pantoja
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist career_officer hill_fighter }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}			
+		}
+	}
+
+	CHL_carlos_fuentes_rabe={
+		name=CHL_carlos_fuentes_rabe
+		portraits={
+			army={
+				large = GFX_portrait_CHL_carlos_fuentes_rabe
+				small="gfx/interface/ideas/CHL/CHL_carlos_fuente.dds"
+			}
+		}
+	    advisor = {
+			slot = high_command
+			idea_token = CHL_carlos_fuentes_rabe
+			ledger = army
+			allowed = {
+				original_tag = CHL
+			}				
+			traits = {
+				army_cavalry_1
+			}
+		}
+		field_marshal={ #names are real, stats are there for balance and flavor without deep	
+			traits = { 
+				cavalry_leader trait_mountaineer homeland_connoisseur
+			}	
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	CHL_guillermo_barrios_tirado={
+		name=CHL_guillermo_barrios_tirado
+		portraits={
+			army={
+				large = GFX_portrait_CHL_guillermo_barrios_tirado
+                small = "gfx/interface/ideas/CHL/CHL_guillermo_barrios.dds"
+			}
+			civilian = {
+				small = GFX_portrait_CHL_guillermo_barrios_tirado_civilian_small
+			}			
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_guillermo_barrios_tirado_advisor
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				has_government = democratic
+				not_already_hired_except_as = political_advisor
+			}
+			visible = {
+				has_government = democratic
+				date > 1936.1.1					
+				date < 1953.1.1					
+			}
+			traits  = {
+				JUNO_minister_of_defense  
+			}
+		}		
+		advisor = {
+			slot = theorist
+			idea_token = CHL_guillermo_barrios_tirado_theorist
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+					has_government = fascism
+				}
+				not_already_hired_except_as = theorist
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+				date > 1924.1.1					
+				date < 1953.1.1					
+			}
+			traits  = {
+				grand_battle_plan_expert  
+			}
+
+		}		
+		corps_commander={ 
+			traits = { 
+				career_officer
+				infantry_officer
+				hill_fighter
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				date > 1924.1.1					
+				date < 1953.1.1	
+			}			
+		}
+	}
+
+	CHL_daniel_herrera={
+		name=CHL_daniel_herrera
+		portraits={
+			army={
+				large = GFX_portrait_CHL_ariosto_herrera				
+				small="gfx/interface/ideas/CHL/CHL_daniel_ariosto_herrera.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = CHL_ariosto_herrera
+			ledger = army
+			allowed = {
+				original_tag = CHL
+			}
+			cost = 100	
+			traits = {
+				military_theorist
+			}
+			available = {
+				NOT = {
+					has_government = communism				
+				}
+			}
+			visible = {
+				NOT = {
+					has_government = communism				
+				}
+				date > 1930.1.1					
+				date < 1953.1.1					
+			}
+		}	
+		corps_commander={
+			traits = { media_personality infantry_leader }			
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+				date > 1930.1.1					
+				date < 1953.1.1				
+			}			
+		}
+	}	
+
+	CHL_oscar_izurieta_molina = {
+		name = CHL_oscar_izurieta_molina
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/CHL/CHL_oscar_izurieta_molina.dds"
+				large = "gfx/leaders/CHL/Portrait_CHL_Oscar_Izurieta_Molina.dds"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer infantry_officer hill_fighter }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			visible = {
+				date > 1940.1.1					
+				date < 1970.1.1
+			}				
+		}
+	}		
+
+	CHL_gregorio_tascon = {
+		name = "Gregorio Rodriguez Tascon"
+		portraits = {
+			army = {
+				large = GFX_portrait_CHL_gregorio_tascon
+				small = GFX_portrait_CHL_gregorio_tascon_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_gregorio_tascon
+
+			allowed  = {
+				original_tag  = CHL
+			}
+			cost = 100
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			visible = {
+
+			}
+			traits  = {
+				army_logistics_2
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist organizer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1 
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+				date > 1933.1.1					
+				date < 1970.1.1				
+			}
+		}
+	}	
+
+	#ADMIRALS
+
+    CHL_c_j_de_la_motte={
+        name=CHL_c_j_de_la_motte
+		portraits={
+			army={
+                large = "gfx/leaders/CHL/Carlos_Jouanne_de_La_Motte.dds"
+				small="gfx/interface/ideas/CHL/CHL_carlos_de_la_motte.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = CHL_c_j_de_la_motte
+			allowed = {
+				original_tag =  CHL
+			}  
+			cost = 125
+			traits = { 
+				navy_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+        navy_leader={ 
+			traits = { 
+				blockade_runner spotter
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+
+	CHL_julio_allard_pinto = {
+		name = CHL_julio_allard_pinto
+		portraits = {
+			army = {
+				large = GFX_portrait_CHL_julio_allard_pinto
+				small = "gfx/interface/ideas/CHL/CHL_julio_allard_pinto.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_julio_allard_pinto
+			allowed = {
+				original_tag = CHL
+			}
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			traits = { navy_naval_air_defense_1 }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}	
+		advisor = {
+			idea_token = CHL_julio_allard_pinto
+			slot = navy_chief
+			allowed = {
+				original_tag =  CHL
+			}  			
+			traits = { 
+				navy_chief_commerce_raiding_2
+			}
+			cost = 100
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}			
+		}			
+		navy_leader = {
+			traits = { concealment_expert fly_swatter cruiser_captain }			
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
+			visible = {
+				NOT = {
+					has_government = fascism
+				}
+			}			
+		}
+	}	
+
+	CHL_olegario_reyes_del_rio={
+		name=CHL_olegario_reyes_del_rio
+		portraits={
+			army={
+				large = GFX_portrait_CHL_olegario_reyes
+				small = "gfx/interface/ideas/CHL/CHL_jose_olegario_reyes.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_olegario_reyes
+			allowed = {
+				original_tag = CHL
+			}
+			traits = { navy_capital_ship_1 }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		navy_leader={ 
+			traits = { 
+				navy_career_officer
+				bold
+				blockade_runner
+                gentlemanly 
+				blue_water_expert				
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}			
+		}
+	}	
+
+	CHL_jorge_videla_cobo={
+		name=CHL_jorge_videla_cobo
+		portraits={
+			army={
+				large = GFX_portrait_CHL_jorge_cobo
+				small = "gfx/interface/ideas/CHL/CHL_jorge_videla_cobo.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_jorge_videla_cobo
+
+			allowed = {
+				original_tag = CHL
+			}
+			cost = 100
+			traits = { navy_screen_2 }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		navy_leader={ 
+			traits = { 
+				superior_tactician gunnery_expert fleet_protector
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
+	CHL_vicente_merino_bielich={
+		name=CHL_vicente_merino_bielich
+		portraits={
+			army={
+				large = GFX_portrait_CHL_vincente_merino_bielich
+				small = "gfx/interface/ideas/CHL/CHL_vicente_merino_bielich.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = CHL_vincente_merino_bielich_naval_chief
+			allowed = {
+				original_tag = CHL
+			}
+			traits = { navy_chief_reform_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			available = {
+				not_already_hired_except_as = navy_chief
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = CHL_vincente_merino_bielich_theorist
+			allowed = {
+				original_tag = CHL
+			}
+			traits = { naval_theorist }
+			ai_will_do = {
+				factor = 1.000
+			}
+			available = {
+				not_already_hired_except_as = theorist
+			}
+		}	
+		navy_leader={ 
+			traits = { 
+				spotter marksman fleet_protector inshore_fighter
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+
+	CHL_francisco_o_ryan_orrego={
+		name=CHL_francisco_o_ryan_orrego
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_francisco_oryan.dds"
+				large = "gfx/leaders/CHL/portrait_CHL_Francisco_Ryan.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = CHL_francisco_o_ryan_orrego
+			allowed = {
+				original_tag =  CHL
+			}  
+			cost = 100
+			traits = { 
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+        navy_leader={ 
+			traits = { 
+				blockade_runner marksman
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 5
+			coordination_skill = 4
+		}		
+	}	
+
+	CHL_emilio_daroch_soto={
+		name=CHL_emilio_daroch_soto
+		portraits={
+			army={
+				large = GFX_portrait_CHL_emilio_soto
+				small = "gfx/interface/ideas/CHL/CHL_emilio_daroch.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_emilio_soto
+			allowed = {
+				original_tag = CHL
+			}
+			traits = { navy_submarine_1 }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		navy_leader={ 
+			traits = { 
+				navy_career_officer seawolf
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 3
+		}
+	}
+
+	CHL_luis_villarroel_de_la_rosa = {
+		name = CHL_luis_villarroel_de_la_rosa
+		portraits = {
+			army = {
+				large = "gfx/leaders/CHL/Portrait_CHL_Luis_Villarroel_de_la_Rosa.dds"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+
+	#Advisors
+
+	CHL_diego_aracena_aguilar={
+		name=CHL_diego_aracena_aguilar
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_diego_aracena.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = CHL_diego_aracena_aguilar
+			allowed = {
+				original_tag =  CHL
+			}  
+			cost = 50
+			traits = { 
+				air_chief_old_guard
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	CHL_jose_luis_sanchez_besa={
+		name=CHL_jose_luis_sanchez_besa
+		portraits={
+			army={
+				small="gfx/interface/ideas/CHL/CHL_jose_luis_sanchez_besa.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHL_jose_luis_sanchez_besa
+			allowed = {
+				original_tag =  CHL
+			}  
+			cost = 100
+			traits = { 
+				air_strategic_bombing_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}													
+
+	### 1949 ###
+
+	CHL_gabriel_gonzalez_videla={
+		name=CHL_gabriel_gonzalez_videla
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/Portrait_CHL_Gabriel_Videla.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHL_gabriel_gonzales_videla
+			allowed  = {
+				original_tag  = CHL
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CHL_gabriel_gonzalez_videla
+					}
+				}
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits  = {
+				anti_communist_crusader 
+			}
+		}		
+		country_leader={
+			ideology=democratic_socialism
+			traits  = {
+				anti_communist
+			}			
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	
+	CHL_salvador_allende={
+		name=CHL_salvador_allende
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Chile_1960_Salvador_Allende_Marxism.dds" 
+			}
+		}
+		country_leader={
+			ideology=lw_socialism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_jorge_alessandri={
+		name=CHL_jorge_alessandri
+		portraits={
+			civilian={
+				large="gfx/leaders/CHL/CW/portrait_CHL_Jorge_Alessandri_Rodriguez.dds"
+			}
+		}
+		country_leader={
+			ideology=independent
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_carlos_prats = {
+		name ="Carlos Prats Gonzalez"
+		portraits = {
+			army = {
+				large = GFX_portrait_CHL_carlos_prats
+				small = GFX_portrait_CHL_carlos_prats_small
+			}
+		}
+		corps_commander = {
+			traits = { organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				date > 1952.1.1					
+				date < 1975.1.1	
+			}
+		}
+	}	
+
+	CHL_rene_schneider = {
+		name = CHL_rene_schneider
+		portraits = {
+			army = {
+				large = GFX_portrait_CHL_rene_schneider
+				small = GFX_portrait_CHL_rene_schneider_small
+			}
+		}
+		corps_commander = {
+			traits = { trickster brilliant_strategist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				date > 1951.1.1					
+				date < 1980.1.1	
+			}
+		}
+	}	
+
+	### 1960 ###
+
+	CHL_eduardo_frei_montalva={
+		name=CHL_eduardo_frei_montalva
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Chile_EduardoFreiMontalva.dds"
+			}
+		}
+		country_leader={
+			ideology=christian_democracy
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_augusto_pinochet={
+		name=CHL_augusto_pinochet
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/CHL/CW/portrait_CHL_augusto_pinochet_early_cw.dds"
+			}
+			army={ 
+				large = "gfx/leaders/CHL/CW/portrait_CHL_augusto_pinochet_early_cw.dds"
+			}			
+		}
+		country_leader={
+			ideology=pinochetism
+			traits = {
+				dictator anti_communist
+			}
+			expire="2007.1.1"
+			id=-1
+		}
+		field_marshal={ 	
+			traits = { 
+				politically_connected skilled_staffer inflexible_strategist
+			}	
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
+			visible = {
+				date > 1948.1.1					
+				date < 1999.1.1	
+			}						
+		}		
+	}
+
+	CHL_manuel_contreras={
+		name="Manuel Contreras Sepulveda"
+		portraits={
+			army={
+				large= "gfx/leaders/CHL/CW/portrait_CHL_Manuel_Contreras.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected organizer infantry_officer vigorous decided_planner }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+		}
+	}	
+
+	CHL_raul_iturriaga={
+		name="Raul Iturriaga Neumann"
+		portraits={
+			army={
+				large= "gfx/leaders/CHL/CW/portrait_CHL_Manuel_Contreras.dds"
+			}
+		}
+		corps_commander={
+			traits={ engineer_officer organizer infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}	
+	
+	CHL_cesar_mendoza={
+		name="Cesar Mendoza Duran"
+		portraits={
+			army={
+				large= "gfx/leaders/CHL/CW/portrait_CHL_Cesar_Mendoza.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader militias_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+		}
+	}	
+
+	CHL_jose_toribio_merino={
+		name="José Toribio Merino.dds"
+		portraits={
+			army={
+				large="gfx/leaders/CHL/CW/portrait_CHL_Jose_Toribio_Merino.dds"
+			}
+		}	
+		navy_leader={ 
+			traits = { 
+				navy_career_officer naval_lineage bold fly_swatter
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 4
+		}
+	}	
+
+	### 1980 ###
+
+	CHL_bernardo_leighton={
+		name=CHL_bernardo_leighton
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Chile_1980_Bernardo_Leighton_Christian_Democrat.dds"
+			}
+		}
+		country_leader={
+			ideology=christian_democracy
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_luis_corvalan={
+		name=CHL_luis_corvalan
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Chile_1970_Luis_Corvalan_Lepe_Marxism.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_francisco_javier_errazuriz={
+		name=CHL_francisco_javier_errazuriz
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Francisco_Javier_Errazuriz.dds"
+			}
+		}
+		country_leader={
+			ideology=independent
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	### 1990 ###
+
+	CHL_patricio_aylwin_azocar={
+		name=CHL_patricio_aylwin_azocar
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Chile_1980_Patricio_Aylwin_Christian_Democracy.dds"
+			}
+		}
+		country_leader={
+			ideology=christian_democracy
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_pedro_vuskovic={
+		name=CHL_pedro_vuskovic
+		portraits={
+			civilian={ 
+				large="gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=lw_socialism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	### 2000 ###
+
+	CHL_eduardo_frei_ruiz_tagle={
+		name=CHL_eduardo_frei_ruiz_tagle
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/MD/Chile_Eduardo_Frei_Ruiz-Tagle.dds"
+			}
+		}
+		country_leader={
+			ideology=christian_democracy
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_gladys_marin={
+		name=CHL_gladys_marin
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/CW/Chile_1980_Gladys_Marin_Marxism.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_pablo_rodriguez_grez={
+		name=CHL_pablo_rodriguez_grez
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/MD/Chile_2000_Pablo_Rodriguez_Grez_Fascism.dds"
+			}
+		}
+		country_leader={
+			ideology=neo_fascism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_joaquin_lavin_infante={
+		name=CHL_joaquin_lavin_infante
+		portraits={
+			civilian={ 
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_14.dds"
+			}
+		}
+		country_leader={
+			ideology=nonaligned_conservatism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	### 2008 ###
+
+	CHL_michelle_bachelet_jeria={
+		name=CHL_michelle_bachelet_jeria
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/MD/Chile_Michelle_Bachelet.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_guillermo_teillier={
+		name=CHL_guillermo_teillier
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/MD/Chile_2000_Guillermo_Teillier_Marxism.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_roberto_thieme={
+		name=CHL_roberto_thieme
+		portraits={
+			civilian={ 
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_13.dds"
+			}
+		}
+		country_leader={
+			ideology=rw_nationalism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	CHL_sebastian_pinera={
+		name=CHL_sebastian_pinera
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/MD/CHL_Sebastián_Piñera.dds"
+			}
+		}
+		country_leader={
+			ideology=nonaligned_conservatism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+
+	### 2020 ###
+
+	CHL_gabriel_boric={
+		name=CHL_gabriel_boric
+		portraits={
+			civilian={ 
+				large="gfx/leaders/CHL/MD/Chile_2020_Gabriel_Boric_Socialism.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="2060.1.1"
+			id=-1
+		}
+	}
+}
