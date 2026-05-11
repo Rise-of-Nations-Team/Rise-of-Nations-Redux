@@ -203,8 +203,8 @@ SOV_vladimir_kotelnikov = {
 		}
 	}
 
-	SOV_joseph_stalin = {
-		name = SOV_joseph_stalin
+	SOV_iosif_stalin = {
+		name = SOV_iosif_stalin
 		
 		portraits={
 			civilian={
@@ -226,7 +226,7 @@ SOV_vladimir_kotelnikov = {
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = SOV_joseph_stalin
+			idea_token = SOV_iosif_stalin
 			ledger = civilian
 			allowed = {
 				tag = SOV
@@ -235,7 +235,7 @@ SOV_vladimir_kotelnikov = {
 				has_government = communism
 				is_country_leader = no
 				NOT = {
-					has_idea = SOV_joseph_stalin
+					has_idea = SOV_iosif_stalin
 				}
 			}
 			visible = {
@@ -254,14 +254,14 @@ SOV_vladimir_kotelnikov = {
 		}
 		advisor={
 			slot = high_command
-			idea_token = SOV_joseph_stalin
+			idea_token = SOV_iosif_stalin
 			allowed  = {
 				tag = SOV
 			}
 			available = {
 				has_government = communism
 				NOT = {
-					has_idea = SOV_joseph_stalin
+					has_idea = SOV_iosif_stalin
 				}
 				is_country_leader = no
 			}
@@ -701,8 +701,8 @@ SOV_vladimir_kotelnikov = {
 		}	
 	}
 
-    SOV_lavrentiy_beria = {
-        name = SOV_lavrentiy_beria
+    SOV_lavrenty_beriya = {
+        name = SOV_lavrenty_beriya
 		portraits = {
             civilian = {
 				large = "gfx/leaders/SOV/Portrait_SOV_Beria.dds"
@@ -721,12 +721,12 @@ SOV_vladimir_kotelnikov = {
 				NOT = { has_character_flag = SOV_character_demoted_flag }
 			}
         	slot = political_advisor
-			idea_token = SOV_lavrentiy_beria
+			idea_token = SOV_lavrenty_beriya
 			available = {
 				is_country_leader = no
 				has_government = communism
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 				NOT = { has_idea = SOV_viktor_abakumov }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
 			}
@@ -754,12 +754,12 @@ SOV_vladimir_kotelnikov = {
 		#		NOT = { has_character_flag = SOV_character_demoted_flag }
 		#	}
         #	slot = political_advisor
-		#	idea_token = SOV_lavrentiy_beria
+		#	idea_token = SOV_lavrenty_beriya
 		#	available = {
 		#		is_country_leader = no
 		#		has_government = communism
 		#		NOT = { has_idea = SOV_genrikh_yagoda }
-		#		NOT = { has_idea = SOV_nikolai_yezhov }
+		#		NOT = { has_idea = SOV_nikolay_yezhov }
 		#		NOT = { has_idea = SOV_viktor_abakumov }
 		#		NOT = { has_idea = SOV_vsevolod_merkulov }
 		#		NOT = { has_idea = SOV_semyon_ignatyev }
@@ -1355,9 +1355,9 @@ SOV_vladimir_kotelnikov = {
 					NOT = { has_character_flag = SOV_exiled_flag }
 				}
 				NOT = { has_idea = SOV_viktor_abakumov }
-				NOT = { has_idea = SOV_lavrentiy_beria }
+				NOT = { has_idea = SOV_lavrenty_beriya }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 			}
 			traits = {
 				head_of_the_kgb_andropov
@@ -3216,8 +3216,8 @@ SOV_vladimir_kotelnikov = {
 			}
 			available = {
 				has_government = communism
-				NOT = { has_idea = SOV_nikolai_yezhov }
-				NOT = { has_idea = SOV_lavrentiy_beria }
+				NOT = { has_idea = SOV_nikolay_yezhov }
+				NOT = { has_idea = SOV_lavrenty_beriya }
 				NOT = { has_idea = SOV_viktor_abakumov }
 				#NOT = { has_idea = SOV_vyacheslav_menzhinsky }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
@@ -3251,8 +3251,8 @@ SOV_vladimir_kotelnikov = {
 		#	}
 		#	available = {
 		#		has_government = communism
-		#		NOT = { has_idea = SOV_nikolai_yezhov }
-		#		NOT = { has_idea = SOV_lavrentiy_beria }
+		#		NOT = { has_idea = SOV_nikolay_yezhov }
+		#		NOT = { has_idea = SOV_lavrenty_beriya }
 		#		NOT = { has_idea = SOV_viktor_abakumov }
 		#		NOT = { has_idea = SOV_vyacheslav_menzhinsky }
 		#		NOT = { has_idea = SOV_vsevolod_merkulov }
@@ -3264,8 +3264,8 @@ SOV_vladimir_kotelnikov = {
 		#}
 	}
 
-	SOV_nikolai_yezhov = {
-        name = SOV_nikolai_yezhov
+	SOV_nikolay_yezhov = {
+        name = SOV_nikolay_yezhov
 		portraits = {
             civilian = {
 				large = "gfx/leaders/SOV/portrait_SOV_Nikolai_Yezhov.dds"
@@ -3275,7 +3275,7 @@ SOV_vladimir_kotelnikov = {
 
 		advisor = {
 			slot = political_advisor
-			idea_token = SOV_nikolai_yezhov
+			idea_token = SOV_nikolay_yezhov
 			can_be_fired = no
 			allowed = {
 				original_tag = SOV
@@ -3290,7 +3290,7 @@ SOV_vladimir_kotelnikov = {
 			}
 			available = {
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrentiy_beria }
+				NOT = { has_idea = SOV_lavrenty_beriya }
 				NOT = { has_idea = SOV_viktor_abakumov }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
 				NOT = { has_idea = SOV_semyon_ignatyev }
@@ -3311,7 +3311,7 @@ SOV_vladimir_kotelnikov = {
 		}
 		#advisor = {
 		#	slot = political_advisor
-		#	idea_token = SOV_nikolai_yezhov
+		#	idea_token = SOV_nikolay_yezhov
 		#	can_be_fired = no
 		#	allowed = {
 		#		original_tag = SOV
@@ -3326,7 +3326,7 @@ SOV_vladimir_kotelnikov = {
 		#	}
 		#	available = {
 		#		NOT = { has_idea = SOV_genrikh_yagoda }
-		#		NOT = { has_idea = SOV_lavrentiy_beria }
+		#		NOT = { has_idea = SOV_lavrenty_beriya }
 		#		NOT = { has_idea = SOV_viktor_abakumov }
 		#		NOT = { has_idea = SOV_vsevolod_merkulov }
 		#		NOT = { has_idea = SOV_semyon_ignatyev }
@@ -3339,7 +3339,7 @@ SOV_vladimir_kotelnikov = {
 		#}
 		#advisor = {
 		#	slot = political_advisor
-		#	idea_token = SOV_nikolai_yezhov
+		#	idea_token = SOV_nikolay_yezhov
 		#	can_be_fired = no
 		#	allowed = {
 		#		original_tag = SOV
@@ -3353,7 +3353,7 @@ SOV_vladimir_kotelnikov = {
 		#		NOT = { has_character_flag = SOV_character_demoted_flag }
 		#	}
 		#	available = {
-		#		NOT = { has_idea = SOV_lavrentiy_beria }
+		#		NOT = { has_idea = SOV_lavrenty_beriya }
 		#		NOT = { has_idea = SOV_viktor_abakumov }
 		#		NOT = { has_idea = SOV_vsevolod_merkulov }
 		#		NOT = { has_idea = SOV_semyon_ignatyev }
@@ -3403,8 +3403,8 @@ SOV_vladimir_kotelnikov = {
 				}
 				has_government = communism
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrentiy_beria }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_lavrenty_beriya }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
 				NOT = { has_idea = SOV_ivan_serov }
 			}
@@ -3450,8 +3450,8 @@ SOV_vladimir_kotelnikov = {
 				}
 				has_government = communism
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrentiy_beria }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_lavrenty_beriya }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
 				NOT = { has_idea = SOV_ivan_serov }
 				NOT = { has_idea = SOV_semyon_ignatyev }
@@ -3491,8 +3491,8 @@ SOV_vladimir_kotelnikov = {
 				}
 				has_government = communism
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrentiy_beria }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_lavrenty_beriya }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 				NOT = { has_idea = SOV_vsevolod_merkulov }
 				NOT = { has_idea = SOV_ivan_serov }
 			}
@@ -3573,8 +3573,8 @@ SOV_vladimir_kotelnikov = {
 				}
 				NOT = { has_idea = SOV_viktor_abakumov }
 				NOT = { has_idea = SOV_yuri_andropov }
-				NOT = { has_idea = SOV_nikolai_yezhov }
-				NOT = { has_idea = SOV_lavrentiy_beria }
+				NOT = { has_idea = SOV_nikolay_yezhov }
+				NOT = { has_idea = SOV_lavrenty_beriya }
 			}
 			traits = {
 				head_of_the_kgb_serov
@@ -3681,7 +3681,7 @@ SOV_vladimir_kotelnikov = {
 				date < 1955.1.28
 				date > 1936.1.1
 				NOT = { has_character_flag = SOV_character_demoted_flag }
-				has_character = SOV_lavrentiy_beria
+				has_character = SOV_lavrenty_beriya
 			}
 			available = {
 				has_intelligence_agency = yes
@@ -3716,9 +3716,9 @@ SOV_vladimir_kotelnikov = {
 				}
 				has_government = communism
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrentiy_beria }
+				NOT = { has_idea = SOV_lavrenty_beriya }
 				NOT = { has_idea = SOV_viktor_abakumov }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 			}
 			traits = {
 				head_of_the_nkvd_merkulov
@@ -3752,9 +3752,9 @@ SOV_vladimir_kotelnikov = {
 				}
 				has_government = communism
 				NOT = { has_idea = SOV_genrikh_yagoda }
-				NOT = { has_idea = SOV_lavrentiy_beria }
+				NOT = { has_idea = SOV_lavrenty_beriya }
 				NOT = { has_idea = SOV_viktor_abakumov }
-				NOT = { has_idea = SOV_nikolai_yezhov }
+				NOT = { has_idea = SOV_nikolay_yezhov }
 				NOT = { has_idea = SOV_semyon_ignatyev }
 			}
 			traits = {
@@ -4431,8 +4431,8 @@ SOV_vladimir_kotelnikov = {
 		}
 	}
 
-	SOV_alexander_yegorov = {
-		name = SOV_alexander_yegorov
+	SOV_aleksandr_yegorov = {
+		name = SOV_aleksandr_yegorov
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/WW1/SOV_Alexander_Egorov.dds"
@@ -4441,7 +4441,7 @@ SOV_vladimir_kotelnikov = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = SOV_alexander_yegorov
+			idea_token = SOV_aleksandr_yegorov
 			allowed = {
 				original_tag = SOV
 			}
@@ -4460,8 +4460,8 @@ SOV_vladimir_kotelnikov = {
 		}
 	}
 
-	SOV_vasily_blucher = {
-		name = SOV_vasily_blucher
+	SOV_vasily_blyukher = {
+		name = SOV_vasily_blyukher
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOV/WW1/SOV_Vasily_Blyukher.dds"
@@ -4470,7 +4470,7 @@ SOV_vladimir_kotelnikov = {
 		}
 		advisor = {
 			slot = army_chief
-			idea_token = SOV_vasily_blucher
+			idea_token = SOV_vasily_blyukher
 			allowed = {
 				original_tag = SOV
 			}
@@ -4760,7 +4760,7 @@ SOV_vladimir_kotelnikov = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = SOV_konstantin_rokossovsky
+			idea_token = konstantin_rokossovsky
 			allowed = {
 				original_tag = SOV
 			}
@@ -4771,6 +4771,12 @@ SOV_vladimir_kotelnikov = {
 				NOT = { has_character_flag = SOV_character_demoted_flag }
 			}
 			available = {
+				if = {
+					limit = {
+						has_focus_tree = Soviet_WW2
+					}
+					has_completed_focus = SOV_positive_heroism
+				}
 			}
 			traits = {
 				army_armored_3
