@@ -283,7 +283,6 @@ characters={
 			logistics_skill=2
 			traits = { commando desert_fox }
 			visible = {
-				has_country_flag = AST_leslie_morshead_visible
 				date > 1926.1.1				
 				date < 1959.1.1
 			}
@@ -511,7 +510,6 @@ characters={
 		}
 		country_leader={
 			ideology=islamic_authoritarian
-			traits={ ger_armaments_organizer ger_industrialist_genius }
 			expire="1943.1.1.12"
 			id=-1
 		}
@@ -596,7 +594,6 @@ characters={
 				original_tag = AST
 			}
 			available = {
-				has_completed_focus = AST_military_logistics
 				date > 1928.1.1
 				date < 1949.1.1
 			}
@@ -706,7 +703,6 @@ characters={
 				original_tag = AST
 			}
 			available = {
-				has_completed_focus = AST_urban_planning
 				date > 1928.1.1
 				date < 1952.1.1
 				NOT = {
@@ -742,7 +738,6 @@ characters={
 				original_tag = AST
 			}
 			available = {
-				has_completed_focus = AST_stay_commonwealth 
 				date > 1930.1.1
 				date < 1962.1.1
 			}
@@ -811,7 +806,7 @@ characters={
 		name=AST_lance_sharkey
 		portraits={
 			army={
-				small="gfx/interface/ideas/AST/AST_lance_sharkey.dds"
+				small=GFX_idea_AST_lance_sharkey
 			}
 		}
 		advisor={
@@ -821,14 +816,9 @@ characters={
 				original_tag = AST
 			}
 			available = {
-				has_completed_focus = AST_communism_focus 
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				has_completed_focus = AST_empower_the_workers
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 				date > 1928.1.1
 				date < 1965.1.1
@@ -855,7 +845,7 @@ characters={
 		name=AST_arthur_calwell
 		portraits={
 			army={
-				small="gfx/interface/ideas/AST/AST_arthur_calwell.dds"
+				small=GFX_idea_AST_arthur_calwell
 			}
 		}
 		advisor={
@@ -868,15 +858,12 @@ characters={
 				original_tag = AST
 			}
 			available = {
-				has_completed_focus = AST_fortification
-				has_completed_focus = AST_stay_commonwealth 
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
+				OR = {
+					has_completed_focus = AST_adopt_westminster
+					has_completed_focus = AST_sever_ties_with_uk 
+				}
+				NOT = {
+					has_autonomy_state = autonomy_supervised_state
 				}
 				date > 1930.1.1
 				date < 1967.1.1
@@ -1177,14 +1164,12 @@ characters={
 			slot = high_command
 			idea_token = AST_cederic_hicks
 			ledger = army
-			cost = 150.000
 			allowed = {
 				original_tag = AST
 			}
 			available = {
 				date > 1927.1.1
 				date < 1957.1.1
-				has_completed_focus = AST_armament_3
 			}
 			visible = {
 				date > 1927.1.1
