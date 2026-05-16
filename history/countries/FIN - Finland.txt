@@ -34,12 +34,12 @@ set_politics = {
 	ruling_party = neutrality
 	last_election = "1898.8.29"
 	election_frequency = 36
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 40
-	democratic = 50
+	neutrality = 70
+	democratic = 30
 	communism = 10
 }
 
@@ -47,8 +47,11 @@ add_ideas = {
 	sisu
 }
 
+recruit_character = FIN_nikolay_bobrikov
+recruit_character = FIN_ivan_obolensky
+recruit_character = FIN_franz_albert_seyn
+
 recruit_character = FIN_kaarlo_juho_stahlberg
-promote_character = FIN_kaarlo_juho_stahlberg
 recruit_character = FIN_kullervo_manner
 
 recruit_character = FIN_pehr_evind_svinhufvud
@@ -58,8 +61,6 @@ recruit_character = FIN_carl_mannerheim
 
 #WW1
 recruit_character = FIN_vilho_petter_nenonen
-
-recruit_character = FIN_vilho_annala
 
 recruit_character = FIN_erik_heinrichs
 recruit_character = FIN_harald_ohquist
@@ -161,12 +162,46 @@ create_dynamic_country = {
 	}
 }
 
+set_cosmetic_tag = FIN_duchy
+
+1905.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1904.1.1"
+		election_frequency = 36
+		elections_allowed = no
+	}	
+	retire_character = FIN_nikolay_bobrikov
+	promote_character = FIN_ivan_obolensky
+}
+
+1910.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1909.1.1"
+		election_frequency = 36
+		elections_allowed = no
+	}	
+	retire_character = FIN_ivan_obolensky
+	promote_character = FIN_franz_albert_seyn
+	recruit_character = FIN_vilho_annala
+}
+
 1918.1.1 = {
 	oob = "FNN_1918"
+	promote_character = FIN_kaarlo_juho_stahlberg	
 }
 
 1919.1.1 = {
 	oob = "FIN_1919"
+	set_popularities = {
+		neutrality = 40
+		democratic = 50
+		communism = 10
+	}	
+	retire_character = FIN_franz_albert_seyn
+
+	drop_cosmetic_tag = yes
 }
 
 1925.1.1 = {

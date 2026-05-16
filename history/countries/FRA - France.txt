@@ -76,6 +76,20 @@ if = {
 	}
 }
 
+if = {
+	limit = {
+		has_start_date < 1960.1.1
+	}
+	set_autonomy = {
+		target = TUN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.5
+	}
+	else = {
+		puppet = TUN
+	}
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1899.2.18"
