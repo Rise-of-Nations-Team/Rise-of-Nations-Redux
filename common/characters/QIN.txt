@@ -820,6 +820,36 @@ characters={
 		}
 	}	
 
+	QIN_yang_sen = {
+		name=SIC_yang_sen
+		portraits={
+			army={
+				large= GFX_portrait_SIC_yang_sen
+				small= GFX_portrait_SIC_yang_sen_military_small
+			}
+			civilian = {
+				small = GFX_portrait_SIC_yang_sen_civilian_small
+			}
+		}
+		
+		corps_commander={
+			traits = { organizer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				date > 1910.1.1
+				date < 1960.1.1
+				NOT = {
+					country_exists = SIC
+				}				
+			}
+		}
+	}	
+
 	QIN_yu_zhangjing={
 		name="Yu Zhangjing"
 		portraits={
