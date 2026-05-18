@@ -396,6 +396,29 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BRA_DNC_national_steel_production
+		icon = GFX_focus_generic_steel
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = BRA_DNC_state_controlled_industry
+		prerequisite = {
+			focus = BRA_DNC_public_private_partnerships
+			focus = BRA_DNC_state_controlled_industry
+		}
+		completion_reward = {
+			496 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+			production_speed_arms_factory_factor = 0.1
+			#Has to unlock Event: "Steel for the Nation"
+		}
+	}
+
+	focus = {
 		id = BRA_DNC_five_year_inds_plan
 		icon = GFX_focus_generic_industry_3
 		cost = 10
@@ -518,29 +541,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRA_DNC_national_steel_production
-		icon = GFX_focus_generic_steel
-		cost = 5
-		x = 2
-		y = 1
-		relative_position_id = BRA_DNC_state_controlled_industry
-		prerequisite = {
-			focus = BRA_DNC_public_private_partnerships
-			focus = BRA_DNC_state_controlled_industry
-		}
-		completion_reward = {
-			496 = {
-				add_resource = {
-					type = steel
-					amount = 12
-				}
-			}
-			production_speed_arms_factory_factor = 0.1
-			#Has to unlock Event: "Steel for the Nation"
-		}
-	}
-
-	focus = {
 		id = BRA_DNC_foreign_investments_industry
 		icon = GFX_focus_BRA_pro_business_taxes
 		cost = 10
@@ -571,6 +571,28 @@ focus_tree = {
 				}
 			}
 			#Has to have event "Foreign Buisness Influence" happen
+		}
+	}
+
+	focus = {
+		id = BRA_DNC_petrobras_initiative
+		icon = GFX_goal_generic_oil_refinery
+		cost = 6
+		x = -2
+		y = 1
+		relative_position_id = BRA_DNC_foreign_investments_industry
+		prerequisite = {
+			focus = BRA_DNC_public_private_partnerships
+			focus = BRA_DNC_foreign_investments_industry
+		}
+		completion_reward = {
+			499 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+			#Has event "National Reserve" happen
 		}
 	}
 
@@ -623,28 +645,6 @@ focus_tree = {
 		}
 		completion_reward = {
 
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_petrobras_initiative
-		icon = GFX_goal_generic_oil_refinery
-		cost = 6
-		x = -2
-		y = 1
-		relative_position_id = BRA_DNC_foreign_investments_industry
-		prerequisite = {
-			focus = BRA_DNC_public_private_partnerships
-			focus = BRA_DNC_foreign_investments_industry
-		}
-		completion_reward = {
-			499 = {
-				add_resource = {
-					type = oil
-					amount = 10
-				}
-			}
-			#Has event "National Reserve" happen
 		}
 	}
 
