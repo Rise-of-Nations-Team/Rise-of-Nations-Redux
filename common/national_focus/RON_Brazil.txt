@@ -334,20 +334,22 @@ focus_tree = {
 	focus = {
 		id = BRA_DNC_economic_development
 		icon = GFX_focus_generic_modernize_industry
-		cost = 6
+		cost = 5
 		x = 21
 		y = 0
 		completion_reward = {
-			add_stability = 0.15
-			add_political_power = 75
-			#Has to unlock Event: "The Economic Debate"
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
 	focus = {
 		id = BRA_DNC_industrialization_efforts
 		icon = GFX_focus_generic_industry_2
-		cost = 8
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = BRA_DNC_economic_development
@@ -404,9 +406,19 @@ focus_tree = {
 			focus = BRA_DNC_state_controlled_industry
 		}
 		completion_reward = {
-			production_speed_arms_factory_factor = 0.2
-			industrial_capacity_factory = 0.4
-			cic_construction_boost = 0.2
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_production_speed_arms_factory_factor = 0.1
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
+				BRA_DNC_economy_industrial_capacity_factory = 0.15
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				BRA_DNC_economy_production_speed_buildings_factor = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
 		}
 	}
 
@@ -421,8 +433,10 @@ focus_tree = {
 			focus = BRA_DNC_five_year_inds_plan
 		}
 		completion_reward = {
-			monthly_population = 0.10
-			consumer_goods_factor = -0.10
+			swap_ideas = {
+				remove_idea = BRA_DNC_migration_wave_ns
+				add_idea = BRA_DNC_migration_wave_2_ns
+			}
 		}
 	}
 
@@ -444,9 +458,15 @@ focus_tree = {
 			has_country_flag = BRA_DNC_public_private_partnerships_cflg
 		}
 		completion_reward = {
-			research_speed_factor = 0.5
-			production_speed_buildings_factor = 0.5
-			#Has to unlock Event: "The Rise of National Conglomerates"
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_production_speed_buildings_factor = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				BRA_DNC_economy_research_speed_factor = 0.1
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 
@@ -459,6 +479,9 @@ focus_tree = {
 		relative_position_id = BRA_DNC_public_private_partnerships
 		prerequisite = {
 			focus = BRA_DNC_public_private_partnerships
+		}
+		available = {
+			controls_state = 501
 		}
 		completion_reward = {
 			501 = {
