@@ -1,0 +1,58 @@
+add_namespace = dnc_acre
+
+country_event = {
+	id = dnc_acre.1
+	title = dnc_acre.1.t
+	desc = dnc_acre.1.desc
+	picture = GFX_report_event_tur_industry
+
+	is_triggered_only = yes
+
+	option = {
+		name = dnc_acre.1.a
+	}
+}
+
+country_event = {
+	id = dnc_acre.2
+	title = dnc_acre.2.t
+	desc = dnc_acre.2.desc
+	picture = GFX_report_event_tur_industry
+
+	is_triggered_only = yes
+
+	option = {
+		name = dnc_acre.2.a
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}	
+		add_trait = {
+     		character = ACR_luis_galvez_rodriguez
+     		ideology = democratic_independent
+     		trait = freedom_fighter
+		}				
+	}
+
+	option = {
+		name = dnc_acre.2.b
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}	
+	}	
+
+	option = {
+		name = dnc_acre.2.c
+		ACR_assembly={
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = liberalism
+					expire = 1965.1.1
+					traits = { dysfunctional_assembly } 
+				}
+			}
+		}
+	}	
+}

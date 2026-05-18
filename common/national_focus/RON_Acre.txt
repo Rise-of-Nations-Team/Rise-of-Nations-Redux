@@ -1,0 +1,952 @@
+focus_tree = {
+	id = Acre_DNC
+	country = {
+		base = 0
+
+		modifier = {
+			add = 10
+			tag = ACR
+			date < 1910.1.1
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 50 y = 2000 }	
+
+	focus = {
+		id = ACR_DNC_careful_as_it_goes
+		icon = GFX_focus_generic_bastion_of_democracy
+		cost = 2
+		x = 10
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = ACR_DNC_clash_between_the_politicians
+		icon = GFX_focus_ARG_balancing_act
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_careful_as_it_goes
+		}
+		completion_reward = {
+			add_political_power = 10
+			country_event = { id = dnc_acre.2 }			
+		}
+	}	
+
+	focus = {
+		id = ACR_DNC_not_much_time_left
+		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+		cost = 3
+		x = 0
+		y = 2
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_clash_between_the_politicians
+		}
+		completion_reward = {
+			country_event = { id = dnc_acre.2 }
+		}
+	}	
+
+	focus = {
+		id = ACR_DNC_galvez_firm_grasp
+		icon = GFX_focus_ARG_balancing_act
+		cost = 1
+		x = -4
+		y = 3
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_not_much_time_left
+		}
+		bypass = {
+			has_country_leader = ACR_luis_galvez_rodriguez
+			ruling_only = yes
+		}		
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = democratic
+    			popularity = 0.20
+			}
+			add_political_power = 50
+		}
+		mutually_exclusive = {
+			focus = ACR_DNC_de_sousa_thinking
+			focus = ACR_DNC_emergency_national_assembly
+		}		
+	}	
+
+	focus = {
+		id = ACR_DNC_defend_at_all_costs
+		icon = GFX_goal_generic_defence
+		cost = 3
+		x = -4
+		y = 4
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_galvez_firm_grasp
+		}
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = democratic
+    			popularity = 0.10
+			}
+			add_ideas = ACR_full_scale_defense			
+		}
+	}
+	
+	focus = {
+		id = ACR_DNC_diplomacy_first
+		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+		cost = 3
+		x = -4
+		y = 5
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_defend_at_all_costs
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}	
+
+	focus = {
+		id = ACR_DNC_emergency_national_assembly
+		icon = GFX_focus_AFG_parliamentary_democracy
+		cost = 1
+		x = 0
+		y = 3
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		bypass = {
+			has_country_leader = ACR_assembly
+			ruling_only = yes
+		}
+		prerequisite = {
+			focus = ACR_DNC_not_much_time_left
+		}
+		completion_reward = {
+
+		}
+		mutually_exclusive = {
+			focus = ACR_DNC_galvez_firm_grasp
+			focus = ACR_DNC_de_sousa_thinking
+		}		
+	}	
+
+	focus = {
+		id = ACR_DNC_politics_for_later
+		icon = GFX_focus_GER_fund_the_film_department
+		cost = 5
+		x = 0
+		y = 4
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_emergency_national_assembly
+		}
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = democratic
+    			popularity = 0.10
+			}
+			set_politics = {
+				elections_allowed = no
+			}				
+		}	
+	}	
+
+	focus = {
+		id = ACR_DNC_defensive_stand
+		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+		cost = 5
+		x = 0
+		y = 5
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_politics_for_later
+		}
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = democratic
+    			popularity = 0.05
+			}
+			add_political_power = 25
+		}	
+	}	
+
+	focus = {
+		id = ACR_DNC_de_sousa_thinking
+		icon = GFX_focus_ARG_balancing_act
+		cost = 1
+		x = 4
+		y = 3
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_not_much_time_left
+		}
+		bypass = {
+			has_country_leader = ACR_antonio_de_sousa_braga
+			ruling_only = yes
+		}			
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = neutrality
+    			popularity = 0.20
+			}
+		}
+		mutually_exclusive = {
+			focus = ACR_DNC_galvez_firm_grasp
+			focus = ACR_DNC_emergency_national_assembly
+		}		
+	}
+	
+	focus = {
+		id = ACR_DNC_prepare_the_arms
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		cost = 5
+		x = 4
+		y = 4
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_de_sousa_thinking
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}	
+	}	
+
+	focus = {
+		id = ACR_DNC_offensive_stand
+		icon = GFX_SOV_keep_commissars_organization_ccp_2d_sov_compatibility
+		cost = 3
+		x = 4
+		y = 5
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_prepare_the_arms
+		}
+		completion_reward = {
+			add_ideas = ACR_arms_against_all		
+		}	
+	}	
+
+	focus = {
+		id = ACR_DNC_the_unevitable
+		icon = GFX_goal_acr_last_stand
+		cost = 2
+		x = 0
+		y = 6
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		prerequisite = {
+			focus = ACR_DNC_offensive_stand
+			focus = ACR_DNC_defensive_stand
+			focus = ACR_DNC_diplomacy_first
+		}
+		will_lead_to_war_with = BOL
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = democratic
+    			popularity = 0.20
+			}
+			add_political_power = 50
+		}	
+	}	
+
+	focus = {
+		id = ACR_DNC_victory_against_it_all
+		icon = GFX_focus_ARG_balancing_act
+		cost = 2
+		x = 0
+		y = 7
+		relative_position_id = ACR_DNC_careful_as_it_goes
+		available = {
+			NOT = {
+				has_war_with = BRA
+			}
+			BOL = {
+				exists = yes
+				has_opinion = {
+					target = ROOT
+					value > 49
+				}
+			}
+			BRA = {
+				exists = yes
+				has_opinion = {
+					target = ROOT
+					value > 30
+				}
+			}			
+		}		
+		prerequisite = {
+			focus = ACR_DNC_the_unevitable
+		}
+		completion_reward = {
+			add_popularity = {
+   	 			ideology = democratic
+    			popularity = 0.20
+			}
+			add_political_power = 50
+		}	
+	}	
+
+	focus = {
+		id = ACR_DNC_after_it_all
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+
+		prerequisite = {
+			focus = ACR_DNC_victory_against_it_all
+		}
+
+		relative_position_id = ACR_DNC_victory_against_it_all
+		x = 5
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = GRE_paying_off_debt_small
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = ACR_DNC_improve_brazilian_trade_relations
+		icon = GFX_focus_BRA_banco_do_brasil
+
+		prerequisite = {
+			focus = ACR_DNC_ally_brazil
+		}
+
+		relative_position_id = ACR_DNC_ally_brazil
+		x = 0
+		y = 2
+
+		cost = 5
+
+		completion_reward = {
+			unlock_decision_category_tooltip = CZE_invest_in_the_balkans
+			custom_effect_tooltip = generic_skip_one_line_tt
+			else = {
+				custom_effect_tooltip = CZE_ai_nations_more_likely_to_buy_weapons_tt
+			}
+		}
+	}
+
+	focus = {
+		id = ACR_DNC_forgive_the_bolivians
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+
+		cost = 5
+
+		relative_position_id = ACR_DNC_after_it_all
+		x = 3
+		y = 2
+
+		prerequisite = {	#yes I know they technically arent Balkan
+			focus = ACR_DNC_after_it_all	
+		}
+
+		bypass = {
+			BOL = {
+				exists = yes
+				NOT = {
+					is_ally_with = ROOT
+				}
+			}			
+		}	
+
+		mutually_exclusive = {
+			focus = ACR_DNC_final_blow_to_bolivia
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				BOL = {
+					is_ai = no
+				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				is_faction_leader = yes
+				AND = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+			}
+			BOL = {
+				exists = yes
+				is_in_faction = no
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			BOL = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_ally_with = ROOT
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				BOL = {
+					save_global_event_target_as = CZE_invited_country
+				}
+			}
+			else = {
+				BOL = {
+					country_event = MUN_czech.1009
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ACR_DNC_final_blow_to_bolivia
+		icon = GFX_focus_generic_attack_bolivia
+
+		cost = 5
+
+		relative_position_id = ACR_DNC_forgive_the_bolivians
+		x = 2
+		y = 0
+
+		prerequisite = {
+			focus = ACR_DNC_after_it_all
+		}
+
+		mutually_exclusive = {
+			focus = ACR_DNC_forgive_the_bolivians
+		}
+
+		will_lead_to_war_with = BOL
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				BOL = {
+					is_ai = no
+				}
+			}
+		}
+
+		available = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				is_subject = no
+			}
+			NOT = {
+				has_country_flag = CZE_cancel_anti_hungary_focus
+			}
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
+				AND = {
+					is_in_faction = yes
+					if = {
+						limit = {
+							has_government = democratic
+						}
+						faction_leader = {
+							has_government = ROOT
+						}
+					}
+					else = {
+						faction_leader = {
+							NOT = {
+								has_government = democratic
+							}
+						}
+					}
+				}
+			}
+			HUN = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					is_ally_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			has_war_with = HUN
+		}
+
+		select_effect = {
+			GER = {
+				if = {
+					limit = {
+						exists = yes
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+						HUN = {
+							is_in_faction = no
+							is_subject = no
+							OR = {
+								AND = {
+									has_government = neutrality
+									OR = {
+										NOT = {
+											has_completed_focus = wuw_HUN_end_the_regency
+											has_completed_focus = HUN_elect_a_democratic_king
+											has_completed_focus = HUN_invite_the_habsburg_prince
+										}
+										has_completed_focus = wuw_HUN_elect_a_fascist_king
+										has_completed_focus = HUN_elect_a_fascist_king
+									}
+								}
+								has_government = fascism
+							}
+						}
+					}
+					country_event = {
+						id = MUN_czech.1004
+						days = 7
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						NOT = {
+							has_war_with = ROOT
+						}
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+						HUN = {
+							is_in_faction = no
+							is_subject = no
+							OR = {
+								AND = {
+									has_government = neutrality
+									OR = {
+										NOT = {
+											has_completed_focus = wuw_HUN_end_the_regency
+											has_completed_focus = HUN_elect_a_democratic_king
+											has_completed_focus = HUN_invite_the_habsburg_prince
+										}
+										has_completed_focus = wuw_HUN_elect_a_fascist_king
+										has_completed_focus = HUN_elect_a_fascist_king
+									}
+								}
+								has_government = fascism
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = SOV_focus_select_effect_tt
+				GER = {
+					effect_tooltip = {
+						country_event = {
+							id = MUN_czech.1004
+							days = 7
+						}
+					}
+				}
+				custom_effect_tooltip = SOV_focus_complete_effect_tt
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_rule = {
+					can_puppet = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HUN
+				expire = 730
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	focus = {
+		id = ACR_DNC_befriend_peru
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+
+		prerequisite = {
+			focus = ACR_DNC_forgive_the_bolivians
+			focus = ACR_DNC_final_blow_to_bolivia
+		}
+
+		cost = 5
+
+		relative_position_id = ACR_DNC_final_blow_to_bolivia
+		x = -1
+		y = 1
+
+		available = {
+			is_subject = no
+			OR = {
+				is_faction_leader = yes
+				AND = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+			}
+			PRU = {
+				exists = yes
+				is_in_faction = no
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			PRU = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_ally_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				PRU = {
+					save_global_event_target_as = CZE_invited_country
+				}
+			}
+			else = {
+				PRU = {
+					country_event = generic.5
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ACR_DNC_mutual_protection_agreement_with_brazil
+		icon = GFX_focus_BRA_department_of_propaganda
+
+		prerequisite = {
+			focus = ACR_DNC_ally_brazil
+		}
+
+		cost = 10
+
+		relative_position_id = ACR_DNC_ally_brazil
+		x = 2
+		y = 1
+
+		available = {
+			is_subject = no
+			BRA = {
+				exists = yes
+				is_subject = no
+				has_war = no
+			}
+		}
+
+		completion_reward = {
+			BRA = {
+				country_event = dnc_brazil.2
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = if_they_accept_tt
+				give_guarantee = BRA
+				BRA = {
+					give_guarantee = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ACR_DNC_ally_brazil
+		icon = GFX_focus_BRA_greater_federalism
+
+		prerequisite = {
+			focus = ACR_DNC_after_it_all
+		}
+
+		prerequisite = {
+			focus = ACR_DNC_forgive_the_bolivians
+			focus = ACR_DNC_final_blow_to_bolivia
+
+		}
+
+		relative_position_id = ACR_DNC_after_it_all
+		x = 0
+		y = 2
+
+		cost = 5
+
+		available = {
+			is_subject = no
+			OR = {
+				is_faction_leader = yes
+				AND = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+			}
+			BRA = {
+				exists = yes
+				is_in_faction = no
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			BRA = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_ally_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = yes
+					faction_leader = {
+						original_tag = ACR
+					}
+				}
+				ACR = {
+					save_global_event_target_as = CZE_invited_country
+				}
+			}
+			else = {
+				BRA = {
+					country_event = generic.5
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ACR_DNC_exchange_technology
+		icon = GFX_goal_tfv_generic_tech_sharing
+
+		prerequisite = {
+			focus = ACR_DNC_befriend_peru
+			focus = ACR_DNC_improve_brazilian_trade_relations
+		}
+
+		cost = 5
+
+		relative_position_id = ACR_DNC_improve_brazilian_trade_relations
+		x = 0
+		y = 1
+
+		available = {
+			num_faction_members > 2
+		}
+
+		completion_reward = {
+			add_to_tech_sharing_group = CZE_balkan_tech_sharing_group
+			every_other_country = {	#marijn211: already tried the same thing with every_allied_country but that crashed the game
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_to_tech_sharing_group = CZE_balkan_tech_sharing_group
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = ACR_DNC_increase_food_and_resource_imports
+		icon = GFX_focus_generic_agricultural_subsidies
+
+		relative_position_id = ACR_DNC_improve_brazilian_trade_relations
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = ACR_DNC_befriend_peru
+			focus = ACR_DNC_improve_brazilian_trade_relations
+		}
+
+		cost = 10
+
+		available = {
+			count_triggers = {
+				amount = 2
+				is_in_faction_with = PRU
+				is_in_faction_with = BRA
+				is_in_faction_with = BOL
+			}
+		}
+
+		completion_reward = {
+
+			build_railway = {	#internal railway, necessary to connect with Hungary
+				level = 2
+				fallback = yes
+				path = { 6562 6576 3484 }
+				start_province = 6562
+				target_province = 3484
+			}
+
+			build_railway = {	#Increase Hungary connection to level 2
+				level = 1		#it sums the level by building on top of the pre-existing one
+				fallback = yes
+				path = { 541 11679 6561 9690 9660 }
+				start_province = 541
+				target_province = 9660
+			}
+
+			build_railway = {	#Increase Hungary-Yugoslavia connection to level 2
+				level = 1		#it sums the level by building on top of the pre-existing one
+				fallback = yes
+				start_province = 9660
+				target_province = 619
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_offsite_building = { type = industrial_complex level = 2 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			every_other_country = {	#marijn211: already tried the same thing with every_allied_country but that crashed the game
+				limit = {
+					is_in_faction_with = ROOT
+					OR = {
+						original_tag = BOL
+						original_tag = PRU
+						original_tag = BRA
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = CZE_double_down_on_heavy_industry
+		icon = GFX_focus_generic_military_industry
+
+		prerequisite = {
+			focus = ACR_DNC_increase_food_and_resource_imports
+			focus = ACR_DNC_exchange_technology
+		}
+
+		cost = 10
+
+		relative_position_id = ACR_DNC_increase_food_and_resource_imports
+		x = -1
+		y = 1
+
+		available = {
+			num_faction_members > 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 1
+				}
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				country_event = MUN_czech.1035
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = {
+					add_offsite_building = { type = arms_factory level = 2 }
+					add_ideas = CZE_outsourced_weapons_production
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}	
+
+}
