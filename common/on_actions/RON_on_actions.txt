@@ -376,6 +376,33 @@ on_actions = {
 		}
 	}
 
+	on_monthly_BRA = {
+		effect = {
+			# Strikes
+			if = {
+				limit = {
+					has_idea = BRA_DNC_the_risk_of_strikes_ns
+				}
+				random_list = {
+					15 = {
+						add_ideas = strikes_1
+						country_event = stability.22
+					}
+					5 = {
+						add_ideas = strikes_2
+						country_event = stability.22
+					}
+					2 = {
+						add_ideas = strikes_3
+						country_event = stability.22
+					}
+					78 = {
+					}
+				}
+			}
+		}
+	}
+
 	on_new_term_election = {
 		effect = {
 			

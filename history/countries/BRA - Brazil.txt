@@ -6,18 +6,18 @@ set_country_flag = monroe_doctrine
 add_ideas = {
 	export_focus
 	#tax_average
-	tariffs_average
+	#tariffs_average
 	civilian_economy
-	press_free
-	private_control
-	fdi_regulated
-	security_minor_restrictions
-	foreign_volunteers
-	train_medium
-	officer_train_low
-	education_budget5
-	health_budget5
-	foreign_neutral
+	#press_free
+	#private_control
+	#fdi_regulated
+	#security_minor_restrictions
+	#foreign_volunteers
+	#train_medium
+	#officer_train_low
+	#education_budget5
+	#health_budget5
+	#foreign_neutral
 }
 
 set_politics = {
@@ -52,6 +52,11 @@ if = {
 	limit = {
 		has_start_date < 1910.1.1
 	}
+
+	add_ideas = {
+		BRA_DNC_the_risk_of_strikes_ns
+	}
+
 	add_dynamic_modifier = {
 		modifier = BRA_DNC_economy
 	}
