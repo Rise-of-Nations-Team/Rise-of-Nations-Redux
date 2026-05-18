@@ -407,14 +407,22 @@ focus_tree = {
 			focus = BRA_DNC_state_controlled_industry
 		}
 		completion_reward = {
-			496 = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 496 }
 				add_resource = {
 					type = steel
 					amount = 12
 				}
 			}
-			production_speed_arms_factory_factor = 0.1
-			#Has to unlock Event: "Steel for the Nation"
 		}
 	}
 
@@ -508,19 +516,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			501 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+				add_dynamic_modifier = {
+					modifier = BRA_DNC_sao_paulo_industrial_complex
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
-			production_speed_industrial_complex_factor = 0.2
-			consumer_goods_factor = 0.1
 		}
 	}
 
@@ -535,8 +540,11 @@ focus_tree = {
 			focus = BRA_DNC_sao_paulo_inds_complex
 		}
 		completion_reward = {
-			research_speed_factor = 0.5
-			add_political_power = -50
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 
@@ -577,7 +585,7 @@ focus_tree = {
 	focus = {
 		id = BRA_DNC_petrobras_initiative
 		icon = GFX_goal_generic_oil_refinery
-		cost = 6
+		cost = 5
 		x = -2
 		y = 1
 		relative_position_id = BRA_DNC_foreign_investments_industry
@@ -586,13 +594,22 @@ focus_tree = {
 			focus = BRA_DNC_foreign_investments_industry
 		}
 		completion_reward = {
-			499 = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 499 }
 				add_resource = {
 					type = oil
 					amount = 10
 				}
 			}
-			#Has event "National Reserve" happen
 		}
 	}
 
