@@ -1,0 +1,58 @@
+economy_decisions = {
+
+	BRA_DNC_suppres_the_unions = {
+
+		icon = GFX_decision_oppression
+
+		priority = -1
+
+		allowed = {
+			original_tag = BRA
+		}
+
+		visible = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+					is_debug = no
+				}
+				NOT = {
+					has_government = communism
+					has_completed_focus = BRA_DNC_state_controlled_industry
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				has_government = communism
+			}
+			OR = {
+				has_completed_focus = BRA_DNC_research_grants_for_industry
+				has_completed_focus = BRA_DNC_tax_breaks_for_investors
+			}
+		}
+
+		cost = 150
+
+		days_remove = 720
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+
+		remove_effect = {
+			remove_ideas = BRA_DNC_the_risk_of_strikes_ns
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = 0.05
+		}
+	}
+
+}
