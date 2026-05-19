@@ -79,6 +79,15 @@ characters={
 		}		
 	}	
 
+	BRA_isabel_of_brazil={
+		name="Isabel"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/DNC/BRA_Princess_Isabel_of_Brazil.dds"
+			}
+		}
+	}	
+
 	BRA_emygdio_dantas_barreto={
 		name=BRA_emygdio_dantas_barreto
 		portraits={
@@ -161,6 +170,92 @@ characters={
 			logistics_skill=4
 		}
 	}	
+
+	BRA_jose_caetano_de_faria={
+		name="Jose Caetano de Faria"
+		portraits={
+			army={
+				large="gfx/leaders/BRA/DNC/Portrait_BRA_Jose_Caetano_de_Faria.dds"
+				small="GFX_idea_BRA_jose_caetano_de_faria"
+			}
+		}		
+		advisor={
+			slot = army_chief
+			idea_token = BRA_jose_caetano_de_faria
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				army_chief_reform_2 
+			}
+			cost = 100
+			available = {
+				not = {
+					has_government = communism 
+				}
+				date < 1936.1.1				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				date < 1936.1.1				
+			}
+		}
+		field_marshal={
+			traits={ politically_connected thorough_planner }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				not = {
+					has_government = communism 
+				}
+				date < 1936.1.1
+			}
+		}
+	}	
+
+	BRA_vespasiano_goncalves_silva={
+		name="Vespasiano Gonçalves de Albuquerque e Silva"
+		portraits={
+			army={
+				large="gfx/leaders/BRA/DNC/Portrait_BRA_Vespasiano_Silva.dds"
+				small="GFX_idea_BRA_vespasiano_silva"
+			}
+		}		
+		advisor={
+			slot = high_command
+			idea_token = BRA_vespasiano_silva
+			allowed = {
+				original_tag = BRA
+			}
+			ledger = army 
+			traits = {
+				army_logistics_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				date < 1925.1.1
+			}			
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				date < 1925.1.1
+			}
+		}
+	}		
 
 	BRA_isidoro_dias_lopes={ #PROMOTED TO GENERAL IN 1922
 		name=BRA_isidoro_dias_lopes
@@ -249,7 +344,104 @@ characters={
 			legacy_id=-1
 		}
 	}
-	
+
+	BRA_alberto_cardoso_de_aguiar={
+		name="Alberto Cardoso de Aguiar"
+		portraits={
+			army={
+				small="GFX_idea_BRA_alberto_cardoso_de_aguiar"
+				large="gfx/leaders/BRA/DNC/Portrait_BRA_Alberto_Cardoso_de_Aguiar.dds"
+			}
+		}		
+		advisor={
+			slot = high_command
+			idea_token = BRA_alberto_cardoso_de_aguiar
+			ledger = army 
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				army_regrouping_2 
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				date < 1923.1.1
+			}			
+		}
+		corps_commander={
+			traits={ trait_cautious organizer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				date < 1923.1.1
+			}
+		}
+	}	
+
+	BRA_antonio_mena_barreto={
+		name="Antonio Mena Barreto"
+		portraits={
+			army={
+				large="gfx/leaders/BRA/DNC/Portrait_BRA_Antonio_Mena_Barreto.dds"
+				small="GFX_idea_BRA_antinio_adolfo_da_fontoura_mena_barreto"
+			}
+		}		
+		advisor={
+			slot = high_command
+			idea_token = BRA_antinio_adolfo_da_fontoura_mena_barreto
+			allowed = {
+				original_tag = BRA
+			}
+			ledger = army 
+			traits = {
+				army_infantry_1 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				date < 1915.1.1
+			}			
+		}
+		corps_commander={
+			traits={ old_guard war_hero }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				date < 1915.1.1
+			}
+		}
+	}	
+
+	BRA_francisco_ferreira={
+		name="Francisco Ferreira de Albuquerque"
+		portraits={
+			army={
+				large="gfx/leaders/BRA/DNC/Portrait_BRA_Francisco_Ferreira_de_Albuquerque.dds"
+			}
+		}		
+		corps_commander={
+			traits={ militias_officer engineer_officer swamp_fox }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			visible = {
+				date < 1918.1.1
+			}
+		}
+	}	
+
 	BRA_pedro_max_frontin={
 		name=BRA_pedro_max_frontin
 		portraits={
