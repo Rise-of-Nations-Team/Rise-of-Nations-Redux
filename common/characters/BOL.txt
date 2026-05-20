@@ -11,20 +11,15 @@ characters = {
 			}			
 		}
 		country_leader={
-			ideology=liberalism
-			traits={ BOL_hero_of_pacific AFG_cautious_modernizer military_modernizer }
-			expire = "1918.1.1.1"			
-		}
-		country_leader={
 			ideology=despotism
 			traits={ BOL_hero_of_pacific AFG_cautious_modernizer military_modernizer }
 			expire = "1918.1.1.1"			
 		}	
 		corps_commander = {
-			traits = { politically_connected skilled_staffer organizer urban_assault_specialist infantry_leader ambusher }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 1
+			traits = { politically_connected skilled_staffer urban_assault_specialist hill_fighter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id = -1
@@ -226,6 +221,43 @@ characters = {
 		}
 	}
 
+	BOL_federico_roman_calderon = {
+		name = "Federico Roman Calderon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BOL/DNC/portrait_BOL_Federico_Roman_Calderon.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BOL_federico_roman_calderon
+			allowed = {
+				original_tag = BOL
+			}
+			traits = {
+				army_concealment_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			visible = {
+				date < 1944.1.1
+			}
+		}
+		corps_commander = {
+			traits = { commando jungle_rat trickster guerilla_fighter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				date < 1944.1.1
+			}			
+		}		
+	}	
+
 	BOL_gualberto_villarroel_lopez = {
 		name = "Gualberto Villarroel Lopez"
 		portraits = {
@@ -234,7 +266,7 @@ characters = {
 				small = "gfx/interface/ideas/BOL/portrait_BOL_gualberto_villarroel_small.dds"
 			}
 		}
-			advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = BOL_gualberto_villarroel_lopez
 			allowed = {
