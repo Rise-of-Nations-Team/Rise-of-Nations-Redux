@@ -52,18 +52,14 @@ MEX_latifundios = {
 			277 = {
 				NOT = { has_state_flag = juarez_theater_added }
 			}
-			MEX = {
-				OR = { 
-					has_idea = MEX_progressive_modernization
-					has_idea = MEX_aggressive_modernization
-				}
-			}
 		}
 		fire_only_once = yes
 		allowed = {
 			MEX = {
-				has_idea = MEX_aggressive_modernization
-				OR = { has_idea = MEX_progressive_modernization }
+				OR = {
+					has_idea = MEX_aggressive_modernization
+					has_idea = MEX_progressive_modernization
+				}
 			}
 		}
 		cost = 100
@@ -214,9 +210,6 @@ MEX_latifundios = {
 	}
 	MEX_latifundios_Yucatan_expansion_2 = {
 		icon = opression
-		highlight_states = {
-			state = 474
-		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 6
 			owns_state = 474

@@ -23,10 +23,31 @@ ideas = {
             }
         }
 
-        MEX_the_unification_of_mexico = {
+        ### Leon De La Barra Ultimate after sucession
+        MEX_a_trading_nation = {
+            removal_cost = -1
 
+            allowed = {
+                original_tag = MEX
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                neutrality_drift = 0.02
+                resource_trade_cost_bonus_per_factory = 2
+                trade_opinion_factor = 1.0
+                political_power_gain = 0.10
+                consumer_goods_factor = -0.25
+            }
         }
 
+        ### Limantour Ultimate after succession
+        MEX_the_mexican_republic = {
+            removal_cost = -1
+        }
+
+        ### Bernardo Reyes Ultimate after succession
         MEX_mexican_unity = {
             removal_cost = -1
 
@@ -37,27 +58,23 @@ ideas = {
                 always = yes
             }
             modifier = {
-                stability_factor = 0.20
-                war_support_factor = 0.20
+                democratic_drift = 0.02
                 defensive_war_stability_factor = 0.50
-                stability_weekly = 0.025
             }
         }
 
-        MEX_trading_nation = {
+        ### Feliz Diaz Ultimate after succession
+        MEX_an_strong_nation = {
             removal_cost = -1
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
+            allowed = { original_tag = MEX }
+            allowed_civil_war = { always = yes }
             modifier = {
-                stability_factor = 0.15
-                trade_opinion_factor = 0.50
-                political_power_gain = 0.10
-                consumer_goods_factor = -0.25
+                fascism_drift = 0.02
+                war_support_factor = 0.20
+                weekly_manpower = 3500
+                offensive_war_stability_factor = 0.30
+                justify_war_goal_time = -0.25
             }
         }
 
