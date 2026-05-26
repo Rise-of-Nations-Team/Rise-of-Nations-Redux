@@ -67,8 +67,10 @@ focus_tree = {
 			focus = ACR_DNC_not_much_time_left
 		}
 		bypass = {
-			has_country_leader = ACR_luis_galvez_rodriguez
-			ruling_only = yes
+			has_country_leader = {
+				character = ACR_luis_galvez_rodriguez
+				ruling_only = yes
+			}
 		}		
 		completion_reward = {
 			add_popularity = {
@@ -125,8 +127,10 @@ focus_tree = {
 		y = 3
 		relative_position_id = ACR_DNC_careful_as_it_goes
 		bypass = {
-			has_country_leader = ACR_assembly
-			ruling_only = yes
+			has_country_leader = {
+				character = ACR_assembly
+				ruling_only = yes
+			}
 		}
 		prerequisite = {
 			focus = ACR_DNC_not_much_time_left
@@ -191,8 +195,10 @@ focus_tree = {
 			focus = ACR_DNC_not_much_time_left
 		}
 		bypass = {
-			has_country_leader = ACR_antonio_de_sousa_braga
-			ruling_only = yes
+			has_country_leader = {
+				character = ACR_antonio_de_sousa_braga
+				ruling_only = yes
+			}
 		}			
 		completion_reward = {
 			add_popularity = {
@@ -328,9 +334,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			remove_ideas = {
-				idea = ACR_against_all_odds
-			}
+			remove_ideas = ACR_against_all_odds
 		}
 	}
 
@@ -825,9 +829,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			remove_ideas = {
-				idea = ACR_against_all_odds
-			}
+			remove_ideas = ACR_against_all_odds
 		}
 	}	
 
