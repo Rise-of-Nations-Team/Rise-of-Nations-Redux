@@ -8,7 +8,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology=monarchism
             desc = "POLITICS_DOWAGER_CIXI_DESC"			
 			traits = {  }
 			expire="1908.11.16.1"			
@@ -23,7 +23,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology=monarchism
 			desc = "POLITICS_PRINCE_CHUN_DESC"
 			traits = { incompetent_leader }
 			expire="1951.2.3.1"			
@@ -38,7 +38,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology=monarchism
 			traits = {  }
 			expire="1967.10.17.1"			
 		}		
@@ -756,6 +756,29 @@ characters={
 		}
 	}
 
+	QIN_zhang_zuolin = { # 張作霖
+		name = "Zhang Zuolin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CHI/WW1/Portrait_China_Zhang_Zuolin.dds"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected old_guard harsh_leader substance_abuser organizer skilled_staffer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				date < 1930.1.1
+				NOT = {
+					country_exists = FEN
+				}					
+			}
+		}		
+	}	
+
 	QIN_qi_xieyuan = {
 		name = QIN_qi_xieyuan
 		portraits = {
@@ -794,6 +817,36 @@ characters={
 			visible = {
 				date < 1930.3.20
 			}				
+		}
+	}	
+
+	QIN_yang_sen = {
+		name=SIC_yang_sen
+		portraits={
+			army={
+				large= GFX_portrait_SIC_yang_sen
+				small= GFX_portrait_SIC_yang_sen_military_small
+			}
+			civilian = {
+				small = GFX_portrait_SIC_yang_sen_civilian_small
+			}
+		}
+		
+		corps_commander={
+			traits = { organizer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				date > 1910.1.1
+				date < 1960.1.1
+				NOT = {
+					country_exists = SIC
+				}				
+			}
 		}
 	}	
 
