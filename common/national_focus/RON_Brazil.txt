@@ -14,328 +14,12 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
-	focus = {
-		id = BRA_DNC_cafe_com_leite_government
-		icon = GFX_focus_BRA_cafe_com_leite_politics
-		cost = 5
-		x = 5
-		y = 0
-		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_debates_cafe_central
-		icon = GFX_focus_ARG_balancing_act
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_cafe_com_leite_government
-		prerequisite = {
-			focus = BRA_DNC_cafe_com_leite_government
-		}
-		completion_reward = {
-			add_popularity = {
-   	 			ideology = democratic
-    			popularity = 0.20
-			}
-			add_political_power = 50
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_constitutional_reform
-		icon = GFX_focus_generic_treaty
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_debates_cafe_central
-		prerequisite = {
-			focus = BRA_DNC_debates_cafe_central
-		}
-		completion_reward = {
-			add_stability = 0.05
-			political_power_gain = 0.15
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_press_freedom
-		icon = GFX_focus_generic_printing_press
-		cost = 8
-		x = -5
-		y = 1
-		relative_position_id = BRA_DNC_constitutional_reform
-		prerequisite = {
-			focus = BRA_DNC_constitutional_reform
-		}
-		completion_reward = {
-			drift_defence_factor = 0.25
-			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_land_reform
-		icon = GFX_focus_generic_modernizing_agriculture
-		cost = 10
-		x = -3
-		y = 1
-		relative_position_id = BRA_DNC_constitutional_reform
-		prerequisite = {
-			focus = BRA_DNC_constitutional_reform
-		}
-		completion_reward = {
-			add_stability = 0.05
-			consumer_goods_factor = -0.05
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_workers_rights_legation
-		icon = GFX_focus_por_workers_of_iberia
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_land_reform
-		prerequisite = {
-			focus = BRA_DNC_land_reform
-		}
-		completion_reward = {
-			add_stability = 0.05
-			production_factory_efficiency_gain_factor = 0.5
-			industrial_capacity_factory = 0.4
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_professional_army
-		icon = GFX_focus_generic_little_entente
-		cost = 10
-		x = -1
-		y = 1
-		relative_position_id = BRA_DNC_constitutional_reform
-		prerequisite = {
-			focus = BRA_DNC_constitutional_reform
-		}
-		mutually_exclusive = {
-			focus = BRA_DNC_land_reform
-		}
-		completion_reward = {
-			army_experience = 25
-			army_org_factor = 0.05
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_guardian_of_south_ame_democracy
-		icon = GFX_focus_generic_south_america
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_professional_army
-		prerequisite = {
-			focus = BRA_DNC_professional_army
-		}
-		completion_reward = {
-			add_war_support = 0.05
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_navy_modernization_initiative
-		icon = GFX_focus_generic_large_navy
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_guardian_of_south_ame_democracy
-		prerequisite = {
-			focus = BRA_DNC_guardian_of_south_ame_democracy
-		}
-		completion_reward = {
-			navy_experience = 25
-			industrial_capacity_dockyard = 0.10
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_pan_american_cooperation
-		icon = GFX_focus_BRA_reach_out_to_military_dem
-		cost = 10
-		x = 2
-		y = 1
-		relative_position_id = BRA_DNC_guardian_of_south_ame_democracy
-		prerequisite = {
-			focus = BRA_DNC_industry_boom
-		}
-		prerequisite = {
-			focus = BRA_DNC_guardian_of_south_ame_democracy
-		}
-		completion_reward = {
-			trade_opinion_factor = 0.20
-			add_relation_modifier = {
-   	 			target = USA
-    			modifier = BRA_good_neighbor_policy
-			}
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_legacy_of_liberty
-		icon = GFX_goal_support_democracy
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_pan_american_cooperation
-		prerequisite = {
-			focus = BRA_DNC_pan_american_cooperation
-		}
-		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.05
-			#To Add National Spirit "Beacon of Democracy"
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_modern_infrastructure
-		icon = GFX_goal_generic_production2
-		cost = 10
-		x = 1
-		y = 1
-		relative_position_id = BRA_DNC_constitutional_reform
-		prerequisite = {
-			focus = BRA_DNC_constitutional_reform
-		}
-		completion_reward = {
-			production_speed_buildings_factor = 0.5
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_trans_amazonian_railway
-		icon = GFX_focus_generic_railroad
-		cost = 14
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_modern_infrastructure
-		prerequisite = {
-			focus = BRA_DNC_modern_infrastructure
-		}
-		available = {
-			NOT = {
-				has_war_with = PRU
-			}
-			NOT = {
-				has_war_with = BOL
-			}
-		}
-		completion_reward = {
-			build_railway = {
-    			level = 1
-    			build_only_on_allied = yes
-    			controller_priority = {
-        			base = 1
-        			modifier = {
-            			tag = BRA
-            			add = 2
-        			}
-    			}
-   	 			fallback = yes
-    			path = { 12996 8226 8148 7476 12923 8140 12987 5148 2111 8175 11010 13284 12939 12917 8191 5166 12953 5202 }
-    			start_state = 500
-    			target_state = 492
-			}
-			local_resources_factor = 0.5
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_expansion_public_education
-		icon = GFX_focus_generic_education
-		cost = 10
-		x = 5
-		y = 1
-		relative_position_id = BRA_DNC_constitutional_reform
-		prerequisite = {
-			focus = BRA_DNC_constitutional_reform
-		}
-		completion_reward = {
-			research_speed_factor = 0.5
-			add_stability = 0.2
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_university_sao_paulo
-		icon = GFX_focus_BRA_university_of_sao_paulo
-		cost = 5
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_expansion_public_education
-		prerequisite = {
-			focus = BRA_DNC_expansion_public_education
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_industry_boom
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
-		x = 2
-		y = 1
-		relative_position_id = BRA_DNC_modern_infrastructure
-		prerequisite = {
-			focus = BRA_DNC_modern_infrastructure
-		}
-		prerequisite = {
-			focus = BRA_DNC_expansion_public_education
-		}
-		completion_reward = {
-			501 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			cic_construction_boost_factor = 0.3
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_foreign_investments
-		icon = GFX_focus_generic_industry_investment
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = BRA_DNC_industry_boom
-		prerequisite = {
-			focus = BRA_DNC_industry_boom
-		}
-		completion_reward = {
-			trade_opinion_factor = 0.5
-			opinion_gain_monthly_same_ideology_factor = 0.10
-			consumer_goods_factor = 0.2
-		}
-	}
-
 	#### ECONOMICS ####
 	focus = {
 		id = BRA_DNC_economic_development
 		icon = GFX_focus_generic_modernize_industry
 		cost = 5
-		x = 21
+		x = 8
 		y = 0
 		completion_reward = {
 			custom_effect_tooltip = BRA_DNC_modify_economy_tt
@@ -350,7 +34,7 @@ focus_tree = {
 		id = BRA_DNC_industrialization_efforts
 		icon = GFX_focus_generic_industry_2
 		cost = 5
-		x = 0
+		x = -4
 		y = 1
 		relative_position_id = BRA_DNC_economic_development
 		prerequisite = {
@@ -725,70 +409,67 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRA_DNC_national_infrastructure
-		icon = GFX_focus_generic_industry_2
-		relative_position_id = BRA_DNC_economic_development
-		cost = 5
-		x = 10
+		id = BRA_DNC_expand_transport_network
+		icon = GFX_focus_generic_improve_roads
+		cost = 8
+		x = 4
 		y = 1
+		relative_position_id = BRA_DNC_economic_development
 		prerequisite = {
 			focus = BRA_DNC_economic_development
 		}
 		completion_reward = {
-			#Unlocks Event: "The National Infrastructure Plan"
-		}
-	}
-
-	focus = {
-		id = BRA_DNC_expand_transport_network
-		icon = GFX_focus_generic_improve_roads
-		relative_position_id = BRA_DNC_economic_development
-		cost = 9
-		x = 10
-		y = 2
-		prerequisite = {
-			focus = BRA_DNC_national_infrastructure
-		}
-		completion_reward = {
-			496 = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
 			}
-			500 = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
 			}
-			501 = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-			999 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
 				}
-			}
-			503 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			499 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -798,29 +479,56 @@ focus_tree = {
 	focus = {
 		id = BRA_DNC_transport_network_continuation
 		icon = GFX_focus_generic_road_investment
-		relative_position_id = BRA_DNC_economic_development
 		cost = 8
-		x = 10
-		y = 3
+		x = -1
+		y = 1
+		relative_position_id = BRA_DNC_expand_transport_network
 		prerequisite = {
 			focus = BRA_DNC_expand_transport_network
 		}
 		completion_reward = {
-			504 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
+			random_owned_controlled_state = {
+				prioritize = {
+					504
 				}
-			}
-			505 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-			498 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					505
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					498
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -833,14 +541,15 @@ focus_tree = {
 	focus = {
 		id = BRA_DNC_railroad_and_road_modernization
 		icon = GFX_focus_generic_railroad
-		relative_position_id = BRA_DNC_economic_development
 		cost = 5
-		x = 10
-		y = 4
+		x = 0
+		y = 1
+		relative_position_id = BRA_DNC_transport_network_continuation
 		prerequisite = {
 			focus = BRA_DNC_transport_network_continuation
 		}
 		completion_reward = {
+			#TODO: Add army speed and army mob speed buffs to the army dynamic modifier
 			build_railway = {
     			level = 1
     			build_only_on_allied = yes
@@ -883,141 +592,207 @@ focus_tree = {
     			start_state = 500
     			target_state = 504
 			}
-			army_speed_factor = 0.5
-			mobilization_speed = 0.2
 		}
 	}
 
 	focus = {
 		id = BRA_DNC_develop_national_highways
 		icon = GFX_goal_generic_construct_civilian
-		relative_position_id = BRA_DNC_economic_development
 		cost = 10
-		x = 10
-		y = 5
+		x = 0
+		y = 1
+		relative_position_id = BRA_DNC_railroad_and_road_modernization
 		prerequisite = {
 			focus = BRA_DNC_railroad_and_road_modernization
 		}
 		completion_reward = {
-			499 = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				BRA_DNC_economy_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				prioritize = {
+					499 505
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
 					level = 3
 					instant_build = yes
 				}
 			}
-			505 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
-			production_factory_efficiency_gain_factor = 0.5 
 		}
 	}
 
 	focus = {
 		id = BRA_DNC_industrial_logistic_hubs
 		icon = GFX_goal_generic_construct_infrastructure
-		relative_position_id = BRA_DNC_economic_development
-		cost = 8
-		x = 10
-		y = 6
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BRA_DNC_develop_national_highways
 		prerequisite = {
 			focus = BRA_DNC_develop_national_highways
 		}
 		completion_reward = {
-			500 = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					500
+				}
+				limit = {
+					free_building_slots = {
+						building = supply_node
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = supply_node
 					level = 1
 					instant_build = yes
 				}
 			}
-			504 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					504
+				}
+				limit = {
+					free_building_slots = {
+						building = supply_node
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = supply_node
 					level = 1
 					instant_build = yes
 				}
 			}
-			502 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					502
+				}
+				limit = {
+					free_building_slots = {
+						building = supply_node
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = supply_node
 					level = 1
 					instant_build = yes
 				}
 			}
-			1000 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					1000
+				}
+				limit = {
+					free_building_slots = {
+						building = supply_node
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = supply_node
 					level = 1
 					instant_build = yes
 				}
 			}
-			production_speed_arms_factory_factor = 0.5
 		}
 	}
 
 	focus = {
 		id = BRA_DNC_rural_development_initiative
 		icon = GFX_focus_generic_land_reclamation
-		relative_position_id = BRA_DNC_economic_development
-		cost = 6
-		x = 16
-		y = 3
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = BRA_DNC_expand_transport_network
 		prerequisite = {
 			focus = BRA_DNC_expand_transport_network
 		}
 		completion_reward = {
-			495 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
 			}
-			280 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			local_resource_gain_efficiency_per_infrastructure = 0.3
 		}
 	}
 
 	focus = {
 		id = BRA_DNC_national_road_expansion
 		icon = GFX_focus_generic_improve_roads
-		relative_position_id = BRA_DNC_economic_development
-		cost = 8
-		x = 16
-		y = 6
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = BRA_DNC_rural_development_initiative
 		prerequisite = {
 			focus = BRA_DNC_rural_development_initiative
 		}
 		completion_reward = {
-			495 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					495
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-			498 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					498
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-			505 = {
+			random_owned_controlled_state = {
+				prioritize = {
+					505
+				}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1027,20 +802,56 @@ focus_tree = {
 	focus = {
 		id = BRA_DNC_amazon_infrastructure_project
 		icon = GFX_focus_BRA_amazon_colonization
-		relative_position_id = BRA_DNC_economic_development
 		cost = 9
-		x = 13
-		y = 7
+		x = 1
+		y = 1
+		relative_position_id = BRA_DNC_industrial_logistic_hubs
 		prerequisite = {
 			focus = BRA_DNC_national_road_expansion
 			focus = BRA_DNC_industrial_logistic_hubs
 		}
+		available = {
+			controls_state = 495
+			controls_state = 280
+		}
 		completion_reward = {
 			495 = {
-				add_extra_state_shared_building_slots = 2
+				ETH_upgrade_state_category = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+				}
 			}
 			280 = {
-				add_extra_state_shared_building_slots = 2
+				ETH_upgrade_state_category = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+				}
 			}
 		}
 	}
