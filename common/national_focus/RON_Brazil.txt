@@ -47,6 +47,10 @@ focus_tree = {
 				BRA_DNC_economy_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
+			add_to_variable = {
+				BRA_DNC_economy_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			country_event = { id = dnc_brazil.1 hours = 3 }
 		}
@@ -616,6 +620,10 @@ focus_tree = {
 				BRA_DNC_economy_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
+			add_to_variable = {
+				BRA_DNC_economy_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				prioritize = {
@@ -803,7 +811,7 @@ focus_tree = {
 	focus = {
 		id = BRA_DNC_amazon_infrastructure_project
 		icon = GFX_focus_BRA_amazon_colonization
-		cost = 9
+		cost = 10
 		x = 1
 		y = 1
 		relative_position_id = BRA_DNC_industrial_logistic_hubs
@@ -816,6 +824,16 @@ focus_tree = {
 			controls_state = 280
 		}
 		completion_reward = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_local_resources_factor = 0.1
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				BRA_DNC_economy_production_speed_infrastructure_factor = 0.05
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			495 = {
 				ETH_upgrade_state_category = yes
 				if = {
