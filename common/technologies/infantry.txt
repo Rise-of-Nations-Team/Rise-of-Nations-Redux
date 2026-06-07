@@ -2101,7 +2101,7 @@ technologies = {
 		land_night_attack = 0.1
 
 		path = {
-			leads_to_tech = support_weapons_a
+			leads_to_tech = modern_support_weapons
 			research_cost_coeff = 1
 		}
 
@@ -2493,7 +2493,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = modern_support_weapons
+			leads_to_tech = support_weapons
 			research_cost_coeff = 1
 		}
 
@@ -2513,7 +2513,7 @@ technologies = {
 		}
 	}
 
-	modern_support_weapons = {
+	support_weapons = {
 
 		infantry = {
 			defense = 0.03
@@ -3534,6 +3534,64 @@ technologies = {
 
 
 	###------> New Support Weapons   <><> <><> <><> <><> <><>
+
+	modern_support_weapons = {
+
+		infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		cavalry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		marine = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+
+		###------> X   <><> <><> <><> <><> <><>
+
+		motorized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = support_weapons_a
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1945
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1945 }
+		}
+
+		categories = {
+			infantry_weapons
+		}
+
+		ai_will_do = {
+			factor = 100
+
+			#DATE
+			modifier = { factor = 0 date < 1946.1.1 }
+		}
+	}
 
 	support_weapons_a = {
 
