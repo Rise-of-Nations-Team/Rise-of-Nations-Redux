@@ -14,7 +14,9 @@ focus_tree = {
 	default = no
 	reset_on_civilwar = no
 
-	continuous_focus_position = { x = 700 y = 950 }
+	continuous_focus_position = { x = 700 y = 1200 }
+
+	shared_focus = SPRVR_imperio_espanol
 
 	###############################################################################################################################
 	###############################################################################################################################
@@ -30,7 +32,7 @@ focus_tree = {
 	focus = {
         id = SPRDNC_the_regency
         icon = GFX_focus_POL_end_the_regency
-        x = 24
+        x = 9
         y = 0
 
 		mutually_exclusive = {
@@ -60,8 +62,8 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_repopulation_act
-		icon = GFX_goal_Generic_Pass_Legislation
-		x = 4
+		icon = GFX_focus_generic_population_growth
+		x = 3
 		y = 1
 		relative_position_id = SPRDNC_the_regency
 
@@ -95,7 +97,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_social_reforms
-		icon = GFX_generic_focus_treaty_sign
+		icon = GFX_goal_social_reforms
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_the_regency
@@ -138,7 +140,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_look_to_the_future
-		icon = GFX_generic_unite_the_people
+		icon = GFX_goal_generic_national_unity
 		x = 2
 		y = 1
 		relative_position_id = SPRDNC_election_rigging
@@ -163,7 +165,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_control_the_press
-		icon = GFX_goal_generic_restrict_press
+		icon = GFX_goal_RUS_oppression
 		x = -2
 		y = 1
 		relative_position_id = SPRDNC_election_rigging
@@ -192,7 +194,7 @@ focus_tree = {
 	focus = {
 		id = SPRDNC_the_carlist_threat
 		icon = GFX_focus_spa_eliminate_the_carlists
-		x = -4
+		x = -3
 		y = 1
 		relative_position_id = SPRDNC_the_regency
 
@@ -254,7 +256,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_aid_for_the_farmers
-		icon = GFX_goal_generic_farming
+		icon = GFX_focus_generic_agricultural_subsidies
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_repopulation_act
@@ -279,7 +281,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_slow_the_communists
-		icon = communism8
+		icon = GFX_focus_GER_end_european_communism
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_election_rigging
@@ -331,7 +333,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_trust_the_king
-		icon = national_unity_red
+		icon = GFX_focus_generic_monarchy_2
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_el_rey_politico
@@ -396,7 +398,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_reconciliation
-		icon = GFX_Goal_USA_befriend_america
+		icon = GFX_focus_generic_befriend_usa
 		x = 1
 		y = 1
 		relative_position_id = SPRDNC_trust_the_king
@@ -423,7 +425,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_recognize_cuban_independence
-		icon = GFX_goal_CUB_coat_of_arms
+		icon = GFX_goal_cuba
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_reconciliation
@@ -525,8 +527,8 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_expand_our_influence
-		icon = GFX_goal_restore_constitutional_monarchy
-		x = 2
+		icon = GFX_goal_generic_position_armies
+		x = 1
 		y = 1
 		relative_position_id = SPRDNC_legacy_of_the_carlist_wars
 
@@ -553,7 +555,7 @@ focus_tree = {
 	focus = {
 		id = SPRDNC_heroes_of_the_3rd_carlist_war
 		icon = GFX_focus_generic_hill_training
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = SPRDNC_legacy_of_the_carlist_wars
 
@@ -582,7 +584,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_lessons_of_the_past
-		icon = GFX_goal_Generic_Coalition_Army
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_heroes_of_the_3rd_carlist_war
@@ -637,7 +639,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_carlist_militia
-		icon = GFX_focus_AFG_adopt_nufus
+		icon = GFX_goal_generic_paramilitary
 		x = -1
 		y = 1
 		relative_position_id = SPRDNC_the_4th_carlist_war
@@ -782,7 +784,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_recolonize_colombia
-		icon = GFX_goal_spr_recolonize_colombia
+		icon = GFX_focus_generic_attack_colombia
 		x = 0
 		y = 1
 		relative_position_id = SPRDNC_return_to_the_americas
@@ -812,7 +814,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_through_the_jungle
-		icon = attack_venezuela
+		icon = GFX_focus_generic_attack_venezuela
 		x = -1
 		y = 1
 		relative_position_id = SPRDNC_recolonize_colombia
@@ -900,7 +902,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_into_la_plata
-		icon = GFX_goal_ARG_sun
+		icon = GFX_focus_generic_attack_argentina
 		x = 1
 		y = 1
 		relative_position_id = SPRDNC_crush_bolivars_memory
@@ -929,7 +931,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_new_spain
-		icon = GFX_goal_MEX_contact_mexican_rebels
+		icon = GFX_focus_mex_jefe_maximo
 		x = -2
 		y = 1
 		relative_position_id = SPRDNC_return_to_the_americas
@@ -950,7 +952,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_restore_the_union
-		icon = GFX_por_focus_the_kings_portugal
+		icon = GFX_focus_generic_free_iberia
 		x = 2
 		y = 1
 		relative_position_id = SPRDNC_the_return_of_an_empire
@@ -974,7 +976,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_recover_brazil
-		icon = GFX_goal_BRA_monarchy
+		icon = GFX_focus_por_recover_brazil
 		x = 0
 		y = 3
 		relative_position_id = SPRDNC_restore_the_union
@@ -999,7 +1001,7 @@ focus_tree = {
 
 	focus = {
 		id = SPRDNC_retake_gibraltar
-		icon = GFX_goal_spr_take_back_gibraltar
+		icon = GFX_goal_gibraltar
 		x = -2
 		y = 1
 		relative_position_id = SPRDNC_the_return_of_an_empire
@@ -1022,8 +1024,6 @@ focus_tree = {
 			}
 		}
 	}
-
-	shared_focus = SPRVR_imperio_espanol
 
 	focus = {
 		id = SPRDNC_war_of_vengeance
@@ -1059,7 +1059,7 @@ focus_tree = {
 	focus = {
 		id = SPRDNC_el_desastre_del_98
 		icon = GFX_Goal_USA_arsenal_of_democracy
-		x = 42
+		x = 41
 		y = 0
 
 		available = {
@@ -1163,10 +1163,10 @@ focus_tree = {
 		}
 	}
 
-		focus = {
+	focus = {
 		id = SPRDNC_free_market
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 58
+		x = 57
 		y = 0
 		cost = 10
 		available = {
@@ -1880,7 +1880,7 @@ focus_tree = {
 	focus = {
 		id = SPRDNC_army_efforts
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 49
+		x = 48
 		y = 0
 		cost = 10
 		completion_reward = {
@@ -2530,7 +2530,7 @@ focus_tree = {
 	focus = {
 		id = SPRDNC_new_navy
 		icon = GFX_goal_generic_build_navy
-		x = 35
+		x = 34
 		y = 0
 		cost = 10
 		available = {
