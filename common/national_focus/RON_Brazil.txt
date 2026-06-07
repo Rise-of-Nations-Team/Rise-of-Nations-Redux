@@ -875,4 +875,105 @@ focus_tree = {
 		}
 	}
 
+	#### 1898-1902 POLITICS ####
+	focus = {
+		id = BRA_DNC_the_campos_sales_administration
+		icon = GFX_focus_PLACEHOLDER
+		cost = 10
+		x = 22
+		y = 0
+		available = {
+			NOT = {
+				has_country_flag = BRA_DNC_1902_elections_cflg
+			}
+			has_country_leader = {
+				character = BRA_manuel_ferraz_de_campos
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = BRA_DNC_continue_the_governors_policy
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = BRA_DNC_the_campos_sales_administration
+		prerequisite = {
+			focus = BRA_DNC_the_campos_sales_administration
+		}
+		available = {
+			NOT = {
+				has_country_flag = BRA_DNC_1902_elections_cflg
+			}
+			has_country_leader = {
+				character = BRA_manuel_ferraz_de_campos
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			#TODO Reduce pp buffs from army dynamic modifier
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = BRA_DNC_establsish_a_power_duopoly
+		icon = GFX_focus_PLACEHOLDER
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BRA_DNC_the_campos_sales_administration
+		prerequisite = {
+			focus = BRA_DNC_the_campos_sales_administration
+		}
+		available = {
+			NOT = {
+				has_country_flag = BRA_DNC_1902_elections_cflg
+			}
+			has_country_leader = {
+				character = BRA_manuel_ferraz_de_campos
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_DNC_provincial_rivalry_1_ns
+				add_idea = BRA_DNC_provincial_rivalry_2_ns
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = BRA_DNC_the_milk_cofee_politics
+		icon = GFX_focus_PLACEHOLDER
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = BRA_DNC_establsish_a_power_duopoly
+		prerequisite = {
+			focus = BRA_DNC_establsish_a_power_duopoly
+		}
+		available = {
+			NOT = {
+				has_country_flag = BRA_DNC_1902_elections_cflg
+			}
+			has_country_leader = {
+				character = BRA_manuel_ferraz_de_campos
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			remove_ideas = BRA_DNC_provincial_rivalry_2_ns
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+	}
+
 }
