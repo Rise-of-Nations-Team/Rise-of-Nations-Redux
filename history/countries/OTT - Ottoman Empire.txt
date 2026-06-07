@@ -3,7 +3,6 @@ oob = "OTT_1900"
 set_research_slots = 3
 
 give_military_access = SEO
-give_guarantee = BUL
 
 add_ideas = {
 	export_focus
@@ -17,17 +16,26 @@ add_ideas = {
 	#education_budget5
 	#health_budget5
 	#foreign_warmonger
-	#debt_of_ottomans2
-	#OTT_unprofitable_companies
-	#foreign_volunteers
-	#disjointed_railways1
-	#OTT_badly_paid_soldiers
 }
 
 add_ideas = {
-	OTT_outdated_military
-	sick_man_europe
-	ww1_Scramble_for_Africa
+	OTT_the_hamidian_regime_ns
+	OTT_the_osman_caliphate_ns
+	OTT_persecution_of_intelectuals_ns
+	OTT_outdated_military_ns
+	OTT_purged_naval_forces_ns
+	OTT_the_public_debt_administration_ns
+	OTT_mass_illiteracy_ns
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	add_ideas = OTT_rule_thourgh_intrigue_ns
+	else = {
+		add_ideas = OTT_rule_thourgh_intrigue_nolar_ns
+	}
 }
 
 if = {
@@ -120,15 +128,6 @@ recruit_character = OTT_ahmed_ramiz_bey
 			has_start_date > 1909.1.1
 			has_start_date < 1911.1.1
 		}
-		country_event = { id = ww1_turkey.42 days = 1304 }
-		country_event = { id = ww1_turkey.50 days = 645 }
-		country_event = { id = ww1_turkey.51 days = 824 }
-		country_event = { id = ww1_turkey.52 days = 928 }
-		country_event = { id = ww1_turkey.54 days = 124 } #Albanian revolts
-		country_event = { id = ww1_turkey.55 days = 378 }
-		country_event = { id = ww1_turkey.53 days = 446 } #
-		country_event = { id = ww1_turkey.56 days = 336 }
-		country_event = { id = ww1_turkey.57 days = 238 }
 	}
 
 	set_politics = {

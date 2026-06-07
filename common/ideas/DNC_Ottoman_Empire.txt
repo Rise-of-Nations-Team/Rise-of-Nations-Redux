@@ -2,73 +2,184 @@ ideas = {
 
 	country = {
 
-		OTT_military_on_the_rise = {
+		OTT_the_hamidian_regime_ns = {
+
+			picture = OTT_hamidian_regime
 
 			allowed = {
 				always = no
 			}
-			allowed_civil_war = {
-				always = no
-			}
 
-			picture = random
+			removal_cost = -1
 
 			modifier = {
-				fascism_drift = 0.03
-			}
-		}
-
-		OTT_lenient_military_idea = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = donthave
-
-			modifier = {
-				army_org_factor = -0.2
+				stability_factor = 0.05
 				political_power_factor = 0.15
+				party_popularity_stability_factor = 0.1
+				political_advisor_cost_factor = -0.1
+				nd_conscription_cost_factor = -0.05
+				high_command_cost_factor = -0.1
+				army_chief_cost_factor = -0.1
+				navy_chief_cost_factor = -0.1
+				air_chief_cost_factor = -0.1
 			}
+
 		}
 
-		OTT_outdated_military = {
-			removal_cost = -1
+		OTT_the_osman_caliphate_ns = {
+
+			picture = PER_islamic_traditions_ns
 
 			allowed = {
 				always = no
 			}
 
-			cancel = {
-				date > 1910.1.1
-			}
+			removal_cost = -1
 
 			modifier = {
-				experience_gain_army = -0.25
-				experience_gain_navy = -0.5
-				planning_speed = -0.2
-				naval_coordination = -0.1
-				naval_hit_chance = -0.1
-				mobilization_speed = -0.1
+				war_support_factor = 0.05
+				weekly_manpower = 50
+				mobilization_speed = 0.15
+				resistance_activity = -0.05
+				resistance_target = -0.05
+				islamism_drift = 0.01
 			}
+
 		}
-		OTT_sickman_of_europe = {
-			removal_cost = -1
+
+		OTT_persecution_of_intelectuals_ns = {
+
+			picture = OTT_persecution_of_intelectuals
 
 			allowed = {
 				always = no
 			}
 
-			cancel = {
-				date > 1910.1.1
-			}
+			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.3
-				political_power_gain = -0.1
+				drift_defence_factor = -0.1
+				democratic_drift = 0.02
+				research_speed_factor = -0.05
+				custom_modifier_tooltip = OTT_persecution_of_intelectuals_ns_tt
 			}
+
+		}
+
+		OTT_outdated_military_ns = {
+
+			picture = OTT_outdated_military
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = -0.25
+				army_org_factor = -0.25
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				army_speed_factor = -0.15
+			}
+
+		}
+
+		OTT_purged_naval_forces_ns = {
+
+			picture = SOV_conspiracy_in_the_academy_navy
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				navy_org_factor = -0.25
+				naval_accidents_chance = 0.1
+				naval_coordination = -0.5
+				naval_damage_factor = -0.5
+				naval_defense_factor = -0.5
+			}
+
+		}
+
+		OTT_the_public_debt_administration_ns = {
+
+			picture = gre_debt_to_the_ifc
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				min_export = 0.25
+				consumer_goods_factor = 0.7
+			}
+
+		}
+
+		OTT_mass_illiteracy_ns = {
+
+			picture = RAJ_tenancy_reforms
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.15
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.03
+			}
+
+		}
+
+		OTT_rule_thourgh_intrigue_ns = {
+
+			picture = OTT_rule_thourgh_intrigue
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.1
+				operative_slot = 1
+				intelligence_agency_defense = 0.1
+				political_power_factor = 0.05
+			}
+
+		}
+
+		OTT_rule_thourgh_intrigue_nolar_ns = {
+
+			name = OTT_rule_thourgh_intrigue_ns
+
+			picture = OTT_rule_thourgh_intrigue
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.1
+				political_power_factor = 0.05
+			}
+
 		}
 
 	}
