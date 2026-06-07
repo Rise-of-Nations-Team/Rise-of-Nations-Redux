@@ -33,7 +33,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_DNC_industrialization_efforts
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_BRA_slowly_industrialize
 		cost = 5
 		x = -4
 		y = 1
@@ -90,7 +90,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_DNC_national_steel_production
-		icon = GFX_focus_generic_steel
+		icon = GFX_BRA_steel_mines
 		cost = 5
 		x = 2
 		y = 1
@@ -121,7 +121,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_DNC_five_year_inds_plan
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_BRA_industrialized_fully
 		cost = 10
 		x = 0
 		y = 1
@@ -287,7 +287,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_DNC_petrobras_initiative
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_BRA_petrobras
 		cost = 5
 		x = -2
 		y = 1
@@ -556,53 +556,53 @@ focus_tree = {
 		completion_reward = {
 			#TODO: Add army speed and army mob speed buffs to the army dynamic modifier
 			build_railway = {
-    			level = 1
-    			build_only_on_allied = yes
-    			controller_priority = {
-        			base = 1
-        			modifier = {
-            			tag = BRA
-            			add = 2
-        			}
-    			}
-   	 			fallback = yes
-    			start_state = 500
-    			target_state = 1000
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = BRA
+						add = 2
+					}
+				}
+				fallback = yes
+				start_state = 500
+				target_state = 1000
 			}
 			build_railway = {
-    			level = 1
-    			build_only_on_allied = yes
-    			controller_priority = {
-        			base = 1
-        			modifier = {
-            			tag = BRA
-            			add = 2
-        			}
-    			}
-   	 			fallback = yes
-    			start_state = 500
-    			target_state = 502
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = BRA
+						add = 2
+					}
+				}
+				fallback = yes
+				start_state = 500
+				target_state = 502
 			}
 			build_railway = {
-    			level = 1
-    			build_only_on_allied = yes
-    			controller_priority = {
-        			base = 1
-        			modifier = {
-            			tag = BRA
-            			add = 2
-        			}
-    			}
-   	 			fallback = yes
-    			start_state = 500
-    			target_state = 504
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = BRA
+						add = 2
+					}
+				}
+				fallback = yes
+				start_state = 500
+				target_state = 504
 			}
 		}
 	}
 
 	focus = {
 		id = BRA_DNC_develop_national_highways
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_BRA_industrialize
 		cost = 10
 		x = 0
 		y = 1
