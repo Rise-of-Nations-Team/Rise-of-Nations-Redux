@@ -1,0 +1,77 @@
+on_actions = {
+	
+	on_naval_invasion = {
+	 	effect = {
+		 	if = {
+				limit = {
+					NOT = { has_state_flag = recent_naval_invasion_flag }
+				}
+				set_state_flag = {
+					flag = recent_naval_invasion_flag
+					days = 180
+				}
+			}
+	 	}
+	}
+
+	############################################
+	# FAI: War Declaration Defensive Hold (#15)
+	############################################
+	on_declare_war = {
+		effect = {
+			# ROOT = aggressor, FROM = victim
+			ROOT = {
+				set_country_flag = { flag = FAI_recent_wardec value = 1 days = 90 }
+			}
+			FROM = {
+				set_country_flag = { flag = FAI_recent_wardec value = 1 days = 90 }
+				# If attacker is 25%+ stronger, victim holds defensively for 60 days
+				if = {
+					limit = {
+						PREV = {
+							strength_ratio = { tag = PREV ratio > 1.25 }
+						}
+					}
+					set_country_flag = { flag = FAI_hold_against_@PREV value = 1 days = 60 }
+				}
+			}
+		}
+	}
+
+	############################################
+	# FAI: Monthly Air Tracking (#14)
+	############################################
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { is_ai = yes }
+				FAI_monthly_air_update = yes
+			}
+		}
+	}
+
+	############################################
+	# FAI: Weekly Air Tracking
+	############################################
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { is_ai = yes }
+				FAI_weekly_air_update = yes
+			}
+		}
+	}
+	
+
+	############################################
+	# FAI: Operational Pause Timer (daily tick)
+	############################################
+	on_daily = {
+	effect = {
+		if = {
+			limit = { is_ai = yes }
+			FAI_operational_pause_update = yes
+		}
+	}
+}
+}
