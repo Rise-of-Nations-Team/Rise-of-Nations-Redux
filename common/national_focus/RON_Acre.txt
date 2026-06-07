@@ -12,13 +12,13 @@ focus_tree = {
 	}
 	default = no
 	reset_on_civilwar = no
-	continuous_focus_position = { x = 50 y = 1700 }	
+	continuous_focus_position = { x = 50 y = 1600 }	
 
 	focus = {
 		id = ACR_DNC_careful_as_it_goes
 		icon = GFX_focus_generic_bastion_of_democracy
 		cost = 2
-		x = 10
+		x = 6
 		y = 0
 		completion_reward = {
 			add_political_power = 100
@@ -44,11 +44,11 @@ focus_tree = {
 
 	focus = {
 		id = ACR_DNC_not_much_time_left
-		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 3
 		x = 0
-		y = 2
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		y = 1
+		relative_position_id = ACR_DNC_clash_between_the_politicians
 		prerequisite = {
 			focus = ACR_DNC_clash_between_the_politicians
 		}
@@ -61,11 +61,15 @@ focus_tree = {
 		id = ACR_DNC_galvez_firm_grasp
 		icon = GFX_focus_ARG_balancing_act
 		cost = 1
-		x = -4
-		y = 3
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		x = -2
+		y = 1
+		relative_position_id = ACR_DNC_not_much_time_left
 		prerequisite = {
 			focus = ACR_DNC_not_much_time_left
+		}
+		mutually_exclusive = {
+			focus = ACR_DNC_de_sousa_thinking
+			focus = ACR_DNC_emergency_national_assembly
 		}
 		bypass = {
 			has_country_leader = {
@@ -80,19 +84,15 @@ focus_tree = {
 			}
 			add_political_power = 50
 		}
-		mutually_exclusive = {
-			focus = ACR_DNC_de_sousa_thinking
-			focus = ACR_DNC_emergency_national_assembly
-		}		
-	}	
+	}
 
 	focus = {
 		id = ACR_DNC_defend_at_all_costs
 		icon = GFX_goal_generic_defence
 		cost = 3
-		x = -4
-		y = 4
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		x = 0
+		y = 1
+		relative_position_id = ACR_DNC_galvez_firm_grasp
 		prerequisite = {
 			focus = ACR_DNC_galvez_firm_grasp
 		}
@@ -107,11 +107,11 @@ focus_tree = {
 	
 	focus = {
 		id = ACR_DNC_diplomacy_first
-		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 3
-		x = -4
-		y = 5
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		x = 0
+		y = 1
+		relative_position_id = ACR_DNC_defend_at_all_costs
 		prerequisite = {
 			focus = ACR_DNC_defend_at_all_costs
 		}
@@ -125,23 +125,23 @@ focus_tree = {
 		icon = GFX_focus_AFG_parliamentary_democracy
 		cost = 1
 		x = 0
-		y = 3
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		y = 1
+		relative_position_id = ACR_DNC_not_much_time_left
+		prerequisite = {
+			focus = ACR_DNC_not_much_time_left
+		}
+		mutually_exclusive = {
+			focus = ACR_DNC_galvez_firm_grasp
+			focus = ACR_DNC_de_sousa_thinking
+		}
 		bypass = {
 			has_country_leader = {
 				character = ACR_assembly
 				ruling_only = yes
 			}
 		}
-		prerequisite = {
-			focus = ACR_DNC_not_much_time_left
-		}
 		completion_reward = {
 
-		}
-		mutually_exclusive = {
-			focus = ACR_DNC_galvez_firm_grasp
-			focus = ACR_DNC_de_sousa_thinking
 		}		
 	}	
 
@@ -150,8 +150,8 @@ focus_tree = {
 		icon = GFX_focus_usa_voter_registration_act
 		cost = 5
 		x = 0
-		y = 4
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		y = 1
+		relative_position_id = ACR_DNC_emergency_national_assembly
 		prerequisite = {
 			focus = ACR_DNC_emergency_national_assembly
 		}
@@ -168,11 +168,11 @@ focus_tree = {
 
 	focus = {
 		id = ACR_DNC_defensive_stand
-		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_military
 		cost = 5
 		x = 0
-		y = 5
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		y = 1
+		relative_position_id = ACR_DNC_politics_for_later
 		prerequisite = {
 			focus = ACR_DNC_politics_for_later
 		}
@@ -189,11 +189,15 @@ focus_tree = {
 		id = ACR_DNC_de_sousa_thinking
 		icon = GFX_focus_ARG_balancing_act
 		cost = 1
-		x = 4
-		y = 3
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		x = 2
+		y = 1
+		relative_position_id = ACR_DNC_not_much_time_left
 		prerequisite = {
 			focus = ACR_DNC_not_much_time_left
+		}
+		mutually_exclusive = {
+			focus = ACR_DNC_galvez_firm_grasp
+			focus = ACR_DNC_emergency_national_assembly
 		}
 		bypass = {
 			has_country_leader = {
@@ -207,19 +211,15 @@ focus_tree = {
     			popularity = 0.20
 			}
 		}
-		mutually_exclusive = {
-			focus = ACR_DNC_galvez_firm_grasp
-			focus = ACR_DNC_emergency_national_assembly
-		}		
 	}
 	
 	focus = {
 		id = ACR_DNC_prepare_the_arms
-		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
-		x = 4
-		y = 4
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		x = 0
+		y = 1
+		relative_position_id = ACR_DNC_de_sousa_thinking
 		prerequisite = {
 			focus = ACR_DNC_de_sousa_thinking
 		}
@@ -251,11 +251,11 @@ focus_tree = {
 
 	focus = {
 		id = ACR_DNC_offensive_stand
-		icon = GFX_SOV_keep_commissars_organization_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_major_war
 		cost = 3
-		x = 4
-		y = 5
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		x = 0
+		y = 1
+		relative_position_id = ACR_DNC_prepare_the_arms
 		prerequisite = {
 			focus = ACR_DNC_prepare_the_arms
 		}
@@ -269,8 +269,8 @@ focus_tree = {
 		icon = GFX_goal_ACR_last_stand
 		cost = 2
 		x = 0
-		y = 6
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		y = 1
+		relative_position_id = ACR_DNC_defensive_stand
 		prerequisite = {
 			focus = ACR_DNC_offensive_stand
 			focus = ACR_DNC_defensive_stand
@@ -288,11 +288,14 @@ focus_tree = {
 
 	focus = {
 		id = ACR_DNC_victory_against_it_all
-		icon = GFX_focus_ARG_balancing_act
+		icon = GFX_focus_BEL_v_for_victory
 		cost = 2
 		x = 0
-		y = 7
-		relative_position_id = ACR_DNC_careful_as_it_goes
+		y = 1
+		relative_position_id = ACR_DNC_the_unevitable
+		prerequisite = {
+			focus = ACR_DNC_the_unevitable
+		}
 		available = {
 			NOT = {
 				has_war_with = BOL
@@ -304,9 +307,6 @@ focus_tree = {
 					value > 30
 				}
 			}			
-		}		
-		prerequisite = {
-			focus = ACR_DNC_the_unevitable
 		}
 		completion_reward = {
 			add_popularity = {
@@ -324,14 +324,12 @@ focus_tree = {
 	focus = {
 		id = ACR_DNC_after_it_all
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-
+		x = 4
+		y = 1
+		relative_position_id = ACR_DNC_victory_against_it_all
 		prerequisite = {
 			focus = ACR_DNC_victory_against_it_all
 		}
-
-		relative_position_id = ACR_DNC_victory_against_it_all
-		x = 5
-		y = 1
 		cost = 5
 
 		completion_reward = {
@@ -340,16 +338,113 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ACR_DNC_improve_brazilian_trade_relations
-		icon = GFX_focus_BRA_banco_do_brasil
+		id = ACR_DNC_ally_brazil
+		icon = GFX_goal_generic_brazil_deal
+		x = -1
+		y = 2
+		relative_position_id = ACR_DNC_after_it_all
+		prerequisite = {
+			focus = ACR_DNC_after_it_all
+		}
+		prerequisite = {
+			focus = ACR_DNC_forgive_the_bolivians
+			focus = ACR_DNC_final_blow_to_bolivia
+		}
 
+		cost = 5
+
+		available = {
+			is_subject = no
+			OR = {
+				is_faction_leader = yes
+				AND = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+			}
+			BRA = {
+				exists = yes
+				is_in_faction = no
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			BRA = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_ally_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = yes
+					faction_leader = {
+						original_tag = ACR
+					}
+				}
+			}
+			else = {
+				BRA = {
+					country_event = generic.5
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = ACR_DNC_mutual_protection_agreement_with_brazil
+		icon = GFX_focus_BRA_department_of_propaganda
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = ACR_DNC_ally_brazil
 		prerequisite = {
 			focus = ACR_DNC_ally_brazil
 		}
 
+		available = {
+			is_subject = no
+			BRA = {
+				exists = yes
+				is_subject = no
+				has_war = no
+			}
+		}
+
+		completion_reward = {
+			BRA = {
+				country_event = dnc_brazil.2
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = if_they_accept_tt
+				give_guarantee = BRA
+				BRA = {
+					give_guarantee = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ACR_DNC_improve_brazilian_trade_relations
+		icon = GFX_focus_BRA_banco_do_brasil
+		x = 1
+		y = 1
 		relative_position_id = ACR_DNC_ally_brazil
-		x = 0
-		y = 2
+		prerequisite = {
+			focus = ACR_DNC_ally_brazil
+		}
 
 		cost = 5
 
@@ -359,19 +454,150 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ACR_DNC_exchange_technology
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ACR_DNC_improve_brazilian_trade_relations
+		prerequisite = {
+			focus = ACR_DNC_befriend_peru
+			focus = ACR_DNC_improve_brazilian_trade_relations
+		}
+
+		available = {
+			num_faction_members > 2
+		}
+
+		completion_reward = {
+			add_to_tech_sharing_group = ACR_tech_exchange
+			every_other_country = {	
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_to_tech_sharing_group = ACR_tech_exchange
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = ACR_DNC_increase_food_and_resource_imports
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 3
+		y = 1
+		relative_position_id = ACR_DNC_improve_brazilian_trade_relations
+		prerequisite = {
+			focus = ACR_DNC_befriend_peru
+			focus = ACR_DNC_improve_brazilian_trade_relations
+		}
+
+		cost = 10
+
+		available = {
+			count_triggers = {
+				amount = 2
+				is_in_faction_with = PRU
+				is_in_faction_with = BRA
+			}
+		}
+
+		completion_reward = {
+
+			build_railway = {	#Internal railway, necessary to connect with Brazil
+				level = 2
+				fallback = yes
+				start_state = 912
+				target_state = 500
+			}
+
+			build_railway = {	
+				level = 1		
+				fallback = yes
+				start_state = 912
+				target_state = 487
+			}
+
+			build_railway = {	
+				level = 1		
+				fallback = yes
+				start_province = 912
+				target_province = 492
+			}
+
+			add_offsite_building = { 
+				type = industrial_complex level = 2 
+			}
+
+			every_other_country = {	
+				limit = {
+					is_in_faction_with = ROOT
+					OR = {
+						original_tag = BOL
+						original_tag = PRU
+						original_tag = BRA
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = ACR_DNC_double_down_on_heavy_industry
+		icon = GFX_focus_generic_military_industry
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = ACR_DNC_exchange_technology
+		prerequisite = {
+			focus = ACR_DNC_increase_food_and_resource_imports
+			focus = ACR_DNC_exchange_technology
+		}
+
+		available = {
+			num_faction_members > 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 1
+				}
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
+	}
+
+	focus = {
 		id = ACR_DNC_forgive_the_bolivians
 		icon = GFX_goal_generic_befriend_bolivia
-
 		cost = 5
-
+		x = 1
+		y = 1
 		relative_position_id = ACR_DNC_after_it_all
-		x = 3
-		y = 2
-
 		prerequisite = {
-			focus = ACR_DNC_after_it_all	
-		}	
-
+			focus = ACR_DNC_after_it_all
+		}
 		mutually_exclusive = {
 			focus = ACR_DNC_final_blow_to_bolivia
 		}
@@ -426,17 +652,13 @@ focus_tree = {
 	focus = {
 		id = ACR_DNC_final_blow_to_bolivia
 		icon = GFX_focus_generic_attack_bolivia
-
 		cost = 5
-
-		relative_position_id = ACR_DNC_forgive_the_bolivians
-		x = 2
-		y = 0
-
+		x = 3
+		y = 1
+		relative_position_id = ACR_DNC_after_it_all
 		prerequisite = {
 			focus = ACR_DNC_after_it_all
 		}
-
 		mutually_exclusive = {
 			focus = ACR_DNC_forgive_the_bolivians
 		}
@@ -516,17 +738,14 @@ focus_tree = {
 	focus = {
 		id = ACR_DNC_befriend_peru
 		icon = GFX_goal_generic_befriend_peru
-
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = ACR_DNC_forgive_the_bolivians
 		prerequisite = {
 			focus = ACR_DNC_forgive_the_bolivians
 			focus = ACR_DNC_final_blow_to_bolivia
 		}
-
-		cost = 5
-
-		relative_position_id = ACR_DNC_final_blow_to_bolivia
-		x = -1
-		y = 1
 
 		available = {
 			is_subject = no
@@ -568,539 +787,18 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ACR_DNC_mutual_protection_agreement_with_brazil
-		icon = GFX_focus_BRA_department_of_propaganda
-
-		prerequisite = {
-			focus = ACR_DNC_ally_brazil
-		}
-
-		cost = 10
-
-		relative_position_id = ACR_DNC_ally_brazil
-		x = 2
-		y = 1
-
-		available = {
-			is_subject = no
-			BRA = {
-				exists = yes
-				is_subject = no
-				has_war = no
-			}
-		}
-
-		completion_reward = {
-			BRA = {
-				country_event = dnc_brazil.2
-			}
-			effect_tooltip = {
-				custom_effect_tooltip = if_they_accept_tt
-				give_guarantee = BRA
-				BRA = {
-					give_guarantee = ROOT
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ACR_DNC_ally_brazil
-		icon = GFX_goal_generic_befriend_brazil
-
-		prerequisite = {
-			focus = ACR_DNC_after_it_all
-		}
-
-		prerequisite = {
-			focus = ACR_DNC_forgive_the_bolivians
-			focus = ACR_DNC_final_blow_to_bolivia
-
-		}
-
-		relative_position_id = ACR_DNC_after_it_all
-		x = 0
-		y = 2
-
-		cost = 5
-
-		available = {
-			is_subject = no
-			OR = {
-				is_faction_leader = yes
-				AND = {
-					OR = {
-						has_government = democratic
-						has_government = neutrality
-					}
-				}
-			}
-			BRA = {
-				exists = yes
-				is_in_faction = no
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-			BRA = {
-				OR = {
-					exists = no
-					is_subject = yes
-					is_ally_with = ROOT
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					is_in_faction = yes
-					faction_leader = {
-						original_tag = ACR
-					}
-				}
-			}
-			else = {
-				BRA = {
-					country_event = generic.5
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = ACR_DNC_exchange_technology
-		icon = GFX_goal_tfv_generic_tech_sharing
-
-		prerequisite = {
-			focus = ACR_DNC_befriend_peru
-			focus = ACR_DNC_improve_brazilian_trade_relations
-		}
-
-		cost = 5
-
-		relative_position_id = ACR_DNC_improve_brazilian_trade_relations
-		x = 0
-		y = 1
-
-		available = {
-			num_faction_members > 2
-		}
-
-		completion_reward = {
-			add_to_tech_sharing_group = ACR_tech_exchange
-			every_other_country = {	
-				limit = {
-					is_in_faction_with = ROOT
-				}
-				add_to_tech_sharing_group = ACR_tech_exchange
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = ACR_DNC_increase_food_and_resource_imports
-		icon = GFX_focus_generic_agricultural_subsidies
-
-		relative_position_id = ACR_DNC_improve_brazilian_trade_relations
-		x = 2
-		y = 0
-
-		prerequisite = {
-			focus = ACR_DNC_befriend_peru
-			focus = ACR_DNC_improve_brazilian_trade_relations
-		}
-
-		cost = 10
-
-		available = {
-			count_triggers = {
-				amount = 2
-				is_in_faction_with = PRU
-				is_in_faction_with = BRA
-			}
-		}
-
-		completion_reward = {
-
-			build_railway = {	#Internal railway, necessary to connect with Brazil
-				level = 2
-				fallback = yes
-				start_state = 912
-				target_state = 500
-			}
-
-			build_railway = {	
-				level = 1		
-				fallback = yes
-				start_state = 912
-				target_state = 487
-			}
-
-			build_railway = {	
-				level = 1		
-				fallback = yes
-				start_province = 912
-				target_province = 492
-			}
-
-			add_offsite_building = { 
-				type = industrial_complex level = 2 
-			}
-
-			every_other_country = {	
-				limit = {
-					is_in_faction_with = ROOT
-					OR = {
-						original_tag = BOL
-						original_tag = PRU
-						original_tag = BRA
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = ACR_DNC_double_down_on_heavy_industry
-		icon = GFX_focus_generic_military_industry
-
-		prerequisite = {
-			focus = ACR_DNC_increase_food_and_resource_imports
-			focus = ACR_DNC_exchange_technology
-		}
-
-		cost = 10
-
-		relative_position_id = ACR_DNC_increase_food_and_resource_imports
-		x = 0
-		y = 1
-
-		available = {
-			num_faction_members > 2
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					arms_factory > 1
-				}
-				remove_building = {
-					type = arms_factory
-					level = 2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
-	}	
-
-	focus = {
 		id = ACR_DNC_focus_on_our_industry
-		icon = GFX_SOV_develop_the_urals_ccp_2d_sov_compatibility
-
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		x = -4
+		y = 1
+		relative_position_id = ACR_DNC_victory_against_it_all
 		prerequisite = {
 			focus = ACR_DNC_victory_against_it_all
 		}
 
-		relative_position_id = ACR_DNC_victory_against_it_all
-		x = -5
-		y = 1
-		cost = 5
-
 		completion_reward = {
 			remove_ideas = ACR_against_all_odds
-		}
-	}	
-
-	focus = {
-		id = ACR_DNC_additional_research_slot
-		icon = GFX_focus_research
-		prerequisite = { focus = ACR_DNC_focus_on_our_industry }
-		relative_position_id = ACR_DNC_focus_on_our_industry		
-		x = 0
-		y = 1
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			if = {
-				limit = { amount_research_slots > 3 }
-				num_of_owned_factories > 50
-			}
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}	
-
-	focus = {
-		id = ACR_DNC_region_strategy
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = ACR_DNC_focus_on_our_industry }
-		relative_position_id = ACR_DNC_focus_on_our_industry		
-		x = -2
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	
-		complete_tooltip = {
-			random_state = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ACR_DNC_develop_the_republic
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = ACR_DNC_region_strategy }
-		x = 0
-		y = 1
-		relative_position_id = ACR_DNC_region_strategy
-		cost = 5
-
-		available = {
-			
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}	
-
-	focus = {
-		id = ACR_DNC_expansion_of_industry
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = ACR_DNC_focus_on_our_industry }
-		x = 2
-		y = 1
-		relative_position_id = ACR_DNC_focus_on_our_industry
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			
-		}
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {									
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {									
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			build_railway = {
-				level = 1
-				start_province = 13280
-				target_province = 13278
-			}
-		}
-	}	
-
-	focus = {
-		id = ACR_DNC_start_central_industrial_region
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = ACR_DNC_expansion_of_industry }
-		x = 0
-		y = 1
-		relative_position_id = ACR_DNC_expansion_of_industry
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			
-		}
-	
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ACR_DNC_mine_for_steel
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = ACR_DNC_focus_on_our_industry }
-		x = 4
-		y = 1
-		relative_position_id = ACR_DNC_focus_on_our_industry
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {		
-			912 = {
-				owns_or_subject_of = yes
-				controller = {
-					tag = PREV.OWNER
-				}
-			}
-		}
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 10
-				state = 912
-			}
-		}
-	}	
-
-	focus = {
-		id = ACR_DNC_develop_rubber_industries
-		icon = GFX_SOV_synthetic_rubber_ccp_2d_sov_compatibility
-		prerequisite = { focus = ACR_DNC_mine_for_steel }
-		x = 0
-		y = 1
-		relative_position_id = ACR_DNC_mine_for_steel
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {		
-			912 = {
-				owns_or_subject_of = yes
-				controller = {
-					tag = PREV.OWNER
-				}
-			}
-		}
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_resource = {
-				type = rubber
-				amount = 15
-				state = 912
-			}
 		}
 	}	
 
