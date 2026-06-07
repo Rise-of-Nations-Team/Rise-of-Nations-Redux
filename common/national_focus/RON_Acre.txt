@@ -12,7 +12,7 @@ focus_tree = {
 	}
 	default = no
 	reset_on_civilwar = no
-	continuous_focus_position = { x = 50 y = 1600 }	
+	continuous_focus_position = { x = 50 y = 1600 }
 
 	focus = {
 		id = ACR_DNC_careful_as_it_goes
@@ -38,9 +38,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 10
-			country_event = { id = dnc_acre.2 }			
+			country_event = { id = dnc_acre.2 }
 		}
-	}	
+	}
 
 	focus = {
 		id = ACR_DNC_not_much_time_left
@@ -55,7 +55,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = dnc_acre.2 }
 		}
-	}	
+	}
 
 	focus = {
 		id = ACR_DNC_galvez_firm_grasp
@@ -76,7 +76,7 @@ focus_tree = {
 				character = ACR_luis_galvez_rodriguez
 				ruling_only = yes
 			}
-		}		
+		}
 		completion_reward = {
 			add_popularity = {
    	 			ideology = democratic
@@ -101,10 +101,10 @@ focus_tree = {
    	 			ideology = democratic
     			popularity = 0.10
 			}
-			add_ideas = ACR_full_scale_defense			
+			add_ideas = ACR_full_scale_defense
 		}
 	}
-	
+
 	focus = {
 		id = ACR_DNC_diplomacy_first
 		icon = GFX_goal_generic_intelligence_exchange
@@ -118,7 +118,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 		}
-	}	
+	}
 
 	focus = {
 		id = ACR_DNC_emergency_national_assembly
@@ -142,8 +142,8 @@ focus_tree = {
 		}
 		completion_reward = {
 
-		}		
-	}	
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_politics_for_later
@@ -162,9 +162,9 @@ focus_tree = {
 			}
 			set_politics = {
 				elections_allowed = no
-			}				
-		}	
-	}	
+			}
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_defensive_stand
@@ -182,8 +182,8 @@ focus_tree = {
     			popularity = 0.05
 			}
 			add_political_power = 25
-		}	
-	}	
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_de_sousa_thinking
@@ -204,7 +204,7 @@ focus_tree = {
 				character = ACR_antonio_de_sousa_braga
 				ruling_only = yes
 			}
-		}			
+		}
 		completion_reward = {
 			add_popularity = {
    	 			ideology = neutrality
@@ -212,7 +212,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
 		id = ACR_DNC_prepare_the_arms
 		icon = GFX_goal_generic_construct_mil_factory
@@ -245,9 +245,9 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-			}			
-		}	
-	}	
+			}
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_offensive_stand
@@ -260,9 +260,9 @@ focus_tree = {
 			focus = ACR_DNC_prepare_the_arms
 		}
 		completion_reward = {
-			add_ideas = ACR_arms_against_all		
-		}	
-	}	
+			add_ideas = ACR_arms_against_all
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_the_unevitable
@@ -283,8 +283,8 @@ focus_tree = {
     			popularity = 0.20
 			}
 			add_political_power = 50
-		}	
-	}	
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_victory_against_it_all
@@ -306,7 +306,7 @@ focus_tree = {
 					target = ROOT
 					value > 30
 				}
-			}			
+			}
 		}
 		completion_reward = {
 			add_popularity = {
@@ -316,10 +316,10 @@ focus_tree = {
 			add_timed_idea = {
 				idea = ACR_victory_against_odds
 				days = 365
-			}			
+			}
 			add_political_power = 50
-		}	
-	}	
+		}
+	}
 
 	focus = {
 		id = ACR_DNC_after_it_all
@@ -471,7 +471,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_tech_sharing_group = ACR_tech_exchange
-			every_other_country = {	
+			every_other_country = {
 				limit = {
 					is_in_faction_with = ROOT
 				}
@@ -511,25 +511,25 @@ focus_tree = {
 				target_state = 500
 			}
 
-			build_railway = {	
-				level = 1		
+			build_railway = {
+				level = 1
 				fallback = yes
 				start_state = 912
 				target_state = 487
 			}
 
-			build_railway = {	
-				level = 1		
+			build_railway = {
+				level = 1
 				fallback = yes
 				start_province = 912
 				target_province = 492
 			}
 
-			add_offsite_building = { 
-				type = industrial_complex level = 2 
+			add_offsite_building = {
+				type = industrial_complex level = 2
 			}
 
-			every_other_country = {	
+			every_other_country = {
 				limit = {
 					is_in_faction_with = ROOT
 					OR = {
@@ -644,7 +644,7 @@ focus_tree = {
 		completion_reward = {
 			BOL = {
 				country_event = generic.5
-			}		
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -721,7 +721,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_government = democratic
-					has_government = neutrality					
+					has_government = neutrality
 				}
 				set_rule = {
 					can_puppet = yes
@@ -781,7 +781,7 @@ focus_tree = {
 		completion_reward = {
 			PRU = {
 				country_event = generic.5
-			}			
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -800,6 +800,6 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = ACR_against_all_odds
 		}
-	}	
+	}
 
 }
