@@ -58,28 +58,28 @@ country_event = {
 	picture = GFX_report_event_imperial_conference
 
 	is_triggered_only = yes
-    fire_only_once = yes
+	fire_only_once = yes
 
-    trigger = {
-        original_tag = QIN
-        date > 1901.10.7
-        has_unit_leader = 68550
-    }
+	trigger = {
+		original_tag = QIN
+		date > 1901.10.7
+		has_character = GUC_li_hongzhang
+	}
 
-    immediate = {
-        hidden_effect = {
-            remove_unit_leader = 68550
-            set_country_flag = DNC_QIN_yuan_in_charge
-        }
-    }
+	immediate = {
+		hidden_effect = {
+			retire_character = GUC_li_hongzhang
+			set_country_flag = DNC_QIN_yuan_in_charge
+		}
+	}
 
 	option = {
-        name = dnc_china.3.a
-        effect_tooltip = {
-			remove_unit_leader = 68550
+		name = dnc_china.3.a
+		effect_tooltip = {
+			retire_character = GUC_li_hongzhang
 		}
-        add_war_support = -0.05
-    }
+		add_war_support = -0.05
+	}
 }
 country_event = {
 	id = dnc_china.4 #political situation
@@ -625,7 +625,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 
@@ -1251,7 +1251,7 @@ country_event = {
 	
 # 	option = {
 # 		name = chinese_empire.2.a
-# 		ai_chance = { factor = 1 }
+# 		ai_chance = { base = 1 }
 # 		QIN = {
 # 			declare_war_on = {
 # 				target = FRA
@@ -1658,7 +1658,7 @@ country_event = { #Bitter peace
 # 	}
 # 	option = { #republic path
 # 		name = chinese_empire.6.a
-# 		ai_chance = { factor = 10 }
+# 		ai_chance = { base = 10 }
 # 		hidden_effect = {
 			
 # 			CHI = {

@@ -1,0 +1,579 @@
+characters={
+	DDR_georgy_zhukov={
+		name = DDR_georgy_zhukov
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Georgy_Zhukov.dds"
+			}
+		}    
+		field_marshal = {
+			traits = { red_army_trait communist_party_trait media_personality armor_officer war_hero winter_specialist }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+			visible = {
+				date < 1949.1.1
+			}            
+		}  
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = ddr_georgy_zhukov
+			ledger = army
+			allowed = {
+				original_tag = DDR
+			}
+			traits = {
+				mass_assault_expert
+			}
+			visible = {
+				date < 1949.1.1
+			}            
+		}              
+	}
+
+	DDR_vasily_sokolovsky={
+		name = DDR_vasily_sokolovsky
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Vasily_Sokolovsky.dds"
+			}
+		}     
+		corps_commander = {
+			traits = { red_army_trait communist_party_trait war_hero winter_specialist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			visible = {
+				date < 1950.1.1
+			}            
+		}                
+	}    
+
+	DDR_wilhelm_pieck={
+		name = DDR_wilhelm_pieck
+		portraits={
+			civilian={
+				large=GFX_portrait_GER_wilhelm_pieck
+			}
+		}
+		country_leader={
+	        ideology = stalinism
+			desc = "POLITICS_WILHELM_PIECK_DESC"	
+			expire="1960.9.7.1"            
+			traits={ staunch_stalinist socialist_giant }
+		}
+	}
+
+	DDR_walter_ulbricht={
+		name = DDR_walter_ulbricht
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Walter_Ulbricht.dds"
+			}
+		}
+		country_leader={
+	        ideology = stalinism
+			desc = "POLITICS_WALTER_ULBRICHT_DESC"	
+			expire="1973.8.1.1"            
+			traits={ veteran_communist mundane_speaker authoritarian staunch_stalinist } 
+		}
+	}    
+
+	DDR_erich_honecker={
+		name = DDR_erich_honecker
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Erich_Honecker.dds"
+			}
+		}
+		country_leader={
+	        ideology = stalinism
+			desc = "POLITICS_ERICH_HONECKER_DESC"	
+			expire="1994.5.29.1"            
+			traits={ staunch_stalinist anti_democrat } 
+		}
+	} 
+
+	DDR_manfred_gerlach={
+		name = DDR_manfred_gerlach
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Manfred_Gerlach.dds"
+			}
+		}
+		country_leader={
+	        ideology = liberalism
+			desc = "POLITICS_MANFRED_GERLACH_DESC"	
+			expire="2011.10.17.1"            
+			traits={  } 
+		}        
+		country_leader={
+	        ideology = marxism
+			desc = "POLITICS_MANFRED_GERLACH_DESC"	
+			expire="2011.10.17.1"            
+			traits={  } 
+		}
+	}
+
+    #OTHER POLITICAL CANDIDATES  
+
+	DDR_ibrahim_bohme={
+		name = DDR_ibrahim_bohme
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Ibrahim_Bohme.dds"
+			}
+		}
+		country_leader={
+	        ideology = socialism
+			desc = "POLITICS_IBRAHIM_BOHME_DESC"	
+			expire="1999.11.22.1"            
+			traits={  } 
+		}
+	}
+
+	DDR_hans_modrow={
+		name = DDR_hans_modrow
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Hans_Modrow.dds"
+			}
+		}
+		country_leader={
+	        ideology = socialism
+			desc = "POLITICS_HANS_MODROW_DESC"	
+			expire="2023.2.1.1"            
+			traits={  } 
+		}        
+		country_leader={
+	        ideology = nonaligned_socialism
+			desc = "POLITICS_HANS_MODROW_DESC"	
+			expire="2023.2.1.1"            
+			traits={  } 
+		}
+	} 
+
+	DDR_lothar_bolz={
+		name = DDR_lothar_bolz
+		portraits={
+			civilian={
+				large="gfx/leaders/DDR/Portrait_DDR_Lothar_Bolz.dds"
+			}
+		}
+		country_leader={
+	        ideology = nonaligned_socialism
+			desc = "POLITICS_LOTHAR_BOLZ_DESC"	
+			expire="1986.12.28.1"            
+			traits={  } 
+		}
+	}           
+
+    #GENERALS 1949-1990
+
+	DDR_vasily_chuykov = { # Commander-in-Chief of the Group of Soviet Forces in East Germany from 1949 until 1953
+		name = DDR_vasily_chuykov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_vasily_chuykov
+				small=GFX_portrait_SOV_vasily_chuykov_small
+			}
+		}
+		corps_commander = {
+			traits = { red_army_trait brilliant_strategist career_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				date < 1960.1.1
+			}
+		}
+	}
+
+	DDR_willi_stoph = { 
+		name = DDR_willi_stoph
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Willi_Stoph.dds"
+			}
+		}
+		field_marshal = {
+			traits = { gdr_communist_party gdr_army politically_connected defensive_doctrine infantry_officer engineer_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			visible = {
+				date < 1989.11.1
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = DDR_willi_stoph
+			ledger  = army 
+			traits  = {
+				army_chief_entrenchment_2 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = {
+				date < 1989.11.1
+			}			
+		}		
+	}    
+
+	DDR_karl_kleinjung = { 
+		name = DDR_karl_kleinjung
+		portraits = {
+			army = {
+				large = "gfx/leaders/DDR/Portrait_DDR_Karl_Kleinjung.dds"
+			}
+		}
+		field_marshal = {
+			traits = { gdr_communist_party gdr_army organisational_leader skilled_staffer infantry_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			visible = {
+				date < 1981.1.1
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = DDR_karl_kleinjung
+			ledger  = army 
+			traits  = {
+				army_chief_organizational_3 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = {
+				date < 1981.1.1
+			}			
+		}		
+	}    
+
+	DDR_vincenz_muller = { 
+		name = DDR_vincenz_muller
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Vincenz_Muller.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army politically_connected panzer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			visible = {
+				date < 1959.1.1
+			}
+		}
+	} 
+
+	DDR_walter_freytag = { 
+		name = DDR_walter_freytag
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Walter_Freytag.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army career_officer trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				date < 1958.1.1
+			}
+		}
+	} 
+
+	DDR_manfred_dietze = { #Doesn't appear until 1955
+		name = DDR_manfred_dietze
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Manfred_Dietze.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army urban_assault_specialist }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			visible = {
+				date < 1989.1.1
+			}
+		}
+	}          
+
+	DDR_friedrich_dickel = { 
+		name = DDR_friedrich_dickel
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Friedrich_Dickel.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army brilliant_strategist }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				date < 1989.1.1
+			}
+		}
+	} 
+
+	DDR_heinz_hoffmann = { 
+		name = DDR_heinz_hoffmann
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Heinz_Hoffmann.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army war_hero brilliant_strategist infantry_officer }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 2
+			visible = {
+				date < 1985.12.2
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = DDR_karl_kleinjung
+			ledger  = army 
+			traits  = {
+				army_chief_reform_2 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = {
+				date < 1985.12.2
+			}			
+		}		
+	}       
+
+	DDR_fritz_streletz = { #doesn't appear until 1955
+		name = DDR_fritz_streletz
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Fritz_Streletz.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army national_socialist_trait organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				date < 1990.1.1
+			}
+		}
+	}
+
+	DDR_heinz_kessler = { 
+		name = DDR_heinz_kessler
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Heinz_Kessler.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_airforce gdr_army politically_connected harsh_leader }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				date < 1990.1.1
+			}
+		}
+	} 
+
+	DDR_herbert_scheibe = { 
+		name = DDR_herbert_scheibe
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Herbert_Scheibe.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_airforce gdr_army politically_connected harsh_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				date < 1985.3.15
+			}
+		}
+	}
+
+	DDR_rolf_berger = { #Appears after 1960
+		name = DDR_rolf_berger
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Rolf_Berger.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_airforce gdr_army career_officer trait_cautious }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 1
+			visible = {
+				date < 2009.7.29
+			}
+		}
+	} 
+
+	DDR_sigfrid_riedel = { 
+		name = DDR_sigfrid_riedel
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Sigfrid_Riedel.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_army politically_connected inflexible_strategist }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				date < 1983.1.1
+			}
+		}
+	} 
+
+	DDR_wolfgang_reinhold = { #appears by 1955
+		name = DDR_wolfgang_reinhold
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Wolfgang_Reinhold.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_airforce gdr_army organizer skilled_staffer adaptable }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			visible = {
+				date < 1989.12.31
+			}
+		}
+	}    
+
+	DDR_sigmund_jahn = { #Doesn't Appear until 1960
+		name = DDR_sigmund_jahn
+		portraits = {
+			army = {
+				large="gfx/leaders/DDR/Portrait_DDR_Sigmund_Jahn.dds"
+			}
+		}
+		corps_commander = {
+			traits = { gdr_communist_party gdr_airforce gdr_army trait_engineer commando adaptable }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 5
+			visible = {
+				date < 2002.1.1
+			}
+		}
+	}
+
+	#ADMIRALS
+
+	DDR_waldemar_verner={
+		name=DDR_waldemar_verner
+		portraits={
+			navy={
+				large="gfx/leaders/DDR/Portrait_DDR_Waldemar_Verner.dds"
+			}			
+		}
+		navy_leader={
+			traits={ gdr_navy gdr_communist_party politically_connected blue_water_expert }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=4
+			coordination_skill=3
+			visible = {
+				date < 1978.12.31
+			}			
+		}		
+		advisor={
+			slot = high_command
+			idea_token = DDR_waldemar_verner
+			ledger  = navy 
+			allowed  = {
+				original_tag  = DDR
+			}
+			traits  = {
+				navy_fleet_logistics_2 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+			visible = {
+				date < 1978.12.31
+			}			
+		}		
+	}
+
+	DDR_theodor_hoffmann={ #doesn't appear until 1970
+		name=DDR_theodor_hoffmann
+		portraits={
+			navy={
+				large="gfx/leaders/DDR/Portrait_DDR_Theodor_Hoffmann.dds"
+			}			
+		}
+		navy_leader={
+			traits={ gdr_navy gdr_communist_party politically_connected fleet_protector lancer }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+			visible = {
+				date < 1990.12.31
+			}			
+		}				
+	}			                 
+}

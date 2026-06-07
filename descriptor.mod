@@ -36,4 +36,4 @@ tags={
 }
 name="Rise of Nations Redux"
 picture="Rise_of_Nations.gif"
-supported_version="1.17.*"
+supported_version="1.18.*"

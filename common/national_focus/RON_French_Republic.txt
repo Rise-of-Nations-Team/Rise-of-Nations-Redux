@@ -1,3 +1,4 @@
+#!gfx:interface/RON_goals.gfx
 focus_tree = {
 	id = France_DNC
 
@@ -29,9 +30,7 @@ focus_tree = {
 		bypass = {
 			has_idea = FRA_political_violence 
 		}
-		allow_branch = {
-			date < 1910.1.1 
-		}
+
 		completion_reward = {
 			add_ideas = FRA_political_violence 
 			add_political_power = 3
@@ -1023,9 +1022,7 @@ add_ideas =tblra_church_support
 		icon = GFX_goal_nazbol_nationalization_of_economy
 		x = 16 
 		y = 0
-		allow_branch = {
-			date < 1910.1.1 
-		}
+
 		cost = 10
 		#prerequisite = { focus = FRA_send_missionaries_to_the_colonies }
 		available = {
