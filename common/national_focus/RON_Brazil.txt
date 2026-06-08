@@ -737,6 +737,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BRA_DNC_expand_transport_network
 		}
+		prerequisite = {
+			focus = BRA_DNC_increase_agricultural_production
+		}
 		completion_reward = {
 			custom_effect_tooltip = BRA_DNC_modify_economy_tt
 			add_to_variable = {
@@ -817,6 +820,8 @@ focus_tree = {
 		relative_position_id = BRA_DNC_industrial_logistic_hubs
 		prerequisite = {
 			focus = BRA_DNC_national_road_expansion
+		}
+		prerequisite = {
 			focus = BRA_DNC_industrial_logistic_hubs
 		}
 		available = {
@@ -832,6 +837,10 @@ focus_tree = {
 			add_to_variable = {
 				BRA_DNC_economy_production_speed_infrastructure_factor = 0.05
 				tooltip = production_speed_infrastructure_factor_tt
+			}
+			add_to_variable = {
+				BRA_DNC_economy_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			495 = {
@@ -870,6 +879,139 @@ focus_tree = {
 				}
 				else = {
 					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRA_DNC_expand_coffee_plantations
+		icon = GFX_focus_generic_coffee
+		cost = 5
+		x = 6
+		y = 1
+		relative_position_id = BRA_DNC_economic_development
+		prerequisite = {
+			focus = BRA_DNC_economic_development
+		}
+		mutually_exclusive = {
+			focus = BRA_DNC_expand_dairy_farms
+		}
+		available = {
+			controls_state = 501
+		}
+		completion_reward = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			501 = {
+				ETH_upgrade_state_category = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRA_DNC_expand_dairy_farms
+		icon = GFX_focus_CHL_focus_on_cattle_and_wool
+		cost = 5
+		x = 8
+		y = 1
+		relative_position_id = BRA_DNC_economic_development
+		prerequisite = {
+			focus = BRA_DNC_economic_development
+		}
+		mutually_exclusive = {
+			focus = BRA_DNC_expand_coffee_plantations
+		}
+		available = {
+			controls_state = 496
+		}
+		completion_reward = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			496 = {
+				ETH_upgrade_state_category = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRA_DNC_increase_agricultural_production
+		icon = GFX_BRA_agriculture
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = BRA_DNC_expand_coffee_plantations
+		prerequisite = {
+			focus = BRA_DNC_expand_coffee_plantations
+			focus = BRA_DNC_expand_dairy_farms
+		}
+		available = {
+			controls_state = 496
+		}
+		completion_reward = {
+			custom_effect_tooltip = BRA_DNC_modify_economy_tt
+			add_to_variable = {
+				BRA_DNC_economy_global_building_slots_factor = 0.1
+				tooltip = global_building_slots_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				prioritize = {
+					496 501
+				}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -941,6 +1083,10 @@ focus_tree = {
 				character = BRA_manuel_ferraz_de_campos
 				ruling_only = yes
 			}
+			OR = {
+				has_completed_focus = BRA_DNC_expand_coffee_plantations
+				has_completed_focus = BRA_DNC_expand_dairy_farms
+			}
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -968,6 +1114,10 @@ focus_tree = {
 			has_country_leader = {
 				character = BRA_manuel_ferraz_de_campos
 				ruling_only = yes
+			}
+			OR = {
+				has_completed_focus = BRA_DNC_expand_coffee_plantations
+				has_completed_focus = BRA_DNC_expand_dairy_farms
 			}
 		}
 		completion_reward = {
