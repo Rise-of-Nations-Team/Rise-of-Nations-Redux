@@ -56,3 +56,32 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = dnc_acre.3
+	title = dnc_acre.3.t
+	desc = dnc_acre.3.desc
+	picture = GFX_report_event_tur_industry
+
+	is_triggered_only = yes
+
+	option = {
+		name = dnc_acre.3.a
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			diplomatic_relation = { 
+				country = ACR #target country
+				relation = non_aggression_pact
+				active = yes 
+			}
+
+			give_guarantee = ACR
+			ACR = { give_guarantee = ROOT }
+		}		
+	}
+
+	option = {
+		name = dnc_acre.3.b
+		set_country_flag = BRA_DNC_public_private_partnerships_cflg
+	}
+}

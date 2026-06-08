@@ -1,8 +1,9 @@
 add_namespace = dnc_brazil
 
+#The Question of Economic Growth
 country_event = {
 	id = dnc_brazil.1
-	title = dnc_brazil.1.t
+	title = dnc_brazil.1.title
 	desc = dnc_brazil.1.desc
 	picture = GFX_report_event_tur_industry
 
@@ -33,31 +34,54 @@ country_event = {
 	}
 }
 
+#The 1902 Presidential Election
 country_event = {
 	id = dnc_brazil.2
-	title = dnc_brazil.2.t
+	title = dnc_brazil.2.title
 	desc = dnc_brazil.2.desc
-	picture = GFX_report_event_tur_industry
+	picture = GFX_report_event_PLACEHOLDER
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			set_country_flag = BRA_DNC_1902_elections_cflg
+		}
+	}
+
 	option = {
 		name = dnc_brazil.2.a
-		custom_effect_tooltip = if_they_accept_tt
-		effect_tooltip = {
-			diplomatic_relation = { 
-				country = ACR #target country
-				relation = non_aggression_pact
-				active = yes 
-			}
-
-			give_guarantee = ACR
-			ACR = { give_guarantee = ROOT }
-		}		
+		promote_character = BRA_rodrigues_alves
+		#TODO Add a historical choice tooltip for the player
 	}
 
 	option = {
 		name = dnc_brazil.2.b
-		set_country_flag = BRA_DNC_public_private_partnerships_cflg
+		promote_character = BRA_quintino_bocaiuva
+	}
+}
+
+#The 1906 Presidential Election
+country_event = {
+	id = dnc_brazil.3
+	title = dnc_brazil.3.title
+	desc = dnc_brazil.3.desc
+	picture = GFX_report_event_PLACEHOLDER
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = BRA_DNC_1906_elections_cflg
+		}
+	}
+
+	option = {
+		name = dnc_brazil.3.a
+		#TODO Add a historical choice tooltip for the player
+	}
+
+	option = {
+		name = dnc_brazil.3.b
 	}
 }
