@@ -1,123 +1,150 @@
 ideas = {
 	country = {
-<<<<<<< Updated upstream
-=======
 
-        Brazilian_colonists = { 
-            modifier = {
-                monthly_population = 0.20
-                weekly_manpower = 400
-            }
-            cancel = {
-				date > 1910.01.01
-			}           
-			picture = BRA_us_of_brazil           
+		Brazilian_colonists = {
+
+			picture = BRA_us_of_brazil
+
+			allowed = {
+				always = no
+			}
+
 			removal_cost = -1
+
 			allowed_civil_war = {
 				has_government = fascism
-			}			
-        }
-
->>>>>>> Stashed changes
-		ACR_veterans_of_the_cuban_war = {
-			picture = chi_army_corruption3
-			allowed = { 
-				tag = ACR 
 			}
+
+			cancel = {
+				date > 1910.01.01
+			}
+
 			modifier = {
-				breakthrough_factor = 0.1
-				experience_gain_army_unit_factor = 0.1
-				max_planning_factor = 0.02
-				army_speed_factor = -0.05
-				experience_gain_army = 0.1
-			}			
+				monthly_population = 1
+				weekly_manpower = 200
+			}
+		}
+
+		ACR_veterans_of_the_cuban_war = {
+
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				experience_gain_army = 0.15
+			}
 		}
 
 		ACR_against_all_odds = {
-			picture = ACR_against_all_odds
-			allowed = { 
-				tag = ACR 
+
+			allowed = {
+				always = no
 			}
+
+			removal_cost = -1
+
 			cancel = {
-    			date > 1910.1.1
+				date > 1910.1.1
 			}
+
 			targeted_modifier = {
 				tag = BOL
 				defense_bonus_against = 0.05
 				defensive_war_stability_factor = 0.05
-			}	
+			}
+
 			targeted_modifier = {
 				tag = BRA
 				defense_bonus_against = 0.05
 				defensive_war_stability_factor = 0.05
-			}				
+			}
+
 			modifier = {
 				war_stability_factor = 0.1
 				stability_factor = -0.1
-				army_morale_factor = -0.01			
+				army_morale_factor = -0.01
 			}
 
-		}	
-		
+		}
+
 		ACR_recent_republic = {
-			picture = ACR_recent_republic
-			allowed = { 
-				tag = ACR 
+
+			allowed = {
+				always = no
 			}
+
+			removal_cost = -1
+
 			cancel = {
-    			date > 1915.1.1
+				date > 1915.1.1
 			}
+
 			modifier = {
 				stability_factor = -0.05
-				political_power_factor = 0.10
-				conscription_factor = 0.10
-				drift_defence_factor = 0.05
-				research_speed_factor = 0.02
-			}						
-		}		
+				political_power_factor = 0.05
+				conscription = 0.015
+				drift_defence_factor = -0.05
+			}
+		}
 
-		ACR_full_scale_defense ={
-			picture = ACR_recent_republic			
-			allowed = { 
-				tag = ACR 
-			}			
+		ACR_full_scale_defense = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
 			modifier = {
-				army_org_factor = 0.5
-				dig_in_speed_factor = 0.3
+				army_org_factor = 0.05
+				dig_in_speed_factor = 0.1
 				max_planning_factor = 0.05
-				training_time_factor = 0.3
+				training_time_factor = -0.1
 				war_support_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
 		}
 
-		ACR_arms_against_all ={
-			picture = ACR_arms_against_all			
-			allowed = { 
-				tag = ACR 
-			}			
+		ACR_arms_against_all = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
 			modifier = {
-				army_org_factor = 0.2
-				breakthrough_factor = 0.3
+				army_org_factor = 0.05
+				breakthrough_factor = 0.1
 				max_planning_factor = 0.05
-				training_time_factor = -0.2
-				war_support_factor = 0.2
+				training_time_factor = -0.15
+				war_support_factor = 0.15
 				army_core_attack_factor = 0.1
-			}			
-		}	
-		
-		ACR_victory_against_odds ={
-			picture = ACR_victory_against_odds			
-			allowed = { 
-				tag = ACR 
-			}			
+			}
+		}
+
+		ACR_victory_against_odds = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
 			modifier = {
-				consumer_goods_factor = -0.10
-				army_org_regain = 0.10
-				army_morale_factor = 0.10
-				experience_gain_army_factor = 0.25		
-				political_power_gain = 0.20	
-			}			
-		}			
+				army_org_regain = 0.05
+				army_morale_factor = 0.05
+				experience_gain_army_factor = 0.25
+				political_power_factor = 0.05
+			}
+		}
 	}
-}		
+}
