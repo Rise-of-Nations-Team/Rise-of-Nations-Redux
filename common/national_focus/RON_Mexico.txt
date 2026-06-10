@@ -23,58 +23,46 @@ focus_tree = {
 	###############################################################################
 	###############################################################################
 
-	####### Focus to plan Porfirio's succession ########
+	### PORFIRIATO SUCCESSOR ###
+
 	focus = {
 		id = MEX_DNC_choose_a_successor
-		icon = GFX_goal_generic_political_actions
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
 		x = 5
-		y = 1
-		cost = 10
-		prerequisite = {
-		}
-		ai_will_do = {
-			factor = 0
-		}
+		y = 0
+
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
+			country_event = { id = dnc_mexico.1 hours = 6 }
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus for picking Leon de la Barra as successor
 	focus = {
 		id = MEX_DNC_the_secretary_of_exterior
-		icon = GFX_goal_generic_political_actions
-		x = 2
-		y = 2
-		cost = 10
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
+		mutually_exclusive = { focus = MEX_DNC_the_secretary_of_economy focus = MEX_DNC_the_secretary_of_defense focus = MEX_DNC_the_young_general }
 		prerequisite = { focus = MEX_DNC_choose_a_successor }
-		mutually_exclusive = {
-			focus = MEX_DNC_the_secretary_of_economy
-			focus = MEX_DNC_the_secretary_of_defense
-			focus = MEX_DNC_the_young_general
-		}
-		ai_will_do = { factor = 0 }
-		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.10
+		x = -6
+		y = 1
+		relative_position_id = MEX_DNC_choose_a_successor
+
+		available = {
+			hidden_trigger = {
+				always = no
 			}
+		}
+
+		completion_reward = {
+			#TODO Add a KR style tooltip that this focus will be completed by an event
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
@@ -183,22 +171,28 @@ focus_tree = {
 		}
 	}
 
-	#Focus for picking Jose Yves Limantour as successor
 	focus = {
 		id = MEX_DNC_the_secretary_of_economy
-		icon = GFX_goal_generic_political_actions
-		x = 4
-		y = 2
-		cost = 10
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
+		mutually_exclusive = { focus = MEX_DNC_the_secretary_of_exterior focus = MEX_DNC_the_secretary_of_defense focus = MEX_DNC_the_young_general }
 		prerequisite = { focus = MEX_DNC_choose_a_successor }
-		mutually_exclusive = {
-			focus = MEX_DNC_the_secretary_of_exterior
-			focus = MEX_DNC_the_secretary_of_defense
-			focus = MEX_DNC_the_young_general
-		}
-		ai_will_do = { factor = 0 }
-		completion_reward = {
+		x = -2
+		y = 1
+		relative_position_id = MEX_DNC_choose_a_successor
 
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		completion_reward = {
+			#TODO Add a KR style tooltip that this focus will be completed by an event
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
@@ -277,22 +271,28 @@ focus_tree = {
 		}
 	}
 
-	#Focus to choose Bernardo Reyes as successor
 	focus = {
 		id = MEX_DNC_the_secretary_of_defense
-		icon = GFX_goal_generic_political_actions
-		x = 6
-		y = 2
-		cost = 10
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
+		mutually_exclusive = { focus = MEX_DNC_the_secretary_of_exterior focus = MEX_DNC_the_secretary_of_economy focus = MEX_DNC_the_young_general }
 		prerequisite = { focus = MEX_DNC_choose_a_successor }
-		mutually_exclusive = {
-			focus = MEX_DNC_the_secretary_of_exterior
-			focus = MEX_DNC_the_secretary_of_economy
-			focus = MEX_DNC_the_young_general
+		x = 2
+		y = 1
+		relative_position_id = MEX_DNC_choose_a_successor
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
 		}
-		ai_will_do = { factor = 0 }
+
 		completion_reward = {
-			
+			#TODO Add a KR style tooltip that this focus will be completed by an event
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
@@ -380,26 +380,28 @@ focus_tree = {
 		}
 	}
 
-	#Focus to choose Felix Diaz as successor
 	focus = {
 		id = MEX_DNC_the_young_general
-		icon = GFX_goal_generic_political_actions
-		x = 8
-		y = 2
-		cost = 10
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
+		mutually_exclusive = { focus = MEX_DNC_the_secretary_of_exterior focus = MEX_DNC_the_secretary_of_economy focus = MEX_DNC_the_secretary_of_defense }
 		prerequisite = { focus = MEX_DNC_choose_a_successor }
-		mutually_exclusive = {
-			focus = MEX_DNC_the_secretary_of_exterior
-			focus = MEX_DNC_the_secretary_of_economy
-			focus = MEX_DNC_the_secretary_of_defense
-		}
-		ai_will_do = { factor = 0 }
-		completion_reward = {
-			add_stability = 0.05
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.10
+		x = 6
+		y = 1
+		relative_position_id = MEX_DNC_choose_a_successor
+
+		available = {
+			hidden_trigger = {
+				always = no
 			}
+		}
+
+		completion_reward = {
+			#TODO Add a KR style tooltip that this focus will be completed by an event
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
@@ -509,7 +511,7 @@ focus_tree = {
 		id = MEX_DNC_keep_lerdo_law
 		icon = GFX_focus_generic_public_works
 		x = 11
-		y = 1
+		y = 2
 		cost = 10
 		prerequisite = {  }
 		ai_will_do = { factor = 1000 }
