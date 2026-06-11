@@ -7,6 +7,8 @@ bookmarks = {
 		default_country = "GER"
 		default = yes
 
+		filters = { new_content }
+
 		GER = {
 			history = "GER_PRE_WW1_DESC"
 			ideology = neutrality
@@ -21,12 +23,11 @@ bookmarks = {
 				GERDNC_weltpolitik
 			}
 		}
+
 		AUH = {
 			history = "AUH_PRE_WW1_DESC"
 			ideology = neutrality
 			ideas = {
-				multi_ethnic
-				AUH_ww1_House_Habsburg_Lorraine
 				AUH_unequal_union
 			}
 			focuses = {
@@ -35,6 +36,7 @@ bookmarks = {
 				AUHDNC_greater_german_solution
 			}
 		}
+
 		OTT = {
 			history = "OTT_PRE_WW1_DESC"
 			ideology = neutrality
@@ -46,6 +48,7 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
 		RUS = {
 			history = "RUS_PRE_WW1_DESC"
 			ideology = neutrality
@@ -60,12 +63,13 @@ bookmarks = {
 				RUS_new_revive_three_emp
 			}
 		}
+
 		ENG = {
 			history = "ENG_PRE_WW1_DESC"
 			ideology = democratic
 			ideas = {
 				ENG_pax_britannica
-				DNC_sun_never_sets
+				ENG_sun_never_sets
 				ENG_overextended_empire
 			}
 			focuses = {
@@ -74,6 +78,7 @@ bookmarks = {
 				ENGDNC_the_francobritish_union
 			}
 		}
+
 		FRA = {
 			history = "FRA_PRE_WW1_DESC"
 			ideology = democratic
@@ -85,6 +90,7 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
 		USA = {
 			history = "USA_PRE_WW1_DESC"
 			ideology = democratic
@@ -97,7 +103,10 @@ bookmarks = {
 			}
 		}
 
+		### MINORS ###
+
 		BRA = {
+			new_content = yes
 			minor = yes
 			history = "BRA_PRE_WW1_DESC"
 			ideology = neutrality
@@ -208,10 +217,11 @@ bookmarks = {
 				SER_first_serbian_republic
 			}
 		}
-		
+
 		"---" = {
 			history = "OTHER_PRE_WW1_DESC"
 		}
+
 		effect = {
 			randomize_weather = 22345            # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
