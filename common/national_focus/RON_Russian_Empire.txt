@@ -163,7 +163,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RUS_new_industry01
+		id = RUS_DNC_continue_industrializing
 		icon = GFX_goal_RUS_continue_industrialization
 		x = 0
 		y = 1
@@ -180,10 +180,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		219 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }	
+			random_owned_controlled_state = {
+				prioritize = {
+					219
 				}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -634,14 +648,14 @@ focus_tree = {
 
 
 	focus = {
-		id = RUS_new_hous
+		id = RUS_DNC_address_the_housing_crisis
 		icon = GFX_goal_RUS_the_housing_crisis
 		x = 0
-		y = 2
-		relative_position_id = RUS_new_industry01
+		y = 1
+		relative_position_id = RUS_DNC_continue_industrializing
 
 		prerequisite = {
-			focus = RUS_new_industry01
+			focus = RUS_DNC_continue_industrializing
 		}
 
 		cost = 10
@@ -651,8 +665,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = fight_hos
+			swap_ideas = {
+				remove_idea = RUS_DNC_crowded_cities_ns
+				add_idea = RUS_DNC_crowded_cities_2_ns
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_tooltip = RUS_DNC_build_low_cost_housing
+		}
 	}
 
 
@@ -661,10 +680,10 @@ focus_tree = {
 		icon = GFX_GER_focus_factories_factories_factories
 		x = 3
 		y = 1
-		relative_position_id = RUS_new_hous
+		relative_position_id = RUS_DNC_address_the_housing_crisis
 
 		prerequisite = {
-			focus = RUS_new_hous
+			focus = RUS_DNC_address_the_housing_crisis
 		}
 
 		mutually_exclusive = { focus = RUS_new_dep }
@@ -814,10 +833,10 @@ focus_tree = {
 		icon = GFX_goal_RUS_depend_on_the_french
 		x = -3
 		y = 1
-		relative_position_id = RUS_new_hous
+		relative_position_id = RUS_DNC_address_the_housing_crisis
 
 		prerequisite = {
-			focus = RUS_new_hous
+			focus = RUS_DNC_address_the_housing_crisis
 		}
 
 		mutually_exclusive = { focus = RUS_new_indep }
@@ -1277,9 +1296,9 @@ focus_tree = {
 			NOT = {has_idea = RUS_high_iliteracy_ns }
 			NOT = {has_idea = RUS_high_iliteracy_2_ns }
 			NOT = {has_idea = RUS_high_iliteracy_3_ns }
-			NOT = {has_idea = RUS_crowd }
-			NOT = {has_idea = RUS_crowd2 }
-			NOT = {has_idea = RUS_crowd3 }
+			NOT = {has_idea = RUS_DNC_crowded_cities_ns }
+			NOT = {has_idea = RUS_DNC_crowded_cities_2_ns }
+			NOT = {has_idea = RUS_DNC_crowded_cities_3_ns }
 			NOT = {has_idea = RUS_fear_of_revolution }
 			NOT = {has_idea = RUS_fear_of_revolution2 }
 			NOT = {has_idea = RUS_fear_of_revolution3 }

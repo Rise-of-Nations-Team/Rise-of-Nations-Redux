@@ -1,3 +1,47 @@
+economy_decisions = {
+
+	RUS_DNC_build_low_cost_housing = {
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		visible = {
+			has_completed_focus = RUS_DNC_address_the_housing_crisis
+			OR = {
+				has_idea = RUS_DNC_crowded_cities_2_ns
+				has_idea = RUS_DNC_crowded_cities_3_ns
+			}
+		}
+
+		available = {
+			OR = {
+				has_idea = RUS_DNC_crowded_cities_2_ns
+				has_idea = RUS_DNC_crowded_cities_3_ns
+			}
+		}
+
+		days_remove = 360
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = RUS_DNC_crowded_cities_2_ns
+				}
+				swap_ideas = {
+					remove_idea = RUS_DNC_crowded_cities_2_ns
+					add_idea = RUS_DNC_crowded_cities_3_ns
+				}
+			}
+			else = {
+				remove_ideas = RUS_DNC_crowded_cities_3_ns
+			}
+		}
+
+	}
+
+}
+
 # //TODO: Add back once the focus tree is done
 RUS_trans_caucasian_railway_cat = {
 	RUS_trans_caucasian_railway_phase1_236 = {
@@ -109,101 +153,6 @@ RUS_trans_caucasian_railway_cat = {
  		}
  	}
 
- }
-
- RUS_crowded = {
-
-    RUS_develop_mos = {
- 	   icon = GFX_decision_eng_install_government
-         
- 		 available = {
- 			 has_idea = RUS_crowd
- 		 }
-
-         fire_only_once = yes
- 		days_re_enable = 0
- 		days_remove = 10
-
- 		visible = {
-            tag = RUS
- 		}
-
- 		highlight_states={highlight_state_targets = { state = 219 }}        
-
- 		cost = 150
-
- 		remove_effect = {
- 			swap_ideas = { 
-               remove_idea = RUS_crowd
-               add_idea = RUS_crowd2
- 			             }
- 			add_stability = 0.05
- 		}
-
-       ai_will_do = {
- 		  factor = 90
- 	  }
-    }
-    RUS_develop_stpt = {
-         icon = GFX_decision_gre_investment_decisions
-
- 		 available = {
- 			 has_idea = RUS_crowd2
- 		             }
-
-         fire_only_once = yes
- 		days_re_enable = 0
- 		days_remove = 10
-
- 		visible = {
-            tag = RUS
- 		}
-
- 		highlight_states={highlight_state_targets = { state = 195 }}       
-
- 		cost = 150
-
- 		remove_effect = {
- 			swap_ideas = { 
-               remove_idea = RUS_crowd2
-               add_idea = RUS_crowd3
- 			             }
- 			add_stability = 0.05
- 		}
-
-       ai_will_do = {
- 		  factor = 90
- 	                }
-
- 	               }
-
-    RUS_develop_wrs = {
- 	   icon = GFX_decision_generic_factory
-         
- 		 available = {
- 			 has_idea = RUS_crowd3
- 		 }
-
-         fire_only_once = yes
- 		days_re_enable = 0
- 		days_remove = 10
-
- 		visible = {
- 			tag = RUS
- 		}
-
- 		highlight_states={highlight_state_targets = { state = 10 }} 
-
- 		cost = 150
-
- 		remove_effect = {
-               custom_effect_tooltip = crowd_final
-               add_political_power = 75
- 			  hidden_effect = {
- 				  RUS = { country_event = { id = DNC_Russia.11 days = 270 } }
- 			  }
-         }
-     }
  }
 
  RUS_fear = {
