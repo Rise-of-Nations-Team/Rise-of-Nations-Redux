@@ -26,7 +26,7 @@ focus_tree = {
 
 		
 	focus = {
-		id = RUS_new_industry0
+		id = RUS_DNC_the_russian_economy
 		icon = GFX_goal_RUS_economy
 		x = 10
 		y = 1
@@ -38,18 +38,94 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-		add_political_power	= 50
+			add_political_power	= 50
 		}
 	}
 
 	focus = {
-		id = RUS_new_literacy
-		icon = GFX_focus_research
-		x =2
-		y = 2
+		id = RUS_DNC_a_new_literacy_program
+		icon = GFX_goal_research_silver
+		x = -8
+		y = 1
+		relative_position_id = RUS_DNC_the_russian_economy
 
 		prerequisite = {
-			focus = RUS_new_industry0
+			focus = RUS_DNC_the_russian_economy
+		}
+
+		cost = 10
+
+		available = {
+		
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_high_iliteracy_3_ns
+				add_idea = RUS_high_iliteracy_2_ns
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_DNC_seek_church_education
+		icon = GFX_focus_GRE_an_orthodox_state
+		x = -1
+		y = 1
+		relative_position_id = RUS_DNC_a_new_literacy_program
+
+		cost = 10
+
+		prerequisite = {
+			focus = RUS_DNC_a_new_literacy_program
+		}
+
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		completion_reward = {
+			add_ideas = RUS_DNC_eastern_orthodox_schools_ns
+		}
+	}
+
+	focus = {
+		id = RUS_DNC_build_rural_schools
+		icon = GFX_focus_PRC_rural_region_development
+		x = 1
+		y = 1
+		relative_position_id = RUS_DNC_a_new_literacy_program
+
+		cost = 10
+
+		prerequisite = {
+			focus = RUS_DNC_a_new_literacy_program
+		}
+
+		available = {
+		
+		}
+
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = RUS_high_iliteracy_2_ns
+				add_idea = RUS_high_iliteracy_ns
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_DNC_improve_access_to_high_education
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 1
+		relative_position_id = RUS_DNC_seek_church_education
+
+		prerequisite = {
+			focus = RUS_DNC_seek_church_education
+			focus = RUS_DNC_build_rural_schools
 		}
 
 		cost = 10
@@ -59,18 +135,42 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-			add_political_power = 50
+			remove_ideas = RUS_high_iliteracy_ns
+		}
+	}
+
+
+	focus = {
+		id = RUS_DNC_free_university_tuitions
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		relative_position_id = RUS_DNC_improve_access_to_high_education
+
+		prerequisite = {
+			focus = RUS_DNC_improve_access_to_high_education
+		}
+
+		cost = 20
+
+		available = {
+		
+		}
+
+		completion_reward = { 
+			add_ideas = RUS_edu
 		}
 	}
 
 	focus = {
 		id = RUS_new_industry01
 		icon = GFX_goal_RUS_continue_industrialization
-		x = 10
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = RUS_DNC_the_russian_economy
 
 		prerequisite = {
-			focus = RUS_new_industry0
+			focus = RUS_DNC_the_russian_economy
 		}
 
 		cost = 5
@@ -96,7 +196,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = {
-			focus = RUS_new_industry0
+			focus = RUS_DNC_the_russian_economy
 		}
 
 		available = {
@@ -106,101 +206,6 @@ focus_tree = {
 		completion_reward = { 
 			unlock_decision_category_tooltip = RUS_trans_siberian_railway_cat
 
-		}
-	}
-
-	focus = {
-		id = RUS_new_orth
-		icon = GFX_focus_focus_fra_national_resistance_council
-		x = 1
-		y = 3
-
-		cost = 10
-
-		prerequisite = {
-			focus = RUS_new_literacy
-		}
-
-		available = {
-		
-		}
-
-		completion_reward = { 
-				random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-									}
-		}
-	}
-
-	focus = {
-		id = RUS_new_skool
-		icon = army_officers
-		x = 3
-		y = 3
-
-		cost = 10
-
-		prerequisite = {
-			focus = RUS_new_literacy
-		}
-
-		available = {
-		
-		}
-
-		completion_reward = { 
-				add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = RUS_new_excity
-		icon = GFX_focus_RUS_fra_imp
-		x = 9
-		y = 3
-
-		cost = 10
-
-		prerequisite = {
-			focus = RUS_new_industry01
-		}
-
-		available = {
-		
-		}
-
-		completion_reward = { 
-			add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			category = electronics
-								}
-		}
-	}
-
-	focus = {
-		id = RUS_new_imptool
-		icon = GFX_focus_RUS_imp_tools
-		x = 11
-		y = 3
-
-		prerequisite = {
-			focus = RUS_new_industry01
-		}
-
-		cost = 10
-
-		available = {
-		
-		}
-
-		completion_reward = { 
-			add_tech_bonus = {
-			bonus = 1
-			uses = 2
-			category = industry
-								}
 		}
 	}
 
@@ -474,7 +479,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = {
-			focus = RUS_new_industry0
+			focus = RUS_DNC_the_russian_economy
 		}
 
 		available = {
@@ -631,11 +636,13 @@ focus_tree = {
 	focus = {
 		id = RUS_new_hous
 		icon = GFX_goal_RUS_the_housing_crisis
-		x = 10
-		y = 4
+		x = 0
+		y = 2
+		relative_position_id = RUS_new_industry01
 
-		prerequisite = {focus = RUS_new_excity}
-		prerequisite = {focus = RUS_new_imptool}
+		prerequisite = {
+			focus = RUS_new_industry01
+		}
 
 		cost = 10
 
@@ -652,14 +659,15 @@ focus_tree = {
 	focus = {
 		id = RUS_new_indep
 		icon = GFX_GER_focus_factories_factories_factories
-		x = 13
-		y = 5
+		x = 3
+		y = 1
+		relative_position_id = RUS_new_hous
 
 		prerequisite = {
 			focus = RUS_new_hous
 		}
 
-	mutually_exclusive = { focus = RUS_new_dep }
+		mutually_exclusive = { focus = RUS_new_dep }
 
 		cost = 1
 
@@ -677,8 +685,9 @@ focus_tree = {
 	focus = {
 		id = RUS_new_incpro
 		icon = GFX_goal_generic_construction2
-		x = 15
-		y = 6
+		x = 2
+		y = 1
+		relative_position_id = RUS_new_indep
 
 		prerequisite = {
 			focus = RUS_new_indep
@@ -708,8 +717,9 @@ focus_tree = {
 	focus = {
 		id = RUS_new_teachwork
 		icon = GFX_goal_generic_construct_civilian
-		x = 11
-		y = 6
+		x = -2
+		y = 1
+		relative_position_id = RUS_new_indep
 
 		prerequisite = {
 			focus = RUS_new_indep
@@ -730,8 +740,9 @@ focus_tree = {
 	focus = {
 		id = RUS_new_inccond
 		icon = GFX_goal_tripartite_pact
-		x = 13
-		y = 6
+		x = 0
+		y = 1
+		relative_position_id = RUS_new_indep
 
 		prerequisite = {
 			focus = RUS_new_indep
@@ -752,12 +763,13 @@ focus_tree = {
 	focus = {
 		id = RUS_new_milind
 		icon = GFX_GER_focus_increase_mil_budget
-		x = 13
-		y = 7
+		x = 0
+		y = 1
+		relative_position_id = RUS_new_inccond
 
-		prerequisite = {focus = RUS_new_indep}
-		prerequisite = {focus = RUS_new_incpro}
-		prerequisite = {focus = RUS_new_teachwork}
+		prerequisite = { focus = RUS_new_inccond }
+		prerequisite = { focus = RUS_new_incpro }
+		prerequisite = { focus = RUS_new_teachwork }
 
 
 		cost = 10
@@ -777,8 +789,9 @@ focus_tree = {
 	focus = {
 		id = RUS_new_limex
 		icon = GFX_GER_focus_balance_spending
-		x = 13
-		y = 8
+		x = 0
+		y = 1
+		relative_position_id = RUS_new_milind
 
 		prerequisite = {
 			focus = RUS_new_milind
@@ -799,8 +812,9 @@ focus_tree = {
 	focus = {
 		id = RUS_new_dep
 		icon = GFX_goal_RUS_depend_on_the_french
-		x = 7
-		y = 5
+		x = -3
+		y = 1
+		relative_position_id = RUS_new_hous
 
 		prerequisite = {
 			focus = RUS_new_hous
@@ -816,18 +830,19 @@ focus_tree = {
 
 		completion_reward = { 
 			add_stability = -0.05
-					swap_ideas = { 
-			remove_idea = RUS_french_dependancy
-			add_idea = RUS_french_dependancy1
-						}
+			swap_ideas = { 
+				remove_idea = RUS_french_dependancy
+				add_idea = RUS_french_dependancy1
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_new_coopwest
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 9
-		y = 6
+		x = 2
+		y = 1
+		relative_position_id = RUS_new_dep
 
 		prerequisite = {
 			focus = RUS_new_dep
@@ -841,22 +856,23 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-		add_opinion_modifier = {
-		target = FRA
-		modifier = large_increase	
-								}
-		add_opinion_modifier = {
-		target = ENG
-		modifier = large_increase	
-								}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_new_buytools
 		icon = GFX_goal_RUS_machine_tools
-		x = 7
-		y = 6
+		x = 0
+		y = 1
+		relative_position_id = RUS_new_dep
 
 		prerequisite = {
 			focus = RUS_new_dep
@@ -870,18 +886,33 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-				195 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }	
+			random_owned_controlled_state = {
+				prioritize = {
+					195
 				}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = RUS_new_westtech
 		icon = GFX_goal_FRA_technologies
-		x = 5
-		y = 6
+		x = -2
+		y = 1
+		relative_position_id = RUS_new_dep
 
 		prerequisite = {
 			focus = RUS_new_dep
@@ -896,22 +927,24 @@ focus_tree = {
 
 		completion_reward = { 
 			add_tech_bonus = {
-			bonus = 1
-			uses = 2
-			category = industry
-								}
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
 		}
 	}
 
-		focus = {
+	focus = {
 		id = RUS_new_beginrel
 		icon = GFX_GER_focus_north_coalmines
-		x = 7
-		y = 7
+		x = 0
+		y = 1
+		relative_position_id = RUS_new_buytools
 
-		prerequisite = {focus = RUS_new_buytools}
-		prerequisite = {focus = RUS_new_coopwest}
-		prerequisite = {focus = RUS_new_westtech}
+		prerequisite = { focus = RUS_new_buytools }
+		prerequisite = { focus = RUS_new_coopwest }
+		prerequisite = { focus = RUS_new_westtech }
 
 		cost = 10
 
@@ -920,22 +953,51 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-								206 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }	
+			random_owned_controlled_state = {
+				prioritize = {
+					202
 				}
-					202 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }	
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					206
+				}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
-			focus = {
+	focus = {
 		id = RUS_new_moreex
 		icon = GFX_GER_focus_european_investment
-		x = 7
-		y = 8
+		x = 0
+		y = 1
+		relative_position_id = RUS_new_beginrel
 
 		prerequisite = {
 			focus = RUS_new_beginrel
@@ -949,18 +1011,19 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-				swap_ideas = { 
-			remove_idea = RUS_french_dependancy1
-			add_idea = RUS_french_dependancy2
-						}
+			swap_ideas = {
+				remove_idea = RUS_french_dependancy1
+				add_idea = RUS_french_dependancy2
+			}
 		}
 	}
 
-			focus = {
+	focus = {
 		id = RUS_new_noagri
 		icon = agriculture6
-		x = 10
-		y = 9
+		x = 3
+		y = 1
+		relative_position_id = RUS_new_moreex
 
 		prerequisite = {
 			focus = RUS_new_moreex
@@ -1202,50 +1265,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = RUS_new_fight
-		icon = GFX_focus_generic_diplomatic_treaty
-		x = 2
-		y = 4
-
-		prerequisite = {
-			focus = RUS_new_orth
-			focus = RUS_new_skool
-		}
-
-		cost = 10
-
-		available = {
-		
-		}
-
-		completion_reward = { 
-			custom_effect_tooltip = fight_lit
-		}
-	}
-
-
-	focus = {
-		id = RUS_new_universal
-		icon = GFX_focus_research2
-		x = 2
-		y = 5
-
-		prerequisite = {
-			focus = RUS_new_fight
-		}
-
-		cost = 20
-
-		available = {
-			NOT = {has_idea = RUS_high_iliteracy3 }
-			NOT = {has_idea = RUS_high_iliteracy2 } 
-		}
-
-		completion_reward = { 
-			add_ideas = RUS_edu
-		}
-	}
     focus = {
 		id = RUS_new_strong
 		icon = GFX_RUS_focus_first_russian_election
@@ -1255,8 +1274,9 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			NOT = {has_idea = RUS_high_iliteracy2 } 			
-			NOT = {has_idea = RUS_high_iliteracy3 } 
+			NOT = {has_idea = RUS_high_iliteracy_ns }
+			NOT = {has_idea = RUS_high_iliteracy_2_ns }
+			NOT = {has_idea = RUS_high_iliteracy_3_ns }
 			NOT = {has_idea = RUS_crowd } 
 			NOT = {has_idea = RUS_crowd2 } 
 			NOT = {has_idea = RUS_crowd3 } 
