@@ -318,8 +318,8 @@ default_transport_production = {
 	enable = {
 		is_major = yes
 		OR = {
-			has_tech = early_transport_plane
-			has_tech = bba_early_transport_plane
+			has_tech = transport_plane #was early_transport_plane
+			has_tech = bba_transport_plane #was bba_early_transport_plane
 		}
 		check_variable = { num_deployed_planes_with_type@air_transport < 1000 }
 	}
@@ -348,8 +348,8 @@ default_spyplanes_production = {
 	enable = {
 		is_major = yes
 		OR = {
-			has_tech = scout_plane1
-			has_tech = photo_reconnaisance
+			has_tech = scout_plane #was scout_plane1
+			#has_tech = photo_reconnaisance
 		}
 		check_variable = { num_deployed_planes_with_type@scout_plane < 100 }
 	}
@@ -377,8 +377,8 @@ default_spyplanes_production = {
 minors_dont_spy = {
 	enable = {
 		OR = {
-			has_tech = scout_plane1
-			has_tech = photo_reconnaisance
+			has_tech = scout_plane #was scout_plane1
+			#has_tech = photo_reconnaisance
 		}
 		is_major = no
 	}
