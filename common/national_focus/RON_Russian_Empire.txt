@@ -74,11 +74,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = RUS_DNC_a_new_literacy_program
 
-		cost = 10
-
 		prerequisite = {
 			focus = RUS_DNC_a_new_literacy_program
 		}
+
+		cost = 5
 
 		available = {
 			NOT = {
@@ -98,11 +98,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = RUS_DNC_a_new_literacy_program
 
-		cost = 10
-
 		prerequisite = {
 			focus = RUS_DNC_a_new_literacy_program
 		}
+
+		cost = 10
 
 		available = {
 		
@@ -151,7 +151,7 @@ focus_tree = {
 			focus = RUS_DNC_improve_access_to_high_education
 		}
 
-		cost = 20
+		cost = 10
 
 		available = {
 		
@@ -163,9 +163,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RUS_DNC_continue_industrializing
-		icon = GFX_goal_RUS_continue_industrialization
-		x = 0
+		id = RUS_DNC_expand_the_trans_siberian_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 7
 		y = 1
 		relative_position_id = RUS_DNC_the_russian_economy
 
@@ -180,306 +180,404 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			unlock_decision_category_tooltip = RUS_DNC_trans_siberian_railway_cat
+		}
+	}
+
+	focus = {
+		id = RUS_DNC_civilian_transports
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = RUS_DNC_expand_the_trans_siberian_railway
+
+		prerequisite = {
+			focus = RUS_DNC_expand_the_trans_siberian_railway
+		}
+
+		mutually_exclusive = {
+			focus = RUS_DNC_military_transports
+		}
+
+		cost = 10
+
+		available = {
+			OR = {
+				controls_state = 575
+				controls_state = 576
+				controls_state = 577
+			}
+		}
+
+		completion_reward = {
 			random_owned_controlled_state = {
-				prioritize = {
-					219
-				}
 				limit = {
+					OR = {
+						state = 575
+						state = 576
+						state = 577
+					}
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
+				}
+				ETH_upgrade_state_category = yes
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_DNC_military_transports
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		relative_position_id = RUS_DNC_expand_the_trans_siberian_railway
+
+		prerequisite = {
+			focus = RUS_DNC_expand_the_trans_siberian_railway
+		}
+
+		mutually_exclusive = {
+			focus = RUS_DNC_civilian_transports
+		}
+
+		cost = 10
+
+		available = {
+			OR = {
+				controls_state = 575
+				controls_state = 576
+				controls_state = 577
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 575
+						state = 576
+						state = 577
+					}
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				ETH_upgrade_state_category = yes
+			}
+		}
+	}
+
+
+	focus = {
+		id = RUS_DNC_single_track_design
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = RUS_DNC_civilian_transports
+
+		mutually_exclusive = {
+			focus = RUS_DNC_double_track_design
+		}
+
+		prerequisite = {
+			focus = RUS_DNC_civilian_transports
+			focus = RUS_DNC_military_transports
+		}
+
+		cost = 5
+
+		available = {
+			OR = {
+				controls_state = 565
+				controls_state = 562
+				controls_state = 574
+				controls_state = 516
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					controls_state = 565
+				}
+				565 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 562
+				}
+				562 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 574
+				}
+				574 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 516
+				}
+				516 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_new_tsway
+		id = RUS_DNC_double_track_design
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 17
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = RUS_DNC_military_transports
 
-		cost = 10
+		mutually_exclusive = {
+			focus = RUS_DNC_single_track_design
+		}
 
 		prerequisite = {
-			focus = RUS_DNC_the_russian_economy
+			focus = RUS_DNC_military_transports
+			focus = RUS_DNC_civilian_transports
 		}
-
-		available = {
-		
-		}
-
-		completion_reward = {
-			unlock_decision_category_tooltip = RUS_trans_siberian_railway_cat
-
-		}
-	}
-
-	focus = {
-		id = RUS_new_civway
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 16
-		y = 3
-
-		prerequisite = {
-			focus = RUS_new_tsway
-		}
-
-		mutually_exclusive = { focus = RUS_new_milway }
-
-
-		cost = 10
-
-		available = {
-		
-		}
-
-		completion_reward = {
-		565 = {
-			add_building_construction = {
-			type = industrial_complex
-			level = 2
-			instant_build = yes
-										}
-		}
-
-		}
-	}
-
-	focus = {
-		id = RUS_new_milway
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 18
-		y = 3
-
-		prerequisite = {
-			focus = RUS_new_tsway
-		}
-
-		mutually_exclusive = { focus = RUS_new_civway }
-
-
-		cost = 10
-
-		available = {
-		
-		}
-
-		completion_reward = {
-
-			565 = {
-			add_building_construction = {
-			type = arms_factory
-			level = 2
-			instant_build = yes
-										}
-			}			
-
-		}
-	}
-
-
-	focus = {
-		id = RUS_new_onetrack
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 16
-		y = 4
-
-		mutually_exclusive = { focus = RUS_new_twotrack }
 
 		cost = 5
 
-		prerequisite = {
-			focus = RUS_new_civway
-			focus = RUS_new_milway
-		}
-
-
 		available = {
-		
+			OR = {
+				controls_state = 565
+				controls_state = 562
+			}
 		}
 
 		completion_reward = {
-			565 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}				
+			if = {
+				limit = {
+					controls_state = 565
+				}
+				565 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-
-			562 ={
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
-				}	
-
-				574 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
-				}	
-
-				516 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
-				}	
-
-		}
-	}
-
-
-	focus = {
-		id = RUS_new_twotrack
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 18
-		y = 4
-
-		mutually_exclusive = { focus = RUS_new_onetrack }
-
-		cost = 10
-
-		prerequisite = {
-			focus = RUS_new_milway
-			focus = RUS_new_civway
-		}
-
-
-		available = {
-		
-		}
-
-		completion_reward = {
-			565 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 4
-			instant_build = yes
-										}	
+				}
 			}
-			562 ={
-			add_building_construction = {
-			type = infrastructure
-			level = 4
-			instant_build = yes
-										}
-			}						   					
+			if = {
+				limit = {
+					controls_state = 562
+				}
+				562 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
-		id = RUS_new_finway
-		icon = GFX_GER_focus_develop_colonies
-		x = 17
-		y = 5
+		id = RUS_DNC_finish_the_trans_siberian_railway
+		icon = GFX_goal_GER_develop_colonies
+		x = 1
+		y = 1
+		relative_position_id = RUS_DNC_single_track_design
 
-		cost = 20
+		cost = 14.4
 
 		prerequisite = {
-			focus = RUS_new_onetrack
-			focus = RUS_new_twotrack
+			focus = RUS_DNC_single_track_design
+			focus = RUS_DNC_double_track_design
 		}
 
-
 		available = {
-		
+			OR = {
+				controls_state = 657
+				controls_state = 409
+				controls_state = 563
+				controls_state = 565
+				controls_state = 40
+				controls_state = 560
+				controls_state = 561
+				controls_state = 567
+				controls_state = 568
+				controls_state = 578
+				controls_state = 569
+			}
 		}
 
 		completion_reward = {
-						657 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 657
+				}
+				657 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-
-						409 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 409
+				}
+				409 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						563 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 563
+				}
+				563 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						565 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 565
+				}
+				565 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						40 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 40
+				}
+				40 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						560 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 560
+				}
+				560 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						561 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 561
+				}
+				561 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						567 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 567
+				}
+				567 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						568 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
+			if = {
+				limit = {
+					controls_state = 568
+				}
+				568 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
-						578 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
-						}	
-						569 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}	
-				}						
-			add_stability = 0.05
+			if = {
+				limit = {
+					controls_state = 578
+				}
+				578 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 569
+				}
+				569 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 		}
 		
 	}
@@ -487,10 +585,12 @@ focus_tree = {
 	focus = {
 		id = RUS_new_tcway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 22
-		y = 2
+		x = 12
+		y = 1
 
-		cost = 10
+		relative_position_id = RUS_DNC_the_russian_economy
+
+		cost = 5
 
 		prerequisite = {
 			focus = RUS_DNC_the_russian_economy
@@ -502,7 +602,6 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_category_tooltip = RUS_trans_caucasian_railway_cat
-			
 		}	
 	}
 
@@ -603,7 +702,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_new_finway2
-		icon = GFX_GER_focus_develop_colonies
+		icon = GFX_goal_GER_develop_colonies
 		x = 22
 		y = 5
 
@@ -646,6 +745,44 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = RUS_DNC_continue_industrializing
+		icon = GFX_goal_RUS_continue_industrialization
+		x = 0
+		y = 1
+		relative_position_id = RUS_DNC_the_russian_economy
+
+		prerequisite = {
+			focus = RUS_DNC_the_russian_economy
+		}
+
+		cost = 5
+
+		available = {
+		
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					219
+				}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = RUS_DNC_address_the_housing_crisis
@@ -1572,7 +1709,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_new_develop_rail
-		icon = GFX_GER_focus_develop_colonies
+		icon = GFX_goal_GER_develop_colonies
 		x = 31
 		y = 7
 		cost = 10
@@ -1862,7 +1999,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_new_man_rail
-		icon = GFX_GER_focus_develop_colonies
+		icon = GFX_goal_GER_develop_colonies
 		x = 31
 		y = 13
 		cost = 10
@@ -2536,7 +2673,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_new_win_integration
-		icon = GFX_GER_focus_develop_colonies
+		icon = GFX_goal_GER_develop_colonies
 		x = 50
 		y = 8
 		cost = 10
@@ -2553,7 +2690,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_new_win_korea
-		icon = GFX_GER_focus_develop_colonies
+		icon = GFX_goal_GER_develop_colonies
 		x = 48
 		y = 4
 		cost = 10
