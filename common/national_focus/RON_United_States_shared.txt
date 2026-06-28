@@ -1,0 +1,2086 @@
+shared_focus = {
+	id = USA_gilded_age
+	icon = GFX_focus_bra_voice_of_brasil
+	x = 76
+	y = 1
+	allow_branch = {
+		NOT = {
+			has_completed_focus = USA_jeffersons_vision
+		}
+	}
+	available = {
+		has_country_leader = {
+			character = USA_william_mckinley
+			ruling_only = yes
+		}
+	}
+	cost = 10
+	
+	mutually_exclusive = { focus = USA_jeffersons_vision }
+
+	completion_reward = { 
+		add_political_power = 100
+		add_ideas = USA_gilded_age
+	}
+}
+shared_focus = {
+	id = USA_jeffersons_vision
+	icon = GFX_ROM_agrarianism 
+	x = 80
+	y = 1
+	cost = 10
+	allow_branch = {
+		NOT = {
+			has_completed_focus = USA_gilded_age
+		}
+	}
+	available = {
+		has_country_leader = {
+			name = "William Jennings Bryan"
+			ruling_only = yes
+		}
+	}
+	mutually_exclusive = { focus = USA_gilded_age }
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+
+shared_focus = {
+	id = USA_corporate_primacy
+	icon = GFX_goal_generic_parliament
+	x = 76
+	y = 2
+
+	cost = 10
+
+	
+	prerequisite = { focus = USA_gilded_age }
+
+	completion_reward = {
+		add_ideas = USA_corporate_primacy
+	}
+
+}
+shared_focus = {
+	id = USA_continue_subsidies
+	icon = GFX_goal_industrial_and_work_reforms
+	x = 76
+	y = 3
+
+	cost = 10
+
+	prerequisite = { focus = USA_corporate_primacy }
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_industrial_effort_2_2IC
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = USA_favorable_business_reg
+	icon = GFX_focus_bo_work
+	x = 76
+	y = 4
+
+	cost = 10
+
+	prerequisite = { focus = USA_continue_subsidies }
+
+	completion_reward = {
+		add_ideas = USA_favorable_business_reg
+	}
+} 
+shared_focus = {
+	id = USA_ignore_monopolization
+	icon = money
+	x = 76
+	y = 5
+	cost = 5
+
+	prerequisite = { focus = USA_favorable_business_reg }
+
+	mutually_exclusive = { focus = USA_true_free_market }
+
+	completion_reward = {
+		add_ideas = GRE_foreign_monopolies
+		add_political_power = 50
+	}
+
+}
+shared_focus = {
+	id = USA_true_free_market
+	icon = GFX_SIA_openfreemarket
+	x = 79
+	y = 5
+
+	cost = 5
+
+	mutually_exclusive = { focus = USA_ignore_monopolization }
+
+	prerequisite = { focus = USA_favorable_business_reg }
+	
+	completion_reward = {
+		add_ideas = free_trade
+	}
+}
+
+shared_focus = {
+	id = USA_enforce_sherman_act
+	icon = GFX_goal_trade_pact 
+	x = 79
+	y = 6
+
+	cost = 5
+
+	prerequisite = { focus = USA_true_free_market }
+
+	completion_reward = {
+		add_political_power = -50
+
+		add_ideas = ITA_tariffs_expanded
+	}
+}
+
+shared_focus = {
+	id = USA_anti_monopoly_hearings
+	icon = ENG_london_peoples_court
+	x = 79
+	y = 7
+
+	cost = 10
+
+	prerequisite = { focus = USA_enforce_sherman_act }
+
+	completion_reward = {
+		add_country_leader_trait = ambitious_union_boss
+	}
+
+}
+
+shared_focus = {
+	id = USA_fair_competition
+	icon = GFX_goal_factory_complex
+	x = 79
+	y = 8
+	cost = 5
+
+	prerequisite = { focus = USA_anti_monopoly_hearings }
+
+	completion_reward = {
+		add_political_power = 25
+		add_ideas = BRA_proletarian_equality
+	}
+}
+
+shared_focus = {
+	id = USA_encourage_vertical_integration
+	icon = GFX_goal_stock_exchange
+	x = 76
+	y = 6
+	cost = 10
+	prerequisite = { focus = USA_ignore_monopolization }
+	
+	completion_reward = {
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_owned_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}				
+		}
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_owned_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}				
+		}
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_owned_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}				
+		}						
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_owned_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}				
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_consolidate_sectors
+	icon = GFX_GER_vertical_integration
+	x = 77
+	y = 7
+
+	cost = 10
+	prerequisite = { focus = USA_encourage_vertical_integration }
+
+	completion_reward = {
+		add_country_leader_trait = consolidated_manufacturer
+
+	}
+}
+
+shared_focus = {
+	id = USA_sponsored_industrialization
+	icon = GFX_goal_secure_the_new_government
+	x = 75
+	y = 7
+
+	cost = 10
+
+	prerequisite = {
+		focus = USA_encourage_vertical_integration
+	}
+	prerequisite = { focus = USA_purchase_ag_debt }
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = GER_industrial_effort_2_2IC
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		add_ideas = USA_sponsored_industrialization
+	}
+
+}
+shared_focus = {
+	id = USA_continue_laissez_faire
+	icon = GFX_umc_goal_goverment_hands
+	x = 73
+	y = 2
+
+	cost = 10
+
+	prerequisite = { focus = USA_gilded_age }
+
+	completion_reward = {
+		add_political_power = 20
+		add_stability = 0.03
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a395democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a358democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a381democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a396democratic_support = 10 }
+	}
+}
+shared_focus = {
+	id = USA_continue_protectionism
+	icon = GFX_focus_rom_parties_end
+	x = 74
+	y = 3
+
+	cost = 10
+
+	prerequisite = { focus = USA_continue_laissez_faire }
+	prerequisite = { focus = USA_corporate_primacy }
+
+	completion_reward = {
+		add_country_leader_trait = staunch_protectionist
+		add_political_power = 20
+	}
+}
+shared_focus = {
+	id = USA_gold_question
+	icon = GFX_goal_generic_gold_money
+	x = 72
+	y = 3
+
+	cost = 5
+
+	available = {
+		has_country_flag = USA_gold_standard
+	}
+
+	prerequisite = { focus = USA_continue_laissez_faire }
+	
+	completion_reward = {
+		country_event = {
+			id = USADNC.2 #Gold Standard Event
+		}
+	}
+}
+shared_focus = {
+	id = USA_gold_standard_act
+	icon = GFX_goal_generic_economics_reform_gold
+	x = 72
+	y = 4
+
+	cost = 15
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = focus_republican_majority_house_tt
+			check_variable = {  HOUSE_party2_seats > HOUSE_party3_seats  }
+		}
+	}
+	prerequisite = { focus = USA_gold_question }
+
+	completion_reward = {
+		country_event = USADNC.3
+	}	
+}
+shared_focus = {
+	id = USA_gold_stay_course
+	icon = GFX_goal_COG_Jungle_Gold_Mine
+	x = 72
+	y = 5
+
+
+
+	available = {
+		always = no
+	}
+
+	prerequisite = { focus = USA_gold_standard_act }
+
+	bypass = {
+
+	} 
+
+	completion_reward = {
+		add_ideas = DNC_gold_standard
+	}
+}
+
+shared_focus = {
+	id = USA_fiduciary_responsibility
+	icon = GFX_umc_goal_gold_up
+	x = 72
+	y = 6
+
+	cost = 5
+
+	prerequisite = { focus = USA_gold_stay_course }
+
+	completion_reward = {
+		add_Ideas = USA_stable_america
+	}
+}
+
+shared_focus = {
+	id = USA_central_banking_question
+	icon = GFX_CHI_Bank
+	x = 72
+	y = 7
+
+	cost = 10
+
+	prerequisite = { focus = USA_fiduciary_responsibility }
+
+	completion_reward = {
+		add_ideas = YUG_idea_central_management
+	}
+}
+
+shared_focus = {
+	id = USA_bimetallism
+	icon = GFX_goal_Generic_Loadsamoney
+	x = 70
+	y = 5
+
+	available = {
+		always = no
+	}
+
+	bypass = {
+
+	}
+
+	prerequisite = { focus = USA_gold_standard_act }
+
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = USA_america_silver_slippers
+	icon = GFX_sca_focus_danish_industry
+	x = 70
+	y = 6
+
+	cost = 5
+
+	bypass = {
+
+	}
+	
+	prerequisite = { focus = USA_bimetallism }
+
+	completion_reward = {
+		remove_ideas = USA_gold_standard
+		add_ideas = USA_the_silver_standard
+	}
+}
+shared_focus = {
+	id = USA_devalue_dollar
+	icon = GFX_goal_LAT_devaulate_the_currency
+	x = 70
+	y = 7
+
+	cost = 5
+
+	bypass = {
+
+	}
+
+	prerequisite = { focus = USA_america_silver_slippers }
+
+	completion_reward = {
+		add_ideas =USA_devalue_the_dollar
+	}
+}
+
+shared_focus = {
+	id = USA_higher_man_tariffs
+	icon = GFX_goal_tarrafal
+	x = 74
+	y = 4
+
+	cost = 10
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = USA_continue_protectionism
+	}
+
+	completion_reward = {
+		add_ideas = tariffs_average
+	}
+
+}
+shared_focus = {
+	id = USA_compromise_with_farmers
+	icon = GFX_goal_compromise_with_the_nationalities
+	x = 74
+	y = 5
+
+	cost = 10
+
+
+	prerequisite = {
+		focus = USA_higher_man_tariffs
+	}
+
+	completion_reward = {
+		deamnd_increase_eco = yes
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a369democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a388democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a371democratic_support = 10 }
+		custom_effect_tooltip = "Party support will be changed in some states"
+		add_to_variable = { a382democratic_support = 10 }			
+	}
+
+}
+shared_focus = {
+	id = USA_purchase_ag_debt
+	icon = GFX_goal_seize_industry
+	x = 74
+	y = 6
+
+	cost = 10
+
+	prerequisite = {
+		focus = USA_compromise_with_farmers
+	}
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = great_debt
+			days = 400
+		}
+	}
+
+}
+
+##########################
+### SHARED FOCUSES #######
+##########################
+
+shared_focus = {
+	id = USA_american_ingenuity
+	icon = GFX_goal_generic_befriend_united_states
+	x = 78
+	y = 2
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_gilded_age
+		focus = USA_jeffersons_vision
+	}
+	completion_reward = {
+		add_ideas = QUE_industrial_ingenuity
+	}
+}
+shared_focus = {
+	id = USA_hotbed_of_innovation
+	icon = ENG_industrial_research_grant
+	x = 78
+	y = 3
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_american_ingenuity
+	}
+	completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.15
+		uses = 4
+		category = industry
+	}
+	add_tech_bonus = {
+		bonus = 0.15
+		uses = 4
+		category = electronics
+	}		
+	}
+}
+shared_focus = {
+	id = USA_american_work_ethic
+	icon = GFX_goal_order_of_the_working_nation
+	x = 78
+	y = 4
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_hotbed_of_innovation
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+#######################################
+###### JEFFERSON'S VISION FOCUSES #####
+#######################################
+
+shared_focus = {
+	id = USA_agricultural_primacy
+	icon = GFX_goal_generic_agriculture
+	x = 80
+	y = 2
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_jeffersons_vision
+	}
+	completion_reward = {
+		subtract_from_variable = { whiteanger = 15 }
+		clamp_variable = { whiteanger = 100 }		
+		custom_effect_tooltip = "This will increase black anger"
+		add_to_variable = { blackanger = 15 }
+		clamp_variable = { blackanger = 100 }	
+		add_country_leader_trait = agricultural_modernizer
+	}
+}
+shared_focus = {
+	id = USA_limited_econ_intervention
+	icon = alliance_dark_green
+	x = 80
+	y = 3
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_agricultural_primacy
+	}
+	completion_reward = {
+		add_country_leader_trait = reluctant_interventionist
+	}
+}
+shared_focus = {
+	id = USA_break_up_businesses
+	icon = industry_communist3
+	x = 80
+	y = 4
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_limited_econ_intervention
+	}
+	completion_reward = {
+		add_ideas = investing_into_big_buseness
+	}
+}
+shared_focus = {
+	id = USA_repeal_tariffs
+	icon = GFX_focus_bo_constitution
+	x = 82
+	y = 3
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_agricultural_primacy
+	}
+	completion_reward = {
+		add_ideas = DNC_decreased_tariffs
+	}
+}
+shared_focus = {
+	id = USA_common_man_policy
+	icon = GFX_goal_Focus_Socialist_Worker
+	x = 82
+	y = 4
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_repeal_tariffs
+	}
+	completion_reward = {
+		add_country_leader_trait = man_of_the_people
+	}
+}
+shared_focus = {
+	id = USA_global_trade
+	icon = GFX_goal_free_trade
+	x = 81
+	y = 5
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_common_man_policy
+	}
+	prerequisite = {
+		focus = USA_break_up_businesses
+	}
+	completion_reward = {
+		add_ideas = GER_global_trade
+	}
+}
+shared_focus = {
+	id = USA_british_contracts
+	icon = GFX_goal_ENG_london
+	x = 81
+	y = 6
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_global_trade
+	}
+	completion_reward = {
+						add_opinion_modifier = {
+				target = ENG
+				modifier = RI_reapprochment_talks
+			}
+	}
+}
+shared_focus = {
+	id = USA_german_trade
+	icon = GFX_goal_AUS_seek_german_help
+	x = 81
+	y = 7
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_british_contracts
+	}
+	completion_reward = {
+				add_opinion_modifier = {
+				target = GER
+				modifier = RI_reapprochment_talks
+			}		
+	}
+}
+shared_focus = {
+	id = USA_nation_of_farmers
+	icon = GFX_goal_generic_peasant_commitees
+	x = 84
+	y = 2
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_jeffersons_vision
+	}
+	completion_reward = {
+		add_ideas = farmers_rights_ARG
+	}
+}
+shared_focus = {
+	id = USA_develop_western_territories
+	icon = GFX_goal_factory_complex
+	x = 84
+	y = 3
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_nation_of_farmers
+	}
+	completion_reward = {
+				random_owned_state = {
+					random_list = {
+						50 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+							add_extra_state_shared_building_slots = 1
+						}
+						35 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+							add_extra_state_shared_building_slots = 2
+						}
+						15 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 3
+								instant_build = yes
+							}
+							add_extra_state_shared_building_slots = 3
+						}
+					}
+				}			
+	}
+}
+shared_focus = {
+	id = USA_farming_innovations
+	icon = GFX_goal_generic_wheat
+	x = 84
+	y = 4
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_develop_western_territories
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = CZE_industry_innovation
+			ahead_reduction = 1
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+	id = USA_domestic_processing
+	icon = GFX_SIA_domesticindustrylaw
+	x = 83
+	y = 5
+	cost = 10
+
+	
+	mutually_exclusive = {
+		focus = USA_foreign_processing
+	}
+	prerequisite = {
+		focus = USA_farming_innovations
+	}
+	completion_reward = {
+		add_ideas = LAT_centralize_farming_production
+	}
+}
+shared_focus = {
+	id = USA_foreign_processing
+	icon = GFX_RebuildingtheIndustrialBase
+	mutually_exclusive = {
+		focus = USA_domestic_processing
+	}
+	x = 85
+	y = 5
+	cost = 10
+
+	
+	prerequisite = {
+		focus = USA_farming_innovations
+	}
+	completion_reward = {
+		add_ideas = GRE_foreign_monopolies
+	}
+}
+shared_focus = {
+	id = USA_textile_subsidies
+	icon = GFX_goal_Focus_Government_Bureaucracy
+	x = 83
+	y = 6
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_domestic_processing
+	}
+	completion_reward = {
+		add_ideas = BHU_s_farming
+	}
+}
+shared_focus = {
+	id = USA_minimal_protectionism
+	icon = GFX_goal_generic_positive_trade_relations_gold
+	x = 83
+	y = 7
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_textile_subsidies
+	}
+	completion_reward = {
+		add_ideas = free_trade
+	}
+}
+shared_focus = {
+	id = USA_self_sufficiency
+	icon = industry_united_states
+	x = 83
+	y = 8
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_minimal_protectionism
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 5
+		}		}
+}
+shared_focus = {
+	id = USA_merchant_fleets
+	icon = GFX_the_red_fleet
+	x = 85
+	y = 6
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_foreign_processing
+	}
+	completion_reward = {
+					swap_ideas = {
+			remove_idea = GRE_foreign_monopolies
+			add_idea = GRE_foreign_monopolies_2
+		}
+	}
+}
+shared_focus = {
+	id = USA_global_free_trade
+	icon = GFX_goal_free_trade
+	x = 85
+	y = 7
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_merchant_fleets
+	}
+	completion_reward = {
+					swap_ideas = {
+			remove_idea = GRE_foreign_monopolies_2
+			add_idea = GRE_foreign_monopolies_3
+		}			
+	}
+}
+shared_focus = {
+	id = USA_business_unites_us
+	icon = GFX_goal_industrialized_agrarian_state
+	x = 85
+	y = 8
+	cost = 5
+
+	
+	prerequisite = {
+		focus = USA_global_free_trade
+	}
+	completion_reward = {
+					swap_ideas = {
+			remove_idea = GRE_foreign_monopolies_3
+			add_idea = GRE_foreign_monopolies_4
+		}				
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 11
+		}			
+	}
+}
+
+##########################################
+##########################################
+######### MILITARY FOCUSES USA ###########
+##########################################
+##########################################
+
+shared_focus = {
+	id = USA_armed_forces
+	icon = GFX_goal_USA_coa_army
+	x = 95
+	y = 1
+	cost = 5
+
+	
+	
+	completion_reward = { 
+		ENG_Rearmarment_Budget_level_up = yes
+	}
+}
+######################################
+########## ARMY SECTION ##############
+######################################
+
+shared_focus = {
+	id = USA_reorganize_war_department
+	icon = GFX_Goal_USA_War_dep
+	x = 90
+	y = 2
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_armed_forces
+	}
+	
+	completion_reward = { 
+	activate_mission = reorganizing_war_department_vote
+	setup_gop_vote = yes # for gop favored vote
+	}
+}
+
+shared_focus = {
+	id = USA_overseas_army
+	icon = GFX_goal_USA_marines
+	x = 88
+	y = 3
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_reorganize_war_department
+	}
+	
+	completion_reward = { 
+		add_tech_bonus = {
+			name = naval_air_effort
+			bonus = 0.5
+			uses = 1
+			technology = naval_bomber1
+			technology = naval_bomber2
+			technology = naval_bomber3
+		}			
+	}
+}
+
+shared_focus = {
+	id = USA_american_foreign_legion
+	icon = GFX_idea_MEX_politicised_army
+	x = 87
+	y = 4
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_overseas_army
+	}
+	
+	completion_reward = { 
+		add_ideas = foreign_volunteers
+	
+	}
+}
+
+shared_focus = {
+	id = USA_overseas_engineers
+	icon = GFX_goal_construction_engineering
+	x = 89
+	y = 4
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_overseas_army
+	}
+	
+	completion_reward = { 
+		navy_experience = 50
+	}
+}
+
+shared_focus = {
+	id = USA_regional_recruitment_centers
+	icon = GFX_goal_generic_recruitment
+	x = 87
+	y = 5
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_american_foreign_legion
+	}
+	
+	completion_reward = { 
+		add_manpower = 10000
+		every_army_leader = {
+			random_list = {
+					5 = { add_trait = { trait = inflexible_strategist } }
+					3 = { add_trait = { trait = brilliant_strategist } }
+					25 = { add_trait = { trait = career_officer } }
+					15 = { add_trait = { trait = infantry_officer } }
+					15 = { add_trait = { trait = cavalry_officer } }
+					5 = { add_trait = { trait = armor_officer } }
+					10 = { add_trait = { trait = engineer_officer } }	
+					15 = { add_trait = { trait = defensive_doctrine } }
+					12 = { add_trait = { trait = fast_planner } }
+					15 = { add_trait = { trait = thorough_planner } }
+					10 = { add_trait = { trait = unyielding_defender } }
+					10 = { add_trait = { trait = aggressive_assaulter } }
+					10 = { add_trait = { trait = organisational_leader } }
+					5 = { add_trait = { trait = inspirational_leader } }
+					5 = { add_trait = { trait = expert_delegator } }
+					8 = { add_trait = { trait = organizer } }
+					8 = { add_trait = { trait = infantry_leader } }
+					15 = { add_trait = { trait = skilled_staffer } }
+					10 = { add_trait = { trait = trickster } }
+					5 = { add_trait = { trait = trait_engineer } }
+					10 = { add_trait = { trait = commando } }
+					4 = { add_trait = { trait = desert_fox } }
+					2 = { add_trait = { trait = swamp_fox } }
+					2 = { add_trait = { trait = trait_mountaineer } }
+					2 = { add_trait = { trait = hill_fighter } }
+					2 = { add_trait = { trait = jungle_rat } }
+					2 = { add_trait = { trait = ranger } }
+					3 = { add_trait = { trait = urban_assault_specialist } }
+					1 = { add_trait = { trait = adaptable } }
+					2 = { add_trait = { trait = logistics_wizard } }
+					6 = { add_trait = { trait = fortress_buster } }
+					8 = { add_trait = { trait = scavenger } }
+					8 = { add_trait = { trait = ambusher } }
+					8 = { add_trait = { trait = skirmisher } }
+					8 = { add_trait = { trait = paratrooper } }
+					5 = { add_trait = { trait = camouflage_expert } }
+					5 = { add_trait = { trait = expert_improviser } }
+					25 = { add_trait = { trait = media_personality } }
+
+			}				
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_occupation_force
+	icon = GFX_goal_cuba_law_of_sugar_coordination
+	x = 89
+	y = 5
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_overseas_engineers
+	}
+	
+	completion_reward = { 
+		add_ideas = harsh_occupation
+	}
+}
+
+shared_focus = {
+	id = USA_defending_our_positions
+	icon = GFX_focus_generic_collective_defense
+	x = 88
+	y = 6
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_occupation_force
+	}
+
+	prerequisite = {
+		focus = USA_regional_recruitment_centers
+	}
+	available = {
+		has_completed_focus = USA_change_election_laws
+	}
+	bypass = {
+		has_completed_focus = USA_help_farmers
+	}
+	completion_reward = { 
+		if = {
+			limit = {
+				is_ai = no
+			}
+		remove_ideas = ra_patriotic_fraud
+		}
+				every_army_leader = {
+		random_list = {
+			20 = { add_attack = 1 }
+			20 = { add_defense = 1 }
+			20 = { add_logistics = 1 }
+			20 = { add_planning = 2 }
+			3 = { add_attack = 2 }
+			3 = { add_defense = 2 }
+			3 = { add_logistics = 2 }
+			3 = { add_planning = 3 }
+		}
+	}
+}
+}
+
+shared_focus = {
+	id = USA_expand_our_army
+	icon = GFX_Goal_USA_arsenal_of_democracy
+	x = 92
+	y = 3
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_reorganize_war_department
+	}
+	
+	completion_reward = { 
+		ENG_Rearmarment_Budget_level_up = yes
+	}
+}
+
+shared_focus = {
+	id = USA_civil_war_lessons
+	icon = confederate_constitution
+	x = 92
+	y = 4
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_expand_our_army
+	}
+	
+	completion_reward = { 
+		add_ideas = PER_rural_economy_1
+					custom_effect_tooltip = "This will increase white anger"
+		add_to_variable = { whiteanger = 10 }
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+		}			
+	}
+}
+
+shared_focus = {
+	id = USA_industrial_warfare
+	icon = GFX_goal_CSA_rebuild_industry
+	x = 92
+	y = 5
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_civil_war_lessons
+	}
+	
+	completion_reward = { 
+				add_offsite_building = { type = industrial_complex level = 3 }
+
+	}
+}
+
+shared_focus = {
+	id = USA_total_war_tactics
+	icon = GFX_focus_generic_study_foreign_tanks
+	x = 92
+	y = 6
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_industrial_warfare
+	}
+	
+	completion_reward = { 
+			add_tech_bonus = {
+			name = cat_mobile_warfare
+			bonus = 0.5
+			uses = 2
+			category = cat_mobile_warfare
+		}		
+	}
+}
+
+shared_focus = {
+	id = USA_military_industrial_complex
+	icon = GFX_idea_man_five_year_plan_industry
+	x = 94
+	y = 6
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_industrial_warfare
+	}
+	
+	completion_reward = { 
+				375 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = USA_military_contractors
+	icon = industry_military
+	x = 94
+	y = 7
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_military_industrial_complex
+	}
+	
+	completion_reward = { 
+	add_tech_bonus = {
+		name = cat_mobile_warfare
+		bonus = 1
+		uses = 2
+		category = cat_mobile_warfare
+	}			
+	}
+}
+
+shared_focus = {
+	id = USA_ready_to_defend
+	icon = GFX_goal_generic_tank_cogs
+	x = 90
+	y = 7
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_total_war_tactics
+	}
+
+	prerequisite = {
+		focus = USA_defending_our_positions
+	}
+	
+	completion_reward = { 
+		add_ideas = home_defense_comittee
+	}
+}
+
+#########################################
+#### MILITARY SPENDING SECTION ##########
+#########################################
+
+#WILL REQUIRE CONGRESSIONAL SUPPORT
+
+shared_focus = {
+	id = USA_fund_academies
+	icon = GFX_focus_bo_universities
+	x = 95
+	y = 2
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_armed_forces
+	}
+	
+	completion_reward = { 
+		add_ideas = SAF_bush_warfare
+		add_tech_bonus = {
+			name = SAF__south_african_military_college
+			bonus = 1.0
+			uses = 2
+			category = land_doctrine
+		}		}
+}
+
+shared_focus = {
+	id = USA_expand_military_budget
+	icon = GFX_GER_focus_increase_mil_budget
+	x = 95
+	y = 3
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_fund_academies
+	}
+	
+	completion_reward = { 
+		ENG_Rearmarment_Budget_level_up = yes
+	}
+}
+
+shared_focus = {
+	id = USA_authorize_RnD_programs
+	icon = ENG_industrial_research_grant
+	x = 95
+	y = 4
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_expand_military_budget
+	}
+	
+	completion_reward = { 
+			add_research_slot = 1
+	}
+}
+
+shared_focus = {
+	id = USA_aerial_warfare
+	icon = GFX_Goal_USA_arsenal_of_democracy
+	x = 95
+	y = 5
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_authorize_RnD_programs
+	}
+	
+	completion_reward = { 
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				ROOT = { set_country_flag = aviation_effort_AB }
+			}
+	}
+}
+
+######################################
+########### US NAVY FOCUSES ##########
+######################################
+
+shared_focus = {
+	id = USA_state_of_the_navy
+	icon = GFX_goal_USA_coa_navy
+	x = 100
+	y = 2
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_armed_forces
+	}
+	
+	completion_reward = { 
+		add_ideas = NOR_specialized_naval_industry
+	}
+}
+
+shared_focus = {
+	id = USA_continued_dreadnought_investment
+	icon = GFX_goal_liberty_ships
+	x = 98
+	y = 3
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_state_of_the_navy
+	}
+	
+	completion_reward = { 
+		add_ideas = dreadnought_race
+	}
+}
+
+shared_focus = {
+	id = USA_great_white_fleet
+	icon = GFX_RON_focus_ship_production
+	x = 98
+	y = 4
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_continued_dreadnought_investment
+	}
+	
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = dreadnought_race
+			add_idea = dreadnought_race_2
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_submarine_development
+	icon = GFX_SIA_submarineprocurementproject
+	x = 100
+	y = 3
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_state_of_the_navy
+	}
+	
+	completion_reward = { 
+		add_ideas = ENG_naval_production
+	}
+}
+
+shared_focus = {
+	id = USA_undersea_warfare
+	icon = GFX_goal_generic_submarine
+	x = 100
+	y = 4
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_submarine_development
+	}
+	
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = ENG_naval_production
+			add_idea = IRE_submarine_production_idea
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_commission_destroyers
+	icon = GFX_goal_generic_destroyer
+	x = 102
+	y = 3
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_state_of_the_navy
+	}
+	
+	completion_reward = { 
+		add_tech_bonus = {
+			bonus = 1
+			uses = 2
+			category = asw_tech }
+
+	}
+	
+}
+
+shared_focus = {
+	id = USA_support_ship_focus
+	icon = ENG_the_ocean_sparkling_lights
+	x = 102
+	y = 4
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_commission_destroyers
+	}
+	
+	completion_reward = { 
+		add_tech_bonus = {
+			bonus = 1
+			uses = 2
+			category = dd_tech }
+		add_ideas = IRE_destroyer_production_idea
+		navy_experience = 20			
+	}
+}
+
+shared_focus = {
+	id = USA_versatile_task_forces
+	icon = GFX_goal_generic_large_fleet
+	x = 98
+	y = 5
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_great_white_fleet
+	}
+
+	prerequisite = {
+		focus = USA_undersea_warfare
+	}
+
+	prerequisite = {
+		focus = USA_support_ship_focus
+	}
+
+	mutually_exclusive = {
+		focus = USA_maximum_firepower
+	}
+	
+	completion_reward = { 
+			random_navy_leader = {
+
+		add_naval_commander_role ={
+			traits = { blue_water_expert spotter red_navy_trait }
+			skill= 3
+			attack_skill= 2
+			defense_skill= 3
+			maneuvering_skill= 3
+			coordination_skill= 3
+
+		}
+			}				
+	}
+}
+
+shared_focus = {
+	id = USA_streamlined_production_techniques
+	icon = GFX_focus_aland_fortification
+	x = 97
+	y = 6
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_versatile_task_forces
+	}
+	
+	completion_reward = { 
+random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_ideas = {
+			RI_optimised_production
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_screen_ships
+	icon = GFX_goal_rebuild_the_navy
+	x = 99
+	y = 6
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_versatile_task_forces
+	}
+	
+	completion_reward = { 
+					add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = dd_tech }
+		}
+
+}
+
+shared_focus = {
+	id = USA_quantity_over_quality
+	icon = GFX_goal_generic_destroyer
+	x = 97
+	y = 7
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_streamlined_production_techniques
+	}
+	
+	completion_reward = { 
+					add_ideas = {
+			quality_over_quantity_idea
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_manueverability_over_firepower
+	icon = GFX_goal_generic_multiple_ships
+	x = 99
+	y = 7
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_screen_ships
+	}
+	
+	completion_reward = { 
+		add_tech_bonus = {
+			name = dd_bonus
+			bonus = 0.5
+			uses = 2
+			category = dd_tech
+		}		}
+}
+
+shared_focus = {
+	id = USA_global_navy
+	icon = ENG_marines
+	x = 98
+	y = 8
+	
+	cost = 6
+
+	prerequisite = {
+		focus = USA_manueverability_over_firepower
+	}
+
+	prerequisite = {
+		focus = USA_quantity_over_quality
+	}
+	
+	completion_reward = { 
+		ENG_Rearmarment_Budget_level_up = yes
+		add_tech_bonus = {
+			bonus = 1.2
+			uses = 3
+			technology = cv_naval_bomber1
+			technology = cv_naval_bomber2
+			technology = cv_naval_bomber3
+			technology = cv_fighter1
+			technology = cv_fighter2
+			technology = cv_fighter3
+			technology = cv_CAS1
+			technology = cv_CAS2
+			technology = cv_CAS3
+		}				
+	}
+}
+
+shared_focus = {
+	id = USA_maximum_firepower
+	icon = GFX_goal_generic_blue_navy
+	x = 102
+	y = 5
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_great_white_fleet
+	}
+
+	prerequisite = {
+		focus = USA_undersea_warfare
+	}
+
+	prerequisite = {
+		focus = USA_support_ship_focus
+	}
+
+	mutually_exclusive = {
+		focus = USA_versatile_task_forces
+	}
+	
+	completion_reward = { 
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 1.0
+			uses = 1
+			category = cv_tech
+		}			
+	}
+}
+
+shared_focus = {
+	id = USA_bigger_ships
+	icon = battleships
+	x = 102
+	y = 6
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_maximum_firepower
+	}
+	
+	completion_reward = { 
+					add_tech_bonus = {
+			name = cr_bonus
+			bonus = 1.0
+			uses = 1
+			category = ca_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_bigger_guns
+	icon = GFX_grand_battlefleet_medium
+	x = 102
+	y = 7
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_bigger_ships
+	}
+	
+	completion_reward = { 
+				add_tech_bonus = {
+			name = bb_bonus
+			bonus = 1.0
+			uses = 1
+			category = bb_tech
+		}	
+	}
+}
+
+shared_focus = {
+	id = USA_new_naval_theory
+	icon = GFX_focus_ron_generic_small_navy
+	x = 102
+	y = 8
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_bigger_guns
+	}
+	
+	completion_reward = { 
+
+	add_political_power = 10
+		ENG_Rearmarment_Budget_level_up = yes
+	}
+}
+
+shared_focus = {
+	id = USA_the_battleship
+	icon = GFX_focus_ron_trade_navy
+	x = 102
+	y = 9
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_new_naval_theory
+	}
+	
+	completion_reward = { 
+	navy_experience = 100
+		air_experience = 100
+		add_tech_bonus = {
+			name = nav_bomber_bonus
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 1
+			category = naval_bomber
+		}			
+					add_timed_idea = {
+			idea = NOR_state_investments
+			days = 60
+		}
+	}
+}
+
+##########################################
+####### UNITED STATES MARINES URAH #######
+##########################################
+
+shared_focus = {
+	id = USA_united_states_marines 
+	icon = GFX_SIA_submarineprocurementproject
+	x = 107
+	y = 2
+	
+	cost = 10
+
+	prerequisite = {
+		focus = USA_armed_forces
+	}
+	
+	completion_reward = { 
+			add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			technology = marines
+			technology = marines2
+			technology = marines3
+		}		
+	}
+}
+
+shared_focus = {
+	id = USA_halls_of_montezuma
+	icon = GFX_goal_generic_navigate_the_seas
+	x = 105
+	y = 3
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_united_states_marines
+	}
+	
+	completion_reward = { 
+				add_ideas = {
+		RI_big_fleet
+	}
+	}
+}
+
+shared_focus = {
+	id = USA_shores_of_tripoli
+	icon = GFX_goal_generic_naval_academy
+	x = 109
+	y = 3
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_united_states_marines
+	}
+	
+	completion_reward = { 
+					add_tech_bonus = {
+			name = naval_doc_bonus
+			bonus = 1
+			uses = 3
+			category = naval_doctrine
+		}
+	}
+}
+
+shared_focus = {
+	id = USA_fight_battles
+	icon = GFX_focus_ron_missile_ship
+	x = 106
+	y = 4
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_shores_of_tripoli
+	}
+
+	prerequisite = {
+		focus = USA_halls_of_montezuma
+	}
+	
+	completion_reward = { 
+					add_ideas = ship_investigation
+
+	}
+}
+
+shared_focus = {
+	id = USA_land_and_sea
+	icon = GFX_focus_ron_hit_n_run
+	x = 108
+	y = 4
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_shores_of_tripoli
+	}
+
+	prerequisite = {
+		focus = USA_halls_of_montezuma
+	}
+	
+	completion_reward = { 
+			random_state = {
+			limit = {
+				is_owned_by = USA
+				is_core_of = USA
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}		
+	}
+}
+
+shared_focus = {
+	id = USA_americas_finest
+	icon = GFX_goal_coastal_navy
+	x = 107
+	y = 5
+	
+	cost = 5
+
+	prerequisite = {
+		focus = USA_fight_battles
+	}
+
+	prerequisite = {
+		focus = USA_land_and_sea
+	}
+	
+	completion_reward = { 
+					add_tech_bonus = {
+			name = ss_bonus
+			bonus = 1
+			uses = 2
+			technology = early_light_cruiser
+			technology = basic_light_cruiser
+			technology = improved_light_cruiser
+			technology = advanced_light_cruiser
+		}
+	}
+}
