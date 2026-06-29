@@ -15,3 +15,6 @@
 - Better Mechanics: Optimization - https://steamcommunity.com/sharedfiles/filedetails/?id=3009437701
 - Kaiserredux - https://steamcommunity.com/workshop/filedetails/?id=2076426030
 - Kaiserreich 4 - https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605
+- The Great War Redux - https://steamcommunity.com/sharedfiles/filedetails/?id=3365515312
+- The Great War RolePlay - https://steamcommunity.com/sharedfiles/filedetails/?id=3226668008
+- The Road to 56' - https://steamcommunity.com/sharedfiles/filedetails/?id=820260968
