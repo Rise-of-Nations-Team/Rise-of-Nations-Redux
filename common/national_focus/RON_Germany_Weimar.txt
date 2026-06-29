@@ -1,27 +1,23 @@
 focus_tree = {
-	id = RON_GER_WEIMAR
+	id = Germany_INT
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			add = 10
 			tag = GER
-			has_country_flag = great_war_loser
+			date > 1918.12.31
+			date < 1936.1.1
+			has_country_flag = great_war_loser #TODO WW1 Peace Deal System
 		}
 	}
-	continuous_focus_position = {
-		x = 100
-		y = 3200
-	}
+
+	continuous_focus_position = { x = 50 y = 2800 }
+
 	initial_show_position = {
 		focus = GER_treaty_of_versailles
 	}
-	default = no
 
-	shortcut = {
-		name = postwar_tree_shortcut
-		target = GER_treaty_of_versailles
-		scroll_wheel_factor = 1
-	}
+	default = no
 	
 	#Hugo Haase ally Ebert
 	focus = {
@@ -678,11 +674,9 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			SOV = {
-				add_opinion_modifier = {
-					modifier = RI_friendly_foreign_policy
-					target = GER
-				}
+			reverse_add_opinion_modifier = {
+				modifier = RI_friendly_foreign_policy
+				target = SOV
 			}
 			add_opinion_modifier = {
 				modifier = RI_friendly_foreign_policy
