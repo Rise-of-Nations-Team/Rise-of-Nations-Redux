@@ -1,0 +1,731 @@
+political_actions = {
+
+	GER_prussian_influence_pp = {
+		icon = ger_military_buildup
+		allowed = {
+			OR = {
+				tag = GER
+				tag = BAY
+				tag = FRA
+				tag = ENG
+				tag = RUS
+				tag = AUH
+			}
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = GER
+					tag = BAY
+					tag = SAX
+					tag = HAN
+					tag = WUR
+					tag = RHN
+				}
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					tag = GER
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_prussian_influence_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GER_idea_russian_influence_3
+							has_idea = GER_idea_french_influence_3
+							has_idea = GER_idea_british_influence_3
+							is_subject = yes
+						}
+					}
+					FROM = {
+						tag = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = BAY
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_bavarian_influence_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GER_idea_russian_influence_3
+							has_idea = GER_idea_french_influence_3
+							has_idea = GER_idea_british_influence_3
+							is_subject = yes
+						}
+					}
+					FROM = {
+						tag = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = RUS
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_russian_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = FRA
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_french_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = ENG
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_british_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = AUH
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_austrian_influence_3
+					}
+				}
+			}
+			else = {
+				always = no
+			}
+		}
+		visible = {
+			has_global_flag = prussian_blue
+			if = {
+				limit = {
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = GER
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = BAY
+				}
+				FROM = {
+					OR = {
+						tag = BAY
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			else = {
+				is_subject = no
+				has_country_flag = great_war_winner
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					AND = {
+						is_subject = yes
+						NOT = {
+							FROM = { tag = PREV }
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_prussian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = BAY
+							}
+							has_idea = GER_idea_bavarian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_russian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_french_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_british_influence_3
+						}
+					}
+				}
+			}	
+		}	
+		cancel_effect = {
+			add_political_power = 75
+		}
+		cost = 75
+		days_remove = 30
+		days_re_enable = 60
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_country_flag = great_war_winner
+				is_neighbor_of = FROM
+			}
+			modifier = {
+				add = 10
+				OR = {
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			modifier = {
+				add = 100
+				OR = {
+					tag = GER
+					tag = BAY
+				}
+				FROM = {
+					tag = PREV
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_politicial_power = 75
+			}
+			prussian_influence_effect = yes
+		}
+	}
+	
+	GER_prussian_influence_rifle = {
+		icon = ger_military_buildup
+		allowed = {
+			OR = {
+				tag = GER
+				tag = BAY
+				tag = FRA
+				tag = ENG
+				tag = RUS
+				tag = AUH
+			}
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = GER
+					tag = BAY
+					tag = SAX
+					tag = HAN
+					tag = WUR
+					tag = RHN
+				}
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					tag = GER
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_prussian_influence_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GER_idea_russian_influence_3
+							has_idea = GER_idea_french_influence_3
+							has_idea = GER_idea_british_influence_3
+							is_subject = yes
+						}
+					}
+					FROM = {
+						tag = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = BAY
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_bavarian_influence_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GER_idea_russian_influence_3
+							has_idea = GER_idea_french_influence_3
+							has_idea = GER_idea_british_influence_3
+							is_subject = yes
+						}
+					}
+					FROM = {
+						tag = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = RUS
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_russian_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = FRA
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_french_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = ENG
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_british_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = AUH
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_austrian_influence_3
+					}
+				}
+			}
+			else = {
+				always = no
+			}
+		}
+		visible = {
+			has_global_flag = prussian_blue
+			if = {
+				limit = {
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = GER
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = BAY
+				}
+				FROM = {
+					OR = {
+						tag = BAY
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			else = {
+				is_subject = no
+				has_country_flag = great_war_winner
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					AND = {
+						is_subject = yes
+						NOT = {
+							FROM = { tag = PREV }
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_prussian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = BAY
+							}
+							has_idea = GER_idea_bavarian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_russian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_french_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_british_influence_3
+						}
+					}
+				}
+			}	
+		}
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = 2000_infantry_equipment_1
+		days_remove = 30
+		days_re_enable = 60
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_country_flag = great_war_winner
+				is_neighbor_of = FROM
+			}
+			modifier = {
+				add = 10
+				OR = {
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			modifier = {
+				add = 100
+				OR = {
+					tag = GER
+					tag = BAY
+				}
+				FROM = {
+					tag = PREV
+				}
+			}
+		}
+		remove_effect = {
+			send_equipment = {
+				target = FROM
+				type = infantry_equipment
+				amount = 2000
+			}
+			prussian_influence_effect = yes
+		}
+	}
+	
+	GER_prussian_influence_army = {
+		icon = ger_military_buildup
+		allowed = {
+			OR = {
+				tag = GER
+				tag = BAY
+				tag = FRA
+				tag = ENG
+				tag = RUS
+				tag = AUH
+			}
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = GER
+					tag = BAY
+					tag = SAX
+					tag = HAN
+					tag = WUR
+					tag = RHN
+				}
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					tag = GER
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_prussian_influence_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GER_idea_russian_influence_3
+							has_idea = GER_idea_french_influence_3
+							has_idea = GER_idea_british_influence_3
+							is_subject = yes
+						}
+					}
+					FROM = {
+						tag = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = BAY
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_bavarian_influence_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GER_idea_russian_influence_3
+							has_idea = GER_idea_french_influence_3
+							has_idea = GER_idea_british_influence_3
+							is_subject = yes
+						}
+					}
+					FROM = {
+						tag = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = RUS
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_russian_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = FRA
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_french_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = ENG
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_british_influence_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = AUH
+				}
+				FROM = {
+					NOT = {
+						has_idea = GER_idea_austrian_influence_3
+					}
+				}
+			}
+			else = {
+				always = no
+			}
+		}
+		visible = {
+			has_global_flag = prussian_blue
+			if = {
+				limit = {
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = GER
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = BAY
+				}
+				FROM = {
+					OR = {
+						tag = BAY
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			else = {
+				is_subject = no
+				has_country_flag = great_war_winner
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					AND = {
+						is_subject = yes
+						NOT = {
+							FROM = { tag = PREV }
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_prussian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = BAY
+							}
+							has_idea = GER_idea_bavarian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_russian_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_french_influence_3
+						}
+						else_if = {
+							limit = {
+								tag = GER
+							}
+							has_idea = GER_idea_british_influence_3
+						}
+					}
+				}
+			}	
+		}
+		cancel_effect = {
+			add_command_power = 25
+		}
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+		days_remove = 30
+		days_re_enable = 60
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_country_flag = great_war_winner
+				is_neighbor_of = FROM
+			}
+			modifier = {
+				add = 10
+				OR = {
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = SAX
+						tag = HAN
+						tag = WUR
+						tag = RHN
+					}
+				}
+			}
+			modifier = {
+				add = 100
+				OR = {
+					tag = GER
+					tag = BAY
+				}
+				FROM = {
+					tag = PREV
+				}
+			}
+		}
+		complete_effect = {
+			add_command_power = 25
+		}
+		remove_effect = {
+			FROM = {
+				add_command_power = 25
+			}
+			prussian_influence_effect = yes
+		}
+	}
+
+}
