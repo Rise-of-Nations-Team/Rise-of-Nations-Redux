@@ -6,6 +6,7 @@
 - Pozitox
 - Mstae67
 - Vernox
+- Zomboss11
 ## OUTSIDE CONTRIBUTIONS
 ## INTEGRATED MODS
 - Better Mechanics: AI Divisions - https://steamcommunity.com/sharedfiles/filedetails/?id=2996504479
