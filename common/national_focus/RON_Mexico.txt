@@ -201,7 +201,7 @@ focus_tree = {
 	focus = {
 		id = MEX_DNC_a_trading_nation
 		icon = GFX_goal_generic_positive_trade_relations_gold
-		cost = 10
+		cost = 15
 		prerequisite = { focus = MEX_DNC_loosen_immigration_laws }
 		prerequisite = { focus = MEX_DNC_establish_the_marina_mercante_mexicana }
 		prerequisite = { focus = MEX_DNC_promote_asian_economic_cooperation }
@@ -246,78 +246,113 @@ focus_tree = {
 		}
 	}
 
-	#Focus to expand public services
 	focus = {
-		id = MEX_DNC_expand_public_services
+		id = MEX_DNC_modernize_public_services
 		icon = GFX_focus_generic_public_works
-		x = 4
-		y = 3
 		cost = 10
 		prerequisite = { focus = MEX_DNC_the_secretary_of_economy }
-		ai_will_do = { factor = 0 }
+		x = -1
+		y = 1
+		relative_position_id = MEX_DNC_the_secretary_of_economy
+
+		available = {
+		}
+
 		completion_reward = {
-				add_ideas = { MEX_modern_public_services }
+			add_ideas = MEX_DNC_modern_public_services_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus to set the Gold standard
 	focus = {
 		id = MEX_DNC_the_gold_standard
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 4
-		y = 5
 		cost = 10
-		prerequisite = { focus = MEX_DNC_expand_public_services }
-		ai_will_do = { factor = 0 }
+		prerequisite = { focus = MEX_DNC_modernize_public_services }
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_modernize_public_services
+
+		available = {
+		}
+
 		completion_reward = {
-			add_ideas = { MEX_the_gold_standard }
+			add_ideas = MEX_DNC_the_gold_standard_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus to recruit Matilde Montoya into the government (Limantour OR Reyes)
 	focus = {
-		id = MEX_DNC_recruit_montoya
-		icon = GFX_goal_generic_political_actions
-		x = 5
-		y = 4
+		id = MEX_DNC_recruit_matilde_montoya
+		icon = GFX_focus_PLACEHOLDER
 		cost = 10
-		prerequisite = { 
-			focus = MEX_DNC_the_secretary_of_economy 
-			focus = MEX_DNC_the_secretary_of_defense
+		prerequisite = { focus = MEX_DNC_the_secretary_of_economy focus = MEX_DNC_the_secretary_of_defense }
+		x = 1
+		y = 1
+		relative_position_id = MEX_DNC_the_secretary_of_economy
+
+		available = {
 		}
-		ai_will_do = { factor = 0 }
+
 		completion_reward = {
-			
+			add_ideas = MEX_DNC_guaranteed_womens_rights_1_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus to allow women go to school (Limantour OR Reyes)
 	focus = {
-		id = MEX_DNC_school_for_women
-		icon = GFX_goal_generic_political_actions
-		x = 5
-		y = 6
+		id = MEX_DNC_encourage_womens_education
+		icon = GFX_focus_AUS_womens_education_initiative
 		cost = 10
-		prerequisite = { focus = MEX_DNC_recruit_montoya }
-		ai_will_do = { factor = 0 }
+		prerequisite = { focus = MEX_DNC_recruit_matilde_montoya }
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_recruit_matilde_montoya
+
+		available = {
+		}
+
 		completion_reward = {
-			add_ideas = { MEX_the_women_school }
+			swap_ideas = {
+				remove_idea = MEX_DNC_guaranteed_womens_rights_1_ns
+				add_idea = MEX_DNC_guaranteed_womens_rights_2_ns
+			}
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus for the Legacy of Limantour
 	focus = {
 		id = MEX_DNC_a_modern_republic
-		icon = GFX_goal_generic_political_actions
-		x = 4
-		y = 8
-		cost = 10
+		icon = GFX_goal_mexico
+		cost = 15
 		prerequisite = { focus = MEX_DNC_promote_asian_economic_cooperation }
 		prerequisite = { focus = MEX_DNC_the_gold_standard }
-		prerequisite = { focus = MEX_DNC_school_for_women }
-		ai_will_do = { factor = 0 }
+		prerequisite = { focus = MEX_DNC_encourage_womens_education }
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_the_gold_standard
+
+		available = {
+		}
+
 		completion_reward = {
-			
+			add_ideas = MEX_DNC_a_modern_republic_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
@@ -422,7 +457,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = MEX_DNC_loyalty_of_bandits }
 		prerequisite = { focus = MEX_DNC_recruit_madero }
-		prerequisite = { focus = MEX_DNC_school_for_women }
+		prerequisite = { focus = MEX_DNC_encourage_womens_education }
 		ai_will_do = { factor = 0 }
 		completion_reward = {
 			add_stability = 0.20

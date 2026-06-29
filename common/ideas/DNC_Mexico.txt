@@ -81,8 +81,120 @@ ideas = {
 			modifier = {
 				resource_trade_cost_bonus_per_factory = 2
 				trade_opinion_factor = 1.0
-				political_power_factor = 0.05
+				political_power_factor = 0.1
 				consumer_goods_factor = -0.1
+			}
+		}
+
+		MEX_DNC_modern_public_services_ns = {
+
+			picture = ARG_social_welfare_fund_ns
+
+			allowed = {
+				original_tag = MEX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.20
+				factory_energy_consumption = -0.15
+				production_speed_buildings_factor = 0.20
+			}
+		}
+
+		MEX_DNC_the_gold_standard_ns = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				original_tag = MEX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.05
+				trade_laws_cost_factor = -0.25
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		MEX_DNC_guaranteed_womens_rights_1_ns = {
+
+			picture = AUS_women_in_academia
+
+			allowed = {
+				original_tag = MEX
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.03
+				recruitable_population_factor = 0.05
+			}
+		}
+
+		MEX_DNC_guaranteed_womens_rights_2_ns = {
+
+			name = MEX_DNC_guaranteed_womens_rights_1_ns
+
+			picture = AUS_women_in_academia
+
+			allowed = {
+				original_tag = MEX
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.03
+				research_speed_factor = 0.05
+				recruitable_population_factor = 0.05
+				experience_loss_factor = -0.1
+			}
+		}
+
+		MEX_DNC_a_modern_republic_ns = {
+
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				original_tag = MEX
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.1
 			}
 		}
 
@@ -107,11 +219,6 @@ ideas = {
 				economy_cost_factor = 0.15
 				political_power_gain = -0.40
 			}
-		}
-
-		### Limantour Ultimate after succession
-		MEX_the_mexican_republic = {
-			removal_cost = -1
 		}
 
 		### Bernardo Reyes Ultimate after succession
@@ -267,47 +374,6 @@ ideas = {
 				army_defence_factor = 0.25
 				army_speed_factor = 0.20
 				training_time_factor = 0.10
-			}
-		}
-
-		MEX_modern_public_services = {
-			removal_cost = -1
-
-			allowed = {
-				original_tag = MEX
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				local_resources_factor = 0.20
-				factory_energy_consumption = -0.15
-				production_speed_buildings_factor = 0.20
-			}
-		}
-
-		MEX_the_gold_standard = {
-			removal_cost = -1
-
-			allowed = { original_tag = MEX }
-			allowed_civil_war = { always = yes }
-			modifier = {
-				political_power_gain = 0.15
-				weekly_stability = 0.025
-				trade_laws_cost_factor = -0.25
-			}
-		}
-
-		MEX_the_women_school = {
-			removal_cost = -1 
-
-			allowed = { original_tag = MEX }
-			allowed_civil_war = { always = yes }
-			modifier = {
-				democratic_drift = 0.02
-				weekly_stability = 0.01
-				research_speed_factor = 0.05
-				experience_loss_factor = -0.10
 			}
 		}
 	}
