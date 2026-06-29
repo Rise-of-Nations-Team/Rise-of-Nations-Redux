@@ -29,7 +29,7 @@ focus_tree = {
 		id = RUS_DNC_the_russian_economy
 		icon = GFX_goal_RUS_economy
 		x = 10
-		y = 1
+		y = 0
 
 		cost = 1
 
@@ -173,14 +173,14 @@ focus_tree = {
 			focus = RUS_DNC_the_russian_economy
 		}
 
-		cost = 5
+		cost = 4
 
 		available = {
 		
 		}
 
 		completion_reward = {
-			unlock_decision_category_tooltip = RUS_DNC_trans_siberian_railway_cat
+			unlock_decision_category_tooltip = RUS_DNC_trans_siberian_project_cat
 		}
 	}
 
@@ -583,14 +583,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RUS_new_tcway
+		id = RUS_DNC_expand_the_trans_caucasus_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 12
+		x = 11
 		y = 1
-
 		relative_position_id = RUS_DNC_the_russian_economy
 
-		cost = 5
+		cost = 4
 
 		prerequisite = {
 			focus = RUS_DNC_the_russian_economy
@@ -601,147 +600,238 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			unlock_decision_category_tooltip = RUS_trans_caucasian_railway_cat
+			unlock_decision_category_tooltip = RUS_DNC_trans_caucasian_project_cat
 		}	
 	}
 
 	focus = {
-		id = RUS_new_tcway2
+		id = RUS_DNC_a_bridge_between_the_two_seas
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 22
-		y = 3
+		x = 0
+		y = 1
+		relative_position_id = RUS_DNC_expand_the_trans_caucasus_railway
 
 		cost = 10
 
 		prerequisite = {
-			focus = RUS_new_tcway
+			focus = RUS_DNC_expand_the_trans_caucasus_railway
 		}
 
 		available = {
-		
+			OR = {
+				controls_state = 233
+				controls_state = 231
+				controls_state = 232
+			}
 		}
 
 		completion_reward = {
-					233 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
+			if = {
+				limit = {
+					controls_state = 233
+				}
+				233 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-					231 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 231
+				}
+				231 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-					232 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 1
-			instant_build = yes
-										}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 232
+				}
+				232 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-
+				}
+			}
 		}
 	}
 
 	focus = {
-		id = RUS_new_tcwayBase
+		id = RUS_DNC_a_strategic_railway
 		icon = GFX_focus_TUR_misak_i_milli
-		x = 21
-		y = 4
+		x = -1
+		y = 1
+		relative_position_id = RUS_DNC_a_bridge_between_the_two_seas
 
-		cost = 10
+		cost = 5
 
 		prerequisite = {
-			focus = RUS_new_tcway2
+			focus = RUS_DNC_a_bridge_between_the_two_seas
 		}
 
-		mutually_exclusive = { focus = RUS_new_tcwayFriend }
-
+		mutually_exclusive = { focus = RUS_DNC_a_show_of_friendship }
 
 		available = {
 		
 		}
 
 		completion_reward = {
-		add_opinion_modifier = {
-		target = TUR
-		modifier = large_decrease	
-								}
+			if = {
+				limit = {
+					controls_state = 1001
+				}
+				1001 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_opinion_modifier = {
+				target = TUR
+				modifier = large_decrease
+			}
 		}
 	}
 
 
 	focus = {
-		id = RUS_new_tcwayFriend
+		id = RUS_DNC_a_show_of_friendship
 		icon = GFX_focus_generic_befriend_turkey
-		x = 23
-		y = 4
+		x = 1
+		y = 1
+		relative_position_id = RUS_DNC_a_bridge_between_the_two_seas
 
-		cost = 10
+		cost = 5
 
 		prerequisite = {
-			focus = RUS_new_tcway2
+			focus = RUS_DNC_a_bridge_between_the_two_seas
 		}
 
-		mutually_exclusive = { focus = RUS_new_tcwayBase}
-
+		mutually_exclusive = { focus = RUS_DNC_a_strategic_railway }
 
 		available = {
 		
 		}
 
 		completion_reward = {
-		add_opinion_modifier = { target = TUR modifier = huge_increase }
+			add_opinion_modifier = {
+				target = TUR
+				modifier = huge_increase
+			}
 		}
 	}
 
 
 	focus = {
-		id = RUS_new_finway2
+		id = RUS_DNC_finish_the_trans_caucasus_railway
 		icon = GFX_goal_GER_develop_colonies
-		x = 22
-		y = 5
+		x = 1
+		y = 1
+		relative_position_id = RUS_DNC_a_strategic_railway
 
-		cost = 20
+		cost = 14.4
 
 		prerequisite = {
-			focus = RUS_new_tcwayBase
-			focus = RUS_new_tcwayFriend
+			focus = RUS_DNC_a_strategic_railway
+			focus = RUS_DNC_a_show_of_friendship
 		}
 
-
 		available = {
-		
+			OR = {
+				controls_state = 1146
+				controls_state = 230
+				controls_state = 229
+				controls_state = 1092
+				controls_state = 1002
+				controls_state = 1091
+			}
 		}
 
 		completion_reward = {
-						942 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
+			if = {
+				limit = {
+					controls_state = 1146
+				}
+				1146 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-						230 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 230
+				}
+				230 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-						229 = {
-			add_building_construction = {
-			type = infrastructure
-			level = 2
-			instant_build = yes
-										}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 229
+				}
+				229 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
 					}
-					add_stability = 0.05
-
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 1092
+				}
+				1092 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 1002
+				}
+				1002 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 1091
+				}
+				1091 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
