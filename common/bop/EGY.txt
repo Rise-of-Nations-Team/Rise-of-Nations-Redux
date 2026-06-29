@@ -1,0 +1,118 @@
+EGY_peoples_support = {
+	initial_value = 0.0
+	left_side = EGY_kamil_support
+	right_side = EGY_abbas_support
+	decision_category = EGY_peoples_support_category
+	side = {
+		id = EGY_kamil_support
+		icon = GFX_bop_EGY_kamil_support
+		range = {
+			id = EGY_kamil_support_1
+			min = -0.25
+			max = -0.01
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+			}
+		}
+		range = {
+			id = EGY_kamil_support_2
+			min = -0.50
+			max = -0.25
+
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = 0.10
+				political_power_factor = 0.15
+			}
+		}
+		range = {
+			id = EGY_kamil_support_3
+			min = -0.75
+			max = -0.50
+
+			modifier = {
+				war_support_factor = -0.10
+				stability_factor = 0.15
+				political_power_factor = 0.20
+			}
+		}
+		range = {
+			id = EGY_kamil_support_4
+			min = -1
+			max = -0.75
+
+			on_activate = {
+				if = {
+					limit = { NOT = { has_completed_focus = EGY_free_egypt } }
+					complete_national_focus = EGY_stay_with_british
+				}
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = -0.20
+				political_power_factor = 0.20
+				political_power_gain = 0.50
+			}
+		}
+	}
+	side = {
+		id = EGY_abbas_support
+		icon = GFX_bop_EGY_abbas_support
+		range = {
+			id = EGY_abbas_support_1
+			min = 0.01
+			max = 0.25
+
+			modifier = {
+				war_support_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+		range = {
+			id = EGY_abbas_support_2
+			min = 0.25
+			max = 0.50
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.10
+				political_power_factor = -0.15
+			}
+		}
+		range = {
+			id = EGY_abbas_support_3
+			min = 0.50
+			max = 0.75
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.15
+				political_power_factor = -0.20
+				autonomy_gain = 0.5
+			}
+		}
+		range = {
+			id = EGY_abbas_support_4
+			min = 0.75
+			max = 1
+
+			on_activate = {
+				if = {
+					limit = { NOT = { has_completed_focus = EGY_stay_with_british } }
+					complete_national_focus = EGY_free_egypt
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.20
+				political_power_factor = -0.20
+				political_power_gain = -0.50
+				autonomy_gain = 1
+			}
+		}
+	}
+}

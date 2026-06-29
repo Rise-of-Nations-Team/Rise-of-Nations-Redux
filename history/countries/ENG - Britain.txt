@@ -349,6 +349,40 @@ if = {
 	}
 }
 
+# PUPPET EGYPT / EGYPT DOMINION
+if = {
+	limit = {
+		has_start_date < 1915.1.1
+	}
+	set_autonomy = {
+		target = EGY
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.3
+	}
+}
+if = {
+	limit = {
+		has_start_date > 1914.12.31
+		has_start_date < 1922.1.1
+	}
+	set_autonomy = {
+		target = EGY
+		autonomous_state = autonomy_colony
+		freedom_level = 0.5
+	}
+}
+if = {
+	limit = {
+		has_start_date > 1921.12.31
+		has_start_date < 1951.1.1
+	}
+	set_autonomy = {
+		target = EGY
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.6
+	}
+}
+
 if = {
 	limit = {
 		has_dlc = "Together for Victory"
