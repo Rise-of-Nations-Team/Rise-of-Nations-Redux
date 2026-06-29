@@ -7,11 +7,12 @@ bookmarks = {
 		default_country = "GER"
 		default = yes
 
-		filters = { new_content }
+		filters = { continent }
 
 		GER = {
 			history = "GER_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				GER_Prussian_Dominance
 				GER_Well_Connected_Railways
@@ -23,9 +24,11 @@ bookmarks = {
 				GERDNC_weltpolitik
 			}
 		}
+
 		AUH = {
 			history = "AUH_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				multi_ethnic
 				AUH_ww1_House_Habsburg_Lorraine
@@ -37,9 +40,11 @@ bookmarks = {
 				AUHDNC_greater_german_solution
 			}
 		}
+
 		OTT = {
 			history = "OTT_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				OTT_the_hamidian_regime_ns
 				OTT_the_osman_caliphate_ns
@@ -48,9 +53,11 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
 		RUS = {
 			history = "RUS_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				russia_sucks
 				russo_jap_defeat
@@ -62,9 +69,11 @@ bookmarks = {
 				RUS_new_revive_three_emp
 			}
 		}
+
 		ENG = {
 			history = "ENG_PRE_WW1_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
 				ENG_pax_britannica
 				ENG_sun_never_sets
@@ -76,9 +85,11 @@ bookmarks = {
 				ENGDNC_the_francobritish_union
 			}
 		}
+
 		FRA = {
 			history = "FRA_PRE_WW1_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
 				FRA_ww1_Revanchism
 				FRA_disjointed_government
@@ -87,9 +98,11 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
 		USA = {
 			history = "USA_PRE_WW1_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
 				usa_american_constitution
 				usa_bill_of_rights
@@ -98,10 +111,18 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
+		"---" = {
+			history = "OTHER_PRE_WW1_DESC"
+		}
+
+		#### MINORS ####
+
 		QIN = {
 			minor = yes
 			history = "QIN_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				QIN_agrarian_society
 				QIN_opium_addictions
@@ -113,10 +134,12 @@ bookmarks = {
 				DNC_QIN_boxers
 			}
 		}
+
 		COL = {
 			minor = yes
 			history = "COL_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				COL_bolivars_legacy
 				COL_a_nation_divided 
@@ -126,10 +149,12 @@ bookmarks = {
 				COL_1900_crash_them 
 			}
 		}
+
 		SPR = {
 			minor = yes
 			history = "SPR_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				SPR_memories_of_the_spanish_american_war_idea
 				SPR_an_empire_in_decline_idea
@@ -141,10 +166,12 @@ bookmarks = {
 				SPRVR_imperio_espanol
 			}
 		}
+
 		SER = {
 			minor = yes
 			history = "SER_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				SER_unpopular_monarchy
 				SER_legacy_of_serbo_bulgarian_war
@@ -156,10 +183,12 @@ bookmarks = {
 				SER_first_serbian_republic
 			}
 		}
+
 		KOR = {
 			minor = yes
 			history = "KOR_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				kor_gwangmu_reform
 				kor_great_game
@@ -175,6 +204,7 @@ bookmarks = {
 			minor = yes
 			history = "JAP_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 				JAP_meiji_restoration 
 				JAP_developed_rail_network 
@@ -186,23 +216,20 @@ bookmarks = {
 				JAP_japanese_superiority
 			}
 		}
+
 		MOR = {
 			minor = yes
 			history = "MOR_PRE_WW1_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
-
 			}
 			focuses = {
-
 			}
 		}
-		"---" = {
-			history = "OTHER_PRE_WW1_DESC"
-		}
+
 		effect = {
-			randomize_weather = 22345            # <- Obligatory in every bookmark !
-			#123 = { rain_light = yes }
+			randomize_weather = 22345			# <- Obligatory in every bookmark !
 		}
 	}
 }

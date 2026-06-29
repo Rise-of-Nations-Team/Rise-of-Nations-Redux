@@ -350,71 +350,85 @@ create_dynamic_country = {
 	} 	
 }
 
-#  1910.1.1 = {
-#  	oob = "SPR_1910"
-#  	set_politics = {
-#  		ruling_party = neutrality
-#  		last_election = "1907.1.12"
-#  		election_frequency = 60
-#  		elections_allowed = no
-#  	}
-#  
-#  	set_popularities = {
-#  		neutrality = 88
-#  		communism = 12
-#  	}
-#  
-#  	## Please make stuff like this only apply to a certain date, Here I did it for you
-#  	if = {
-#  		limit = {
-#  			has_start_date > 1909.01.01
-#  			has_start_date < 1919.01.01
-#  		}
-#  		set_autonomy = {
-#  			target = MOR
-#  			autonomous_state = autonomy_protectorate
-#  			freedom_level = 0.35
-#  		}
-#  	}
-#  
-#  	set_technology = {
-#  		tech_support = 1
-#  		early_infantry_weapons = 1
-#  		light_field_gun1 = 1
-#  		heavy_field_gun1 = 1
-#  		# Navy
-#  		ww1_destroyer0 = 1
-#  		ww1_destroyer1 = 1
-#  		ww1_light_cruiser1 = 1
-#  		ww1_light_cruiser0 = 1
-#  		ww1_battlecruiser0 = 1
-#  		ww1_battleship0 = 1
-#  		ww1_submarine1 = 1
-#  		ww1_coastal_submarine1 = 1
-#  		transport = 1
-#  		horses = 1
-#  		ww1_electronic_mechanical_engineering = 1
-#  		}
-#
-#	retire_character = SPR_Carlos_VII
-#		set_country_leader_name = {
-#			character = SPR_Jaime_III
-#			name = "Jaime III"
-#		}
-#	
-#		set_portraits = {
-#			character = SPR_alfonso_carlos_i
-#			army = {
-#				large = "gfx/leaders/SPR/portrait_spa_infante_alfonso_carlos.dds"
-#				small = "gfx/interface/ideas/SPR/advisors/idea_SPR_Alfonso_de_Borbon_y_Austria_Este_int_army.png"
-#			}
-#			army = {
-#				large = "gfx/leaders/SPR/portrait_spa_infante_alfonso_carlos.dds"
-#				small = "gfx/interface/ideas/SPR/advisors/idea_SPR_Alfonso_de_Borbon_y_Austria_Este_int.png"
-#			}		
-#		}	
-#  }
-#  
+1910.1.1 = {
+	oob = "SPR_1910"
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1910.3.8"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 3
+		communism = 8
+		neutrality = 64
+	}
+
+	## Please make stuff like this only apply to a certain date, Here I did it for you
+	if = {
+		limit = {
+			has_start_date < 1919.01.01
+		}
+		set_autonomy = {
+			target = MOR
+			autonomous_state = autonomy_protectorate
+			freedom_level = 0.35
+		}
+	}
+
+	if = {
+		limit = {
+			has_start_date < 1919.01.01
+		}
+		add_ideas = {
+			SPR_proceso_de_transicion_a_la_republica
+			SPR_III_catalonia_revolt
+			SPR_artilleros_en_huelga
+			SPR_golpe_de_martinez_campos
+			SPR_asesinato_del_general_castillejos
+			SPR_derrota_cubana
+		}
+	}
+
+	set_technology = {
+		tech_support = 1
+		early_infantry_weapons = 1
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		# Navy
+		ww1_destroyer0 = 1
+		ww1_destroyer1 = 1
+		ww1_light_cruiser1 = 1
+		ww1_light_cruiser0 = 1
+		ww1_battlecruiser0 = 1
+		ww1_battleship0 = 1
+		ww1_submarine1 = 1
+		ww1_coastal_submarine1 = 1
+		transport = 1
+		horses = 1
+		ww1_electronic_mechanical_engineering = 1
+	}
+
+	retire_character = SPR_Carlos_VII
+	set_character_name = {
+		character = SPR_Jaime_III
+		name = "Jaime III"
+	}
+	
+	set_portraits = {
+		character = SPR_alfonso_carlos_i
+		army = {
+			large = "gfx/leaders/SPR/portrait_spa_infante_alfonso_carlos.dds"
+			small = "gfx/interface/ideas/SPR/advisors/idea_SPR_Alfonso_de_Borbon_y_Austria_Este_int_army.png"
+		}
+		army = {
+			large = "gfx/leaders/SPR/portrait_spa_infante_alfonso_carlos.dds"
+			small = "gfx/interface/ideas/SPR/advisors/idea_SPR_Alfonso_de_Borbon_y_Austria_Este_int.png"
+		}
+	}
+}
+
 #  1914.1.1 = {
 #  	oob = "SPR_1914"
 #  	recruit_character = SPR_francisco_largo_caballero	

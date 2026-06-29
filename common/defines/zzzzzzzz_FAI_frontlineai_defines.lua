@@ -175,6 +175,13 @@ NDefines.NAI.PRODUCTION_CARRIER_PLANE_PRODUCTION_BOOST_TO_BUFFER = 4.0  -- vanil
 NDefines.NAI.DEFAULT_SUPPLY_TRAIN_NEED_FACTOR = 1.25  -- vanilla 1.2 | AI multiplies current train usage by this to determine desired nr of wanted trains. Can be modified by wanted_supply_train min_wanted_supply_trains ai strats. | [BIC]
 NDefines.NAI.OPERATION_EQUIPMENT_NEED_PRODUCTION_MULT = 1.0  -- vanilla 1.0 | equipment requests for operations will be added the equipment needs that ai considers while assigning factories to production | [BIC]
 
+NDefines.NProduction.BASE_FACTORY_SPEED = 2 -- vanilla 5 | The factor for how much production civilian factories produce 
+NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 1.75 -- vanilla 4.25 | The factor for how much production military factories produce
+NDefines.NProduction.BASE_FACTORY_SPEED_NAC = 0.5 -- vanilla 2.5 | The factor for how much production naval dockyards produce
+NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 3 -- vanilla 10 | The base factor that factory production starts at
+NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 15 -- vanilla 15 | The base factor for production efficiency cap
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN = 0.35 -- vanilla 1 | The base factor for production efficiency growth
+
  -- =====================================================================================
  -- DIPLOMACY
  -- =====================================================================================
