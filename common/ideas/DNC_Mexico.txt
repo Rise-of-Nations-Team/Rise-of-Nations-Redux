@@ -1,261 +1,314 @@
 ideas = {
-    country = {
-        
-        MEX_juarez_legacy_idea = {
-            removal_cost = -1
-            desc = MEX_juarez_legacy_idea.desc
+	country = {
 
-            picture = generic_agrarian_reform
+		MEX_DNC_controlled_economy_ns = {
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
+			picture = GER_economy_of_conquest
 
-            modifier = {
-                stability_factor = -0.20
-                war_support_factor = -0.20
-                trade_laws_cost_factor = 0.50
-                economy_cost_factor = 0.15
-                political_power_gain = -0.40
-            }
-        }
+			allowed = {
+				original_tag = MEX
+			}
 
-        ### Leon De La Barra Ultimate after sucession
-        MEX_a_trading_nation = {
-            removal_cost = -1
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                neutrality_drift = 0.02
-                resource_trade_cost_bonus_per_factory = 2
-                trade_opinion_factor = 1.0
-                political_power_gain = 0.10
-                consumer_goods_factor = -0.25
-            }
-        }
+			removal_cost = -1
 
-        ### Limantour Ultimate after succession
-        MEX_the_mexican_republic = {
-            removal_cost = -1
-        }
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
 
-        ### Bernardo Reyes Ultimate after succession
-        MEX_mexican_unity = {
-            removal_cost = -1
+		MEX_DNC_mass_immigration_ns = {
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                democratic_drift = 0.02
-                defensive_war_stability_factor = 0.50
-            }
-        }
+			picture = BEL_traditional_family_values
 
-        ### Feliz Diaz Ultimate after succession
-        MEX_an_strong_nation = {
-            removal_cost = -1
+			allowed = {
+				original_tag = MEX
+			}
 
-            allowed = { original_tag = MEX }
-            allowed_civil_war = { always = yes }
-            modifier = {
-                fascism_drift = 0.02
-                war_support_factor = 0.20
-                weekly_manpower = 3500
-                offensive_war_stability_factor = 0.30
-                justify_war_goal_time = -0.25
-            }
-        }
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+				}
+			}
 
-        MEX_aggressive_modernization = {
-            removal_cost = -1
-            picture = man_five_year_plan_industry
+			removal_cost = -1
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = no
-            }
+			modifier = {
+				monthly_population = 0.5
+			}
+		}
 
-            modifier = {
-                consumer_goods_factor = 0.10
-                political_power_gain = 0.25
-                production_speed_buildings_factor = 0.20
-                research_speed_factor = 0.10
-                trade_opinion_factor = 0.50
-                local_resources_factor = 0.20
-                stability_weekly = -0.015
-                power_balance_weekly = 0.03
-            }
-        }
+		MEX_DNC_marina_mercante_mexicana_ns = {
 
-        MEX_progressive_modernization = {
-            removal_cost = -1
+			picture = generic_coastal_navy
 
-            allowed = {
-                original_tag = MEX
-                AND = {
-                    MEX = {
-                        has_government = democratic
-                    }
-                }
-            }
-            allowed_civil_war = {
-                always = no
-            }
+			allowed = {
+				original_tag = MEX
+			}
 
-            modifier = {
-                consumer_goods_factor = 0.25
-                political_power_gain = 0.15
-                production_speed_industrial_complex_factor = 0.10
-                production_speed_infrastructure_factor = 0.10
-                research_speed_factor = 0.05
-                trade_opinion_factor = 0.25
-                local_resources_factor = 0.10
-                stability_weekly = -0.005
-                power_balance_weekly = 0.01
+			allowed_civil_war = {
+				always = yes
+			}
 
-            }
-        }
+			removal_cost = -1
 
-        MEX_the_bandit_problem = {
-            removal_cost = -1
-            picture = MEX_revolutionary_army
+			modifier = {
+				convoy_escort_efficiency = 0.50
+				navy_screen_attack_factor = 0.10
+				experience_gain_navy = 0.01
+			}
+		}
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                stability_factor = -0.05
-                conscription_factor = -0.40
-                supply_consumption_factor = 0.25
-            }
-        }
+		MEX_DNC_a_trading_nation_ns = {
 
-        MEX_the_halcones = {
-            removal_cost = -1
-            picture = HABSBURG_cavalry
+			picture = free_trade
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                conscription_factor = -0.20
-                cavalry_attack_factor = 0.10
-                cavalry_defence_factor = 0.10
-                modifier_army_sub_unit_cavalry_speed_factor = 0.10
-                training_time_factor = -0.20
-            }
-        }
+			allowed = {
+				original_tag = MEX
+			}
 
-        MEX_a_mexican_army= {
-            removal_cost = -1
-            picture = AFG_adopt_nufus
+			allowed_civil_war = {
+				always = yes
+			}
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                army_strength_factor = 0.10
-                army_attack_factor = 0.10
-                army_defence_factor = 0.10
-                army_speed_factor = 0.15
-                training_time_factor = 0.05
-            }
-        }
-        
-        MEX_a_modern_mexican_army = {
-            removal_cost = -1
+			removal_cost = -1
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                army_strength_factor = 0.20
-                army_attack_factor = 0.25
-                army_defence_factor = 0.25
-                army_speed_factor = 0.20
-                training_time_factor = 0.10
-            }
-        }
+			modifier = {
+				resource_trade_cost_bonus_per_factory = 2
+				trade_opinion_factor = 1.0
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
 
-        MEX_modern_public_services = {
-            removal_cost = -1
+		#TODO REWORK
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                local_resources_factor = 0.20
-                factory_energy_consumption = -0.15
-                production_speed_buildings_factor = 0.20
-            }
-        }
+		MEX_juarez_legacy_idea = {
+			removal_cost = -1
 
-        MEX_marina_mercante_mexicana = {
-            removal_cost = -1
+			picture = generic_agrarian_reform
 
-            allowed = {
-                original_tag = MEX
-            }
-            allowed_civil_war = { always = yes }
-            modifier = {
-                convoy_escort_efficiency = 0.50
-                navy_screen_attack_factor = 0.10
-                experience_gain_navy = 0.01
-            }
-        }
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 
-        MEX_the_gold_standard = {
-            removal_cost = -1
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				trade_laws_cost_factor = 0.50
+				economy_cost_factor = 0.15
+				political_power_gain = -0.40
+			}
+		}
 
-            allowed = { original_tag = MEX }
-            allowed_civil_war = { always = yes }
-            modifier = {
-                political_power_gain = 0.15
-                weekly_stability = 0.025
-                trade_laws_cost_factor = -0.25
-            }
-        }
+		### Limantour Ultimate after succession
+		MEX_the_mexican_republic = {
+			removal_cost = -1
+		}
 
-        MEX_the_women_school = {
-            removal_cost = -1 
+		### Bernardo Reyes Ultimate after succession
+		MEX_mexican_unity = {
+			removal_cost = -1
 
-            allowed = { original_tag = MEX }
-            allowed_civil_war = { always = yes }
-            modifier = {
-                democratic_drift = 0.02
-                weekly_stability = 0.01
-                research_speed_factor = 0.05
-                experience_loss_factor = -0.10
-            }
-        }
-    }
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				democratic_drift = 0.02
+				defensive_war_stability_factor = 0.50
+			}
+		}
+
+		### Feliz Diaz Ultimate after succession
+		MEX_an_strong_nation = {
+			removal_cost = -1
+
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				fascism_drift = 0.02
+				war_support_factor = 0.20
+				weekly_manpower = 3500
+				offensive_war_stability_factor = 0.30
+				justify_war_goal_time = -0.25
+			}
+		}
+
+		MEX_aggressive_modernization = {
+			removal_cost = -1
+			picture = man_five_year_plan_industry
+
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = 0.25
+				production_speed_buildings_factor = 0.20
+				research_speed_factor = 0.10
+				trade_opinion_factor = 0.50
+				local_resources_factor = 0.20
+				stability_weekly = -0.015
+				power_balance_weekly = 0.03
+			}
+		}
+
+		MEX_progressive_modernization = {
+			removal_cost = -1
+
+			allowed = {
+				original_tag = MEX
+				AND = {
+					MEX = {
+						has_government = democratic
+					}
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				political_power_gain = 0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+				research_speed_factor = 0.05
+				trade_opinion_factor = 0.25
+				local_resources_factor = 0.10
+				stability_weekly = -0.005
+				power_balance_weekly = 0.01
+
+			}
+		}
+
+		MEX_the_bandit_problem = {
+			removal_cost = -1
+			picture = MEX_revolutionary_army
+
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.40
+				supply_consumption_factor = 0.25
+			}
+		}
+
+		MEX_the_halcones = {
+			removal_cost = -1
+			picture = HABSBURG_cavalry
+
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription_factor = -0.20
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.10
+				modifier_army_sub_unit_cavalry_speed_factor = 0.10
+				training_time_factor = -0.20
+			}
+		}
+
+		MEX_a_mexican_army= {
+			removal_cost = -1
+			picture = AFG_adopt_nufus
+
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = 0.10
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				army_speed_factor = 0.15
+				training_time_factor = 0.05
+			}
+		}
+		
+		MEX_a_modern_mexican_army = {
+			removal_cost = -1
+
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = 0.20
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				army_speed_factor = 0.20
+				training_time_factor = 0.10
+			}
+		}
+
+		MEX_modern_public_services = {
+			removal_cost = -1
+
+			allowed = {
+				original_tag = MEX
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				local_resources_factor = 0.20
+				factory_energy_consumption = -0.15
+				production_speed_buildings_factor = 0.20
+			}
+		}
+
+		MEX_the_gold_standard = {
+			removal_cost = -1
+
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_gain = 0.15
+				weekly_stability = 0.025
+				trade_laws_cost_factor = -0.25
+			}
+		}
+
+		MEX_the_women_school = {
+			removal_cost = -1 
+
+			allowed = { original_tag = MEX }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				democratic_drift = 0.02
+				weekly_stability = 0.01
+				research_speed_factor = 0.05
+				experience_loss_factor = -0.10
+			}
+		}
+	}
 }

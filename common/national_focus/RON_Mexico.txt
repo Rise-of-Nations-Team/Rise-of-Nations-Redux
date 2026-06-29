@@ -47,7 +47,7 @@ focus_tree = {
 		cost = 5
 		mutually_exclusive = { focus = MEX_DNC_the_secretary_of_economy focus = MEX_DNC_the_secretary_of_defense focus = MEX_DNC_the_young_general }
 		prerequisite = { focus = MEX_DNC_choose_a_successor }
-		x = -6
+		x = -8
 		y = 1
 		relative_position_id = MEX_DNC_choose_a_successor
 
@@ -66,108 +66,158 @@ focus_tree = {
 		}
 	}
 
-	#Focus to start commerce with Southamerica and Centralamerica
 	focus = {
-		id = MEX_DNC_commerce_with_the_south
-		icon = GFX_goal_generic_political_actions
-		x = 1
-		y = 4
+		id = MEX_DNC_support_latin_american_trade
+		icon = GFX_focus_generic_south_america
 		cost = 10
 		prerequisite = { focus = MEX_DNC_the_secretary_of_exterior }
-		ai_will_do = { factor = 0 }
-		completion_reward = {
+		x = -1
+		y = 1
+		relative_position_id = MEX_DNC_the_secretary_of_exterior
 
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus to promote immigration with Southamerica and Centralamerica
 	focus = {
-		id = MEX_DNC_reinforce_immigration_policy
-		icon = GFX_goal_generic_political_actions
-		x = 1
-		y = 6
+		id = MEX_DNC_loosen_immigration_laws
+		icon = GFX_focus_generic_population_growth
 		cost = 10
-		prerequisite = { focus = MEX_DNC_commerce_with_the_south }
-		ai_will_do = { factor = 0 }
-		completion_reward = {
+		prerequisite = { focus = MEX_DNC_support_latin_american_trade }
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_support_latin_american_trade
 
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = MEX_DNC_mass_immigration_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus to hire foreign naval instructors
 	focus = {
-		id = MEX_DNC_hire_naval_instructors
-		icon = GFX_goal_generic_political_actions
-		x = 2
-		y = 3
+		id = MEX_DNC_hire_foreign_naval_instructors
+		icon = GFX_focus_generic_naval_discipline
 		cost = 10
 		prerequisite = { focus = MEX_DNC_the_secretary_of_exterior }
-		ai_will_do = { factor = 0 }
+		x = 1
+		y = 1
+		relative_position_id = MEX_DNC_the_secretary_of_exterior
+
+		available = {
+		}
+
 		completion_reward = {
 			every_navy_leader = {
 				add_skill_level = 1
 			}
 		}
-	}
 
-	#Focus to early establish the Mexican Merchant Navy
-	focus = {
-		id = MEX_DNC_mexican_merchant_navy
-		icon = GFX_goal_generic_political_actions
-		x = 2
-		y = 5
-		cost = 10
-		prerequisite = { focus = MEX_DNC_hire_naval_instructors }
-		ai_will_do = { factor = 0 }
-		completion_reward = {
-			add_ideas = { MEX_marina_mercante_mexicana }
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus liberate the market (De La Barra OR Limantour)
+	focus = {
+		id = MEX_DNC_establish_the_marina_mercante_mexicana
+		icon = GFX_focus_generic_merchant_fleet
+		cost = 10
+		prerequisite = { focus = MEX_DNC_hire_foreign_naval_instructors }
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_hire_foreign_naval_instructors
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = MEX_DNC_marina_mercante_mexicana_ns
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 	focus = {
 		id = MEX_DNC_liberate_the_markets
-		icon = GFX_goal_generic_political_actions
-		x = 3
-		y = 4
+		icon = GFX_PAR_lifted_market_restrictions
 		cost = 10
-		prerequisite = {
-			focus = MEX_DNC_the_secretary_of_exterior
-			focus = MEX_DNC_the_secretary_of_economy
-		}
-		ai_will_do = { factor = 0 }
-		completion_reward = {
+		prerequisite = { focus = MEX_DNC_the_secretary_of_exterior focus = MEX_DNC_the_secretary_of_economy }
+		x = 3
+		y = 1
+		relative_position_id = MEX_DNC_the_secretary_of_exterior
 
+		available = {
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = MEX_DNC_controlled_economy_ns
+			}
+		}
+
+		completion_reward = {
+			remove_ideas = MEX_DNC_controlled_economy_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus to establish trading routes Japan and Asia (De La Barra OR Limantour)
 	focus = {
-		id = MEX_DNC_trade_with_asia
-		icon = GFX_goal_generic_political_actions
-		x = 3
-		y = 6
+		id = MEX_DNC_promote_asian_economic_cooperation
+		icon = GFX_goal_QIN_pan_asianism
 		cost = 10
 		prerequisite = { focus = MEX_DNC_liberate_the_markets }
-		ai_will_do = { factor = 0 }
-		completion_reward = {
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_liberate_the_markets
 
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
-	#Focus The Legacy of Leon de la Barra
 	focus = {
 		id = MEX_DNC_a_trading_nation
-		icon = GFX_goal_generic_political_actions
-		x = 2
-		y = 8
-		cost = 70
-		prerequisite = { focus = MEX_DNC_reinforce_immigration_policy }
-		prerequisite = { focus = MEX_DNC_mexican_merchant_navy }
-		prerequisite = { focus = MEX_DNC_trade_with_asia }
-		ai_will_do = { factor = 0 }
+		icon = GFX_goal_generic_positive_trade_relations_gold
+		cost = 10
+		prerequisite = { focus = MEX_DNC_loosen_immigration_laws }
+		prerequisite = { focus = MEX_DNC_establish_the_marina_mercante_mexicana }
+		prerequisite = { focus = MEX_DNC_promote_asian_economic_cooperation }
+		x = 0
+		y = 1
+		relative_position_id = MEX_DNC_establish_the_marina_mercante_mexicana
+
+		available = {
+		}
+
 		completion_reward = {
-			add_ideas = { MEX_a_trading_nation }
+			add_ideas = MEX_DNC_a_trading_nation_ns
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
@@ -262,7 +312,7 @@ focus_tree = {
 		x = 4
 		y = 8
 		cost = 10
-		prerequisite = { focus = MEX_DNC_trade_with_asia }
+		prerequisite = { focus = MEX_DNC_promote_asian_economic_cooperation }
 		prerequisite = { focus = MEX_DNC_the_gold_standard }
 		prerequisite = { focus = MEX_DNC_school_for_women }
 		ai_will_do = { factor = 0 }
@@ -386,7 +436,7 @@ focus_tree = {
 		cost = 5
 		mutually_exclusive = { focus = MEX_DNC_the_secretary_of_exterior focus = MEX_DNC_the_secretary_of_economy focus = MEX_DNC_the_secretary_of_defense }
 		prerequisite = { focus = MEX_DNC_choose_a_successor }
-		x = 6
+		x = 8
 		y = 1
 		relative_position_id = MEX_DNC_choose_a_successor
 
