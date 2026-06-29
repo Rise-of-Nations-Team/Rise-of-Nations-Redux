@@ -6,151 +6,142 @@ bookmarks = {
 		picture = "GFX_select_date_1919"
 		default_country = "GER"
 		default = no
-		"FRA" = {
+
+		filters = { continent }
+
+		FRA = {
 			history = "FRA_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
-				FRA_Colonial_Holdings
 			}
 			focuses = {
-				FRA_INT_creation_of_the_league_of_nations
-				FRA_INT_le_soldat_inconnu
-				FRA_INT_european_federation_speech
 			}
 		}
-		"USA" = {
+
+		USA = {
 			history = "USA_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
-				usa_american_constitution
-				usa_bill_of_rights
-				USA_scars_of_1865
 			}
 			focuses = {
 			}
 		}
-		"ENG" = {
+
+		ENG = {
 			history = "ENG_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
-				ENG_sun_never_sets
-				ENG_overextended_empire
-				george_v
 			}
 			focuses = {
 			}
 		}
-		"GER" = {
+
+		GER = {
 			history = "GER_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
 			}
 			focuses = {
-				GER_INT_demand_the_return_of_the_kaiser
-				GER_INT_secret_rearmament
-				GER_INT_hitlers_coup
 			}
 		}
-		"ITA" = {
+
+		ITA = {
 			history = "ITA_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
-				ITA_savoy
 			}
 			focuses = {
 			}
 		}
+
 		RUS = {
 			history = "RUS_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = fascism
+			version = base_game
 			ideas = {
-				RUS_ww1_orthodox_church
-				RUS_agrarian_economy
-				RUS_divided_leadership
 			}
 			focuses = {
-				RUS_unite_the_factions
-				RUS_independence_recognition
-				RUS_restore_order
 			}
 		}
-		"SOV" = {
+
+		SOV = {
 			history = "SOV_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = communism
+			version = base_game
 			ideas = {
-				sov_chad_masculinity
-				sov_soviet_engineering
-				low_literacy_rate
 			}
 			focuses = {
-				SOV_INT_the_comintern
-				SOV_INT_red_terror
-				SOV_INT_gulag_system
 			}
 		}
+
 		"---" = {
-			history = "OTHER_THE_RUSSIAN_CIVIL_WAR_DESC"
+			history = "OTHER_RUSSO_JAPANESE_DESC"
 		}
+
+		#### MINORS ####
+
 		BEL = {
 			minor = yes
 			history = "BEL_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
-				WW1_BEL_language_barrier
 			}
 			focuses = {
 			}
 		}
+
 		HUN = {
 			minor = yes
 			history = "HUN_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = democratic
+			version = base_game
 			ideas = {
-				trianon_restrictions
 			}
 			focuses = {
-				HUN_organise_national_uprising
-				HUN_establish_the_hungarian_political_sphere
-				HUN_expand_the_honvedseg
 			}
 		}
-		"JAP" = {
+
+		JAP = {
 			minor = yes
 			history = "JAP_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
-				state_shintoism
-				JAP_bushido_code
 			}
 			focuses = {
 			}
 		}
+
 		POL = {
 			minor = yes
 			history = "POL_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
-				pol_argacultural_society
-				POL_INT_Broken_Roads
-				mass_migration
 			}
 			focuses = {
-				POL_INT_secure_our_boarder
-				POL_INT_revive_the_polish_state
-				POL_INT_the_fate_of_danzig
 			}
 		}
+
 		TUR = {
 			minor = yes
 			history = "TUR_THE_RUSSIAN_CIVIL_WAR_DESC"
 			ideology = neutrality
+			version = base_game
 			ideas = {
 			}
 			focuses = {
 			}
 		}
+
 		effect = {
-			randomize_weather = 22345
+			randomize_weather = 22345			# <- Obligatory in every bookmark !
 		}
 	}
 }
