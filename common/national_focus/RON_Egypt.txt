@@ -1,0 +1,1822 @@
+#!gfx:interface/RON_goals.gfx
+focus_tree = {
+	id = Egypt_WW1
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = EGY
+			date > 1909.12.31
+			date < 1919.1.1
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 50 y = 1900 }
+
+	focus = {
+		id = EGY_long_live_the_kingdom
+		icon = GFX_focus_EGY_long_live_the_kingdom
+		cost = 1
+		x = 8
+		y = 0
+		mutually_exclusive = {
+			focus = EGY_ideology_46
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = EGY_political_unity
+		icon = GFX_focus_generic_university_2
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_long_live_the_kingdom
+		prerequisite = {
+			focus = EGY_long_live_the_kingdom
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = EGY_matters_of_nation
+		icon = GFX_focus_EGY_matters_of_nation
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_political_unity
+		prerequisite = {
+			focus = EGY_political_unity
+		}
+		completion_reward = {
+			# Balance of Power (BOP)
+
+			set_power_balance = {
+				id = EGY_peoples_support
+				left_side = EGY_kamil_support
+				right_side = EGY_abbas_support
+			}
+		}
+	}
+	focus = {
+		id = EGY_plans_of_the_future
+		icon = GFX_focus_generic_the_suez
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_matters_of_nation
+		prerequisite = {
+			focus = EGY_matters_of_nation
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = EGY_our_way
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = EGY_matters_of_nation
+		prerequisite = {
+			focus = EGY_plans_of_the_future
+		}
+		prerequisite = {
+			focus = EGY_question_the_dynasty
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = EGY_question_the_dynasty
+		icon = GFX_focus_EGY_question_the_dynasty
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_matters_of_nation
+		prerequisite = {
+			focus = EGY_matters_of_nation
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = EGY_stay_with_british
+		icon = GFX_focus_EGY_stay_with_british
+		cost = 5
+		x = -5
+		y = 1
+		relative_position_id = EGY_our_way
+		prerequisite = {
+			focus = EGY_our_way
+		}
+		relative_position_id = EGY_our_way
+		mutually_exclusive = {
+			focus = EGY_free_egypt
+
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			ENG = {
+				give_guarantee = EGY
+				add_opinion_modifier = {
+					target = EGY
+					modifier = large_increase
+				}
+			}
+			transfer_state = 447
+		}
+	}
+	focus = {
+		id = EGY_british_supports
+		icon = GFX_focus_eng_the_sun_never_sets
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_stay_with_british
+		prerequisite = {
+			focus = EGY_stay_with_british
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			remove_ideas = EGY_people_uprising
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_investments_in_the_civilian_industry
+		icon = GFX_focus_generic_industry_2
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_british_supports
+		prerequisite = {
+			focus = EGY_british_supports
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_three_year_economic_plan
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_stay_with_british
+		prerequisite = {
+			focus = EGY_stay_with_british
+		}
+		completion_reward = {
+			add_ideas = EGY_three_year_economic_plan
+		}
+	}
+	focus = {
+		id = EGY_agricultural_growth
+		icon = GFX_focus_generic_agricultural_subsidies
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_three_year_economic_plan
+		prerequisite = {
+			focus = EGY_three_year_economic_plan
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_military_officer_training
+		icon = GFX_focus_ETH_peacekeeping_forces
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = EGY_investments_in_the_civilian_industry
+		prerequisite = {
+			focus = EGY_investments_in_the_civilian_industry
+		}
+		relative_position_id = EGY_agricultural_growth
+		prerequisite = {
+			focus = EGY_agricultural_growth
+		}
+		completion_reward = {
+			add_ideas = EGY_military_officer_training
+		}
+	}
+	focus = {
+		id = EGY_gain_people_support
+		icon = GFX_focus_ETH_the_heroes_of_ethiopa
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_investments_in_the_civilian_industry
+		prerequisite = {
+			focus = EGY_investments_in_the_civilian_industry
+		}
+		relative_position_id = EGY_agricultural_growth
+		prerequisite = {
+			focus = EGY_agricultural_growth
+		}
+		completion_reward = {
+			remove_ideas = EGY_seperated_people
+		}
+	}
+	focus = {
+		id = EGY_build_new_infrastructure_for_people
+		icon = GFX_focus_generic_land_reclamation
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_investments_in_the_civilian_industry
+		prerequisite = {
+			focus = EGY_investments_in_the_civilian_industry
+		}
+		relative_position_id = EGY_agricultural_growth
+		prerequisite = {
+			focus = EGY_agricultural_growth
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_reduce_british_influence
+		icon = GFX_focus_ARG_cut_ties_with_britain
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_gain_people_support
+		prerequisite = {
+			focus = EGY_gain_people_support
+		}
+		completion_reward = {
+			ENG = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_dominion
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_study_british_weapon_techs
+		icon = GFX_focus_FIN_weapon_caches
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_reduce_british_influence
+		prerequisite = {
+			focus = EGY_reduce_british_influence
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_study_british_weapon_techs
+				category = infantry_weapons
+				uses = 2
+				bonus = 1.0
+			}
+			add_tech_bonus = {
+				name = EGY_study_british_weapon_techs
+				category = artillery
+				uses = 2
+				bonus = 1.0
+			}
+			add_ideas = EGY_study_british_weapon_techs
+		}
+	}
+	focus = {
+		id = EGY_bring_british_officers
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = EGY_study_british_weapon_techs
+		prerequisite = {
+			focus = EGY_study_british_weapon_techs
+		}
+		completion_reward = {
+			add_ideas = EGY_british_officers
+		}
+	}
+	focus = {
+		id = EGY_open_alexandria_dockyard_facility
+		icon = GFX_focus_generic_africa_naval
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = EGY_study_british_weapon_techs
+		prerequisite = {
+			focus = EGY_study_british_weapon_techs
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_open_alexandria_dockyard_facility
+				category = naval_equipment
+				uses = 4
+				bonus = 2.0
+			}
+			navy_experience = 50
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_bring_british_experts
+		icon = GFX_focus_generic_british_trade
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = EGY_study_british_weapon_techs
+		prerequisite = {
+			focus = EGY_study_british_weapon_techs
+		}
+		completion_reward = {
+			add_ideas = EGY_british_experts
+		}
+	}
+	focus = {
+		id = EGY_open_cairo_military_school
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_bring_british_officers
+		prerequisite = {
+			focus = EGY_bring_british_officers
+		}
+		completion_reward = {
+			add_ideas = EGY_egypt_officer_training
+		}
+	}
+	focus = {
+		id = EGY_full_british_doctrin
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_open_cairo_military_school
+		prerequisite = {
+			focus = EGY_open_cairo_military_school
+		}
+		completion_reward = {
+			remove_ideas = EGY_british_officers
+			add_ideas = EGY_adopted_british_doctrine
+
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+				name = EGY_full_british_doctrin
+			}
+		}
+	}
+	focus = {
+		id = EGY_start_military_training
+		icon = GFX_focus_prc_infiltration
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_open_alexandria_dockyard_facility
+		prerequisite = {
+		focus = EGY_open_alexandria_dockyard_facility
+		}
+		completion_reward = {
+			add_ideas = EGY_military_training
+		}
+	}
+	focus = {
+		id = EGY_build_egypt_war_industry
+		icon = GFX_focus_generic_modernize_industry
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_bring_british_experts
+		prerequisite = {
+			focus = EGY_bring_british_experts
+		}
+		completion_reward = {
+			add_ideas = EGY_build_egypt_war_industry
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_new_egyptian_war_economy
+		icon = GFX_focus_generic_total_war
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_build_egypt_war_industry
+		prerequisite = {
+			focus = EGY_build_egypt_war_industry
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = EGY_new_egyptian_war_economy
+			add_ideas = war_economy
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_free_egypt
+		icon = GFX_focus_EGY_free_egypt
+		cost = 5
+		x = 5
+		y = 1
+		relative_position_id = EGY_our_way
+		prerequisite = {
+			focus = EGY_our_way
+		}
+		relative_position_id = EGY_our_way
+		mutually_exclusive = {
+			focus = EGY_stay_with_british
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = large_decrease
+				}
+			}
+			set_free = yes
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = FREE_EGY
+			remove_ideas = EGY_british_pressure
+		}
+	}
+	focus = {
+		id = EGY_join_meditterenian_naval_race
+		icon = GFX_focus_generic_mediterranean_sea_focus
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = EGY_free_egypt
+		prerequisite = {
+			focus = EGY_free_egypt
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_join_meditterenian_naval_race
+				category = naval_equipment
+				uses = 4
+				ahead_reduction = 1
+				bonus = 1.0
+			}
+			navy_experience = 50
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_promote_egypt_nationalism
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_free_egypt
+		prerequisite = {
+			focus = EGY_free_egypt
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EGY_seperated_people
+				add_idea = EGY_seperated_people_2
+			}
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {
+		id = EGY_focus_public_welfare
+		icon = GFX_focus_SWE_hygienic_housing
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = EGY_free_egypt
+		prerequisite = {
+			focus = EGY_free_egypt
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EGY_people_uprising
+				add_idea = EGY_people_uprising_2
+			}
+			add_ideas = EGY_focus_public_welfare
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			446 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			452 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_ask_for_german_naval_advisors
+		icon = GFX_focus_generic_naval_discipline
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_join_meditterenian_naval_race
+		prerequisite = {
+			focus = EGY_join_meditterenian_naval_race
+		}
+		completion_reward = {
+			add_ideas = EGY_german_naval_advisors
+			navy_experience = 100
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				name = EGY_ask_for_german_naval_advisors
+				category = naval_doctrine
+				uses = 4
+			}
+		}
+	}
+	focus = {
+		id = EGY_follow_kavala_plan
+		icon = GFX_focus_EGY_follow_kavala_plan
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ask_for_german_naval_advisors
+		prerequisite = {
+			focus = EGY_ask_for_german_naval_advisors
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_follow_kavala_plan
+				uses = 1
+				bonus = 0.75
+				category = naval_doctrine
+			}
+			navy_experience = 100
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_start_military_conscription
+		icon = GFX_focus_EGY_start_military_conscription
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_promote_egypt_nationalism
+		prerequisite = {
+			focus = EGY_promote_egypt_nationalism
+		}
+		completion_reward = {
+			add_ideas = EGY_start_military_conscription
+		}
+	}
+	focus = {
+		id = EGY_national_egyptian_army
+		icon = GFX_focus_ETH_expand_the_levy
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_start_military_conscription
+		prerequisite = {
+			focus = EGY_start_military_conscription
+		}
+		completion_reward = {
+			add_ideas = EGY_national_egyptian_army
+		}
+	}
+	focus = {
+		id = EGY_war_focused_economy
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_promote_egypt_nationalism
+		prerequisite = {
+			focus = EGY_promote_egypt_nationalism
+		}
+		completion_reward = {
+			add_ideas = EGY_war_focused_economy
+			add_ideas = war_economy
+		}
+	}
+	focus = {
+		id = EGY_boost_war_industry
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_war_focused_economy
+		prerequisite = {
+			focus = EGY_war_focused_economy
+		}
+		completion_reward = {
+			remove_ideas = EGY_war_focused_economy
+			add_ideas = EGY_boost_war_industry
+		}
+	}
+	focus = {
+		id = EGY_build_new_textile_industry
+		icon = GFX_focus_DEN_no_regulations
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_focus_public_welfare
+		prerequisite = {
+			focus = EGY_focus_public_welfare
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_build_new_textile_industry
+				category = industry
+				uses = 2
+				bonus = 1.0
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_rebuild_the_national_economy
+		icon = GFX_focus_DEN_limited_regulations
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_build_new_textile_industry
+		prerequisite = {
+			focus = EGY_build_new_textile_industry
+		}
+		completion_reward = {
+			remove_ideas = EGY_people_uprising_2
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EGY_egypt_natural_borders
+		icon = GFX_focus_EGY_egypt_natural_borders
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_national_egyptian_army
+		prerequisite = {
+			focus = EGY_national_egyptian_army
+		}
+		relative_position_id = EGY_boost_war_industry
+		prerequisite = {
+			focus = EGY_boost_war_industry
+		}
+		completion_reward = {
+			remove_ideas = EGY_seperated_people_2
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SYR
+						is_core_of = SUD
+						is_core_of = YEM
+						#is_core_of = ASR
+						is_core_of = IRQ
+						state = 553
+						state = 878
+						state = 679
+						state = 550
+						state = 857
+						state = 829
+						state = 350
+						state = 183
+						state = 827
+						state = 804
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+	}
+	focus = {
+		id = EGY_demand_arabian_lands_from_turks
+		icon = GFX_focus_EGY_demand_arabian_lands_from_turks
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_egypt_natural_borders
+		prerequisite = {
+			focus = EGY_egypt_natural_borders
+		}
+		completion_reward = {
+			TUR = {
+				country_event = ww1_egypt.12
+			}
+		}
+	}
+	focus = {
+		id = EGY_reclaim_the_mamluk_empire
+		icon = GFX_focus_EGY_reclaim_the_mamluk_empire
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = EGY_egypt_natural_borders
+		prerequisite = {
+			focus = EGY_egypt_natural_borders
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_claimed_by = EGY
+				}
+				add_core_of = EGY
+			}
+		}
+	}
+	focus = {
+		id = EGY_demand_sudan
+		icon = GFX_focus_EGY_demand_sudan
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_egypt_natural_borders
+		prerequisite = {
+			focus = EGY_egypt_natural_borders
+		}
+		completion_reward = {
+			ENG = {
+				country_event = ww1_egypt.11
+			}
+		}
+	}
+	focus = {
+		id = EGY_demand_northern_africa
+		icon = GFX_focus_EGY_demand_northern_africa
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_reclaim_the_mamluk_empire
+		prerequisite = {
+			focus = EGY_reclaim_the_mamluk_empire
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					448 = {
+						is_owned_and_controlled_by = TUR
+					}
+				}
+				TUR = {
+					country_event = ww1_egypt.13
+				}
+			}
+			else_if = {
+				limit = {
+					448 = {
+						is_owned_and_controlled_by = ITA
+					}
+				}
+				ITA = {
+					country_event = ww1_egypt.13
+				}
+			}
+			FRA = {
+				country_event = ww1_egypt.14
+			}
+		}
+	}
+	focus = {
+		id = EGY_form_arabian_league
+		icon = GFX_focus_EGY_form_arabian_league
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_reclaim_the_mamluk_empire
+		prerequisite = {
+			focus = EGY_reclaim_the_mamluk_empire
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "Arabian League"
+
+			if = {
+				limit = {
+					JBS = { is_subject = no }
+				}
+				JBS = {
+					country_event = ww1_egypt.15
+				}
+			}
+			if = {
+				limit = {
+					KUW = { is_subject = no }
+				}
+				KUW = {
+					country_event = ww1_egypt.15
+				}
+			}
+			if = {
+				limit = {
+					OMA = { is_subject = no }
+				}
+				OMA = {
+					country_event = ww1_egypt.15
+				}
+			}
+			if = {
+				limit = {
+					QAT = { is_subject = no }
+				}
+				QAT = {
+					country_event = ww1_egypt.15
+				}
+			}
+			if = {
+				limit = {
+					BHR = { is_subject = no }
+				}
+				BHR = {
+					country_event = ww1_egypt.15
+				}
+			}
+			SAU = {
+				country_event = ww1_egypt.15
+			}
+			PER = {
+				country_event = ww1_egypt.15
+			}
+		}
+	}
+	focus = {
+		id = EGY_ideology_46
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 24
+		y = 0
+		mutually_exclusive = {
+			focus = EGY_long_live_the_kingdom
+		}
+		allow_branch = {
+			always = no
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_47
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_ideology_46
+		prerequisite = {
+			focus = EGY_ideology_46
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_48
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_ideology_46
+		prerequisite = {
+			focus = EGY_ideology_46
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_49
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -4
+		y = 1
+		relative_position_id = EGY_ideology_47
+		prerequisite = {
+			focus = EGY_ideology_47
+		}
+		relative_position_id = EGY_ideology_48
+		prerequisite = {
+			focus = EGY_ideology_48
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_50
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = EGY_ideology_47
+		prerequisite = {
+			focus = EGY_ideology_47
+		}
+		relative_position_id = EGY_ideology_48
+		prerequisite = {
+			focus = EGY_ideology_48
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_51
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_47
+		prerequisite = {
+			focus = EGY_ideology_47
+		}
+		relative_position_id = EGY_ideology_48
+		prerequisite = {
+			focus = EGY_ideology_48
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_52
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = EGY_ideology_47
+		prerequisite = {
+			focus = EGY_ideology_47
+		}
+		relative_position_id = EGY_ideology_48
+		prerequisite = {
+			focus = EGY_ideology_48
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_53
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -4.5
+		y = 1
+		relative_position_id = EGY_ideology_49
+		prerequisite = {
+			focus = EGY_ideology_49
+		}
+		relative_position_id = EGY_ideology_50
+		prerequisite = {
+			focus = EGY_ideology_50
+		}
+		relative_position_id = EGY_ideology_51
+		prerequisite = {
+			focus = EGY_ideology_51
+		}
+		relative_position_id = EGY_ideology_52
+		prerequisite = {
+			focus = EGY_ideology_52
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_54
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1.5
+		y = 1
+		relative_position_id = EGY_ideology_52
+		prerequisite = {
+			focus = EGY_ideology_49
+		}
+
+		prerequisite = {
+			focus = EGY_ideology_50
+		}
+
+		prerequisite = {
+			focus = EGY_ideology_51
+		}
+
+		prerequisite = {
+			focus = EGY_ideology_52
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_55
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -3
+		y = 2
+		relative_position_id = EGY_ideology_53
+		prerequisite = {
+			focus = EGY_ideology_53
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_56
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_ideology_53
+		prerequisite = {
+			focus = EGY_ideology_53
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_57
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_55
+		prerequisite = {
+			focus = EGY_ideology_55
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_58
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_57
+		prerequisite = {
+			focus = EGY_ideology_57
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_59
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_ideology_53
+		prerequisite = {
+			focus = EGY_ideology_53
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_60
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_56
+		prerequisite = {
+			focus = EGY_ideology_56
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_61
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_59
+		prerequisite = {
+			focus = EGY_ideology_59
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_62
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_ideology_60
+		prerequisite = {
+			focus = EGY_ideology_60
+		}
+		relative_position_id = EGY_ideology_61
+		prerequisite = {
+			focus = EGY_ideology_61
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_63
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_54
+		prerequisite = {
+			focus = EGY_ideology_54
+		}
+		completion_reward = { }
+		}
+	focus = {
+		id = EGY_ideology_64
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_63
+		prerequisite = {
+			focus = EGY_ideology_63
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_65
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_64
+		prerequisite = {
+			focus = EGY_ideology_64
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_66
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1.5
+		y = 1
+		relative_position_id = EGY_ideology_65
+		prerequisite = {
+			focus = EGY_ideology_65
+		}
+		prerequisite = {
+			focus = EGY_ideology_62
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_67
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1.5
+		y = 1
+		relative_position_id = EGY_ideology_66
+		prerequisite = {
+			focus = EGY_ideology_66
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_68
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = EGY_ideology_66
+		prerequisite = {
+			focus = EGY_ideology_66
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_69
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 1.5
+		y = 1
+		relative_position_id = EGY_ideology_66
+		prerequisite = {
+			focus = EGY_ideology_66
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_70
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_68
+		prerequisite = {
+			focus = EGY_ideology_68
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_71
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = EGY_ideology_68
+		prerequisite = {
+			focus = EGY_ideology_68
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_72
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = EGY_ideology_71
+		prerequisite = {
+			focus = EGY_ideology_71
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_73
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = EGY_ideology_68
+		prerequisite = {
+			focus = EGY_ideology_68
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_74
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_70
+		prerequisite = {
+			focus = EGY_ideology_70
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_75
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_71
+		prerequisite = {
+			focus = EGY_ideology_71
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_76
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = EGY_ideology_73
+		prerequisite = {
+			focus = EGY_ideology_73
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_77
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = EGY_ideology_73
+		prerequisite = {
+			focus = EGY_ideology_73
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_78
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = EGY_ideology_74
+		prerequisite = {
+			focus = EGY_ideology_75
+		}
+		prerequisite = {
+			focus = EGY_ideology_77
+		}
+		prerequisite = {
+			focus = EGY_ideology_74
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = EGY_ideology_79
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_ideology_74
+		prerequisite = {
+			focus = EGY_ideology_75
+		}
+		prerequisite = {
+			focus = EGY_ideology_77
+		}
+		prerequisite = {
+			focus = EGY_ideology_74
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id =  EGY_ideology_80
+		icon = GFX_trait_ENG_hmmlr_member
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = EGY_ideology_78
+		prerequisite = {
+			focus = EGY_ideology_79
+		}
+		prerequisite = {
+			focus = EGY_ideology_78
+		}
+		completion_reward = { }
+	}
+
+}

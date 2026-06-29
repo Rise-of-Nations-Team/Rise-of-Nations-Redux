@@ -1,0 +1,377 @@
+ideas = {
+	country = {
+		EGY_british_pressure = {
+			picture = hol_caved_to_the_british
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			on_add = {
+				every_other_country = {
+					limit = {
+						NOT = { original_tag = ENG }
+					}
+					add_opinion_modifier = {
+						target = EGY
+						modifier = RI_sanctions
+					}
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					limit = {
+						NOT = { original_tag = ENG }
+					}
+					remove_opinion_modifier = {
+						target = EGY
+						modifier = RI_sanctions
+					}
+				}
+			}
+			modifier = {
+				custom_modifier_tooltip = "Everycountry but United Kingdom will be less likely to trade with us."
+			}
+		}
+		EGY_seperated_people = {
+			picture = generic_economic_crisis
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.075
+				production_speed_buildings_factor = -0.075
+				conscription_factor = -0.15
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
+		EGY_seperated_people_2 = {
+			name = EGY_seperated_people
+			picture = generic_economic_crisis
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.0375
+				production_speed_buildings_factor = -0.0375
+				conscription_factor = -0.075
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		EGY_people_uprising = {
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = prc_low_popular_support3
+			modifier = {
+				consumer_goods_factor = 0.075
+				production_speed_buildings_factor = -0.075
+				monthly_population = -0.15
+			}
+		}
+		EGY_people_uprising_2 = {
+			name = EGY_people_uprising
+			picture = EGY_people_uprising
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.0375
+				production_speed_buildings_factor = -0.0375
+				monthly_population = -0.075
+			}
+		}
+
+		EGY_focus_public_welfare = {
+			picture = ast_all_in
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		EGY_three_year_economic_plan = {
+			picture = generic_economic_increase
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		EGY_military_officer_training = {
+			picture = ETH_corrupt_bureaucracy
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.50
+				heat_attrition = -0.50
+				training_time_army_factor = -0.10
+			}
+		}
+		EGY_study_british_weapon_techs = {
+			picture = generic_mountain_warfare
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				#howitzer_equipment = {
+				#	build_cost_ic = -0.10
+				#	instant = yes
+				#}
+			}
+		}
+		EGY_build_egypt_war_industry = {
+			picture = ARG_economic_reactivation
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		EGY_new_egyptian_war_economy = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		EGY_british_officers = {
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.05
+				land_doctrine_cost_factor = -0.05
+				army_org_factor = 0.05
+			}
+		}
+		EGY_egypt_officer_training = {
+			picture = tur_tuz_golu_training_facility
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.05
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				heat_attrition = -0.50
+			}
+		}
+		EGY_adopted_british_doctrine = {
+			picture = SPR_international_brigades
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.10
+				land_doctrine_cost_factor = -0.15
+				army_org_factor = 0.10
+				army_speed_factor = 0.05
+			}
+		}
+		EGY_military_training = {
+			picture = MEX_politicised_army
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.25
+				max_planning_factor = 0.10
+				planning_speed = 0.10
+				supply_consumption_factor = -0.05
+				war_support_factor = 0.10
+			}
+		}
+		EGY_british_experts = {
+			picture = eng_guided_by_britain
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.03
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		EGY_german_naval_advisors = {
+			picture = generic_degauss_ship_hulls
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.30
+				experience_gain_navy_factor = 0.15
+				navy_capital_ship_attack_factor = 0.10
+				navy_capital_ship_defence_factor = 0.10
+			}
+		}
+		EGY_start_military_conscription = {
+			picture = tur_coordinated_balkan_armed_forces
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.10
+				conscription = 0.01
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		EGY_national_egyptian_army = {
+			picture = hol_expand_the_colonial_army
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.10
+				conscription = 0.01
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		EGY_war_focused_economy = {
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		EGY_boost_war_industry = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = EGY
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+				line_change_production_efficiency_factor = 0.075
+				production_factory_max_efficiency_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.075
+			}
+		}
+	}
+}
