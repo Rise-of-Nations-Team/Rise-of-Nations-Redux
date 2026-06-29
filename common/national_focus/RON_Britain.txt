@@ -7536,3 +7536,98 @@ focus_tree = {
 		}
 	}
 }
+
+focus_tree = {
+	id = Britain_WW1
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = ENG
+			date > 1909.12.31
+			date < 1919.1.1
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = ENG_control_under_egypt
+		icon = GFX_goal_generic_defence
+		cost = 5
+		x = 56
+		y = 2
+		available = {
+			has_subject = EGY
+		}
+		bypass = {
+			OR = {
+				EGY = {
+					NOT = {
+						is_subject_of = ENG
+					}
+				}
+				TUR = {
+					has_completed_focus = TUR_kick_the_british_out_of_egypt
+				}
+			}
+		}
+		completion_reward = {
+			ENG = {
+				if = {
+					limit = {
+						has_subject_autonomy_feature = yes
+					}
+					EGY = {
+						set_country_flag = protectorate
+					}
+					set_autonomy = {
+						target = EGY
+						autonomous_state = autonomy_tgwr_protectorate
+						freedom_level = 0.8
+					}
+					else = {
+						EGY = {
+							add_ideas = protectorate
+						}
+					}
+				}
+			}
+			EGY = {
+				add_political_power = 100
+				add_ideas = ENG_british_patronage
+				set_cosmetic_tag = EGY_sultanate
+				hidden_effect = {
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					set_popularities = {
+						democratic = 24
+						neutrality = 76
+					}
+				}
+			}
+			if = {
+				limit = {
+					EGY = {
+						has_country_leader = {
+							character = EGY_abbas_ii
+						}
+					}
+				}
+				EGY = {
+					country_event = ww1_egypt.2
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+		}
+	}
+}
