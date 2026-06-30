@@ -71,6 +71,9 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=3
+			visible = {
+				date < 1924.1.1
+			}
 		}		
 	}
 
@@ -114,12 +117,155 @@ characters={
 		}		
 	}	
 
+	BRA_jose_oiticica={
+		name="José Rodrigues Leite e Oiticica"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/DNC/BRA_Jose_Rodrigues_e_Oiticica.dds"
+				small="gfx/interface/ideas/BRA/idea_BRA_jose_rodrigues_e_oiticica.dds"
+			}
+		}
+		country_leader={
+			ideology=syndicalism
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BRA_pinheiro_machado
+			allowed = {
+				original_tag = BRA
+			}		
+			available = {
+				is_country_leader = no
+				date < 1949.1.1		
+				NOT = {
+					has_government = fascism
+				}		
+			}
+			visible = {
+				date < 1949.1.1
+			}
+			traits = {
+				revolutionary_poet 
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+				}
+			}
+		}		
+		corps_commander={
+			traits={ militias_officer politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_government = communism
+				date < 1949.1.1
+			}
+		}
+	}	
+
 	BRA_isabel_of_brazil={
-		name="Isabel"
+		name="Isabel do Brasil"
 		portraits={
 			civilian={
 				large="gfx/leaders/BRA/DNC/BRA_Princess_Isabel_of_Brazil.dds"
 			}
+		}
+		gender = female
+	}	
+
+	BRA_luis_of_orleans_braganza={
+		name="Luis Orléans e Bragança"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/DNC/BRA_Prince_Luis_of_Orleans_Braganza.dds"
+			}
+		}
+	}	
+
+	BRA_pinheiro_machado={
+		name="Pinheiro Machado"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/DNC/BRA_Pinheiro_Machado.dds"
+				small="gfx/interface/ideas/BRA/idea_BRA_pinheiro_machado.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ constable_of_the_republic }
+			expire = 1925.1.1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BRA_pinheiro_machado
+			allowed = {
+				original_tag = BRA
+			}		
+			available = {
+				is_country_leader = no
+				has_government = democratic
+				date < 1925.1.1				
+			}
+			visible = {
+				date < 1925.1.1
+			}
+			traits = {
+				constable_of_the_republic 
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+				}
+			}
+		}
+	}	
+
+	BRA_ruy_barbosa={
+		name="Rui Barbosa de Oliveira"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/DNC/BRA_Rui_Barbosa_de_Oliveira.dds"
+				small="gfx/interface/ideas/BRA/idea_BRA_ruy_barbosa.dds"
+			}
+		}		
+		advisor={
+			slot = political_advisor
+			idea_token = BRA_ruy_barbosa
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				popular_intellectual 
+			}
+			available = {
+				is_country_leader = no
+				not = {
+					has_country_leader = {
+						character = BRA_hermes_da_fonseca
+						ruling_only = yes 
+					}
+					has_government = communism 
+					has_government = fascism 
+				}
+				date < 1924.1.1				
+			}
+			visible = {
+				date < 1924.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 175
+		}
+		country_leader={
+			ideology=liberalism
+			expire = 1924.1.1
 		}
 	}	
 
@@ -127,7 +273,7 @@ characters={
 		name=BRA_emygdio_dantas_barreto
 		portraits={
 			army={
-				small="GFX_idea_BRA_emidio_dantas_barreto"
+				small="gfx/interface/ideas/BRA/idea_BRA_emidio_dantas_barreto.dds"
 				large="gfx/leaders/BRA/DNC/BRA_Emygdio_Dantas_Barret.dds"				
 			}
 			civilian={
@@ -188,16 +334,36 @@ characters={
 		}
 	}	
 
+	BRA_joao_de_medeiros_mallet={
+		name="João de Medeiros"
+		portraits={
+			army={
+				large="gfx/leaders/BRA/DNC/BRA_Joao_de_Medeiros_Mallet.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard trait_engineer fortress_buster infantry_leader aggressive_assaulter }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			visible = {
+				date < 1910.1.1
+			}
+		}
+	}	
+
 	BRA_candido_mariano={
 		name=BRA_candido_mariano
 		portraits={
 			army={
 				large="gfx/leaders/BRA/DNC/Portrait_BRA_Candido_Mariano_da_Silva_Rondon.dds"
-				small=GFX_portrait_BRA_candido_mariano_small
+				small="gfx/interface/ideas/BRA/idea_BRA_candido_rondon_dnc.dds"
 			}
 		}
 		field_marshal={
-			traits={ career_officer organisational_leader brilliant_strategist engineer jungle_rat }
+			traits={ career_officer organisational_leader brilliant_strategist trait_engineer jungle_rat }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -211,7 +377,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/BRA/DNC/Portrait_BRA_Jose_Caetano_de_Faria.dds"
-				small="GFX_idea_BRA_jose_caetano_de_faria"
+				small="gfx/interface/ideas/BRA/idea_BRA_jose_caetano_de_faria.dds"
 			}
 		}		
 		advisor={
@@ -258,7 +424,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/BRA/DNC/Portrait_BRA_Vespasiano_Silva.dds"
-				small="GFX_idea_BRA_vespasiano_silva"
+				small="gfx/interface/ideas/BRA/idea_BRA_vespasiano_silva.dds"
 			}
 		}		
 		advisor={
@@ -384,8 +550,8 @@ characters={
 		name="Alberto Cardoso de Aguiar"
 		portraits={
 			army={
-				small="GFX_idea_BRA_alberto_cardoso_de_aguiar"
 				large="gfx/leaders/BRA/DNC/Portrait_BRA_Alberto_Cardoso_de_Aguiar.dds"
+				small="gfx/interface/ideas/BRA/idea_BRA_alberto_cardoso_de_aguiar.dds"				
 			}
 		}		
 		advisor={
@@ -424,7 +590,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/BRA/DNC/Portrait_BRA_Antonio_Mena_Barreto.dds"
-				small="GFX_idea_BRA_antinio_adolfo_da_fontoura_mena_barreto"
+				small="gfx/interface/ideas/BRA/idea_BRA_antonio_mena_barreto.dds"
 			}
 		}		
 		advisor={
