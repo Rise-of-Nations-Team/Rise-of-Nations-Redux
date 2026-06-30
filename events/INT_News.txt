@@ -1,0 +1,18 @@
+add_namespace interwar_news
+
+# EGYPTIAN REVOLUTION
+#####################
+news_event = {
+	id = interwar_news.5
+	title = interwar_news.5.t
+	desc = interwar_news.5.d
+	picture = GFX_news_event_egyptian_revolution
+	
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = interwar_news.5.a
+		ai_chance = { factor = 100 }
+	}
+}

@@ -8,7 +8,7 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = QIN
-			date < 1910.1.1
+			date < 1919.1.1
 		}
 	}
 	default = no
@@ -441,20 +441,41 @@ focus_tree = {
 				}
 			}
 			add_stability = -0.10
-			
-			every_owned_state = {
-				limit = {
-					is_core_of = QIN
-					is_core_of = BOX
+
+			effect_tooltip = {
+				every_owned_state = {
+					limit = {
+						is_core_of = QIN
+						is_core_of = BOX
+					}
+					force_enable_resistance = {
+						occupier = QIN
+						occupied = BOX
+					}
+					start_resistance = BOX
+					set_state_flag = boxer_resistance
 				}
-				force_enable_resistance = {
-					occupier = QIN
-					occupied = BOX
-				}
-				start_resistance = BOX
-				set_state_flag = boxer_resistance
 			}
 
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = no # I'll let the AI cheat here for now
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = QIN
+							is_core_of = BOX
+						}
+						force_enable_resistance = {
+							occupier = QIN
+							occupied = BOX
+						}
+						start_resistance = BOX
+						set_state_flag = boxer_resistance
+					}
+				}
+			}			
 		}
 	}
 
