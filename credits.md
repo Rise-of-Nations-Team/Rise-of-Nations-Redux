@@ -1,4 +1,4 @@
-#CREDITS
+# CREDITS
 ## RON MOD TEAM
 - Harry
 - Xaelor
@@ -8,6 +8,10 @@
 - Vernox
 - Zomboss11
 ## OUTSIDE CONTRIBUTIONS
+- J12 (sas_2000)
+- Persyk
+- Igor_Stelkov
+- Frost
 ## INTEGRATED MODS
 - Better Mechanics: AI Divisions - https://steamcommunity.com/sharedfiles/filedetails/?id=2996504479
 - Better Mechanics: Custom Rules - https://steamcommunity.com/sharedfiles/filedetails/?id=3277805669

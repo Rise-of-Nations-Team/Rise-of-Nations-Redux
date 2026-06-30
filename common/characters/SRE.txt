@@ -1,0 +1,40 @@
+characters={
+	SRE_paul_kruger={
+		name="Johannes Paulus Kruger"
+		portraits={
+			civilian={
+				large="gfx/leaders/SRE/DNC/SRE_Johannes_Paulus_Kruger.dds"
+			}
+		}
+		country_leader = {
+			ideology=conservatism
+			expire="1905.1.1.1"
+			traits = { sre_oom_paul }			
+		}
+	}
+
+	SRE_willem_burger={
+		name="Willem Burger"
+		portraits={
+			civilian={
+				large="gfx/leaders/SRE/DNC/SRE_Schalk_Willem_Burger.dds"
+			}
+		}
+		country_leader = {
+			ideology=conservatism
+			expire="1919.1.1.1"
+			traits = {  }			
+		}
+		corps_commander={
+			traits={ infantry_leader trickster guerilla_fighter commando }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				date < 1919.1.1
+			}			
+		}
+	}
+}
