@@ -370,7 +370,7 @@ characters={
 			planning_skill=1
 			logistics_skill=4
 		}
-	}	
+	}		
 
 	BRA_jose_caetano_de_faria={
 		name="Jose Caetano de Faria"
@@ -454,6 +454,27 @@ characters={
 			logistics_skill=2
 			visible = {
 				date < 1925.1.1
+			}
+		}
+	}		
+
+	BRA_fernando_setembrino_de_carvalho = {
+		name = "Fernando Setembrino de Carvalho"
+		portraits = {
+			army = {
+				large="gfx/leaders/BRA/DNC/Portrait_BRA_Setembrino_Carvalho_dnc.dds"
+				small = "gfx/interface/ideas/BRA/idea_BRA_fernando_de_carvalho_dnc.dds"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard career_officer trait_engineer harsh_leader scavenger }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				date < 1927.1.1
 			}
 		}
 	}		
