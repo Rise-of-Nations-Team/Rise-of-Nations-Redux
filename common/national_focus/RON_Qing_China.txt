@@ -96,12 +96,29 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			white_peace = BOX
 			add_stability = 0.1
-			BOX = { country_event = { id = ron_diplomatic.35 hours = 1 } }
-			add_manpower = 50000
 			add_political_power = 100
 			add_war_support = 0.1
+			QIN = {
+				all_core_state = {
+					if = {
+						limit = {
+							has_dynamic_modifier = QIN_boxer_rebellion
+							scope = ROOT
+						}
+						create_unit = {
+							division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
+							owner = QIN
+							id = 555
+						}
+						create_unit = {
+							division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
+							owner = QIN
+							id = 556
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -129,7 +146,36 @@ focus_tree = {
 			}
 
 		completion_reward = {
-			BOX = { country_event = { id = ron_diplomatic.39 hours = 1 } }
+			QIN = {
+				all_core_state = {
+					if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = QIN_boxer_rebellion
+								scope = QIN
+							}
+						}
+						transfer_state_to = BOX
+						BOX = {
+							declare_war_on = {
+								target = QIN
+								type = civil_war
+							}
+							add_civil_war_target = QIN
+							create_unit = {
+								division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
+								owner = BOX
+								id = 555
+							}
+							create_unit = {
+								division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
+								owner = BOX
+								id = 556
+							}
+						}
+					}
+				}
+			}
 			custom_effect_tooltip = QIN_worse_boxers
 			hidden_effect = {
 				country_event = { id = chinese_empire.32 days = 7}
