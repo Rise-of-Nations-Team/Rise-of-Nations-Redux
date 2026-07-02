@@ -17,6 +17,21 @@ QIN_railway_program = {
 	}
 	icon = generic_industry
 }
+QIN_boxer_rebellion = {
+	#icon = icon pending...
+	allowed = {
+		original_tag = QIN
+	}
+	visible = {
+		NOT = {
+			OR = {
+				has_completed_focus = DNC_QIN_ally_with_boxers
+				has_completed_focus = DNC_QIN_against_boxers
+			}
+		}
+	}
+	priority = 750
+}
 
 QIN_boxer_war_mission = {
 	icon = eng_move_to_secure_the_dominions
