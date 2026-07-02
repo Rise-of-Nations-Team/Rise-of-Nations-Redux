@@ -1,10 +1,12 @@
 focus_tree = {
-	id = WW1_CHL
+	id = Chile_WW1
 	country = {
 		factor = 0
 		modifier = {
 			add = 10
 			tag = CHL
+			date > 1909.12.31
+			date < 1919.1.1
 		}
 	}
 	continuous_focus_position = {
@@ -23,6 +25,12 @@ focus_tree = {
 		y = 0
 		allow_branch = {
 			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
 				NOT = {
 					has_completed_focus = CHL_a_century_of_poverty
 				}
@@ -55,6 +63,19 @@ focus_tree = {
 		}
 		x = 62
 		y = 0
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = CHL_a_year_of_independence
+				}
+			}
+		}
 		available = {
 			always = no
 		}
