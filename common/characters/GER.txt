@@ -358,13 +358,12 @@ characters={
 			}			
 		}
 	}
+
 	GER_erich_von_falkenhayn={
 		name="Erich von Falkenhayn"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_falkenhayn.dds"
-			}
-			army={
 				large="gfx/leaders/GER/WW1/General-Erich_von_Falkenhayn.dds"
 			}
 		}
@@ -380,6 +379,96 @@ characters={
 			}				
 		}
 	}
+
+	GER_moritz_von_bissing={
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Moritz_von_Bissing.dds"
+				small="GFX_idea_GER_generic_land_5"
+			}
+		}
+		corps_commander={
+			traits={ old_guard politically_connected cavalry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				date < 1918.1.1
+				NOT = {
+					has_government = communism
+					has_country_flag = great_war_loser
+				}
+			}			
+		}
+	}	
+
+	GER_hans_von_seeckt={
+		name="Hans von Seeckt"
+		portraits={
+			army={
+				small="gfx/interface/ideas/GER/GER_hans_von_seeckt.png"
+				large="gfx/leaders/GER/WW1/Portrait_Germany_Hans_von_Seeckt.dds"
+			}
+		}		
+		advisor={
+			slot = army_chief
+			idea_token = GER_hans_von_seeckt
+			can_be_fired = no
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+			available = {
+				if = {
+					limit = { 
+						has_OHL = yes
+						is_hired_as_advisor = yes
+					}
+					custom_trigger_tooltip = {
+						tooltip = GER_ohl_position
+						always = yes
+					}
+				}
+			}
+			visible = {
+				date > 1915.6.1
+				date < 1935.1.1
+				has_global_flag = GER_1918_revolution
+				has_completed_focus = GER_rejuvenate_officer_staff
+				original_tag = CHI
+			}
+		}
+		corps_commander={
+			traits={ career_officer brilliant_strategist }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			visible = {
+				OR = {
+					original_tag = GER
+					NOT = { has_war_with = GER }
+				}
+				OR = {
+					has_global_flag = GER_1918_revolution
+					has_completed_focus = GER_rejuvenate_officer_staff
+					original_tag = CHI
+				}
+				date > 1915.6.1
+				date < 1935.1.1
+			}	
+		}
+	}
+
 	GER_felix_graf_von_bothmer={
 		name="Felix Graf von Bothmer"
 		portraits={
@@ -406,6 +495,40 @@ characters={
 				large="gfx/leaders/GER/WW1/Portrait_Germany_Helmuth_von_Moltke.dds"
 			}
 		}
+		can_be_captured = no
+		advisor={
+			slot = army_chief
+			idea_token = GER_helmuth_von_moltke
+			allowed = {
+				always = no #not selectable
+			}
+			can_be_fired = no
+			available = {
+				if = {
+					limit = { 
+						has_OHL = yes
+						is_hired_as_advisor = yes
+					}
+					custom_trigger_tooltip = {
+						tooltip = GER_ohl_position
+						always = yes				
+					}
+				}	
+			}
+			visible = {
+				date < 1917.1.1
+				NOT = {
+					has_global_flag = versailles_treaty
+				}
+			}
+			cost = 150
+			traits = {
+				army_chief_reform_2 
+			}
+			ai_will_do = {
+				factor = 2.000
+			}
+		}		
 		field_marshal={
 			traits={ old_guard imperial_german_army offensive_doctrine defensive_doctrine }
 			skill=6
@@ -625,6 +748,179 @@ characters={
 			}				
 		}
 	}
+
+	GER_gottlieb_graf_von_haeseler={
+		name = "Gottlieb Graf von Haeseler"
+		portraits={
+			army={
+				large="gfx/leaders/GER/WW1/Portrait_Germany_Gottlieb_Graf_von_Haeseler.dds"
+				small="gfx/interface/ideas/GER/idea_GER_Gottlieb_Graf_von_Haeseler.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_gottlieb_graf_von_haeseler
+			allowed = {
+				original_tag = GER 
+			}
+			ledger = army 
+			available = {	
+				NOT = {
+					has_government = communism
+					has_country_flag = great_war_loser
+					has_idea_with_trait = army_regrouping_1
+				}
+				custom_trigger_tooltip = {
+					tooltip = character_not_dead
+					date < 1919.10.25
+				}
+			}
+			visible = {
+				date < 1919.10.25
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={ 
+		 	traits={ old_guard inspirational_leader }
+		 	skill=1
+	 		attack_skill=1
+		 	defense_skill=2
+		 	planning_skill=1
+		 	logistics_skill=1
+		 	visible = {
+		 		date < 1919.10.25
+		 		NOT = {
+		 			has_government = communism
+		 			has_country_flag = great_war_loser
+		 		}
+		 	}
+		}
+	}	
+
+	GER_gunther_von_kirchbach={
+		name = "Gunther von Kirchbach"
+		portraits={
+			army={
+				large="gfx/leaders/GER/WW1/Portrait_Germany_Gunther_Emanuel_Von_Kirchbach.dds"
+				small="GFX_idea_GER_generic_land_5"
+			}
+		}
+		corps_commander={
+			traits={ imperial_german_army old_guard politically_connected skilled_staffer }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			visible = {
+				date < 1925.11.6
+				NOT = {
+					has_government = communism
+					has_country_flag = great_war_loser
+				}
+			}			
+		}
+	}	
+
+	GER_max_hoffmann={
+		name= "Max Hoffmann"
+		portraits={
+			army={
+				large="gfx/leaders/GER/WW1/General_Max_Hoffman.dds"
+				small="GFX_idea_GER_generic_land_4"
+			}
+		}
+		corps_commander={
+			traits={ career_officer war_hero winter_specialist }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4		
+			visible = {
+				date > 1905.1.1
+				date < 1928.1.1
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}			
+		}
+	}
+
+	GER_wilhelm_groener={ 
+		name="Wilhelm Groener"
+		portraits={
+			army={
+				large="gfx/leaders/GER/WW1/General_Wilhelm_Groener.dds"
+				small="gfx/interface/ideas/GER/idea_GER_wilhelm_groener.dds"
+			}
+			civilian = {
+				small="gfx/interface/ideas/GER/idea_GER_wilhelm_groener_civil.dds"
+			}
+		}	
+		advisor={
+			slot = high_command
+			idea_token = GER_wilhelm_groener
+			allowed = {
+				original_tag = GER 
+			}
+			ledger = army 
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			visible = {
+				date < 1928.1.1
+			}
+			traits = {
+				army_logistics_2 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GER_wilhelm_groener_army_chief
+			allowed = {
+				original_tag = GER 
+			}
+			available = {
+			}
+			visible = {
+				date < 1928.1.1
+			}
+			ledger = army 
+			traits = {
+				army_chief_organizational_1
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ imperial_german_army politically_connected organizer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=4
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+				date < 1919.1.1
+			}
+		}
+	}	
+
 	GER_fritz_von_below={
 		name="Fritz von Below"
 		portraits={
