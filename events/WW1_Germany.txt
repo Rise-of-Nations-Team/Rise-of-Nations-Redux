@@ -80,7 +80,7 @@ country_event = {
 			id = ww1_germany.5
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -95,7 +95,7 @@ news_event = {
 	option = {
 		name = ww1_germany.2.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -170,7 +170,7 @@ news_event = {
 	option = {
 		name = ww1_germany.5.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -191,13 +191,13 @@ country_event = {
 			add_to_faction = ROM
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
 		name = ww1_germany.6.b
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -214,7 +214,7 @@ news_event = {
 	option = {
 		name = ww1_germany.7.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -247,7 +247,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 	option = {
@@ -259,7 +259,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -277,13 +277,13 @@ country_event = {
 		name = ww1_germany.9.a
 		set_country_flag = non_intervention_pact
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 	option = {
 		name = ww1_germany.9.b
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -310,7 +310,7 @@ country_event = {
 			#transfer_state = 418
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 	option = {
@@ -322,7 +322,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -361,7 +361,7 @@ country_event = {
 			days = 45
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		set_country_flag = kiel_mutiny
 	}
@@ -411,7 +411,7 @@ country_event = {
 		country_event = { id = freikorps.2 days = 3 }
 		set_global_flag = spartacist_uprising
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -425,7 +425,7 @@ country_event = {
 		}
 		set_global_flag = support_spartacists
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0
@@ -892,7 +892,7 @@ country_event = {
                         set_global_flag = red_germany
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -909,7 +909,7 @@ news_event = {
 	option = {
 		name = ww1_germany.14.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -957,7 +957,7 @@ country_event = {
 		}
 		news_event = ww1_germany.16
 		ai_chance = {
-			factor = 90
+			base = 90
 			modifier = {
 				SWI = {
 					is_in_faction = yes
@@ -975,7 +975,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -992,7 +992,7 @@ news_event = {
 	option = {
 		name = ww1_germany.16.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1009,7 +1009,7 @@ country_event = {
 	option = {
 		name = ww1_germany.17.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1031,7 +1031,7 @@ country_event = {
 		}
 		give_guarantee = GER
 		ai_chance = {
-			factor = 50
+			base = 50
 			modifier = {
 				RUS = {
 					has_completed_focus = RUS_guardian_of_orthodoxy
@@ -1055,7 +1055,7 @@ country_event = {
 	option = {
 		name = ww1_germany.18.b
 		ai_chance = {
-			factor = 25
+			base = 25
 		}
 	}
 }
@@ -1102,7 +1102,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
+			base = 50
 			modifier = {
 				factor = 0.1
 				threat > 0.35
@@ -1126,7 +1126,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 50
+			base = 50
 			modifier = {
 				factor = 10
 				NOT = {
@@ -1157,7 +1157,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				is_historical_focus_on = yes
 				NOT = {
@@ -1174,7 +1174,7 @@ country_event = {
 	option = {
 		name = ww1_germany.20.b
 		ai_chance = {
-			factor = 70		
+			base = 70		
 		}
 	}
 }
@@ -1256,7 +1256,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -1286,7 +1286,7 @@ country_event = {
 			GER = { transfer_state = 102 } 		
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -1319,7 +1319,7 @@ country_event = {
 		add_stability = -0.1
 		add_political_power = 75
 		ai_chance = {
-			factor = 75
+			base = 75
 		}
 	}
 	option = {
@@ -1416,7 +1416,7 @@ country_event = {
 			}			
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1440,7 +1440,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -1491,7 +1491,7 @@ country_event = {
 			type = annex_everything
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -1659,7 +1659,7 @@ country_event = {
 	option = {
 		name = ww1_germany.26.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -1690,7 +1690,7 @@ country_event = {
 		}
 		news_event = ww1_germany.28
 		ai_chance = {
-			factor = 50
+			base = 50
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -1700,7 +1700,7 @@ country_event = {
 	option = {
 		name = ww1_germany.27.b
 		ai_chance = {
-			factor = 50
+			base = 50
 			modifier = {
 				factor = 0.1
 				has_government = neutrality
@@ -1719,7 +1719,7 @@ news_event = {
 	option = {
 		name = ww1_germany.28.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -1747,7 +1747,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1761,7 +1761,7 @@ country_event = {
 	option = {
 		name = ww1_germany.30.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1788,7 +1788,7 @@ country_event = {
 		}
 		add_political_power = 120
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 	}
 	option = {
@@ -1804,7 +1804,7 @@ country_event = {
 		}
 		add_political_power = 75
 		ai_chance = {
-			factor = 19
+			base = 19
 		}
 	}
 	option = {
@@ -1815,7 +1815,7 @@ country_event = {
 		add_stability = 0.05
 		add_war_support = 0.05
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 }
@@ -1859,7 +1859,7 @@ country_event = {
 	option = {
 		name = ww1_germany.32.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1873,7 +1873,7 @@ country_event = {
 	option = {
 		name = ww1_germany.33.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -1902,7 +1902,7 @@ country_event = {
 		}
 		add_political_power = 120
 		ai_chance = {
-			factor = 80
+			base = 80
 			modifier = {
 				factor = 0
 				ITA = {
@@ -1934,7 +1934,7 @@ country_event = {
 		}
 		add_political_power = 75
 		ai_chance = {
-			factor = 19
+			base = 19
 		}
 	}
 	option = {
@@ -1945,7 +1945,7 @@ country_event = {
 		add_stability = 0.05
 		add_war_support = 0.05
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 }
@@ -1989,7 +1989,7 @@ country_event = {
 	option = {
 		name = ww1_germany.35.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2003,7 +2003,7 @@ country_event = {
 	option = {
 		name = ww1_germany.36.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2026,7 +2026,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 60
+			base = 60
 		}
 	}
 	option = {
@@ -2038,7 +2038,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2052,7 +2052,7 @@ country_event = {
 	option = {
 		name = ww1_germany.38.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2066,7 +2066,7 @@ country_event = {
 	option = {
 		name = ww1_germany.39.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2087,7 +2087,7 @@ country_event = {
 			set_country_flag = get_german_factories
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2100,7 +2100,7 @@ country_event = {
 			set_country_flag = get_german_techs
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2113,7 +2113,7 @@ country_event = {
 			set_country_flag = get_german_nothing
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2133,7 +2133,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 70
+			base = 70
 			modifier = {
 				SWE = {
 					has_country_flag = get_german_nothing
@@ -2156,7 +2156,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 30
+			base = 30
 		}
 	}
 }
@@ -2177,7 +2177,7 @@ country_event = {
 			set_country_flag = get_german_factories
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2190,7 +2190,7 @@ country_event = {
 			set_country_flag = get_german_techs
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2203,7 +2203,7 @@ country_event = {
 			set_country_flag = get_german_nothing
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2224,7 +2224,7 @@ country_event = {
 			set_country_flag = get_german_factories
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2237,7 +2237,7 @@ country_event = {
 			set_country_flag = get_german_techs
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2250,7 +2250,7 @@ country_event = {
 			set_country_flag = get_german_nothing
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2271,7 +2271,7 @@ country_event = {
 			set_country_flag = get_german_factories
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2284,7 +2284,7 @@ country_event = {
 			set_country_flag = get_german_techs
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2297,7 +2297,7 @@ country_event = {
 			set_country_flag = get_german_nothing
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2315,7 +2315,7 @@ country_event = {
 			give_guarantee = ROM
 		}
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -2327,7 +2327,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2358,7 +2358,7 @@ country_event = {
 			add_to_faction = ROM
 		}
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
 }
@@ -2415,7 +2415,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -2482,7 +2482,7 @@ country_event = {
 		}
 		give_guarantee = LGC
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				has_war_with = GER
@@ -2533,7 +2533,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 }
@@ -2568,7 +2568,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 5
+			base = 5
 			modifier = {
 				factor = 0.1
 				GER = {
@@ -2592,7 +2592,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -2643,7 +2643,7 @@ country_event = {
 		}
 		add_ideas = GER_idea_tokyo_pact
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				factor = 0
 				JAP = {
@@ -2655,7 +2655,7 @@ country_event = {
 	option = {
 		name = ww1_germany.50.b
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 }
@@ -2678,7 +2678,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -2793,7 +2793,7 @@ country_event = {
 			set_country_flag = mexico_agrees
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0
@@ -2813,7 +2813,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				has_government = neutrality
 				factor = 10
@@ -2831,7 +2831,7 @@ country_event = {
 	option = {
 		name = ww1_germany.54.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2845,7 +2845,7 @@ country_event = {
 	option = {
 		name = ww1_germany.55.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -2884,7 +2884,7 @@ country_event = {
 		add_state_claim = 377
 		add_war_support = 0.1
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3013,7 +3013,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 100
 				ITA = {
@@ -3031,7 +3031,7 @@ country_event = {
 	option = {
 		name = ww1_germany.57.b
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0.1
 				ITA = {
@@ -3173,7 +3173,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 100
 				ROM = {
@@ -3191,7 +3191,7 @@ country_event = {
 	option = {
 		name = ww1_germany.58.b
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0.1
 				ROM = {
@@ -3234,7 +3234,7 @@ country_event = {
 			popularity = 0.1
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3284,13 +3284,13 @@ country_event = {
 			set_country_flag = german_chinese_campaign
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 	option = {
 		name = ww1_germany.60.b
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		GER = {
 			add_opinion_modifier = {
@@ -3328,7 +3328,7 @@ country_event = {
 			GER_idea_reparations
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3358,7 +3358,7 @@ country_event = {
 		}
 		remove_ideas = GER_idea_nazism
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3373,7 +3373,7 @@ news_event = {
 	option = {
 		name = ww1_germany.63.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -3412,7 +3412,7 @@ country_event = {
 		}
 		add_ideas = GER_idea_tokyo_pact
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 	option = {
@@ -3421,7 +3421,7 @@ country_event = {
 			country_event = ww1_germany.67
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3438,7 +3438,7 @@ country_event = {
 	option = {
 		name = ww1_germany.66.a
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -3455,7 +3455,7 @@ country_event = {
 	option = {
 		name = ww1_germany.67.a
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -3499,7 +3499,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 	option = {
@@ -3516,7 +3516,7 @@ country_event = {
 			country_event = ww1_germany.69
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3571,7 +3571,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -3608,7 +3608,7 @@ country_event = {
 			enemy = ENG
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -3650,7 +3650,7 @@ country_event = {
 			level = 2
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 	option = {
@@ -3659,7 +3659,7 @@ country_event = {
 			country_event = ww1_germany.72
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -3676,7 +3676,7 @@ country_event = {
 	option = {
 		name = ww1_germany.72.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 	option = {
@@ -3711,7 +3711,7 @@ country_event = {
 			country_event = ww1_germany.73
 		}
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 	}
 }
@@ -3728,7 +3728,7 @@ country_event = {
 	option = {
 		name = ww1_germany.73.a
 		ai_chance = {
-			factor = 40
+			base = 40
 		}
 	}
 	option = {
@@ -3742,7 +3742,7 @@ country_event = {
 		}
 		remove_ideas = GER_idea_economic_pressure
 		ai_chance = {
-			factor = 60
+			base = 60
 		}
 	}
 }
@@ -3758,7 +3758,7 @@ country_event = {
 	option = {
 		name = ww1_germany.74.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		set_global_flag = treaty_of_bucharest_1918
 		if = {
@@ -3952,7 +3952,7 @@ country_event = {
 	option = {
 		name = ww1_germany.74.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -3984,7 +3984,7 @@ country_event = {
 	option = {
 		name = ww1_germany.75.a
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		set_country_flag = germany_invaded_nationalist_france
 		declare_war_on = {
@@ -4001,7 +4001,7 @@ country_event = {
 	option = {
 		name = ww1_germany.75.b
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		add_stability = 0.1
 	}
@@ -4031,7 +4031,7 @@ news_event = {
 	option = {
 		name = news.155.b
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		trigger = {
 			OR = {
@@ -4046,7 +4046,7 @@ news_event = {
 	option = {
 		name = news.155.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		trigger = {
 			OR = {
@@ -4100,7 +4100,7 @@ country_event = {
 	option = {
 		name = ww1_germany.78.a
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 		add_political_power = 35
 		add_stability = 0.05
@@ -4135,7 +4135,7 @@ news_event = {
 	option = {
 		name = ww1_germany.79.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -4152,7 +4152,7 @@ news_event = {
 	option = {
 		name = ww1_germany.80.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -4300,7 +4300,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -4363,7 +4363,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -4478,7 +4478,7 @@ country_event = {
 		promote_character = GER_erich_ludendorff
 		add_ideas = GER_idea_wilhelm_ii
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -4514,13 +4514,13 @@ country_event = {
 			country_event = ww1_germany.87
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
 		name = ww1_germany.86.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -4815,14 +4815,14 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
 		name = ww1_germany.93.b
 		add_war_support = -0.05
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -4844,7 +4844,7 @@ country_event = {
 		add_stability = -0.1
 		add_war_support = 0.05
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -4892,7 +4892,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -4937,7 +4937,7 @@ country_event = {
 		name = ww1_germany.95.a
 		add_stability = -0.1
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -5017,7 +5017,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -5039,7 +5039,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -5053,7 +5053,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}	
 	}
 }
@@ -5077,7 +5077,7 @@ country_event = {
 			active = yes
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -5093,7 +5093,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -5635,7 +5635,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -5876,7 +5876,7 @@ country_event = {
 			}			
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -5942,7 +5942,7 @@ country_event = {
 			name = GER_revive_the_kaiserreich
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -5955,7 +5955,7 @@ country_event = {
 		add_political_power = -200
 		add_stability = -0.3
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -6449,7 +6449,7 @@ country_event = {
 		}
 		set_global_flag = ruhr_uprising
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = {
@@ -6559,7 +6559,7 @@ country_event = {
 			change_tag_from = PREV
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -6845,7 +6845,7 @@ country_event = {
 			set_demilitarized_zone = yes
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				has_war_with = GER
@@ -7086,13 +7086,13 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 	option = {
 		name = ww1_germany.127.a
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
