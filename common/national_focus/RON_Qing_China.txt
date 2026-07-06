@@ -49,7 +49,7 @@ focus_tree = {
 
 	focus = {
 		id = DNC_QIN_antiwestern_policy
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_QIN_boxer_agreement
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = -4
 		y = 1
@@ -69,14 +69,14 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			all_country = {
+			every_country = {
 				limit = {
 					has_idea = DNC_eight_nation_alliance
 				}
 				declare_war_on = FROM
 				country_event = dnc_qing.6
 			}
-			all_core_state = {
+			every_core_state = {
 				limit = {
 					has_dynamic_modifier = {
 						modifier = QIN_boxer_rebellion
@@ -165,7 +165,7 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				add_idea = QIN_eight_banners1
-				remove_ideas = QIN_eight_banners
+				remove_idea = QIN_eight_banners
 			}
 		}
 	}
@@ -227,7 +227,7 @@ focus_tree = {
 
 	focus = {
 		id = DNC_QIN_long_live_the_qing
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_QIN_boxer_war_victory
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 2
@@ -439,7 +439,7 @@ focus_tree = {
 
 	focus = {
 		id = DNC_QIN_combat_the_rebels
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_QIN_boxer_war
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 4
 		y = 1
@@ -577,7 +577,7 @@ focus_tree = {
 
 	focus = {
 		id = DNC_QIN_destroy_the_rebellion
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_QIN_get_rid_of_the_boxers
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 1
 		y = 1
