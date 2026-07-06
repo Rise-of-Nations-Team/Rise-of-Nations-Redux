@@ -16,858 +16,521 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1500 }
 
 	focus = {
-		id = DNC_QIN_boxers
-		icon = GFX_goal_QIN_boxer_war_victory
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 7
-		y = 0
-		cost = 8
-		available = {
-			NOT = {
-				OR = {
-					has_global_flag = DNC_Boxer_Rebellion_Succeeded
-					has_global_flag = DNC_Boxer_Rebellion_Defeated
-				}
-			}
-		}
-		
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_empress_opinion
-		icon = GFX_goal_QIN_empress_opinion
-		x = 7
-		y = 1
-
-		prerequisite = {
-			focus = DNC_QIN_boxers
-		}
-
-		cost = 8
-
-		available = {
-			
-			NOT = {
-				has_war_with = ENG
-				has_war_with = RUS
-			}
-		}
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			country_event = ron_diplomatic.34
-			add_political_power = 50
-				
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_ally_with_boxers
-		icon = GFX_goal_QIN_boxer_agreement
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 5
-		y = 2
-
-		prerequisite = {
-			focus = DNC_QIN_empress_opinion
-		}
-		mutually_exclusive = {
-			focus = DNC_QIN_against_boxers
-		}
-
-		cost = 5
-
-		available = {
-			has_country_flag = QIN_pro_boxers
-		}
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-			add_political_power = 100
-			add_war_support = 0.1
-			QIN = {
-				all_core_state = {
-					if = {
-						limit = {
-							has_dynamic_modifier = QIN_boxer_rebellion
-							scope = ROOT
-						}
-						create_unit = {
-							division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
-							owner = QIN
-							id = 555
-						}
-						create_unit = {
-							division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
-							owner = QIN
-							id = 556
-						}
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_against_boxers
-		icon = GFX_goal_QIN_boxer_war
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 11
-		y = 2
-		prerequisite = {
-			focus = DNC_QIN_empress_opinion
-		}
-		mutually_exclusive = {
-			focus = DNC_QIN_ally_with_boxers
-		}
-
-		cost = 5
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		available = {
-			has_country_flag = QIN_anti_boxers
-			}
-
-		completion_reward = {
-			QIN = {
-				all_core_state = {
-					if = {
-						limit = {
-							has_dynamic_modifier = {
-								modifier = QIN_boxer_rebellion
-								scope = QIN
-							}
-						}
-						transfer_state_to = BOX
-						BOX = {
-							declare_war_on = {
-								target = QIN
-								type = civil_war
-							}
-							add_civil_war_target = QIN
-							create_unit = {
-								division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
-								owner = BOX
-								id = 555
-							}
-							create_unit = {
-								division = "name = \"Boxer Militia\" division_template = \"Boxer Rebels\" start_excperience_factor = 0.5"
-								owner = BOX
-								id = 556
-							}
-						}
-					}
-				}
-			}
-			custom_effect_tooltip = QIN_worse_boxers
-			hidden_effect = {
-				country_event = { id = chinese_empire.32 days = 7}
-			}
-			add_political_power = -50
-		}
-	}
-	#focus = {
-	#	id = DNC_QIN_taku_forts
-	#	icon = GFX_goal_QIN_8_nation_war
-	#	search_filters = { FOCUS_FILTER_POLITICAL }
-	#	x = 5
-	#	y = 3
-	#   prerequisite = {
-	#		focus = DNC_QIN_ally_with_boxers
-	#	}
-	#    cost = 5
-	#
-	#    available = {
-	#        NOT = {
-	#            has_war_with = BOX
-	#       }
-	#    }
-	#	
-	#	ai_will_do = {
-	#		factor = 100
-	#	}
-	#	
-	#	will_lead_to_war_with = JAP
-	#	will_lead_to_war_with = GER
-	#	will_lead_to_war_with = RUS
-	#	will_lead_to_war_with = ENG
-	#	will_lead_to_war_with = DEL
-	#	will_lead_to_war_with = HOL
-	#	will_lead_to_war_with = BEL
-	#	will_lead_to_war_with = USA
-	#	will_lead_to_war_with = SPR
-	#	will_lead_to_war_with = ITA
-	#	will_lead_to_war_with = AUH
-	#	
-	#    completion_reward = {
-	#        add_manpower = 5000
-	#       add_war_support = 0.2
-	#		add_stability = 0.2
-	#		country_event = ron_diplomatic.36
-	#		activate_mission = QIN_seize_concessions
-	#		hidden_effect = {
-	#			country_event = dnc_china.7
-	#		}
-	#	}
-	#}
-	focus = {
-		id = DNC_QIN_seymour_expedition
-		icon = GFX_goal_RUS_asian_influance
-		x = 5
-		y = 3
-		prerequisite = {
-			focus = DNC_QIN_ally_with_boxers
-		}
-		cost = 2
-		bypass = {
-			OR = {
-				has_global_flag = DNC_Boxer_Rebellion_Succeeded
-				has_global_flag = DNC_Boxer_Rebellion_Defeated
-			}
-		}
-		available = {
-			NOT = {
-				has_war_with = BOX
-			}
-			NOT = {
-			has_global_flag = MARPAC_voting_in_process
-			}
-		}
-		
-		ai_will_do = {
-			factor = 100
-		}
-		will_lead_to_war_with = JAP
-		will_lead_to_war_with = GER
-		will_lead_to_war_with = RUS
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = DEL
-		will_lead_to_war_with = USA
-		will_lead_to_war_with = SPR
-		will_lead_to_war_with = ITA
-		will_lead_to_war_with = AUH
-				
-		completion_reward = {
-			add_manpower = 5000
-			add_war_support = 0.25
-			add_stability = 0.15
-			country_event = ron_diplomatic.36
-			activate_mission = QIN_seize_concessions
-			hidden_effect = {
-				country_event = dnc_china.7
-			}
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_supply_arms
-		icon = GFX_goal_generic_small_arms
-		x = 7
-		y = 4
-		prerequisite = {
-			focus = DNC_QIN_seymour_expedition
-		}
-			cost = 7
-		bypass = {
-			OR = {
-				has_global_flag = DNC_Boxer_Rebellion_Succeeded
-				has_global_flag = DNC_Boxer_Rebellion_Defeated
-			}
-		}
-		
-		available = {
-		NOT = {
-				has_war_with = BOX
-			}
-			OR = {
-				has_war_with = ENG
-				has_war_with = GER
-				has_war_with = JAP
-				has_war_with = ITA
-				has_war_with = AUH
-				has_war_with = FRA
-			}
-		}
-		
-		ai_will_do = {
-			factor = 100
-		}
-		
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 20000
-				producer = BOX
-			}
-			
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_seize_weapons
-		icon = GFX_goal_generic_major_war
-		x = 7
-		y = 5
-		prerequisite = {
-			focus = DNC_QIN_supply_arms
-		}
-		cost = 7
-		bypass = {
-			OR = {
-				has_global_flag = DNC_Boxer_Rebellion_Succeeded
-				has_global_flag = DNC_Boxer_Rebellion_Defeated
-			}
-		}
-		available = {
-			NOT = {
-				has_war_with = BOX
-			}
-			has_war_with = ENG
-			has_war_with = GER
-			has_war_with = JAP
-			has_war_with = ITA
-			has_war_with = AUH
-			has_war_with = FRA
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			effect_tooltip = {
-				ENG = {
-					send_equipment = {
-						equipment = infantry_equipment
-						amount = 7500
-						target = QIN
-					}
-
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 7500
-				producer = ENG
-			}
-			
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_mobilize_the_bannermen
-		icon = GFX_focus_generic_little_entente
-		x = 3
-		y = 5
-		prerequisite = {
-			focus = DNC_QIN_seymour_expedition
-		}
-		cost = 10
-		bypass = {
-			OR = {
-				has_global_flag = DNC_Boxer_Rebellion_Succeeded
-				has_global_flag = DNC_Boxer_Rebellion_Defeated
-			}
-		}
-		available = {
-			NOT = {
-				has_war_with = BOX
-			}
-			has_war_with = ENG
-			has_war_with = GER
-			has_war_with = JAP
-			has_war_with = ITA
-			has_war_with = AUH
-			has_war_with = FRA
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_manpower = 300000
-			add_ideas = MEN_mongol_banners_idea
-		}
-	}
-
-	focus = {
-
-		id = DNC_QIN_stunning_victory
-		icon = GFX_goal_generic_demand_territory
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 3
-		y = 7
-		cost = 10
-
-		mutually_exclusive = {
-			focus = DNC_QIN_horrific_loss
-		}
-
-		prerequisite = {
-			focus = DNC_QIN_mobilize_the_bannermen
-			focus = DNC_QIN_seize_weapons
-		}
-
-		available = {
-			has_global_flag = DNC_Boxer_Rebellion_Succeeded
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			unlock_decision_tooltip = request_foreign_depart_from_ZONE
-			country_lock_all_division_template = no
-			set_global_flag = DNC_Boxer_Rebellion_Succeeded
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_horrific_loss
-		icon = GFX_focus_CZE_german_puppet
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 7
-		y = 7
-		cost = 2
-
-		mutually_exclusive = {
-			focus = DNC_QIN_stunning_victory
-		}
-
-		prerequisite = {
-			focus = DNC_QIN_mobilize_the_bannermen
-			focus = DNC_QIN_seize_weapons
-		}
-
-		available = {
-			if = {
-				limit = {
-					NOT = {has_global_flag = player_wants_custom_peacedeals}
-				}	
-				has_global_flag = DNC_Boxer_Rebellion_Defeated	
-			}
-			else = {
-				AND = {
-					QIN = {
-						surrender_progress > 0.2
-					}
-					BOX = {
-						has_capitulated = yes
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_ideas = QIN_boxer_protocols
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_global_flag = DNC_Boxer_Rebellion_Defeated
-						}
-						
-					}
-					set_global_flag = DNC_Boxer_Rebellion_Defeated
-				}
-			}
-			add_stability = -0.10
-
-			effect_tooltip = {
-				every_owned_state = {
-					limit = {
-						is_core_of = QIN
-						is_core_of = BOX
-					}
-					force_enable_resistance = {
-						occupier = QIN
-						occupied = BOX
-					}
-					start_resistance = BOX
-					set_state_flag = boxer_resistance
-				}
-			}
-
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = no # I'll let the AI cheat here for now
-					}
-					every_owned_state = {
-						limit = {
-							is_core_of = QIN
-							is_core_of = BOX
-						}
-						force_enable_resistance = {
-							occupier = QIN
-							occupied = BOX
-						}
-						start_resistance = BOX
-						set_state_flag = boxer_resistance
-					}
-				}
-			}			
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_new_age_for_china
-		icon = GFX_focus_CHI_cradle_of_civilization
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 4
-		y = 8
-		prerequisite = {
-			focus = DNC_QIN_stunning_victory
-		}
-		cost = 10
-
-		available = {
-			NOT = {
-			has_war = yes
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_stability = 0.2
-			add_political_power = 100
-					SHA = {
-				country_event = dnc_china.15
-			}
-			ANH = {
-				country_event = dnc_china.15
-			}
-			FUJ = {
-				country_event = dnc_china.15
-			}
-			GUC = {
-				country_event = dnc_china.15
-			}
-			HNN = {
-				country_event = dnc_china.15
-			}
-
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_demand_macau
-		icon = GFX_focus_JAP_occupy_macau
+		id = DNC_QIN_the_boxer_rebellion
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 2
-		y = 8
-		prerequisite = {
-			focus = DNC_QIN_stunning_victory
+		y = 0
+
+		cost = 5
+		available = {
+			NOT = {
+				has_war_with = BOX
+			}
 		}
-		cost = 7
+
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 5
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_antiwestern_policy
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = -4
+		y = 1
+		relative_position_id = DNC_QIN_the_boxer_rebellion
+		prerequisite = { focus = DNC_QIN_the_boxer_rebellion }
+
+		mutually_exclusive = { focus = DNC_QIN_combat_the_rebels }
+
+		cost = 
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_seymours_expedition
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_antiwestern_policy
+		prerequisite = { focus = DNC_QIN_antiwestern_policy }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_mobilize_bannermen
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = -2
+		y = 1
+		relative_position_id = DNC_QIN_seymours_expedition
+		prerequisite = { focus = DNC_QIN_seymours_expedition }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_rally_our_countrymen
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_mobilize_bannermen
+		prerequisite = { focus = DNC_QIN_mobilize_bannermen }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_the_boxer_spirit
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 2
+		y = 1
+		relative_position_id = DNC_QIN_seymours_expedition
+		prerequisite = { focus = DNC_QIN_seymours_expedition }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_raiders_and_scavengers
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_the_boxer_spirit
+		prerequisite = { focus = DNC_QIN_the_boxer_spirit }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_long_live_the_qing
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 2
+		relative_position_id = DNC_QIN_rally_our_countrymen
+		prerequisite = { focus = DNC_QIN_rally_our_countrymen }
 		
-
+		mutually_exclusive = { focus = DNC_QIN_the_nail_in_the_coffin }
+		cost = 0
 		available = {
-			NOT = {
-				has_war = yes
-			}
+			always = no
 		}
+
 		ai_will_do = {
-			factor = 100
+			factor = 25
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					729 = {
-						NOT =  {
-							is_controlled_by = QIN
-						}
-					}
-				}
-				var:729.controller = {
-					country_event = dnc_china.14
-				}
-			}
-		
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_begin_reintegration
-		icon = GFX_focus_eng_move_to_secure_the_dominions
-		x = 6
-		y = 8
-		prerequisite = {
-			focus = DNC_QIN_horrific_loss
-		}
-		cost = 7
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-			NOT = {
-			has_war = yes
-			}
-		}
-		completion_reward = {
-			SHA = {
-				country_event = dnc_china.15
-			}
-			ANH = {
-				country_event = dnc_china.15
-			}
-			FUJ = {
-				country_event = dnc_china.15
-			}
-			GUC = {
-				country_event = dnc_china.15
-			}
-			HNN = {
-				country_event = dnc_china.15
-			}
-
-			
-		}
-	
-	}
-
-	focus = {
-		id = DNC_QIN_power_to_governors
-		icon = GFX_goal_tfv_sever_ties_with_uk
-		x = 8
-		y = 8
-		prerequisite = {
-			focus = DNC_QIN_horrific_loss
-		}
-		cost = 7
-
-		available = {
-			NOT = {
-				has_war = yes
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		completion_reward = {
-			unlock_decision_tooltip = Play_as_SHA
-			unlock_decision_tooltip = Play_as_ANH
-			unlock_decision_tooltip = Play_as_FUJ
-			unlock_decision_tooltip = Play_as_GUC
-			unlock_decision_tooltip = Play_as_HNN
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_foreign_aid
-		icon = GFX_goal_SWI_international_aid
-		x = 13
-		y = 3
-		prerequisite = {
-			focus = DNC_QIN_against_boxers
-		}
-		cost = 7
-
-		available = {
-			has_war_with = BOX
-			OR = {
-				NOT = { has_war_with = ENG }
-				NOT = { has_war_with = RUS }
-				NOT = { has_war_with = FRA }
-				NOT = { has_war_with = GER }
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			if = {
-				limit = { NOT = { has_war_with = ENG }}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 1500
-					producer = ENG
-				}
-			}
-			if = {
-				limit = { NOT = { has_war_with = RUS }}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 1500
-					producer = RUS
-				}
-			}
-			if = {
-				limit = { NOT = { has_war_with = FRA }}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 1500
-					producer = FRA
-				}
-			}
-			if = {
-				limit = { NOT = { has_war_with = GER }}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 1500
-					producer = GER
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_foreign_volunteers
-		icon = GFX_focus_generic_little_entente
-		x = 11
-		y = 3
-		prerequisite = {
-			focus = DNC_QIN_against_boxers
-		}
-		cost = 7
-
-		available = {
-			has_war_with = BOX
-			is_in_faction = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = QIN_foreign_concessions
-				add_idea = QIN_foreign_concessions_2
-			}
-			load_oob = QIN_Foreign_Volunteers
-			set_country_flag = QIN_has_foreign_volunteers
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_protect_christians
-		icon = GFX_focus_por_concordat
-		x = 9
-		y = 3
-		prerequisite = {
-			focus = DNC_QIN_against_boxers
-		}
-		cost = 7
-
-		available = {
-			has_war_with = BOX
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_stability = 0.05
-			add_political_power = -20
-			add_opinion_modifier = { target = ENG modifier = large_increase }
-			add_opinion_modifier = { target = GER modifier = large_increase }
-			add_opinion_modifier = { target = RUS modifier = large_increase }
-			add_opinion_modifier = { target = FRA modifier = large_increase }
-			add_opinion_modifier = { target = ITA modifier = large_increase }
-		}
-	}
-
-	focus = {
-		id = DNC_QIN_change_foreign_policy
-		icon = GFX_goal_generic_improve_relations
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 11
-		y = 4
-		prerequisite = {
-			focus = DNC_QIN_protect_christians
-		}
-		prerequisite = {
-			focus = DNC_QIN_foreign_aid
-		}
-		cost = 7
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-			NOT = {
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			set_global_flag = DNC_Boxer_Rebellion_Defeated
-			country_event = { id = chinese_empire.31 hours = 1}
-			add_political_power = -25
-			add_opinion_modifier = { target = ENG modifier = large_increase }
-			add_opinion_modifier = { target = RUS modifier = large_increase }
-			add_opinion_modifier = { target = FRA modifier = large_increase }
-			add_opinion_modifier = { target = GER modifier = large_increase }
-			add_opinion_modifier = { target = ITA modifier = large_increase }
-			add_opinion_modifier = { target = JAP modifier = large_increase }
 
 		}
 	}
 
 	focus = {
-		id = DNC_QIN_open_up_to_foreigners
-		icon = GFX_goal_RUS_asian_influance
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 10
-		y = 5
-		prerequisite = {
-			focus = DNC_QIN_change_foreign_policy
-		}
-		cost = 7
+		id = DNC_QIN_the_future_of_the_boxers
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_long_live_the_qing
+		prerequisite = { focus = DNC_QIN_long_live_the_qing }
 
+		cost = 5
 		available = {
-			NOT = {
-				has_war = yes
-				BOX = {
-					exists = yes
-				}
-			}
+
 		}
+
 		ai_will_do = {
-			factor = 100
+			factor = 25
 		}
 		completion_reward = {
-			custom_effect_tooltip = allow_more_foreign_influence_tt
-			add_stability = -0.1
+
 		}
 	}
 
 	focus = {
-		id = DNC_QIN_military_mission
-		icon = GFX_goal_generic_intelligence_exchange
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		x = 12
-		y = 5
-		prerequisite = {
-			focus = DNC_QIN_change_foreign_policy
-		}
-		cost = 7
+		id = DNC_QIN_the_future_of_chinese_christians
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = -1
+		y = 1
+		relative_position_id = DNC_QIN_the_future_of_the_boxers
+		prerequisite = { focus = DNC_QIN_the_future_of_the_boxers }
 
+		cost = 2
 		available = {
-			NOT = {
-				has_war = yes
-				BOX = {
-					exists = yes
-				}
-			}
+
 		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_chinese_reunification
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 1
+		y = 1
+		relative_position_id = DNC_QIN_the_future_of_the_boxers
+		prerequisite = { focus = DNC_QIN_the_future_of_the_boxers }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_proclaim_the_chinese_golden_age
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 1
+		y = 1
+		relative_position_id = DNC_QIN_the_future_of_chinese_christians
+		prerequisite = { focus = DNC_QIN_the_future_of_chinese_christians }
+		prerequisite = { focus = DNC_QIN_chinese_reunification }
+
+		cost = 10
+		available = {
+
+		}
+
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			army_experience = 20
-				
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_the_nail_in_the_coffin
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 2
+		relative_position_id = DNC_QIN_raiders_and_scavengers
+		prerequisite = { focus = DNC_QIN_raiders_and_scavengers }
+
+		mutually_exclusive = { focus = DNC_QIN_long_live_the_qing }
+
+		cost = 0
+		available = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_comply_with_the_eight
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_the_nail_in_the_coffin
+		prerequisite = { focus = DNC_QIN_the_nail_in_the_coffin }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_institute_the_new_policies
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_comply_with_the_eight
+		prerequisite = { focus = DNC_QIN_comply_with_the_eight }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_combat_the_rebels
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 4
+		y = 1
+		relative_position_id = DNC_QIN_the_boxer_rebellion
+		prerequisite = { focus = DNC_QIN_the_boxer_rebellion }
+
+		mutually_exclusive = { focus = DNC_QIN_antiwestern_policy }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_invite_foreign_troops
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = -2
+		y = 1
+		relative_position_id = DNC_QIN_combat_the_rebels
+		prerequisite = { focus = DNC_QIN_combat_the_rebels }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_protect_chinese_christians
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_combat_the_rebels
+		prerequisite = { focus = DNC_QIN_combat_the_rebels }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_purchase_foreign_guns
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 2
+		y = 1
+		relative_position_id = DNC_QIN_combat_the_rebels
+		prerequisite = { focus = DNC_QIN_combat_the_rebels }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_request_military_advisors
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 1
+		y = 1
+		relative_position_id = DNC_QIN_invite_foreign_troops
+		prerequisite = { focus = DNC_QIN_invite_foreign_troops }
+		prerequisite = { focus = DNC_QIN_protect_chinese_christians }
+		prerequisite = { focus = DNC_QIN_purchase_foreign_guns }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_open_up_to_western_investment
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 1
+		y = 1
+		relative_position_id = DNC_QIN_protect_chinese_christians
+		prerequisite = { focus = DNC_QIN_invite_foreign_troops }
+		prerequisite = { focus = DNC_QIN_protect_chinese_christians }
+		prerequisite = { focus = DNC_QIN_purchase_foreign_guns }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DNC_QIN_destroy_the_rebellion
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 1
+		y = 1
+		relative_position_id = DNC_QIN_request_military_advisors
+		prerequisite = { focus = DNC_QIN_request_military_advisors }
+		prerequisite = { focus = DNC_QIN_open_up_to_western_investment }
+
+		cost = 2
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = DNC_QIN_a_new_age_for_china
+		#icon = GFX_goal_QIN
+		search_filters = { FOCUS_FILTER_BOXERS }
+		x = 0
+		y = 1
+		relative_position_id = DNC_QIN_destroy_the_rebellion
+		prerequisite = { focus = DNC_QIN_destroy_the_rebellion }
+
+		cost = 5
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+
 		}
 	}
 

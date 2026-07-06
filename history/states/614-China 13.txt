@@ -6,9 +6,10 @@ state = {
 	state_category = town
 
 	history = {
-		owner = BOX
+		owner = QIN
 		add_core_of = QIN
-		add_core_of = CHI add_core_of = BOX
+		add_core_of = CHI 
+		add_core_of = BOX
 		add_core_of = ZHI
 		buildings = {
 			infrastructure = 4
@@ -25,6 +26,10 @@ state = {
 			owner = PRC
 			controller = PRC
 			add_core_of = PRC
+		}
+		add_dynamic_modifier = { 
+			modifier = QIN_boxer_rebellion
+			scope = QIN
 		}
 	}
 
