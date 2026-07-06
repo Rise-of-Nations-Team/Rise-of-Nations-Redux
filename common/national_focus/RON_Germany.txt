@@ -7,9 +7,8 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = GER
+			date < 1910.1.1
 		}
-
-
 	}
 	default = no 
 	reset_on_civilwar = no
@@ -73,9 +72,6 @@ focus_tree = {
 			}
 			country_event ={ id = dgk_germany.2}
 		}
-		allow_branch = {
-			date < 1910.1.1
-		}		
 	}
 
 	#Focus for German Industrial Giant
@@ -127,9 +123,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 75
-		}
-		allow_branch = {
-			date < 1910.1.1
 		}
 	}
 
@@ -2576,9 +2569,6 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 		}
-		allow_branch = {
-			date < 1910.1.1
-		}
 	}
 
 	#Focus for Send Weapons To Separatists
@@ -4006,9 +3996,6 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-		}
-		allow_branch = {
-			date < 1910.1.1
 		}
 	}
 
@@ -7566,6 +7553,21 @@ focus_tree = {
 			}
 		}
 	}
+}
+
+focus_tree = {
+	id = Germany_WW1
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = GER
+			date > 1909.12.31
+			date < 1919.1.1
+		}
+	}
 
 	focus = {
 		id = GER_weltpolitik
@@ -7597,10 +7599,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 		}
-		allow_branch = {
-			date > 1910.1.1
-			date < 1930.1.1
-		}		
 	}
 	focus = {
 		id = GER_place_under_the_sun
@@ -7624,9 +7622,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 		}
-		allow_branch = {
-			date < 1930.1.1
-		}				
 	}
 	focus = {
 		id = GER_contain_kaiser
@@ -7636,7 +7631,7 @@ focus_tree = {
 			focus = GER_weltpolitik
 		}
 		x = 21
-		y = 0s
+		y = 0
 		available_if_capitulated = yes
 		available = {
 			has_government = neutrality
@@ -7661,10 +7656,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		allow_branch = {
-			date > 1910.1.1
-			date < 1930.1.1
-		}		
 	}
 	focus = {
 		id = GER_prussian_militarism
@@ -12982,10 +12973,6 @@ focus_tree = {
 				}
 			}
 		}
-		allow_branch = {
-			date > 1910.1.1
-			date < 1930.1.1
-		}		
 		ai_will_do = {
 			factor = 100
 		}
@@ -13012,10 +12999,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		allow_branch = {
-			date > 1910.1.1
-			date < 1930.1.1
-		}		
 	}
 	focus = {
 		id = GER_veteran_organisation
@@ -13068,10 +13051,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		allow_branch = {
-			date > 1910.1.1
-			date < 1930.1.1
-		}		
 	}
 	focus = {
 		id = GER_weimar_constitution
