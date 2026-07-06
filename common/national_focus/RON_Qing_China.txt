@@ -74,6 +74,7 @@ focus_tree = {
 					has_idea = DNC_eight_nation_alliance
 				}
 				declare_war_on = FROM
+				country_event = QIN.6
 			}
 			all_core_state = {
 				limit = {
@@ -212,6 +213,14 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = QIN_spirit_soldiers1
 				remove_idea = QIN_spirit_soldier
+			}
+			add_to_stockpile = {
+				type = infantry_equipment
+				amount = 7500
+				producer = ENG
+			}
+			ENG = {
+				country_event = { id = QIN.5 days = 3 }
 			}
 		}
 	}
