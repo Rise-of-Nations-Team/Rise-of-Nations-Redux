@@ -1151,19 +1151,17 @@ country_event = {
 	picture = GFX_report_event_DNC_Expansion_country17
 	is_triggered_only = yes
 	option = {
+		name = ron_diplomatic.39.a
 		ai_chance = {
 			base = 10
 		}
-		name = ron_diplomatic.39.a
-
 		add_opinion_modifier = {
 			modifier = RI_hostile_foreign_policy
 			target = QIN
 		}
-
 		add_war_support = 0.05
 		QIN = {
-					create_wargoal = {			
+			create_wargoal = {
 				expire = 100
 				type = annex_everything
 				target = BOX

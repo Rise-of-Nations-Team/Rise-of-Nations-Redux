@@ -2,16 +2,16 @@ add_namespace = QIN
 
 # THE FUTURE OF THE BOXERS?
 country_event = {
-	id = QIN.1
+	id = dnc_qing.1
 	title = "The Future of the Boxers?"
-	desc = QIN.1.d
+	desc = dnc_qing.1.d
 	
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = "Formalize the Boxer Militias"
-		ai_will_do = {
+		ai_chance = {
 			base = 5
 		}
 		add_political_power = 50
@@ -19,7 +19,7 @@ country_event = {
 	}
 	option = {
 		name = "Disband the Boxer Militias"
-		ai_will_do = {
+		ai_chance = {
 			base = 5
 		}
 		delete_unit_template_and_units = {
@@ -31,16 +31,16 @@ country_event = {
 
 # THE CHRISTIAN QUESTION
 country_event = {
-	id = QIN.2
+	id = dnc_qing.2
 	title = "The Christian Question"
-	desc = QIN.1.d
+	desc = dnc_qing.1.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = {
 		name = "Exile them"
-		ai_will_do = {
+		ai_chance = {
 			base = 5
 		}
 		add_manpower = -10000
@@ -57,7 +57,7 @@ country_event = {
 	}
 	option = {
 		name = "Hunt them down."
-		ai_will_do = {
+		ai_chance = {
 			base = 5
 		}
 		add_manpower = -10000
@@ -67,19 +67,19 @@ country_event = {
 
 # QING CHINA REQUESTS RETURN OF TERRITORIES
 country_event = {
-	id = QIN.3
+	id = dnc_qing.3
 	title = "Qing China Requests the Return of Territories"
-	desc = QIN.3.d
+	desc = dnc_qing.3.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = "It is rightful Chinese territory"
-		ai_will_do = {
+		ai_chance = {
 			base = 5
 		}
-		all_controlled_state = {
+		every_controlled_state = {
 			limit = {
 				is_core_of = QIN
 			}
@@ -90,19 +90,13 @@ country_event = {
 	}
 	option = {
 		name = "Do they think we are stupid?"
-		ai_will_do = {
+		ai_chance = {
 			base = 5
 		}
 		QIN = {
-			create_war_goal = {
-				type = reclaim_core_state
+			create_wargoal = {
+				type = annex_everything
 				target = PREV
-				generator = {
-					all_state = {
-						is_core_of = QIN
-						controller = PREV
-					}
-				}
 			}
 		}
 	}
@@ -110,9 +104,9 @@ country_event = {
 
 # A NEW GOLDEN AGE?
 country_event = {
-	id = QIN.4
+	id = dnc_qing.4
 	title = "A New Golden Age?"
-	desc = QIN.4.d
+	desc = dnc_qing.4.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -124,9 +118,9 @@ country_event = {
 
 # QING CHINA RAIDS OUR STOCKPILES!
 country_event = {
-	id = QIN.5
+	id = dnc_qing.5
 	title = "Qing China Raids Our Equipment Stockpiles!"
-	desc = QIN.5.d
+	desc = dnc_qing.5.d
 
 	is_triggered_only = yes
 	fire_only_once = no
@@ -143,9 +137,9 @@ country_event = {
 
 # QING CHINA DECLARES WAR ON US!
 country_event = {
-	id = QIN.6
+	id = dnc_qing.6
 	title = "Qing China Declares War!"
-	desc = QIN.6.d
+	desc = dnc_qing.6.d
 
 	is_triggered_only = yes
 	fire_only_once = yea

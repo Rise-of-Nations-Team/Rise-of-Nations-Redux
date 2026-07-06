@@ -1,10 +1,25 @@
 ideas = {
+
 	country = {
+
 		QIN_eight_banners = {
-			#picture = picture pending...
+
+			picture = QIE_banners
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			on_add = {
 				# Spawn 3 Qing Cavalry Divisions
 			}
+
 			modifier = {
 				army_core_attack_factor = 0.025
 				army_core_defence_factor = 0.025
@@ -12,8 +27,23 @@ ideas = {
 				cavalry_defence_factor = 0.05
 			}
 		}
+
 		QIN_eight_banners1 = {
-			#picture = picture pending...
+
+			name = QIN_eight_banners
+
+			picture = QIE_banners
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			modifier = {
 				army_core_attack_factor = 0.025
 				army_core_defence_factor = 0.025
@@ -22,6 +52,7 @@ ideas = {
 				conscription_factor = 0.05
 			}
 		}
+
 		QIN_spirit_soldiers = {
 			#picture = picture pending...
 			modifier = {
