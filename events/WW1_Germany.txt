@@ -1421,30 +1421,6 @@ country_event = {
 	}
 }
 
-# BEER HALL
-#################
-country_event = {
-	id = ww1_germany.23
-	title = ww1_germany.23.t
-	desc = ww1_germany.23.d
-	picture = GFX_report_event_gathering_protest
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ww1_germany.23.a
-		add_political_power = -75
-		hidden_effect = {
-			country_event = {
-				id = ww1_germany.62
-				days = 7
-			}
-		}
-		ai_chance = {
-			base = 100
-		}
-	}
-}
-
 # DISSMANTLE OF OHL
 country_event = {
 	id = ww1_germany.24
@@ -1458,8 +1434,6 @@ country_event = {
 			has_idea = GER_idea_OHL2
 			has_idea = GER_idea_OHL3
 			has_idea = GER_idea_OHL_dictatorship
-			has_completed_focus = GER_deutsche_arbeiterpartei
-			has_completed_focus = GER_beer_hall_putsch
 		}
 	}
 	mean_time_to_happen = {
@@ -3329,51 +3303,6 @@ country_event = {
 		}
 		ai_chance = {
 			base = 10
-		}
-	}
-}
-
-# BEER HALL PUTCH
-#####################
-country_event = {
-	id = ww1_germany.62
-	title = ww1_germany.62.t
-	desc = ww1_germany.62.d
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = ww1_germany.62.a
-		add_war_support = -0.1
-		add_stability = -0.1
-		add_popularity = {
-			ideology = fascism
-			popularity = -0.2
-		}
-		news_event = ww1_germany.63
-		set_global_flag = beer_hall_putsch
-		add_timed_idea = {
-			idea = GER_idea_hitler_arrested
-			days = 365
-		}
-		remove_ideas = GER_idea_nazism
-		ai_chance = {
-			base = 10
-		}
-	}
-}
-
-news_event = {
-	id = ww1_germany.63
-	title = ww1_germany.62.t
-	desc = ww1_germany.62.d
-	picture = hoi4tgw_beer_hall_putsch
-	major = yes
-	is_triggered_only = yes
-	option = {
-		name = ww1_germany.63.a
-		ai_chance = {
-			base = 100
 		}
 	}
 }
@@ -5841,33 +5770,6 @@ country_event = {
 		remove_ideas = GER_idea_kapp_illegitimate_government
 		hidden_effect = {
 			drop_cosmetic_tag = yes
-			if = {
-				limit = {
-					has_completed_focus = GER_beer_hall_putsch
-				}
-				set_party_name = {
-					ideology = fascism
-					long_name = GER_fascism_party_NSDAP_long
-					name = GER_fascism_party_NSDAP
-				}
-				promote_character = GER_adolf_hitler
-				else_if = {
-					limit = { has_completed_focus = GER_deutsche_arbeiterpartei }
-					set_party_name = {
-						ideology = fascism
-						long_name = GER_fascism_party_DAP_long
-						name = GER_fascism_party_DAP
-					}
-					promote_character = GER_adolf_hitler
-					else = {
-						set_party_name = {
-							ideology = fascism
-							long_name = GER_fascism_party_volkisch
-							name = GER_fascism_party_volkisch
-						}
-					}
-				}				
-			}			
 		}
 		ai_chance = {
 			base = 100
