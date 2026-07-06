@@ -121,3 +121,36 @@ country_event = {
 		name = "To the Qing Dynasty!"
 	}
 }
+
+# QING CHINA RAIDS OUR STOCKPILES!
+country_event = {
+	id = QIN.5
+	title = "Qing China Raids Our Equipment Stockpiles!"
+	desc = QIN.5.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Curse them"
+		add_to_stockpile = {
+			type = infantry_equipment
+			amount = 7500
+			producer = ENG
+		}
+	}
+}
+
+# QING CHINA DECLARES WAR ON US!
+country_event = {
+	id = QIN.6
+	title = "Qing China Declares War!"
+	desc = QIN.6.d
+
+	is_triggered_only = yes
+	fire_only_once = yea
+
+	option = {
+		name = "Are they stupid?"
+	}
+}
