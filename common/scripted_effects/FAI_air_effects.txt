@@ -18,11 +18,9 @@ FAI_green_air_update = {
 		if = {
 			limit = {
 				NOT = { has_country_flag = FAI_green_air }
-				if = {
-					OR = {
-						check_variable = { FAI_friendly_air > 0 }
-						check_variable = { FAI_friendly_air = 0 }
-					}
+				OR = {
+					check_variable = { FAI_friendly_air > 0 }
+					check_variable = { FAI_friendly_air = 0 }
 				}
 			}
 			set_country_flag = FAI_green_air
@@ -30,9 +28,7 @@ FAI_green_air_update = {
 		else_if = {
 			limit = {
 				has_country_flag = FAI_green_air
-				if = {
-					check_variable = { FAI_friendly_air < 0 }
-				}
+				check_variable = { FAI_friendly_air < 0 }
 			}
 			clr_country_flag = FAI_green_air
 		}
