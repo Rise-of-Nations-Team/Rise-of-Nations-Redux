@@ -1,0 +1,23 @@
+on_actions = {
+	
+	on_peaceconference_started = {
+
+		# Second Boer War
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = ENG
+					}
+					FROM = {
+						original_tag = SRE
+					}
+				}
+				ROOT = {
+					country_event = DNC_South_Africa.1
+				}
+			}
+		}
+
+	}
+}
