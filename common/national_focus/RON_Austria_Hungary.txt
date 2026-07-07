@@ -2629,6 +2629,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AUHDNC_holy_roman_empire
 		}
+		mutually_exclusive = {
+			focus = AUHDNC_austriahungary
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_austrian_empire
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -2678,6 +2684,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AUHDNC_deutscher_bund
 		}
+		mutually_exclusive = {
+			focus = AUHDNC_austriahungary
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_austrian_empire
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -2724,6 +2736,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AUHDNC_erfurt_union
 		}
+		mutually_exclusive = {
+			focus = AUHDNC_austriahungary
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_austrian_empire
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -2767,7 +2785,18 @@ focus_tree = {
 		focus = AUHDNC_austrians_are_better_germans
 		focus = AUHDNC_a_loose_union
 		}
-		mutually_exclusive = { focus = AUHDNC_austrian_empire }
+		mutually_exclusive = {
+			focus = AUHDNC_austrian_empire
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_erfurt_union
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_holy_roman_empire
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_deutscher_bund
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -3239,7 +3268,18 @@ focus_tree = {
 		focus = AUHDNC_austrians_are_better_germans
 		focus = AUHDNC_a_loose_union
 		}
-		mutually_exclusive = { focus = AUHDNC_austriahungary }
+		mutually_exclusive = {
+			focus = AUHDNC_austriahungary
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_erfurt_union
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_holy_roman_empire
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_deutscher_bund
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -4158,7 +4198,7 @@ focus_tree = {
 	#Focus for Fate Of France
 	focus = {
 		id = AUHDNC_fate_of_france
-		icon = attack_france
+		icon = GFX_focus_attack_france
 		x = 64
 		y = 10
 		cost = 10
@@ -4803,7 +4843,7 @@ focus_tree = {
 	#Focus for No Need For British Approval
 	focus = {
 		id = AUHDNC_no_need_for_british_approval
-		icon = attack_britain
+		icon = GFX_focus_attack_britain
 		x = 52
 		y = 13
 		cost = 10
@@ -5381,7 +5421,7 @@ focus_tree = {
 	#Focus for Condemn French Foreign Policy
 	focus = {
 		id = AUHDNC_condemn_french_foreign_policy
-		icon = attack_france
+		icon = GFX_focus_attack_france
 		x = 6
 		y = 28
 		cost = 10
@@ -6288,7 +6328,7 @@ focus_tree = {
 	#Focus for Oppose French Ambitions
 	focus = {
 		id = AUHDNC_oppose_french_ambitions
-		icon = attack_france
+		icon = GFX_focus_attack_france
 		x = 35
 		y = 27
 		cost = 10

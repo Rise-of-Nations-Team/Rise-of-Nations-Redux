@@ -259,6 +259,15 @@ characters={
 			defense_skill=6
 			planning_skill=4
 			logistics_skill=2
+			visible = {
+				NOT = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+				date < 1946.1.1
+			}
 		}
 	}
 	GER_karl_von_bulow={
@@ -275,6 +284,9 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
+			visible = {
+				date < 1922.1.1
+			}
 		}
 	}
 	GER_paul_von_hindenburg={
@@ -299,6 +311,9 @@ characters={
 			defense_skill=5
 			planning_skill=5
 			logistics_skill=4
+			visible = {
+				date < 1934.1.1
+			}
 		}
 	}
 	GER_remus_von_woyrsch={
@@ -315,6 +330,9 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			visible = {
+				date < 1921.1.1
+			}			
 		}
 	}
 	GER_albrecht_duke_of_wurttemberg={
@@ -331,6 +349,13 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			visible = {
+				date < 1919.1.1
+				NOT = {
+					has_government = communism
+					has_government = fascism
+				}
+			}			
 		}
 	}
 	GER_erich_von_falkenhayn={
@@ -350,6 +375,9 @@ characters={
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
+			visible = {
+				date < 1923.1.1
+			}				
 		}
 	}
 	GER_felix_graf_von_bothmer={
@@ -366,6 +394,9 @@ characters={
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=2
+			visible = {
+				date < 1919.1.1
+			}			
 		}
 	}
 	GER_helmuth_von_moltke={
@@ -382,6 +413,9 @@ characters={
 			defense_skill=6
 			planning_skill=5
 			logistics_skill=5
+			visible = {
+				date < 1917.1.1
+			}			
 		}
 	}
 	GER_hermann_von_eichorn={
@@ -398,6 +432,9 @@ characters={
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
+			visible = {
+				date < 1919.1.1
+			}			
 		}
 	}
 	GER_alexander_von_kluck={
@@ -414,6 +451,9 @@ characters={
 			defense_skill=5
 			planning_skill=3
 			logistics_skill=3
+			visible = {
+				date < 1919.1.1
+			}			
 		}
 	}
 	GER_friedrich_sixt_von_armin={
@@ -431,6 +471,9 @@ characters={
 			planning_skill=5
 			logistics_skill=4
 			legacy_id=-1
+			visible = {
+				date < 1919.1.1
+			}				
 		}
 	}
 	GER_ferdinand_von_quast={
@@ -447,6 +490,9 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=2
+			visible = {
+				date < 1919.1.1
+			}				
 		}
 	}
 	GER_hermann_von_francois={
@@ -463,6 +509,9 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=2
+			visible = {
+				date < 1919.1.1
+			}				
 		}
 	}
 	GER_paul_von_lettow_vorbeck={
@@ -479,6 +528,12 @@ characters={
 			defense_skill=4
 			planning_skill=6
 			logistics_skill=5
+			visible = {
+				date < 1949.1.1
+				NOT = {
+					has_government = fascism
+				}
+			}			
 		}
 	}
 	GER_karl_von_einem={
@@ -495,6 +550,9 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
+			visible = {
+				date < 1919.1.1
+			}			
 		}
 	}
 	GER_prince_leopold_of_bavaria={
@@ -511,6 +569,9 @@ characters={
 			defense_skill=5
 			planning_skill=5
 			logistics_skill=4
+			visible = {
+				date < 1925.1.1
+			}			
 		}
 	}
 
@@ -531,6 +592,9 @@ characters={
 			visible = {
 				date > 1918.1.1						
 				date < 1948.1.1						
+				NOT = { 
+					has_government = communism
+				}
 			}
 		}
 	}
@@ -540,8 +604,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_rupprecht.dds"
-			}
-			army={
 				large="gfx/leaders/GER/WW1/Portrait_Germany_Prince_Rupprecht.dds"
 			}
 		}
@@ -552,6 +614,15 @@ characters={
 			defense_skill=3
 			planning_skill=5
 			logistics_skill=5
+			visible = {
+				date < 1955.1.1
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = fascism						
+					}
+				}
+			}				
 		}
 	}
 	GER_fritz_von_below={
@@ -562,15 +633,15 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={
-				old_guard
-				imperial_german_army
-			}
+			traits={ old_guard imperial_german_army }
 			skill=3
 			attack_skill=2
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
+			visible = {
+				date < 1919.1.1
+			}
 		}
 	}
 	GER_alfred_von_tirpitz={
@@ -581,17 +652,15 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={
-				old_guard_navy
-				imperial_german_navy
-				superior_tactician
-				ironside
-			}
+			traits={ old_guard_navy imperial_german_navy superior_tactician ironside }
 			skill=6
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			attack_skill=5
+			defense_skill=3
+			maneuvering_skill=4
+			coordination_skill=2
+			visible = {
+				date < 1930.1.1
+			}			
 		}
 	}
 	GER_franz_von_hipper={
@@ -602,17 +671,18 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={
-				imperial_german_navy
-				blockade_runner
-				spotter
-				ironside
-			}
+			traits={ imperial_german_navy blockade_runner spotter ironside }
 			skill=6
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=5
+			coordination_skill=3
+			visible = {
+				date < 1919.1.1
+				NOT = {
+					has_government = communism
+				}
+			}				
 		}
 	}
 	GER_hugo_von_pohl={
@@ -623,16 +693,15 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={
-				imperial_german_navy
-				seawolf
-				blockade_runner
-			}
+			traits={ imperial_german_navy seawolf blockade_runner }
 			skill=4
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=4
 			coordination_skill=1
+			visible = {
+				date < 1917.1.1
+			}			
 		}
 	}
 	GER_wilhelm_souchon={
@@ -643,16 +712,18 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={
-				imperial_german_navy
-				blockade_runner
-				ironside
-			}
+			traits={ imperial_german_navy blockade_runner ironside }
 			skill=4
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=3
+			visible = {
+				date < 1946.1.1
+				NOT = {
+					has_government = fascism
+				}
+			}			
 		}
 	}
 	GER_maximilian_von_spee={
@@ -663,16 +734,15 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={
-				imperial_german_navy
-				superior_tactician
-				spotter
-			}
+			traits={ imperial_german_navy superior_tactician spotter }
 			skill=3
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=2
 			coordination_skill=1
+			visible = {
+				date < 1915.1.1
+			}			
 		}
 	}
 	GER_adolf_von_trotha={
@@ -683,16 +753,18 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={
-				imperial_german_navy
-				seawolf
-				ironside
-			}
+			traits={ imperial_german_navy seawolf ironside }
 			skill=4
 			attack_skill=1
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
+			visible = {
+				date < 1919.1.1
+				NOT = {
+					has_government = communism
+				}
+			}			
 		}
 	}
 	GER_ludwig_von_reuter={
@@ -709,6 +781,9 @@ characters={
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
+			visible = {
+				date < 1915.1.1
+			}
 		}
 	}
 	GER_helge_krahn={
@@ -743,8 +818,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ernst_thalmann"
-			}
-			civilian={
 				large="gfx/leaders/GER/INT/Portrait_Germany_Ernst_Thalmann.dds"
 			}
 		}
@@ -759,7 +832,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -845,7 +918,7 @@ characters={
 				GER_hitler_T5
 			}
 			#expire="1945.4.30.1"
-			expire="2060.1.1.1" #changed due to German WW2 Win Cleanup
+			expire="1964.1.1.1" #If he somehow survives and wins, he should probably die in the 1960's
 		}
 	}
 	GER_eva_braun = {
@@ -974,8 +1047,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_heinrich_himmler.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Heinrich_Himmler.dds"
 			}
 		}
@@ -994,8 +1065,9 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				date > 1933.1.1
+				date > 1929.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 		advisor = {
@@ -1005,7 +1077,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1929.1.1
 				date < 1949.1.1
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
@@ -1042,8 +1114,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gerd_von_rundstedt.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
 			}
 		}
@@ -1056,7 +1126,7 @@ characters={
 			logistics_skill=2
 			#legacy_id=1
 			visible = {
-				date > 1933.1.1
+				date > 1914.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1067,7 +1137,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1914.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1089,7 +1159,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1914.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1114,8 +1184,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gunther_von_kluge.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gunther_von_Kluge.dds"
 			}
 		}
@@ -1128,7 +1196,7 @@ characters={
 			logistics_skill=3
 			legacy_id=2
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1138,8 +1206,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_friedrich_paulus.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Paulus.dds"
 			}
 		}
@@ -1152,8 +1218,11 @@ characters={
 			logistics_skill=1
 			legacy_id=3
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
+				date > 1925.1.1
+				date < 1956.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 	}
@@ -1162,8 +1231,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_rommel.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
 			}
 		}
@@ -1176,8 +1243,11 @@ characters={
 			logistics_skill=3
 			legacy_id=4
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
+				NOT = {
+					has_country_flag = rommel_dead
+				}				
 			}
 		}
 		advisor = {
@@ -1187,7 +1257,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 				NOT = {
 					has_country_flag = rommel_dead
@@ -1222,19 +1292,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erich_von_manstein.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_von_Manstein.dds"
 			}
 		}
 		corps_commander={
-			traits={
-				brilliant_strategist
-				armor_officer
-				heer_trait
-				trickster
-				trait_engineer
-			}
+			traits={ brilliant_strategist armor_officer	heer_trait trickster trait_engineer }
 			skill=4
 			attack_skill=2
 			defense_skill=4
@@ -1242,7 +1304,7 @@ characters={
 			logistics_skill=4
 			legacy_id=5
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1253,7 +1315,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1275,7 +1337,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1299,19 +1361,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_heinz_guderian.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Heinz_Guderian.dds"
 			}
 		}
 		corps_commander={
-			traits={
-				brilliant_strategist
-				career_officer
-				armor_officer
-				heer_trait
-				trickster panzer_leader
-			}
+			traits={ brilliant_strategist career_officer armor_officer heer_trait trickster panzer_leader }
 			skill=4
 			attack_skill=2
 			defense_skill=4
@@ -1319,7 +1373,7 @@ characters={
 			logistics_skill=3
 			legacy_id=6
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1330,7 +1384,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1353,7 +1407,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1372,17 +1426,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_list.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_List.dds"
 			}
 		}
 		corps_commander={
-			traits={
-				inflexible_strategist
-				career_officer
-				heer_trait
-			}
+			traits={ inflexible_strategist career_officer heer_trait }
 			skill=2
 			attack_skill=2
 			defense_skill=2
@@ -1390,7 +1438,7 @@ characters={
 			logistics_skill=2
 			legacy_id=7
 			visible = {
-				date > 1933.1.1
+				date > 1926.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1400,17 +1448,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_ewald_von_kleist.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ewald_von_Kleist.dds"
 			}
 		}
 		corps_commander={
-			traits={
-				trait_cautious
-				armor_officer
-				heer_trait
-			}
+			traits={ trait_cautious	armor_officer heer_trait }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -1432,19 +1474,18 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={
-				trait_cautious
-				harsh_leader
-				heer_trait
-			}
+			traits={ trait_cautious harsh_leader heer_trait }
 			skill=4
 			attack_skill=4
 			defense_skill=3
 			planning_skill=4
 			logistics_skill=2
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 		advisor={
@@ -1457,7 +1498,7 @@ characters={
 				military_monarchist
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1473,8 +1514,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_model.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Model.dds"
 			}
 		}
@@ -1487,7 +1526,7 @@ characters={
 			logistics_skill=2
 			legacy_id=10
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1497,8 +1536,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_maximilian_von_weichs.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Maximilian_von_Weichs.dds"
 			}
 		}
@@ -1511,7 +1548,7 @@ characters={
 			logistics_skill=4
 			legacy_id=11
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1521,8 +1558,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_ritter_von_leeb.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Ritter_von_Leeb.dds"
 			}
 		}
@@ -1535,7 +1570,7 @@ characters={
 			logistics_skill=2
 			legacy_id=13
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1545,8 +1580,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_georg_von_reinhardt.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_von_Reinhardt.dds"
 			}
 		}
@@ -1559,7 +1592,7 @@ characters={
 			logistics_skill=3
 			legacy_id=14
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1569,8 +1602,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_kruger.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Kruger.dds"
 			}
 		}
@@ -1593,8 +1624,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_kurt_student.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
 			}
 		}
@@ -1636,8 +1665,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_von_witzleben.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erwin_von_Witzleben.dds"
 			}
 		}
@@ -1650,7 +1677,7 @@ characters={
 			logistics_skill=4
 			legacy_id=17
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1660,8 +1687,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_herman_hoth.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Herman_Hoth.dds"
 			}
 		}
@@ -1684,8 +1709,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_johannes_blaskowitz.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Johannes_Blaskowitz.dds"
 			}
 		}
@@ -1698,7 +1721,7 @@ characters={
 			logistics_skill=2
 			legacy_id=19
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1708,9 +1731,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_paul_hausser.dds"
-			}
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Paul_Hausser.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Paul_Hausser_INT.dds"
 			}
 		}
 		corps_commander={
@@ -1722,7 +1743,7 @@ characters={
 			logistics_skill=3
 			legacy_id=20
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1733,7 +1754,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
@@ -1758,8 +1779,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_friedrich_schulz.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Schulz.dds"
 			}
 		}
@@ -1772,18 +1791,16 @@ characters={
 			logistics_skill=3
 			legacy_id=21
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
 	}
-	GER_georg_von_küchler={
-		name=GER_georg_von_küchler
+	GER_georg_von_kuchler={
+		name=GER_georg_von_kuchler
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_georg_von_kuchler.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_von_Kuchler.dds"
 			}
 		}
@@ -1796,7 +1813,7 @@ characters={
 			logistics_skill=4
 			legacy_id=22
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1806,8 +1823,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_alfred_jodl.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Alfred_Jodl.dds"
 			}
 		}
@@ -1830,8 +1845,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_josef_dietrich.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds"
 			}
 		}
@@ -1854,8 +1867,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_hasso_von_manteuffel.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hasso_von_Manteuffel.dds"
 			}
 		}
@@ -1868,7 +1879,7 @@ characters={
 			logistics_skill=3
 			legacy_id=25
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1878,18 +1889,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_albert_kesselring.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Albert_Kesselring.dds"
 			}
 		}
 		corps_commander={
-			traits={
-				brilliant_strategist
-				trait_cautious
-				war_hero
-				luftwaffe_trait
-			}
+			traits={ brilliant_strategist trait_cautious war_hero luftwaffe_trait }
 			skill=4
 			attack_skill=2
 			defense_skill=4
@@ -1897,7 +1901,7 @@ characters={
 			logistics_skill=4
 			legacy_id=32
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1908,7 +1912,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -1926,8 +1930,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gotthard_heinrici.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gotthard_Heinrici.dds"
 			}
 		}
@@ -1940,7 +1942,7 @@ characters={
 			logistics_skill=3
 			legacy_id=33
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 		}
@@ -1950,8 +1952,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_ernst-eberhard_hell.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ernst-Eberhard_Hell.dds"
 			}
 		}
@@ -2011,7 +2011,7 @@ characters={
 			coordination_skill=1
 			legacy_id=0
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2022,7 +2022,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -2040,17 +2040,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erich_raeder.dds"
-			}
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Erich_Raeder.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Erich_Raeder_INT.dds"
 			}
 		}
 		navy_leader={
-			traits={
-				battleship_adherent
-				naval_lineage
-				kriegsmarine_trait
-			}
+			traits={ battleship_adherent naval_lineage kriegsmarine_trait }
 			skill=4
 			attack_skill=3
 			defense_skill=4
@@ -2058,7 +2052,7 @@ characters={
 			coordination_skill=1
 			legacy_id=0
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2069,7 +2063,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -2087,17 +2081,11 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_alfred_saalwachter.dds"
-			}
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Alfred_Saalwachter.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Alfred_Saalwachter_INT.dds"
 			}
 		}
 		navy_leader={
-			traits={
-				old_guard_navy
-				bold
-				kriegsmarine_trait
-			}
+			traits={ old_guard_navy bold kriegsmarine_trait }
 			skill=4
 			attack_skill=4
 			defense_skill=2
@@ -2105,7 +2093,7 @@ characters={
 			coordination_skill=1
 			legacy_id=0
 			visible = {
-				date > 1933.1.1
+				date > 1920.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2117,7 +2105,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1920.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -2139,9 +2127,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_hermann_boehm.dds"
-			}
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Hermann_Boehm_INT.dds"
 			}
 		}
 		navy_leader={
@@ -2152,7 +2138,7 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			visible = {
-				date > 1933.1.1
+				date > 1920.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2162,8 +2148,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_marschall.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
 			}
 		}
@@ -2185,25 +2169,18 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gunter_lutjens.dds"
-			}
-			army={
-				large="gfx/leaders/GER/Portrait_Germany_Gunter_Lutjens.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Gunter_Lutjens_INT.dds"
 			}
 		}
 		navy_leader={
-			traits={
-				gentlemanly
-				navy_career_officer
-				kriegsmarine_trait
-				superior_tactician
-			}
+			traits={ gentlemanly navy_career_officer kriegsmarine_trait superior_tactician }
 			skill=3
 			attack_skill=4
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2214,7 +2191,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -2230,11 +2207,8 @@ characters={
 	GER_erich_hoepner={
 		name=GER_erich_hoepner
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Erich_Hoepner.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Erich_Hoepner_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2246,7 +2220,7 @@ characters={
 			logistics_skill=2
 			legacy_id=36
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2256,9 +2230,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_ritter_von_thoma.dds"
-			}
-			army={
-				large="gfx/leaders/GER/portrait_ger_wilhelm_ritter_von_thoma.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Wilhelm_Ritter_von_Thoma_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2270,7 +2242,7 @@ characters={
 			logistics_skill=1
 			legacy_id=37
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2280,8 +2252,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_franz_halder.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Franz_Halder.dds"
 			}
 		}
@@ -2294,7 +2264,7 @@ characters={
 			logistics_skill=3
 			legacy_id=38
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2305,7 +2275,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -2321,9 +2291,6 @@ characters={
 	GER_hans_von_obstfelder={
 		name=GER_hans_von_obstfelder
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_von_Obstfelder.dds"
 			}
@@ -2345,9 +2312,6 @@ characters={
 	GER_josef_harpe={
 		name=GER_josef_harpe
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Josef_Harpe.dds"
 			}
@@ -2361,7 +2325,7 @@ characters={
 			logistics_skill=3
 			legacy_id=40
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2369,9 +2333,6 @@ characters={
 	GER_georg_keppler={
 		name=GER_georg_keppler
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_Keppler.dds"
 			}
@@ -2393,9 +2354,6 @@ characters={
 	GER_wilhelm_bittrich={
 		name=GER_wilhelm_bittrich
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Bittrich.dds"
 			}
@@ -2419,8 +2377,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_walther_von_brauchitsch.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walther_von_Brauchitsch.dds"
 			}
 		}
@@ -2433,7 +2389,7 @@ characters={
 			logistics_skill=2
 			legacy_id=44
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2444,7 +2400,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -2467,9 +2423,6 @@ characters={
 	GER_rudolf_schmidt={
 		name=GER_rudolf_schmidt
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Rudolf_Schmidt.dds"
 			}
@@ -2483,7 +2436,7 @@ characters={
 			logistics_skill=3
 			legacy_id=45
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2491,11 +2444,8 @@ characters={
 	GER_friedrich_dollmann={
 		name=GER_friedrich_dollmann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Dollmann.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Friedrich_Dollmann_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2507,7 +2457,7 @@ characters={
 			logistics_skill=2
 			legacy_id=46
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2515,9 +2465,6 @@ characters={
 	GER_leo_geyr_von_schweppenburg={
 		name=GER_leo_geyr_von_schweppenburg
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Leo_Geyr_von_Schweppenburg.dds"
 			}
@@ -2531,7 +2478,7 @@ characters={
 			logistics_skill=3
 			legacy_id=47
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2539,11 +2486,8 @@ characters={
 	GER_nikolaus_von_falkenhorst={
 		name=GER_nikolaus_von_falkenhorst
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Nikolaus_von_Falkenhorst.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Nikolaus_von_Falkenhorst_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2555,7 +2499,7 @@ characters={
 			logistics_skill=3
 			legacy_id=48
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2563,11 +2507,8 @@ characters={
 	GER_hansvalentin_hube={
 		name=GER_hansvalentin_hube
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Hans-Valentin_Hube.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Hans_Valentin_Hube_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2579,7 +2520,7 @@ characters={
 			logistics_skill=3
 			legacy_id=49
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2587,15 +2528,12 @@ characters={
 	GER_erhard_raus={
 		name=GER_erhard_raus
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erhard_Raus.dds"
 			}
 		}
 		corps_commander={
-			traits={ heer_trait panzer_leader }
+			traits={ heer_trait armor_officer panzer_leader trickster }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -2605,17 +2543,18 @@ characters={
 			visible = {
 				date > 1933.1.1
 				date < 1949.1.1
+				NOT = {
+					tag = AUS
+					exists = yes
+				}
 			}
 		}
 	}
 	GER_adolf_strauß={
 		name=GER_adolf_strauß
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Adolf_Straus.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Adolf_Strauss_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2627,7 +2566,7 @@ characters={
 			logistics_skill=1
 			legacy_id=51
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2635,11 +2574,8 @@ characters={
 	GER_eduard_dietl={
 		name=GER_eduard_dietl
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Eduard_Dietl.dds"
+				large="gfx/leaders/GER/INT/Portrait_Germany_Eduard_Dietl_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2651,7 +2587,7 @@ characters={
 			logistics_skill=3
 			legacy_id=52
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2659,9 +2595,6 @@ characters={
 	GER_artur_martin_phleps={
 		name=GER_artur_martin_phleps
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Artur_Martin_Phleps.dds"
 			}
@@ -2683,11 +2616,8 @@ characters={
 	GER_alfred_bernhard_wünnenberg={
 		name=GER_alfred_bernhard_wünnenberg
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Alfred_Bernhard_Wernnenberg.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Alfred_Bernhard_Wernnenberg_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2699,7 +2629,7 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				date > 1933.1.1
+				date > 1921.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2707,9 +2637,6 @@ characters={
 	GER_helmuth_weidling={
 		name=GER_helmuth_weidling
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Helmuth_Weidling.dds"
 			}
@@ -2723,7 +2650,7 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2731,9 +2658,6 @@ characters={
 	GER_walther_nehring={
 		name=GER_walther_nehring
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walther_Nehring.dds"
 			}
@@ -2747,7 +2671,7 @@ characters={
 			logistics_skill=4
 			legacy_id=59
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2755,9 +2679,6 @@ characters={
 	GER_walther_lucht={
 		name=GER_walther_lucht
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walther_Lucht.dds"
 			}
@@ -2771,7 +2692,7 @@ characters={
 			logistics_skill=1
 			legacy_id=60
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2779,11 +2700,8 @@ characters={
 	GER_curt_haase={
 		name=GER_curt_haase
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Curt_Haase.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Curt_Haase_INT.dds"
 			}
 		}
 		corps_commander={
@@ -2795,7 +2713,7 @@ characters={
 			logistics_skill=2
 			legacy_id=61
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2803,9 +2721,6 @@ characters={
 	GER_hermannbernhard_ramcke={
 		name=GER_hermannbernhard_ramcke
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hermann-Bernhard_Ramcke.dds"
 			}
@@ -2829,8 +2744,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_willi_reschke.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"
 			}
 		}
@@ -2838,12 +2751,12 @@ characters={
 			traits={ trait_cautious infantry_officer luftwaffe_trait trait_engineer }
 			skill=3
 			attack_skill=1
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=4
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
 			legacy_id=253
 			visible = {
-				date > 1933.1.1
+				date > 1940.1.1
 				date < 1949.1.1
 			}
 		}
@@ -2854,8 +2767,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wolfram_freiherr_von_richthofen.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
 			}
 		}
@@ -2878,8 +2789,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erhard_milch.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erhard_Milch.dds"
 			}
 		}
@@ -2988,9 +2897,6 @@ characters={
 	GER_franz_böhme={
 		name=GER_franz_böhme
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Franz_Bohme.dds"
 			}
@@ -3006,15 +2912,16 @@ characters={
 			visible = {
 				date > 1933.1.1
 				date < 1949.1.1
+				NOT = {
+					tag = AUS
+					exists = yes
+				}				
 			}
 		}
 	}
 	GER_walther_wenck={
 		name=GER_walther_wenck
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Wenck.dds"
 			}
@@ -3036,9 +2943,6 @@ characters={
 	GER_hermann_balck={
 		name=GER_hermann_balck
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_Otto_Hermann_Balck.dds"
 			}
@@ -3052,7 +2956,7 @@ characters={
 			logistics_skill=4
 			legacy_id=68
 			visible = {
-				date > 1933.1.1
+				date > 1929.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3060,9 +2964,6 @@ characters={
 	GER_johannes_frießner={
 		name=GER_johannes_frießner
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Johannes_Friessner.dds"
 			}
@@ -3076,7 +2977,7 @@ characters={
 			logistics_skill=12
 			legacy_id=69
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3084,9 +2985,6 @@ characters={
 	GER_ernst_wilhelm_busch={
 		name=GER_ernst_wilhelm_busch
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ernst_Wilhelm_Bernhard_Busch.dds"
 			}
@@ -3108,11 +3006,8 @@ characters={
 	GER_georg_lindemann={
 		name=GER_georg_lindemann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Georg_Lindemann.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Georg_Lindemann_INT.dds"
 			}
 		}
 		corps_commander={
@@ -3124,7 +3019,7 @@ characters={
 			logistics_skill=3
 			legacy_id=71
 			visible = {
-				date > 1933.1.1
+				date > 1926.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3132,9 +3027,6 @@ characters={
 	GER_erich_straube={
 		name=GER_erich_straube
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Straube.dds"
 			}
@@ -3148,7 +3040,7 @@ characters={
 			logistics_skill=2
 			legacy_id=72
 			visible = {
-				date > 1933.1.1
+				date > 1929.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3156,9 +3048,6 @@ characters={
 	GER_theodor_eicke={
 		name=GER_theodor_eicke
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Theodor_Eicke.dds"
 			}
@@ -3172,7 +3061,7 @@ characters={
 			logistics_skill=1
 			legacy_id=73
 			visible = {
-				date > 1933.1.1
+				date > 1934.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3180,9 +3069,6 @@ characters={
 	GER_hans_hermann_fegelein={
 		name=GER_hans_hermann_fegelein
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Georg_Otto_Hermann_Fegelein.dds"
 			}
@@ -3196,7 +3082,7 @@ characters={
 			logistics_skill=1
 			legacy_id=74
 			visible = {
-				date > 1933.1.1
+				date > 1934.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3204,9 +3090,6 @@ characters={
 	GER_kurt_meyer={
 		name=GER_kurt_meyer
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Meyer.dds"
 			}
@@ -3220,7 +3103,7 @@ characters={
 			logistics_skill=2
 			#legacy_id=75
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3228,9 +3111,6 @@ characters={
 	GER_herbert_otto_gille={
 		name=GER_herbert_otto_gille
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Herbert_Otto_Wilhelm_Hermann_Gille.dds"
 			}
@@ -3244,7 +3124,7 @@ characters={
 			logistics_skill=1
 			legacy_id=76
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3252,9 +3132,6 @@ characters={
 	GER_rudolf_lehmann={
 		name=GER_rudolf_lehmann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Rudolf_Lehmann.dds"
 			}
@@ -3268,7 +3145,7 @@ characters={
 			logistics_skill=2
 			#legacy_id=77
 			visible = {
-				date > 1933.1.1
+				date > 1936.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3276,11 +3153,8 @@ characters={
 	GER_hansjürgen_von_arnim={
 		name=GER_hansjürgen_von_arnim
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
-				large="gfx/leaders/GER/Portrait_Germany_Hans-Jurgen_Theodor_von_Arnim.dds"
+				large="gfx/leaders/GER/INT/Portrait_GER_Hans_Jurgen_Theodor_von_Arnim_INT.dds"
 			}
 		}
 		corps_commander={
@@ -3292,7 +3166,7 @@ characters={
 			logistics_skill=3
 			legacy_id=78
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3300,9 +3174,6 @@ characters={
 	GER_fritz_bayerlein={
 		name=GER_fritz_bayerlein
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Fritz_Bayerlein.dds"
 			}
@@ -3324,9 +3195,6 @@ characters={
 	GER_hans_von_funck={
 		name=GER_hans_von_funck
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_von_Funck.dds"
 			}
@@ -3340,7 +3208,7 @@ characters={
 			logistics_skill=2
 			legacy_id=80
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3348,9 +3216,6 @@ characters={
 	GER_kurt_von_tippelskirch={
 		name=GER_kurt_von_tippelskirch
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Oskar_Wilhelm_von_Tippelskirch.dds"
 			}
@@ -3364,7 +3229,7 @@ characters={
 			logistics_skill=3
 			legacy_id=81
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3372,9 +3237,6 @@ characters={
 	GER_erich_buschenhagen={
 		name=GER_erich_buschenhagen
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Buschenhagen.dds"
 			}
@@ -3388,7 +3250,7 @@ characters={
 			logistics_skill=2
 			legacy_id=82
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3396,9 +3258,6 @@ characters={
 	GER_hermann_recknagel={
 		name=GER_hermann_recknagel
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Recknagel.dds"
 			}
@@ -3420,9 +3279,6 @@ characters={
 	GER_hans_eberhard_von_salmuth={
 		name=GER_hans_eberhard_von_salmuth
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Eberhard_Kurt_von_Salmuth.dds"
 			}
@@ -3444,9 +3300,6 @@ characters={
 	GER_erich_fellgiebel={
 		name=GER_erich_fellgiebel
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Fellgiebel.dds"
 			}
@@ -3468,9 +3321,6 @@ characters={
 	GER_hans_krebs={
 		name=GER_hans_krebs
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Krebs.dds"
 			}
@@ -3484,7 +3334,7 @@ characters={
 			logistics_skill=1
 			legacy_id=88
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3502,12 +3352,7 @@ characters={
 			}			
 		}
 		corps_commander={
-			traits={
-				trait_reckless
-				politically_connected
-				heer_trait
-				commando
-			}
+			traits={ trait_reckless politically_connected heer_trait commando }
 			skill=3
 			attack_skill=2
 			defense_skill=1
@@ -3554,9 +3399,6 @@ characters={
 	GER_karl_friedrich_wolff={
 		name=GER_karl_friedrich_wolff
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Karl_Friedrich_Otto_Wolff.dds"
 			}
@@ -3578,9 +3420,6 @@ characters={
 	GER_werner_kempf={
 		name=GER_werner_kempf
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Werner_Kempf.dds"
 			}
@@ -3602,9 +3441,6 @@ characters={
 	GER_carl_hilpert={
 		name=GER_carl_hilpert
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Carl_Hilpert.dds"
 			}
@@ -3626,9 +3462,6 @@ characters={
 	GER_kurtjürgen_von_lützow={
 		name=GER_kurtjürgen_von_lützow
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt-Jurgen_Freiherr_von_Lutzow.dds"
 			}
@@ -3650,9 +3483,6 @@ characters={
 	GER_otto_wöhler={
 		name=GER_otto_wöhler
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Otto_Woehler.dds"
 			}
@@ -3890,9 +3720,6 @@ characters={
 	GER_theodor_wisch={
 		name=GER_theodor_wisch
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Theodor_Wisch.dds"
 			}
@@ -3914,9 +3741,6 @@ characters={
 	GER_gustav_lombard={
 		name=GER_gustav_lombard
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gustav_Lombard.dds"
 			}
@@ -3930,7 +3754,7 @@ characters={
 			logistics_skill=1
 			legacy_id=106
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3938,9 +3762,6 @@ characters={
 	GER_heinz_harmel={
 		name=GER_heinz_harmel
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Heinz_Harmel.dds"
 			}
@@ -3954,7 +3775,7 @@ characters={
 			logistics_skill=3
 			legacy_id=107
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -3984,9 +3805,6 @@ characters={
 	GER_wilhelm_stemmermann={
 		name=GER_wilhelm_stemmermann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Stemmermann.dds"
 			}
@@ -4000,7 +3818,7 @@ characters={
 			logistics_skill=2
 			legacy_id=109
 			visible = {
-				date > 1933.1.1
+				date > 1936.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4008,9 +3826,6 @@ characters={
 	GER_wolfgang_von_kluge={
 		name=GER_wolfgang_von_kluge
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wolfgang_von_Kluge.dds"
 			}
@@ -4024,7 +3839,7 @@ characters={
 			logistics_skill=2
 			legacy_id=110
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4032,9 +3847,6 @@ characters={
 	GER_wolfgünther_trierenberg={
 		name=GER_wolfgünther_trierenberg
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wolf-Gunther_Trierenberg.dds"
 			}
@@ -4056,9 +3868,6 @@ characters={
 	GER_curt_liebmann={
 		name=GER_curt_liebmann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Curt_Liebmann.dds"
 			}
@@ -4072,7 +3881,7 @@ characters={
 			logistics_skill=2
 			legacy_id=112
 			visible = {
-				date > 1933.1.1
+				date > 1922.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4080,9 +3889,6 @@ characters={
 	GER_johannes_block={
 		name=GER_johannes_block
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Johannes_Block.dds"
 			}
@@ -4096,7 +3902,7 @@ characters={
 			logistics_skill=2
 			legacy_id=113
 			visible = {
-				date > 1933.1.1
+				date > 1938.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4104,9 +3910,6 @@ characters={
 	GER_gustav_höhne={
 		name=GER_gustav_höhne
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gustav_Hoehne.dds"
 			}
@@ -4120,7 +3923,7 @@ characters={
 			logistics_skill=3
 			legacy_id=114
 			visible = {
-				date > 1933.1.1
+				date > 1938.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4128,9 +3931,6 @@ characters={
 	GER_hans_jordan={
 		name=GER_hans_jordan
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Jordan.dds"
 			}
@@ -4144,7 +3944,7 @@ characters={
 			logistics_skill=2
 			legacy_id=115
 			visible = {
-				date > 1933.1.1
+				date > 1937.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4152,9 +3952,6 @@ characters={
 	GER_walterotto_weiß={
 		name=GER_walterotto_weiß
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter-Otto_Weiss.dds"
 			}
@@ -4168,7 +3965,7 @@ characters={
 			logistics_skill=1
 			legacy_id=116
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4176,9 +3973,6 @@ characters={
 	GER_hans_gustav_felber={
 		name=GER_hans_gustav_felber
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Gustav_Felber.dds"
 			}
@@ -4192,7 +3986,7 @@ characters={
 			logistics_skill=3
 			legacy_id=117
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4200,9 +3994,6 @@ characters={
 	GER_walter_heitz={
 		name=GER_walter_heitz
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Heitz.dds"
 			}
@@ -4216,7 +4007,7 @@ characters={
 			logistics_skill=2
 			legacy_id=118
 			visible = {
-				date > 1933.1.1
+				date > 1922.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4224,9 +4015,6 @@ characters={
 	GER_eberhard_von_mackensen={
 		name=GER_eberhard_von_mackensen
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Eberhard_von_Mackensen.dds"
 			}
@@ -4240,17 +4028,17 @@ characters={
 			logistics_skill=3
 			legacy_id=119
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 	}
 	GER_friedrich_kirchner={
 		name=GER_friedrich_kirchner
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Kirchner.dds"
 			}
@@ -4264,7 +4052,7 @@ characters={
 			logistics_skill=3
 			legacy_id=120
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4272,9 +4060,6 @@ characters={
 	GER_willibald_von_erlencamp={
 		name=GER_willibald_von_erlencamp
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Willibald_von_Langermann_und_Erlencamp.dds"
 			}
@@ -4288,17 +4073,17 @@ characters={
 			logistics_skill=1
 			legacy_id=121
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 	}
 	GER_joachim_lemelsen={
 		name=GER_joachim_lemelsen
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Joachim_Lemelsen.dds"
 			}
@@ -4312,7 +4097,7 @@ characters={
 			logistics_skill=1
 			legacy_id=122
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4321,9 +4106,6 @@ characters={
 	GER_adolffiedrich_kuntzen={
 		name=GER_adolffiedrich_kuntzen
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Adolf-Fiedrich_Kuntzen.dds"
 			}
@@ -4337,7 +4119,7 @@ characters={
 			logistics_skill=2
 			legacy_id=123
 			visible = {
-				date > 1933.1.1
+				date > 1934.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4345,9 +4127,6 @@ characters={
 	GER_rudolf_veiel={
 		name=GER_rudolf_veiel
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Rudolf_Veiel.dds"
 			}
@@ -4361,7 +4140,7 @@ characters={
 			logistics_skill=2
 			legacy_id=124
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4369,9 +4148,6 @@ characters={
 	GER_hermann_albert_breith={
 		name=GER_hermann_albert_breith
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Albert_Breith.dds"
 			}
@@ -4385,7 +4161,7 @@ characters={
 			logistics_skill=1
 			legacy_id=125
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4393,9 +4169,6 @@ characters={
 	GER_hermann_geyer={
 		name=GER_hermann_geyer
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Geyer.dds"
 			}
@@ -4409,7 +4182,7 @@ characters={
 			logistics_skill=2
 			legacy_id=126
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4417,9 +4190,6 @@ characters={
 	GER_walther_schroth={
 		name=GER_walther_schroth
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walther_Schroth.dds"
 			}
@@ -4433,7 +4203,7 @@ characters={
 			logistics_skill=1
 			legacy_id=127
 			visible = {
-				date > 1933.1.1
+				date > 1929.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4441,9 +4211,6 @@ characters={
 	GER_eduard_von_böhmermolli={
 		name=GER_eduard_von_böhmermolli
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Eduard_von_Boehm-Ermolli.dds"
 			}
@@ -4457,8 +4224,12 @@ characters={
 			logistics_skill=1
 			legacy_id=128
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1941.12.9
+				NOT = {
+					tag = AUS
+					exists = yes
+				}				
 			}
 		}
 		advisor = {
@@ -4468,8 +4239,12 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1941.12.9
+				NOT = {
+					tag = AUS
+					exists = yes
+				}					
 			}
 			available = {
 				date < 1941.12.9
@@ -4487,8 +4262,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_werner_von_fritsch"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Werner_Freiherr_von_Fritsch.dds"
 			}
 		}
@@ -4500,7 +4273,7 @@ characters={
 			planning_skill=4
 			logistics_skill=2
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4511,7 +4284,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -4527,9 +4300,6 @@ characters={
 	GER_werner_von_blomberg={
 		name=GER_werner_von_blomberg
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Werner_Eduard_Fritz_von_Blomberg.dds"
 			}
@@ -4550,9 +4320,6 @@ characters={
 	GER_friedrich_fromm={
 		name=GER_friedrich_fromm
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Fromm.dds"
 			}
@@ -4717,9 +4484,6 @@ characters={
 	GER_ludwig_crüwell={
 		name=GER_ludwig_crüwell
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ludwig_Cruwell.dds"
 			}
@@ -4741,9 +4505,6 @@ characters={
 	GER_friedrich_gollwitzer={
 		name=GER_friedrich_gollwitzer
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Gollwitzer.dds"
 			}
@@ -4765,9 +4526,6 @@ characters={
 	GER_rudolf_kaempfe={
 		name=GER_rudolf_kaempfe
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Rudolf_Kaempfe.dds"
 			}
@@ -4781,7 +4539,7 @@ characters={
 			logistics_skill=1
 			legacy_id=141
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4789,9 +4547,6 @@ characters={
 	GER_curt_von_gienanth={
 		name=GER_curt_von_gienanth
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Curt_Ludwig_von_Gienanth.dds"
 			}
@@ -4813,9 +4568,6 @@ characters={
 	GER_rudolf_konrad={
 		name=GER_rudolf_konrad
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Rudolf_Karl_Peter_Georg_Konrad.dds"
 			}
@@ -4829,7 +4581,7 @@ characters={
 			logistics_skill=2
 			legacy_id=143
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4837,9 +4589,6 @@ characters={
 	GER_anton_grasser={
 		name=GER_anton_grasser
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Anton_Grasser.dds"
 			}
@@ -4853,17 +4602,14 @@ characters={
 			logistics_skill=1
 			legacy_id=144
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
+				date > 1924.1.1
+				date < 1954.1.1
 			}
 		}
 	}
 	GER_friedrich_mieth={
 		name=GER_friedrich_mieth
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Mieth.dds"
 			}
@@ -4877,7 +4623,7 @@ characters={
 			logistics_skill=1
 			legacy_id=145
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4885,9 +4631,6 @@ characters={
 	GER_walter_von_brockdorffahlefeldt={
 		name=GER_walter_von_brockdorffahlefeldt
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Graf_von_Brockdorff-Ahlefeldt.dds"
 			}
@@ -4901,17 +4644,17 @@ characters={
 			logistics_skill=1
 			legacy_id=146
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}				
 			}
 		}
 	}
 	GER_karl_von_tiedemann={
 		name=GER_karl_von_tiedemann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Karl_von_Tiedemann.dds"
 			}
@@ -4925,17 +4668,17 @@ characters={
 			logistics_skill=2
 			legacy_id=147
 			visible = {
-				date > 1933.1.1
+				date > 1922.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 	}
 	GER_walter_von_unruh={
 		name=GER_walter_von_unruh
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_von_Unruh.dds"
 			}
@@ -4949,17 +4692,17 @@ characters={
 			logistics_skill=2
 			legacy_id=148
 			visible = {
-				date > 1933.1.1
+				date > 1918.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 	}
 	GER_wilhelm_ulex={
 		name=GER_wilhelm_ulex
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Ulex.dds"
 			}
@@ -4973,7 +4716,7 @@ characters={
 			logistics_skill=1
 			legacy_id=149
 			visible = {
-				date > 1933.1.1
+				date > 1931.1.1
 				date < 1949.1.1
 			}
 		}
@@ -4981,9 +4724,6 @@ characters={
 	GER_lothar_debes={
 		name=GER_lothar_debes
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Lothar_Debes.dds"
 			}
@@ -4997,17 +4737,15 @@ characters={
 			logistics_skill=3
 			legacy_id=150
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
+				has_government = fascism					
 			}
 		}
 	}
 	GER_johannes_mühlenkamp={
 		name=GER_johannes_mühlenkamp
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Johannes_Rudolf_Muhlenkamp.dds"
 			}
@@ -5021,17 +4759,15 @@ characters={
 			logistics_skill=4
 			legacy_id=151
 			visible = {
-				date > 1933.1.1
+				date > 1936.1.1
 				date < 1949.1.1
+				has_government = fascism				
 			}
 		}
 	}
 	GER_herberternst_vahl={
 		name=GER_herberternst_vahl
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Herbert-Ernst_Vahl.dds"
 			}
@@ -5045,17 +4781,15 @@ characters={
 			logistics_skill=2
 			legacy_id=152
 			visible = {
-				date > 1933.1.1
+				date > 1936.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_max_simon={
 		name=GER_max_simon
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Max_Simon.dds"
 			}
@@ -5069,17 +4803,15 @@ characters={
 			logistics_skill=2
 			legacy_id=153
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_richard_jungclaus={
 		name=GER_richard_jungclaus
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Richard_Jungclaus.dds"
 			}
@@ -5093,17 +4825,15 @@ characters={
 			logistics_skill=3
 			legacy_id=154
 			visible = {
-				date > 1933.1.1
+				date > 1939.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_fritz_schmedes={
 		name=GER_fritz_schmedes
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Fritz_Schmedes.dds"
 			}
@@ -5117,7 +4847,7 @@ characters={
 			logistics_skill=1
 			legacy_id=155
 			visible = {
-				date > 1933.1.1
+				date > 1934.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5125,9 +4855,6 @@ characters={
 	GER_otto_baum={
 		name=GER_otto_baum
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Otto_Baum.dds"
 			}
@@ -5141,17 +4868,15 @@ characters={
 			logistics_skill=2
 			legacy_id=156
 			visible = {
-				date > 1933.1.1
+				date > 1934.1.1
 				date < 1949.1.1
+				has_government = fascism					
 			}
 		}
 	}
 	GER_fritz_witt={
 		name=GER_fritz_witt
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Fritz_Witt.dds"
 			}
@@ -5167,15 +4892,13 @@ characters={
 			visible = {
 				date > 1933.1.1
 				date < 1949.1.1
+				has_government = fascism				
 			}
 		}
 	}
 	GER_jürgen_wagner={
 		name=GER_jürgen_wagner
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Jurgen_Wagner.dds"
 			}
@@ -5191,15 +4914,13 @@ characters={
 			visible = {
 				date > 1933.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_matthias_kleinheisterkamp={
 		name=GER_matthias_kleinheisterkamp
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Matthias_Kleinheisterkamp.dds"
 			}
@@ -5213,17 +4934,15 @@ characters={
 			logistics_skill=3
 			legacy_id=159
 			visible = {
-				date > 1933.1.1
+				date > 1934.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_karl_kreutz={
 		name=GER_karl_kreutz
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Karl_Kreutz.dds"
 			}
@@ -5237,7 +4956,7 @@ characters={
 			logistics_skill=1
 			legacy_id=160
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5245,9 +4964,6 @@ characters={
 	GER_sylvester_stadler={
 		name=GER_sylvester_stadler
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Sylvester_Stadler.dds"
 			}
@@ -5263,6 +4979,7 @@ characters={
 			visible = {
 				date > 1933.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
@@ -5298,6 +5015,8 @@ characters={
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
 				}
+				date > 1924.1.1
+				date < 1949.1.1				
 			}
 		}
 		advisor = {
@@ -5349,8 +5068,8 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
+				date > 1925.1.1
+				date < 1990.1.1
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
 				}
@@ -5391,8 +5110,9 @@ characters={
 			logistics_skill=1
 			legacy_id=163
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 		advisor={
@@ -5402,8 +5122,9 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1927.1.1
 				date < 1949.1.1
+				has_government = fascism				
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
 				}
@@ -5425,9 +5146,6 @@ characters={
 	GER_wilhelm_burgdorf={
 		name=GER_wilhelm_burgdorf
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Burgdorf.dds"
 			}
@@ -5441,7 +5159,7 @@ characters={
 			logistics_skill=1
 			legacy_id=166
 			visible = {
-				date > 1933.1.1
+				date > 1930.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5449,9 +5167,6 @@ characters={
 	GER_eugen_ott={
 		name=GER_eugen_ott
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Eugen_Ott.dds"
 			}
@@ -5473,9 +5188,6 @@ characters={
 	GER_curt_siewert={
 		name=GER_curt_siewert
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Curt_Siewert.dds"
 			}
@@ -5489,17 +5201,14 @@ characters={
 			logistics_skill=3
 			legacy_id=169
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
+				date > 1930.1.1
+				date < 1960.1.1
 			}
 		}
 	}
 	GER_walter_denkert={
 		name=GER_walter_denkert
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Denkert.dds"
 			}
@@ -5513,7 +5222,7 @@ characters={
 			logistics_skill=2
 			legacy_id=170
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5521,9 +5230,6 @@ characters={
 	GER_georg_stumme={
 		name=GER_georg_stumme
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_Stumme.dds"
 			}
@@ -5537,7 +5243,7 @@ characters={
 			logistics_skill=3
 			legacy_id=171
 			visible = {
-				date > 1933.1.1
+				date > 1926.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5545,9 +5251,6 @@ characters={
 	GER_karl_allmendinger={
 		name=GER_karl_allmendinger
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Karl_Allmendinger.dds"
 			}
@@ -5561,7 +5264,7 @@ characters={
 			logistics_skill=2
 			legacy_id=173
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5569,9 +5272,6 @@ characters={
 	GER_karl_von_beeren={
 		name=GER_karl_von_beeren
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_karl_von_Beeren.dds"
 			}
@@ -5585,7 +5285,7 @@ characters={
 			logistics_skill=1
 			legacy_id=174
 			visible = {
-				date > 1933.1.1
+				date > 1932.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5593,9 +5293,6 @@ characters={
 	GER_edgar_feuchtinger={
 		name=GER_edgar_feuchtinger
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Edgar_Feuchtinger.dds"
 			}
@@ -5609,7 +5306,7 @@ characters={
 			logistics_skill=1
 			legacy_id=175
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5617,9 +5314,6 @@ characters={
 	GER_gustav_anton_von_wietersheim={
 		name=GER_gustav_anton_von_wietersheim
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gustav_Anton_von_Wietersheim.dds"
 			}
@@ -5633,7 +5327,7 @@ characters={
 			logistics_skill=2
 			legacy_id=176
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5641,9 +5335,6 @@ characters={
 	GER_helmuth_von_pannwitz={
 		name=GER_helmuth_von_pannwitz
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Helmuth_von_Pannwitz.dds"
 			}
@@ -5657,7 +5348,7 @@ characters={
 			logistics_skill=2
 			legacy_id=177
 			visible = {
-				date > 1933.1.1
+				date > 1935.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5665,9 +5356,6 @@ characters={
 	GER_friedrich_wiese={
 		name=GER_friedrich_wiese
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Wiese.dds"
 			}
@@ -5689,9 +5377,6 @@ characters={
 	GER_walter_von_reichenau={
 		name=GER_walter_von_reichenau
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_von_Reichenau.dds"
 			}
@@ -5705,17 +5390,17 @@ characters={
 			logistics_skill=3
 			legacy_id=179
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
+				NOT = {
+					has_government = communism
+				}
 			}
 		}
 	}
 	GER_erich_brandenberger={
 		name=GER_erich_brandenberger
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Brandenberger.dds"
 			}
@@ -5737,9 +5422,6 @@ characters={
 	GER_heinrich_von_vietinghoff={
 		name=GER_heinrich_von_vietinghoff
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Heinrich_Gottfried_von_Vietinghoff.dds"
 			}
@@ -5752,7 +5434,7 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			visible = {
-				date > 1933.1.1
+				date > 1926.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5762,8 +5444,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_hugo_sperrle"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hugo_Sperrle.dds"
 			}
 		}
@@ -5777,7 +5457,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -5788,7 +5468,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -5821,8 +5501,9 @@ characters={
 			planning_skill=1
 			logistics_skill=4
 			visible = {
-				date > 1933.1.1
+				date > 1920.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 		advisor = {
@@ -5832,8 +5513,9 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1920.1.1
 				date < 1949.1.1
+				has_government = fascism				
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
 				}
@@ -5865,8 +5547,9 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1920.1.1
 				date < 1949.1.1
+				has_government = fascism	
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
 					has_completed_focus = GER_schachtplan
@@ -5890,9 +5573,6 @@ characters={
 	GER_kurt_daluege={
 		name=GER_kurt_daluege
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Daluege.dds"
 			}
@@ -5906,17 +5586,15 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1933.1.1
+				date > 1926.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_viktor_lutze={
 		name=GER_viktor_lutze
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_GER_Viktor_Lutze.dds"
 			}
@@ -5930,17 +5608,15 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				date > 1933.1.1
+				date > 1928.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
 	GER_wilhelm_schepmann={
 		name=GER_wilhelm_schepmann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Schepmann.dds"
 			}
@@ -5956,6 +5632,7 @@ characters={
 			visible = {
 				date > 1933.1.1
 				date < 1949.1.1
+				has_government = fascism
 			}
 		}
 	}
@@ -5974,8 +5651,8 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
+				date > 1936.1.1
+				date < 1970.1.1
 			}
 			traits = { army_chief_planning_2 }
 			ai_will_do = {
@@ -5991,8 +5668,8 @@ characters={
 			logistics_skill=3
 			legacy_id=-1
 			visible = {
-				date > 1933.1.1
-				date < 1982.11.30
+				date > 1936.1.1
+				date < 1970.1.1
 			}
 		}
 	}
@@ -6012,7 +5689,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6032,7 +5709,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 				NOT = {
 					has_completed_focus = GER_reichstag_fire_decree
@@ -6057,7 +5734,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			visible = {
-				date > 1933.1.1
+				date > 1923.1.1
 				date < 1949.1.1
 			}
 		}
@@ -6077,7 +5754,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6099,7 +5776,7 @@ characters={
 			logistics_skill=2
 			legacy_id=87
 			visible = {
-				date > 1933.1.1
+				date > 1925.1.1
 				date < 1949.1.1
 			}
 		}
@@ -6438,7 +6115,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6532,7 +6209,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6587,7 +6264,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1924.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6615,11 +6292,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
-			}
-			available = {
-				has_completed_focus = GER_restore_hohenzollern
+				date < 1951.1.1
 			}
 			traits = {
 				monarchist_media_mogul
@@ -6643,7 +6316,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1919.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6672,7 +6345,7 @@ characters={
 				has_dlc = "La Resistance" 
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1917.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6700,7 +6373,7 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
+				date > 1921.1.1
 				date < 1949.1.1
 			}
 			available = {
@@ -6728,8 +6401,8 @@ characters={
 				original_tag = GER
 			}
 			visible = {
-				date > 1933.1.1
-				date < 1949.1.1
+				date > 1910.1.1
+				date < 1963.1.1
 			}
 			available = {
 				has_completed_focus = GER_new_chancellor
@@ -6782,6 +6455,11 @@ characters={
 		}
 		corps_commander = {
 			traits = { ranger politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 			visible = {
 				NOT = {
 					has_completed_focus = GER_oppose_hitler
@@ -6790,12 +6468,9 @@ characters={
 					has_government = fascism
 					has_country_flag = GER_reinstated_nazi_leadership
 				}
-			}
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
+				date > 1933.1.1
+				date < 1949.1.1				
+			}			
 		}
 	}
 	GER_ludwig_boelkow={
@@ -6814,13 +6489,12 @@ characters={
 			}
 			visible = {
 				date > 1933.1.1
-				date < 1949.1.1
+				date < 2003.1.1
 			}
 			available = {
 			}
 			cost = 350
 			research_bonus = {
-				#rocketry = 0.2
 				jet_technology = 0.25
 			}
 			traits = {
@@ -7001,9 +6675,6 @@ characters={
 	GER_max_josef_pemsel={
 		name=GER_max_josef_pemsel
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Max_Pemsel.dds"
 			}
@@ -7017,7 +6688,8 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
@@ -7040,7 +6712,8 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
@@ -7063,7 +6736,8 @@ characters={
 			logistics_skill=3
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
@@ -7086,16 +6760,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_hanswerner_wiermann={
 		name=GER_hanswerner_wiermann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Hans-Werner_Wiermann.dds"
 			}
@@ -7109,16 +6781,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_heinrich_trettner={
 		name=GER_heinrich_trettner
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Heinrich_Trettner.dds"
 			}
@@ -7132,16 +6802,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_klaus_naumann={
 		name=GER_klaus_naumann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Klaus_Naumann.dds"
 			}
@@ -7155,16 +6823,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_rainer_glatz={
 		name=GER_rainer_glatz
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Rainer_Glatz.dds"
 			}
@@ -7178,16 +6844,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_ulrich_de_maiziere={
 		name=GER_ulrich_de_maiziere
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Ulrich_de_Maiziere.dds"
 			}
@@ -7201,16 +6865,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_volker_wieker={
 		name=GER_volker_wieker
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Volker_Wieker.dds"
 			}
@@ -7224,16 +6886,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_wolfgang_altenburg={
 		name=GER_wolfgang_altenburg
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Wolfgang_Altenburg.dds"
 			}
@@ -7247,16 +6907,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_wolfgang_schneiderhan={
 		name=GER_wolfgang_schneiderhan
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Wolfgang_Schneiderhan.dds"
 			}
@@ -7270,16 +6928,14 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_armin_zimmermann={
 		name=GER_armin_zimmermann
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Armin_Zimmermann.dds"
 			}
@@ -7293,16 +6949,14 @@ characters={
 			coordination_skill=1
 			legacy_id=0
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
 	GER_dieter_wellershoff={
 		name=GER_dieter_wellershoff
 		portraits={
-			#army={
-#				small=""
-#			}
 			army={
 				large="gfx/leaders/GER/CW/Dieter_Wellershoff.dds"
 			}
@@ -7316,7 +6970,8 @@ characters={
 			coordination_skill=1
 			legacy_id=0
 			visible = {
-				date > 1949.1.1 date < 2000.1.1
+				date > 1949.1.1 
+				date < 2000.1.1
 			}
 		}
 	}
