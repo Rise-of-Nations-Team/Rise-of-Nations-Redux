@@ -1002,7 +1002,6 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			unlock_decision_category_tooltip = QIN_smuggling_weapons
 		}
 	}
 
@@ -1100,13 +1099,12 @@ focus_tree = {
 				id = QIN_centralization_bop
 				value = 0.20
 			}
-			unlock_decision_category_tooltip = fight_boxer_resistance_decision_cat
 		}
 	}
 
 	focus = {
 		id = DNC_QIN_smaller_regional_armies
-		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		icon = GFX_focus_SOV_mobilization_plan
 		x = -2
 		y = 1
 		relative_position_id = DNC_QIN_lessons_of_the_rebellion
@@ -1433,13 +1431,6 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			if = {
-				limit = {
-					has_idea = QIN_boxer_protocols
-				}
-				unlock_decision_category_tooltip = QIN_smuggling_weapons
-			}
-		
 		}
 	}
 
@@ -2233,7 +2224,6 @@ category = naval_doctrine
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = build_zhili_railway
 		}
 	}
 
@@ -2258,7 +2248,6 @@ category = naval_doctrine
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = maintain_kaiping_railway
 			add_power_balance_value = {
 				id = QIN_centralization_bop
 				value = 0.10
@@ -2287,7 +2276,6 @@ category = naval_doctrine
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = build_kaiping_railway
 		}
 	}
 
@@ -2368,8 +2356,6 @@ category = naval_doctrine
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = QIN_jingzhang_railway
-		
 		}
 	}
 
@@ -2439,7 +2425,6 @@ category = naval_doctrine
 		}
 
 		completion_reward = {
-			unlock_decision_tooltip = QIN_fengtian_railway
 		}
 	}
 
