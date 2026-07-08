@@ -2055,6 +2055,270 @@ ideas = {
 				training_time_army_factor = -0.2
 			}
 		}
+		GER_structured_doctrines = { # GER_heergiens_plan
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = GER_structured_doctrines2
+					has_idea = GER_structured_doctrines3
+					has_idea = GER_structured_doctrines4
+					has_idea = GER_structured_doctrines_abandonned
+				}
+			}
+			modifier = {
+				max_planning = 0.05
+				dig_in_speed_factor = 0.05
+				army_artillery_attack_factor = 0.05
+				conscription_factor = -0.05
+			}
+		}
+		GER_structured_doctrines2 = { # GER_methodical_teachings
+			name = GER_structured_doctrines
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = GER_structured_doctrines3
+					has_idea = GER_structured_doctrines4
+					has_idea = GER_structured_doctrines_abandonned
+				}
+			}
+			modifier = {
+				max_planning = 0.05
+				dig_in_speed_factor = 0.1
+				army_artillery_attack_factor = 0.1
+				conscription_factor = -0.1
+
+			}
+		}
+		GER_structured_doctrines3 = {	# GER_harhsen_standard_training
+			name = GER_structured_doctrines
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = GER_structured_doctrines4
+					has_idea = GER_structured_doctrines_abandonned
+				}
+			}
+			modifier = {
+				max_planning = 0.05
+				dig_in_speed_factor = 0.1
+				army_artillery_attack_factor = 0.1
+				army_infantry_attack_factor = 0.07
+				army_infantry_defence_factor = 0.07
+				conscription_factor = -0.15
+				training_time_army_factor = 0.2
+
+			}
+		}
+		GER_structured_doctrines4 = { # GER_prepare_for_long_war
+			name = GER_structured_doctrines
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = GER_structured_doctrines_abandonned
+				}
+			}
+			modifier = {
+				max_planning = 0.1
+				dig_in_speed_factor = 0.1
+				army_artillery_attack_factor = 0.15
+				army_infantry_attack_factor = 0.07
+				army_infantry_defence_factor = 0.07
+				conscription_factor = -0.2
+				supply_consumption_factor = -0.1
+				training_time_army_factor = 0.25
+			}
+		}
+		GER_structured_doctrines_abandonned = {
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			modifier = {
+				max_planning = 0.1
+				dig_in_speed_factor = 0.1
+				army_artillery_attack_factor = 0.2
+				supply_consumption_factor = -0.1
+				training_time_army_factor = 0.1
+			}
+		}
+		GER_lessons_of_lorraine = { # GER_lessons_of_lorraine
+			picture = RAJ_private_military_complex 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = GER_structured_doctrines_abandonned
+				}
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.07
+				training_time_army_factor = -0.05
+				experience_gain_army_factor = 0.1
+				experience_gain_air_factor = 0.1
+				experience_gain_army_unit_factor = 0.05
+				experience_loss_factor = -0.05
+			}
+		}
+		GER_initial_zeppelin_investment = {
+			picture = luftschiffbau_zeppelin
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			equipment_bonus = {
+				airship_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		GER_initial_zeppelin_investment2 = {
+			name = GER_initial_zeppelin_investment
+			picture = luftschiffbau_zeppelin
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			equipment_bonus = {
+				airship_bomber_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		GER_new_air_doctrine = {
+			picture = generic_air_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				air_equipment = 0.10
+				light_air = 0.10
+				heavy_air = -0.20
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = idea_army_restrictions
+					has_idea = FRA_land_army_restrictions
+				}
+			}
+		}
+		GER_heeringen_air_plan = {
+			picture = generic_air_manufacturer_1
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				airship_bomber_equipment = {
+					build_cost_ic = 0.3
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = 0.20
+					instant = yes
+				}
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+					has_idea = idea_army_restrictions
+					has_idea = FRA_land_army_restrictions
+				}
+			}
+		}
+		GER_pioneer_aircraft_development_idea = {
+			name = GER_pioneer_aircraft_development
+			picture = generic_air_manufacturer_1
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_global_flag = great_war_ends
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
 	}
 	naval_manufacturer = {
 		designer = yes
