@@ -1004,25 +1004,6 @@ ideas = {
 				industrial_capacity_factory = -0.25
 			}
 		}
-		GER_idea_aviation_cult = {
-			picture = generic_air_bonus
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			available = {
-				NOT = {
-					has_country_flag = great_war_loser
-				}
-			}
-			allowed = {
-				original_tag = GER
-			}
-			modifier = {
-				air_doctrine_cost_factor = -0.1
-				air_ace_generation_chance_factor = 0.15
-			}
-		}
 		GER_idea_colonial_elite = {
 			picture = chi_wargaming_division
 			allowed_civil_war = {
@@ -1978,6 +1959,102 @@ ideas = {
 				trade_cost_for_target_factor = 0.5
 			}
 		}
+
+		GER_wealth_tax_law_idea = {
+			picture = PER_fund_state_intelligence_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.2
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		GER_temporary_tariffs = {
+			picture = PER_fund_state_intelligence_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.1
+				trade_opinion_factor = -0.5
+			}
+		}
+		GER_military_expansion_law_limited = {
+			name = GER_military_expansion_law
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		GER_military_expansion_law = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			modifier = {
+				political_power_gain = -0.05
+				conscription_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+		GER_military_expansion_laws = {
+			picture = ast_volunteer_defence_corps
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			modifier = {
+				political_power_gain = -0.1
+				conscription_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				training_time_army_factor = -0.2
+			}
+		}
 	}
 	naval_manufacturer = {
 		designer = yes
@@ -2051,7 +2128,7 @@ ideas = {
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_fokker_aeroplanbau
+				has_completed_focus = GER_fokkers_pursuit_concepts
 			}
 			research_bonus = {
 				air_equipment = 0.1
