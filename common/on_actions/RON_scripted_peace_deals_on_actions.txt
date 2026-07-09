@@ -15,6 +15,42 @@ on_actions = {
 				}
 				ROOT = {
 					country_event = DNC_South_Africa.1
+					annex_country = {
+						target = FROM
+						transfer_troops = no
+					}
+				}
+				if = {
+					limit = {
+						OFR = {
+							exists = no
+						}
+					}
+					set_global_flag = second_boer_war_british_victory_gflg
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = ENG
+					}
+					FROM = {
+						original_tag = OFR
+					}
+				}
+				ROOT = {
+					annex_country = {
+						target = FROM
+						transfer_troops = no
+					}
+				}
+				if = {
+					limit = {
+						SRE = {
+							exists = no
+						}
+					}
+					set_global_flag = second_boer_war_british_victory_gflg
 				}
 			}
 		}
