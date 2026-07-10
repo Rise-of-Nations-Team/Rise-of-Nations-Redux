@@ -83,6 +83,16 @@ focus_tree = {
 						scope = QIN
 					}
 				}
+				division_template = {
+					name = "Boxer Militia"
+					is_locked = yes
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+				}
 				create_unit = {
 					division = "name = \"Boxer Militia\" division_template = \"Boxer Militia\" start_excperience_factor = 0.5"
 					owner = ROOT
@@ -142,6 +152,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = QIN_eight_banners
+			division_template = {
+				name = "Mongol Bannermen"
+				is_locked = yes
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+				}
+			}
+			random_core_state = {
+				create_unit = {
+					division = "name = \"Mongol Bannermen\" division_template = \"Mongol Bannermen\" start_excperience_factor = 0.5"
+					owner = ROOT
+					count = 3
+					id = 737
+				}
+			}
 		}
 	}
 
