@@ -32,6 +32,8 @@ QIN_boxer_rebellion_cat = {
 								scope = QIN
 							}
 							state = 608
+							has_state_flag = QIN_qing_controlled_state
+							has_state_flag = QIN_swaying_state
 						}
 					}
 					is_core_of = QIN
@@ -46,6 +48,46 @@ QIN_boxer_rebellion_cat = {
 					modifier = QIN_boxer_rebellion
 					scope = QIN
 				}
+			}
+		}
+		QIN_sway_unaligned_state = {
+			#icon = 
+			state_target = yes
+			on_map_mode = map_only
+			allowed = {
+				tag = QIN
+				any_core_state = {
+					has_dynamic_modifier = {
+						modifier = QIN_boxer_rebellion
+						scope = QIN
+					}
+				}
+			}
+			visible = {
+				has_completed_focus = QIN_combat_the_rebela
+			}
+			available = {
+				any_core_state = {
+					NOT = {
+						has_state_flag = QIN_swaying_state
+					}
+				}
+			}
+			target_trigger = {
+				FROM = {
+					is_core_of = ROOT
+				}
+			}
+			cost = 10
+			days_remove = 14
+			select_effect = {
+				ROOT = {
+					add_state_flag = QIN_swaying_state
+				}
+			}
+			remove_effect = {
+				remove_state_flag = QIN_swaying_state
+				add_state_flag = QIN_qing_controlled_state
 			}
 		}
 	}
