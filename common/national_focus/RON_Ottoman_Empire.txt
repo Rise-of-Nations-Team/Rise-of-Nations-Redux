@@ -25,4 +25,53 @@ focus_tree = {
 	###############################################################################################################################
 	###############################################################################################################################
 
+	focus = {
+		id = OTT_second_decade_of_the_hamidian_regime
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
+		x = 10
+		y = 0
+
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = dnc_ottoman.1
+			custom_effect_tooltip = OTT_modify_hamidian_regime_tt
+			add_to_variable = {
+				OTT_hamidian_stability_factor = 0.005
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				OTT_hamidian_political_power_factor = 0.03
+				tooltip = political_power_factor_tt
+			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+		}
+	}
+
+	focus = {
+		id = OTT_new_arabian_communications_projects
+		icon = GFX_focus_AFG_telegraph
+		cost = 2
+		prerequisite = { focus = OTT_second_decade_of_the_hamidian_regime }
+		x = -2
+		y = 1
+		relative_position_id = OTT_second_decade_of_the_hamidian_regime
+
+		completion_reward = {
+			unlock_decision_tooltip = OTT_expand_telegraph_lines_in_syria
+			unlock_decision_tooltip = OTT_expand_telegraph_lines_in_iraq
+			unlock_decision_tooltip = OTT_expand_telegraph_lines_in_hejaz
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
 }
