@@ -9,10 +9,10 @@ characters={
 		}
 		country_leader={
 			ideology=monarchism
-            desc = "POLITICS_DOWAGER_CIXI_DESC"			
+            desc = "POLITICS_DOWAGER_CIXI_DESC"
 			traits = {  }
-			expire="1908.11.16.1"			
-		}		
+			expire="1908.11.16.1"
+		}
 	}
 
 	QIN_zaifeng={
@@ -26,7 +26,7 @@ characters={
 			ideology=monarchism
 			desc = "POLITICS_PRINCE_CHUN_DESC"
 			traits = { incompetent_leader }
-			expire="1951.2.3.1"			
+			expire="1951.2.3.1"
 		}
 	}
 
@@ -40,8 +40,8 @@ characters={
 		country_leader={
 			ideology=monarchism
 			traits = {  }
-			expire="1967.10.17.1"			
-		}		
+			expire="1967.10.17.1"
+		}
 	}
 
 	QIN_yikuang={
@@ -51,7 +51,7 @@ characters={
 				large="gfx/leaders/CHI/DNC/Portrait_China_Yikuang.dds"
 				small="gfx/interface/ideas/CHI/idea_QIN_Yikuang.dds"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_yikuang
@@ -61,7 +61,7 @@ characters={
 			cost  = 200
 			available = {
 				is_country_leader = no
-			}	
+			}
 			traits  = {
 				old_figurehead
 			}
@@ -70,12 +70,12 @@ characters={
 			}
 			visible = {
 				date < 1917.1.28
-			}			
+			}
 		}
 		country_leader = {
 			ideology = constitutional_monarchism
 			traits  = {	old_figurehead corrupted_bureaucrat }
-			expire="1917.1.28.1"			
+			expire="1917.1.28.1"
 		}
 	}
 
@@ -86,7 +86,7 @@ characters={
 				large="gfx/leaders/CHI/DNC/Portrait_China_Kang_Youwei.dds"
 				small="gfx/interface/ideas/CHI/idea_QIN_Kang_Youwei.dds"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_kang_youwei
@@ -94,18 +94,18 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				financial_expert 
+				financial_expert
 			}
 			ai_will_do  = {
 				factor  = 2.000
 			}
 			visible = {
 				date < 1927.3.31
-			}				
+			}
 		}
 		country_leader={
 			ideology=marxism
-			expire="1927.3.31.1"			
+			expire="1927.3.31.1"
 		}
 	}
 
@@ -115,12 +115,12 @@ characters={
 			civilian={
 				large="gfx/leaders/CHI/WW1/China_LW_Anarchist_JiangKanghu.dds"
 			}
-		}		
+		}
 		country_leader={
 			ideology=anarchist_communism
-			expire="1954.12.7.1"			
+			expire="1954.12.7.1"
 		}
-	}	
+	}
 
 	QIN_yuan_shikai={
 		name=QIN_yuan_shikai
@@ -137,14 +137,14 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				army_chief_planning_2 
+				army_chief_planning_2
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1916.6.6
-			}			
+			}
 		}
 		field_marshal={
 			traits={ qing_army_trait politically_connected yuan_shikai_loyalist fast_planner inspirational_leader }
@@ -155,17 +155,17 @@ characters={
 			logistics_skill=2
 			visible = {
 				date < 1916.6.6
-			}			
+			}
 		}
 		country_leader={
 			ideology=stratocracy
 			traits={ generallissimo }
-			expire="1916.6.6.1"			
+			expire="1916.6.6.1"
 		}
 		country_leader={
 			ideology=oligarchism
 			traits={ generallissimo }
-			expire="1916.6.6.1"			
+			expire="1916.6.6.1"
 		}
 	}
 
@@ -182,7 +182,7 @@ characters={
 			attack_skill=3
 			defense_skill=3
 			planning_skill=4
-			logistics_skill=3	
+			logistics_skill=3
 			visible = {
 				if = {
 					limit = {
@@ -191,16 +191,16 @@ characters={
 					has_country_leader = {
 						character = QIN_sun_yatsen
 					}
-				}				
+				}
 				date < 1975.4.5
-			}			
+			}
 		}
 		country_leader={
 			ideology=rw_nationalism
 			traits={ generallissimo }
-			expire="1975.4.5.1"			
+			expire="1975.4.5.1"
 		}
-	}	
+	}
 
 	QIN_sun_yatsen={
 		name=QIN_sun_yatsen
@@ -209,14 +209,14 @@ characters={
 				large="gfx/leaders/CHI/DNC/Portrait_China_Sun_Yat_Sen.dds"
 			}
 			army={
-				large="gfx/leaders/CHI/INT/Portrait_China_Sun_Yat_Sen_Army.dds"				
+				large="gfx/leaders/CHI/INT/Portrait_China_Sun_Yat_Sen_Army.dds"
 			}
 		}
 		country_leader={
 			ideology=socialism
-			traits={ JUNO_popular_among_the_people socialist_revolutionary_trait social_reformer }			
-	        desc = "POLITICS_SUN_YAT_SEN_DESC"			
-			expire="1925.3.12.1"						
+			traits={ JUNO_popular_among_the_people socialist_revolutionary_trait social_reformer }
+	        desc = "POLITICS_SUN_YAT_SEN_DESC"
+			expire="1925.3.12.1"
 		}
 		field_marshal = {
 			visible = {
@@ -228,8 +228,8 @@ characters={
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-		}		
-	}	
+		}
+	}
 
 	QIN_zaitao={
 		name=QIN_zaitao
@@ -238,7 +238,7 @@ characters={
 				large="gfx/leaders/CHI/DNC/Portrait_China_Prince_Zaitao.dds"
 				small="gfx/interface/ideas/CHI/idea_QIN_Zaitao.dds"
 			}
-		}		
+		}
 		advisor={
 			slot = army_chief
 			idea_token = QIN_zaitao
@@ -246,14 +246,14 @@ characters={
 				original_tag = QIN
 			}
 			traits  = {
-				army_chief_morale_1 
+				army_chief_morale_1
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1960.1.1
-			}				
+			}
 		}
 		corps_commander={
 			traits={ qing_army_trait politically_connected cavalry_officer trait_royal }
@@ -265,7 +265,7 @@ characters={
 			visible = {
 				original_tag = QIN
 				date < 1960.1.1
-			}	
+			}
 		}
 	}
 
@@ -276,7 +276,7 @@ characters={
 				large="gfx/leaders/CHI/DNC/Portrait_China_Yinchang.dds"
 				small="GFX_idea_generic_air_asia_3"
 			}
-		}		
+		}
 		advisor={
 			slot = army_chief
 			idea_token = QIN_yinchang
@@ -284,14 +284,14 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				army_chief_organizational_2 
+				army_chief_organizational_2
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1928.1.1
-			}			
+			}
 		}
 		field_marshal={
 			traits={ qing_army_trait chinese_royalist trait_engineer trait_cautious }
@@ -302,35 +302,35 @@ characters={
 			logistics_skill=3
 			visible = {
 				date < 1928.1.1
-			}			
+			}
 		}
 	}
-	
+
 	QIN_wang_shizhen={
 		name=QIN_wang_shizhen
 		portraits={
 			army={
 				large="gfx/leaders/CHI/WW1/Portrait_China_Wang_Shizhen.dds"
 				small="gfx/interface/ideas/CHI/idea_CHI_Wang_Shizhen.png"
-			}	
-		}		
+			}
+		}
 		advisor={
 			slot = high_command
 			idea_token = QIN_wang_shizhen
 			allowed  = {
 				is_literally_china = yes
 			}
-			ledger  = army 
+			ledger  = army
 			traits  = {
-				army_commando_1 
+				army_commando_1
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1930.7.1
-			}			
-		}	
+			}
+		}
 		field_marshal={
 			traits={ qing_army_trait chinese_royalist trait_engineer }
 			skill=2
@@ -340,9 +340,9 @@ characters={
 			logistics_skill=1
 			visible = {
 				date < 1930.7.1
-			}			
+			}
 		}
-	}	
+	}
 
 	QIN_zhang_xun={
 		name=QIN_zhang_xun
@@ -360,7 +360,7 @@ characters={
 			logistics_skill=2
 			visible = {
 				date < 1923.9.12
-			}			
+			}
 		}
 	}
 
@@ -379,14 +379,14 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				army_chief_defensive_1 
+				army_chief_defensive_1
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1936.11.2
-			}			
+			}
 		}
 		corps_commander={
 			traits={ qing_army_trait yuan_shikai_loyalist politically_connected commando }
@@ -397,7 +397,7 @@ characters={
 			logistics_skill=3
 			visible = {
 				date < 1936.11.2
-			}			
+			}
 		}
 	}
 
@@ -417,7 +417,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				date < 1925.3.1
-			}			
+			}
 		}
 	}
 
@@ -437,7 +437,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				date < 1943.1.1
-			}			
+			}
 		}
 	}
 
@@ -464,9 +464,9 @@ characters={
 					has_country_leader = {
 						character = GUC_lu_rongting
 					}
-				}				
-				date < 1928.11.6				
-			}	
+				}
+				date < 1928.11.6
+			}
 		}
 	}
 
@@ -493,7 +493,7 @@ characters={
 						character = GUC_lu_rongting
 					}
 				}
-				date < 1927.9.1			
+				date < 1927.9.1
 			}
 		}
 	}
@@ -515,7 +515,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				date < 1925.3.12
-			}			
+			}
 		}
 	}
 
@@ -536,7 +536,7 @@ characters={
 			logistics_skill=2
 			visible = {
 				date < 1927.10.14
-			}			
+			}
 		}
 	}
 
@@ -556,7 +556,7 @@ characters={
 			logistics_skill=3
 			visible = {
 				date < 1919.12.12
-			}			
+			}
 		}
 	}
 
@@ -576,7 +576,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				date < 1938.5.15
-			}			
+			}
 		}
 	}
 
@@ -597,7 +597,7 @@ characters={
 			logistics_skill=2
 			visible = {
 				date < 1928.7.7
-			}			
+			}
 		}
 	}
 
@@ -637,7 +637,7 @@ characters={
 			logistics_skill = 2
 			visible = {
 				date < 1932.8.19
-			}			
+			}
 		}
 	}
 
@@ -658,7 +658,7 @@ characters={
 			logistics_skill=2
 			visible = {
 				date < 1931.8.5
-			}			
+			}
 		}
 	}
 
@@ -679,7 +679,7 @@ characters={
 			logistics_skill=1
 			visible = {
 				date < 1934.1.1
-			}			
+			}
 		}
 	}
 
@@ -693,7 +693,7 @@ characters={
 		}
 		corps_commander = {
 			traits = {
-				qing_army_trait			
+				qing_army_trait
 				trait_reckless
 				politically_connected
 				substance_abuser
@@ -706,7 +706,7 @@ characters={
 					}
 					NOT = { country_exists = YUN }
 				}
-				date < 1927.5.23			
+				date < 1927.5.23
 			}
 			skill = 2
 			attack_skill = 3
@@ -732,7 +732,7 @@ characters={
 			logistics_skill = 1
 			visible = {
 				date < 1953.1.1
-			}			
+			}
 		}
 	}
 
@@ -749,10 +749,10 @@ characters={
 			attack_skill = 1
 			defense_skill = 3
 			planning_skill = 2
-			logistics_skill = 1	
+			logistics_skill = 1
 			visible = {
 				date < 1946.1.1
-			}			
+			}
 		}
 	}
 
@@ -774,10 +774,10 @@ characters={
 				date < 1930.1.1
 				NOT = {
 					country_exists = FEN
-				}					
+				}
 			}
-		}		
-	}	
+		}
+	}
 
 	QIN_qi_xieyuan = {
 		name = QIN_qi_xieyuan
@@ -795,9 +795,9 @@ characters={
 			logistics_skill = 2
 			visible = {
 				date < 1946.12.18
-			}			
+			}
 		}
-	}	
+	}
 
 	QIN_mo_rongxin={
 		name=QIN_mo_rongxin
@@ -807,7 +807,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { qing_army_trait old_guard politically_connected hill_fighter trait_mountaineer }			
+			traits = { qing_army_trait old_guard politically_connected hill_fighter trait_mountaineer }
 			skill=3
 			attack_skill=2
 			defense_skill=3
@@ -816,9 +816,9 @@ characters={
 			legacy_id=-1
 			visible = {
 				date < 1930.3.20
-			}				
+			}
 		}
-	}	
+	}
 
 	QIN_yang_sen = {
 		name=SIC_yang_sen
@@ -831,7 +831,7 @@ characters={
 				small = GFX_portrait_SIC_yang_sen_civilian_small
 			}
 		}
-		
+
 		corps_commander={
 			traits = { organizer }
 			skill=3
@@ -845,10 +845,10 @@ characters={
 				date < 1960.1.1
 				NOT = {
 					country_exists = SIC
-				}				
+				}
 			}
 		}
-	}	
+	}
 
 	QIN_yu_zhangjing={
 		name="Yu Zhangjing"
@@ -858,7 +858,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { qing_army_trait }			
+			traits = { qing_army_trait }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -867,9 +867,9 @@ characters={
 			legacy_id=-1
 			visible = {
 				date < 1919.1.1
-			}				
+			}
 		}
-	}	
+	}
 
 	QIN_hu_ying={
 		name="Hu Ying"
@@ -879,7 +879,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { politically_connected infantry_officer engineer_officer urban_assault_specialist chinese_federalist }			
+			traits = { politically_connected infantry_officer engineer_officer urban_assault_specialist chinese_federalist }
 			skill=3
 			attack_skill=3
 			defense_skill=1
@@ -887,11 +887,11 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 			visible = {
-				date > 1910.1.1				
+				date > 1910.1.1
 				date < 1933.1.1
-			}				
+			}
 		}
-	}		
+	}
 
 	QIN_chen_qimei={
 		name="Chen Qimei"
@@ -902,7 +902,7 @@ characters={
 		}
 		advisor = {
 			slot = theorist
-			cost = 50 
+			cost = 50
 			idea_token = QIN_chen_qimei
 			allowed = {
 				is_china_or_warlord_no_tt = yes
@@ -910,28 +910,28 @@ characters={
 			available = {
 				has_government = democratic
 			}
-			ledger = army 
+			ledger = army
 			traits = {
-				military_theorist 
+				military_theorist
 			}
 			ai_will_do = {
 				factor = 1
 			}
-		}		
+		}
 		corps_commander={
-			traits = { politically_connected chinese_federalist }			
+			traits = { politically_connected chinese_federalist }
 			skill=2
 			attack_skill=2
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1
-			visible = {		
+			visible = {
 				date < 1919.1.1
-				has_government = democratic				
-			}				
+				has_government = democratic
+			}
 		}
-	}		
+	}
 
     #ADMIRALS
 
@@ -942,7 +942,7 @@ characters={
 				large="gfx/leaders/CHI/WW1/Portrait_China_Sa_Zhenbing.dds"
 				small="gfx/interface/ideas/CHI/idea_CHI_Sa_Zhenbing.dds"
 			}
-		}		
+		}
 		advisor={
 			slot = navy_chief
 			idea_token = QIN_sa_zhenbing
@@ -950,14 +950,14 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				navy_chief_decisive_battle_2 
+				navy_chief_decisive_battle_2
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1952.4.10
-			}			
+			}
 		}
 		navy_leader={
 			traits={ qing_navy_trait old_guard_navy blockade_runner superior_tactician }
@@ -968,9 +968,9 @@ characters={
 			coordination_skill=2
 			visible = {
 				date < 1952.4.10
-			}			
+			}
 		}
-	}	
+	}
 
 	QIN_cheng_biguang={
 		name=QIN_cheng_biguang
@@ -987,17 +987,17 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				navy_chief_decisive_battle_1 
+				navy_chief_decisive_battle_1
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1918.2.28
-			}			
+			}
 		}
 		navy_leader={
-			traits={ qing_navy_trait }			
+			traits={ qing_navy_trait }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -1005,7 +1005,7 @@ characters={
 			coordination_skill=2
 			visible = {
 				date < 1918.2.28
-			}			
+			}
 		}
 	}
 
@@ -1018,7 +1018,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ qing_navy_trait }			
+			traits={ qing_navy_trait }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -1026,7 +1026,7 @@ characters={
 			coordination_skill=1
 			visible = {
 				date < 1930.9.14
-			}			
+			}
 		}
 	}
 
@@ -1039,7 +1039,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ qing_navy_trait }			
+			traits={ qing_navy_trait }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -1047,7 +1047,7 @@ characters={
 			coordination_skill=1
 			visible = {
 				date < 1940.6.14
-			}			
+			}
 		}
 	}
 
@@ -1063,17 +1063,17 @@ characters={
 			slot = navy_chief
 			idea_token = CHI_liu_guanxiong
 			allowed  = {
-				is_literally_china = yes	
+				is_literally_china = yes
 			}
 			traits  = {
-				navy_chief_reform_1 
+				navy_chief_reform_1
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1927.6.24
-			}			
+			}
 		}
 		navy_leader={
 			traits={ qing_navy_trait old_guard_navy yuan_shikai_loyalist }
@@ -1084,7 +1084,7 @@ characters={
 			coordination_skill=2
 			visible = {
 				date < 1927.6.24
-			}			
+			}
 		}
 	}
 
@@ -1105,9 +1105,9 @@ characters={
 			coordination_skill=1
 			visible = {
 				date < 1933.12.28
-			}			
+			}
 		}
-	}	
+	}
 
 	QIN_zaize={
 		name=QIN_zaize
@@ -1115,7 +1115,7 @@ characters={
 			army={
 				small="GFX_idea_generic_political_advisor_asia_2"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_zaize
@@ -1127,14 +1127,14 @@ characters={
 					has_country_leader = {
 						character = QIN_yuan_shikai
 					}
-				}	
-			}	
+				}
+			}
 			traits  = {
-				democratic_reformer 
+				democratic_reformer
 			}
 			do_effect  = {
 				not  = {
-					has_government  = democratic 
+					has_government  = democratic
 				}
 			}
 			ai_will_do  = {
@@ -1142,7 +1142,7 @@ characters={
 			}
 			visible = {
 				date < 1929.6.1
-			}			
+			}
 		}
 	}
 
@@ -1152,7 +1152,7 @@ characters={
 			army={
 				small="GFX_idea_generic_political_advisor_asia_1"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_liang_dunyan
@@ -1160,14 +1160,14 @@ characters={
 				is_literally_china = yes
 			}
 			traits  = {
-				smooth_talking_charmer 
+				smooth_talking_charmer
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1924.5.10
-			}			
+			}
 		}
 	}
 
@@ -1178,7 +1178,7 @@ characters={
 				large="gfx/leaders/CHI/DNC/Portrait_China_Liang_Qichao.dds"
 				small="gfx/interface/ideas/CHI/idea_CHI_Liang_Qichao.dds"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_liang_qichao
@@ -1193,17 +1193,17 @@ characters={
 			}
 			visible = {
 				date < 1929.1.19
-			}			
+			}
 		}
 	}
-	
+
 	QIN_shanqi={
 		name=QIN_shanqi
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_asia_3"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_shanqi
@@ -1212,7 +1212,7 @@ characters={
 			}
 			available = {
 				has_government = neutrality
-			}	
+			}
 			traits  = {
 				staunch_monarchist
 			}
@@ -1221,9 +1221,9 @@ characters={
 			}
 			visible = {
 				date < 1922.3.29
-			}			
+			}
 		}
-	}	
+	}
 
 	QIN_zhao_bingjun={
 		name=QIN_zhao_bingjun
@@ -1231,27 +1231,27 @@ characters={
 			army={
 				small="GFX_idea_generic_navy_asia_1"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_zhao_bingjun
 			allowed  = {
 				is_literally_china = yes
 			}
-			available = {			
+			available = {
 				OR ={
 					has_country_leader = {
 						character = CHI_yuan_shikai
-					}	
+					}
 					hidden_trigger = {
 						has_country_leader = {
 							character = QIN_yuan_shikai
 						}
 					}
-				}	
+				}
 			}
 			traits  = {
-				backroom_backstabber 
+				backroom_backstabber
 				anti_democrat
 			}
 			ai_will_do  = {
@@ -1259,17 +1259,17 @@ characters={
 			}
 			visible = {
 				date < 1914.2.27
-			}			
+			}
 		}
 	}
-	
+
 	QIN_natong={
 		name=QIN_natong
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_asia_3"
 			}
-		}		
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = QIN_natong
@@ -1278,16 +1278,16 @@ characters={
 			}
 			available = {
 				has_government = neutrality
-			}	
+			}
 			traits  = {
-				ideological_crusader 
+				ideological_crusader
 			}
 			ai_will_do  = {
 					factor  = 1
 			}
 			visible = {
 				date < 1925.6.28
-			}			
+			}
 		}
 	}
 
@@ -1297,24 +1297,24 @@ characters={
 			army={
 				small="GFX_idea_generic_army_asia_2"
 			}
-		}		
+		}
 		advisor={
 			slot = high_command
 			idea_token = QIN_wuzhen
 			allowed  = {
 				is_literally_china = yes
 			}
-			ledger  = army 
+			ledger  = army
 			traits  = {
-				army_entrenchment_1 
+				army_entrenchment_1
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1930.1.1
-			}			
-		}		
+			}
+		}
 	}
 
 	QIN_shouxun={
@@ -1323,24 +1323,24 @@ characters={
 			army={
 				small="GFX_idea_generic_air_asia_1"
 			}
-		}		
+		}
 		advisor={
 			slot = high_command
 			idea_token = QIN_shouxun
 			allowed  = {
 				is_literally_china = yes
 			}
-			ledger  = army 
+			ledger  = army
 			traits  = {
-				army_logistics_2 
+				army_logistics_2
 			}
 			ai_will_do  = {
 				factor  = 1
 			}
 			visible = {
 				date < 1930.1.1
-			}			
-		}		
+			}
+		}
 	}
 
 	QIN_zaixun={
@@ -1349,23 +1349,23 @@ characters={
 			army={
 				small="gfx/interface/ideas/CHI/idea_QIN_zaixun.dds"
 			}
-		}		
+		}
 		advisor={
 			slot = high_command
 			idea_token = QIN_zaixun
 			allowed  = {
 					is_literally_china = yes
 				}
-				ledger  = navy 
+				ledger  = navy
 				traits  = {
-					navy_anti_submarine_1 
+					navy_anti_submarine_1
 				}
 				ai_will_do  = {
 					factor  = 1
 				}
 			visible = {
 				date < 1949.1.1
-			}				
+			}
 		}
 	}
 
@@ -1375,7 +1375,7 @@ characters={
 			army={
 				small="GFX_idea_generic_navy_asia_2"
 			}
-		}		
+		}
 		advisor={
 			slot = navy_chief
 			idea_token = QIN_tan_xueheng
@@ -1383,14 +1383,14 @@ characters={
 					is_literally_china = yes
 				}
 				traits  = {
-					navy_chief_commerce_raiding_2 
+					navy_chief_commerce_raiding_2
 				}
 				ai_will_do  = {
 					factor  = 1
 				}
 			visible = {
 				date < 1919.1.1
-			}				
+			}
 		}
 	}
 
@@ -1410,7 +1410,7 @@ characters={
 			cost  = 200
 			available = {
 				is_country_leader = no
-			}	
+			}
 			traits  = {
 				armaments_organizer
 			}
@@ -1419,81 +1419,144 @@ characters={
 			}
 			visible = {
 				date < 1939.6.5
-			}			
-		}
-	}	
-
-    #REGIONAL ACADEMIES
-
-	QIN_baoding_military_academy = {
-		name = QIN_baoding_military_academy
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_manpower_bonus"
-			}
-		}
-		advisor = {
-			slot = theorist
-			idea_token = CHI_baoding_military_academy
-			allowed = {
-				original_tag = QIN
-			}
-			ledger = army
-			available = {
-				608 = { is_owned_and_controlled_by = ROOT }
-			}
-			cost = 100
-			traits = {
-				military_theorist
 			}
 		}
 	}
 
-	QIN_yunnan_military_academy = {
-		name = QIN_yunnan_military_academy
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_manpower_bonus"
+	QIN_zhang_decheng={
+		name = QIN_zhang_decheng
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Zhang_Decheng.dds"
+			}
+			army={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Zhang_Decheng.dds"
 			}
 		}
-		advisor = {
-			slot = theorist
-			idea_token = QIN_yunnan_military_academy
-			allowed = {
-				original_tag = QIN
-			}
-			ledger = army
-			available = {
-				325 = { is_owned_and_controlled_by = ROOT }
-			}
-			cost = 100
-			traits = {
-				military_theorist
-			}
+		country_leader={
+			desc="POLITICS_ZHANG_DECHENG_DESC"
+			ideology=nationalism
+			traits={ resilient_nationalist anti_colonialist }
+			expire="1910.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ZHANG_DECHENG_DESC"
+			ideology=ultranationalism
+			traits={ resilient_nationalist anti_colonialist }
+			expire="1910.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ old_guard trait_reckless brilliant_strategist offensive_doctrine }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
 		}
 	}
 
-	QIN_yunnan_aviation_academy = {
-		name = QIN_yunnan_aviation_academy
-		portraits = {
-			army = {
-				small = "GFX_idea_air_support_focus"
+	QIN_cao_futian={
+		name = QIN_cao_futian
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Cao_Futian.dds"
+			}
+			army={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Cao_Futian.dds"
 			}
 		}
-		advisor = {
-			slot = theorist
-			idea_token = QIN_yunnan_aviation_academy
-			allowed = {
-				original_tag = QIN
-			}
-			ledger = army
-			available = {
-				325 = { is_owned_and_controlled_by = ROOT }
-			}
-			cost = 100
-			traits = {
-				air_warfare_theorist
-			}
+		country_leader={
+			desc="POLITICS_CAO_FUTIAN_DESC"
+			ideology=nationalism
+			traits={ resilient_nationalist anti_colonialist }
+			expire="1920.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_CAO_FUTIAN_DESC"
+			ideology=ultranationalism
+			traits={ resilient_nationalist anti_colonialist }
+			expire="1920.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ trickster cavalry_leader irregulars_officer urban_assault_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=1
 		}
 	}
+
+	QIN_zhao_laozhu={
+		name = QIN_zhao_laozhu
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Zhao_Laozhu.dds"
+			}
+			army={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Zhao_Laozhu.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ZHAO_LAOZHU_DESC"
+			ideology=nationalism
+			traits={ resilient_nationalist anti_colonialist }
+			expire="1920.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ZHAO_LAOZHU_DESC"
+			ideology=ultranationalism
+			traits={ resilient_nationalist anti_colonialist }
+			expire="1920.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ infantry_leader organizer commando irregulars_officer ambusher }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+
+	QIN_prince_zaiyi={
+		name = QIN_prince_zaiyi
+		portraits={
+			army={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Prince_Taun_Zaiyi.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=2
+			attack_skill=1
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+
+	QIN_dong_fuxiang={
+		name = QIN_dong_fuxiang
+		portraits={
+			army={
+				large="gfx/leaders/CHI/DNC/Portrait_China_Dong_Fuxian.dds"
+			}
+		}
+		corps_commander={
+			traits={ invader militias_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+
 }

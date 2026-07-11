@@ -70,9 +70,28 @@ recruit_character = QIN_xu_shichang
 recruit_character = QIN_zaifeng
 recruit_character = QIN_jiang_kanghu
 
+#Boxers
+recruit_character = QIN_zhang_decheng
+recruit_character = QIN_cao_futian
+recruit_character = QIN_zhao_laozhu
+recruit_character = QIN_prince_zaiyi
+recruit_character = QIN_dong_fuxiang
+
 set_technology = {
     tech_support = 1
     early_infantry_weapons = 1    
+}
+
+set_popularities = {
+	neutrality = 70
+	democratic = 30
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1884.4.8"
+	election_frequency = 60
+	elections_allowed = no
 }
 
 1900.1.1 = {
@@ -92,14 +111,13 @@ set_technology = {
 	promote_character = QIN_zaifeng
 }
 
-set_popularities = {
-	neutrality = 70
-	democratic = 30
+1910.1.1 = {
+	retire_character = QIN_dong_fuxiang
 }
 
-set_politics = {
-	ruling_party = neutrality
-	last_election = "1884.4.8"
-	election_frequency = 60
-	elections_allowed = no
+1919.1.1 = {
+	retire_character = QIN_zhang_decheng
+	retire_character = QIN_cao_futian
+	retire_character = QIN_zhao_laozhu
+	retire_character = QIN_prince_zaiyi
 }
