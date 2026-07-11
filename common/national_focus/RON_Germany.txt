@@ -7581,7 +7581,7 @@ focus_tree = {
 		id = GER_treaty_of_versailles
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 0.15
-		x = 15
+		x = 30
 		y = 0
 		completion_reward = {
 			if = {
@@ -7800,6 +7800,26 @@ focus_tree = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
+
+	focus = {
+		id = GER_sturmabteilung
+		icon = GFX_focus_eng_organise_the_blackshirts
+		cost = 10
+		prerequisite = {
+			focus = GER_veteran_organisation
+		}
+		relative_position_id = GER_veteran_organisation		
+		x = 0
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+		completion_reward = {
+			remove_ideas = paramilitary_training
+			add_ideas = fascist_assault_divisions
+				
+        }
+	}	
 
 	focus = {
 		id = GER_compromise_with_communist_councils
@@ -8198,7 +8218,7 @@ focus_tree = {
 			focus = GER_the_triumphant_will_weimar
 		}	
 
-		x = -10
+		x = -15
 		y = 1
 		relative_position_id = GER_rebuild_the_nation
 		cost = 5
@@ -8382,6 +8402,8 @@ focus_tree = {
 			add_political_power = 60
 			add_stability = 0.10
 			add_war_support = 0.05
+
+
 		}
 	}	
 
@@ -8891,7 +8913,7 @@ focus_tree = {
 	}	
 
 	focus = {
-		id = GER_rotten_morgen
+		id = GER_roter_morgen
 		icon = GFX_focus_ger_great_red_menace
 		prerequisite = { 
 			focus = GER_the_german_stakhanovite_movement_weimar
@@ -8926,11 +8948,11 @@ focus_tree = {
 	focus = {
 		id = GER_ignite_the_flames_of_revolution
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
-		prerequisite = { focus = GER_rotten_morgen }
+		prerequisite = { focus = GER_roter_morgen }
 
 		x = 0
 		y = 1
-		relative_position_id = GER_rotten_morgen
+		relative_position_id = GER_roter_morgen
 		cost = 5
 		available = {
 			is_subject = no
@@ -8973,6 +8995,49 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}	
+
+	focus = {
+		id = GER_political_commissars
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = GER_roter_morgen
+		}
+		relative_position_id = GER_roter_morgen		
+		x = 2
+		y = 1
+		available = {
+		    has_government = communism
+		}
+		completion_reward = {
+            add_ideas = GER_political_commissars_idea
+        }
+		ai_will_do = {
+			factor = 10
+		}
+	}	
+
+	focus = {
+		id = GER_federation_of_communes
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10
+		prerequisite = {
+			focus = GER_roter_morgen
+		}
+		relative_position_id = GER_roter_morgen		
+		x = -2
+		y = 1
+		available = {
+		    has_government = communism
+		}
+		completion_reward = {
+		    add_stability = 0.1
+            add_political_power = -75			
+        }
+		ai_will_do = {
+			factor = 10
 		}
 	}	
 
@@ -9065,6 +9130,8 @@ focus_tree = {
 			}
 		}
 	}	
+
+
 
 	focus = {
 		id = GER_liberate_italy_red
@@ -9326,6 +9393,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_demand_the_return_of_the_kaiser
 			focus = GER_hunt_down_the_defeatists
+			focus = GER_emergency_powers_act			
 		}
 		ai_will_do = {
 			factor = 1
@@ -9416,6 +9484,81 @@ focus_tree = {
 	} 	
 
 	focus = {
+		id = GER_emergency_powers_act
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = GER_military_authority_only
+		}
+		relative_position_id = GER_military_authority_only		
+		x = 0
+		y = 1
+		completion_reward = {
+		    add_political_power = 50
+            add_popularity = {
+                ideology = democratic
+                popularity = -0.2
+            }	
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}	
+
+	focus = {
+		id = GER_reichstag_crisis
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 10
+		prerequisite = {
+			focus = GER_emergency_powers_act
+		}
+		relative_position_id = GER_emergency_powers_act	
+		x = 0
+		y = 1
+		completion_reward = {
+		    add_stability = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }	
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}	
+
+	focus = {
+		id = GER_resist_to_occupation
+		icon = GFX_goal_generic_propaganda
+		cost = 20
+		prerequisite = {
+			focus = GER_reichstag_crisis
+		}
+		relative_position_id = GER_reichstag_crisis	
+		x = 0
+		y = 1
+		completion_reward = {
+			remove_ideas = { GER_idea_reparations }
+			every_state = {
+				limit = {
+					is_owned_by = FRA
+					is_core_of = GER
+				}
+				transfer_state = GER
+			}
+			add_stability = -0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+
+	}	
+
+	focus = {
 		id = GER_curtail_article_48
 		icon = GFX_goal_generic_wolf_pack
 		x = 2.5
@@ -9488,7 +9631,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_found_the_volksarbiterfront
-		icon = GFX_goal_COS_German_Bailout
+		icon = GFX_goal_GER_found_the_volksarbiterfront
 		x = 1
 		y = 1
 		cost = 10
@@ -9985,7 +10128,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_dawes_plan
-		icon = GFX_align_to_america
+		icon = GFX_goal_USA_america_economic_miracle
 		x = 2
 		y = 1
 		cost = 10
@@ -10554,9 +10697,31 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_popularity = { ideology = fascism popularity = -1 }
+			add_popularity = { 
+				ideology = fascism 
+				popularity = -1 
+			}
 		}
 	}
+
+	focus = {
+		id = GER_long_live_sacred_germany
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = GER_ban_the_nasdap
+		}
+		relative_position_id = GER_ban_the_nasdap		
+		x = 0
+		y = 1
+		completion_reward = {
+		    remove_ideas = GER_quenched_militarism
+            add_stability = 0.1			
+		}	
+		ai_will_do = {
+			factor = 10
+		}
+	}	
 
 	focus = {
 		id = GER_ensure_loyalty_of_the_army
@@ -10627,7 +10792,7 @@ focus_tree = {
 	focus = {
 		id = GER_open_to_free_market
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 58
+		x = 73
 		y = 10
 		cost = 10
 		ai_will_do = {
@@ -11340,7 +11505,7 @@ focus_tree = {
 	focus = {
 		id = GER_army_efforts
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 60
+		x = 75
 		y = 0
 		cost = 10
 		ai_will_do = {
