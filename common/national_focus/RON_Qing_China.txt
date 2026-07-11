@@ -433,7 +433,7 @@ focus_tree = {
 					has_idea = DNC_eight_nation_alliance
 				}
 				diplomatic_relation = {
-					country = QIN
+					country = PREV
 					relation = military_access
 					active = yes
 				}
@@ -511,7 +511,12 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			every_country = {
+				limit = {
+					has_idea = DNC_eight_nation_alliance
+				}
+				country_event = dnc_qing.7
+			}			
 		}
 	}
 
