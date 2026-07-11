@@ -74,4 +74,36 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = OTT_standardize_public_timekeeping
+		icon = GFX_focus_PLACEHOLDER
+		cost = 2
+		prerequisite = { focus = OTT_second_decade_of_the_hamidian_regime }
+		x = 0
+		y = 1
+		relative_position_id = OTT_second_decade_of_the_hamidian_regime
+
+		completion_reward = {
+			custom_effect_tooltip = OTT_modify_hamidian_regime_tt
+			add_to_variable = {
+				OTT_hamidian_compliance_gain = 0.001
+				tooltip = compliance_gain_tt
+			}
+			add_to_variable = {
+				OTT_hamidian_compliance_growth = 0.015
+				tooltip = compliance_growth_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.025
+			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
 }
