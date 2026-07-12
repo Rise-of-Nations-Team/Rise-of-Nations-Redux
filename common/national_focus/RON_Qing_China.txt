@@ -342,7 +342,7 @@ focus_tree = {
 		completion_reward = {
 			all_country = {
 				limit = {
-					any_core_state = {
+					any_controlled_state = {
 						is_core_of = QIN
 					}
 				}
@@ -538,7 +538,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			country_event = dnc_qing.8
 		}
 	}
 
@@ -584,7 +584,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			country_event = dnc_qing.9
 		}
 	}
 
@@ -608,7 +608,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			country_event = dnc_qing.10
 		}
 	}
 
@@ -631,7 +631,36 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			all_country = {
+				limit = {
+					has_idea = DNC_eight_nation_alliance
+				}
+				country_event = dnc_qing.11
+			}
+			all_core_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = QIN_boxer_rebellion
+						scope = QIN
+					}
+				}
+				transfer_state_to = QIN_boxers
+				remove_dynamic_modifier = {
+					modifier = QIN_boxer_rebellion
+					scope = QIN
+				}
+				create_unit = {
+					division = "name = \"Boxer Militia\" division_template = \"Boxer Militia\" start_excperience_factor = 0.5"
+					owner = QIN_boxers
+					id = 555
+					count = 2
+				}
+			}
+			declare_war_on = {
+				target = QIN_boxers
+				type = civil_war
+			}
+			add_civil_war_target = QIN_boxers
 		}
 	}
 	focus = {
@@ -652,7 +681,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-
+			country_event = dnc_qing.12
 		}
 	}
 
