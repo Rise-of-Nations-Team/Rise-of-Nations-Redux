@@ -7,7 +7,6 @@
 - Mstae67
 - Vernox
 - Zomboss11
-- Pozitox
 ## OUTSIDE CONTRIBUTIONS
 - J12 (sas_2000)
 - Persyk
