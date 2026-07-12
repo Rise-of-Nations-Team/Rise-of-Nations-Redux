@@ -249,7 +249,7 @@ country_event = {
 	option = {
 		name = dnctree.13.a
 		add_opinion_modifier = {
-			target = AUH
+			target = AUS
 			modifier = RI_visited_capital
 		}
 	}
@@ -476,7 +476,7 @@ country_event = {
 
 					create_faction_from_template = faction_template_central_powers
 
-		AUH = { country_event = { id = generic.5 hours = 1 } }
+		AUS = { country_event = { id = generic.5 hours = 1 } }
 
 	}
 
@@ -1378,7 +1378,7 @@ country_event = {
 	every_country = {
 		limit = { 
 			OR = {
-			tag = AUH
+			tag = AUS
 			tag = ENG
 			tag = FRA
 			tag = GER
@@ -1427,7 +1427,7 @@ country_event = {
 		every_country = {
 		limit = {  
 			OR = {
-			tag = AUH
+			tag = AUS
 			tag = ENG
 			tag = FRA
 			tag = GER
@@ -1527,7 +1527,7 @@ country_event = {
 	}
 }
 
-##Disband AUH-GER
+##Disband AUS-GER
 country_event = { 
 	id = dnctree.42
 	picture = GFX_report_event_DNC_Partition_of_Austria
@@ -1543,7 +1543,7 @@ country_event = {
 		all_state = {
 			if = {
 				limit = {
-					is_core_of = AUH
+					is_core_of = AUS
 				}
 				is_owned_by = GER
 			}
@@ -1558,7 +1558,7 @@ country_event = {
 			base = 1000
 		}
 
-		RON_partition_AUH_Ahistorically = yes
+		RON_partition_AUS_Ahistorically = yes
 		
 		annex_country = { target = AUS transfer_troops = no }
 
@@ -1572,7 +1572,7 @@ country_event = {
 
 		add_ideas = {
 			multi_ethnic
-			AUH_unequal_union
+			AUS_unequal_union
 		}
 
 		add_political_power = -300

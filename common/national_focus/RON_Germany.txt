@@ -701,7 +701,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = {
-				AUH_DNC_Realpolitik
+				AUS_DNC_Realpolitik
 			}
 		}
 	}
@@ -765,7 +765,7 @@ focus_tree = {
 			has_idea = DNC_GER_Customs_Union
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				country_event = dnc_germany.24
 			}
 		}
@@ -952,7 +952,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = {
-				AUH_DNC_Weltpolitik
+				AUS_DNC_Weltpolitik
 			}
 		}
 	}
@@ -1187,7 +1187,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				days = 365
-				idea = AUH_industrialisation
+				idea = AUS_industrialisation
 			}
 		}
 	}
@@ -1370,7 +1370,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = AUH_Currency_reform
+				idea = AUS_Currency_reform
 				days = 125
 			}
 		}
@@ -1410,7 +1410,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = AUH_vertical_integration
+			add_ideas = AUS_vertical_integration
 		}
 	}
 
@@ -1550,7 +1550,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = AUH_tax_reduction
+				idea = AUS_tax_reduction
 				days = 365
 			}
 		}
@@ -2195,14 +2195,14 @@ focus_tree = {
 		mutually_exclusive = { focus = GERDNC_friendship_with_russia }
 		bypass = {
 			NOT = {
-				country_exists = AUH
+				country_exists = AUS
 			}
 		}
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					target = GER
 					modifier = RI_friendly_foreign_policy
@@ -2293,21 +2293,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
-		will_lead_to_war_with = AUH
+		will_lead_to_war_with = AUS
 		bypass = {
 			NOT = {
-				country_exists = AUH
+				country_exists = AUS
 			}
 		}
 		available = {
 			NOT = {
-				is_in_faction_with = AUH
+				is_in_faction_with = AUS
 			}
 		}
 		completion_reward = {
 					create_wargoal = {			
 				expire = 250
-				target = AUH
+				target = AUS
 				type = annex_everything
 			}
 		}
@@ -2330,7 +2330,7 @@ focus_tree = {
 			country_exists = HUN
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				subtract_from_variable = {
 					HUN_support = 20
 				}
@@ -2338,7 +2338,7 @@ focus_tree = {
 			}
 			every_state = {
 				limit = {
-					is_controlled_by = AUH
+					is_controlled_by = AUS
 					is_core_of = HUN
 				}
 				add_resistance = 10
@@ -2362,7 +2362,7 @@ focus_tree = {
 			country_exists = CRO
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				subtract_from_variable = {
 					CRO_support = 20
 				}
@@ -2370,7 +2370,7 @@ focus_tree = {
 			}
 			every_state = {
 				limit = {
-					is_controlled_by = AUH
+					is_controlled_by = AUS
 					is_core_of = CRO
 				}
 				add_resistance = 10
@@ -2408,7 +2408,7 @@ focus_tree = {
 		prerequisite = { focus = GERDNC_promote_galician_nationalism }
 		bypass = {
 			NOT = {
-				country_exists = AUH
+				country_exists = AUS
 			}
 		}
 		ai_will_do = {
@@ -2457,7 +2457,7 @@ focus_tree = {
 			PAP = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -2631,13 +2631,13 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			NOT = { has_war_with = AUH }
+			NOT = { has_war_with = AUS }
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				country_event = DNC_Diplomacy.1
 			}
-			set_global_flag = GER_AUH_personnal_union
+			set_global_flag = GER_AUS_personnal_union
 		}
 	}
 
@@ -2693,16 +2693,16 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			NOT = { is_in_faction_with = AUH }
+			NOT = { is_in_faction_with = AUS }
 		}
 		bypass = {
-			has_war_with = AUH
+			has_war_with = AUS
 		}
-		will_lead_to_war_with = AUH
+		will_lead_to_war_with = AUS
 		completion_reward = {
 					create_wargoal = {			
 				expire = 250
-				target = AUH
+				target = AUS
 				type = annex_everything
 			}
 		}
@@ -2722,7 +2722,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
 					target = GER
@@ -2745,7 +2745,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					target = GER
 					modifier = RI_hostile_foreign_policy
@@ -2766,12 +2766,12 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				AND = {
-					NOT = { AUH = { has_completed_focus = AUHDNC_holy_roman_empire } }
-					NOT = { AUH = { has_completed_focus = AUHDNC_deutscher_bund } }
-					NOT = { AUH = { has_completed_focus = AUHDNC_erfurt_union } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_holy_roman_empire } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_deutscher_bund } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_erfurt_union } }
 				}
-				NOT = { country_exists = AUH }
-				AUH = { is_subject_of = ROOT }
+				NOT = { country_exists = AUS }
+				AUS = { is_subject_of = ROOT }
 			}
 		}
 		prerequisite = {
@@ -2838,12 +2838,12 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				AND = {
-					NOT = { AUH = { has_completed_focus = AUHDNC_holy_roman_empire } }
-					NOT = { AUH = { has_completed_focus = AUHDNC_deutscher_bund } }
-					NOT = { AUH = { has_completed_focus = AUHDNC_erfurt_union } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_holy_roman_empire } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_deutscher_bund } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_erfurt_union } }
 				}
-				NOT = { country_exists = AUH }
-				AUH = { is_subject_of = ROOT }
+				NOT = { country_exists = AUS }
+				AUS = { is_subject_of = ROOT }
 			}
 		}
 		ai_will_do = {
@@ -2895,12 +2895,12 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				AND = {
-					NOT = { AUH = { has_completed_focus = AUHDNC_holy_roman_empire } }
-					NOT = { AUH = { has_completed_focus = AUHDNC_deutscher_bund } }
-					NOT = { AUH = { has_completed_focus = AUHDNC_erfurt_union } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_holy_roman_empire } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_deutscher_bund } }
+					NOT = { AUS = { has_completed_focus = AUSDNC_erfurt_union } }
 				}
-				NOT = { country_exists = AUH }
-				AUH = { is_subject_of = ROOT }
+				NOT = { country_exists = AUS }
+				AUS = { is_subject_of = ROOT }
 			}
 		}
 		completion_reward = {
@@ -2970,9 +2970,9 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				NOT = { country_exists = AUH }
-				AUH = { is_subject_of = ROOT }
-				AUH = { is_in_faction_with = ROOT }
+				NOT = { country_exists = AUS }
+				AUS = { is_subject_of = ROOT }
+				AUS = { is_in_faction_with = ROOT }
 			}
 		}
 		completion_reward = {
@@ -3056,10 +3056,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = GERDNC_our_austrian_ally }
 		available = {
-			NOT = { has_war_with = AUH }
+			NOT = { has_war_with = AUS }
 		}
 		bypass = {
-			is_in_faction_with = AUH
+			is_in_faction_with = AUS
 		}
 		ai_will_do = {
 			factor = 100
@@ -3067,17 +3067,17 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					AUH = {
+					AUS = {
 						is_faction_leader = yes
 					}
 				}
-				AUH = {
+				AUS = {
 					country_event = generic.2
 				}
 			}
 			else = {
 
-				AUH = {
+				AUS = {
 					country_event = generic.5
 				}
 			}
@@ -3097,7 +3097,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
 					target = GER
@@ -4060,7 +4060,7 @@ focus_tree = {
 		completion_reward = {
 			BOX = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_hostile_foreign_policy
 				}
 			}
@@ -4461,13 +4461,13 @@ focus_tree = {
 			RUS = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 			FRA = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -4486,7 +4486,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
 					target = GER
@@ -4508,7 +4508,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
 					target = GER
@@ -4557,7 +4557,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					modifier = RI_visited_capital
 					target = GER
@@ -4722,7 +4722,7 @@ focus_tree = {
 			send_equipment = {
 				type = infantry_equipment
 				amount = 500
-				target = AUH
+				target = AUS
 			}
 			send_equipment = {
 				type = infantry_equipment
@@ -4851,7 +4851,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
 					target = GER
@@ -4881,7 +4881,7 @@ focus_tree = {
 			FRA = {
 				add_opinion_modifier = {
 					modifier = RI_official_language
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5359,7 +5359,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_opinion_modifier = {
-				target = AUH
+				target = AUS
 				modifier = RI_sanctions
 			}
 		}
@@ -5380,10 +5380,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_opinion_modifier = {
-				target = AUH
+				target = AUS
 				modifier = RI_supports_own_politics
 			}
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = RI_supports_own_politics
@@ -5520,7 +5520,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_opinion_modifier = {
-				target = AUH
+				target = AUS
 				modifier = RI_friendly_foreign_policy
 			}
 			add_opinion_modifier = {

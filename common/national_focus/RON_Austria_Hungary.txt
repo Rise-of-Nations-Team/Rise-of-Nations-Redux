@@ -6,7 +6,7 @@ focus_tree = {
 
 		modifier = {
 			add = 10
-			tag = AUH
+			tag = AUS
 			date < 1910.1.1
 		}
 	}
@@ -26,18 +26,18 @@ focus_tree = {
 
 	#Focus for Balkan Expansion
 	focus = {
-		id = AUHDNC_balkan_expansion
+		id = AUSDNC_balkan_expansion
 		icon = GFX_focus_BUL_the_fate_of_the_balkans
 		x = 52
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_austrian_empire
-			focus = AUHDNC_austriahungary
-			focus = AUHDNC_deutscher_bund
-			focus = AUHDNC_erfurt_union
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_austrian_empire
+			focus = AUSDNC_austriahungary
+			focus = AUSDNC_deutscher_bund
+			focus = AUSDNC_erfurt_union
+			focus = AUSDNC_holy_roman_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -45,41 +45,41 @@ focus_tree = {
 		completion_reward = {
 			add_named_threat = {
 				threat = 5
-				name = AUH_Balkan_expansion
+				name = AUS_Balkan_expansion
 			}
 		}
 	}
 
 	#Focus for Alles Erdreich Ist Österreich Untertan
 	focus = {
-		id = AUHDNC_alles_erdreich_ist_sterreich_untertan
+		id = AUSDNC_alles_erdreich_ist_sterreich_untertan
 		icon = GFX_focus_jap_strike_south
 		x = 56
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_a_habsburgbraganza_marriage
-			focus = AUHDNC_our_claim_to_the_portugese_throne
+			focus = AUSDNC_a_habsburgbraganza_marriage
+			focus = AUSDNC_our_claim_to_the_portugese_throne
 		}
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = AUH_DNC_Supremacy
-			remove_ideas = AUH_inexperenced_colonial_administrators
+			add_ideas = AUS_DNC_Supremacy
+			remove_ideas = AUS_inexperenced_colonial_administrators
 		}
 	}
 
 	#Focus for Austrian Industrial Giant
 	focus = {
-		id = AUHDNC_austrian_industrial_giant
+		id = AUSDNC_austrian_industrial_giant
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 4
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_expand_railways }
+		prerequisite = { focus = AUSDNC_expand_railways }
 		ai_will_do = {
 			factor = 100
 		}
@@ -101,7 +101,7 @@ focus_tree = {
 
 	#Focus for Open The Political Sphere
 	focus = {
-		id = AUHDNC_open_the_political_sphere
+		id = AUSDNC_open_the_political_sphere
 		icon = GFX_focus_AUS_Ausgleich_of_1936
 		x = 12
 		y = 1
@@ -118,14 +118,14 @@ focus_tree = {
 
 	#Focus for Empower The Kaiser
 	focus = {
-		id = AUHDNC_empower_the_kaiser
+		id = AUSDNC_empower_the_kaiser
 		icon = GFX_focus_hun_elect_a_king
 		x = 7
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_open_the_political_sphere }
-		mutually_exclusive = { focus = AUHDNC_empower_the_reichsrat }
+		prerequisite = { focus = AUSDNC_open_the_political_sphere }
+		mutually_exclusive = { focus = AUSDNC_empower_the_reichsrat }
 		ai_will_do = {
 			factor = 300
 			modifier = {
@@ -146,14 +146,14 @@ focus_tree = {
 
 	#Focus for Empower The Reichsrat
 	focus = {
-		id = AUHDNC_empower_the_reichsrat
+		id = AUSDNC_empower_the_reichsrat
 		icon = GFX_goal_support_democracy
 		x = 19
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_open_the_political_sphere }
-		mutually_exclusive = { focus = AUHDNC_empower_the_kaiser }
+		prerequisite = { focus = AUSDNC_open_the_political_sphere }
+		mutually_exclusive = { focus = AUSDNC_empower_the_kaiser }
 		ai_will_do = {
 			factor = 200
 			modifier = {
@@ -174,13 +174,13 @@ focus_tree = {
 
 	#Focus for The Noble Birthright
 	focus = {
-		id = AUHDNC_the_noble_birthright
+		id = AUSDNC_the_noble_birthright
 		icon = GFX_focus_eng_god_save_the_king
 		x = 5
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_empower_the_kaiser }
+		prerequisite = { focus = AUSDNC_empower_the_kaiser }
 		ai_will_do = {
 			factor = 200
 		}
@@ -210,13 +210,13 @@ focus_tree = {
 
 	#Focus for The Rightful Rule
 	focus = {
-		id = AUHDNC_the_rightful_rule
+		id = AUSDNC_the_rightful_rule
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 9
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_empower_the_kaiser }
+		prerequisite = { focus = AUSDNC_empower_the_kaiser }
 		ai_will_do = {
 			factor = 200
 		}
@@ -247,17 +247,17 @@ focus_tree = {
 
 	#Focus for Monarchist Officers
 	focus = {
-		id = AUHDNC_monarchist_officers
+		id = AUSDNC_monarchist_officers
 		icon = GFX_focus_mex_support_general_cedillo
 		x = 5
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_the_noble_birthright
+			focus = AUSDNC_the_noble_birthright
 		}
 		prerequisite = {
-			focus = AUHDNC_the_rightful_rule
+			focus = AUSDNC_the_rightful_rule
 		}
 		ai_will_do = {
 			factor = 200
@@ -288,17 +288,17 @@ focus_tree = {
 
 	#Focus for Encourage Patriotism
 	focus = {
-		id = AUHDNC_encourage_patriotism
+		id = AUSDNC_encourage_patriotism
 		icon = GFX_focus_generic_monarchy_2
 		x = 7
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_the_noble_birthright
+			focus = AUSDNC_the_noble_birthright
 		}
 		prerequisite = {
-			focus = AUHDNC_the_rightful_rule
+			focus = AUSDNC_the_rightful_rule
 		}
 		ai_will_do = {
 			factor = 200
@@ -329,17 +329,17 @@ focus_tree = {
 
 	#Focus for Monarchist Politicians
 	focus = {
-		id = AUHDNC_monarchist_politicians
+		id = AUSDNC_monarchist_politicians
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 9
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_the_rightful_rule
+			focus = AUSDNC_the_rightful_rule
 		}
 		prerequisite = {
-			focus = AUHDNC_the_noble_birthright
+			focus = AUSDNC_the_noble_birthright
 		}
 		ai_will_do = {
 			factor = 200
@@ -370,20 +370,20 @@ focus_tree = {
 
 	#Focus for Controlled Oposition
 	focus = {
-		id = AUHDNC_controlled_oposition
+		id = AUSDNC_controlled_oposition
 		icon = GFX_focus_usa_voter_registration_act
 		x = 7
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_monarchist_officers
+			focus = AUSDNC_monarchist_officers
 		}
 		prerequisite = {
-			focus = AUHDNC_encourage_patriotism
+			focus = AUSDNC_encourage_patriotism
 		}
 		prerequisite = {
-			focus = AUHDNC_monarchist_politicians
+			focus = AUSDNC_monarchist_politicians
 		}
 		ai_will_do = {
 			factor = 200
@@ -418,13 +418,13 @@ focus_tree = {
 
 	#Focus for Unite Behind Haus Habsburg
 	focus = {
-		id = AUHDNC_unite_behind_haus_habsburg
+		id = AUSDNC_unite_behind_haus_habsburg
 		icon = GFX_focus_AUS_keep_it_steady
 		x = 7
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_controlled_oposition }
+		prerequisite = { focus = AUSDNC_controlled_oposition }
 		ai_will_do = {
 			factor = 200
 		}
@@ -436,13 +436,13 @@ focus_tree = {
 
 	#Focus for Supporters In The Factories
 	focus = {
-		id = AUHDNC_supporters_in_the_factories
+		id = AUSDNC_supporters_in_the_factories
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 17
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_empower_the_reichsrat }
+		prerequisite = { focus = AUSDNC_empower_the_reichsrat }
 		ai_will_do = {
 			factor = 200
 		}
@@ -472,13 +472,13 @@ focus_tree = {
 
 	#Focus for Support Free Speech
 	focus = {
-		id = AUHDNC_support_free_speech
+		id = AUSDNC_support_free_speech
 		icon = GFX_goal_generic_propaganda
 		x = 21
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_empower_the_reichsrat }
+		prerequisite = { focus = AUSDNC_empower_the_reichsrat }
 		ai_will_do = {
 			factor = 200
 		}
@@ -491,17 +491,17 @@ focus_tree = {
 
 	#Focus for Workers Rights Movements
 	focus = {
-		id = AUHDNC_workers_rights_movements
+		id = AUSDNC_workers_rights_movements
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 17
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_supporters_in_the_factories
+			focus = AUSDNC_supporters_in_the_factories
 		}
 		prerequisite = {
-			focus = AUHDNC_support_free_speech
+			focus = AUSDNC_support_free_speech
 		}
 		ai_will_do = {
 			factor = 200
@@ -515,17 +515,17 @@ focus_tree = {
 
 	#Focus for Freedom Of The Press
 	focus = {
-		id = AUHDNC_freedom_of_the_press
+		id = AUSDNC_freedom_of_the_press
 		icon = GFX_focus_hol_the_foundations_of_defense
 		x = 19
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_supporters_in_the_factories
+			focus = AUSDNC_supporters_in_the_factories
 		}
 		prerequisite = {
-			focus = AUHDNC_support_free_speech
+			focus = AUSDNC_support_free_speech
 		}
 		ai_will_do = {
 			factor = 200
@@ -541,17 +541,17 @@ focus_tree = {
 
 	#Focus for The Imperial Diet
 	focus = {
-		id = AUHDNC_the_imperial_diet
+		id = AUSDNC_the_imperial_diet
 		icon = GFX_focus_AUS_reorganize_parlament
 		x = 21
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_supporters_in_the_factories
+			focus = AUSDNC_supporters_in_the_factories
 		}
 		prerequisite = {
-			focus = AUHDNC_support_free_speech
+			focus = AUSDNC_support_free_speech
 		}
 		ai_will_do = {
 			factor = 200
@@ -569,20 +569,20 @@ focus_tree = {
 
 	#Focus for Draft A New Constitution
 	focus = {
-		id = AUHDNC_draft_a_new_constitution
+		id = AUSDNC_draft_a_new_constitution
 		icon = GFX_focus_generic_treaty
 		x = 19
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_workers_rights_movements
+			focus = AUSDNC_workers_rights_movements
 		}
 		prerequisite = {
-			focus = AUHDNC_freedom_of_the_press
+			focus = AUSDNC_freedom_of_the_press
 		}
 		prerequisite = {
-			focus = AUHDNC_the_imperial_diet
+			focus = AUSDNC_the_imperial_diet
 		}
 		ai_will_do = {
 			factor = 200
@@ -596,13 +596,13 @@ focus_tree = {
 
 	#Focus for Free And Fair Elections
 	focus = {
-		id = AUHDNC_free_and_fair_elections
+		id = AUSDNC_free_and_fair_elections
 		icon = GFX_focus_hol_the_foundations_of_defense
 		x = 19
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_draft_a_new_constitution }
+		prerequisite = { focus = AUSDNC_draft_a_new_constitution }
 		ai_will_do = {
 			factor = 200
 		}
@@ -613,33 +613,33 @@ focus_tree = {
 
 	#Focus for Realpolitik
 	focus = {
-		id = AUHDNC_realpolitik
+		id = AUSDNC_realpolitik
 		icon = GFX_focus_AUS_repay_depth
 		x = 2
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_unite_behind_haus_habsburg }
+		prerequisite = { focus = AUSDNC_unite_behind_haus_habsburg }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_ideas = {
-				AUH_DNC_Realpolitik
+				AUS_DNC_Realpolitik
 			}
 		}
 	}
 
 	#Focus for Economic Focus
 	focus = {
-		id = AUHDNC_economic_focus
+		id = AUSDNC_economic_focus
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 0
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_realpolitik }
-		mutually_exclusive = { focus = AUHDNC_industrial_focus }
+		prerequisite = { focus = AUSDNC_realpolitik }
+		mutually_exclusive = { focus = AUSDNC_industrial_focus }
 		ai_will_do = {
 			factor = 100
 		}
@@ -656,13 +656,13 @@ focus_tree = {
 
 	#Focus for The Welfare State
 	focus = {
-		id = AUHDNC_the_welfare_state
+		id = AUSDNC_the_welfare_state
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_economic_focus }
+		prerequisite = { focus = AUSDNC_economic_focus }
 		ai_will_do = {
 			factor = 100
 		}
@@ -674,13 +674,13 @@ focus_tree = {
 
 	#Focus for German Customs Union
 	focus = {
-		id = AUHDNC_german_customs_union
+		id = AUSDNC_german_customs_union
 		icon = GFX_focus_AUS_From_economic_union
 		x = 0
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_the_welfare_state }
+		prerequisite = { focus = AUSDNC_the_welfare_state }
 		ai_will_do = {
 			factor = 100
 		}
@@ -693,14 +693,14 @@ focus_tree = {
 
 	#Focus for Industrial Focus
 	focus = {
-		id = AUHDNC_industrial_focus
+		id = AUSDNC_industrial_focus
 		icon = GFX_focus_generic_industry_3
 		x = 4
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_realpolitik }
-		mutually_exclusive = { focus = AUHDNC_economic_focus }
+		prerequisite = { focus = AUSDNC_realpolitik }
+		mutually_exclusive = { focus = AUSDNC_economic_focus }
 		ai_will_do = {
 			factor = 100
 		}
@@ -717,13 +717,13 @@ focus_tree = {
 
 	#Focus for Expand Railways
 	focus = {
-		id = AUHDNC_expand_railways
+		id = AUSDNC_expand_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_industrial_focus }
+		prerequisite = { focus = AUSDNC_industrial_focus }
 		ai_will_do = {
 			factor = 100
 		}
@@ -747,15 +747,15 @@ focus_tree = {
 
 	#Focus for Liberal State Schools
 	focus = {
-		id = AUHDNC_liberal_state_schools
+		id = AUSDNC_liberal_state_schools
 		icon = GFX_focus_generic_strike_at_democracy3
 		x = 2
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_economic_focus
-			focus = AUHDNC_industrial_focus
+			focus = AUSDNC_economic_focus
+			focus = AUSDNC_industrial_focus
 		}
 		ai_will_do = {
 			factor = 100
@@ -770,13 +770,13 @@ focus_tree = {
 
 	#Focus for Austrian Academy of Sciences
 	focus = {
-		id = AUHDNC_austrian_academy_of_sciences
+		id = AUSDNC_austrian_academy_of_sciences
 		icon = GFX_focus_research2
 		x = 2
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_liberal_state_schools }
+		prerequisite = { focus = AUSDNC_liberal_state_schools }
 		ai_will_do = {
 			factor = 100
 		}
@@ -787,16 +787,16 @@ focus_tree = {
 
 	#Focus for Modern Industrial Processes
 	focus = {
-		id = AUHDNC_modern_industrial_processes
+		id = AUSDNC_modern_industrial_processes
 		icon = GFX_goal_generic_consumer_goods
 		x = 2
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_german_customs_union
-			focus = AUHDNC_austrian_academy_of_sciences
-			focus = AUHDNC_austrian_industrial_giant
+			focus = AUSDNC_german_customs_union
+			focus = AUSDNC_austrian_academy_of_sciences
+			focus = AUSDNC_austrian_industrial_giant
 		}
 		ai_will_do = {
 			factor = 100
@@ -812,32 +812,32 @@ focus_tree = {
 
 	#Focus for Weltpolitik
 	focus = {
-		id = AUHDNC_weltpolitik
+		id = AUSDNC_weltpolitik
 		icon = GFX_focus_AUS_secure_dominance
 		x = 9
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_unite_behind_haus_habsburg }
+		prerequisite = { focus = AUSDNC_unite_behind_haus_habsburg }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_ideas = {
-				AUH_DNC_Weltpolitik
+				AUS_DNC_Weltpolitik
 			}
 		}
 	}
 
 	#Focus for Gemeinsame Armee
 	focus = {
-		id = AUHDNC_gemeinsame_armee
+		id = AUSDNC_gemeinsame_armee
 		icon = GFX_focus_chi_army_reform
 		x = 7
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_weltpolitik }
+		prerequisite = { focus = AUSDNC_weltpolitik }
 		ai_will_do = {
 			factor = 100
 		}
@@ -849,13 +849,13 @@ focus_tree = {
 
 	#Focus for Kaiserlich-Königliche Landwehr
 	focus = {
-		id = AUHDNC_kaiserlichknigliche_landwehr
+		id = AUSDNC_kaiserlichknigliche_landwehr
 		icon = GFX_focus_ger_oppose_hitler
 		x = 7
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_gemeinsame_armee }
+		prerequisite = { focus = AUSDNC_gemeinsame_armee }
 		ai_will_do = {
 			factor = 100
 		}
@@ -866,13 +866,13 @@ focus_tree = {
 
 	#Focus for Königlich Ungarische Landwehr
 	focus = {
-		id = AUHDNC_kniglich_ungarische_landwehr
+		id = AUSDNC_kniglich_ungarische_landwehr
 		icon = GFX_focus_generic_manpower
 		x = 7
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_kaiserlichknigliche_landwehr }
+		prerequisite = { focus = AUSDNC_kaiserlichknigliche_landwehr }
 		ai_will_do = {
 			factor = 100
 		}
@@ -887,13 +887,13 @@ focus_tree = {
 
 	#Focus for Weaken The Reichsrat
 	focus = {
-		id = AUHDNC_weaken_the_reichsrat
+		id = AUSDNC_weaken_the_reichsrat
 		icon = GFX_focus_generic_monarchy_1
 		x = 11
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_weltpolitik }
+		prerequisite = { focus = AUSDNC_weltpolitik }
 		ai_will_do = {
 			factor = 100
 		}
@@ -908,13 +908,13 @@ focus_tree = {
 
 	#Focus for Exercise Our Political Influence
 	focus = {
-		id = AUHDNC_exercise_our_political_influence
+		id = AUSDNC_exercise_our_political_influence
 		icon = GFX_focus_usa_focus_on_europe
 		x = 11
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_weaken_the_reichsrat }
+		prerequisite = { focus = AUSDNC_weaken_the_reichsrat }
 		ai_will_do = {
 			factor = 100
 		}
@@ -933,30 +933,30 @@ focus_tree = {
 
 	#Focus for Evidenzbureau Infiltration
 	focus = {
-		id = AUHDNC_evidenzbureau_infiltration
+		id = AUSDNC_evidenzbureau_infiltration
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 11
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_exercise_our_political_influence }
+		prerequisite = { focus = AUSDNC_exercise_our_political_influence }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = AUH_Evidenzbureau1
+			add_ideas = AUS_Evidenzbureau1
 		}
 	}
 
 	#Focus for K.U.K Kriegsmarine
 	focus = {
-		id = AUHDNC_kuk_kriegsmarine
+		id = AUSDNC_kuk_kriegsmarine
 		icon = GFX_goal_generic_navy_battleship
 		x = 9
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_weltpolitik }
+		prerequisite = { focus = AUSDNC_weltpolitik }
 		ai_will_do = {
 			factor = 100
 		}
@@ -967,13 +967,13 @@ focus_tree = {
 
 	#Focus for Modernize The Kriegsmarine
 	focus = {
-		id = AUHDNC_modernize_the_kriegsmarine
+		id = AUSDNC_modernize_the_kriegsmarine
 		icon = GFX_goal_generic_navy_cruiser
 		x = 9
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_kuk_kriegsmarine }
+		prerequisite = { focus = AUSDNC_kuk_kriegsmarine }
 		ai_will_do = {
 			factor = 100
 		}
@@ -988,13 +988,13 @@ focus_tree = {
 
 	#Focus for Powerhouse Of The Mediterranean
 	focus = {
-		id = AUHDNC_powerhouse_of_the_mediterranean
+		id = AUSDNC_powerhouse_of_the_mediterranean
 		icon = GFX_goal_generic_navy_battleship
 		x = 9
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_modernize_the_kriegsmarine }
+		prerequisite = { focus = AUSDNC_modernize_the_kriegsmarine }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1020,13 +1020,13 @@ focus_tree = {
 
 	#Focus for A Great Power Once More
 	focus = {
-		id = AUHDNC_a_great_power_once_more
+		id = AUSDNC_a_great_power_once_more
 		icon = GFX_focus_AUS_new_horizons
 		x = 9
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_powerhouse_of_the_mediterranean }
+		prerequisite = { focus = AUSDNC_powerhouse_of_the_mediterranean }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1038,15 +1038,15 @@ focus_tree = {
 
 	#Focus for Industrial Development
 	focus = {
-		id = AUHDNC_industrial_development
+		id = AUSDNC_industrial_development
 		icon = GFX_focus_generic_industry_3
 		x = 19
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_free_and_fair_elections
-			focus = AUHDNC_unite_behind_haus_habsburg
+			focus = AUSDNC_free_and_fair_elections
+			focus = AUSDNC_unite_behind_haus_habsburg
 		}
 		ai_will_do = {
 			factor = 100
@@ -1058,21 +1058,21 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				days = 365
-				idea = AUH_industrialisation
+				idea = AUS_industrialisation
 			}
 		}
 	}
 
 	#Focus for Austrian Military Tradition
 	focus = {
-		id = AUHDNC_austrian_military_tradition
+		id = AUSDNC_austrian_military_tradition
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 18
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_industrial_development }
-		mutually_exclusive = { focus = AUHDNC_a_modern_army }
+		prerequisite = { focus = AUSDNC_industrial_development }
+		mutually_exclusive = { focus = AUSDNC_a_modern_army }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -1089,14 +1089,14 @@ focus_tree = {
 
 	#Focus for A Modern Army
 	focus = {
-		id = AUHDNC_a_modern_army
+		id = AUSDNC_a_modern_army
 		icon = GFX_focus_ger_oppose_hitler
 		x = 20
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_industrial_development }
-		mutually_exclusive = { focus = AUHDNC_austrian_military_tradition }
+		prerequisite = { focus = AUSDNC_industrial_development }
+		mutually_exclusive = { focus = AUSDNC_austrian_military_tradition }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -1116,33 +1116,33 @@ focus_tree = {
 
 	#Focus for Revise Weltpolitik
 	focus = {
-		id = AUHDNC_revise_weltpolitik
+		id = AUSDNC_revise_weltpolitik
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 38
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_free_and_fair_elections }
+		prerequisite = { focus = AUSDNC_free_and_fair_elections }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_named_threat = {
 				threat = 5
-				name = AUH_Weltpolitik
+				name = AUS_Weltpolitik
 			}
 		}
 	}
 
 	#Focus for Economic Liberalism
 	focus = {
-		id = AUHDNC_economic_liberalism
+		id = AUSDNC_economic_liberalism
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 44
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_free_and_fair_elections }
+		prerequisite = { focus = AUSDNC_free_and_fair_elections }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1153,13 +1153,13 @@ focus_tree = {
 
 	#Focus for Expand Military Industry
 	focus = {
-		id = AUHDNC_expand_military_industry
+		id = AUSDNC_expand_military_industry
 		icon = GFX_focus_generic_tank_production
 		x = 36
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_revise_weltpolitik }
+		prerequisite = { focus = AUSDNC_revise_weltpolitik }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1176,13 +1176,13 @@ focus_tree = {
 
 	#Focus for Moderate Imperialism
 	focus = {
-		id = AUHDNC_moderate_imperialism
+		id = AUSDNC_moderate_imperialism
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 38
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_revise_weltpolitik }
+		prerequisite = { focus = AUSDNC_revise_weltpolitik }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1190,22 +1190,22 @@ focus_tree = {
 			every_state = {
 				limit = {
 					is_core_of = LBV
-					NOT = { is_core_of = AUH }
+					NOT = { is_core_of = AUS }
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 		}
 	}
 
 	#Focus for Österreichisches Bundesheer
 	focus = {
-		id = AUHDNC_sterreichisches_bundesheer
+		id = AUSDNC_sterreichisches_bundesheer
 		icon = GFX_focus_chi_army_reform
 		x = 40
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_revise_weltpolitik }
+		prerequisite = { focus = AUSDNC_revise_weltpolitik }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1216,13 +1216,13 @@ focus_tree = {
 
 	#Focus for Manfréd Weiss Steel and Metal Works
 	focus = {
-		id = AUHDNC_manfrd_weiss_steel_and_metal_works
+		id = AUSDNC_manfrd_weiss_steel_and_metal_works
 		icon = GFX_focus_generic_steel
 		x = 45
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_economic_liberalism }
+		prerequisite = { focus = AUSDNC_economic_liberalism }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1239,19 +1239,19 @@ focus_tree = {
 
 	#Focus for Currency Reform
 	focus = {
-		id = AUHDNC_currency_reform
+		id = AUSDNC_currency_reform
 		icon = GFX_focus_mex_privatisation
 		x = 43
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_economic_liberalism }
+		prerequisite = { focus = AUSDNC_economic_liberalism }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = AUH_Currency_reform
+				idea = AUS_Currency_reform
 				days = 125
 			}
 		}
@@ -1259,13 +1259,13 @@ focus_tree = {
 
 	#Focus for Cooperative Military Research
 	focus = {
-		id = AUHDNC_cooperative_military_research
+		id = AUSDNC_cooperative_military_research
 		icon = GFX_goal_continuous_research
 		x = 36
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_expand_military_industry }
+		prerequisite = { focus = AUSDNC_expand_military_industry }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1280,30 +1280,30 @@ focus_tree = {
 
 	#Focus for Vertical Integration
 	focus = {
-		id = AUHDNC_vertical_integration
+		id = AUSDNC_vertical_integration
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 38
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_moderate_imperialism }
+		prerequisite = { focus = AUSDNC_moderate_imperialism }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = AUH_vertical_integration
+			add_ideas = AUS_vertical_integration
 		}
 	}
 
 	#Focus for Sphere of Influence
 	focus = {
-		id = AUHDNC_sphere_of_influence
+		id = AUSDNC_sphere_of_influence
 		icon = GFX_focus_BUL_free_balkan_states
 		x = 38
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_vertical_integration }
+		prerequisite = { focus = AUSDNC_vertical_integration }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1311,7 +1311,7 @@ focus_tree = {
 			every_neighbor_country = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_politics
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -1319,13 +1319,13 @@ focus_tree = {
 
 	#Focus for Zivildienst
 	focus = {
-		id = AUHDNC_zivildienst
+		id = AUSDNC_zivildienst
 		icon = GFX_focus_mex_soldaderas
 		x = 40
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_sterreichisches_bundesheer }
+		prerequisite = { focus = AUSDNC_sterreichisches_bundesheer }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1336,13 +1336,13 @@ focus_tree = {
 
 	#Focus for New Military Ethos
 	focus = {
-		id = AUHDNC_new_military_ethos
+		id = AUSDNC_new_military_ethos
 		icon = GFX_focus_generic_manpower
 		x = 40
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_zivildienst }
+		prerequisite = { focus = AUSDNC_zivildienst }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1358,53 +1358,53 @@ focus_tree = {
 
 	#Focus for Revising The Evidenzbureau
 	focus = {
-		id = AUHDNC_revising_the_evidenzbureau
+		id = AUSDNC_revising_the_evidenzbureau
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 38
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_cooperative_military_research
-			focus = AUHDNC_sphere_of_influence
+			focus = AUSDNC_cooperative_military_research
+			focus = AUSDNC_sphere_of_influence
 		}
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			swap_ideas = {
-				add_idea = AUH_Evidenzbureau2
-				remove_idea = AUH_Evidenzbureau1
+				add_idea = AUS_Evidenzbureau2
+				remove_idea = AUS_Evidenzbureau1
 			}
 		}
 	}
 
 	#Focus for Bundesministerium Für Landesverteidigung
 	focus = {
-		id = AUHDNC_bundesministerium_fr_landesverteidigung
+		id = AUSDNC_bundesministerium_fr_landesverteidigung
 		icon = GFX_focus_mex_support_general_cedillo
 		x = 38
 		y = 12
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_revising_the_evidenzbureau }
+		prerequisite = { focus = AUSDNC_revising_the_evidenzbureau }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = AUH_Ministerium_fur_lendesverteidigung
+			add_ideas = AUS_Ministerium_fur_lendesverteidigung
 		}
 	}
 
 	#Focus for Bundesministerium Für Inneres
 	focus = {
-		id = AUHDNC_bundesministerium_fr_inneres
+		id = AUSDNC_bundesministerium_fr_inneres
 		icon = army_officers
 		x = 38
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_bundesministerium_fr_landesverteidigung }
+		prerequisite = { focus = AUSDNC_bundesministerium_fr_landesverteidigung }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1416,19 +1416,19 @@ focus_tree = {
 
 	#Focus for Tax Reductions
 	focus = {
-		id = AUHDNC_tax_reductions
+		id = AUSDNC_tax_reductions
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		x = 43
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_currency_reform }
+		prerequisite = { focus = AUSDNC_currency_reform }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = AUH_tax_reduction
+				idea = AUS_tax_reduction
 				days = 365
 			}
 		}
@@ -1436,13 +1436,13 @@ focus_tree = {
 
 	#Focus for Economic Reforms
 	focus = {
-		id = AUHDNC_economic_reforms
+		id = AUSDNC_economic_reforms
 		icon = GFX_goal_generic_consumer_goods
 		x = 45
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_manfrd_weiss_steel_and_metal_works }
+		prerequisite = { focus = AUSDNC_manfrd_weiss_steel_and_metal_works }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1459,17 +1459,17 @@ focus_tree = {
 
 	#Focus for Ordoliberal Paradise
 	focus = {
-		id = AUHDNC_ordoliberal_paradise
+		id = AUSDNC_ordoliberal_paradise
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 44
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_tax_reductions
+			focus = AUSDNC_tax_reductions
 		}
 		prerequisite = {
-			focus = AUHDNC_economic_reforms
+			focus = AUSDNC_economic_reforms
 		}
 		ai_will_do = {
 			factor = 100
@@ -1491,21 +1491,21 @@ focus_tree = {
 
 	#Focus for Establish Hegemonic Dominance
 	focus = {
-		id = AUHDNC_establish_hegemonic_dominance
+		id = AUSDNC_establish_hegemonic_dominance
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		x = 44
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_ordoliberal_paradise }
+		prerequisite = { focus = AUSDNC_ordoliberal_paradise }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			remove_ideas = AUH_inexperenced_colonial_administrators
+			remove_ideas = AUS_inexperenced_colonial_administrators
 			add_named_threat = {
 				threat = 10
-				name = AUH_HEGEMONIC_DOMINANCE
+				name = AUS_HEGEMONIC_DOMINANCE
 			}
 		}
 
@@ -1513,15 +1513,15 @@ focus_tree = {
 
 	#Focus for Annex Bosnia
 	focus = {
-		id = AUHDNC_annex_bosnia
+		id = AUSDNC_annex_bosnia
 		icon = GFX_goal_generic_territory_or_war
 		x = 5
 		y = 12
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_modern_industrial_processes
-			focus = AUHDNC_a_great_power_once_more
+			focus = AUSDNC_modern_industrial_processes
+			focus = AUSDNC_a_great_power_once_more
 		}
 		ai_will_do = {
 			factor = 1000
@@ -1537,15 +1537,15 @@ focus_tree = {
 
 	#Focus for Draw Up Plans For Mitteleuropa
 	focus = {
-		id = AUHDNC_draw_up_plans_for_mitteleuropa
+		id = AUSDNC_draw_up_plans_for_mitteleuropa
 		icon = GFX_focus_hol_united_netherlands
 		x = 19
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_austrian_military_tradition
-			focus = AUHDNC_a_modern_army
+			focus = AUSDNC_austrian_military_tradition
+			focus = AUSDNC_a_modern_army
 		}
 		available = {
 			is_subject = no
@@ -1568,20 +1568,20 @@ focus_tree = {
 
 	#Focus for Europe Stands United
 	focus = {
-		id = AUHDNC_europe_stands_united
+		id = AUSDNC_europe_stands_united
 		icon = GFX_goal_generic_national_unity
 		x = 19
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_draw_up_plans_for_mitteleuropa }
+		prerequisite = { focus = AUSDNC_draw_up_plans_for_mitteleuropa }
 		ai_will_do = {
 			factor = 100
 		}
 		available = { 
 			is_subject = no
-			NOT = { has_completed_focus = AUHDNC_european_affairs }
-			NOT = { has_completed_focus = AUHDNC_stay_neutral }
+			NOT = { has_completed_focus = AUSDNC_european_affairs }
+			NOT = { has_completed_focus = AUSDNC_stay_neutral }
 		}
 		completion_reward = {
 			create_faction = UNION_OF_EUROPE_FACTION
@@ -1590,13 +1590,13 @@ focus_tree = {
 
 	#Focus for Scandinavian Membership
 	focus = {
-		id = AUHDNC_scandinavian_membership
+		id = AUSDNC_scandinavian_membership
 		icon = GFX_goal_tripartite_pact
 		x = 19
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_europe_stands_united }
+		prerequisite = { focus = AUSDNC_europe_stands_united }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1621,13 +1621,13 @@ focus_tree = {
 
 	#Focus for Low Countries Membership
 	focus = {
-		id = AUHDNC_low_countries_membership
+		id = AUSDNC_low_countries_membership
 		icon = GFX_goal_tripartite_pact
 		x = 14
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_europe_stands_united }
+		prerequisite = { focus = AUSDNC_europe_stands_united }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1646,13 +1646,13 @@ focus_tree = {
 
 	#Focus for Balkan Membership
 	focus = {
-		id = AUHDNC_balkan_membership
+		id = AUSDNC_balkan_membership
 		icon = GFX_goal_tripartite_pact
 		x = 24
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_europe_stands_united }
+		prerequisite = { focus = AUSDNC_europe_stands_united }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1671,13 +1671,13 @@ focus_tree = {
 
 	#Focus for Promote Polish Nationalism
 	focus = {
-		id = AUHDNC_promote_polish_nationalism
+		id = AUSDNC_promote_polish_nationalism
 		icon = GFX_focus_generic_polish_deal
 		x = 19
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_russia }
+		prerequisite = { focus = AUSDNC_dismantle_russia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1687,7 +1687,7 @@ focus_tree = {
 				limit = {
 					is_core_of = POL
 					NOT = {
-						is_controlled_by = AUH
+						is_controlled_by = AUS
 					}
 				}
 				force_enable_resistance = RUS
@@ -1702,17 +1702,17 @@ focus_tree = {
 
 	#Focus for Promote Nationalism In The Baltics
 	focus = {
-		id = AUHDNC_promote_nationalism_in_the_baltics
+		id = AUSDNC_promote_nationalism_in_the_baltics
 		icon = GFX_focus_generic_support_the_left_right
 		x = 18
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_promote_finnish_nationalism
+			focus = AUSDNC_promote_finnish_nationalism
 		}
 		prerequisite = {
-			focus = AUHDNC_promote_polish_nationalism
+			focus = AUSDNC_promote_polish_nationalism
 		}
 		ai_will_do = {
 			factor = 100
@@ -1737,13 +1737,13 @@ focus_tree = {
 
 	#Focus for Promote Belarussian Nationalism
 	focus = {
-		id = AUHDNC_promote_belarussian_nationalism
+		id = AUSDNC_promote_belarussian_nationalism
 		icon = GFX_focus_generic_support_the_left_right
 		x = 21
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_russia }
+		prerequisite = { focus = AUSDNC_dismantle_russia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1763,17 +1763,17 @@ focus_tree = {
 
 	#Focus for Promote Ukranian Nationalism
 	focus = {
-		id = AUHDNC_promote_ukranian_nationalism
+		id = AUSDNC_promote_ukranian_nationalism
 		icon = GFX_focus_generic_support_the_left_right
 		x = 20
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_promote_polish_nationalism
+			focus = AUSDNC_promote_polish_nationalism
 		}
 		prerequisite = {
-			focus = AUHDNC_promote_belarussian_nationalism
+			focus = AUSDNC_promote_belarussian_nationalism
 		}
 		ai_will_do = {
 			factor = 100
@@ -1783,7 +1783,7 @@ focus_tree = {
 				limit = {
 					is_core_of = UKR
 					NOT = {
-						is_controlled_by = AUH
+						is_controlled_by = AUS
 					}
 				}
 				force_enable_resistance = RUS
@@ -1797,13 +1797,13 @@ focus_tree = {
 
 	#Focus for Dismantle Russia
 	focus = {
-		id = AUHDNC_dismantle_russia
+		id = AUSDNC_dismantle_russia
 		icon = GFX_goal_generic_major_war
 		x = 19
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_friendship_with_germany }
+		prerequisite = { focus = AUSDNC_friendship_with_germany }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1820,13 +1820,13 @@ focus_tree = {
 
 	#Focus for Promote Finnish Nationalism
 	focus = {
-		id = AUHDNC_promote_finnish_nationalism
+		id = AUSDNC_promote_finnish_nationalism
 		icon = GFX_align_to_finland
 		x = 17
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_russia }
+		prerequisite = { focus = AUSDNC_dismantle_russia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -1847,17 +1847,17 @@ focus_tree = {
 
 	#Focus for Execute Russian Breakup
 	focus = {
-		id = AUHDNC_execute_russian_breakup
+		id = AUSDNC_execute_russian_breakup
 		icon = GFX_goal_generic_major_war
 		x = 19
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_promote_nationalism_in_the_baltics
+			focus = AUSDNC_promote_nationalism_in_the_baltics
 		}
 		prerequisite = {
-			focus = AUHDNC_promote_ukranian_nationalism
+			focus = AUSDNC_promote_ukranian_nationalism
 		}
 		available = {
 			NOT = {
@@ -1869,7 +1869,7 @@ focus_tree = {
 				}
 				AND = {
 					RUS = { surrender_progress > 0.5 }
-					RUS = { has_war_with = AUH }
+					RUS = { has_war_with = AUS }
 				}
 			}
 		}
@@ -1989,7 +1989,7 @@ focus_tree = {
 					}
 				}
 				release = UBD
-				AUH = {
+				AUS = {
 					puppet = UKR
 					puppet = BLR
 					puppet = YAK
@@ -2008,8 +2008,8 @@ focus_tree = {
 				}
 				every_state = {
 					limit = {
-						is_controlled_by = AUH
-						NOT = { is_core_of = AUH }
+						is_controlled_by = AUS
+						NOT = { is_core_of = AUS }
 						is_core_of = POL
 					}
 					POL = {
@@ -2018,7 +2018,7 @@ focus_tree = {
 				}
 				every_state = {
 					limit = {
-						is_controlled_by = AUH
+						is_controlled_by = AUS
 						is_core_of = RUS
 					}
 					RUS = {
@@ -2032,21 +2032,21 @@ focus_tree = {
 
 	#Focus for Friendship With Germany
 	focus = {
-		id = AUHDNC_friendship_with_germany
+		id = AUSDNC_friendship_with_germany
 		icon = GFX_goal_tripartite_pact
 		x = 19
 		y = 12
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_scandinavian_membership }
-		mutually_exclusive = { focus = AUHDNC_friendship_with_russia }
+		prerequisite = { focus = AUSDNC_scandinavian_membership }
+		mutually_exclusive = { focus = AUSDNC_friendship_with_russia }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			GER = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_friendly_foreign_policy
 				}
 			}
@@ -2055,21 +2055,21 @@ focus_tree = {
 
 	#Focus for Friendship With Russia
 	focus = {
-		id = AUHDNC_friendship_with_russia
+		id = AUSDNC_friendship_with_russia
 		icon = GFX_goal_tripartite_pact
 		x = 14
 		y = 12
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_low_countries_membership }
-		mutually_exclusive = { focus = AUHDNC_friendship_with_germany }
+		prerequisite = { focus = AUSDNC_low_countries_membership }
+		mutually_exclusive = { focus = AUSDNC_friendship_with_germany }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			RUS = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_friendly_foreign_policy
 				}
 			}
@@ -2078,13 +2078,13 @@ focus_tree = {
 
 	#Focus for Dismantle Italy
 	focus = {
-		id = AUHDNC_dismantle_italy
+		id = AUSDNC_dismantle_italy
 		icon = GFX_goal_generic_major_war
 		x = 24
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_friendship_with_greece }
+		prerequisite = { focus = AUSDNC_friendship_with_greece }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2101,13 +2101,13 @@ focus_tree = {
 
 	#Focus for Execute Italian Breakup
 	focus = {
-		id = AUHDNC_execute_italian_breakup
+		id = AUSDNC_execute_italian_breakup
 		icon = GFX_focus_attack_italy
 		x = 24
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_send_weapons_to_separatists }
+		prerequisite = { focus = AUSDNC_send_weapons_to_separatists }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2125,14 +2125,14 @@ focus_tree = {
 
 	#Focus for Dismantle Germany
 	focus = {
-		id = AUHDNC_dismantle_germany
+		id = AUSDNC_dismantle_germany
 		icon = GFX_goal_generic_major_war
 		x = 14
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
 		will_lead_to_war_with = GER
-		prerequisite = { focus = AUHDNC_friendship_with_russia }
+		prerequisite = { focus = AUSDNC_friendship_with_russia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2148,19 +2148,19 @@ focus_tree = {
 
 	#Focus for Catholics In The South
 	focus = {
-		id = AUHDNC_catholics_in_the_south
+		id = AUSDNC_catholics_in_the_south
 		icon = GFX_focus_por_concordat
 		x = 13
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_germany }
+		prerequisite = { focus = AUSDNC_dismantle_germany }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = AUH_population_displacement
+				idea = AUS_population_displacement
 				days = 180
 			}
 			add_stability = -0.1
@@ -2169,19 +2169,19 @@ focus_tree = {
 
 	#Focus for Protestants In The North
 	focus = {
-		id = AUHDNC_protestants_in_the_north
+		id = AUSDNC_protestants_in_the_north
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		x = 15
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_germany }
+		prerequisite = { focus = AUSDNC_dismantle_germany }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_timed_idea = {
-				idea = AUH_population_displacement2
+				idea = AUS_population_displacement2
 				days = 180
 			}
 			add_stability = -0.15
@@ -2190,13 +2190,13 @@ focus_tree = {
 
 	#Focus for Victory Over Germany
 	focus = {
-		id = AUHDNC_victory_over_germany
+		id = AUSDNC_victory_over_germany
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 14
 		y = 17
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_execute_german_breakup }
+		prerequisite = { focus = AUSDNC_execute_german_breakup }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2208,13 +2208,13 @@ focus_tree = {
 
 	#Focus for Execute German Breakup
 	focus = {
-		id = AUHDNC_execute_german_breakup
+		id = AUSDNC_execute_german_breakup
 		icon = attack_germany
 		x = 14
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_secret_negotiations_with_german_kings }
+		prerequisite = { focus = AUSDNC_secret_negotiations_with_german_kings }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2230,14 +2230,14 @@ focus_tree = {
 
 	#Focus for Secret Negotiations With The Vatican
 	focus = {
-		id = AUHDNC_secret_negotiations_with_the_vatican
+		id = AUSDNC_secret_negotiations_with_the_vatican
 		icon = GFX_focus_por_concordat
 		x = 23
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_italy }
-		mutually_exclusive = { focus = AUHDNC_we_dont_need_the_pope }
+		prerequisite = { focus = AUSDNC_dismantle_italy }
+		mutually_exclusive = { focus = AUSDNC_we_dont_need_the_pope }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2253,7 +2253,7 @@ focus_tree = {
 			else = {
 				random_list = {
 					50 = {
-						AUH = {
+						AUS = {
 							save_global_event_target_as = vatican_supported
 							country_event = DNC_Diplomacy.22
 						}
@@ -2267,7 +2267,7 @@ focus_tree = {
 							save_global_event_target_as = vatican_supported
 							country_event = DNC_Diplomacy.22
 						}
-						AUH = {
+						AUS = {
 							save_global_event_target_as = vatican_not_supported
 							country_event = DNC_Diplomacy.23
 						}
@@ -2279,14 +2279,14 @@ focus_tree = {
 
 	#Focus for We Don't Need The Pope
 	focus = {
-		id = AUHDNC_we_dont_need_the_pope
+		id = AUSDNC_we_dont_need_the_pope
 		icon = GFX_focus_mex_triumph_over_the_cristeros
 		x = 25
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_dismantle_italy }
-		mutually_exclusive = { focus = AUHDNC_secret_negotiations_with_the_vatican }
+		prerequisite = { focus = AUSDNC_dismantle_italy }
+		mutually_exclusive = { focus = AUSDNC_secret_negotiations_with_the_vatican }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2294,7 +2294,7 @@ focus_tree = {
 			PAP = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -2302,13 +2302,13 @@ focus_tree = {
 
 	#Focus for Victory Over Italy
 	focus = {
-		id = AUHDNC_victory_over_italy
+		id = AUSDNC_victory_over_italy
 		icon = GFX_focus_generic_italy_first
 		x = 24
 		y = 17
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_execute_italian_breakup }
+		prerequisite = { focus = AUSDNC_execute_italian_breakup }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2321,17 +2321,17 @@ focus_tree = {
 
 	#Focus for Secret Negotiations With German Kings
 	focus = {
-		id = AUHDNC_secret_negotiations_with_german_kings
+		id = AUSDNC_secret_negotiations_with_german_kings
 		icon = GFX_focus_generic_diplomatic_treaty
 		x = 14
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_catholics_in_the_south
+			focus = AUSDNC_catholics_in_the_south
 		}
 		prerequisite = {
-			focus = AUHDNC_protestants_in_the_north
+			focus = AUSDNC_protestants_in_the_north
 		}
 		ai_will_do = {
 			factor = 100
@@ -2347,13 +2347,13 @@ focus_tree = {
 
 	#Focus for Victory Over Russia
 	focus = {
-		id = AUHDNC_victory_over_russia
+		id = AUSDNC_victory_over_russia
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		x = 19
 		y = 17
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_execute_russian_breakup }
+		prerequisite = { focus = AUSDNC_execute_russian_breakup }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2366,7 +2366,7 @@ focus_tree = {
 
 	#Focus for The German Question
 	focus = {
-		id = AUHDNC_the_german_question
+		id = AUSDNC_the_german_question
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		x = 58
 		y = 1
@@ -2390,8 +2390,8 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				AND = {
-					NOT = { has_completed_focus = AUHDNC_unite_behind_haus_habsburg }
-					NOT = { has_completed_focus = AUHDNC_free_and_fair_elections }
+					NOT = { has_completed_focus = AUSDNC_unite_behind_haus_habsburg }
+					NOT = { has_completed_focus = AUSDNC_free_and_fair_elections }
 					has_government = neutrality
 				}
 			}
@@ -2404,15 +2404,15 @@ focus_tree = {
 
 	#Focus for Send Weapons To Separatists
 	focus = {
-		id = AUHDNC_send_weapons_to_separatists
+		id = AUSDNC_send_weapons_to_separatists
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		x = 24
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_secret_negotiations_with_the_vatican
-			focus = AUHDNC_we_dont_need_the_pope
+			focus = AUSDNC_secret_negotiations_with_the_vatican
+			focus = AUSDNC_we_dont_need_the_pope
 		}
 		ai_will_do = {
 			factor = 100
@@ -2424,7 +2424,7 @@ focus_tree = {
 						ITA = {
 							release = TTS
 						}
-						AUH = {
+						AUS = {
 							transfer_units_fraction = {
 								target = TTS
 								size = 0.01
@@ -2450,15 +2450,15 @@ focus_tree = {
 
 	##Focus for Nationalism On The Rise
 	focus = {
-		id = AUHDNC_nationalism_on_the_rise
+		id = AUSDNC_nationalism_on_the_rise
 		icon = GFX_goal_tfv_saf_support_ossebrandwag
 		x = 30
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_free_and_fair_elections
-			focus = AUHDNC_unite_behind_haus_habsburg
+			focus = AUSDNC_free_and_fair_elections
+			focus = AUSDNC_unite_behind_haus_habsburg
 		}
 		ai_will_do = {
 			factor = 100
@@ -2477,14 +2477,14 @@ focus_tree = {
 
 	#Focus for A Habsburg-Hohenzollern Marriage
 	focus = {
-		id = AUHDNC_a_habsburghohenzollern_marriage
+		id = AUSDNC_a_habsburghohenzollern_marriage
 		icon = GFX_focus_generic_royal_wedding
 		x = 64
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_greater_german_solution }
-		mutually_exclusive = { focus = AUHDNC_there_can_only_be_one }
+		prerequisite = { focus = AUSDNC_greater_german_solution }
+		mutually_exclusive = { focus = AUSDNC_there_can_only_be_one }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2495,20 +2495,20 @@ focus_tree = {
 			GER = {
 				country_event =  { id = DNC_Diplomacy.1 hours = 6 }
 			}
-			set_global_flag = GER_AUH_personnal_union
+			set_global_flag = GER_AUS_personnal_union
 		}
 	}
 
 	#Focus for Greater German Solution
 	focus = {
-		id = AUHDNC_greater_german_solution
+		id = AUSDNC_greater_german_solution
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 62
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_the_german_question }
-		mutually_exclusive = { focus = AUHDNC_lesser_german_solution }
+		prerequisite = { focus = AUSDNC_the_german_question }
+		mutually_exclusive = { focus = AUSDNC_lesser_german_solution }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2520,14 +2520,14 @@ focus_tree = {
 
 	#Focus for Lesser German Solution
 	focus = {
-		id = AUHDNC_lesser_german_solution
+		id = AUSDNC_lesser_german_solution
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 54
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_the_german_question }
-		mutually_exclusive = { focus = AUHDNC_greater_german_solution }
+		prerequisite = { focus = AUSDNC_the_german_question }
+		mutually_exclusive = { focus = AUSDNC_greater_german_solution }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2539,14 +2539,14 @@ focus_tree = {
 
 	#Focus for There Can Only Be One
 	focus = {
-		id = AUHDNC_there_can_only_be_one
+		id = AUSDNC_there_can_only_be_one
 		icon = attack_germany
 		x = 60
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_greater_german_solution }
-		mutually_exclusive = { focus = AUHDNC_a_habsburghohenzollern_marriage }
+		prerequisite = { focus = AUSDNC_greater_german_solution }
+		mutually_exclusive = { focus = AUSDNC_a_habsburghohenzollern_marriage }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2567,14 +2567,14 @@ focus_tree = {
 
 	#Focus for Our German Ally
 	focus = {
-		id = AUHDNC_our_german_ally
+		id = AUSDNC_our_german_ally
 		icon = GFX_align_to_germany2
 		x = 56
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_lesser_german_solution }
-		mutually_exclusive = { focus = AUHDNC_no_need_for_germany }
+		prerequisite = { focus = AUSDNC_lesser_german_solution }
+		mutually_exclusive = { focus = AUSDNC_no_need_for_germany }
 		ai_will_do = {
 			factor = 100
 		}
@@ -2582,7 +2582,7 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -2590,21 +2590,21 @@ focus_tree = {
 
 	#Focus for No Need For Germany
 	focus = {
-		id = AUHDNC_no_need_for_germany
+		id = AUSDNC_no_need_for_germany
 		icon = GFX_goal_generic_defence
 		x = 52
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_lesser_german_solution }
-		mutually_exclusive = { focus = AUHDNC_our_german_ally }
+		prerequisite = { focus = AUSDNC_lesser_german_solution }
+		mutually_exclusive = { focus = AUSDNC_our_german_ally }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			GER = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_hostile_foreign_policy
 				}
 			}
@@ -2613,27 +2613,27 @@ focus_tree = {
 
 	#Focus for Deutscher Bund
 	focus = {
-		id = AUHDNC_deutscher_bund
+		id = AUSDNC_deutscher_bund
 		icon = GFX_focus_ger_reichskommisariats
 		x = 58
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_a_loose_union
-			focus = AUHDNC_pangermanic_dream_achieved
+			focus = AUSDNC_a_loose_union
+			focus = AUSDNC_pangermanic_dream_achieved
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_erfurt_union
+			focus = AUSDNC_erfurt_union
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_holy_roman_empire
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austriahungary
+			focus = AUSDNC_austriahungary
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austrian_empire
+			focus = AUSDNC_austrian_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -2654,11 +2654,11 @@ focus_tree = {
 
 			if = {
 				limit = {
-					AUH = {
+					AUS = {
 						is_in_faction = no
 					}
 				}
-				AUH = {
+				AUS = {
 					create_faction = "German Confederation"
 				}
 			}
@@ -2668,27 +2668,27 @@ focus_tree = {
 
 	#Focus for Erfurt Union
 	focus = {
-		id = AUHDNC_erfurt_union
+		id = AUSDNC_erfurt_union
 		icon = GFX_focus_ger_strike_at_the_source
 		x = 60
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_a_loose_union
-			focus = AUHDNC_pangermanic_dream_achieved
+			focus = AUSDNC_a_loose_union
+			focus = AUSDNC_pangermanic_dream_achieved
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_holy_roman_empire
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_deutscher_bund
+			focus = AUSDNC_deutscher_bund
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austriahungary
+			focus = AUSDNC_austriahungary
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austrian_empire
+			focus = AUSDNC_austrian_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -2709,11 +2709,11 @@ focus_tree = {
 
 			if = {
 				limit = {
-					AUH = {
+					AUS = {
 						is_in_faction = no
 					}
 				}
-				AUH = {
+				AUS = {
 					create_faction = "Erfurt Union"
 				}
 			}
@@ -2723,24 +2723,24 @@ focus_tree = {
 
 	#Focus for Holy Roman Empire
 	focus = {
-		id = AUHDNC_holy_roman_empire
+		id = AUSDNC_holy_roman_empire
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 64
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_pangermanic_dream_achieved }
+		prerequisite = { focus = AUSDNC_pangermanic_dream_achieved }
 		mutually_exclusive = {
-			focus = AUHDNC_deutscher_bund
+			focus = AUSDNC_deutscher_bund
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_erfurt_union
+			focus = AUSDNC_erfurt_union
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austriahungary
+			focus = AUSDNC_austriahungary
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austrian_empire
+			focus = AUSDNC_austrian_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -2761,11 +2761,11 @@ focus_tree = {
 
 			if = {
 				limit = {
-					AUH = {
+					AUS = {
 						is_in_faction = no
 					}
 				}
-				AUH = {
+				AUS = {
 					create_faction = "Holy Roman Empire"
 				}
 			}
@@ -2775,27 +2775,27 @@ focus_tree = {
 
 	#Focus for Austria-Hungary
 	focus = {
-		id = AUHDNC_austriahungary
+		id = AUSDNC_austriahungary
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		x = 56
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-		focus = AUHDNC_austrians_are_better_germans
-		focus = AUHDNC_a_loose_union
+		focus = AUSDNC_austrians_are_better_germans
+		focus = AUSDNC_a_loose_union
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austrian_empire
+			focus = AUSDNC_austrian_empire
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_erfurt_union
+			focus = AUSDNC_erfurt_union
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_holy_roman_empire
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_deutscher_bund
+			focus = AUSDNC_deutscher_bund
 		}
 		ai_will_do = {
 			factor = 100
@@ -2812,15 +2812,15 @@ focus_tree = {
 
 	#Focus for Pan-Germanic Dream Achieved
 	focus = {
-		id = AUHDNC_pangermanic_dream_achieved
+		id = AUSDNC_pangermanic_dream_achieved
 		icon = GFX_focus_generic_treaty
 		x = 62
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_there_can_only_be_one
-			focus = AUHDNC_a_habsburghohenzollern_marriage
+			focus = AUSDNC_there_can_only_be_one
+			focus = AUSDNC_a_habsburghohenzollern_marriage
 		}
 		ai_will_do = {
 			factor = 100
@@ -2840,14 +2840,14 @@ focus_tree = {
 
 	#Focus for Autonomy For Minorities
 	focus = {
-		id = AUHDNC_autonomy_for_minorities
+		id = AUSDNC_autonomy_for_minorities
 		icon = GFX_goal_support_democracy
 		x = 28
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_nationalism_on_the_rise }
-		mutually_exclusive = { focus = AUHDNC_opress_minorities }
+		prerequisite = { focus = AUSDNC_nationalism_on_the_rise }
+		mutually_exclusive = { focus = AUSDNC_opress_minorities }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -2911,14 +2911,14 @@ focus_tree = {
 
 	#Focus for Opress Minorities
 	focus = {
-		id = AUHDNC_opress_minorities
+		id = AUSDNC_opress_minorities
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		x = 32
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_nationalism_on_the_rise }
-		mutually_exclusive = { focus = AUHDNC_autonomy_for_minorities }
+		prerequisite = { focus = AUSDNC_nationalism_on_the_rise }
+		mutually_exclusive = { focus = AUSDNC_autonomy_for_minorities }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -2947,13 +2947,13 @@ focus_tree = {
 
 	#Focus for Autonomy For Hungarians
 	focus = {
-		id = AUHDNC_autonomy_for_hungarians
+		id = AUSDNC_autonomy_for_hungarians
 		icon = GFX_focus_hun_elect_a_king
 		x = 27
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_autonomy_for_minorities }
+		prerequisite = { focus = AUSDNC_autonomy_for_minorities }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -2995,13 +2995,13 @@ focus_tree = {
 
 	#Focus for Autonomy For Croatians
 	focus = {
-		id = AUHDNC_autonomy_for_croatians
+		id = AUSDNC_autonomy_for_croatians
 		icon = GFX_focus_YUG_banovina_of_croatia
 		x = 29
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_autonomy_for_minorities }
+		prerequisite = { focus = AUSDNC_autonomy_for_minorities }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -3035,7 +3035,7 @@ focus_tree = {
 					#Give Cores on Greater Croatia
 					RON_Formable_Country60_effects = yes
 				}
-				AUH = {
+				AUS = {
 					transfer_state = 736
 					transfer_state = 1066
 				}
@@ -3046,19 +3046,19 @@ focus_tree = {
 
 	#Focus for Autonomy For Bohemians
 	focus = {
-		id = AUHDNC_autonomy_for_bohemians
+		id = AUSDNC_autonomy_for_bohemians
 		icon = GFX_goal_continuous_boost_freedom
 		x = 26
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_hungarians
+			focus = AUSDNC_autonomy_for_hungarians
 		}
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_croatians
+			focus = AUSDNC_autonomy_for_croatians
 		}
-		mutually_exclusive = { focus = AUHDNC_bohemia_is_austrian }
+		mutually_exclusive = { focus = AUSDNC_bohemia_is_austrian }
 		ai_will_do = {
 			factor = 0
 		}
@@ -3069,17 +3069,17 @@ focus_tree = {
 
 	#Focus for Autonomy For Galicia
 	focus = {
-		id = AUHDNC_autonomy_for_galicia
+		id = AUSDNC_autonomy_for_galicia
 		icon = GFX_goal_continuous_boost_freedom
 		x = 30
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_hungarians
+			focus = AUSDNC_autonomy_for_hungarians
 		}
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_croatians
+			focus = AUSDNC_autonomy_for_croatians
 		}
 		ai_will_do = {
 			factor = 100
@@ -3095,17 +3095,17 @@ focus_tree = {
 
 	#Focus for Crack Down On Secret Societies
 	focus = {
-		id = AUHDNC_crack_down_on_secret_societies
+		id = AUSDNC_crack_down_on_secret_societies
 		icon = GFX_focus_generic_manpower
 		x = 32
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_loyalty_to_the_kaiser
+			focus = AUSDNC_loyalty_to_the_kaiser
 		}
 		prerequisite = {
-			focus = AUHDNC_promote_austrian_nationalism
+			focus = AUSDNC_promote_austrian_nationalism
 		}
 		ai_will_do = {
 			factor = 100
@@ -3118,13 +3118,13 @@ focus_tree = {
 
 	#Focus for Loyalty To The Kaiser
 	focus = {
-		id = AUHDNC_loyalty_to_the_kaiser
+		id = AUSDNC_loyalty_to_the_kaiser
 		icon = GFX_focus_generic_monarchy_2
 		x = 33
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_opress_minorities }
+		prerequisite = { focus = AUSDNC_opress_minorities }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3139,13 +3139,13 @@ focus_tree = {
 
 	#Focus for Promote Austrian Nationalism
 	focus = {
-		id = AUHDNC_promote_austrian_nationalism
+		id = AUSDNC_promote_austrian_nationalism
 		icon = GFX_goal_tfv_saf_support_ossebrandwag
 		x = 31
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_opress_minorities }
+		prerequisite = { focus = AUSDNC_opress_minorities }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3160,13 +3160,13 @@ focus_tree = {
 
 	#Focus for Indivisibiliter Ac Inseparabiliter
 	focus = {
-		id = AUHDNC_indivisibiliter_ac_inseparabiliter
+		id = AUSDNC_indivisibiliter_ac_inseparabiliter
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 32
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_crack_down_on_secret_societies }
+		prerequisite = { focus = AUSDNC_crack_down_on_secret_societies }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3178,20 +3178,20 @@ focus_tree = {
 
 	#Focus for Friendship With Greece
 	focus = {
-		id = AUHDNC_friendship_with_greece
+		id = AUSDNC_friendship_with_greece
 		icon = GFX_focus_generic_befriend_greece
 		x = 24
 		y = 12
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_balkan_membership }
+		prerequisite = { focus = AUSDNC_balkan_membership }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			GRE = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_friendly_foreign_policy
 				}
 			}
@@ -3200,13 +3200,13 @@ focus_tree = {
 
 	#Focus for A Loose Union
 	focus = {
-		id = AUHDNC_a_loose_union
+		id = AUSDNC_a_loose_union
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 56
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_our_german_ally }
+		prerequisite = { focus = AUSDNC_our_german_ally }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3222,8 +3222,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				AUH = {
-					create_faction = AUH_MITTELEUROPA
+				AUS = {
+					create_faction = AUS_MITTELEUROPA
 				}
 				GER = {
 					country_event = generic.5
@@ -3234,13 +3234,13 @@ focus_tree = {
 
 	#Focus for Austrians Are Better Germans
 	focus = {
-		id = AUHDNC_austrians_are_better_germans
+		id = AUSDNC_austrians_are_better_germans
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 52
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_no_need_for_germany }
+		prerequisite = { focus = AUSDNC_no_need_for_germany }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3248,7 +3248,7 @@ focus_tree = {
 			add_political_power = 50
 			GER = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_hostile_foreign_policy
 				}
 
@@ -3258,27 +3258,27 @@ focus_tree = {
 
 	#Focus for Austrian Empire
 	focus = {
-		id = AUHDNC_austrian_empire
+		id = AUSDNC_austrian_empire
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		x = 52
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-		focus = AUHDNC_austrians_are_better_germans
-		focus = AUHDNC_a_loose_union
+		focus = AUSDNC_austrians_are_better_germans
+		focus = AUSDNC_a_loose_union
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_austriahungary
+			focus = AUSDNC_austriahungary
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_erfurt_union
+			focus = AUSDNC_erfurt_union
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_holy_roman_empire
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_deutscher_bund
+			focus = AUSDNC_deutscher_bund
 		}
 		ai_will_do = {
 			factor = 100
@@ -3297,18 +3297,18 @@ focus_tree = {
 
 	#Focus for Southern Expansion
 	focus = {
-		id = AUHDNC_southern_expansion
+		id = AUSDNC_southern_expansion
 		icon = GFX_focus_generic_italy_first
 		x = 56
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_austriahungary
-			focus = AUHDNC_austrian_empire
-			focus = AUHDNC_deutscher_bund
-			focus = AUHDNC_erfurt_union
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_austriahungary
+			focus = AUSDNC_austrian_empire
+			focus = AUSDNC_deutscher_bund
+			focus = AUSDNC_erfurt_union
+			focus = AUSDNC_holy_roman_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -3316,20 +3316,20 @@ focus_tree = {
 		completion_reward = {
 			add_named_threat = {
 				threat = 5
-				name = AUH_SOUTH_EXPANSION
+				name = AUS_SOUTH_EXPANSION
 			}
 		}
 	}
 
 	#Focus for Annex Serbia and Montenegro
 	focus = {
-		id = AUHDNC_annex_serbia_and_montenegro
+		id = AUSDNC_annex_serbia_and_montenegro
 		icon = GFX_goal_generic_attack_allies
 		x = 53
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_balkan_expansion }
+		prerequisite = { focus = AUSDNC_balkan_expansion }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3365,13 +3365,13 @@ focus_tree = {
 
 	#Focus for Annex Romania
 	focus = {
-		id = AUHDNC_annex_romania
+		id = AUSDNC_annex_romania
 		icon = GFX_goal_generic_attack_allies
 		x = 51
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_balkan_expansion }
+		prerequisite = { focus = AUSDNC_balkan_expansion }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3399,17 +3399,17 @@ focus_tree = {
 
 	#Focus for Ultimatum To Bulgaria
 	focus = {
-		id = AUHDNC_ultimatum_to_bulgaria
+		id = AUSDNC_ultimatum_to_bulgaria
 		icon = GFX_goal_generic_forceful_treaty
 		x = 52
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_annex_serbia_and_montenegro
+			focus = AUSDNC_annex_serbia_and_montenegro
 		}
 		prerequisite = {
-			focus = AUHDNC_annex_romania
+			focus = AUSDNC_annex_romania
 		}
 		bypass = {
 			OR = {
@@ -3431,7 +3431,7 @@ focus_tree = {
 
 	#Focus for Annex Greece
 	focus = {
-		id = AUHDNC_annex_greece
+		id = AUSDNC_annex_greece
 		icon = GFX_focus_GRE_bedrock_of_balkan_stability
 		x = 52
 		y = 10
@@ -3439,8 +3439,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		will_lead_to_war_with = GRE
 		prerequisite = {
-			focus = AUHDNC_expell_the_ottomans_from_europe
-			focus = AUHDNC_constantinople_for_guarantees
+			focus = AUSDNC_expell_the_ottomans_from_europe
+			focus = AUSDNC_constantinople_for_guarantees
 		}
 		ai_will_do = {
 			factor = 100
@@ -3463,14 +3463,14 @@ focus_tree = {
 
 	#Focus for Constantinople For Guarantees
 	focus = {
-		id = AUHDNC_constantinople_for_guarantees
+		id = AUSDNC_constantinople_for_guarantees
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		x = 53
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_ultimatum_to_bulgaria }
-		mutually_exclusive = { focus = AUHDNC_expell_the_ottomans_from_europe }
+		prerequisite = { focus = AUSDNC_ultimatum_to_bulgaria }
+		mutually_exclusive = { focus = AUSDNC_expell_the_ottomans_from_europe }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3486,14 +3486,14 @@ focus_tree = {
 
 	#Focus for Expell The Ottomans From Europe
 	focus = {
-		id = AUHDNC_expell_the_ottomans_from_europe
+		id = AUSDNC_expell_the_ottomans_from_europe
 		icon = GFX_focus_generic_attack_turkey
 		x = 51
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_ultimatum_to_bulgaria }
-		mutually_exclusive = { focus = AUHDNC_constantinople_for_guarantees }
+		prerequisite = { focus = AUSDNC_ultimatum_to_bulgaria }
+		mutually_exclusive = { focus = AUSDNC_constantinople_for_guarantees }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3515,7 +3515,7 @@ focus_tree = {
 					is_on_continent = europe
 					is_controlled_by = OTT
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 
 		}
@@ -3523,13 +3523,13 @@ focus_tree = {
 
 	#Focus for Demand Northern Italy
 	focus = {
-		id = AUHDNC_demand_northern_italy
+		id = AUSDNC_demand_northern_italy
 		icon = GFX_goal_generic_forceful_treaty
 		x = 55
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_southern_expansion }
+		prerequisite = { focus = AUSDNC_southern_expansion }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3542,25 +3542,25 @@ focus_tree = {
 				limit = {
 					is_core_of = LBV
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 		}
 	}
 
 	#Focus for Fate Of Italy
 	focus = {
-		id = AUHDNC_fate_of_italy
+		id = AUSDNC_fate_of_italy
 		icon = GFX_focus_attack_italy
 		x = 56
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_claims_in_southern_italy
+			focus = AUSDNC_claims_in_southern_italy
 		}
 		will_lead_to_war_with = ITA
 		prerequisite = {
-			focus = AUHDNC_demand_northern_italy
+			focus = AUSDNC_demand_northern_italy
 		}
 		ai_will_do = {
 			factor = 100
@@ -3583,14 +3583,14 @@ focus_tree = {
 
 	#Focus for Our Claim To The Spanish Throne
 	focus = {
-		id = AUHDNC_our_claim_to_the_spanish_throne
+		id = AUSDNC_our_claim_to_the_spanish_throne
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 55
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_fate_of_italy }
-		mutually_exclusive = { focus = AUHDNC_a_habsburgbourbon_marriage }
+		prerequisite = { focus = AUSDNC_fate_of_italy }
+		mutually_exclusive = { focus = AUSDNC_a_habsburgbourbon_marriage }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3608,14 +3608,14 @@ focus_tree = {
 				limit = {
 					is_controlled_by = SPR
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			
 			every_state = {
 				limit = {
 					is_core_of = SPR
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			}
 		}
@@ -3623,14 +3623,14 @@ focus_tree = {
 
 	#Focus for A Habsburg-Bourbon Marriage
 	focus = {
-		id = AUHDNC_a_habsburgbourbon_marriage
+		id = AUSDNC_a_habsburgbourbon_marriage
 		icon = GFX_focus_generic_royal_wedding
 		x = 57
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_fate_of_italy }
-		mutually_exclusive = { focus = AUHDNC_our_claim_to_the_spanish_throne }
+		prerequisite = { focus = AUSDNC_fate_of_italy }
+		mutually_exclusive = { focus = AUSDNC_our_claim_to_the_spanish_throne }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3646,18 +3646,18 @@ focus_tree = {
 
 	#Focus for Friendship With Portugal
 	focus = {
-		id = AUHDNC_a_habsburgbraganza_marriage
+		id = AUSDNC_a_habsburgbraganza_marriage
 		icon = GFX_focus_generic_royal_wedding
 		x = 57
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_our_claim_to_the_spanish_throne
-			focus = AUHDNC_a_habsburgbourbon_marriage
+			focus = AUSDNC_our_claim_to_the_spanish_throne
+			focus = AUSDNC_a_habsburgbourbon_marriage
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_our_claim_to_the_portugese_throne
+			focus = AUSDNC_our_claim_to_the_portugese_throne
 		}
 		ai_will_do = {
 			factor = 100
@@ -3674,14 +3674,14 @@ focus_tree = {
 
 	#Focus for Annex Luxembourg
 	focus = {
-		id = AUHDNC_annex_luxembourg
+		id = AUSDNC_annex_luxembourg
 		icon = GFX_goal_generic_attack_allies
 		x = 61
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_northern_expansion }
-		mutually_exclusive = { focus = AUHDNC_invite_luxembourg }
+		prerequisite = { focus = AUSDNC_northern_expansion }
+		mutually_exclusive = { focus = AUSDNC_invite_luxembourg }
 		ai_will_do = {
 			factor = 0
 		}
@@ -3700,13 +3700,13 @@ focus_tree = {
 
 	#Focus for Claims In Southern Italy
 	focus = {
-		id = AUHDNC_claims_in_southern_italy
+		id = AUSDNC_claims_in_southern_italy
 		icon = GFX_goal_generic_forceful_treaty
 		x = 57
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_southern_expansion }
+		prerequisite = { focus = AUSDNC_southern_expansion }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3715,23 +3715,23 @@ focus_tree = {
 				limit = {
 					is_core_of = TTS
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 		}
 	}
 
 	#Focus for Our Claim To The Portugese Throne
 	focus = {
-		id = AUHDNC_our_claim_to_the_portugese_throne
+		id = AUSDNC_our_claim_to_the_portugese_throne
 		icon = GFX_focus_por_the_kingdom_reunited
 		x = 55
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		mutually_exclusive = { focus = AUHDNC_a_habsburgbraganza_marriage }
+		mutually_exclusive = { focus = AUSDNC_a_habsburgbraganza_marriage }
 		prerequisite = {
-			focus = AUHDNC_our_claim_to_the_spanish_throne
-			focus = AUHDNC_a_habsburgbourbon_marriage
+			focus = AUSDNC_our_claim_to_the_spanish_throne
+			focus = AUSDNC_a_habsburgbourbon_marriage
 		}
 		ai_will_do = {
 			factor = 100
@@ -3750,14 +3750,14 @@ focus_tree = {
 				limit = {
 					is_controlled_by = POR
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			
 			every_state = {
 				limit = {
 					is_core_of = POR
 				}
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			}
 		}
@@ -3765,18 +3765,18 @@ focus_tree = {
 
 	#Focus for Northern Expansion
 	focus = {
-		id = AUHDNC_northern_expansion
+		id = AUSDNC_northern_expansion
 		icon = GFX_focus_hol_the_zuiderzee_works
 		x = 60
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_austriahungary
-			focus = AUHDNC_austrian_empire
-			focus = AUHDNC_deutscher_bund
-			focus = AUHDNC_erfurt_union
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_austriahungary
+			focus = AUSDNC_austrian_empire
+			focus = AUSDNC_deutscher_bund
+			focus = AUSDNC_erfurt_union
+			focus = AUSDNC_holy_roman_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -3788,18 +3788,18 @@ focus_tree = {
 
 	#Focus for Western Expansion
 	focus = {
-		id = AUHDNC_western_expansion
+		id = AUSDNC_western_expansion
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		x = 64
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_austriahungary
-			focus = AUHDNC_austrian_empire
-			focus = AUHDNC_deutscher_bund
-			focus = AUHDNC_erfurt_union
-			focus = AUHDNC_holy_roman_empire
+			focus = AUSDNC_austriahungary
+			focus = AUSDNC_austrian_empire
+			focus = AUSDNC_deutscher_bund
+			focus = AUSDNC_erfurt_union
+			focus = AUSDNC_holy_roman_empire
 		}
 		ai_will_do = {
 			factor = 100
@@ -3811,14 +3811,14 @@ focus_tree = {
 
 	#Focus for Invite Luxembourg
 	focus = {
-		id = AUHDNC_invite_luxembourg
+		id = AUSDNC_invite_luxembourg
 		icon = GFX_align_to_luxembourg
 		x = 59
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_northern_expansion }
-		mutually_exclusive = { focus = AUHDNC_annex_luxembourg }
+		prerequisite = { focus = AUSDNC_northern_expansion }
+		mutually_exclusive = { focus = AUSDNC_annex_luxembourg }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3841,18 +3841,18 @@ focus_tree = {
 
 	#Focus for Invite Belgium
 	focus = {
-		id = AUHDNC_invite_belgium
+		id = AUSDNC_invite_belgium
 		icon = GFX_align_to_belgium
 		x = 59
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_annex_luxembourg
-			focus = AUHDNC_invite_luxembourg
+			focus = AUSDNC_annex_luxembourg
+			focus = AUSDNC_invite_luxembourg
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_annex_belgium
+			focus = AUSDNC_annex_belgium
 		}
 		ai_will_do = {
 			factor = 100
@@ -3876,16 +3876,16 @@ focus_tree = {
 
 	#Focus for Annex Belgium
 	focus = {
-		id = AUHDNC_annex_belgium
+		id = AUSDNC_annex_belgium
 		icon = attack_belgium
 		x = 61
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		mutually_exclusive = { focus = AUHDNC_invite_belgium }
+		mutually_exclusive = { focus = AUSDNC_invite_belgium }
 		prerequisite = {
-			focus = AUHDNC_annex_luxembourg
-			focus = AUHDNC_invite_luxembourg
+			focus = AUSDNC_annex_luxembourg
+			focus = AUSDNC_invite_luxembourg
 		}
 		will_lead_to_war_with = BEL
 		ai_will_do = {
@@ -3905,17 +3905,17 @@ focus_tree = {
 
 	#Focus for Invite Holland
 	focus = {
-		id = AUHDNC_invite_holland
+		id = AUSDNC_invite_holland
 		icon = GFX_align_to_netherlands
 		x = 59
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_invite_belgium
-			focus = AUHDNC_annex_belgium
+			focus = AUSDNC_invite_belgium
+			focus = AUSDNC_annex_belgium
 		}
-		mutually_exclusive = { focus = AUHDNC_annex_holland }
+		mutually_exclusive = { focus = AUSDNC_annex_holland }
 		ai_will_do = {
 			factor = 100
 		}
@@ -3938,18 +3938,18 @@ focus_tree = {
 
 	#Focus for Annex Holland
 	focus = {
-		id = AUHDNC_annex_holland
+		id = AUSDNC_annex_holland
 		icon = attack_netherlands
 		x = 61
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_invite_belgium
-			focus = AUHDNC_annex_belgium
+			focus = AUSDNC_invite_belgium
+			focus = AUSDNC_annex_belgium
 		}
 		will_lead_to_war_with = HOL
-		mutually_exclusive = { focus = AUHDNC_invite_holland }
+		mutually_exclusive = { focus = AUSDNC_invite_holland }
 		ai_will_do = {
 			factor = 0
 		}
@@ -3967,15 +3967,15 @@ focus_tree = {
 
 	#Focus for Construct The Austrian Netherlands
 	focus = {
-		id = AUHDNC_construct_the_austrian_netherlands
+		id = AUSDNC_construct_the_austrian_netherlands
 		icon = GFX_focus_hol_oranje_boven
 		x = 60
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_invite_holland
-			focus = AUHDNC_annex_holland
+			focus = AUSDNC_invite_holland
+			focus = AUSDNC_annex_holland
 		}
 		ai_will_do = {
 			factor = 100
@@ -4000,14 +4000,14 @@ focus_tree = {
 
 	#Focus for Invite Switzerland
 	focus = {
-		id = AUHDNC_invite_switzerland
+		id = AUSDNC_invite_switzerland
 		icon = GFX_align_to_switzerland
 		x = 63
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_western_expansion }
-		mutually_exclusive = { focus = AUHDNC_annex_switzerland }
+		prerequisite = { focus = AUSDNC_western_expansion }
+		mutually_exclusive = { focus = AUSDNC_annex_switzerland }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4040,14 +4040,14 @@ focus_tree = {
 
 	#Focus for Annex Switzerland
 	focus = {
-		id = AUHDNC_annex_switzerland
+		id = AUSDNC_annex_switzerland
 		icon = attack_switzerland
 		x = 65
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_western_expansion }
-		mutually_exclusive = { focus = AUHDNC_invite_switzerland }
+		prerequisite = { focus = AUSDNC_western_expansion }
+		mutually_exclusive = { focus = AUSDNC_invite_switzerland }
 		will_lead_to_war_with = SWI
 		ai_will_do = {
 			factor = 0
@@ -4084,79 +4084,79 @@ focus_tree = {
 
 	#Focus for Claims In Eastern France
 	focus = {
-		id = AUHDNC_claims_in_eastern_france
+		id = AUSDNC_claims_in_eastern_france
 		icon = GFX_focus_fra_french_union
 		x = 63
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_invite_switzerland
-			focus = AUHDNC_annex_switzerland
+			focus = AUSDNC_invite_switzerland
+			focus = AUSDNC_annex_switzerland
 		}
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			28 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 
 			}
 			816 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			814 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 		}
 	}
 
 	#Focus for Claims In Southern France
 	focus = {
-		id = AUHDNC_claims_in_southern_france
+		id = AUSDNC_claims_in_southern_france
 		icon = GFX_focus_fra_french_union
 		x = 65
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_invite_switzerland
-			focus = AUHDNC_annex_switzerland
+			focus = AUSDNC_invite_switzerland
+			focus = AUSDNC_annex_switzerland
 		}
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			735 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			823 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			821 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 			822 = {
-				add_claim_by = AUH
+				add_claim_by = AUS
 			}
 		}
 	}
 
 	#Focus for Ultimatum To France
 	focus = {
-		id = AUHDNC_ultimatum_to_france
+		id = AUSDNC_ultimatum_to_france
 		icon = GFX_focus_bo_constitution
 		x = 65
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_claims_in_eastern_france
+			focus = AUSDNC_claims_in_eastern_france
 		}
 		prerequisite = {
-			focus = AUHDNC_claims_in_southern_france
+			focus = AUSDNC_claims_in_southern_france
 		}
-		mutually_exclusive = { focus = AUHDNC_eastern_france_for_our_colonies }
+		mutually_exclusive = { focus = AUSDNC_eastern_france_for_our_colonies }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4170,20 +4170,20 @@ focus_tree = {
 
 	#Focus for Eastern France For Our Colonies
 	focus = {
-		id = AUHDNC_eastern_france_for_our_colonies
+		id = AUSDNC_eastern_france_for_our_colonies
 		icon = GFX_align_to_france
 		x = 63
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_claims_in_eastern_france
+			focus = AUSDNC_claims_in_eastern_france
 		}
 		prerequisite = {
-			focus = AUHDNC_claims_in_southern_france
+			focus = AUSDNC_claims_in_southern_france
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_ultimatum_to_france
+			focus = AUSDNC_ultimatum_to_france
 		}
 		ai_will_do = {
 			factor = 0
@@ -4197,7 +4197,7 @@ focus_tree = {
 
 	#Focus for Fate Of France
 	focus = {
-		id = AUHDNC_fate_of_france
+		id = AUSDNC_fate_of_france
 		icon = GFX_focus_attack_france
 		x = 64
 		y = 10
@@ -4205,8 +4205,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		will_lead_to_war_with = FRA
 		prerequisite = {
-			focus = AUHDNC_eastern_france_for_our_colonies
-			focus = AUHDNC_ultimatum_to_france
+			focus = AUSDNC_eastern_france_for_our_colonies
+			focus = AUSDNC_ultimatum_to_france
 		}
 		ai_will_do = {
 			factor = 100
@@ -4229,19 +4229,19 @@ focus_tree = {
 
 	#Focus for Bohemia Is Austrian
 	focus = {
-		id = AUHDNC_bohemia_is_austrian
+		id = AUSDNC_bohemia_is_austrian
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 28
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_hungarians
+			focus = AUSDNC_autonomy_for_hungarians
 		}
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_croatians
+			focus = AUSDNC_autonomy_for_croatians
 		}
-		mutually_exclusive = { focus = AUHDNC_autonomy_for_bohemians }
+		mutually_exclusive = { focus = AUSDNC_autonomy_for_bohemians }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -4257,16 +4257,16 @@ focus_tree = {
 
 	#Focus for The United States of Greater Austria
 	focus = {
-		id = AUHDNC_the_united_states_of_greater_austria
+		id = AUSDNC_the_united_states_of_greater_austria
 		icon = GFX_focus_usa_recruit_the_free_corps
 		x = 28
 		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_autonomy_for_galicia
-			focus = AUHDNC_autonomy_for_bohemians
-			focus = AUHDNC_bohemia_is_austrian
+			focus = AUSDNC_autonomy_for_galicia
+			focus = AUSDNC_autonomy_for_bohemians
+			focus = AUSDNC_bohemia_is_austrian
 		}
 		ai_will_do = {
 			factor = 100
@@ -4276,22 +4276,22 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_faction = AUH_USOGA_FACTION
-			remove_ideas = AUH_unequal_union
+			create_faction = AUS_USOGA_FACTION
+			remove_ideas = AUS_unequal_union
 		}
 	}
 
 	#Focus for North America
 	focus = {
-		id = AUHDNC_north_america
+		id = AUSDNC_north_america
 		icon = GFX_focus_spa_the_war_of_vengeance
 		x = 51
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_negotiations_with_britain
-			focus = AUHDNC_no_need_for_british_approval
+			focus = AUSDNC_negotiations_with_britain
+			focus = AUSDNC_no_need_for_british_approval
 		}
 		ai_will_do = {
 			factor = 100
@@ -4304,15 +4304,15 @@ focus_tree = {
 
 	#Focus for South America
 	focus = {
-		id = AUHDNC_south_america
+		id = AUSDNC_south_america
 		icon = GFX_focus_por_recover_latin_america
 		x = 56
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_no_need_for_american_approval
-			focus = AUHDNC_negotiations_with_america
+			focus = AUSDNC_no_need_for_american_approval
+			focus = AUSDNC_negotiations_with_america
 		}
 		ai_will_do = {
 			factor = 100
@@ -4325,15 +4325,15 @@ focus_tree = {
 
 	#Focus for Asia
 	focus = {
-		id = AUHDNC_asia
+		id = AUSDNC_asia
 		icon = GFX_focus_usa_focus_on_asia
 		x = 61
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_no_need_for_japanese_approval
-			focus = AUHDNC_negotiations_with_japan
+			focus = AUSDNC_no_need_for_japanese_approval
+			focus = AUSDNC_negotiations_with_japan
 		}
 		ai_will_do = {
 			factor = 100
@@ -4346,14 +4346,14 @@ focus_tree = {
 
 	#Focus for Viceroyalty of New Spain
 	focus = {
-		id = AUHDNC_viceroyalty_of_new_spain
+		id = AUSDNC_viceroyalty_of_new_spain
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 51
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_north_america }
-		mutually_exclusive = { focus = AUHDNC_a_habsburg_on_the_mexican_throne }
+		prerequisite = { focus = AUSDNC_north_america }
+		mutually_exclusive = { focus = AUSDNC_a_habsburg_on_the_mexican_throne }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4382,14 +4382,14 @@ focus_tree = {
 
 	#Focus for Negotiations With America
 	focus = {
-		id = AUHDNC_negotiations_with_america
+		id = AUSDNC_negotiations_with_america
 		icon = GFX_align_to_america
 		x = 55
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		mutually_exclusive = { focus = AUHDNC_no_need_for_american_approval }
-		prerequisite = { focus = AUHDNC_an_oceangoing_navy }
+		mutually_exclusive = { focus = AUSDNC_no_need_for_american_approval }
+		prerequisite = { focus = AUSDNC_an_oceangoing_navy }
 		ai_will_do = {
 			factor = 0
 		}
@@ -4405,14 +4405,14 @@ focus_tree = {
 
 	#Focus for No Need For American Approval
 	focus = {
-		id = AUHDNC_no_need_for_american_approval
+		id = AUSDNC_no_need_for_american_approval
 		icon = attack_america
 		x = 57
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		mutually_exclusive = { focus = AUHDNC_negotiations_with_america }
-		prerequisite = { focus = AUHDNC_an_oceangoing_navy }
+		mutually_exclusive = { focus = AUSDNC_negotiations_with_america }
+		prerequisite = { focus = AUSDNC_an_oceangoing_navy }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4432,13 +4432,13 @@ focus_tree = {
 
 	#Focus for The Spanish West Indies
 	focus = {
-		id = AUHDNC_the_spanish_west_indies
+		id = AUSDNC_the_spanish_west_indies
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 53
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_north_america }
+		prerequisite = { focus = AUSDNC_north_america }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4457,14 +4457,14 @@ focus_tree = {
 
 	#Focus for A Habsburg On The Mexican Throne
 	focus = {
-		id = AUHDNC_a_habsburg_on_the_mexican_throne
+		id = AUSDNC_a_habsburg_on_the_mexican_throne
 		icon = GFX_focus_mex_jefe_maximo
 		x = 49
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_north_america }
-		mutually_exclusive = { focus = AUHDNC_viceroyalty_of_new_spain }
+		prerequisite = { focus = AUSDNC_north_america }
+		mutually_exclusive = { focus = AUSDNC_viceroyalty_of_new_spain }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4480,17 +4480,17 @@ focus_tree = {
 
 	#Focus for Ultimatum To America
 	focus = {
-		id = AUHDNC_ultimatum_to_america
+		id = AUSDNC_ultimatum_to_america
 		icon = GFX_focus_mex_redeem_aztlan
 		x = 50
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
-		mutually_exclusive = { focus = AUHDNC_partition_america_with_the_european_powers }
+		mutually_exclusive = { focus = AUSDNC_partition_america_with_the_european_powers }
 		prerequisite = {
-			focus = AUHDNC_a_habsburg_on_the_mexican_throne
-			focus = AUHDNC_viceroyalty_of_new_spain
-			focus = AUHDNC_the_spanish_west_indies
+			focus = AUSDNC_a_habsburg_on_the_mexican_throne
+			focus = AUSDNC_viceroyalty_of_new_spain
+			focus = AUSDNC_the_spanish_west_indies
 		}
 		ai_will_do = {
 			factor = 100
@@ -4504,18 +4504,18 @@ focus_tree = {
 
 	#Focus for Partition America With The European Powers
 	focus = {
-		id = AUHDNC_partition_america_with_the_european_powers
+		id = AUSDNC_partition_america_with_the_european_powers
 		icon = GFX_focus_spa_the_war_of_vengeance
 		x = 52
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_a_habsburg_on_the_mexican_throne
-			focus = AUHDNC_viceroyalty_of_new_spain
-			focus = AUHDNC_the_spanish_west_indies
+			focus = AUSDNC_a_habsburg_on_the_mexican_throne
+			focus = AUSDNC_viceroyalty_of_new_spain
+			focus = AUSDNC_the_spanish_west_indies
 		}
-		mutually_exclusive = { focus = AUHDNC_ultimatum_to_america }
+		mutually_exclusive = { focus = AUSDNC_ultimatum_to_america }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4565,13 +4565,13 @@ focus_tree = {
 
 	#Focus for Viceroyalty of New Granada
 	focus = {
-		id = AUHDNC_viceroyalty_of_new_granada
+		id = AUSDNC_viceroyalty_of_new_granada
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 55
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_south_america }
+		prerequisite = { focus = AUSDNC_south_america }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4593,15 +4593,15 @@ focus_tree = {
 
 	#Focus for Viceroyalty of Peru
 	focus = {
-		id = AUHDNC_viceroyalty_of_peru
+		id = AUSDNC_viceroyalty_of_peru
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 55
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_viceroyalty_of_new_granada
-			focus = AUHDNC_viceroyalty_of_brazil
+			focus = AUSDNC_viceroyalty_of_new_granada
+			focus = AUSDNC_viceroyalty_of_brazil
 		}
 		ai_will_do = {
 			factor = 100
@@ -4615,15 +4615,15 @@ focus_tree = {
 
 	#Focus for Viceroyalty of Rio De La Plata
 	focus = {
-		id = AUHDNC_viceroyalty_of_rio_de_la_plata
+		id = AUSDNC_viceroyalty_of_rio_de_la_plata
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 57
 		y = 16
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_viceroyalty_of_new_granada
-			focus = AUHDNC_viceroyalty_of_brazil
+			focus = AUSDNC_viceroyalty_of_new_granada
+			focus = AUSDNC_viceroyalty_of_brazil
 		}
 		ai_will_do = {
 			factor = 100
@@ -4646,13 +4646,13 @@ focus_tree = {
 
 	#Focus for Viceroyalty of Brazil
 	focus = {
-		id = AUHDNC_viceroyalty_of_brazil
+		id = AUSDNC_viceroyalty_of_brazil
 		icon = GFX_focus_por_recover_brazil
 		x = 57
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_south_america }
+		prerequisite = { focus = AUSDNC_south_america }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4665,17 +4665,17 @@ focus_tree = {
 
 	#Focus for Captaincy General of Chile
 	focus = {
-		id = AUHDNC_captaincy_general_of_chile
+		id = AUSDNC_captaincy_general_of_chile
 		icon = GFX_focus_spa_supremacy_of_the_communion
 		x = 56
 		y = 17
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_viceroyalty_of_peru
+			focus = AUSDNC_viceroyalty_of_peru
 		}
 		prerequisite = {
-			focus = AUHDNC_viceroyalty_of_rio_de_la_plata
+			focus = AUSDNC_viceroyalty_of_rio_de_la_plata
 		}
 		ai_will_do = {
 			factor = 100
@@ -4689,13 +4689,13 @@ focus_tree = {
 
 	#Focus for The Phillippine Purchase
 	focus = {
-		id = AUHDNC_the_phillippine_purchase
+		id = AUSDNC_the_phillippine_purchase
 		icon = GFX_focus_generic_treaty
 		x = 60
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_asia }
+		prerequisite = { focus = AUSDNC_asia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4703,7 +4703,7 @@ focus_tree = {
 			if = {
 			limit = {
 				NOT = { PHI = { owns_state = 327 } }
-				NOT = { AUH = { owns_state = 327 } }
+				NOT = { AUS = { owns_state = 327 } }
 			}
 				every_country = {
 					limit = {
@@ -4726,13 +4726,13 @@ focus_tree = {
 
 	#Focus for The Philippines Belong To Us
 	focus = {
-		id = AUHDNC_the_philippines_belong_to_us
+		id = AUSDNC_the_philippines_belong_to_us
 		icon = GFX_goal_generic_attack_allies
 		x = 62
 		y = 15
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_asia }
+		prerequisite = { focus = AUSDNC_asia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4748,13 +4748,13 @@ focus_tree = {
 
 	#Focus for An Oceangoing Navy
 	focus = {
-		id = AUHDNC_an_oceangoing_navy
+		id = AUSDNC_an_oceangoing_navy
 		icon = GFX_goal_generic_navy_battleship
 		x = 56
 		y = 12
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_alles_erdreich_ist_sterreich_untertan }
+		prerequisite = { focus = AUSDNC_alles_erdreich_ist_sterreich_untertan }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4769,14 +4769,14 @@ focus_tree = {
 
 	#Focus for No Need For Japanese Approval
 	focus = {
-		id = AUHDNC_no_need_for_japanese_approval
+		id = AUSDNC_no_need_for_japanese_approval
 		icon = attack_japan
 		x = 62
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_an_oceangoing_navy }
-		mutually_exclusive = { focus = AUHDNC_negotiations_with_japan }
+		prerequisite = { focus = AUSDNC_an_oceangoing_navy }
+		mutually_exclusive = { focus = AUSDNC_negotiations_with_japan }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4796,14 +4796,14 @@ focus_tree = {
 
 	#Focus for Negotiations With Japan
 	focus = {
-		id = AUHDNC_negotiations_with_japan
+		id = AUSDNC_negotiations_with_japan
 		icon = GFX_align_to_japan
 		x = 60
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_an_oceangoing_navy }
-		mutually_exclusive = { focus = AUHDNC_no_need_for_japanese_approval }
+		prerequisite = { focus = AUSDNC_an_oceangoing_navy }
+		mutually_exclusive = { focus = AUSDNC_no_need_for_japanese_approval }
 		ai_will_do = {
 			factor = 0
 		}
@@ -4819,14 +4819,14 @@ focus_tree = {
 
 	#Focus for Negotiations With Britain
 	focus = {
-		id = AUHDNC_negotiations_with_britain
+		id = AUSDNC_negotiations_with_britain
 		icon = GFX_align_to_britain
 		x = 50
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_an_oceangoing_navy }
-		mutually_exclusive = { focus = AUHDNC_no_need_for_british_approval }
+		prerequisite = { focus = AUSDNC_an_oceangoing_navy }
+		mutually_exclusive = { focus = AUSDNC_no_need_for_british_approval }
 		ai_will_do = {
 			factor = 0
 		}
@@ -4842,14 +4842,14 @@ focus_tree = {
 
 	#Focus for No Need For British Approval
 	focus = {
-		id = AUHDNC_no_need_for_british_approval
+		id = AUSDNC_no_need_for_british_approval
 		icon = GFX_focus_attack_britain
 		x = 52
 		y = 13
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_an_oceangoing_navy }
-		mutually_exclusive = { focus = AUHDNC_negotiations_with_britain }
+		prerequisite = { focus = AUSDNC_an_oceangoing_navy }
+		mutually_exclusive = { focus = AUSDNC_negotiations_with_britain }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4869,7 +4869,7 @@ focus_tree = {
 
 	#Focus for Imperial and Royal Foreign Ministry
 	focus = {
-		id = AUHDNC_imperial_and_royal_foreign_ministry
+		id = AUSDNC_imperial_and_royal_foreign_ministry
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 20
 		y = 19
@@ -4884,8 +4884,8 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				AND = {
-					NOT = { has_completed_focus = AUHDNC_unite_behind_haus_habsburg }
-					NOT = { has_completed_focus = AUHDNC_free_and_fair_elections }
+					NOT = { has_completed_focus = AUSDNC_unite_behind_haus_habsburg }
+					NOT = { has_completed_focus = AUSDNC_free_and_fair_elections }
 					has_government = neutrality
 				}
 			}
@@ -4900,13 +4900,13 @@ focus_tree = {
 
 	#Focus for The Boxer Rebellion
 	focus = {
-		id = AUHDNC_the_boxer_rebellion
+		id = AUSDNC_the_boxer_rebellion
 		icon = GFX_focus_chi_one_china_policy
 		x = 20
 		y = 20
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_imperial_and_royal_foreign_ministry }
+		prerequisite = { focus = AUSDNC_imperial_and_royal_foreign_ministry }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4919,15 +4919,15 @@ focus_tree = {
 
 	#Focus for Support The Boxers
 	focus = {
-		id = AUHDNC_support_the_boxers
+		id = AUSDNC_support_the_boxers
 		icon = GFX_focus_mex_soldaderas
 		x = 16
 		y = 21
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_the_boxer_rebellion }
-		mutually_exclusive = { focus = AUHDNC_condemn_the_boxers }
-		mutually_exclusive = { focus = AUHDNC_proclaim_neutrality }
+		prerequisite = { focus = AUSDNC_the_boxer_rebellion }
+		mutually_exclusive = { focus = AUSDNC_condemn_the_boxers }
+		mutually_exclusive = { focus = AUSDNC_proclaim_neutrality }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -4938,7 +4938,7 @@ focus_tree = {
 		completion_reward = {
 			BOX = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_friendly_foreign_policy
 				}
 			}
@@ -4947,22 +4947,22 @@ focus_tree = {
 
 	#Focus for Condemn The Boxers
 	focus = {
-		id = AUHDNC_condemn_the_boxers
+		id = AUSDNC_condemn_the_boxers
 		icon = attack_taiwan
 		x = 24
 		y = 21
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_the_boxer_rebellion }
-		mutually_exclusive = { focus = AUHDNC_support_the_boxers }
-		mutually_exclusive = { focus = AUHDNC_proclaim_neutrality }
+		prerequisite = { focus = AUSDNC_the_boxer_rebellion }
+		mutually_exclusive = { focus = AUSDNC_support_the_boxers }
+		mutually_exclusive = { focus = AUSDNC_proclaim_neutrality }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			BOX = {
 				add_opinion_modifier = {
-					target = AUH
+					target = AUS
 					modifier = RI_hostile_foreign_policy
 				}
 			}
@@ -4971,13 +4971,13 @@ focus_tree = {
 
 	#Focus for Arm The Boxers
 	focus = {
-		id = AUHDNC_arm_the_boxers
+		id = AUSDNC_arm_the_boxers
 		icon = small_arms
 		x = 15
 		y = 22
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_the_boxers }
+		prerequisite = { focus = AUSDNC_support_the_boxers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -4992,13 +4992,13 @@ focus_tree = {
 
 	#Focus for Military Advisors To Qing
 	focus = {
-		id = AUHDNC_military_advisors_to_qing
+		id = AUSDNC_military_advisors_to_qing
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 17
 		y = 22
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_the_boxers }
+		prerequisite = { focus = AUSDNC_support_the_boxers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5011,17 +5011,17 @@ focus_tree = {
 
 	#Focus for Support Chinese Foreign Policy
 	focus = {
-		id = AUHDNC_support_chinese_foreign_policy
+		id = AUSDNC_support_chinese_foreign_policy
 		icon = GFX_align_to_soviet_union
 		x = 16
 		y = 23
 		cost = 1
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_arm_the_boxers
+			focus = AUSDNC_arm_the_boxers
 		}
 		prerequisite = {
-			focus = AUHDNC_military_advisors_to_qing
+			focus = AUSDNC_military_advisors_to_qing
 		}
 		ai_will_do = {
 			factor = 100
@@ -5030,7 +5030,7 @@ focus_tree = {
 			QIN = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5038,13 +5038,13 @@ focus_tree = {
 
 	#Focus for Smuggle Weapons To Legations
 	focus = {
-		id = AUHDNC_smuggle_weapons_to_legations
+		id = AUSDNC_smuggle_weapons_to_legations
 		icon = small_arms
 		x = 23
 		y = 22
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_condemn_the_boxers }
+		prerequisite = { focus = AUSDNC_condemn_the_boxers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5059,17 +5059,17 @@ focus_tree = {
 
 	#Focus for Sanction China
 	focus = {
-		id = AUHDNC_sanction_china
+		id = AUSDNC_sanction_china
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 24
 		y = 23
 		cost = 1
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_smuggle_weapons_to_legations
+			focus = AUSDNC_smuggle_weapons_to_legations
 		}
 		prerequisite = {
-			focus = AUHDNC_smuggle_a_military_advisor_to_legations
+			focus = AUSDNC_smuggle_a_military_advisor_to_legations
 		}
 		ai_will_do = {
 			factor = 100
@@ -5078,7 +5078,7 @@ focus_tree = {
 			QIN = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5086,13 +5086,13 @@ focus_tree = {
 
 	#Focus for Smuggle A Military Advisor To Legations
 	focus = {
-		id = AUHDNC_smuggle_a_military_advisor_to_legations
+		id = AUSDNC_smuggle_a_military_advisor_to_legations
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 25
 		y = 22
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_condemn_the_boxers }
+		prerequisite = { focus = AUSDNC_condemn_the_boxers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5105,16 +5105,16 @@ focus_tree = {
 
 	#Focus for Boxer Rebelion Comes To An End
 	focus = {
-		id = AUHDNC_boxer_rebelion_comes_to_an_end
+		id = AUSDNC_boxer_rebelion_comes_to_an_end
 		icon = GFX_goal_generic_alliance
 		x = 20
 		y = 24
 		cost = 1
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_support_chinese_foreign_policy
-			focus = AUHDNC_sanction_china
-			focus = AUHDNC_allow_volunteers
+			focus = AUSDNC_support_chinese_foreign_policy
+			focus = AUSDNC_sanction_china
+			focus = AUSDNC_allow_volunteers
 		}
 		ai_will_do = {
 			factor = 100
@@ -5133,15 +5133,15 @@ focus_tree = {
 
 	#Focus for Proclaim Neutrality
 	focus = {
-		id = AUHDNC_proclaim_neutrality
+		id = AUSDNC_proclaim_neutrality
 		icon = GFX_goal_generic_neutrality_focus
 		x = 20
 		y = 21
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_the_boxer_rebellion }
-		mutually_exclusive = { focus = AUHDNC_support_the_boxers }
-		mutually_exclusive = { focus = AUHDNC_condemn_the_boxers }
+		prerequisite = { focus = AUSDNC_the_boxer_rebellion }
+		mutually_exclusive = { focus = AUSDNC_support_the_boxers }
+		mutually_exclusive = { focus = AUSDNC_condemn_the_boxers }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -5158,15 +5158,15 @@ focus_tree = {
 
 	#Focus for Allow Volunteers
 	focus = {
-		id = AUHDNC_allow_volunteers
+		id = AUSDNC_allow_volunteers
 		icon = GFX_focus_generic_manpower
 		x = 20
 		y = 23
 		cost = 1
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_arms_embargo_to_both_sides
-			focus = AUHDNC_sell_weapons_to_both_sides
+			focus = AUSDNC_arms_embargo_to_both_sides
+			focus = AUSDNC_sell_weapons_to_both_sides
 		}
 		ai_will_do = {
 			factor = 100
@@ -5191,14 +5191,14 @@ focus_tree = {
 
 	#Focus for Arms Embargo To Both Sides
 	focus = {
-		id = AUHDNC_arms_embargo_to_both_sides
+		id = AUSDNC_arms_embargo_to_both_sides
 		icon = GFX_focus_usa_voter_registration_act
 		x = 19
 		y = 22
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_proclaim_neutrality }
-		mutually_exclusive = { focus = AUHDNC_sell_weapons_to_both_sides }
+		prerequisite = { focus = AUSDNC_proclaim_neutrality }
+		mutually_exclusive = { focus = AUSDNC_sell_weapons_to_both_sides }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5217,14 +5217,14 @@ focus_tree = {
 
 	#Focus for Sell Weapons To Both Sides
 	focus = {
-		id = AUHDNC_sell_weapons_to_both_sides
+		id = AUSDNC_sell_weapons_to_both_sides
 		icon = small_arms
 		x = 21
 		y = 22
 		cost = 1
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_proclaim_neutrality }
-		mutually_exclusive = { focus = AUHDNC_arms_embargo_to_both_sides }
+		prerequisite = { focus = AUSDNC_proclaim_neutrality }
+		mutually_exclusive = { focus = AUSDNC_arms_embargo_to_both_sides }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5245,14 +5245,14 @@ focus_tree = {
 
 	#Focus for European Affairs
 	focus = {
-		id = AUHDNC_european_affairs
+		id = AUSDNC_european_affairs
 		icon = GFX_focus_usa_focus_on_europe
 		x = 11
 		y = 25
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_boxer_rebelion_comes_to_an_end }
-		mutually_exclusive = { focus = AUHDNC_stay_neutral }
+		prerequisite = { focus = AUSDNC_boxer_rebelion_comes_to_an_end }
+		mutually_exclusive = { focus = AUSDNC_stay_neutral }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -5262,14 +5262,14 @@ focus_tree = {
 		}
 		available = { 
 			is_subject = no
-			NOT = { has_completed_focus = AUHDNC_europe_stands_united }
+			NOT = { has_completed_focus = AUSDNC_europe_stands_united }
 		}
 		completion_reward = {
 			every_neighbor_country  = {
 				
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5277,14 +5277,14 @@ focus_tree = {
 
 	#Focus for Stay Neutral
 	focus = {
-		id = AUHDNC_stay_neutral
+		id = AUSDNC_stay_neutral
 		icon = GFX_align_to_switzerland
 		x = 32
 		y = 25
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_boxer_rebelion_comes_to_an_end }
-		mutually_exclusive = { focus = AUHDNC_european_affairs }
+		prerequisite = { focus = AUSDNC_boxer_rebelion_comes_to_an_end }
+		mutually_exclusive = { focus = AUSDNC_european_affairs }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -5294,7 +5294,7 @@ focus_tree = {
 		}
 		available = { 
 			is_subject = no
-			NOT = { has_completed_focus = AUHDNC_europe_stands_united }
+			NOT = { has_completed_focus = AUSDNC_europe_stands_united }
 		}
 		completion_reward = {
 			add_political_power = 50
@@ -5304,14 +5304,14 @@ focus_tree = {
 
 	#Focus for Support The Central Powers
 	focus = {
-		id = AUHDNC_support_the_central_powers
+		id = AUSDNC_support_the_central_powers
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 7
 		y = 26
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_european_affairs }
-		mutually_exclusive = { focus = AUHDNC_support_the_entente }
+		prerequisite = { focus = AUSDNC_european_affairs }
+		mutually_exclusive = { focus = AUSDNC_support_the_entente }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -5320,7 +5320,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			NOT = { has_completed_focus = AUHDNC_europe_stands_united }
+			NOT = { has_completed_focus = AUSDNC_europe_stands_united }
 		}
 		completion_reward = {
 			every_country = {
@@ -5330,7 +5330,7 @@ focus_tree = {
 				}
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5338,14 +5338,14 @@ focus_tree = {
 
 	#Focus for Support The Entente
 	focus = {
-		id = AUHDNC_support_the_entente
+		id = AUSDNC_support_the_entente
 		icon = GFX_goal_support_democracy
 		x = 17
 		y = 26
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_european_affairs }
-		mutually_exclusive = { focus = AUHDNC_support_the_central_powers }
+		prerequisite = { focus = AUSDNC_european_affairs }
+		mutually_exclusive = { focus = AUSDNC_support_the_central_powers }
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -5362,13 +5362,13 @@ focus_tree = {
 			RUS = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 			FRA = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5376,13 +5376,13 @@ focus_tree = {
 
 	#Focus for Support Germany
 	focus = {
-		id = AUHDNC_support_germany
+		id = AUSDNC_support_germany
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 5
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_the_central_powers }
+		prerequisite = { focus = AUSDNC_support_the_central_powers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5390,7 +5390,7 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = {
 					modifier = RI_supports_own_country
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5398,13 +5398,13 @@ focus_tree = {
 
 	#Focus for Support The Kaisers Foreign Policy
 	focus = {
-		id = AUHDNC_support_the_kaisers_foreign_policy
+		id = AUSDNC_support_the_kaisers_foreign_policy
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 4
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_germany }
+		prerequisite = { focus = AUSDNC_support_germany }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5412,7 +5412,7 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5420,37 +5420,37 @@ focus_tree = {
 
 	#Focus for Condemn French Foreign Policy
 	focus = {
-		id = AUHDNC_condemn_french_foreign_policy
+		id = AUSDNC_condemn_french_foreign_policy
 		icon = GFX_focus_attack_france
 		x = 6
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_germany }
+		prerequisite = { focus = AUSDNC_support_germany }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_opinion_modifier = {
 				modifier = RI_hostile_foreign_policy
-				target = AUH
+				target = AUS
 			}
 		}
 	}
 
 	#Focus for The Kaiser Visits Us
 	focus = {
-		id = AUHDNC_the_kaiser_visits_us
+		id = AUSDNC_the_kaiser_visits_us
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 5
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_support_the_kaisers_foreign_policy
+			focus = AUSDNC_support_the_kaisers_foreign_policy
 		}
 		prerequisite = {
-			focus = AUHDNC_condemn_french_foreign_policy
+			focus = AUSDNC_condemn_french_foreign_policy
 		}
 		ai_will_do = {
 			factor = 100
@@ -5459,7 +5459,7 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = {
 					modifier = RI_visited_capital
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5467,20 +5467,20 @@ focus_tree = {
 
 	#Focus for Join Central Powers
 	focus = {
-		id = AUHDNC_join_central_powers
+		id = AUSDNC_join_central_powers
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 7
 		y = 30
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_the_kaiser_visits_us
+			focus = AUSDNC_the_kaiser_visits_us
 		}
 		prerequisite = {
-			focus = AUHDNC_the_bulgarian_tsar_visits_us
+			focus = AUSDNC_the_bulgarian_tsar_visits_us
 		}
 		prerequisite = {
-			focus = AUHDNC_study_foreign_militaries
+			focus = AUSDNC_study_foreign_militaries
 		}
 		ai_will_do = {
 			factor = 100
@@ -5494,13 +5494,13 @@ focus_tree = {
 
 	#Focus for Support Bulgaria
 	focus = {
-		id = AUHDNC_support_bulgaria
+		id = AUSDNC_support_bulgaria
 		icon = GFX_focus_generic_befriend_bulgaria
 		x = 9
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_the_central_powers }
+		prerequisite = { focus = AUSDNC_support_the_central_powers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5508,7 +5508,7 @@ focus_tree = {
 			BUL = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5516,13 +5516,13 @@ focus_tree = {
 
 	#Focus for Support The Tsars Foreign Policy
 	focus = {
-		id = AUHDNC_support_the_tsars_foreign_policy
+		id = AUSDNC_support_the_tsars_foreign_policy
 		icon = GFX_focus_BUL_the_return_of_ferdinand
 		x = 8
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_bulgaria }
+		prerequisite = { focus = AUSDNC_support_bulgaria }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5530,7 +5530,7 @@ focus_tree = {
 			RUS = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5538,13 +5538,13 @@ focus_tree = {
 
 	#Focus for Condemn Russian Policy
 	focus = {
-		id = AUHDNC_condemn_russian_policy
+		id = AUSDNC_condemn_russian_policy
 		icon = GFX_focus_generic_attack_cyprus
 		x = 10
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_bulgaria }
+		prerequisite = { focus = AUSDNC_support_bulgaria }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5552,7 +5552,7 @@ focus_tree = {
 			RUS = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5560,17 +5560,17 @@ focus_tree = {
 
 	#Focus for The Bulgarian Tsar Visits Us
 	focus = {
-		id = AUHDNC_the_bulgarian_tsar_visits_us
+		id = AUSDNC_the_bulgarian_tsar_visits_us
 		icon = GFX_focus_BUL_the_return_of_ferdinand
 		x = 9
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_support_the_tsars_foreign_policy
+			focus = AUSDNC_support_the_tsars_foreign_policy
 		}
 		prerequisite = {
-			focus = AUHDNC_condemn_russian_policy
+			focus = AUSDNC_condemn_russian_policy
 		}
 		ai_will_do = {
 			factor = 100
@@ -5579,7 +5579,7 @@ focus_tree = {
 			BUL = {
 				add_opinion_modifier = {
 					modifier = RI_visited_capital
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5587,15 +5587,15 @@ focus_tree = {
 
 	#Focus for Invite Foreign Officers
 	focus = {
-		id = AUHDNC_invite_foreign_officers
+		id = AUSDNC_invite_foreign_officers
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 12
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_support_the_central_powers
-			focus = AUHDNC_support_the_entente
+			focus = AUSDNC_support_the_central_powers
+			focus = AUSDNC_support_the_entente
 		}
 		ai_will_do = {
 			factor = 100
@@ -5609,13 +5609,13 @@ focus_tree = {
 
 	#Focus for Export Weapons
 	focus = {
-		id = AUHDNC_export_weapons
+		id = AUSDNC_export_weapons
 		icon = GFX_focus_ger_oppose_hitler
 		x = 12
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_invite_foreign_officers }
+		prerequisite = { focus = AUSDNC_invite_foreign_officers }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5636,15 +5636,15 @@ focus_tree = {
 
 	#Focus for Joint Industrial Development
 	focus = {
-		id = AUHDNC_joint_industrial_development
+		id = AUSDNC_joint_industrial_development
 		icon = GFX_focus_generic_industry_3
 		x = 10
 		y = 31
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_join_central_powers
-			focus = AUHDNC_join_entente
+			focus = AUSDNC_join_central_powers
+			focus = AUSDNC_join_entente
 		}
 		ai_will_do = {
 			factor = 100
@@ -5658,13 +5658,13 @@ focus_tree = {
 
 	#Focus for Study Foreign Militaries
 	focus = {
-		id = AUHDNC_study_foreign_militaries
+		id = AUSDNC_study_foreign_militaries
 		icon = GFX_focus_generic_treaty
 		x = 12
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_export_weapons }
+		prerequisite = { focus = AUSDNC_export_weapons }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5675,13 +5675,13 @@ focus_tree = {
 
 	#Focus for Support France
 	focus = {
-		id = AUHDNC_support_france
+		id = AUSDNC_support_france
 		icon = GFX_align_to_france
 		x = 15
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_the_entente }
+		prerequisite = { focus = AUSDNC_support_the_entente }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5689,7 +5689,7 @@ focus_tree = {
 			FRA = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5697,13 +5697,13 @@ focus_tree = {
 
 	#Focus for Support Russia
 	focus = {
-		id = AUHDNC_support_russia
+		id = AUSDNC_support_russia
 		icon = GFX_focus_generic_befriend_cyprus
 		x = 19
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_the_entente }
+		prerequisite = { focus = AUSDNC_support_the_entente }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5711,7 +5711,7 @@ focus_tree = {
 			RUS = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5719,13 +5719,13 @@ focus_tree = {
 
 	#Focus for Support French Revanchism
 	focus = {
-		id = AUHDNC_support_french_revanchism
+		id = AUSDNC_support_french_revanchism
 		icon = GFX_align_to_france
 		x = 14
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_france }
+		prerequisite = { focus = AUSDNC_support_france }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5733,7 +5733,7 @@ focus_tree = {
 			FRA = {
 				add_opinion_modifier = {
 					modifier = RI_friendly_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5741,13 +5741,13 @@ focus_tree = {
 
 	#Focus for Condemn German Imperialism
 	focus = {
-		id = AUHDNC_condemn_german_imperialism
+		id = AUSDNC_condemn_german_imperialism
 		icon = attack_germany
 		x = 16
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_france }
+		prerequisite = { focus = AUSDNC_support_france }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5755,7 +5755,7 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = {
 					modifier = RI_hostile_foreign_policy
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5763,17 +5763,17 @@ focus_tree = {
 
 	#Focus for Make French An Official Language
 	focus = {
-		id = AUHDNC_make_french_an_official_language
+		id = AUSDNC_make_french_an_official_language
 		icon = GFX_focus_generic_military_academy
 		x = 15
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_support_french_revanchism
+			focus = AUSDNC_support_french_revanchism
 		}
 		prerequisite = {
-			focus = AUHDNC_condemn_german_imperialism
+			focus = AUSDNC_condemn_german_imperialism
 		}
 		ai_will_do = {
 			factor = 100
@@ -5782,7 +5782,7 @@ focus_tree = {
 			FRA = {
 				add_opinion_modifier = {
 					modifier = RI_official_language
-					target = AUH
+					target = AUS
 				}
 			}
 		}
@@ -5790,20 +5790,20 @@ focus_tree = {
 
 	#Focus for Join Entente
 	focus = {
-		id = AUHDNC_join_entente
+		id = AUSDNC_join_entente
 		icon = GFX_align_to_france
 		x = 17
 		y = 30
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_study_foreign_militaries
+			focus = AUSDNC_study_foreign_militaries
 		}
 		prerequisite = {
-			focus = AUHDNC_make_french_an_official_language
+			focus = AUSDNC_make_french_an_official_language
 		}
 		prerequisite = {
-			focus = AUHDNC_the_tsar_visits_us
+			focus = AUSDNC_the_tsar_visits_us
 		}
 		ai_will_do = {
 			factor = 100
@@ -5817,19 +5817,19 @@ focus_tree = {
 
 	#Focus for Support Russian Pan-Slavism
 	focus = {
-		id = AUHDNC_support_russian_panslavism
+		id = AUSDNC_support_russian_panslavism
 		icon = GFX_focus_generic_befriend_cyprus
 		x = 18
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_russia }
+		prerequisite = { focus = AUSDNC_support_russia }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_opinion_modifier = {
-				target = AUH
+				target = AUS
 				modifier = RI_supports_enemy_politics
 			}
 			add_opinion_modifier = {
@@ -5841,13 +5841,13 @@ focus_tree = {
 
 	#Focus for Condemn Bulgarian Policy
 	focus = {
-		id = AUHDNC_condemn_bulgarian_policy
+		id = AUSDNC_condemn_bulgarian_policy
 		icon = GFX_focus_generic_attack_bulgaria
 		x = 20
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_support_russia }
+		prerequisite = { focus = AUSDNC_support_russia }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5861,17 +5861,17 @@ focus_tree = {
 
 	#Focus for The Tsar Visits Us
 	focus = {
-		id = AUHDNC_the_tsar_visits_us
+		id = AUSDNC_the_tsar_visits_us
 		icon = GFX_focus_hun_elect_a_king
 		x = 19
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_support_russian_panslavism
+			focus = AUSDNC_support_russian_panslavism
 		}
 		prerequisite = {
-			focus = AUHDNC_condemn_bulgarian_policy
+			focus = AUSDNC_condemn_bulgarian_policy
 		}
 		ai_will_do = {
 			factor = 100
@@ -5888,15 +5888,15 @@ focus_tree = {
 
 	#Focus for A Foreign Attache
 	focus = {
-		id = AUHDNC_a_foreign_attache
+		id = AUSDNC_a_foreign_attache
 		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 12
 		y = 31
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_join_central_powers
-			focus = AUHDNC_join_entente
+			focus = AUSDNC_join_central_powers
+			focus = AUSDNC_join_entente
 		}
 		ai_will_do = {
 			factor = 100
@@ -5910,15 +5910,15 @@ focus_tree = {
 
 	#Focus for Joint Technological Research
 	focus = {
-		id = AUHDNC_joint_technological_research
+		id = AUSDNC_joint_technological_research
 		icon = GFX_focus_research2
 		x = 14
 		y = 31
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_join_central_powers
-			focus = AUHDNC_join_entente
+			focus = AUSDNC_join_central_powers
+			focus = AUSDNC_join_entente
 		}
 		ai_will_do = {
 			factor = 100
@@ -5930,13 +5930,13 @@ focus_tree = {
 
 	#Focus for Prepare For The Worst
 	focus = {
-		id = AUHDNC_prepare_for_the_worst
+		id = AUSDNC_prepare_for_the_worst
 		icon = small_arms
 		x = 26
 		y = 26
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_stay_neutral }
+		prerequisite = { focus = AUSDNC_stay_neutral }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5950,13 +5950,13 @@ focus_tree = {
 
 	#Focus for Our Role
 	focus = {
-		id = AUHDNC_our_role
+		id = AUSDNC_our_role
 		icon = GFX_goal_generic_neutrality_focus
 		x = 32
 		y = 26
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_stay_neutral }
+		prerequisite = { focus = AUSDNC_stay_neutral }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5970,13 +5970,13 @@ focus_tree = {
 
 	#Focus for Deterrence
 	focus = {
-		id = AUHDNC_deterrence
+		id = AUSDNC_deterrence
 		icon = GFX_focus_generic_coastal_fort
 		x = 38
 		y = 26
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_stay_neutral }
+		prerequisite = { focus = AUSDNC_stay_neutral }
 		ai_will_do = {
 			factor = 100
 		}
@@ -5990,13 +5990,13 @@ focus_tree = {
 
 	#Focus for Extend The Conscription
 	focus = {
-		id = AUHDNC_extend_the_conscription
+		id = AUSDNC_extend_the_conscription
 		icon = GFX_focus_generic_manpower
 		x = 25
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_prepare_for_the_worst }
+		prerequisite = { focus = AUSDNC_prepare_for_the_worst }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6027,13 +6027,13 @@ focus_tree = {
 
 	#Focus for Acquire Weapons
 	focus = {
-		id = AUHDNC_acquire_weapons
+		id = AUSDNC_acquire_weapons
 		icon = GFX_goal_generic_army_artillery2
 		x = 27
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_prepare_for_the_worst }
+		prerequisite = { focus = AUSDNC_prepare_for_the_worst }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6076,17 +6076,17 @@ focus_tree = {
 
 	#Focus for Proper Military Training
 	focus = {
-		id = AUHDNC_proper_military_training
+		id = AUSDNC_proper_military_training
 		icon = army_officers
 		x = 26
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_extend_the_conscription
+			focus = AUSDNC_extend_the_conscription
 		}
 		prerequisite = {
-			focus = AUHDNC_acquire_weapons
+			focus = AUSDNC_acquire_weapons
 		}
 		ai_will_do = {
 			factor = 100
@@ -6100,13 +6100,13 @@ focus_tree = {
 
 	#Focus for Home Defense
 	focus = {
-		id = AUHDNC_home_defense
+		id = AUSDNC_home_defense
 		icon = GFX_focus_generic_home_defense
 		x = 37
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_deterrence }
+		prerequisite = { focus = AUSDNC_deterrence }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6186,13 +6186,13 @@ focus_tree = {
 
 	#Focus for Fortification Effort
 	focus = {
-		id = AUHDNC_fortification_effort
+		id = AUSDNC_fortification_effort
 		icon = GFX_goal_generic_fortify_city
 		x = 39
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_deterrence }
+		prerequisite = { focus = AUSDNC_deterrence }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6226,17 +6226,17 @@ focus_tree = {
 
 	#Focus for Why We Fight
 	focus = {
-		id = AUHDNC_why_we_fight
+		id = AUSDNC_why_we_fight
 		icon = GFX_goal_generic_propaganda
 		x = 38
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_home_defense
+			focus = AUSDNC_home_defense
 		}
 		prerequisite = {
-			focus = AUHDNC_fortification_effort
+			focus = AUSDNC_fortification_effort
 		}
 		ai_will_do = {
 			factor = 100
@@ -6250,14 +6250,14 @@ focus_tree = {
 
 	#Focus for Oppose German Ambitions
 	focus = {
-		id = AUHDNC_oppose_german_ambitions
+		id = AUSDNC_oppose_german_ambitions
 		icon = attack_germany
 		x = 29
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_our_role }
-		mutually_exclusive = { focus = AUHDNC_improve_relations_with_germany }
+		prerequisite = { focus = AUSDNC_our_role }
+		mutually_exclusive = { focus = AUSDNC_improve_relations_with_germany }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6271,14 +6271,14 @@ focus_tree = {
 
 	#Focus for Improve Relations With Germany
 	focus = {
-		id = AUHDNC_improve_relations_with_germany
+		id = AUSDNC_improve_relations_with_germany
 		icon = GFX_align_to_germany2
 		x = 31
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_our_role }
-		mutually_exclusive = { focus = AUHDNC_oppose_german_ambitions }
+		prerequisite = { focus = AUSDNC_our_role }
+		mutually_exclusive = { focus = AUSDNC_oppose_german_ambitions }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6299,14 +6299,14 @@ focus_tree = {
 
 	#Focus for Improve Relations With France
 	focus = {
-		id = AUHDNC_improve_relations_with_france
+		id = AUSDNC_improve_relations_with_france
 		icon = GFX_align_to_france
 		x = 33
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_our_role }
-		mutually_exclusive = { focus = AUHDNC_oppose_french_ambitions }
+		prerequisite = { focus = AUSDNC_our_role }
+		mutually_exclusive = { focus = AUSDNC_oppose_french_ambitions }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6327,14 +6327,14 @@ focus_tree = {
 
 	#Focus for Oppose French Ambitions
 	focus = {
-		id = AUHDNC_oppose_french_ambitions
+		id = AUSDNC_oppose_french_ambitions
 		icon = GFX_focus_attack_france
 		x = 35
 		y = 27
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = AUHDNC_our_role }
-		mutually_exclusive = { focus = AUHDNC_improve_relations_with_france }
+		prerequisite = { focus = AUSDNC_our_role }
+		mutually_exclusive = { focus = AUSDNC_improve_relations_with_france }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6348,17 +6348,17 @@ focus_tree = {
 
 	#Focus for The Best Defense Is A Good Offense
 	focus = {
-		id = AUHDNC_the_best_defense_is_a_good_offense
+		id = AUSDNC_the_best_defense_is_a_good_offense
 		icon = GFX_focus_prc_infiltration
 		x = 32
 		y = 28
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_oppose_german_ambitions
-			focus = AUHDNC_improve_relations_with_germany
-			focus = AUHDNC_improve_relations_with_france
-			focus = AUHDNC_oppose_french_ambitions
+			focus = AUSDNC_oppose_german_ambitions
+			focus = AUSDNC_improve_relations_with_germany
+			focus = AUSDNC_improve_relations_with_france
+			focus = AUSDNC_oppose_french_ambitions
 		}
 		ai_will_do = {
 			factor = 100
@@ -6372,22 +6372,22 @@ focus_tree = {
 
 	#Focus for League Of Armed Neutrality
 	focus = {
-		id = AUHDNC_league_of_armed_neutrality
+		id = AUSDNC_league_of_armed_neutrality
 		icon = GFX_goal_generic_alliance
 		x = 33
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_proper_military_training
+			focus = AUSDNC_proper_military_training
 		}
 		prerequisite = {
-			focus = AUHDNC_why_we_fight
+			focus = AUSDNC_why_we_fight
 		}
 		prerequisite = {
-			focus = AUHDNC_the_best_defense_is_a_good_offense
+			focus = AUSDNC_the_best_defense_is_a_good_offense
 		}
-		mutually_exclusive = { focus = AUHDNC_appeasement_policy }
+		mutually_exclusive = { focus = AUSDNC_appeasement_policy }
 		ai_will_do = {
 			factor = 100
 		}
@@ -6401,23 +6401,23 @@ focus_tree = {
 
 	#Focus for Appeasement Policy
 	focus = {
-		id = AUHDNC_appeasement_policy
+		id = AUSDNC_appeasement_policy
 		icon = GFX_goal_tripartite_pact
 		x = 31
 		y = 29
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = {
-			focus = AUHDNC_proper_military_training
+			focus = AUSDNC_proper_military_training
 		}
 		prerequisite = {
-			focus = AUHDNC_why_we_fight
+			focus = AUSDNC_why_we_fight
 		}
 		prerequisite = {
-			focus = AUHDNC_the_best_defense_is_a_good_offense
+			focus = AUSDNC_the_best_defense_is_a_good_offense
 		}
 		mutually_exclusive = {
-			focus = AUHDNC_league_of_armed_neutrality
+			focus = AUSDNC_league_of_armed_neutrality
 		}
 		ai_will_do = {
 			factor = 100
@@ -6447,7 +6447,7 @@ focus_tree = {
 
 
 	focus = {
-		id = AUH_DNC_free_market
+		id = AUS_DNC_free_market
 		icon = GFX_focus_generic_the_giant_wakes
 		x = 70
 		y = 1
@@ -6456,7 +6456,7 @@ focus_tree = {
 		available = {
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_planned_economy
+			focus = AUS_DNC_planned_economy
 		}
 		ai_will_do = {
 			factor = 10
@@ -6467,8 +6467,8 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				AND = {
-					NOT = { has_completed_focus = AUHDNC_unite_behind_haus_habsburg }
-					NOT = { has_completed_focus = AUHDNC_free_and_fair_elections }
+					NOT = { has_completed_focus = AUSDNC_unite_behind_haus_habsburg }
+					NOT = { has_completed_focus = AUSDNC_free_and_fair_elections }
 					has_government = neutrality
 				}
 			}
@@ -6483,14 +6483,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_support_middle_class
+		id = AUS_DNC_support_middle_class
 		icon = GFX_focus_generic_self_management
 		x = -1
 		y = 1
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_free_market
+			focus = AUS_DNC_free_market
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6527,14 +6527,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_minimum_wage
+		id = AUS_DNC_minimum_wage
 		icon = GFX_focus_mex_privatisation
 		x = -2
 		y = 2
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_support_middle_class
+			focus = AUS_DNC_support_middle_class
 		}
 		completion_reward = {
 			add_ideas = {
@@ -6543,14 +6543,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_invite_foreign_investors
+		id = AUS_DNC_invite_foreign_investors
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 2
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_free_market
+			focus = AUS_DNC_free_market
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6616,17 +6616,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_fiscal_reforms
+		id = AUS_DNC_fiscal_reforms
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = -1
 		y = 3
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_invite_foreign_investors
+			focus = AUS_DNC_invite_foreign_investors
 		}
 		prerequisite = {
-			focus = AUH_DNC_minimum_wage
+			focus = AUS_DNC_minimum_wage
 		}
 		completion_reward = {
 			add_ideas = {
@@ -6635,17 +6635,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_planned_economy
+		id = AUS_DNC_planned_economy
 		icon = GFX_goal_generic_position_armies
 		x = 4
 		y = 0
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 
 		available = {
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_free_market
+			focus = AUS_DNC_free_market
 		}
 		ai_will_do = {
 			factor = 10
@@ -6656,8 +6656,8 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				AND = {
-					NOT = { has_completed_focus = AUHDNC_unite_behind_haus_habsburg }
-					NOT = { has_completed_focus = AUHDNC_free_and_fair_elections }
+					NOT = { has_completed_focus = AUSDNC_unite_behind_haus_habsburg }
+					NOT = { has_completed_focus = AUSDNC_free_and_fair_elections }
 					has_government = neutrality
 				}
 			}
@@ -6669,14 +6669,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_liquidate_unprofital_business
+		id = AUS_DNC_liquidate_unprofital_business
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 5
 		y = 1
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_planned_economy
+			focus = AUS_DNC_planned_economy
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6695,14 +6695,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_buy_out_dissident_farms
+		id = AUS_DNC_buy_out_dissident_farms
 		icon = GFX_goal_generic_forceful_treaty
 		x = 6
 		y = 2
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_liquidate_unprofital_business
+			focus = AUS_DNC_liquidate_unprofital_business
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6722,14 +6722,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_rations
+		id = AUS_DNC_rations
 		icon = GFX_goal_generic_construct_civilian
 		x = 4
 		y = 2
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_planned_economy
+			focus = AUS_DNC_planned_economy
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6765,17 +6765,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_loosen_restrictions
+		id = AUS_DNC_loosen_restrictions
 		icon = GFX_goal_continuous_reduce_training_time
 		x = 5
 		y = 3
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_rations
+			focus = AUS_DNC_rations
 		}
 		prerequisite = {
-			focus = AUH_DNC_buy_out_dissident_farms
+			focus = AUS_DNC_buy_out_dissident_farms
 		}
 		completion_reward = {
 			add_ideas = {
@@ -6784,15 +6784,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_coal_mines
+		id = AUS_DNC_coal_mines
 		icon = GFX_focus_generic_steel
 		x = 1
 		y = 1
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_planned_economy
-			focus = AUH_DNC_free_market
+			focus = AUS_DNC_planned_economy
+			focus = AUS_DNC_free_market
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6804,15 +6804,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_tungsten_mines
+		id = AUS_DNC_tungsten_mines
 		icon = GFX_focus_generic_tungsten
 		x = 3
 		y = 1
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_planned_economy
-			focus = AUH_DNC_free_market
+			focus = AUS_DNC_planned_economy
+			focus = AUS_DNC_free_market
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6824,17 +6824,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_optimise_profit
+		id = AUS_DNC_optimise_profit
 		icon = GFX_goal_continuous_non_factory_construct
 		x = 2
 		y = 2
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_tungsten_mines
+			focus = AUS_DNC_tungsten_mines
 		}
 		prerequisite = {
-			focus = AUH_DNC_coal_mines
+			focus = AUS_DNC_coal_mines
 		}
 		completion_reward = {
 			add_ideas = {
@@ -6843,15 +6843,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_full_speed_ahead
+		id = AUS_DNC_full_speed_ahead
 		icon = GFX_goal_continuous_research
 		x = 2
 		y = 3
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_invite_foreign_investors
-			focus = AUH_DNC_rations
+			focus = AUS_DNC_invite_foreign_investors
+			focus = AUS_DNC_rations
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -6872,18 +6872,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_build_railroads
+		id = AUS_DNC_build_railroads
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 4
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_fiscal_reforms
-			focus = AUH_DNC_loosen_restrictions
+			focus = AUS_DNC_fiscal_reforms
+			focus = AUS_DNC_loosen_restrictions
 		}
 		prerequisite = {
-			focus = AUH_DNC_full_speed_ahead
+			focus = AUS_DNC_full_speed_ahead
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6997,18 +6997,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_mass_urbanisation
+		id = AUS_DNC_mass_urbanisation
 		icon = GFX_focus_generic_industry_3
 		x = 2
 		y = 4
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_fiscal_reforms
-			focus = AUH_DNC_loosen_restrictions
+			focus = AUS_DNC_fiscal_reforms
+			focus = AUS_DNC_loosen_restrictions
 		}
 		prerequisite = {
-			focus = AUH_DNC_full_speed_ahead
+			focus = AUS_DNC_full_speed_ahead
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -7079,18 +7079,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_war_economy
+		id = AUS_DNC_war_economy
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 4
 		y = 4
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_fiscal_reforms
-			focus = AUH_DNC_loosen_restrictions
+			focus = AUS_DNC_fiscal_reforms
+			focus = AUS_DNC_loosen_restrictions
 		}
 		prerequisite = {
-			focus = AUH_DNC_full_speed_ahead
+			focus = AUS_DNC_full_speed_ahead
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7159,31 +7159,31 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_university
+		id = AUS_DNC_university
 		icon = GFX_focus_research
 		x = 2
 		y = 5
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_war_economy
+			focus = AUS_DNC_war_economy
 		}
 		prerequisite = {
-			focus = AUH_DNC_build_railroads
+			focus = AUS_DNC_build_railroads
 		}
 		prerequisite = {
-			focus = AUH_DNC_mass_urbanisation
+			focus = AUS_DNC_mass_urbanisation
 		}
 		completion_reward = {
 			add_research_slot = 1
 		}
 	}
 	focus = {
-		id = AUH_DNC_army_efforts
+		id = AUS_DNC_army_efforts
 		icon = GFX_goal_generic_axis_build_infantry
 		x = 14
 		y = 0
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 
 		ai_will_do = {
@@ -7191,8 +7191,8 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				AND = {
-					NOT = { has_completed_focus = AUHDNC_unite_behind_haus_habsburg }
-					NOT = { has_completed_focus = AUHDNC_free_and_fair_elections }
+					NOT = { has_completed_focus = AUSDNC_unite_behind_haus_habsburg }
+					NOT = { has_completed_focus = AUSDNC_free_and_fair_elections }
 					has_government = neutrality
 				}
 			}
@@ -7202,17 +7202,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_offensive_army
+		id = AUS_DNC_offensive_army
 		icon = GFX_goal_generic_major_war
 		x = -3
 		y = 1
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_army_efforts
+			focus = AUS_DNC_army_efforts
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_defensive_army
+			focus = AUS_DNC_defensive_army
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7221,14 +7221,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_armoured_cars
+		id = AUS_DNC_armoured_cars
 		icon = motorized
 		x = -5
 		y = 2
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_offensive_army
+			focus = AUS_DNC_offensive_army
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7240,14 +7240,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_tanks
+		id = AUS_DNC_tanks
 		icon = GFX_goal_generic_army_tanks
 		x = -5
 		y = 4
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_armoured_cars
+			focus = AUS_DNC_armoured_cars
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7259,14 +7259,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_decentralised_army
+		id = AUS_DNC_decentralised_army
 		icon = army_officers
 		x = -3
 		y = 2
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_offensive_army
+			focus = AUS_DNC_offensive_army
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7275,14 +7275,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_independent_officers
+		id = AUS_DNC_independent_officers
 		icon = GFX_focus_mex_support_general_cedillo
 		x = -4
 		y = 3
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_decentralised_army
+			focus = AUS_DNC_decentralised_army
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -7292,14 +7292,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_esprit_de_corps
+		id = AUS_DNC_esprit_de_corps
 		icon = GFX_focus_hol_liberation
 		x = -2
 		y = 3
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_decentralised_army
+			focus = AUS_DNC_decentralised_army
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7308,17 +7308,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_improve_doctrine
+		id = AUS_DNC_improve_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		x = -3
 		y = 4
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_independent_officers
+			focus = AUS_DNC_independent_officers
 		}
 		prerequisite = {
-			focus = AUH_DNC_esprit_de_corps
+			focus = AUS_DNC_esprit_de_corps
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7330,14 +7330,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_offensive_artillery
+		id = AUS_DNC_offensive_artillery
 		icon = GFX_goal_generic_army_artillery2
 		x = -1
 		y = 2
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_offensive_army
+			focus = AUS_DNC_offensive_army
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7349,14 +7349,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_light_artillery
+		id = AUS_DNC_light_artillery
 		icon = GFX_goal_generic_army_artillery
 		x = -1
 		y = 4
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_offensive_artillery
+			focus = AUS_DNC_offensive_artillery
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7368,20 +7368,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_assault_rifle
+		id = AUS_DNC_assault_rifle
 		icon = GFX_focus_prc_infiltration
 		x = -4
 		y = 5
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_tanks
+			focus = AUS_DNC_tanks
 		}
 		prerequisite = {
-			focus = AUH_DNC_improve_doctrine
+			focus = AUS_DNC_improve_doctrine
 		}
 		prerequisite = {
-			focus = AUH_DNC_light_artillery
+			focus = AUS_DNC_light_artillery
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7397,20 +7397,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_auxilliary_corps
+		id = AUS_DNC_auxilliary_corps
 		icon = GFX_goal_generic_construction2
 		x = -2
 		y = 5
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_light_artillery
+			focus = AUS_DNC_light_artillery
 		}
 		prerequisite = {
-			focus = AUH_DNC_improve_doctrine
+			focus = AUS_DNC_improve_doctrine
 		}
 		prerequisite = {
-			focus = AUH_DNC_tanks
+			focus = AUS_DNC_tanks
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7427,17 +7427,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_endless_advance
+		id = AUS_DNC_endless_advance
 		icon = GFX_goal_generic_major_war
 		x = -3
 		y = 6
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_auxilliary_corps
+			focus = AUS_DNC_auxilliary_corps
 		}
 		prerequisite = {
-			focus = AUH_DNC_assault_rifle
+			focus = AUS_DNC_assault_rifle
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -7447,15 +7447,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_chemicals
+		id = AUS_DNC_chemicals
 		icon = GFX_focus_generic_provoke_border_clashes
 		x = 0
 		y = 3
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_offensive_army
-			focus = AUH_DNC_defensive_army
+			focus = AUS_DNC_offensive_army
+			focus = AUS_DNC_defensive_army
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7466,14 +7466,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_improve_gas_masks
+		id = AUS_DNC_improve_gas_masks
 		icon = GFX_goal_generic_CAS
 		x = 0
 		y = 5
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_chemicals
+			focus = AUS_DNC_chemicals
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7484,17 +7484,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_defensive_army
+		id = AUS_DNC_defensive_army
 		icon = GFX_goal_generic_defence
 		x = 3
 		y = 1
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_army_efforts
+			focus = AUS_DNC_army_efforts
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_offensive_army
+			focus = AUS_DNC_offensive_army
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7503,14 +7503,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_never_ending_barrage
+		id = AUS_DNC_never_ending_barrage
 		icon = GFX_goal_generic_occupy_start_war
 		x = 1
 		y = 2
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_defensive_army
+			focus = AUS_DNC_defensive_army
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7521,14 +7521,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_heavy_artillery
+		id = AUS_DNC_heavy_artillery
 		icon = GFX_goal_generic_army_artillery2
 		x = 1
 		y = 4
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_never_ending_barrage
+			focus = AUS_DNC_never_ending_barrage
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7539,14 +7539,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_centralised_army
+		id = AUS_DNC_centralised_army
 		icon = small_arms
 		x = 3
 		y = 2
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_defensive_army
+			focus = AUS_DNC_defensive_army
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7555,14 +7555,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_order_and_discipline
+		id = AUS_DNC_order_and_discipline
 		icon = GFX_focus_generic_little_entente
 		x = 2
 		y = 3
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_centralised_army
+			focus = AUS_DNC_centralised_army
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7571,14 +7571,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_chain_of_command
+		id = AUS_DNC_chain_of_command
 		icon = army_officers
 		x = 4
 		y = 3
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_centralised_army
+			focus = AUS_DNC_centralised_army
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -7588,17 +7588,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_better_doctrine
+		id = AUS_DNC_better_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		x = 3
 		y = 4
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_order_and_discipline
+			focus = AUS_DNC_order_and_discipline
 		}
 		prerequisite = {
-			focus = AUH_DNC_chain_of_command
+			focus = AUS_DNC_chain_of_command
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7609,14 +7609,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_dig_in_and_pray
+		id = AUS_DNC_dig_in_and_pray
 		icon = GFX_goal_generic_construction2
 		x = 5
 		y = 2
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_defensive_army
+			focus = AUS_DNC_defensive_army
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7627,14 +7627,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_impenetrable_fortress
+		id = AUS_DNC_impenetrable_fortress
 		icon = GFX_goal_generic_construct_military
 		x = 5
 		y = 4
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_dig_in_and_pray
+			focus = AUS_DNC_dig_in_and_pray
 		}
 		completion_reward = {
 			add_ideas = {
@@ -7643,20 +7643,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_no_antiquities
+		id = AUS_DNC_no_antiquities
 		icon = small_arms
 		x = 2
 		y = 5
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_heavy_artillery
+			focus = AUS_DNC_heavy_artillery
 		}
 		prerequisite = {
-			focus = AUH_DNC_better_doctrine
+			focus = AUS_DNC_better_doctrine
 		}
 		prerequisite = {
-			focus = AUH_DNC_impenetrable_fortress
+			focus = AUS_DNC_impenetrable_fortress
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -7671,20 +7671,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_shovel_for_every_soldier
+		id = AUS_DNC_shovel_for_every_soldier
 		icon = GFX_goal_generic_construction2
 		x = 4
 		y = 5
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_impenetrable_fortress
+			focus = AUS_DNC_impenetrable_fortress
 		}
 		prerequisite = {
-			focus = AUH_DNC_better_doctrine
+			focus = AUS_DNC_better_doctrine
 		}
 		prerequisite = {
-			focus = AUH_DNC_heavy_artillery
+			focus = AUS_DNC_heavy_artillery
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7700,17 +7700,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_endless_defense
+		id = AUS_DNC_endless_defense
 		icon = GFX_focus_generic_coastal_fort
 		x = 3
 		y = 6
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_shovel_for_every_soldier
+			focus = AUS_DNC_shovel_for_every_soldier
 		}
 		prerequisite = {
-			focus = AUH_DNC_no_antiquities
+			focus = AUS_DNC_no_antiquities
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -7720,15 +7720,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_standardise_designs
+		id = AUS_DNC_standardise_designs
 		icon = GFX_focus_generic_combined_arms
 		x = -1
 		y = 7
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_endless_advance
-			focus = AUH_DNC_endless_defense
+			focus = AUS_DNC_endless_advance
+			focus = AUS_DNC_endless_defense
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -7767,15 +7767,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_streamlined_production
+		id = AUS_DNC_streamlined_production
 		icon = GFX_focus_generic_tank_production
 		x = 1
 		y = 7
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_endless_advance
-			focus = AUH_DNC_endless_defense
+			focus = AUS_DNC_endless_advance
+			focus = AUS_DNC_endless_defense
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -7814,28 +7814,28 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_military_academy
+		id = AUS_DNC_military_academy
 		icon = GFX_focus_generic_military_academy
 		x = 0
 		y = 8
-		relative_position_id = AUH_DNC_army_efforts
+		relative_position_id = AUS_DNC_army_efforts
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_standardise_designs
+			focus = AUS_DNC_standardise_designs
 		}
 		prerequisite = {
-			focus = AUH_DNC_streamlined_production
+			focus = AUS_DNC_streamlined_production
 		}
 		completion_reward = {
 			add_research_slot = 1
 		}
 	}
 	focus = {
-		id = AUH_DNC_new_navy
+		id = AUS_DNC_new_navy
 		icon = GFX_goal_generic_build_navy
 		x = 27
 		y = 0
-		relative_position_id = AUH_DNC_free_market
+		relative_position_id = AUS_DNC_free_market
 		cost = 10
 
 		ai_will_do = {
@@ -7843,8 +7843,8 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				AND = {
-					NOT = { has_completed_focus = AUHDNC_unite_behind_haus_habsburg }
-					NOT = { has_completed_focus = AUHDNC_free_and_fair_elections }
+					NOT = { has_completed_focus = AUSDNC_unite_behind_haus_habsburg }
+					NOT = { has_completed_focus = AUSDNC_free_and_fair_elections }
 					has_government = neutrality
 				}
 			}
@@ -7860,14 +7860,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_battlecruisers
+		id = AUS_DNC_battlecruisers
 		icon = GFX_focus_generic_navy_battleship2
 		x = -3
 		y = 1
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_new_navy
+			focus = AUS_DNC_new_navy
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7878,14 +7878,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_patrol_boats
+		id = AUS_DNC_patrol_boats
 		icon = GFX_focus_generic_destroyer
 		x = -1
 		y = 1
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_new_navy
+			focus = AUS_DNC_new_navy
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7896,14 +7896,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_new_cruisers
+		id = AUS_DNC_new_cruisers
 		icon = GFX_focus_generic_cruiser2
 		x = 1
 		y = 1
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_new_navy
+			focus = AUS_DNC_new_navy
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7914,14 +7914,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_grandest_ships
+		id = AUS_DNC_grandest_ships
 		icon = GFX_goal_generic_navy_battleship
 		x = 3
 		y = 1
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_new_navy
+			focus = AUS_DNC_new_navy
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -7932,17 +7932,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_dockyards
+		id = AUS_DNC_dockyards
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = -4
 		y = 2
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_battlecruisers
-			focus = AUH_DNC_patrol_boats
-			focus = AUH_DNC_new_cruisers
-			focus = AUH_DNC_grandest_ships
+			focus = AUS_DNC_battlecruisers
+			focus = AUS_DNC_patrol_boats
+			focus = AUS_DNC_new_cruisers
+			focus = AUS_DNC_grandest_ships
 		}
 		complete_tooltip = {
 			navy_experience = 100
@@ -8024,17 +8024,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_cheap_fleet
+		id = AUS_DNC_cheap_fleet
 		icon = GFX_goal_continuous_naval_production
 		x = -5
 		y = 3
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_dockyards
+			focus = AUS_DNC_dockyards
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_expensive_fleet
+			focus = AUS_DNC_expensive_fleet
 		}
 		completion_reward = {
 			add_ideas = {
@@ -8043,17 +8043,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_expensive_fleet
+		id = AUS_DNC_expensive_fleet
 		icon = GFX_goal_generic_navy_battleship
 		x = -3
 		y = 3
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_dockyards
+			focus = AUS_DNC_dockyards
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_cheap_fleet
+			focus = AUS_DNC_cheap_fleet
 		}
 		completion_reward = {
 			add_ideas = {
@@ -8062,15 +8062,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_more_dockyards
+		id = AUS_DNC_more_dockyards
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = -4
 		y = 4
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_cheap_fleet
-			focus = AUH_DNC_expensive_fleet
+			focus = AUS_DNC_cheap_fleet
+			focus = AUS_DNC_expensive_fleet
 		}
 		complete_tooltip = {
 			navy_experience = 100
@@ -8184,17 +8184,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_trade
+		id = AUS_DNC_trade
 		icon = GFX_generic_free_trade
 		x = 0
 		y = 2
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_battlecruisers
-			focus = AUH_DNC_patrol_boats
-			focus = AUH_DNC_new_cruisers
-			focus = AUH_DNC_grandest_ships
+			focus = AUS_DNC_battlecruisers
+			focus = AUS_DNC_patrol_boats
+			focus = AUS_DNC_new_cruisers
+			focus = AUS_DNC_grandest_ships
 		}
 		completion_reward = {
 			add_ideas = {
@@ -8203,14 +8203,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_escorts
+		id = AUS_DNC_escorts
 		icon = GFX_goal_generic_navy_cruiser
 		x = -1
 		y = 3
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_trade
+			focus = AUS_DNC_trade
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -8221,14 +8221,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_intercept_enemies
+		id = AUS_DNC_intercept_enemies
 		icon = GFX_goal_generic_wolf_pack
 		x = 1
 		y = 3
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_trade
+			focus = AUS_DNC_trade
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -8240,17 +8240,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_coastal_defense
+		id = AUS_DNC_coastal_defense
 		icon = GFX_focus_generic_coastal_fort
 		x = 0
 		y = 4
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_intercept_enemies
+			focus = AUS_DNC_intercept_enemies
 		}
 		prerequisite = {
-			focus = AUH_DNC_escorts
+			focus = AUS_DNC_escorts
 		}
 		completion_reward = {
 			add_ideas = {
@@ -8259,17 +8259,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_new_admirality
+		id = AUS_DNC_new_admirality
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = 4
 		y = 2
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_battlecruisers
-			focus = AUH_DNC_patrol_boats
-			focus = AUH_DNC_new_cruisers
-			focus = AUH_DNC_grandest_ships
+			focus = AUS_DNC_battlecruisers
+			focus = AUS_DNC_patrol_boats
+			focus = AUS_DNC_new_cruisers
+			focus = AUS_DNC_grandest_ships
 		}
 		completion_reward = {
 			navy_experience = 100
@@ -8279,17 +8279,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_raider_doctrine
+		id = AUS_DNC_raider_doctrine
 		icon = GFX_goal_generic_navy_submarine
 		x = 3
 		y = 3
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_new_admirality
+			focus = AUS_DNC_new_admirality
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_old_doctrine
+			focus = AUS_DNC_old_doctrine
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -8306,17 +8306,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_old_doctrine
+		id = AUS_DNC_old_doctrine
 		icon = GFX_goal_generic_navy_battleship
 		x = 5
 		y = 3
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_new_admirality
+			focus = AUS_DNC_new_admirality
 		}
 		mutually_exclusive = {
-			focus = AUH_DNC_raider_doctrine
+			focus = AUS_DNC_raider_doctrine
 		}
 		completion_reward = {
 			#			add_tech_bonus = {
@@ -8336,15 +8336,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_marine_infantry
+		id = AUS_DNC_marine_infantry
 		icon = GFX_goal_generic_amphibious_assault
 		x = 4
 		y = 4
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_raider_doctrine
-			focus = AUH_DNC_old_doctrine
+			focus = AUS_DNC_raider_doctrine
+			focus = AUS_DNC_old_doctrine
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -8357,20 +8357,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = AUH_DNC_pride_of_the_fleet
+		id = AUS_DNC_pride_of_the_fleet
 		icon = GFX_goal_generic_navy_battleship
 		x = -1
 		y = 5
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_marine_infantry
+			focus = AUS_DNC_marine_infantry
 		}
 		prerequisite = {
-			focus = AUH_DNC_coastal_defense
+			focus = AUS_DNC_coastal_defense
 		}
 		prerequisite = {
-			focus = AUH_DNC_more_dockyards
+			focus = AUS_DNC_more_dockyards
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -8379,24 +8379,24 @@ focus_tree = {
 				category = bb_tech
 				ahead_reduction = 2
 			}
-			remove_ideas = AUH_backward_navy_industry
+			remove_ideas = AUS_backward_navy_industry
 		}
 	}
 	focus = {
-		id = AUH_DNC_naval_academy
+		id = AUS_DNC_naval_academy
 		icon = GFX_goal_generic_build_navy
 		x = 1
 		y = 5
-		relative_position_id = AUH_DNC_new_navy
+		relative_position_id = AUS_DNC_new_navy
 		cost = 10
 		prerequisite = {
-			focus = AUH_DNC_marine_infantry
+			focus = AUS_DNC_marine_infantry
 		}
 		prerequisite = {
-			focus = AUH_DNC_coastal_defense
+			focus = AUS_DNC_coastal_defense
 		}
 		prerequisite = {
-			focus = AUH_DNC_more_dockyards
+			focus = AUS_DNC_more_dockyards
 		}
 		completion_reward = {
 			add_ideas = {
