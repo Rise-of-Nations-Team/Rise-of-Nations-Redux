@@ -162,9 +162,16 @@ recruit_character = AUS_istvan_tisza
 # PUPPET Bosnia
 if = {
 	limit = {
-		has_start_date < 1910.01.01
+		has_start_date < 1918.11.11
 	}
-	puppet = BOS
+	set_autonomy = {
+		target = HUN
+		autonomy_state = autonomy_personal_union
+	}
+	set_autonomy = {
+		target = BOS
+		autonomy_state = autonomy_colony #Should be condominium
+	}
 }
 
 1907.2.2 = {
