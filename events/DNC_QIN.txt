@@ -72,7 +72,6 @@ country_event = {
 	desc = dnc_qing.3.d
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = "It is rightful Chinese territory"
@@ -142,9 +141,109 @@ country_event = {
 	desc = dnc_qing.6.d
 
 	is_triggered_only = yes
-	fire_only_once = yea
 
 	option = {
 		name = "Are they stupid?"
+	}
+}
+
+# QING CHINA OFFERS MILITARY ACCESS
+country_event = {
+	id = dnc_qing.7
+	title = "Qing China Offers Military Access"
+	desc = dnc_qing.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "How generous"
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = yes
+		}
+	}
+}
+
+# QING CHINA REQUESTS MILITARY ADVISORS
+country_event = {
+	id = dnc_qing.8
+	title = "Qing China Requests Military Advisors"
+	desc = dnc_qing.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sure"
+		QIN = {
+			add_idea = QIN_foreign_advisors
+		}
+	}
+	option = {
+		name = "Nah"
+		#QIN = {
+		# add negative opinion modifier
+		#}
+	}
+}
+
+# QING CHINA OPENS TO WESTERN INVESTMENT
+country_event = {
+	id = dnc_qing.9
+	title = "Qing China Opens to Western Investments"
+	desc = dnc_qing.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A western China?"
+		add_country_flag = QIN_accepted_western_investment_in_china_cf
+		# Add ideas = QIN_invested_in_china
+	}
+	option = {
+		name = "This isn't worth the money"
+	}
+}
+
+# QING CHINA REQUESTS ASSISTANCE AGAINST BOXERS
+country_event = {
+	id = dnc_qing.10
+	title = "Qing China requests help against Boxers"
+	desc = dnc_qing.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall help our Chinese bretheren!"
+		declare_war_on = {
+			target = QIN_boxers
+			type = independance_wargoal
+		}
+		#QIN = {
+		# add opinion modifier
+		#}
+	}
+	option = {
+		name = "We should stay out of Chinese affairs."
+		#QIN = {
+		#	add negative opinion modifier and fire country event
+		#}
+	}
+}
+
+# CHINA AND THE WEST?
+country_event = {
+	id = dnc_qing.11
+	title = "China and the West?"
+	desc = dnc_qing.11.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We shll forge new alliances with the west"
+	}
+	option = {
+		name = "We shall stick to our sphere"
 	}
 }
