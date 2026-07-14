@@ -50,15 +50,42 @@ ideas = {
 		}
 
 		QIN_spirit_soldiers = {
-			#picture = picture pending...
+
+			picture = QIE_soldier_flag
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			modifier = {
 				army_attack_factor = 0.1
 				army_org_factor = -0.05
 				experience_loss_factor = -0.05
 			}
 		}
+
 		QIN_spirit_soldiers1 = {
-			#picture = picture pending...
+
+			name = QIN_spirit_soldiers
+
+			picture = QIE_soldier_flag
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			modifier = {
 				army_attack_factor = 0.1
 				army_org_factor = -0.05
@@ -66,16 +93,14 @@ ideas = {
 				equipment_capture_factor = 0.05
 			}
 		}
+
 		QIN_antiwestern_bastion = {
 			#picture = picture pending...
-			on_add = {
-				add_stability = 10
-			}
 			modifier = {
 				political_power_factor = 0.05
 				neutrality_drift = 0.05
-				stability_weekly = 1
-				
+				stability_weekly = 0.001
+				stability_factor = 0.1
 			}
 		}
 		QIN_boxer_accords = {
