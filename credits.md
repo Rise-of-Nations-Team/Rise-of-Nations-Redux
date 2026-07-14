@@ -12,7 +12,7 @@
 - J12 (sas_2000)
 - Persyk
 - Igor_Stelkov
-- Frost
+- Frosty
 ## INTEGRATED MODS
 - Better Mechanics: AI Divisions - https://steamcommunity.com/sharedfiles/filedetails/?id=2996504479
 - Better Mechanics: Custom Rules - https://steamcommunity.com/sharedfiles/filedetails/?id=3277805669

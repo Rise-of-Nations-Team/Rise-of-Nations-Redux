@@ -16,3 +16,129 @@ country_event = {
 		}
 	}
 }
+
+#Boer Country Offers Peace
+country_event = {
+	id = DNC_South_Africa.2
+	title = DNC_South_Africa.2.title
+	desc = DNC_South_Africa.2.desc
+	picture = GFX_report_event_PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = DNC_South_Africa.2.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		FROM = {
+			country_event = {
+				id = DNC_South_Africa.3
+				hours = 6
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_political_power = -10
+			}
+		}
+	}
+
+	option = {
+		name = DNC_South_Africa.2.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = {
+				id = DNC_South_Africa.4
+				hours = 6
+			}
+			custom_effect_tooltip = which_will_give_tt
+			effect_tooltip = {
+				white_peace = PREV
+				add_state_core = 684
+				transfer_state = 684
+				set_global_flag = second_boer_war_boer_victory_gflg
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = {
+				FROM = {
+					original_tag = OFR
+				}
+			}
+			SRE = {
+				country_event = {
+					id = DNC_South_Africa.5
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = SRE
+				}
+			}
+			OFR = {
+				country_event = {
+					id = DNC_South_Africa.5
+					hours = 6
+				}
+			}
+		}
+	}
+}
+
+#Britain Refuses Peace Offer
+country_event = {
+	id = DNC_South_Africa.3
+	title = DNC_South_Africa.3.title
+	desc = DNC_South_Africa.3.desc
+	picture = GFX_report_event_PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = DNC_South_Africa.3.a
+		add_political_power = -10
+	}
+}
+
+#Britain Accepts Peace Offer
+country_event = {
+	id = DNC_South_Africa.4
+	title = DNC_South_Africa.4.title
+	desc = DNC_South_Africa.4.desc
+	picture = GFX_report_event_PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = DNC_South_Africa.4.a
+		white_peace = FROM
+		add_state_core = 684
+		transfer_state = 684
+		set_global_flag = second_boer_war_boer_victory_gflg
+	}
+}
+
+#Peace Out With Britain
+country_event = {
+	id = DNC_South_Africa.5
+	title = DNC_South_Africa.5.title
+	desc = DNC_South_Africa.5.desc
+	picture = GFX_report_event_PLACEHOLDER
+
+	is_triggered_only = yes
+
+	option = {
+		name = DNC_South_Africa.5.a
+		white_peace = FROM
+	}
+}
