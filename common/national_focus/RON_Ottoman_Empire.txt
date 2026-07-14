@@ -111,7 +111,7 @@ focus_tree = {
 		icon = GFX_goal_KTG_Educate_natives
 		cost = 5
 		prerequisite = { focus = OTT_standardize_public_timekeeping }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = OTT_standardize_public_timekeeping
 
@@ -125,6 +125,40 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = OTT_new_war_school_officer_programs
+		icon = GFX_goal_military_academy
+		cost = 5
+		prerequisite = { focus = OTT_standardize_public_timekeeping }
+		x = 4
+		y = 1
+		relative_position_id = OTT_standardize_public_timekeeping
+
+		completion_reward = {
+			custom_effect_tooltip = OTT_modify_ottoman_military_tt
+			add_to_variable = {
+				OTT_military_land_reinforce_rate = 0.015
+				tooltip = land_reinforce_rate_tt
+			}
+			add_to_variable = {
+				OTT_military_experience_gain_factor = 0.05
+				tooltip = experience_gain_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_mastery_bonus = {
+				name = OTT_new_war_school_officer_programs
+				folder = land
+				bonus = 0.05
+				days = 360
+			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_ARMY_XP
 		}
 	}
 

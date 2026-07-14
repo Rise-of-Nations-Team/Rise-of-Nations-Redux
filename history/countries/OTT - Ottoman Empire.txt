@@ -21,7 +21,6 @@ add_ideas = {
 add_ideas = {
 	OTT_the_osman_caliphate_ns
 	OTT_persecution_of_intelectuals_ns
-	OTT_outdated_military_ns
 	OTT_purged_naval_forces_ns
 	OTT_the_public_debt_administration_ns
 	OTT_mass_illiteracy_ns
@@ -37,9 +36,11 @@ if = {
 	}
 }
 
-add_ideas = { #Bookmark Only
-	OTT_the_hamidian_regime_ns
-}
+###########################
+### THE HAMIDIAN REGIME ###
+###########################
+
+add_ideas = OTT_the_hamidian_regime_ns #Bookmark Only
 
 add_dynamic_modifier = {
 	modifier = OTT_the_hamidian_regime_ns
@@ -56,6 +57,24 @@ set_variable = { OTT_hamidian_navy_chief_cost_factor = -0.1 }
 set_variable = { OTT_hamidian_air_chief_cost_factor = -0.1 }
 set_variable = { OTT_hamidian_compliance_gain = 0 }
 set_variable = { OTT_hamidian_compliance_growth = 0 }
+
+############################
+### THE OTTOMAN MILITARY ###
+############################
+
+add_ideas = OTT_the_ottoman_military_ns #Bookmark Only
+
+add_dynamic_modifier = {
+	modifier = OTT_the_ottoman_military_ns
+}
+
+set_variable = { OTT_military_army_morale_factor = -0.25 }
+set_variable = { OTT_military_army_org_factor = -0.25 }
+set_variable = { OTT_military_army_attack_factor = -0.3 }
+set_variable = { OTT_military_army_defence_factor = -0.3 }
+set_variable = { OTT_military_army_speed_factor = -0.15 }
+set_variable = { OTT_military_land_reinforce_rate = 0 }
+set_variable = { OTT_military_experience_gain_factor = 0 }
 
 if = {
 	limit = {
