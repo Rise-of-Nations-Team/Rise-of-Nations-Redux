@@ -107,6 +107,31 @@ focus_tree = {
 	}
 
 	focus = {
+		id = OTT_reorganize_eastern_anatolian_districts
+		icon = GFX_TUR_reorganize_the_armenian_vilayets
+		cost = 5
+		prerequisite = { focus = OTT_standardize_public_timekeeping }
+		x = 0
+		y = 1
+		relative_position_id = OTT_standardize_public_timekeeping
+
+		completion_reward = {
+			custom_effect_tooltip = OTT_modify_hamidian_regime_tt
+			add_to_variable = {
+				OTT_hamidian_resistance_target = -0.05
+				tooltip = resistance_target_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			#TODO Decrease resistance and add compliance to Armenian majority provinces in Eastern Anatolia
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+	}
+
+	focus = {
 		id = OTT_expand_secondary_schooling
 		icon = GFX_goal_KTG_Educate_natives
 		cost = 5
@@ -154,6 +179,34 @@ focus_tree = {
 				bonus = 0.05
 				days = 360
 			}
+		}
+
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_ARMY_XP
+		}
+	}
+
+	focus = {
+		id = OTT_the_first_young_turk_congress
+		icon = GFX_focus_PLACEHOLDER
+		cost = 5
+		prerequisite = { focus = OTT_new_arabian_communications_projects }
+		prerequisite = { focus = OTT_reorganize_eastern_anatolian_districts }
+		prerequisite = { focus = OTT_expand_secondary_schooling }
+		prerequisite = { focus = OTT_new_war_school_officer_programs }
+		x = 0
+		y = 1
+		relative_position_id = OTT_reorganize_eastern_anatolian_districts
+
+		completion_reward = {
+			country_event = dnc_ottoman.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.03
+			}
+			add_political_power = -50
 		}
 
 		search_filters = {
