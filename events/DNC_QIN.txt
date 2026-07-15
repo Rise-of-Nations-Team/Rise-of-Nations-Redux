@@ -10,14 +10,6 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = "Formalize the Boxer Militias"
-		ai_chance = {
-			base = 5
-		}
-		add_political_power = 50
-		add_ideas = QIN_boxer_forces
-	}
-	option = {
 		name = "Disband the Boxer Militias"
 		ai_chance = {
 			base = 5
@@ -25,6 +17,18 @@ country_event = {
 		delete_unit_template_and_units = {
 			division_template = "Boxer Militia"
 			disband = yes
+		}
+		add_political_power = 50
+	}
+	option = {
+		name = "Formalize the Boxer Militias"
+		ai_chance = {
+			base = 5
+		}
+		custom_effect_tooltip = QIN_combine_boxer_ideas_tt
+		hidden_effect = {
+			add_ideas = QIN_formal_boxer_army
+			remove_ideas = QIN_spirit_soldiers1
 		}
 	}
 }
