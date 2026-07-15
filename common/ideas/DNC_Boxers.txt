@@ -1,180 +1,148 @@
 ideas = {
-    country = {
-        BOX_disorganized_rebellion = {
-            picture = chi_army_corruption
-            allowed = { always = yes }
-            cancel = {
-                date > 1910.1.1
-            }
-            modifier = {
-                army_org_factor = -0.5
-                breakthrough_factor = -0.5
-                dig_in_speed_factor = -0.5
-                experience_gain_army_unit_factor = -0.5
-                max_planning_factor = -0.5
-                initiative_factor = -0.3
-                land_night_attack = -0.3
-                army_speed_factor = -0.15
-            }
-        }
+	country = {
 
-        BOX_xenophobic_zeal = {
-            picture = RUS_fear_of_revolution
-            allowed = { always = yes }
-            cancel = {
-                date > 1910.1.1
-            }
-            modifier = {
-                army_defence_against_major_factor = 0.33
-                army_attack_against_major_factor = 0.33
-                army_morale_factor = 0.1
-                army_org_regain = 0.1
-                research_speed_factor = -0.5
-            }
-        }
+		BOX_a_niche_movement = {
+			picture = BEL_legacy_of_the_great_war
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				recruitable_population = -0.5
+				stability_factor = -0.50
+				war_support_factor = 0.10
+				army_org = -0.05
+				air_accidents_factor = 0.25
+				ai_desired_divisions_factor = 0.25
+				ai_focus_defense_factor = -0.10
+				ai_focus_aggressive_factor = 0.10
+			}
+		}
 
-        QIN_a_niche_movement = {
-            picture = BEL_legacy_of_the_great_war
-            allowed = { always = yes }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
-            modifier = {
-                recruitable_population = -0.5
-                stability_factor = -0.50
-                war_support_factor = 0.10
-                army_org = -0.05
-                air_accidents_factor = 0.25
-                ai_desired_divisions_factor = 0.25
-                ai_focus_defense_factor = -0.10
-                ai_focus_aggressive_factor = 0.10
-            }
-        }
+		BOX_support_qing_destroy_foreigners = {
+			picture = man_low_legitimacy5
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.15
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+				political_power_factor = -0.05
+			}
+		}
 
-        QIN_support_qing_destroy_foreigners = {
-            picture = man_low_legitimacy5
-            allowed = { always = yes }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
-            modifier = {
-                stability_factor = -0.10
-                war_support_factor = 0.15
-                army_core_defence_factor = 0.10
-                army_core_attack_factor = 0.10
-                political_power_factor = -0.05
-            }
-        }
+		BOX_oust_the_traitor = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			targeted_modifier = {
+				tag = QIN
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = DEL
+				attack_bonus_against = -0.05
+			}
+		}
 
-        QIN_oust_the_traitor = {
-            picture = SWE_neither_death_nor_dishonor
-            allowed = { always = yes }
-            allowed_civil_war = { always = yes }
-            targeted_modifier = {
-                tag = QIN
-                attack_bonus_against = 0.10
-                defense_bonus_against = 0.05
-            }
-            targeted_modifier = {
-                tag = DEL
-                attack_bonus_against = -0.05
-            }
-        }
+		BOX_oust_the_foreigners = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = AUH
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = DEL
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.10
+			}
+		}
 
-        QIN_oust_the_foreigners = {
-            picture = SWE_neither_death_nor_dishonor
-            allowed = { always = yes }
-            allowed_civil_war = { always = yes }
-            targeted_modifier = {
-                tag = JAP
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = ENG
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = GER
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = USA
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = FRA
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = RUS
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = AUH
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = ITA
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-            targeted_modifier = {
-                tag = DEL
-                attack_bonus_against = 0.20
-                defense_bonus_against = 0.10
-            }
-        }
+		BOX_enlighten_the_people = {
+			picture = SWE_neither_death_nor_dishonor
+			allowed = { always = yes }
+			cancel = {
+				date > 1920.1.1
+			}
+			modifier = {
+				weekly_manpower = 750
+			}
+		}
 
-        QIN_enlighten_the_people = {
-            picture = SWE_neither_death_nor_dishonor
-            allowed = { always = yes }
-            cancel = {
-                date > 1920.1.1
-            }
-            modifier = {
-                weekly_manpower = 750
-            }
-        }
+		QIN_slow_growth = {
+			picture = BEL_legacy_of_the_great_war
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				recruitable_population = -0.35
+				stability_factor = -0.30
+				war_support_factor = 0.20
+				air_accidents_factor = 0.25
+				ai_desired_divisions_factor = 0.25
+				ai_focus_defense_factor = -0.10
+				ai_focus_aggressive_factor = 0.10
+			}
+		}
 
-        QIN_slow_growth = {
-            picture = BEL_legacy_of_the_great_war
-            allowed = { always = yes }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
-            modifier = {
-                recruitable_population = -0.35
-                stability_factor = -0.30
-                war_support_factor = 0.20
-                air_accidents_factor = 0.25
-                ai_desired_divisions_factor = 0.25
-                ai_focus_defense_factor = -0.10
-                ai_focus_aggressive_factor = 0.10
-            }
-        }
-
-        QIN_boxer_army = {
-            picture = CHI_military_affairs_commission
-            allowed = { always = yes }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
-            modifier = {
-                army_defence_factor = -0.10
-                army_attack_factor = 0.1
-                org_loss_when_moving = -0.05
-                dig_in_speed = 20
-                army_org = -0.10
-                political_power_factor = -0.15
-                max_command_power = 20
-                experience_gain_army = 0.10
-                experience_loss_factor = 0.25
-                experience_gain_navy = -0.10
-                experience_gain_air = -0.10
-            }
-        }
-    }
+		QIN_boxer_army = {
+			picture = CHI_military_affairs_commission
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = -0.10
+				army_attack_factor = 0.1
+				org_loss_when_moving = -0.05
+				dig_in_speed = 20
+				army_org = -0.10
+				political_power_factor = -0.15
+				max_command_power = 20
+				experience_gain_army = 0.10
+				experience_loss_factor = 0.25
+				experience_gain_navy = -0.10
+				experience_gain_air = -0.10
+			}
+		}
+	}
 }

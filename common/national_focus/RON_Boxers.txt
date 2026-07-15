@@ -1,172 +1,172 @@
 focus_tree = {
-    id = Boxer_DNC
+	id = Boxer_DNC
 
-    country = {
-        factor = 100
+	country = {
+		factor = 100
 
-        modifier = {
-            add = 10
-            tag = BOX
-        }
-    }
+		modifier = {
+			add = 10
+			tag = BOX
+		}
+	}
 
-    default = no
+	default = no
 
-    focus = {
-        id = DNC_QIN_the_army_of_national_reguvenation
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_ARMY }
-        cost = 5
-        relative_position_id = DNC_QIN_support_qing_destroy_foreigners
-        x = 0
-        y = 4
+	focus = {
+		id = DNC_QIN_the_army_of_national_reguvenation
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_ARMY }
+		cost = 5
+		relative_position_id = DNC_QIN_support_qing_destroy_foreigners
+		x = 0
+		y = 4
 
-        prerequisite = {
-            focus = DNC_QIN_support_qing_destroy_foreigners
-        }
+		prerequisite = {
+			focus = DNC_QIN_support_qing_destroy_foreigners
+		}
 
-        completion_reward = {
-            add_ideas = QIN_boxer_army
-        }
-    }
+		completion_reward = {
+			add_ideas = QIN_boxer_army
+		}
+	}
 
-    focus = {
-        id = DNC_QIN_support_qing_destroy_foreigners
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        cost = 2
+	focus = {
+		id = DNC_QIN_support_qing_destroy_foreigners
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		cost = 2
 
-        available = {
-            NOT = {
-                has_war = no
-            }
-        }
+		available = {
+			NOT = {
+				has_war = no
+			}
+		}
 
-        x = 30
-        y = 0
+		x = 30
+		y = 0
 
-        completion_reward = {
-            608 = {
-                add_state_population = -1000
-            }
-            add_political_power = 125
-            add_war_support = 0.25
-            add_stability = -0.50
-            add_ideas = QIN_support_qing_destroy_foreigners
-            add_ideas = QIN_a_niche_movement
-        }
-    }
+		completion_reward = {
+			608 = {
+				add_state_population = -1000
+			}
+			add_political_power = 125
+			add_war_support = 0.25
+			add_stability = -0.50
+			add_ideas = QIN_support_qing_destroy_foreigners
+			add_ideas = QIN_a_niche_movement
+		}
+	}
 
-    focus = {
-        id = DNC_QIN_focus_on_the_foriegn
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_ARMY }
-        cost = 5
+	focus = {
+		id = DNC_QIN_focus_on_the_foriegn
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_ARMY }
+		cost = 5
 
-        mutually_exclusive = {
-            focus = DNC_QIN_focus_on_the_traitor
-        }
+		mutually_exclusive = {
+			focus = DNC_QIN_focus_on_the_traitor
+		}
 
-        prerequisite = {
-            focus = DNC_QIN_support_qing_destroy_foreigners
-        }
+		prerequisite = {
+			focus = DNC_QIN_support_qing_destroy_foreigners
+		}
 
-        x = 34
-        y = 1
+		x = 34
+		y = 1
 
-        completion_reward = {
-            add_ideas = QIN_oust_the_foreigners
-            declare_war_on = DEL
-        }
-    }
+		completion_reward = {
+			add_ideas = QIN_oust_the_foreigners
+			declare_war_on = DEL
+		}
+	}
 
-    focus = {
-        id = DNC_QIN_focus_on_the_traitor
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_ARMY }
-        cost = 5
+	focus = {
+		id = DNC_QIN_focus_on_the_traitor
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_ARMY }
+		cost = 5
 
-        mutually_exclusive = {
-            focus = DNC_QIN_focus_on_the_foriegn
-        }
+		mutually_exclusive = {
+			focus = DNC_QIN_focus_on_the_foriegn
+		}
 
-        prerequisite = {
-            focus = DNC_QIN_support_qing_destroy_foreigners
-        }
+		prerequisite = {
+			focus = DNC_QIN_support_qing_destroy_foreigners
+		}
 
-        x = 26
-        y = 1
+		x = 26
+		y = 1
 
-        completion_reward = {
-            add_ideas = QIN_oust_the_traitor
-        }
-    }
+		completion_reward = {
+			add_ideas = QIN_oust_the_traitor
+		}
+	}
 
-    focus = {
-        id = enlighten_the_people
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        cost = 4
+	focus = {
+		id = enlighten_the_people
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		cost = 4
 
-        prerequisite = {
-            focus = DNC_QIN_focus_on_the_traitor
-        }
+		prerequisite = {
+			focus = DNC_QIN_focus_on_the_traitor
+		}
 
-        relative_position_id = DNC_QIN_focus_on_the_traitor
-        x = -3
-        y = 1
+		relative_position_id = DNC_QIN_focus_on_the_traitor
+		x = -3
+		y = 1
 
-        completion_reward = {
-            add_timed_idea = {
-                idea = QIN_enlighten_the_people
-                days = 365
-            }
-        }
-    }
+		completion_reward = {
+			add_timed_idea = {
+				idea = QIN_enlighten_the_people
+				days = 365
+			}
+		}
+	}
 
-    focus = {
-        id = DNC_QIN_appeal_to_tradition
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        cost = 5
+	focus = {
+		id = DNC_QIN_appeal_to_tradition
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		cost = 5
 
-        prerequisite = {
-            focus = DNC_QIN_focus_on_the_traitor
-        }
+		prerequisite = {
+			focus = DNC_QIN_focus_on_the_traitor
+		}
 
-        x = 27
-        y = 2
+		x = 27
+		y = 2
 
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = QIN_a_niche_movement
-                add_idea = QIN_slow_growth
-            }
-        }
-    }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = QIN_a_niche_movement
+				add_idea = QIN_slow_growth
+			}
+		}
+	}
 
-    focus = {
-        id = DNC_QIN_imperial_armestice
-        icon = GFX_goal_QIN_continue_imperial_rule
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        cost = 5
+	focus = {
+		id = DNC_QIN_imperial_armestice
+		icon = GFX_goal_QIN_continue_imperial_rule
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		cost = 5
 
-        prerequisite = {
-            focus = DNC_QIN_focus_on_the_foriegn
-        }
+		prerequisite = {
+			focus = DNC_QIN_focus_on_the_foriegn
+		}
 
-        x = 38
-        y = 2
+		x = 38
+		y = 2
 
-        completion_reward = {
-            target = {
-                QIN = {
-                    country_event = {
-                        id = boxerchina.1
-                        days = 7
-                    }
-                }
-            }
-        }
-    }
+		completion_reward = {
+			target = {
+				QIN = {
+					country_event = {
+						id = boxerchina.1
+						days = 7
+					}
+				}
+			}
+		}
+	}
 }
