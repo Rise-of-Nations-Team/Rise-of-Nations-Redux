@@ -1,11 +1,21 @@
 ideas = {
+
 	country = {
 
-		BOX_a_niche_movement = {
+		BOX_DNC_a_niche_movement = {
+
 			picture = BEL_legacy_of_the_great_war
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
 			removal_cost = -1
+
 			modifier = {
 				recruitable_population = -0.5
 				stability_factor = -0.50
@@ -18,11 +28,20 @@ ideas = {
 			}
 		}
 
-		BOX_support_qing_destroy_foreigners = {
+		BOX_DNC_support_qing_destroy_foreigners = {
+
 			picture = man_low_legitimacy5
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
 			removal_cost = -1
+
 			modifier = {
 				stability_factor = -0.10
 				war_support_factor = 0.15
@@ -32,10 +51,20 @@ ideas = {
 			}
 		}
 
-		BOX_oust_the_traitor = {
+		BOX_DNC_oust_the_traitor = {
+
 			picture = SWE_neither_death_nor_dishonor
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			targeted_modifier = {
 				tag = QIN
 				attack_bonus_against = 0.10
@@ -47,10 +76,20 @@ ideas = {
 			}
 		}
 
-		BOX_oust_the_foreigners = {
+		BOX_DNC_oust_the_foreigners = {
+
 			picture = SWE_neither_death_nor_dishonor
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			targeted_modifier = {
 				tag = JAP
 				attack_bonus_against = 0.20
@@ -98,22 +137,43 @@ ideas = {
 			}
 		}
 
-		BOX_enlighten_the_people = {
+		BOX_DNC_enlighten_the_people = {
+
 			picture = SWE_neither_death_nor_dishonor
-			allowed = { always = yes }
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
 			cancel = {
 				date > 1920.1.1
 			}
+
 			modifier = {
 				weekly_manpower = 750
 			}
 		}
 
-		QIN_slow_growth = {
+		BOX_DNC_slow_growth = {
+
 			picture = BEL_legacy_of_the_great_war
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
 			removal_cost = -1
+
 			modifier = {
 				recruitable_population = -0.35
 				stability_factor = -0.30
@@ -125,11 +185,20 @@ ideas = {
 			}
 		}
 
-		QIN_boxer_army = {
+		BOX_DNC_boxer_army = {
+
 			picture = CHI_military_affairs_commission
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
 			removal_cost = -1
+
 			modifier = {
 				army_defence_factor = -0.10
 				army_attack_factor = 0.1
@@ -144,5 +213,7 @@ ideas = {
 				experience_gain_air = -0.10
 			}
 		}
+
 	}
+
 }

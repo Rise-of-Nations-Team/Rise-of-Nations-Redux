@@ -1,0 +1,128 @@
+add_namespace = dnc_boxers
+
+# Supreme Boxer Leader Zhang Decheng Dies
+country_event = {
+	id = dnc_boxers.1
+	title = dnc_boxers.1.title
+	desc = dnc_boxers.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BOX
+		date > 1900.7.14
+		has_country_leader = {
+			character = QIN_zhang_decheng
+			ruling_only = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			retire_character = QIN_zhang_decheng
+			promote_character = QIN_cao_futian
+		}
+	}
+
+	option = {
+		name = dnc_boxers.1.a
+		retire_character = QIN_zhang_decheng
+		promote_character = QIN_cao_futian
+	}
+}
+
+# Cao Futian Executed in Jinghai
+country_event = {
+	id = dnc_boxers.2
+	title = dnc_boxers.2.title
+	desc = dnc_boxers.2.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BOX
+		date > 1901.5.20 #Somewhere in May 1901, exact date unknown - Xaelor
+		has_country_leader = {
+			character = QIN_zhang_decheng
+			ruling_only = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			retire_character = QIN_zhang_decheng
+			promote_character = QIN_cao_futian
+		}
+	}
+
+	option = {
+		name = dnc_boxers.2.a
+		retire_character = QIN_zhang_decheng
+		promote_character = QIN_cao_futian
+	}
+}
+
+# Boxer Rebellion Takes Over Beijing!
+country_event = {
+	id = dnc_boxers.3
+	title = dnc_boxers.3.title
+	desc = dnc_boxers.3.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = QIN
+		date > 1900.6.20
+	}
+
+	immediate = {
+		hidden_effect = {
+			608 = {
+				transfer_state_to = BOX
+				add_dynamic_modifier = { modifier = QIN_boxer_rebellion }
+			}
+			QIN_boxer_setup = yes
+			add_stability = -0.15
+		}
+	}
+
+	option = {
+		name = dnc_boxers.3.a
+		add_stability = -0.15
+	}
+
+	option = {
+		name = dnc_boxers.3.b
+		add_stability = -0.15
+		BOX = {
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = dnc_boxers.4
+	title = dnc_boxers.4.title
+	desc = dnc_boxers.4.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1900.8.1
+	}
+
+	option = {
+		name = dnc_boxers.4.a
+		trigger = {
+			QIN = {
+				has_war_with = GER
+				has_war_with = RUS
+				has_war_with = AUH
+				has_war_with = GER
+				has_war_with = ENG
+				has_war_with = FRA
+				has_war_with = USA
+			}
+		}
+	}
+}
