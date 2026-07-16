@@ -1,0 +1,162 @@
+﻿capital = 617
+oob = "SIK_1936"
+add_ideas = {
+	press_state
+	security_police_state
+	planned_economy
+	RON_Islam
+}
+add_ideas = { 
+	multi_ethnic_clique
+    limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+
+add_ideas = {
+	#PRC_government_corruption
+	CHI_ineffective_bureaucracy_warlord
+}
+
+recruit_character = SIK_yang_zengxin
+recruit_character = SIK_jin_shuren
+recruit_character = SIK_ma_fuxing
+recruit_character = SIK_ma_shaowu
+
+1910.1.1 = {	
+	add_ideas = boxer_protocols
+	add_ideas = boxer_protocols_visible
+	country_lock_all_division_template = yes	
+
+    recruit_character = SIK_yulbars_khan		
+}
+
+1919.1.1 = {
+	set_politics = {
+	    ruling_party = neutrality
+	    last_election = "1912.5.18"
+	    election_frequency = 48
+	    elections_allowed = no
+	}		
+	set_popularities = {
+		communism = 5
+		islamism = 15
+		neutrality = 80
+	}
+	set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+	}
+
+    recruit_character = SIK_sheng_shicai
+    recruit_character = SIK_ishaq_musonov	
+    recruit_character = SIK_burhan_shahidi		
+}
+
+1928.7.7 = {
+	kill_ideology_leader = neutrality
+}
+
+1933.1.1 = {
+	set_air_oob = "SIK_1936_air_bba"
+	add_ideas = {
+		soviet_influence
+		white_russian_mercenaries
+	}
+	set_politics = {
+	    ruling_party = neutrality
+	    last_election = "1928.7.7"
+	    election_frequency = 48
+	    elections_allowed = no
+	}	
+	country_lock_all_division_template = no
+	remove_ideas = boxer_protocols
+	remove_ideas = boxer_protocols_visible
+	set_popularities = {
+		communism = 30
+		neutrality = 70
+	}
+	set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+	}
+
+	promote_character = SIK_jin_shuren
+
+    recruit_character = SIK_sheng_shiqi
+    recruit_character = SIK_zhang_fengyi	
+    recruit_character = SIK_chiang_yufen
+    recruit_character = SIK_liu_pin
+    recruit_character = SIK_tan_ma	
+	recruit_character = SIK_xie_peng	
+	recruit_character = SIK_gao_jiang			
+	recruit_character = SIK_sa_zhenbing	
+	recruit_character = SIK_deng_tian
+	recruit_character = SIK_piotr_orlov	
+	recruit_character = SIK_yang_tian			
+	recruit_character = SIK_cheng_fang	
+	recruit_character = SIK_yu_wei		
+	recruit_character =	SIK_kwong_tian
+	recruit_character = SIK_garegin_abramovich_apresov		
+	recruit_character =	SIK_isa_yusuf_alptekin
+	recruit_character = SIK_habibullah_huseinov		
+	recruit_character =	SIK_zhang_xiliang		
+
+    retire_character = SIK_yang_zengxin
+    retire_character = SIK_ma_fuxing	
+}
+
+1936.1.1 = {
+	set_air_oob = "SIK_1936_air_bba"
+
+	set_politics = {
+	ruling_party = communism
+	last_election = "1933.4.14"
+	election_frequency = 48
+	elections_allowed = no
+	}
+	set_popularities = {
+		communism = 55
+		neutrality = 30	
+		islamism = 15			
+	}
+	remove_ideas = RON_Islam
+	promote_character = SIK_sheng_shicai	
+}
+
+1949.1.1 = {
+	oob = "SIK_1949"	
+    retire_character = SIK_ma_shaowu	
+    retire_character = SIK_sheng_shiqi
+    retire_character = SIK_ishaq_musonov	
+    retire_character = SIK_zhang_fengyi	
+    retire_character = SIK_chiang_yufen	
+    retire_character = SIK_liu_pin	
+    retire_character = SIK_tan_ma
+    retire_character = SIK_xie_peng
+    retire_character = SIK_gao_jiang
+    retire_character = SIK_sa_zhenbing
+    retire_character = SIK_deng_tian
+    retire_character = SIK_piotr_orlov
+    retire_character = SIK_yang_tian
+    retire_character = SIK_cheng_fang
+    retire_character = SIK_yu_wei
+    retire_character = SIK_kwong_tian
+    retire_character = SIK_garegin_abramovich_apresov
+    retire_character = SIK_isa_yusuf_alptekin
+    retire_character = SIK_habibullah_huseinov	
+    retire_character = SIK_zhang_xiliang	
+    retire_character = SIK_jin_shuren										
+}
+
+1970.1.1 = {
+    retire_character = SIK_sheng_shicai	
+    retire_character = SIK_yulbars_khan		
+}
+
+1990.1.1 = {
+    retire_character = SIK_burhan_shahidi	
+}
