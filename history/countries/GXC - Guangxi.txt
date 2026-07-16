@@ -1,0 +1,73 @@
+capital = 594
+oob = "GXC_1918"
+set_stability = 0.6
+set_war_support = 0.4
+
+set_convoys = 5
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+recruit_character = GXC_li_zongren
+recruit_character = GXC_chen_jitang
+
+set_country_flag = SH_WAR
+
+1919.7.1 = {
+	set_cosmetic_tag = GXC_old
+	add_ideas = boxer_protocols
+	add_ideas = boxer_protocols_visible
+	country_lock_all_division_template = yes
+}
+
+1920.1.1 = {
+	drop_cosmetic_tag = yes
+}
+
+1933.1.1 = {
+	oob = "GXC_1933"
+	country_lock_all_division_template = no
+	remove_ideas = boxer_protocols
+	remove_ideas = boxer_protocols_visible
+	add_ideas = {
+		CHI_ineffective_bureaucracy_warlord
+		anti_centralization_sentiment
+		opium_suppression_offices
+	}	
+}
+
+1936.1.1 = {
+	oob = "GXC_1936"
+	set_air_oob = "GXC_1936_air_bba"
+	set_technology = {
+		infantry_weapons = 1
+		mass_assault = 1
+	}
+}
+
+1939.1.1 = {
+	oob = "GXC_1939"
+}
+
+1940.1.1 = {
+	oob = "GXC_1940"
+}
+
+1942.1.1 = {
+	oob = "GXC_1942"
+}
+
+1949.1.1 = {
+	oob = "GXC_1949"
+}
+
+1970.1.1 = {
+	oob = "GXC_1970"
+}
