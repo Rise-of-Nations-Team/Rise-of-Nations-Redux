@@ -1,0 +1,107 @@
+﻿#!gfx:interface/RON_goals.gfx
+focus_tree = {
+	id = Boers_DNC
+	
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			OR = {
+				tag = SRE
+				tag = OFR
+			}
+			date < 1910.1.1
+		}
+	}
+	
+	default = no 
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	##########DNC FOCUS############################################################################################################
+	#################1900-1910#####################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+
+	focus = {
+		id = SREOFR_DNC_a_fight_against_a_superpower
+		icon = GFX_focus_CHI_protracted_warfare
+		x = 3
+		y = 0
+		cost = 10
+
+		completion_reward = {
+			add_ideas = SREOFR_DNC_a_fight_against_a_superpower_ns
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	}
+
+	focus = {
+		id = SREOFR_DNC_repell_british_advances
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = SREOFR_DNC_a_fight_against_a_superpower }
+		x = 0
+		y = 1
+		relative_position_id = SREOFR_DNC_a_fight_against_a_superpower
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SREOFR_DNC_a_fight_against_a_superpower_ns
+				add_idea = SREOFR_DNC_a_fight_against_a_superpower_2_ns
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = SREOFR_DNC_peace_at_last
+		icon = GFX_focus_BEL_v_for_victory
+		prerequisite = { focus = SREOFR_DNC_repell_british_advances }
+		x = 0
+		y = 1
+		relative_position_id = SREOFR_DNC_repell_british_advances
+		cost = 10
+
+		available = {
+			has_global_flag = second_boer_war_boer_victory_gflg
+		}
+
+		completion_reward = {
+			load_focus_tree = generic_focus
+			if = {
+				limit = {
+					has_idea = SREOFR_DNC_a_fight_against_a_superpower_ns
+				}
+				remove_ideas = SREOFR_DNC_a_fight_against_a_superpower_ns
+				else_if = {
+					limit = {
+						has_idea = SREOFR_DNC_a_fight_against_a_superpower_2_ns
+					}
+					remove_ideas = SREOFR_DNC_a_fight_against_a_superpower_2_ns
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

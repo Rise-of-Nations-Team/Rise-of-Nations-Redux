@@ -1,0 +1,144 @@
+capital = 448
+set_convoys = 20
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1900.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
+
+create_country_leader = {
+	name = "Bashir es Sadawi"
+	picture = "Bashir_es_Sadawi.dds"
+	ideology = liberalism
+}
+
+create_country_leader = {
+	name = "Ettore Bastico"
+	picture = "Ettore_Bastico.dds"
+	ideology = fascism_ideology
+}
+
+create_country_leader = {
+	name = "Muammar Gaddafi"
+	picture = "gfx/leaders/LBA/CW/Muammar_Gaddafi_1990.dds"
+	
+	ideology = third_international_theory
+}
+
+create_country_leader = {
+	name = "Idris I"
+	picture = "gfx/leaders/LBA/CW/Libia_Idris_I.dds"
+	
+	ideology = despotism
+}
+
+1960.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1960.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 100
+	}
+	create_country_leader = {
+		name = "Idris I"
+		picture = "gfx/leaders/LBA/CW/Libia_Idris_I.dds"
+		
+		ideology = despotism
+	}
+}
+
+1970.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		last_election = "1969.9.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+	if = {
+		limit = {
+			has_start_date > 1968.01.01
+			has_start_date < 1977.01.01
+		}
+		set_cosmetic_tag = LBA_ARAB
+	}
+}
+
+1990.1.1 = {
+	create_country_leader = {
+		name = "Muammar Gaddafi"
+		picture = "gfx/leaders/LBA/CW/Muammar_Gaddafi_1990.dds"
+		
+		ideology = third_international_theory
+	}
+}
+
+2000.1.1 = {
+	oob = "LBA_2000"
+	set_politics = {
+		ruling_party = communism
+		last_election = "2000.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
+	}
+	create_country_leader = {
+		name = "Muammar Gaddafi"
+		picture = "gfx/leaders/LBA/CW/Muammar_Gaddafi_2000.dds"
+		
+		ideology = third_international_theory
+	}
+	create_country_leader = {
+		name = "Fayez Al-Sarraj"
+		picture = "gfx/leaders/LBA/MD/Libya_FayezAl-Sarraj.dds"
+		
+		ideology = liberalism
+	}
+}
+2008.1.1 = {
+	create_country_leader = {
+		name = "Muammar Gaddafi"
+		picture = "gfx/leaders/LBA/MD/Lybia_Muammar_Gaddafi.dds"
+		
+		ideology = third_international_theory
+	}
+}
+
+2012.1.1 = {
+	oob = "LBA_2016"
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2011.10.20"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
+	}
+}
+
+2020.1.1 = {
+	create_country_leader = {
+		name = "House of Representatives"
+		picture = "gfx/leaders/LBA/MD/LBA_House_of_Representatives.dds"
+		
+		ideology = liberalism
+	}
+	create_country_leader = {
+		name = "Fayez al-Sarraj"
+		picture = "gfx/leaders/LBA/MD/LBA_Fayez_al-Sarraj_Independent.dds"
+		
+		ideology = democratic_independent
+	}
+}
