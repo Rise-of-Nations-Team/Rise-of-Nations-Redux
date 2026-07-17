@@ -251,3 +251,27 @@ country_event = {
 		name = "We shall stick to our sphere"
 	}
 }
+
+# QING CHINA ASKS TO PURCHASE GUNS
+country_event = {
+	id = dnc_qing.12
+	title = "Qing China Wants to Purchase Guns"
+	desc = dnc_qing.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sure"
+		add_ideas = QIN_bought_guns
+		QIN = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+				producer = PREV
+			}
+		}
+	}
+	option = {
+		name = "No"
+	}
+}
