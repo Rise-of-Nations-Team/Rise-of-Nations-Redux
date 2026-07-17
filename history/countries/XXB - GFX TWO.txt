@@ -1,0 +1,33 @@
+﻿###############
+### WARNING ###
+###############
+
+# This tag exists for naval purposes, as a storage tag, and as a debug tag. It is very broken doesn't play normally, like not getting annexation events. Use at your own risk
+
+capital = 1
+OOB = ""
+country_lock_all_division_template = yes
+set_rule ={
+	can_create_factions = no
+	can_join_factions = no
+	can_not_declare_war = yes
+	can_send_volunteers = no
+}
+set_research_slots = 0
+add_ideas = {
+	RI_optimisation
+}
+
+1900.1.1 = {
+	set_global_flag = DNC_RON_ERA_gflg
+}
+
+1910.1.1 = {
+	clr_global_flag = DNC_RON_ERA_gflg
+	set_global_flag = WW1_RON_ERA_gflg
+}
+
+1919.1.1 = {
+	clr_global_flag = WW1_RON_ERA_gflg
+	set_global_flag = INT_RON_ERA_gflg
+}
