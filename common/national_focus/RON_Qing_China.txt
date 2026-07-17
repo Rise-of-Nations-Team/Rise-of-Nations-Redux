@@ -538,7 +538,16 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			every_nation = {
+				limit = {
+					has_ideas = DNC_eight_nation_alliance
+				}
+				add_opinion_modifiers = {
+					target = PREV
+					modifier = QIN_chinese_christianity
+				}
+				#add_ideas = QIN_chinese_christianity
+			}
 		}
 	}
 
@@ -560,7 +569,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-
+			country_event = dnc_qing.12
 		}
 	}
 
