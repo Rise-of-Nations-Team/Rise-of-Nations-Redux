@@ -418,7 +418,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			all_core_state = {
+			every_core_state = {
 				limit = {
 					is_coastal = yes
 					fort > 0
@@ -610,7 +610,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			every_country = {
+			every_possible_country = {
 				limit = {
 					has_idea = DNC_eight_nation_alliance
 				}
@@ -638,36 +638,36 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			every_country = {
+			every_possible_country = {
 				limit = {
 					has_idea = DNC_eight_nation_alliance
 				}
 				country_event = dnc_qing.10
 			}
-			all_core_state = {
+			every_core_state = {
 				limit = {
 					has_dynamic_modifier = {
 						modifier = QIN_boxer_rebellion
 						scope = QIN
 					}
 				}
-				transfer_state_to = QIN_boxers
+				transfer_state_to = BOX
 				remove_dynamic_modifier = {
 					modifier = QIN_boxer_rebellion
 					scope = QIN
 				}
 				create_unit = {
 					division = "name = \"Boxer Militia\" division_template = \"Boxer Militia\" start_excperience_factor = 0.5"
-					owner = QIN_boxers
+					owner = BOX
 					id = 555
 					count = 2
 				}
 			}
 			declare_war_on = {
-				target = QIN_boxers
+				target = BOX
 				type = civil_war
 			}
-			add_civil_war_target = QIN_boxers
+			add_civil_war_target = BOX
 		}
 	}
 	focus = {
@@ -3299,4 +3299,3 @@ category = naval_doctrine
 	}
 	
 }
-	
