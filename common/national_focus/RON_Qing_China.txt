@@ -569,7 +569,12 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			country_event = dnc_qing.12
+			every_countey = {
+				limit = {
+					has_idea = DNC_eight_nation_alliance
+				}
+				country_event = dnc_qing.12
+			}
 		}
 	}
 
@@ -642,7 +647,9 @@ focus_tree = {
 		available = {
 
 		}
-
+		bypass = {
+			has_war_with = QIN_boxers
+		}
 		ai_will_do = {
 			factor = 25
 		}
@@ -690,7 +697,7 @@ focus_tree = {
 
 		cost = 5
 		available = {
-
+			has_country_flag = DNC_Boxer_Rebellion_Defeated
 		}
 
 		ai_will_do = {
