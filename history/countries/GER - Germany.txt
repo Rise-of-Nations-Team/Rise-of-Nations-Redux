@@ -68,27 +68,14 @@ set_popularities = {
 	communism = 9
 	neutrality = 64
 }
+
 recruit_character = GER_wilhelm_ii
+recruit_character = GER_wilhelm_iii 
+recruit_character = GER_wilhelm_ernst
 
 recruit_character = GER_august_bebel #democratic 
-GER_august_bebel = {
-	promote_character = {
-		Ideology = socialism
-	}
-}
 recruit_character = GER_karl_liebknecht #communism
-GER_karl_liebknecht = {
-	promote_character = {
-		Ideology = marxism
-	}
-}
-
 recruit_character = GER_erich_ludendorff #fascism
-GER_erich_ludendorff = {
-	promote_character = {
-		Ideology = ultranationalism
-	}
-}
 
 1900.1.1 = {
 	#set_naval_oob = "GER_1900_naval"
@@ -96,7 +83,6 @@ GER_erich_ludendorff = {
 	recruit_character = GER_general_council #democratic
 	recruit_character = GER_ernst_thalmann
 	recruit_character = GER_wolfgang_kapp #fascism
-	recruit_character = GER_wilhelm_iii 
 	recruit_character = GER_paul_von_hindenburg #democracy
 	recruit_character = GER_adolf_hitler #fascism
 	recruit_character = GER_otto_strasser_win #strasserism
@@ -109,8 +95,27 @@ GER_erich_ludendorff = {
 	recruit_character = GER_hjalmar_schacht
 	recruit_character = GER_konstantin_von_neurath
 	recruit_character = GER_alfred_hugenberg
+	recruit_character = GER_arthur_zimmermann
+	recruit_character = GER_friedrich_von_moltke
+	recruit_character = GER_richard_von_kuhlmann
+	recruit_character = GER_karl_von_luxburg
+	recruit_character = GER_paul_wolff_metternich
+	recruit_character = GER_clemens_von_delbruck
+	recruit_character = GER_franz_von_reichenau
+	recruit_character = GER_gottlieb_von_jagow
+	recruit_character = GER_karl_helfferich
+	recruit_character = GER_max_wallraf
+	recruit_character = GER_friedrich_von_moltke
+	recruit_character = GER_johann_von_dallwitz
+	recruit_character = GER_friedrich_wilhelm_von_loebell
+	recruit_character = GER_wilhelm_arnold_drews
+	recruit_character = GER_tilo_von_wilmowsky	
+	recruit_character = GER_rudolf_havenstein
+	recruit_character = GER_hermann_kuhn
+	recruit_character = GER_hermann_muller
 
 	#Generals
+	recruit_character = GER_friedrich_wilhelm
 	recruit_character = GER_franz_ritter_von_epp	
 	recruit_character = GER_moritz_von_bissing
 	recruit_character = GER_hans_von_seeckt
@@ -142,7 +147,16 @@ GER_erich_ludendorff = {
 	recruit_character = GER_colmar_von_der_goltz
 	recruit_character = GER_friedrich_von_bernhardi
 	recruit_character = GER_bruno_von_mudra
-	recruit_character = GER_alfred_von_kühne
+	recruit_character = GER_alfred_von_kuhne
+	recruit_character = GER_walter_von_eberhardt
+	recruit_character = GER_georg_von_der_marwitz	
+	recruit_character = GER_karl_ludwig_delsa	
+	recruit_character = GER_kurt_von_dem_borne
+	recruit_character = GER_maximilian_von_prittwitz
+	recruit_character = GER_max_von_gallwitz
+	recruit_character = GER_arnold_lequis	
+	recruit_character = GER_carl_eduard_von_sachsen_coburg_und_gotha
+
 
 	#Admirals
 	recruit_character = GER_maximilian_von_spee
@@ -155,6 +169,9 @@ GER_erich_ludendorff = {
 	recruit_character = GER_reinhard_scheer
 	recruit_character = GER_friedrich_von_baudissin	
 	recruit_character = GER_albert_wilhelm_heinrich
+	recruit_character = GER_guido_von_usedom
+	recruit_character = GER_eduard_von_capelle
+	recruit_character = GER_peter_strasser			
 
 	#Scientists
 	recruit_character = GER_ferdinand_porsche
@@ -237,16 +254,6 @@ GER_erich_ludendorff = {
 
 		}
 	}
-
-	set_portraits = {
-		character = GER_august_von_mackensen
-		civilian = {
-			large = "gfx/leaders/GER/WW1/FM-August_von_Mackensen.dds"
-		}
-		army = {
-			large = "gfx/leaders/GER/WW1/FM-August_von_Mackensen.dds"
-		}		
-	} 		
 }
 
 1905.1.1 = {
@@ -269,6 +276,10 @@ GER_erich_ludendorff = {
 			GER_dreadnought_race
 		}
 	}
+
+	#Throne Candidates
+	recruit_character = GER_eitel_friedrich
+	recruit_character = GER_adalbert_von_preussen
 
 	#Advisors
 	recruit_character = GER_theodor_heuss
@@ -340,6 +351,12 @@ GER_erich_ludendorff = {
 		ww1_electronic_mechanical_engineering = 1
 	}
 
+	#Throne Candidates
+	recruit_character = GER_august_wilhelm_von_preussen
+	recruit_character = GER_oskar_von_preussen
+	recruit_character = GER_joachim_von_preussen
+	recruit_character = GER_victoria_louise
+
 }
 
 1914.1.1 = {
@@ -348,26 +365,6 @@ GER_erich_ludendorff = {
 			has_start_date > 1913.01.01
 			has_start_date < 1919.01.01
 		}
-		unlock_national_focus = GER1_the_central_powers
-		unlock_national_focus = GER1_disreguard_the_reichstag
-		unlock_national_focus = GER1_reinforce_the_monarchy
-		unlock_national_focus = GER1_invite_italy_to_the_alliance
-		unlock_national_focus = GER1_leverage_royal_ties
-		unlock_national_focus = GER1_alliance_wargaming
-		unlock_national_focus = GER1_heed_the_warnings
-		unlock_national_focus = GER1_prepare_for_the_next_war
-		unlock_national_focus = GER1_an_industrial_war
-		unlock_national_focus = GER1_at_sea
-		unlock_national_focus = GER1_on_land
-		unlock_national_focus = GER1_under_the_sea
-		unlock_national_focus = GER1_above_the_sea
-		unlock_national_focus = GER1_the_science_of_war
-		unlock_national_focus = GER1_the_old_battlefield
-		unlock_national_focus = GER1_the_grand_battlefield
-		unlock_national_focus = GER1_extend_the_militaryindustrial_complex
-		unlock_national_focus = GER1_steel_rain
-		unlock_national_focus = GER1_the_homefront
-		unlock_national_focus = GER1_fortification_studies
 	}
 
 	#Advisors
