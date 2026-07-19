@@ -1,0 +1,661 @@
+focus_tree = {
+	id = Albania_WW2
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALB
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 1400 }
+
+	default = no
+
+	focus = {
+		id = ALB_great_king_zog
+		icon = GFX_goal_unknown
+		x = 3
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_conquer_greece_and_yugoslavia
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = ALB_great_king_zog
+		prerequisite = { focus = ALB_great_king_zog }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_partition_of_greece_and_yugoslavia
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = ALB_great_king_zog
+		prerequisite = { focus = ALB_great_king_zog }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_legacy_of_skanderbeg
+		icon = GFX_goal_unknown
+		x = 5
+		y = 1
+		relative_position_id = ALB_great_king_zog
+		prerequisite = { focus = ALB_great_king_zog }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_subjecting_the_warmongers
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = ALB_conquer_greece_and_yugoslavia
+		prerequisite = { focus = ALB_conquer_greece_and_yugoslavia }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_closer_ties_with_fascism
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = ALB_conquer_greece_and_yugoslavia
+		prerequisite = { focus = ALB_conquer_greece_and_yugoslavia focus = ALB_partition_of_greece_and_yugoslavia }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_form_ottoman_puppet_state
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ALB_partition_of_greece_and_yugoslavia
+		prerequisite = { focus = ALB_partition_of_greece_and_yugoslavia }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_democratic_king
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		relative_position_id = ALB_subjecting_the_warmongers
+		prerequisite = { focus = ALB_subjecting_the_warmongers }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_albanian_empire
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		relative_position_id = ALB_subjecting_the_warmongers
+		prerequisite = { focus = ALB_subjecting_the_warmongers }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_revival_of_the_illyrian_movement
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		relative_position_id = ALB_subjecting_the_warmongers
+		prerequisite = { focus = ALB_subjecting_the_warmongers focus = ALB_closer_ties_with_fascism }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_greater_albania
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		relative_position_id = ALB_closer_ties_with_fascism
+		prerequisite = { focus = ALB_closer_ties_with_fascism }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_liberate_the_alawiyya
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ALB_form_ottoman_puppet_state
+		prerequisite = { focus = ALB_closer_ties_with_fascism focus = ALB_form_ottoman_puppet_state }
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_italian_protectorate
+		icon = GFX_goal_unknown
+		x = 11
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_closer_ties_with_italy
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		prerequisite = { focus = ALB_italian_protectorate }
+		relative_position_id = ALB_italian_protectorate
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_integrate_with_italy
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		prerequisite = { focus = ALB_closer_ties_with_italy }
+		relative_position_id = ALB_closer_ties_with_italy
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_fight_back
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		prerequisite = { focus = ALB_closer_ties_with_italy }
+		relative_position_id = ALB_closer_ties_with_italy
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_royalist_uprising
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		prerequisite = { focus = ALB_fight_back }
+		relative_position_id = ALB_fight_back
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_the_queen_that_should_have_been
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		prerequisite = { focus = ALB_royalist_uprising }
+		relative_position_id = ALB_royalist_uprising
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_bring_back_our_king
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		prerequisite = { focus = ALB_royalist_uprising }
+		relative_position_id = ALB_royalist_uprising
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_rise_of_enver_hoxha
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		prerequisite = { focus = ALB_fight_back focus = ALB_the_revolutionaries }
+		relative_position_id = ALB_fight_back
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_the_coup
+		icon = GFX_goal_unknown
+		x = 15
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_the_revolutionaries
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		prerequisite = { focus = ALB_the_coup }
+		relative_position_id = ALB_the_coup
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_the_bishop
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		prerequisite = { focus = ALB_the_coup }
+		relative_position_id = ALB_the_coup
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_christian_communism
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		prerequisite = { focus = ALB_the_bishop }
+		relative_position_id = ALB_the_bishop
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_balkan_federation
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		prerequisite = { focus = ALB_christian_communism }
+		relative_position_id = ALB_christian_communism
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_united_europe
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		prerequisite = { focus = ALB_balkan_federation }
+		relative_position_id = ALB_balkan_federation
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_world_under_god
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		prerequisite = { focus = ALB_united_europe }
+		relative_position_id = ALB_united_europe
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_communist_collaboration
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		prerequisite = { focus = ALB_united_europe }
+		relative_position_id = ALB_united_europe
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_the_prince
+		icon = GFX_goal_unknown
+		x = 4
+		y = 1
+		prerequisite = { focus = ALB_the_coup }
+		relative_position_id = ALB_the_coup
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_ottoman_restoration
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		prerequisite = { focus = ALB_the_prince }
+		relative_position_id = ALB_the_prince
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+	focus = {
+		id = ALB_modern_caliphate
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		prerequisite = { focus = ALB_ottoman_restoration }
+		relative_position_id = ALB_ottoman_restoration
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+	}
+
+}
