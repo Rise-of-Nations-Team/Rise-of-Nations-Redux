@@ -1,13 +1,20 @@
 state = {
-	id = 1131 # Begemder
-	name = "STATE_1131"
-	manpower = 1100000
+	id = 838 # Illubabor-Kaffa
+	name = "STATE_838"
+	manpower = 600000
+	resources = {
+		rubber = 2
+		coal = 2
+	}
 	
 	state_category = pastoral
 
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.3 }
 		set_variable = { ETH_state_development_local_building_slots_factor = -0.3 }
+		#set_variable = { ETH_state_decentralization_defence = 0.2 }
+		#set_variable = { ETH_state_decentralization_infrastructure = -0.3 }
+		#set_variable = { ETH_state_decentralization_resources = -0.3 }
 		add_dynamic_modifier = {
 			modifier = ETH_state_development_dynamic_modifier
 		}
@@ -19,14 +26,18 @@ state = {
 		buildings = {
 			infrastructure = 1
 		}
-		
+		# Gambeila
 		victory_points = { 
-			1984 2
+			13244 2 
+		}
+		# Jiren (add VPs to this if creating the Jimma Sultanate)
+		victory_points = { 
+			7912 1  
 		}
 		
 		owner = ETH
 		add_core_of = ETH
-		add_core_of = QEM
+		add_core_of = GBA
 
 		1936.6.1 = {
 			owner = ITA
@@ -42,7 +53,7 @@ state = {
 	}
 
 	provinces = {
- 		1984 2040 13137 13241
+ 		7912 13245 13244
  	}
 
 	local_supplies = 0.0 

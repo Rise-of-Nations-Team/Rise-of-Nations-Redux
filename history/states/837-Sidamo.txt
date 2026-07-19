@@ -1,12 +1,12 @@
 state = {
-	id = 1138 # Gojjam (including Gammu Gofa)
-	name = "STATE_1138"
-	manpower = 900000
+	id = 837 # Sidamo (including Gammu Gofa)
+	name = "STATE_837"
+	manpower = 950000
 	resources = {
-		coal = 1
+		rubber = 3
 	}
 	
-	state_category = pastoral
+	state_category = rural
 
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.3 }
@@ -20,16 +20,23 @@ state = {
 		}
 		
 		buildings = {
-			infrastructure = 1
+			# infrastructure = 1
 		}
 		
 		victory_points = { 
-			13242 2 
+			8019 1 
+		}
+		victory_points = { 
+			13246 2 
+		}
+		victory_points = { 
+			13247 1 
 		}
 		
 		owner = ETH
 		add_core_of = ETH
-		add_core_of = BEG
+		add_core_of = SID
+		add_core_of = ORO
 
 		1936.6.1 = {
 			owner = ITA
@@ -45,7 +52,7 @@ state = {
 	}
 
 	provinces = {
- 		4954 13242
+ 		8019 8062 13247 13246
  	}
 
 	local_supplies = 0.0 
