@@ -262,7 +262,10 @@ country_event = {
 
 	option = {
 		name = "Sure"
-		add_ideas = QIN_bought_guns
+		add_timed_idea = {
+			idea = QIN_bought_guns
+			days = 30
+		}
 		QIN = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
