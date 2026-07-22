@@ -92,3 +92,30 @@ QIN_boxer_rebellion_cat = {
 		}
 	}
 }
+
+QIN_working_with_the_eight_cat = {
+	QIN_purchase_weapons_fron_ena = {
+		#icon = 
+		allowed = {
+			tag = QIN
+		}
+		visible = {
+			has_completed_focus = DNC_QIN_purchase_foreign_guns
+		}
+		available = {
+			always = yes
+		}
+		target_trigger = {
+			FROM = {
+				has_ideas = DNC_eight_nation_alliance
+			}
+		}
+		cost = 150
+		days_re_enable = 30
+		complete_effect = {
+			FROM = {
+				country_event = dnc_qing.12
+			}
+		}
+	}
+}
