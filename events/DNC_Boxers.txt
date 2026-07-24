@@ -69,6 +69,7 @@ country_event = {
 	desc = dnc_boxers.3.desc
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
 		tag = QIN
@@ -100,28 +101,50 @@ country_event = {
 	}
 }
 
+# RAINS END DROUGHT
 country_event = {
 	id = dnc_boxers.4
-	title = dnc_boxers.4.title
+	title = "Summer Rains End Drought"
 	desc = dnc_boxers.4.desc
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
-		date > 1900.8.1
+		QIN = {
+			AND = {
+				has_completed_focus = QIN_DNC_anti_western_policy
+				OR = {
+					has_war_with = GER
+					has_war_with = RUS
+					has_war_with = AUH
+					has_war_with = GER
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+			}
+		}
 	}
 
 	option = {
-		name = dnc_boxers.4.a
+		name = "Oh no..."
 		trigger = {
-			QIN = {
-				has_war_with = GER
-				has_war_with = RUS
-				has_war_with = AUH
-				has_war_with = GER
-				has_war_with = ENG
-				has_war_with = FRA
-				has_war_with = USA
+			original_tag = QIN
+		}
+		delete_unit = {
+			division_template = "Boxer Militia"
+			id = 556
+		}
+		custom_effect_tooltip = QIN_boxer_resolve_weakens_tt
+	}
+	option = {
+		name = "The Lord smiles on us today"
+		trigger = {
+			every_country = {
+				limit = {
+					has_idea = DNC_eight_nation_alliance
+				}
 			}
 		}
 	}
