@@ -221,15 +221,22 @@ country_event = {
 			target = QIN_boxers
 			type = independance_wargoal
 		}
-		#QIN = {
-		# add opinion modifier
-		#}
+		QIN = {
+			add_opinion_modifier = {
+				modifer = QIN_answered_call_to_arms
+				target = PREV
+			}
+		}
 	}
 	option = {
 		name = "We should stay out of Chinese affairs."
-		#QIN = {
-		#	add negative opinion modifier and fire country event
-		#}
+		QIN = {
+			add_opinion_modifier = {
+				modifier = QIN_refused_call_to_arms
+				target = PREV
+			}
+			country_event = dnc_qing.13
+		}
 	}
 }
 
@@ -274,5 +281,18 @@ country_event = {
 	}
 	option = {
 		name = "No"
+	}
+}
+
+#[FROM] REFUSES CALL TO ARMS
+country_event = {
+	id = dnc_qing.13
+	title = "[From.GetName] Refuses Call to Arms!"
+	desc = dnc_qing.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "How dare they!"
 	}
 }
