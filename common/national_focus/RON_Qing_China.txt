@@ -61,7 +61,17 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				country_exists = BOX
+				OR = {
+					country_exists = QIN_boxers
+					is_ally_with = ENG
+					is_ally_with = USA
+					is_ally_with = FRA
+					is_ally_with = GER
+					is_ally_with = ITA
+					is_ally_with = AUH
+					is_ally_with = RUS
+					is_ally_with = JAP
+				}
 			}
 		}
 
@@ -127,6 +137,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 25
+			modifier = {
+				any_core_state = {
+					NOT = {
+						is_controlled by = QIN
+					}
+				}
+				add = 20
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = QIN_defense_against_eight_tt
