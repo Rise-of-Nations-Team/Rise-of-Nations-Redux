@@ -488,7 +488,7 @@ focus_tree = {
 			608 = {
 				add_state_flag = QIN_qing_controlled_state
 			}
-			#add_ideas = prowestern_china
+			add_ideas = QIN_prowestern_policy
 			custom_effect_tooltip = QIN_on_map_fight_boxers_tt
 		}
 	}
@@ -531,7 +531,7 @@ focus_tree = {
 
 		cost = 5
 		available = {
-
+			
 		}
 
 		ai_will_do = {
@@ -546,7 +546,7 @@ focus_tree = {
 					target = PREV
 					modifier = QIN_chinese_christianity
 				}
-				#add_ideas = QIN_chinese_christianity
+				add_ideas = QIN_chinese_christianity
 			}
 		}
 	}
@@ -674,16 +674,16 @@ focus_tree = {
 				}
 				create_unit = {
 					division = "name = \"Boxer Militia\" division_template = \"Boxer Militia\" start_excperience_factor = 0.5"
-					owner = BOX
+					owner = QIN_boxers
 					id = 555
 					count = 2
 				}
 			}
 			declare_war_on = {
-				target = BOX
+				target = QIN_boxers
 				type = civil_war
 			}
-			add_civil_war_target = BOX
+			add_civil_war_target = QIN_boxers
 		}
 	}
 	focus = {
@@ -705,6 +705,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = dnc_qing.11
+			add_ideas = QIN_a_new_age
 		}
 	}
 
