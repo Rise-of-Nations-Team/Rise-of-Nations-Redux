@@ -119,3 +119,40 @@ QIN_working_with_the_eight_cat = {
 		}
 	}
 }
+
+QIN_war_with_the_eight = {
+	QIN_raise_the_people = {
+		#icon = 
+		on_map_mode = map_only
+		cost = 50
+		allowed = {
+			tag = QIN
+		}
+		visible = {
+			has_completed_focus = DNC_QIN_seymours_expedition
+		}
+		target_trigger = {
+			limit = {
+				every_neighbor_state = {
+					limit = {
+						AND = {
+							NOT = {
+								is_owned_by = QIN
+							}
+						 	has_contested_owner = QIN
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			ROOT = {
+				add_dynamic_modifier = {
+					modifier = QIN_population_defense
+					scope = QIN
+					days = 50
+				}
+			}
+		}
+	}
+}
