@@ -35,7 +35,6 @@ focus_tree = {
 				any_core_state = {
 					has_dynamic_modifier = {
 						modifier = QIN_boxer_rebellion
-						scope = QIN
 					}
 				}
 				add = 25
@@ -62,7 +61,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				OR = {
-					country_exists = QIN_boxers
+					country_exists = BOX
 					is_ally_with = ENG
 					is_ally_with = USA
 					is_ally_with = FRA
@@ -90,7 +89,6 @@ focus_tree = {
 				limit = {
 					has_dynamic_modifier = {
 						modifier = QIN_boxer_rebellion
-						scope = QIN
 					}
 				}
 				division_template = {
@@ -115,7 +113,6 @@ focus_tree = {
 				}
 				remove_dynamic_modifier = {
 					modifier = QIN_boxer_rebellion
-					scope = QIN
 				}
 			}
 		}
@@ -682,26 +679,24 @@ focus_tree = {
 				limit = {
 					has_dynamic_modifier = {
 						modifier = QIN_boxer_rebellion
-						scope = QIN
 					}
 				}
 				transfer_state_to = BOX
 				remove_dynamic_modifier = {
 					modifier = QIN_boxer_rebellion
-					scope = QIN
 				}
 				create_unit = {
 					division = "name = \"Boxer Militia\" division_template = \"Boxer Militia\" start_excperience_factor = 0.5"
-					owner = QIN_boxers
+					owner = BOX
 					id = 555
 					count = 2
 				}
 			}
 			declare_war_on = {
-				target = QIN_boxers
+				target = BOX
 				type = civil_war
 			}
-			add_civil_war_target = QIN_boxers
+			add_civil_war_target = BOX
 		}
 	}
 	focus = {
