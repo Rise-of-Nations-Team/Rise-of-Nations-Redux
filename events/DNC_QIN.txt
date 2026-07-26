@@ -3,14 +3,14 @@ add_namespace = dnc_qing
 # THE FUTURE OF THE BOXERS?
 country_event = {
 	id = dnc_qing.1
-	title = "The Future of the Boxers?"
+	title = dnc_qing.1.title
 	desc = dnc_qing.1.d
 	
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		name = "Disband the Boxer Militias"
+		name = dnc_qing.1.a
 		ai_chance = {
 			base = 5
 		}
@@ -21,7 +21,7 @@ country_event = {
 		add_political_power = 50
 	}
 	option = {
-		name = "Formalize the Boxer Militias"
+		name = dnc_qing.1.b
 		ai_chance = {
 			base = 5
 		}
@@ -36,14 +36,14 @@ country_event = {
 # THE CHRISTIAN QUESTION
 country_event = {
 	id = dnc_qing.2
-	title = "The Christian Question"
-	desc = dnc_qing.1.d
+	title = dnc_qing.2.title
+	desc = dnc_qing.2.desc
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = {
-		name = "Exile them"
+		name = dnc_qing.2.a
 		ai_chance = {
 			base = 5
 		}
@@ -60,7 +60,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Hunt them down."
+		name = dnc_qing.2.b
 		ai_chance = {
 			base = 5
 		}
@@ -72,13 +72,13 @@ country_event = {
 # QING CHINA REQUESTS RETURN OF TERRITORIES
 country_event = {
 	id = dnc_qing.3
-	title = "Qing China Requests the Return of Territories"
-	desc = dnc_qing.3.d
+	title = dnc_qing.3.title
+	desc = dnc_qing.3.desc
 
 	is_triggered_only = yes
 
 	option = {
-		name = "It is rightful Chinese territory"
+		name = dnc_qing.3.a
 		ai_chance = {
 			base = 5
 		}
@@ -92,7 +92,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Do they think we are stupid?"
+		name = dnc_qing.3.b
 		ai_chance = {
 			base = 5
 		}
@@ -109,7 +109,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.4
 	title = "A New Golden Age?"
-	desc = dnc_qing.4.d
+	desc = dnc_qing.4.desc
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -123,14 +123,13 @@ country_event = {
 country_event = {
 	id = dnc_qing.5
 	title = "Qing China Raids Our Equipment Stockpiles!"
-	desc = dnc_qing.5.d
+	desc = dnc_qing.5.desc
 
 	is_triggered_only = yes
-	fire_only_once = no
 
 	option = {
 		name = "Curse them"
-		add_to_stockpile = {
+		add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 7500
 			producer = ENG
@@ -142,7 +141,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.6
 	title = "Qing China Declares War!"
-	desc = dnc_qing.6.d
+	desc = dnc_qing.6.desc
 
 	is_triggered_only = yes
 
@@ -155,7 +154,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.7
 	title = "Qing China Offers Military Access"
-	desc = dnc_qing.7.d
+	desc = dnc_qing.7.desc
 
 	is_triggered_only = yes
 
@@ -173,7 +172,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.8
 	title = "Qing China Requests Military Advisors"
-	desc = dnc_qing.8.d
+	desc = dnc_qing.8.desc
 
 	is_triggered_only = yes
 
@@ -193,7 +192,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.9
 	title = "Qing China Opens to Western Investments"
-	desc = dnc_qing.9.d
+	desc = dnc_qing.9.desc
 
 	is_triggered_only = yes
 
@@ -211,14 +210,14 @@ country_event = {
 country_event = {
 	id = dnc_qing.10
 	title = "Qing China requests help against Boxers"
-	desc = dnc_qing.10.d
+	desc = dnc_qing.10.desc
 
 	is_triggered_only = yes
 
 	option = {
 		name = "We shall help our Chinese bretheren!"
 		declare_war_on = {
-			target = QIN_boxers
+			target = BOX
 			type = independance_wargoal
 		}
 		QIN = {
@@ -244,7 +243,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.11
 	title = "China and the West?"
-	desc = dnc_qing.11.d
+	desc = dnc_qing.11.desc
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -261,7 +260,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.12
 	title = "Qing China Wants to Purchase Guns"
-	desc = dnc_qing.12.d
+	desc = dnc_qing.12.desc
 
 	is_triggered_only = yes
 
@@ -288,7 +287,7 @@ country_event = {
 country_event = {
 	id = dnc_qing.13
 	title = "[From.GetName] Refuses Call to Arms!"
-	desc = dnc_qing.13.d
+	desc = dnc_qing.13.desc
 
 	is_triggered_only = yes
 
