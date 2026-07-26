@@ -84,13 +84,6 @@ focus_tree = {
 				}
 				declare_war_on = FROM
 				country_event = dnc_qing.6
-			}
-			every_core_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = QIN_boxer_rebellion
-					}
-				}
 				division_template = {
 					name = "Boxer Militia"
 					is_locked = yes
@@ -99,6 +92,13 @@ focus_tree = {
 						militia = { x = 0 y = 1 }
 						militia = { x = 1 y = 0 }
 						militia = { x = 1 y = 1 }
+					}
+				}
+			}
+			every_core_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = QIN_boxer_rebellion
 					}
 				}
 				create_unit = {
