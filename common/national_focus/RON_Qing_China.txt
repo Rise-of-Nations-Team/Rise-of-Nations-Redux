@@ -17,7 +17,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_the_boxer_rebellion
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_QIN_boxer_war
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 7
 		y = 0
@@ -82,11 +82,21 @@ focus_tree = {
 				limit = {
 					has_idea = DNC_eight_nation_alliance
 				}
-				declare_war_on = {
-					target = FROM
-					type = annex_everything
-				}
 				country_event = dnc_qing.6
+				QIN = {
+					declare_war_on = {
+						target = PREV
+						type = take_state
+						generator = { 1126 745 }
+					}
+				}
+			}
+			every_core_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = QIN_boxer_rebellion
+					}
+				}
 				division_template = {
 					name = "Boxer Militia"
 					is_locked = yes
@@ -95,13 +105,6 @@ focus_tree = {
 						militia = { x = 0 y = 1 }
 						militia = { x = 1 y = 0 }
 						militia = { x = 1 y = 1 }
-					}
-				}
-			}
-			every_core_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = QIN_boxer_rebellion
 					}
 				}
 				create_unit = {
@@ -138,12 +141,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 			modifier = {
-				add = 20
 				any_core_state = {
 					NOT = {
-						is_controlled_by = QIN
+						is_controlled by = QIN
 					}
 				}
+				add = 20
 			}
 		}
 		completion_reward = {
@@ -152,7 +155,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = QIN_DNC_mobilize_the_bannermen
+		id = QIN_DNC_mobilize_bannermen
 		icon = GFX_goal_china_MON_banner
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = -2
@@ -197,8 +200,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
-		relative_position_id = QIN_DNC_mobilize_the_bannermen
-		prerequisite = { focus = QIN_DNC_mobilize_the_bannermen }
+		relative_position_id = QIN_DNC_mobilize_bannermen
+		prerequisite = { focus = QIN_DNC_mobilize_bannermen }
 
 		cost = 5
 		available = {
@@ -218,7 +221,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_the_boxer_spirit
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_QIN_beiyang_academy
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 2
 		y = 1
@@ -290,7 +293,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			add_stability = 20
+			add_stability = 0.20
 			add_political_power = 150
 			add_ideas = antiwestern_bastion
 		}
@@ -298,7 +301,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_the_future_of_the_boxers
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CHI_decisive_battles
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
@@ -320,7 +323,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_the_future_of_chinese_christians
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_purge_opposition
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = -1
 		y = 1
@@ -342,7 +345,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_chinese_reunification
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CHI_retake_the_coastal_cities
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 1
 		y = 1
@@ -371,7 +374,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_proclaim_the_chinese_golden_age
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PRC_the_chinese_century
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 1
 		y = 1
@@ -395,7 +398,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_the_nail_in_the_coffin
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CZE_german_puppet
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
@@ -414,13 +417,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = QIN_boxer_accords
-			add_stability = -20
+			add_stability = -0.20
 		}
 	}
 
 	focus = {
 		id = QIN_DNC_comply_with_the_eight
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_generic_forceful_treaty
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
@@ -439,10 +442,10 @@ focus_tree = {
 			every_core_state = {
 				limit = {
 					is_coastal = yes
-					bunker > 0
+					fort > 0
 				}
 				remove_building = {
-					building = bunker
+					building = fort
 					level = 10
 				}
 			}
@@ -462,7 +465,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_institute_the_new_policies
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_GER_integrated_economies
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
@@ -504,7 +507,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			608 = {
-				set_state_flag = QIN_qing_controlled_state
+				add_state_flag = QIN_qing_controlled_state
 			}
 			add_ideas = QIN_prowestern_policy
 			custom_effect_tooltip = QIN_on_map_fight_boxers_tt
@@ -513,7 +516,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_invite_foreign_troops
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_full_social_mobilization
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = -2
 		y = 1
@@ -540,7 +543,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_protect_chinese_christians
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_catholic_dominion
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
@@ -556,11 +559,11 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			every_country = {
+			every_nation = {
 				limit = {
-					has_idea = DNC_eight_nation_alliance
+					has_ideas = DNC_eight_nation_alliance
 				}
-				add_opinion_modifier = {
+				add_opinion_modifiers = {
 					target = PREV
 					modifier = QIN_chinese_christianity
 				}
@@ -571,7 +574,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_purchase_foreign_guns
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_combined_arms
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 2
 		y = 1
@@ -587,7 +590,7 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			every_country = {
+			every_countey = {
 				limit = {
 					has_idea = DNC_eight_nation_alliance
 				}
@@ -598,7 +601,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_request_military_advisors
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_military_dictatorship
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 1
 		y = 1
@@ -624,7 +627,7 @@ focus_tree = {
 
 	focus = {
 		id = QIN_DNC_open_up_to_western_investment
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 1
 		y = 1
@@ -666,13 +669,12 @@ focus_tree = {
 
 		}
 		bypass = {
-			has_war_with = BOX
+			has_war_with = QIN_boxers
 		}
 		ai_will_do = {
 			factor = 25
 		}
 		completion_reward = {
-			QIN_boxer_setup = yes
 			every_possible_country = {
 				limit = {
 					has_idea = DNC_eight_nation_alliance
@@ -705,7 +707,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QIN_DNC_a_new_age_for_china
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_GER_european_confederation
 		search_filters = { FOCUS_FILTER_BOXERS }
 		x = 0
 		y = 1
@@ -713,7 +715,6 @@ focus_tree = {
 		prerequisite = { focus = QIN_DNC_destroy_the_rebellion }
 
 		cost = 5
-
 		available = {
 			has_country_flag = DNC_Boxer_Rebellion_Defeated
 		}
@@ -726,5 +727,4 @@ focus_tree = {
 			add_ideas = QIN_a_new_age
 		}
 	}
-
 }
