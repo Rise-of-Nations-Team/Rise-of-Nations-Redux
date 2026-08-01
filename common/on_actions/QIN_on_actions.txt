@@ -36,6 +36,8 @@ on_actions = {
 		}
 	}
 	on_state_control_changed = {
+
+	#Eight Nation Alliance loses scripted peace
 		effect = {
 			if = {
 				limit = {
@@ -64,10 +66,35 @@ on_actions = {
 							}
 						}
 						transfer_state_to = QIN
+						remove_claim_by = FROM
+						remove_core_of = FROM
 						add_global_flag = QIN_won_against_ENA_gf
 					}
 				}
 			}
+		}
+	}
+
+	on_weekly_QIN = {
+
+		# Boxer Civil War Revolutions check
+		effect = {
+			limit = {
+				if = {
+					tag = QIN
+					FROM = { tag = BOX }
+					QIN = {
+						limit = {
+							AND = {
+								has_war_with = FROM
+								surrender_progress > 0.15
+								{ value = 0 add = war_support add = stability divide = 2 less_than_or_equals = 50 }
+							}
+						}
+					}
+				}
+			}
+			# COUNTRY EVENT WITH RANDOMIZED REVOLUTIONARIES OPTIONS HERE
 		}
 	}
 }
