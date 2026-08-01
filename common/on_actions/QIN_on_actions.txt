@@ -35,4 +35,39 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = QIN
+					FROM = {
+						every_country = {
+							limit = {
+								has_ideas = DNC_eight_nation_alliance
+							}
+						}
+					}
+					FROM.FROM = {
+						AND = {
+							state = 1164
+							#state = Tientsin
+						}
+					}
+				}
+				FROM = {
+					white_peace = QIN
+					every_state = {
+						limit = {
+							is_core_of = QIN
+							NOT = {
+								is_owned_by = QIN
+							}
+						}
+						transfer_state_to = QIN
+						add_global_flag = QIN_won_against_ENA_gf
+					}
+				}
+			}
+		}
+	}
 }
