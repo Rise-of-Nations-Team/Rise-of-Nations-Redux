@@ -697,6 +697,18 @@ on_actions = {
 					set_variable = { SPR_ruling_party = conservatives }
 				}
 			}
+
+			if = {
+				limit = {
+					date < 1905.1.1
+				}
+				AUS = {
+					remove_ideas = {
+						AUS_DNC_der_reichsrat_fake_1900
+						AUS_DNC_die_imperiale_wirtschaft_fake_1900
+					}
+				}
+			}
 		}
 	}
 

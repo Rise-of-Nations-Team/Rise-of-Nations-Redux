@@ -31,14 +31,17 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			#Wittek
+			custom_effect_tooltip = AUS_DNC_modify_economy_tt
+			add_to_variable = {
+				AUS_DNC_die_imperiale_wirtschaft_production_speed_rail_way_factor = 0.1
+			}
 		}
 
 		ai_will_do = {
 			base = 1
 		}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -51,15 +54,24 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			#Zorkasch
-			#Inheritance Tax Reform, Stamp Tax Abolition for Calendars and Newspapers
+			custom_effect_tooltip = AUS_DNC_modify_reichsrat_tt
+			add_to_variable = {
+				AUS_DNC_der_reichsrat_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = AUS_DNC_modify_economy_tt
+			add_to_variable = {
+				AUS_DNC_die_imperiale_wirtschaft_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 
 		ai_will_do = {
 			base = 1
 		}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -72,15 +84,22 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			#Zorkasch, Blumfeld, Stibral
-			#Tightening of Govt Salt Monopolies, Ban on Lboster Fishing Betweem Aug 15 and November
+			custom_effect_tooltip = AUS_DNC_modify_economy_tt
+			add_to_variable = {
+				AUS_DNC_die_imperiale_wirtschaft_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				AUS_DNC_die_imperiale_wirtschaft_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
 		}
 
 		ai_will_do = {
 			base = 1
 		}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 	}
 
 }

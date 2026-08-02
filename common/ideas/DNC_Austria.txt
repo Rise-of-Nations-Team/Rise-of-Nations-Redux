@@ -6,9 +6,11 @@ ideas = {
 
 	country = {
 
-		AUS_backward_navy_industry = {
+		AUS_DNC_der_reichsrat_fake_1900 = {
 
-			picture = generic_backward_navy_industry
+			name = AUS_DNC_der_reichsrat
+
+			picture = government
 
 			allowed = {
 				always = no
@@ -20,24 +22,31 @@ ideas = {
 
 			removal_cost = -1
 
-			available = {
-				any_controlled_state = {
-					is_coastal = yes
-				}
+			modifier = {
+				political_power_factor = -0.2
 			}
+		}
+
+		AUS_DNC_die_imperiale_wirtschaft_fake_1900 = {
+
+			name = AUS_DNC_die_imperiale_wirtschaft
+
+			picture = AUS_imperial_economy
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
 
 			modifier = {
-				industrial_capacity_dockyard = 0.20
+				consumer_goods_factor = 0.15
+				industrial_capacity_dockyard = -0.20
 			}
-
-			equipment_bonus = {
-				capital_ship = { build_cost_ic = 0.20 }
-			}
-
-			research_bonus = {
-				naval_doctrine = -0.05
-			}
-
 		}
 
 	}

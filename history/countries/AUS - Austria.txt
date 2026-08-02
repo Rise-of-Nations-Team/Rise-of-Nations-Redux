@@ -60,7 +60,43 @@ set_variable = {
 set_stability = 0.5
 ### WW1 Start Date
 add_ideas = {
-	AUS_backward_navy_industry
+}
+
+#The Reichsrat
+add_dynamic_modifier = {
+	modifier = AUS_DNC_der_reichsrat
+}
+if = {
+	limit = {
+		has_start_date < 1905.1.1
+	}
+	add_ideas = AUS_DNC_der_reichsrat_fake_1900 #Removed on startup
+}
+set_variable = {
+	AUS_DNC_der_reichsrat_political_power_factor = -0.2
+}
+
+#The Imperial Economy
+add_dynamic_modifier = {
+	modifier = AUS_DNC_die_imperiale_wirtschaft
+}
+if = {
+	limit = {
+		has_start_date < 1905.1.1
+	}
+	add_ideas = AUS_DNC_die_imperiale_wirtschaft_fake_1900 #Removed on startup
+}
+set_variable = {
+	AUS_DNC_die_imperiale_wirtschaft_consumer_goods_factor = 0.15
+}
+set_variable = {
+	AUS_DNC_die_imperiale_wirtschaft_industrial_capacity_factory = -0.1
+}
+set_variable = {
+	AUS_DNC_die_imperiale_wirtschaft_industrial_capacity_dockyard = -0.2
+}
+set_variable = {
+	AUS_DNC_die_imperiale_wirtschaft_production_speed_rail_way_factor = 0
 }
 
 set_politics = {
