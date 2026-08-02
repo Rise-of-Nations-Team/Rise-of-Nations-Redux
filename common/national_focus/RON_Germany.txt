@@ -7570,11 +7570,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_weltpolitik
+		id = GER_WW1_weltpolitik
 		icon = GFX_focus_ger_weltpolitik
 		cost = 10
 		mutually_exclusive = {
-			focus = GER_contain_kaiser
+			focus = GER_WW1_contain_kaiser
 		}
 	
 		x = 13
@@ -7601,7 +7601,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_place_under_the_sun
+		id = GER_WW1_place_under_the_sun
 		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 10
 		x = 35
@@ -7619,11 +7619,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_contain_kaiser
+		id = GER_WW1_contain_kaiser
 		icon = GFX_focus_rom_handle_king
 		cost = 10
 		mutually_exclusive = {
-			focus = GER_weltpolitik
+			focus = GER_WW1_weltpolitik
 		}
 		x = 19
 		y = 0
@@ -7653,11 +7653,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_prussian_militarism
+		id = GER_WW1_prussian_militarism
 		icon = GFX_focus_OHL
 		cost = 10
 		prerequisite = {
-			focus = GER_weltpolitik
+			focus = GER_WW1_weltpolitik
 		}
 		x = 13
 		y = 1
@@ -7699,14 +7699,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_backstab
+		id = GER_WW1_backstab
 		icon = GFX_focus_ger_backstab
 		cost = 10
 		prerequisite = {
-			focus = GER_prussian_militarism
+			focus = GER_WW1_prussian_militarism
 		}
 		mutually_exclusive = {
-			focus = GER_support_austrian_claims
+			focus = GER_WW1_support_austrian_claims
 		}
 		x = 2
 		y = 2
@@ -7803,11 +7803,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_isolate_adriatic_sea
+		id = GER_WW1_isolate_adriatic_sea
 		icon = GFX_focus_ger_support_austrian_claims
 		cost = 10
 		prerequisite = {
-			focus = GER_backstab
+			focus = GER_WW1_backstab
 		}
 		x = 1
 		y = 3
@@ -7867,14 +7867,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_romanian_pact
+		id = GER_WW1_romanian_pact
 		icon = GFX_focus_GER_romanian_pact
 		cost = 10
 		prerequisite = {
-			focus = GER_isolate_adriatic_sea
+			focus = GER_WW1_isolate_adriatic_sea
 		}
 		# mutually_exclusive = {
-		# 	focus = GER_non_intervention_treaty
+		# 	focus = GER_WW1_non_intervention_treaty
 		# }
 		x = 1
 		y = 4
@@ -7906,11 +7906,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_second_bjork_agreement
+		id = GER_WW1_second_bjork_agreement
 		icon = GFX_focus_bjork_agreement
 		cost = 10
 		prerequisite = {
-			focus = GER_backstab
+			focus = GER_WW1_backstab
 		}
 		x = 3
 		y = 3
@@ -7939,11 +7939,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_partition_of_persia
+		id = GER_WW1_partition_of_persia
 		icon = GFX_focus_generic_attack_iran
 		cost = 10
 		prerequisite = {
-			focus = GER_second_bjork_agreement
+			focus = GER_WW1_second_bjork_agreement
 		}
 		x = 3
 		y = 4
@@ -7998,14 +7998,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_support_austrian_claims
+		id = GER_WW1_support_austrian_claims
 		icon = GFX_focus_deal_with_austria_hungary
 		cost = 10
 		prerequisite = {
-			focus = GER_prussian_militarism
+			focus = GER_WW1_prussian_militarism
 		}
 		mutually_exclusive = {
-			focus = GER_backstab
+			focus = GER_WW1_backstab
 		}
 		x = 6
 		y = 2
@@ -8043,11 +8043,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_eastern_expansion
+		id = GER_WW1_eastern_expansion
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 10
 		prerequisite = {
-			focus = GER_support_austrian_claims
+			focus = GER_WW1_support_austrian_claims
 		}
 		x = 5
 		y = 3
@@ -8079,11 +8079,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_puppet_kingdoms
+		id = GER_WW1_puppet_kingdoms
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 10
 		prerequisite = {
-			focus = GER_eastern_expansion
+			focus = GER_WW1_eastern_expansion
 		}
 		x = 5
 		y = 5
@@ -8109,11 +8109,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_bruderkrieg
+		id = GER_WW1_bruderkrieg
 		icon = GFX_focus_GER_bruderkrieg
 		cost = 10
 		prerequisite = {
-			focus = GER_romanian_pact
+			focus = GER_WW1_romanian_pact
 		}
 		x = 1
 		y = 5
@@ -8175,11 +8175,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_pressure_on_switzerland
+		id = GER_WW1_pressure_on_switzerland
 		icon = GFX_focus_attack_switzerland
 		cost = 5
 		prerequisite = {
-			focus = GER_bruderkrieg
+			focus = GER_WW1_bruderkrieg
 		}
 		x = 5
 		y = 6
@@ -8223,11 +8223,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_german_austrian_joint_staff
+		id = GER_WW1_german_austrian_joint_staff
 		icon = GFX_focus_generic_little_entente
 		cost = 10
 		prerequisite = {
-			focus = GER_support_austrian_claims
+			focus = GER_WW1_support_austrian_claims
 		}
 		x = 7
 		y = 3
@@ -8252,11 +8252,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_isolate_balkan_threat
+		id = GER_WW1_isolate_balkan_threat
 		icon = GFX_focus_anti_serbian_crusade
 		cost = 5
 		prerequisite = {
-			focus = GER_german_austrian_joint_staff
+			focus = GER_WW1_german_austrian_joint_staff
 		}
 		x = 6
 		y = 4
@@ -8305,11 +8305,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_delegation_to_romania
+		id = GER_WW1_delegation_to_romania
 		icon = GFX_focus_invite_romania
 		cost = 8
 		prerequisite = {
-			focus = GER_german_austrian_joint_staff
+			focus = GER_WW1_german_austrian_joint_staff
 		}
 		x = 8
 		y = 4
@@ -8345,14 +8345,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_focus_on_true_enemy
+		id = GER_WW1_focus_on_true_enemy
 		icon = GFX_focus_focus_fra_down_marianne
 		cost = 10
 		prerequisite = {
-			focus = GER_delegation_to_romania
+			focus = GER_WW1_delegation_to_romania
 		}
 		prerequisite = {
-			focus = GER_isolate_balkan_threat
+			focus = GER_WW1_isolate_balkan_threat
 		}
 		x = 7
 		y = 5
@@ -8387,14 +8387,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_threaten_holland
+		id = GER_WW1_threaten_holland
 		icon = GFX_goal_generic_major_war
 		cost = 5
 		prerequisite = {
-			focus = GER_focus_on_true_enemy
+			focus = GER_WW1_focus_on_true_enemy
 		}
 		mutually_exclusive = {
-			focus = GER_befriend_holland
+			focus = GER_WW1_befriend_holland
 		}
 		x = 7
 		y = 6
@@ -8424,14 +8424,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_befriend_holland
+		id = GER_WW1_befriend_holland
 		icon = GFX_focus_hol_oranje_boven
 		cost = 5
 		prerequisite = {
-			focus = GER_focus_on_true_enemy
+			focus = GER_WW1_focus_on_true_enemy
 		}
 		mutually_exclusive = {
-			focus = GER_threaten_holland
+			focus = GER_WW1_threaten_holland
 		}
 		x = 9
 		y = 6
@@ -8468,13 +8468,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_war_with_france_ww1
+		id = GER_WW1_war_with_france_ww1
 		icon = GFX_focus_attack_france
 		cost = 10
 		prerequisite = {
-			focus = GER_befriend_holland
-			focus = GER_threaten_holland
-			focus = GER_pressure_on_switzerland
+			focus = GER_WW1_befriend_holland
+			focus = GER_WW1_threaten_holland
+			focus = GER_WW1_pressure_on_switzerland
 		}
 		x = 7
 		y = 7
@@ -8520,11 +8520,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_OHL_authority
+		id = GER_WW1_OHL_authority
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 10
 		prerequisite = {
-			focus = GER_prussian_militarism
+			focus = GER_WW1_prussian_militarism
 		}
 		x = 13
 		y = 2
@@ -8554,11 +8554,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_military_advisers
+		id = GER_WW1_military_advisers
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		prerequisite = {
-			focus = GER_OHL_authority
+			focus = GER_WW1_OHL_authority
 		}
 		x = 12
 		y = 3
@@ -8600,11 +8600,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_scandinavian_focus
+		id = GER_WW1_scandinavian_focus
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		prerequisite = {
-			focus = GER_military_advisers
+			focus = GER_WW1_military_advisers
 		}
 		x = 11
 		y = 4
@@ -8683,14 +8683,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_befriend_sweden
+		id = GER_WW1_befriend_sweden
 		icon = GFX_focus_generic_befriend_sweden
 		cost = 10
 		prerequisite = {
-			focus = GER_scandinavian_focus
+			focus = GER_WW1_scandinavian_focus
 		}
 		mutually_exclusive = {
-			focus = GER_pressure_on_scandinavia
+			focus = GER_WW1_pressure_on_scandinavia
 		}
 		x = 9
 		y = 5
@@ -8736,11 +8736,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_military_mission_in_turkey
+		id = GER_WW1_military_mission_in_turkey
 		icon = GFX_focus_otto_heal
 		cost = 10
 		prerequisite = {
-			focus = GER_military_advisers
+			focus = GER_WW1_military_advisers
 		}
 		x = 13
 		y = 4
@@ -8801,11 +8801,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_befriend_bulgaria
+		id = GER_WW1_befriend_bulgaria
 		icon = GFX_focus_generic_befriend_bulgaria
 		cost = 10
 		prerequisite = {
-			focus = GER_military_mission_in_turkey
+			focus = GER_WW1_military_mission_in_turkey
 		}
 		x = 13
 		y = 6
@@ -8853,11 +8853,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_expand_staff
+		id = GER_WW1_expand_staff
 		icon = GFX_goal_generic_position_armies
 		cost = 10
 		prerequisite = {
-			focus = GER_OHL_authority
+			focus = GER_WW1_OHL_authority
 		}
 		x = 14
 		y = 3
@@ -8902,11 +8902,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_hindenburg_programme
+		id = GER_WW1_hindenburg_programme
 		icon = GFX_goal_generic_army_artillery
 		cost = 10
 		prerequisite = {
-			focus = GER_expand_staff
+			focus = GER_WW1_expand_staff
 		}
 		x = 14
 		y = 5
@@ -9009,11 +9009,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_research_bureau
+		id = GER_WW1_research_bureau
 		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 10
 		prerequisite = {
-			focus = GER_hindenburg_programme
+			focus = GER_WW1_hindenburg_programme
 		}
 		x = 14
 		y = 7
@@ -9031,11 +9031,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_oberster_kriegsherr
+		id = GER_WW1_oberster_kriegsherr
 		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 10
 		prerequisite = {
-			focus = GER_expand_staff
+			focus = GER_WW1_expand_staff
 		}
 		x = 15
 		y = 4
@@ -9094,11 +9094,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_militarization_of_youth
+		id = GER_WW1_militarization_of_youth
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10
 		prerequisite = {
-			focus = GER_oberster_kriegsherr
+			focus = GER_WW1_oberster_kriegsherr
 		}
 		x = 15
 		y = 6
@@ -9119,15 +9119,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_constitutional_compromise
+		id = GER_WW1_constitutional_compromise
 		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 10
 		prerequisite = {
-			focus = GER_contain_kaiser
+			focus = GER_WW1_contain_kaiser
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_contain_kaiser
+		relative_position_id = GER_WW1_contain_kaiser
 		bypass = {
 			OR = {
 				has_country_flag = great_war_loser
@@ -9172,15 +9172,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_contain_OHL
+		id = GER_WW1_contain_OHL
 		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 10
 		prerequisite = {
-			focus = GER_constitutional_compromise
+			focus = GER_WW1_constitutional_compromise
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_constitutional_compromise
+		relative_position_id = GER_WW1_constitutional_compromise
 		completion_reward = {
 			add_ideas = GER_idea_reformed_staff
 			add_popularity = {
@@ -9193,11 +9193,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_democratization_of_army
+		id = GER_WW1_democratization_of_army
 		icon = GFX_goal_support_democracy
 		cost = 10
 		prerequisite = {
-			focus = GER_contain_OHL
+			focus = GER_WW1_contain_OHL
 		}
 		x = 18
 		y = 3
@@ -9218,11 +9218,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_federal_army
+		id = GER_WW1_federal_army
 		icon = GFX_goal_rhineland
 		cost = 10
 		prerequisite = {
-			focus = GER_democratization_of_army
+			focus = GER_WW1_democratization_of_army
 		}
 		x = 17
 		y = 4
@@ -9248,11 +9248,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_rejuvenate_officer_staff
+		id = GER_WW1_rejuvenate_officer_staff
 		icon = GFX_focus_generic_military_academy
 		cost = 10
 		prerequisite = {
-			focus = GER_contain_OHL
+			focus = GER_WW1_contain_OHL
 		}
 		x = 20
 		y = 3
@@ -9316,14 +9316,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_abwehr
+		id = GER_WW1_abwehr
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = {
-			focus = GER_rejuvenate_officer_staff
+			focus = GER_WW1_rejuvenate_officer_staff
 		}
 		prerequisite = {
-			focus = GER_democratization_of_army
+			focus = GER_WW1_democratization_of_army
 		}
 		x = 19
 		y = 4
@@ -9336,11 +9336,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_central_powers_conference
+		id = GER_WW1_central_powers_conference
 		icon = GFX_goal_generic_national_unity
 		cost = 10
 		prerequisite = {
-			focus = GER_contain_OHL
+			focus = GER_WW1_contain_OHL
 		}
 		x = 22
 		y = 3
@@ -9359,11 +9359,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_secure_allied_monarchies
+		id = GER_WW1_secure_allied_monarchies
 		icon = GFX_focus_generic_home_defense
 		cost = 10
 		prerequisite = {
-			focus = GER_central_powers_conference
+			focus = GER_WW1_central_powers_conference
 		}
 		x = 21
 		y = 4
@@ -9394,14 +9394,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_the_great_game_begins		
+		id = GER_WW1_the_great_game_begins		
 		icon = GFX_goal_generic_attack_allies
 		cost = 10
 		prerequisite = {
-			focus = GER_secure_allied_monarchies
+			focus = GER_WW1_secure_allied_monarchies
 		}
 		prerequisite = {
-			focus = GER_abwehr
+			focus = GER_WW1_abwehr
 		}
 		x = 20
 		y = 5
@@ -9487,15 +9487,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_imperial_research_department
+		id = GER_WW1_imperial_research_department
 		icon = GFX_goal_generic_production2
 		cost = 10
 		prerequisite = {
-			focus = GER_constitutional_compromise
+			focus = GER_WW1_constitutional_compromise
 		}
 		x = 2
 		y = 1
-		relative_position_id = GER_constitutional_compromise
+		relative_position_id = GER_WW1_constitutional_compromise
 		available_if_capitulated = yes
 		available = {
 		}
@@ -9530,11 +9530,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_allied_command_cooperation
+		id = GER_WW1_allied_command_cooperation
 		icon = GFX_focus_generic_little_entente
 		cost = 10
 		prerequisite = {
-			focus = GER_central_powers_conference			#GER_allied_command_cooperation
+			focus = GER_WW1_central_powers_conference			#GER_allied_command_cooperation
 		}
 		x = 23
 		y = 4
@@ -9610,14 +9610,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_protector_of_europe
+		id = GER_WW1_protector_of_europe
 		icon = GFX_goal_generic_defence
 		cost = 10
 		prerequisite = {
-			focus = GER_allied_command_cooperation
+			focus = GER_WW1_allied_command_cooperation
 		}
 		prerequisite = {
-			focus = GER_secure_allied_monarchies
+			focus = GER_WW1_secure_allied_monarchies
 		}
 		x = 22
 		y = 5
@@ -9712,14 +9712,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_strike_from_the_shadows
+		id = GER_WW1_strike_from_the_shadows
 		icon = GFX_focus_attack_russia
 		cost = 10
 		prerequisite = {
-			focus = GER_protector_of_europe
+			focus = GER_WW1_protector_of_europe
 		}
 		prerequisite = {
-			focus = GER_the_great_game_begins
+			focus = GER_WW1_the_great_game_begins
 		}
 		x = 21
 		y = 6
@@ -9769,11 +9769,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_its_time_for_lenin_to_die
+		id = GER_WW1_its_time_for_lenin_to_die
 		icon = GFX_focus_SWE_attack_landsorganisationen
 		cost = 10
 		prerequisite = {
-			focus = GER_strike_from_the_shadows
+			focus = GER_WW1_strike_from_the_shadows
 		}
 		x = 22
 		y = 7
@@ -9821,11 +9821,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_ensure_neutrality_of_romania
+		id = GER_WW1_ensure_neutrality_of_romania
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		prerequisite = {
-			focus = GER_allied_command_cooperation
+			focus = GER_WW1_allied_command_cooperation
 		}
 		x = 23
 		y = 6
@@ -9857,16 +9857,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_reform_colonial_management
+		id = GER_WW1_reform_colonial_management
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		cost = 10
 		prerequisite = {
-			focus = GER_moroccan_crisis
+			focus = GER_WW1_moroccan_crisis
 		}
 		mutually_exclusive = {
-			focus = GER_claim_mittelafrika
+			focus = GER_WW1_claim_mittelafrika
 		}
-		relative_position_id = GER_moroccan_crisis		
+		relative_position_id = GER_WW1_moroccan_crisis		
 		x = -6
 		y = 1
 		available_if_capitulated = yes
@@ -9878,13 +9878,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_ostasien_administration
+		id = GER_WW1_ostasien_administration
 		icon = GFX_goal_generic_position_armies
 		cost = 5
 		prerequisite = {
-			focus = GER_reform_colonial_management
+			focus = GER_WW1_reform_colonial_management
 		}
-		relative_position_id = GER_reform_colonial_management	
+		relative_position_id = GER_WW1_reform_colonial_management	
 		x = -2
 		y = 1
 		available_if_capitulated = yes
@@ -10177,18 +10177,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_cities_of_concessions
+		id = GER_WW1_cities_of_concessions
 		icon = GFX_focus_jap_strike_south
 		cost = 10
 		prerequisite = {
-			focus = GER_ostasien_administration
+			focus = GER_WW1_ostasien_administration
 		}
-		relative_position_id = GER_ostasien_administration
+		relative_position_id = GER_WW1_ostasien_administration
 		x = 0
 		y = 2
 		available = {
 			NOT = {
-				has_completed_focus = GER_ostasien
+				has_completed_focus = GER_WW1_ostasien
 			}
 			has_war = no
 			OR = {
@@ -10359,13 +10359,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_cameroon_administration
+		id = GER_WW1_cameroon_administration
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		prerequisite = {
-			focus = GER_reform_colonial_management
+			focus = GER_WW1_reform_colonial_management
 		}
-		relative_position_id = GER_reform_colonial_management	
+		relative_position_id = GER_WW1_reform_colonial_management	
 		x = 0
 		y = 1
 		bypass = {
@@ -10488,13 +10488,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_west_african_administration
+		id = GER_WW1_west_african_administration
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		prerequisite = {
-			focus = GER_cameroon_administration
+			focus = GER_WW1_cameroon_administration
 		}
-		relative_position_id = GER_cameroon_administration
+		relative_position_id = GER_WW1_cameroon_administration
 		x = -1
 		y = 1
 		bypass = {
@@ -10584,16 +10584,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_colonial_economy_control
+		id = GER_WW1_colonial_economy_control
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		prerequisite = {
-			focus = GER_cities_of_concessions
+			focus = GER_WW1_cities_of_concessions
 		}
 		mutually_exclusive = {
-			focus = GER_colonial_exploitation
+			focus = GER_WW1_colonial_exploitation
 		}
-		relative_position_id = GER_cities_of_concessions
+		relative_position_id = GER_WW1_cities_of_concessions
 		x = 1
 		y = 1
 		available = {
@@ -10628,13 +10628,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_south_administration
+		id = GER_WW1_south_administration
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		prerequisite = {
-			focus = GER_cameroon_administration
+			focus = GER_WW1_cameroon_administration
 		}
-		relative_position_id = GER_cameroon_administration
+		relative_position_id = GER_WW1_cameroon_administration
 		x = 1
 		y = 1
 		bypass = {
@@ -10698,16 +10698,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_colonial_legion
+		id = GER_WW1_colonial_legion
 		icon = GFX_goal_generic_cavalry
 		cost = 10
 		prerequisite = {
-			focus = GER_south_administration
+			focus = GER_WW1_south_administration
 		}
 		prerequisite = {
-			focus = GER_west_african_administration
+			focus = GER_WW1_west_african_administration
 		}
-		relative_position_id = GER_south_administration
+		relative_position_id = GER_WW1_south_administration
 		x = -1
 		y = 1
 		available = {
@@ -10743,16 +10743,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_moroccan_crisis
+		id = GER_WW1_moroccan_crisis
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
 		prerequisite = {
-			focus = GER_place_under_the_sun
+			focus = GER_WW1_place_under_the_sun
 		}
 		mutually_exclusive = {
-			focus = GER_turn_to_asia
+			focus = GER_WW1_turn_to_asia
 		}
-		relative_position_id = GER_place_under_the_sun	
+		relative_position_id = GER_WW1_place_under_the_sun	
 		x = -1
 		y = 1
 		available = {
@@ -10793,17 +10793,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_claim_mittelafrika
+		id = GER_WW1_claim_mittelafrika
 		icon = GFX_goal_tfv_saf_support_german_coup
 		cost = 10
 		prerequisite = {
-			focus = GER_moroccan_crisis
+			focus = GER_WW1_moroccan_crisis
 		}
-		relative_position_id = GER_moroccan_crisis		
+		relative_position_id = GER_WW1_moroccan_crisis		
 		x = -2
 		y = 1
 		mutually_exclusive = {
-			focus = GER_reform_colonial_management
+			focus = GER_WW1_reform_colonial_management
 		}
 		available = {
 			is_subject = no
@@ -10853,13 +10853,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_schutztruppe
+		id = GER_WW1_schutztruppe
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10
 		prerequisite = {
-			focus = GER_claim_mittelafrika
+			focus = GER_WW1_claim_mittelafrika
 		}
-		relative_position_id = GER_claim_mittelafrika
+		relative_position_id = GER_WW1_claim_mittelafrika
 		x = -2
 		y = 1
 		available = {
@@ -10882,13 +10882,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_investing_in_cameroon
+		id = GER_WW1_investing_in_cameroon
 		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
-			focus = GER_claim_mittelafrika
+			focus = GER_WW1_claim_mittelafrika
 		}
-		relative_position_id = GER_claim_mittelafrika
+		relative_position_id = GER_WW1_claim_mittelafrika
 		x = 0
 		y = 1
 		available = {
@@ -10934,13 +10934,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_investing_in_sudwestafrika
+		id = GER_WW1_investing_in_sudwestafrika
 		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
-			focus = GER_investing_in_cameroon
+			focus = GER_WW1_investing_in_cameroon
 		}
-		relative_position_id = GER_investing_in_cameroon
+		relative_position_id = GER_WW1_investing_in_cameroon
 		x = -1
 		y = 1
 		available = {
@@ -10975,13 +10975,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_colonial_protectorates
+		id = GER_WW1_colonial_protectorates
 		icon = GFX_goal_generic_military_sphere
 		cost = 10
 		prerequisite = {
-			focus = GER_schutztruppe
+			focus = GER_WW1_schutztruppe
 		}
-		relative_position_id = GER_schutztruppe
+		relative_position_id = GER_WW1_schutztruppe
 		x = 0
 		y = 2
 		completion_reward = {
@@ -11012,17 +11012,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_colonial_exploitation
+		id = GER_WW1_colonial_exploitation
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 10
 		prerequisite = {
-			focus = GER_cities_of_concessions
-			focus = GER_colonial_protectorates
+			focus = GER_WW1_cities_of_concessions
+			focus = GER_WW1_colonial_protectorates
 		}
 		mutually_exclusive = {
-			focus = GER_colonial_economy_control
+			focus = GER_WW1_colonial_economy_control
 		}
-		relative_position_id = GER_colonial_protectorates
+		relative_position_id = GER_WW1_colonial_protectorates
 		x = -1
 		y = 1
 		available = {
@@ -11058,14 +11058,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_colonial_elite
+		id = GER_WW1_colonial_elite
 		icon = GFX_goal_tfv_generic_tech_sharing
 		cost = 10
 		prerequisite = {
-			focus = GER_colonial_exploitation
-			focus = GER_colonial_economy_control
+			focus = GER_WW1_colonial_exploitation
+			focus = GER_WW1_colonial_economy_control
 		}
-		relative_position_id = GER_colonial_economy_control
+		relative_position_id = GER_WW1_colonial_economy_control
 		x = 1
 		y = 1
 		available = {
@@ -11104,13 +11104,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_investing_in_ostafrika
+		id = GER_WW1_investing_in_ostafrika
 		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
-			focus = GER_investing_in_cameroon
+			focus = GER_WW1_investing_in_cameroon
 		}
-		relative_position_id = GER_investing_in_cameroon
+		relative_position_id = GER_WW1_investing_in_cameroon
 		x = 1
 		y = 1
 		available = {
@@ -11153,16 +11153,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_colonial_docks
+		id = GER_WW1_colonial_docks
 		icon = GFX_goal_generic_navy_cruiser
 		cost = 10
 		prerequisite = {
-			focus = GER_investing_in_ostafrika
+			focus = GER_WW1_investing_in_ostafrika
 		}
 		prerequisite = {
-			focus = GER_investing_in_sudwestafrika
+			focus = GER_WW1_investing_in_sudwestafrika
 		}
-		relative_position_id = GER_investing_in_sudwestafrika
+		relative_position_id = GER_WW1_investing_in_sudwestafrika
 		x = 1
 		y = 1
 		available = {
@@ -11228,13 +11228,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_way_through_rhodesia
+		id = GER_WW1_way_through_rhodesia
 		icon = GFX_goal_generic_small_arms
 		cost = 10
 		prerequisite = {
-			focus = GER_war_with_england
+			focus = GER_WW1_war_with_england
 		}
-		relative_position_id = GER_war_with_england
+		relative_position_id = GER_WW1_war_with_england
 		x = -1
 		y = 1
 		available = {
@@ -11256,13 +11256,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_war_with_england
+		id = GER_WW1_war_with_england
 		icon = GFX_focus_attack_britain
 		cost = 10
 		prerequisite = {
-			focus = GER_colonial_docks
+			focus = GER_WW1_colonial_docks
 		}
-		relative_position_id = GER_colonial_docks
+		relative_position_id = GER_WW1_colonial_docks
 		x = 0
 		y = 1
 		available = {
@@ -11304,13 +11304,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fall_normandia
+		id = GER_WW1_fall_normandia
 		icon = GFX_goal_generic_amphibious_assault
 		cost = 10
 		prerequisite = {
-			focus = GER_war_with_england
+			focus = GER_WW1_war_with_england
 		}
-		relative_position_id = GER_war_with_england
+		relative_position_id = GER_WW1_war_with_england
 		x = 1
 		y = 1
 		completion_reward = {
@@ -11326,16 +11326,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_turn_to_asia
+		id = GER_WW1_turn_to_asia
 		icon = GFX_focus_jap_manchurian_project
 		cost = 10
 		prerequisite = {
-			focus = GER_place_under_the_sun
+			focus = GER_WW1_place_under_the_sun
 		}
 		mutually_exclusive = {
-			focus = GER_moroccan_crisis
+			focus = GER_WW1_moroccan_crisis
 		}
-		relative_position_id = GER_place_under_the_sun
+		relative_position_id = GER_WW1_place_under_the_sun
 		x = 1
 		y = 1
 		completion_reward = {
@@ -11355,14 +11355,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_strait_blockade
+		id = GER_WW1_strait_blockade
 		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		cost = 10
 		prerequisite = {
-			focus = GER_turn_to_asia
-			focus = GER_moroccan_crisis
+			focus = GER_WW1_turn_to_asia
+			focus = GER_WW1_moroccan_crisis
 		}
-		relative_position_id = GER_moroccan_crisis	
+		relative_position_id = GER_WW1_moroccan_crisis	
 		x = 1
 		y = 1
 		available = {
@@ -11401,13 +11401,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_american_campaign
+		id = GER_WW1_american_campaign
 		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 10
 		prerequisite = {
-			focus = GER_strait_blockade
+			focus = GER_WW1_strait_blockade
 		}
-		relative_position_id = GER_strait_blockade		
+		relative_position_id = GER_WW1_strait_blockade		
 		x = 0
 		y = 1
 		available = {
@@ -11461,13 +11461,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_zimmermann_depesche
+		id = GER_WW1_zimmermann_depesche
 		icon = GFX_focus_mex_redeem_aztlan
 		cost = 10
 		prerequisite = {
-			focus = GER_american_campaign
+			focus = GER_WW1_american_campaign
 		}
-		relative_position_id = GER_american_campaign
+		relative_position_id = GER_WW1_american_campaign
 		x = 0
 		y = 1
 		available = {
@@ -11542,13 +11542,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_war_with_usa
+		id = GER_WW1_war_with_usa
 		icon = GFX_focus_generic_strike_at_democracy3
 		cost = 10
 		prerequisite = {
-			focus = GER_zimmermann_depesche
+			focus = GER_WW1_zimmermann_depesche
 		}
-		relative_position_id = GER_zimmermann_depesche
+		relative_position_id = GER_WW1_zimmermann_depesche
 		x = 0
 		y = 1
 		available = {
@@ -11589,13 +11589,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_tokyo_pact
+		id = GER_WW1_tokyo_pact
 		icon = GFX_focus_jap_pacific_guardian
 		cost = 10
 		prerequisite = {
-			focus = GER_turn_to_asia
+			focus = GER_WW1_turn_to_asia
 		}
-		relative_position_id = GER_turn_to_asia
+		relative_position_id = GER_WW1_turn_to_asia
 		x = 2
 		y = 1
 		available = {
@@ -11631,13 +11631,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_ostasien
+		id = GER_WW1_ostasien
 		icon = GFX_focus_jap_spiritual_mobilization
 		cost = 10
 		prerequisite = {
-			focus = GER_tokyo_pact
+			focus = GER_WW1_tokyo_pact
 		}
-		relative_position_id = GER_tokyo_pact
+		relative_position_id = GER_WW1_tokyo_pact
 		x = 0
 		y = 1
 		available = {
@@ -11705,13 +11705,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_chinese_campaign
+		id = GER_WW1_chinese_campaign
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 10
 		prerequisite = {
-			focus = GER_ostasien
+			focus = GER_WW1_ostasien
 		}
-		relative_position_id = GER_ostasien
+		relative_position_id = GER_WW1_ostasien
 		x = -1
 		y = 1
 		available = {
@@ -11759,19 +11759,19 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_asian_shipyards
+		id = GER_WW1_asian_shipyards
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		prerequisite = {
-			focus = GER_strait_blockade
+			focus = GER_WW1_strait_blockade
 		}
 		prerequisite = {
-			focus = GER_chinese_campaign
+			focus = GER_WW1_chinese_campaign
 		}
 		mutually_exclusive = {
-			focus = GER_japanese_german_company
+			focus = GER_WW1_japanese_german_company
 		}
-		relative_position_id = GER_strait_blockade		
+		relative_position_id = GER_WW1_strait_blockade		
 		x = 1
 		y = 4
 		available = {
@@ -11825,13 +11825,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_investing_in_ostasien
+		id = GER_WW1_investing_in_ostasien
 		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
-			focus = GER_ostasien
+			focus = GER_WW1_ostasien
 		}
-		relative_position_id = GER_ostasien
+		relative_position_id = GER_WW1_ostasien
 		x = 0
 		y = 2
 		available = {
@@ -11892,16 +11892,16 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_japanese_german_company
+		id = GER_WW1_japanese_german_company
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 		cost = 10
 		prerequisite = {
-			focus = GER_investing_in_ostasien
+			focus = GER_WW1_investing_in_ostasien
 		}
 		mutually_exclusive = {
-			focus = GER_asian_shipyards
+			focus = GER_WW1_asian_shipyards
 		}
-		relative_position_id = GER_investing_in_ostasien
+		relative_position_id = GER_WW1_investing_in_ostasien
 		x = 0
 		y = 1
 		available_if_capitulated = yes
@@ -11937,13 +11937,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_befriend_siam
+		id = GER_WW1_befriend_siam
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		prerequisite = {
-			focus = GER_ostasien
+			focus = GER_WW1_ostasien
 		}
-		relative_position_id = GER_ostasien
+		relative_position_id = GER_WW1_ostasien
 		x = 1
 		y = 1
 		available_if_capitulated = yes
@@ -11969,13 +11969,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_persian_campaign
+		id = GER_WW1_persian_campaign
 		icon = GFX_goal_generic_political_pressure
 		cost = 10
 		prerequisite = {
-			focus = GER_tokyo_pact
+			focus = GER_WW1_tokyo_pact
 		}
-		relative_position_id = GER_tokyo_pact
+		relative_position_id = GER_WW1_tokyo_pact
 		x = 3
 		y = 2
 		available_if_capitulated = yes
@@ -12000,14 +12000,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_way_to_india
+		id = GER_WW1_way_to_india
 		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
-			focus = GER_persian_campaign
-			focus = GER_befriend_siam
+			focus = GER_WW1_persian_campaign
+			focus = GER_WW1_befriend_siam
 		}
-		relative_position_id = GER_befriend_siam
+		relative_position_id = GER_WW1_befriend_siam
 		x = 1
 		y = 1
 		available_if_capitulated = yes
@@ -12046,13 +12046,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_pearl_of_the_british_crown
+		id = GER_WW1_pearl_of_the_british_crown
 		icon = GFX_focus_RAJ_british_investors
 		cost = 10
 		prerequisite = {
-			focus = GER_way_to_india
+			focus = GER_WW1_way_to_india
 		}
-		relative_position_id = GER_way_to_india
+		relative_position_id = GER_WW1_way_to_india
 		x = 0
 		y = 1
 		completion_reward = {
@@ -12078,14 +12078,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_qingdao_agreement
+		id = GER_WW1_qingdao_agreement
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = {
-			focus = GER_japanese_german_company
-			focus = GER_pearl_of_the_british_crown
+			focus = GER_WW1_japanese_german_company
+			focus = GER_WW1_pearl_of_the_british_crown
 		}
-		relative_position_id = GER_pearl_of_the_british_crown
+		relative_position_id = GER_WW1_pearl_of_the_british_crown
 		x = -1
 		y = 1
 		available = {
@@ -12117,11 +12117,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_german_cisleithania
+		id = GER_WW1_german_cisleithania
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 10
 		prerequisite = {
-			focus = GER_bruderkrieg
+			focus = GER_WW1_bruderkrieg
 		}
 		x = 1
 		y = 6
@@ -12151,15 +12151,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_HRE_focus
+		id = GER_WW1_HRE_focus
 		icon = GFX_focus_ger_HRE
 		cost = 10
 		prerequisite = {
-			focus = GER_suppress_the_hungarian_uprising
-			focus = GER_recognize_hungarian_sovereignty
+			focus = GER_WW1_suppress_the_hungarian_uprising
+			focus = GER_WW1_recognize_hungarian_sovereignty
 		}
 		prerequisite = {
-			focus = GER_bohemia_integration
+			focus = GER_WW1_bohemia_integration
 		}
 		available = {
 			is_subject = no
@@ -12174,7 +12174,7 @@ focus_tree = {
 			}
 		}
 		mutually_exclusive = {
-			focus = GER_kaiserreich
+			focus = GER_WW1_kaiserreich
 		}
 		x = 4
 		y = 8
@@ -12189,13 +12189,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_chinese_intervention
+		id = GER_WW1_chinese_intervention
 		icon = GFX_focus_attack_china
 		cost = 10
 		prerequisite = {
-			focus = GER_japanese_german_company
+			focus = GER_WW1_japanese_german_company
 		}
-		relative_position_id = GER_japanese_german_company
+		relative_position_id = GER_WW1_japanese_german_company
 		x = -1
 		y = 1
 		available = {
@@ -12267,14 +12267,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_suppress_the_hungarian_uprising
+		id = GER_WW1_suppress_the_hungarian_uprising
 		icon = GFX_focus_generic_attack_hungary
 		cost = 10
 		prerequisite = {
-			focus = GER_german_cisleithania
+			focus = GER_WW1_german_cisleithania
 		}
 		mutually_exclusive = {
-			focus = GER_recognize_hungarian_sovereignty
+			focus = GER_WW1_recognize_hungarian_sovereignty
 		}
 		available = {
 			is_subject = no
@@ -12313,11 +12313,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_bohemia_integration
+		id = GER_WW1_bohemia_integration
 		icon = GFX_focus_CZE_AUH_coat_of_arms
 		cost = 10
 		prerequisite = {
-			focus = GER_german_cisleithania
+			focus = GER_WW1_german_cisleithania
 		}
 		x = 4
 		y = 7
@@ -12394,14 +12394,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_recognize_hungarian_sovereignty
+		id = GER_WW1_recognize_hungarian_sovereignty
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 10
 		prerequisite = {
-			focus = GER_german_cisleithania
+			focus = GER_WW1_german_cisleithania
 		}
 		mutually_exclusive = {
-			focus = GER_suppress_the_hungarian_uprising
+			focus = GER_WW1_suppress_the_hungarian_uprising
 		}
 		x = 0
 		y = 7
@@ -12446,14 +12446,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_pressure_on_scandinavia
+		id = GER_WW1_pressure_on_scandinavia
 		icon = GFX_focus_generic_attack_sweden
 		cost = 10
 		prerequisite = {
-			focus = GER_scandinavian_focus
+			focus = GER_WW1_scandinavian_focus
 		}
 		mutually_exclusive = {
-			focus = GER_befriend_sweden
+			focus = GER_WW1_befriend_sweden
 		}
 		x = 11
 		y = 5
@@ -12487,11 +12487,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_invansion_in_finland
+		id = GER_WW1_invansion_in_finland
 		icon = GFX_focus_generic_attack_finland
 		cost = 10
 		prerequisite = {
-			focus = GER_pressure_on_scandinavia
+			focus = GER_WW1_pressure_on_scandinavia
 		}
 		x = 11
 		y = 6
@@ -12534,7 +12534,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_kaiserreich
+		id = GER_WW1_kaiserreich
 		icon = GFX_focus_ger_kaiserreich
 		cost = 10
 		available = {
@@ -12553,7 +12553,7 @@ focus_tree = {
 			}	
 		}
 		mutually_exclusive = {
-			focus = GER_HRE_focus
+			focus = GER_WW1_HRE_focus
 		}
 		x = 8
 		y = 8
@@ -12589,11 +12589,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_veteran_organisation
+		id = GER_WW1_veteran_organisation
 		icon = GFX_focus_chi_army_reform
 		cost = 5
 		prerequisite = {
-			focus = GER_kaiserreich
+			focus = GER_WW1_kaiserreich
 		}
 		x = 10
 		y = 9
@@ -12605,12 +12605,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_long_live_sacred_germany
+		id = GER_WW1_long_live_sacred_germany
 		icon = GFX_goal_generic_demand_territory
 		cost = 10
 		prerequisite = {
-			focus = GER_representative_reform
-			focus = GER_two_kaisers
+			focus = GER_WW1_representative_reform
+			focus = GER_WW1_two_kaisers
 		}
 		x = 8
 		y = 14
@@ -12623,11 +12623,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_emergency_powers_act
+		id = GER_WW1_emergency_powers_act
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = {
-			focus = GER_kaiserreich
+			focus = GER_WW1_kaiserreich
 		}
 		x = 8
 		y = 9
@@ -12643,11 +12643,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_reichstag_crisis
+		id = GER_WW1_reichstag_crisis
 		icon = GFX_focus_usa_voter_registration_act
 		cost = 10
 		prerequisite = {
-			focus = GER_emergency_powers_act
+			focus = GER_WW1_emergency_powers_act
 		}
 		x = 7
 		y = 10
@@ -12666,14 +12666,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_abolish_dictatorships
+		id = GER_WW1_abolish_dictatorships
 		icon =  GFX_focus_generic_military_dictatorship
 		cost = 10
 		prerequisite = {
-			focus = GER_reichstag_crisis
+			focus = GER_WW1_reichstag_crisis
 		}
 		prerequisite = {
-			focus = GER_mitteleuropa_pact
+			focus = GER_WW1_mitteleuropa_pact
 		}
 		x = 8
 		y = 11
@@ -12733,11 +12733,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_mitteleuropa_pact
+		id = GER_WW1_mitteleuropa_pact
 		icon = GFX_focus_deal_with_austria_hungary
 		cost = 10
 		prerequisite = {
-			focus = GER_kaiserreich
+			focus = GER_WW1_kaiserreich
 		}
 		x = 9
 		y = 10
@@ -12774,14 +12774,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_two_kaisers
+		id = GER_WW1_two_kaisers
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 10
 		prerequisite = {
-			focus = GER_economic_reform
+			focus = GER_WW1_economic_reform
 		}
 		mutually_exclusive = {
-			focus = GER_representative_reform
+			focus = GER_WW1_representative_reform
 		}
 		x = 7
 		y = 13
@@ -12805,14 +12805,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_representative_reform
+		id = GER_WW1_representative_reform
 		icon = GFX_focus_generic_self_management
 		cost = 10
 		prerequisite = {
-			focus = GER_economic_reform
+			focus = GER_WW1_economic_reform
 		}
 		mutually_exclusive = {
-			focus = GER_two_kaisers
+			focus = GER_WW1_two_kaisers
 		}
 		x = 9
 		y = 13
@@ -12824,11 +12824,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_establish_finnish_monarchy
+		id = GER_WW1_establish_finnish_monarchy
 		icon = GFX_focus_generic_monarchy_2
 		cost = 10
 		prerequisite = {
-			focus = GER_invansion_in_finland
+			focus = GER_WW1_invansion_in_finland
 		}
 		x = 11
 		y = 7
@@ -12866,13 +12866,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_destabilize_raj
+		id = GER_WW1_destabilize_raj
 		icon = GFX_focus_RAJ_two_nation_theory
 		cost = 10
 		prerequisite = {
-			focus = GER_pearl_of_the_british_crown
+			focus = GER_WW1_pearl_of_the_british_crown
 		}
-		relative_position_id = GER_pearl_of_the_british_crown
+		relative_position_id = GER_WW1_pearl_of_the_british_crown
 		x = 1
 		y = 1
 		available = {
@@ -12904,11 +12904,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_european_legion
+		id = GER_WW1_european_legion
 		icon = GFX_focus_chi_army_reform
 		cost = 10
 		prerequisite = {
-			focus = GER_federal_army
+			focus = GER_WW1_federal_army
 		}
 		x = 17
 		y = 6
@@ -12928,11 +12928,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_restore_burgundy
+		id = GER_WW1_restore_burgundy
 		icon = GFX_focus_generic_treaty
 		cost = 10
 		prerequisite = {
-			focus = GER_HRE_focus
+			focus = GER_WW1_HRE_focus
 		}
 		x = 1
 		y = 9
@@ -12962,11 +12962,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_civil_defense
+		id = GER_WW1_civil_defense
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
 		prerequisite = {
-			focus = GER_federal_army
+			focus = GER_WW1_federal_army
 		}
 		x = 18
 		y = 5
@@ -12978,13 +12978,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_rule_germania
+		id = GER_WW1_rule_germania
 		icon = GFX_focus_attack_britain
 		cost = 10
 		prerequisite = {
-			focus = GER_qingdao_agreement
+			focus = GER_WW1_qingdao_agreement
 		}
-		relative_position_id = GER_qingdao_agreement
+		relative_position_id = GER_WW1_qingdao_agreement
 		x = 0
 		y = 1
 		available = {
@@ -13023,11 +13023,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_rebuild_civilian_economy
+		id = GER_WW1_rebuild_civilian_economy
 		icon = GFX_goal_generic_construction2
 		cost = 10
 		prerequisite = {
-			focus = GER_reichstag_crisis
+			focus = GER_WW1_reichstag_crisis
 		}
 		x = 6
 		y = 11
@@ -13197,14 +13197,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_economic_reform
+		id = GER_WW1_economic_reform
 		icon = GFX_focus_hol_abandon_the_gold_standard
 		cost = 10
 		prerequisite = {
-			focus = GER_abolish_dictatorships
+			focus = GER_WW1_abolish_dictatorships
 		}
 		prerequisite = {
-			focus = GER_rebuild_civilian_economy
+			focus = GER_WW1_rebuild_civilian_economy
 		}
 		x = 8
 		y = 12
@@ -13216,11 +13216,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_disband_bundestag
+		id = GER_WW1_disband_bundestag
 		icon = GFX_focus_ger_HRE_estate
 		cost = 10
 		prerequisite = {
-			focus = GER_HRE_focus
+			focus = GER_WW1_HRE_focus
 		}
 		x = 4
 		y = 9
@@ -13239,12 +13239,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_reichspakt
+		id = GER_WW1_reichspakt
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 10
 		prerequisite = {
-			focus = GER_kaiserreich
-			focus = GER_HRE_focus
+			focus = GER_WW1_kaiserreich
+			focus = GER_WW1_HRE_focus
 		}
 		x = 6
 		y = 9
@@ -13276,14 +13276,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_revive_order_of_the_crusaders
+		id = GER_WW1_revive_order_of_the_crusaders
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		cost = 10
 		prerequisite = {
-			focus = GER_rome_act
+			focus = GER_WW1_rome_act
 		}
 		prerequisite = {
-			focus = GER_defender_of_the_faith
+			focus = GER_WW1_defender_of_the_faith
 		}
 		x = 4
 		y = 11
@@ -13300,11 +13300,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_we_will_take_jerusalem
+		id = GER_WW1_we_will_take_jerusalem
 		icon = GFX_goal_generic_major_war
 		cost = 10
 		prerequisite = {
-			focus = GER_revive_order_of_the_crusaders
+			focus = GER_WW1_revive_order_of_the_crusaders
 		}
 		x = 5
 		y = 12
@@ -13340,11 +13340,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fall_barbarossa
+		id = GER_WW1_fall_barbarossa
 		icon = GFX_goal_generic_major_war
 		cost = 10
 		prerequisite = {
-			focus = GER_revive_order_of_the_crusaders
+			focus = GER_WW1_revive_order_of_the_crusaders
 		}
 		x = 4
 		y = 13
@@ -13398,11 +13398,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_rome_act
+		id = GER_WW1_rome_act
 		icon = GFX_focus_attack_italy
 		cost = 10
 		prerequisite = {
-			focus = GER_disband_bundestag
+			focus = GER_WW1_disband_bundestag
 		}
 		x = 3
 		y = 10
@@ -13454,14 +13454,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_army_inovations
+		id = GER_WW1_army_inovations
 		icon = GFX_goal_generic_army_tanks
 		cost = 10
 		prerequisite = {
-			focus = GER_european_legion
+			focus = GER_WW1_european_legion
 		}
 		prerequisite = {
-			focus = GER_civil_defense
+			focus = GER_WW1_civil_defense
 		}
 		x = 18
 		y = 7
@@ -13476,14 +13476,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_defender_of_the_faith
+		id = GER_WW1_defender_of_the_faith
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 10
 		prerequisite = {
-			focus = GER_reichspakt
+			focus = GER_WW1_reichspakt
 		}
 		prerequisite = {
-			focus = GER_disband_bundestag
+			focus = GER_WW1_disband_bundestag
 		}
 		x = 5
 		y = 10
@@ -13501,11 +13501,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_danish_throne
+		id = GER_WW1_danish_throne
 		icon = GFX_focus_generic_attack_denmark
 		cost = 10
 		prerequisite = {
-			focus = GER_restore_burgundy
+			focus = GER_WW1_restore_burgundy
 		}
 		x = 2
 		y = 11
@@ -13550,11 +13550,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_lion_from_the_north
+		id = GER_WW1_lion_from_the_north
 		icon = GFX_focus_hol_united_netherlands
 		cost = 10
 		prerequisite = {
-			focus = GER_danish_throne
+			focus = GER_WW1_danish_throne
 		}
 		x = 2
 		y = 13
@@ -13596,11 +13596,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_protect_benelux
+		id = GER_WW1_protect_benelux
 		icon = GFX_goal_generic_military_sphere
 		cost = 10
 		prerequisite = {
-			focus = GER_restore_burgundy
+			focus = GER_WW1_restore_burgundy
 		}
 		x = 1
 		y = 12
@@ -13748,7 +13748,7 @@ focus_tree = {
 
 	#Pre-War Military Tree
 	focus = {
-		id = GER_five_year_army_law
+		id = GER_WW1_five_year_army_law
 		icon = GFX_focus_GER_glory_to_the_imperial_army
 		cost = 5
 		x = 48
@@ -13789,15 +13789,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_the_1912_military_conference
+		id = GER_WW1_the_1912_military_conference
 		icon = GFX_focus_OHL
 		cost = 2
 		x = -2
 		y = 1
 		prerequisite = {
-			focus = GER_five_year_army_law
+			focus = GER_WW1_five_year_army_law
 		}
-		relative_position_id = GER_five_year_army_law
+		relative_position_id = GER_WW1_five_year_army_law
 		available = {
 			OR = {
 				threat > 0.1
@@ -13833,21 +13833,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_traditional_plan
+		id = GER_WW1_traditional_plan
 		icon = GFX_focus_GER_wiener_dog
 		cost = 5
-		relative_position_id = GER_the_1912_military_conference
+		relative_position_id = GER_WW1_the_1912_military_conference
 		x = 6
 		y = 1
 		prerequisite = {
-			focus = GER_the_1912_military_conference
+			focus = GER_WW1_the_1912_military_conference
 		}
 		prerequisite = {
-			focus = GER_enact_rustungswende
+			focus = GER_WW1_enact_rustungswende
 		}
 		mutually_exclusive = {
-			focus = GER_heeringens_plan
-			focus = GER_quantitative_plan
+			focus = GER_WW1_heeringens_plan
+			focus = GER_WW1_quantitative_plan
 		}
 		completion_reward = {
 			#unlock_decision_tooltip = GER_schliffen
@@ -13872,21 +13872,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_heeringens_plan
+		id = GER_WW1_heeringens_plan
 		icon = GFX_goal_generic_position_armies
 		cost = 5
-		relative_position_id = GER_the_1912_military_conference
+		relative_position_id = GER_WW1_the_1912_military_conference
 		x = -2
 		y = 1
 		prerequisite = {
-			focus = GER_the_1912_military_conference
+			focus = GER_WW1_the_1912_military_conference
 		}
 		prerequisite = {
-			focus = GER_enact_rustungswende
+			focus = GER_WW1_enact_rustungswende
 		}
 		mutually_exclusive = {
-			focus = GER_quantitative_plan
-			focus = GER_traditional_plan
+			focus = GER_WW1_quantitative_plan
+			focus = GER_WW1_traditional_plan
 		}
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
@@ -13912,21 +13912,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_quantitative_plan
+		id = GER_WW1_quantitative_plan
 		icon = GFX_focus_GER_army_officer
 		cost = 5
-		relative_position_id = GER_the_1912_military_conference
+		relative_position_id = GER_WW1_the_1912_military_conference
 		x = 2
 		y = 1
 		prerequisite = {
-			focus = GER_the_1912_military_conference
+			focus = GER_WW1_the_1912_military_conference
 		}
 		prerequisite = {
-			focus = GER_enact_rustungswende
+			focus = GER_WW1_enact_rustungswende
 		}
 		mutually_exclusive = {
-			focus = GER_heeringens_plan
-			focus = GER_traditional_plan
+			focus = GER_WW1_heeringens_plan
+			focus = GER_WW1_traditional_plan
 		}
 		completion_reward = {
 			#Make an event at some point in 1913 for Heeringen stepping down, or after second expansion law
@@ -13952,14 +13952,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_qualitative_superiority
+		id = GER_WW1_qualitative_superiority
 		icon = GFX_focus_generic_military_academy
 		cost = 8
-		relative_position_id = GER_traditional_plan
+		relative_position_id = GER_WW1_traditional_plan
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_traditional_plan
+			focus = GER_WW1_traditional_plan
 		}
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -13995,14 +13995,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_methodical_teachings
+		id = GER_WW1_methodical_teachings
 		icon = GFX_goal_generic_army_doctrines
 		cost = 5
-		relative_position_id = GER_heeringens_plan
+		relative_position_id = GER_WW1_heeringens_plan
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_heeringens_plan
+			focus = GER_WW1_heeringens_plan
 		}
 		bypass = {
 			has_global_flag = great_war
@@ -14049,10 +14049,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_abandon_the_great_ostaufmarsch
+		id = GER_WW1_abandon_the_great_ostaufmarsch
 		icon = GFX_focus_attack_russia
 		cost = 5
-		relative_position_id = GER_quantitative_plan
+		relative_position_id = GER_WW1_quantitative_plan
 		x = 0
 		y = 1
 		available = {
@@ -14061,7 +14061,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_quantitative_plan
+			focus = GER_WW1_quantitative_plan
 		}
 		bypass = {
 			has_global_flag = GER_schlieffen_plan_enacted
@@ -14091,10 +14091,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fortify_the_russian_border
+		id = GER_WW1_fortify_the_russian_border
 		icon = GFX_goal_fortify_the_westwall
 		cost = 4
-		relative_position_id = GER_abandon_the_great_ostaufmarsch
+		relative_position_id = GER_WW1_abandon_the_great_ostaufmarsch
 		x = -1
 		y = 1
 		available = {
@@ -14132,8 +14132,8 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_methodical_teachings
-			focus = GER_abandon_the_great_ostaufmarsch
+			focus = GER_WW1_methodical_teachings
+			focus = GER_WW1_abandon_the_great_ostaufmarsch
 		}
 		completion_reward = {
 			build_railway = {
@@ -14180,17 +14180,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_prepare_for_long_war
+		id = GER_WW1_prepare_for_long_war
 		icon = GFX_focus_SWE_varnplikt
 		cost = 8
-		relative_position_id = GER_methodical_teachings
+		relative_position_id = GER_WW1_methodical_teachings
 		x = -1
 		y = 1
 		available = {
-			has_completed_focus = GER_harshen_standard_training
+			has_completed_focus = GER_WW1_harshen_standard_training
 		}
 		prerequisite = {
-			focus = GER_methodical_teachings
+			focus = GER_WW1_methodical_teachings
 		}
 		bypass = {
 			has_global_flag = great_war
@@ -14233,14 +14233,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_harshen_standard_training
+		id = GER_WW1_harshen_standard_training
 		icon = GFX_focus_generic_army_upgrade
 		cost = 8
-		relative_position_id = GER_methodical_teachings
+		relative_position_id = GER_WW1_methodical_teachings
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_methodical_teachings
+			focus = GER_WW1_methodical_teachings
 		}
 		bypass = {
 			has_global_flag = great_war
@@ -14284,17 +14284,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_mobile_and_armored_support
+		id = GER_WW1_mobile_and_armored_support
 		icon = GFX_focus_generic_armored_car
 		cost = 8
-		relative_position_id = GER_prepare_for_long_war
+		relative_position_id = GER_WW1_prepare_for_long_war
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_prepare_for_long_war
+			focus = GER_WW1_prepare_for_long_war
 		}
 		prerequisite = {
-			focus = GER_harshen_standard_training
+			focus = GER_WW1_harshen_standard_training
 		}
 		completion_reward = {
 			army_experience = 15
@@ -14332,14 +14332,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_artillery_massification 
+		id = GER_WW1_artillery_massification 
 		icon = GFX_focus_generic_artillery_antitank_antiair
 		cost = 5
-		relative_position_id = GER_mobile_and_armored_support
+		relative_position_id = GER_WW1_mobile_and_armored_support
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_mobile_and_armored_support
+			focus = GER_WW1_mobile_and_armored_support
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -14369,14 +14369,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_limited_army_bill
+		id = GER_WW1_limited_army_bill
 		icon = GFX_goal_new_treaty
 		cost = 5
-		relative_position_id = GER_harshen_standard_training
+		relative_position_id = GER_WW1_harshen_standard_training
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_harshen_standard_training
+			focus = GER_WW1_harshen_standard_training
 		}
 		completion_reward = {
 			add_ideas = GER_military_expansion_law_limited
@@ -14395,10 +14395,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fortify_elsass
+		id = GER_WW1_fortify_elsass
 		icon = GFX_goal_nested_fortifications
 		cost = 5
-		relative_position_id = GER_fortify_the_russian_border
+		relative_position_id = GER_WW1_fortify_the_russian_border
 		x = 1
 		y = 1
 		available = {
@@ -14410,7 +14410,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_fortify_the_russian_border
+			focus = GER_WW1_fortify_the_russian_border
 		}
 		completion_reward = {
 			unlock_decision_tooltip = GER_colmar_and_mulhausen_fortifications
@@ -14428,10 +14428,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_first_army_bill
+		id = GER_WW1_first_army_bill
 		icon = GFX_focus_generic_army_upgrade
 		cost = 5
-		relative_position_id = GER_quantitative_plan
+		relative_position_id = GER_WW1_quantitative_plan
 		x = 2
 		y = 1
 		available = {
@@ -14440,8 +14440,8 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_quantitative_plan
-			focus = GER_traditional_plan
+			focus = GER_WW1_quantitative_plan
+			focus = GER_WW1_traditional_plan
 		}
 		completion_reward = {
 			add_ideas = GER_military_expansion_law
@@ -14465,10 +14465,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_wealth_tax_laws
+		id = GER_WW1_wealth_tax_laws
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 5
-		relative_position_id = GER_first_army_bill
+		relative_position_id = GER_WW1_first_army_bill
 		x = -1
 		y = 1
 		available = {
@@ -14477,13 +14477,13 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_first_army_bill
+			focus = GER_WW1_first_army_bill
 		}
 		prerequisite = {
-			focus = GER_abandon_the_great_ostaufmarsch
+			focus = GER_WW1_abandon_the_great_ostaufmarsch
 		}
 		mutually_exclusive = {
-			focus = GER_introduce_new_tariff_laws
+			focus = GER_WW1_introduce_new_tariff_laws
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -14505,10 +14505,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_introduce_new_tariff_laws
+		id = GER_WW1_introduce_new_tariff_laws
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
-		relative_position_id = GER_first_army_bill
+		relative_position_id = GER_WW1_first_army_bill
 		x = 1
 		y = 1
 		available = {
@@ -14517,13 +14517,13 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_first_army_bill
+			focus = GER_WW1_first_army_bill
 		}
 		prerequisite = {
-			focus = GER_abandon_the_great_ostaufmarsch
+			focus = GER_WW1_abandon_the_great_ostaufmarsch
 		}
 		mutually_exclusive = {
-			focus = GER_wealth_tax_laws
+			focus = GER_WW1_wealth_tax_laws
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -14548,10 +14548,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_second_army_bill
+		id = GER_WW1_second_army_bill
 		icon = GFX_focus_ger_oppose_hitler
 		cost = 5
-		relative_position_id = GER_wealth_tax_laws
+		relative_position_id = GER_WW1_wealth_tax_laws
 		x = 1
 		y = 1
 		available = {
@@ -14560,8 +14560,8 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_wealth_tax_laws
-			focus = GER_introduce_new_tariff_laws
+			focus = GER_WW1_wealth_tax_laws
+			focus = GER_WW1_introduce_new_tariff_laws
 		}
 		completion_reward = {
 			if = {
@@ -14598,14 +14598,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_communication_innovations
+		id = GER_WW1_communication_innovations
 		icon = GFX_focus_generic_radio_communication
 		cost = 5
-		relative_position_id = GER_quantitative_plan
+		relative_position_id = GER_WW1_quantitative_plan
 		x = -2
 		y = 1
 		prerequisite = {
-			focus = GER_quantitative_plan
+			focus = GER_WW1_quantitative_plan
 		}
 		bypass = {
 			has_global_flag = great_war
@@ -14633,20 +14633,20 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_more_aggressive_schlieffen_plan
+		id = GER_WW1_more_aggressive_schlieffen_plan
 		icon = GFX_focus_GER_around_maginot
 		cost = 5
-		relative_position_id = GER_qualitative_superiority
+		relative_position_id = GER_WW1_qualitative_superiority
 		x = 1
 		y = 1
 		available = {
-			has_completed_focus = GER_traditional_plan
+			has_completed_focus = GER_WW1_traditional_plan
 		}
 		bypass = {
 			has_global_flag = GER_schlieffen_plan_enacted
 		}
 		prerequisite = {
-			focus = GER_traditional_plan
+			focus = GER_WW1_traditional_plan
 		}
 		completion_reward = {
 			if = {
@@ -14683,23 +14683,23 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_preparing_russian_offensives
+		id = GER_WW1_preparing_russian_offensives
 		icon = GFX_focus_generic_provoke_border_clashes
 		cost = 5
-		relative_position_id = GER_qualitative_superiority
+		relative_position_id = GER_WW1_qualitative_superiority
 		x = 0
 		y = 2
 		available = {
 			NOT = { 
-				has_completed_focus = GER_schlieffen_plan_scuppered
+				has_completed_focus = GER_WW1_schlieffen_plan_scuppered
 				has_country_flag = great_war_loser 
 			}
 		}
 		prerequisite = {
-			focus = GER_more_aggressive_schlieffen_plan
+			focus = GER_WW1_more_aggressive_schlieffen_plan
 		}
 		prerequisite = {
-			focus = GER_qualitative_superiority
+			focus = GER_WW1_qualitative_superiority
 		}
 		completion_reward = {
 			unlock_decision_tooltip = GER_ostplan_offensive
@@ -14718,14 +14718,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_quality_over_quantity
+		id = GER_WW1_quality_over_quantity
 		icon = GFX_goal_generic_axis_build_infantry
 		cost = 5
-		relative_position_id = GER_more_aggressive_schlieffen_plan
+		relative_position_id = GER_WW1_more_aggressive_schlieffen_plan
 		x = 0
 		y = 2
 		prerequisite = {
-			focus = GER_more_aggressive_schlieffen_plan
+			focus = GER_WW1_more_aggressive_schlieffen_plan
 		}
 		available = {
 			has_idea = GER_prussian_army_style2
@@ -14748,15 +14748,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_enact_rustungswende
+		id = GER_WW1_enact_rustungswende
 		icon = GFX_focus_focus_fra_maquis
 		cost = 5
 		x = 4
 		y = 0
 		prerequisite = {
-			focus = GER_five_year_army_law
+			focus = GER_WW1_five_year_army_law
 		}
-		relative_position_id = GER_the_1912_military_conference
+		relative_position_id = GER_WW1_the_1912_military_conference
 		available = {
 			controls_state = 763
 			763 = {
@@ -14807,10 +14807,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_state_munitions
+		id = GER_WW1_state_munitions
 		icon = GFX_focus_generic_munitions
 		cost = 6
-		relative_position_id = GER_enact_rustungswende
+		relative_position_id = GER_WW1_enact_rustungswende
 		x = 5
 		y = 1
 		available = {
@@ -14823,7 +14823,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_enact_rustungswende
+			focus = GER_WW1_enact_rustungswende
 		}
 		completion_reward = {
 			every_owned_state = {
@@ -14857,14 +14857,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_finance_rheinmetall
+		id = GER_WW1_finance_rheinmetall
 		icon = GFX_focus_SWE_let_fly_all_guns
 		cost = 5
 		x = -1
 		y = 1
-		relative_position_id = GER_state_munitions
+		relative_position_id = GER_WW1_state_munitions
 		prerequisite = {
-			focus = GER_state_munitions
+			focus = GER_WW1_state_munitions
 		}
 		available = {
 			1185 = {
@@ -14912,14 +14912,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_subsidise_mauser
+		id = GER_WW1_subsidise_mauser
 		icon = GFX_goal_GER_Mauser_Werke_Contracts
 		cost = 5
-		relative_position_id = GER_state_munitions
+		relative_position_id = GER_WW1_state_munitions
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_state_munitions
+			focus = GER_WW1_state_munitions
 		}
 		available = {
 			50 = {
@@ -14973,21 +14973,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-  		id = GER_strike_entente
+  		id = GER_WW1_strike_entente
   		icon = GFX_focus_attack_france
   		cost = 5
 		prerequisite = {
-  			focus = GER_limited_army_bill
-			focus = GER_second_army_bill
-			focus = GER_preparing_russian_offensives
+  			focus = GER_WW1_limited_army_bill
+			focus = GER_WW1_second_army_bill
+			focus = GER_WW1_preparing_russian_offensives
   		}
 		prerequisite = {
-  			focus = GER_fortify_elsass
-			focus = GER_preparing_russian_offensives
+  			focus = GER_WW1_fortify_elsass
+			focus = GER_WW1_preparing_russian_offensives
   		}
   		x = 1
   		y = 1
-  		relative_position_id = GER_fortify_elsass
+  		relative_position_id = GER_WW1_fortify_elsass
 		will_lead_to_war_with = FRA
   		available = {
 			has_crisis = no
@@ -15070,7 +15070,7 @@ focus_tree = {
   	}
 	#Air Tree
 	focus = {
-		id = GER_expanding_the_luftstreitkrafte
+		id = GER_WW1_expanding_the_luftstreitkrafte
 		icon = GFX_goal_generic_air_fighter
 		cost = 5
 		x = 63
@@ -15107,14 +15107,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_embrace_zeppelin_technology
+		id = GER_WW1_embrace_zeppelin_technology
 		icon = GFX_focus_zeppelin
 		cost = 3
-		relative_position_id = GER_expanding_the_luftstreitkrafte
+		relative_position_id = GER_WW1_expanding_the_luftstreitkrafte
 		x = 5
 		y = 1
 		prerequisite = {
-			focus = GER_expanding_the_luftstreitkrafte
+			focus = GER_WW1_expanding_the_luftstreitkrafte
 		}
 		completion_reward = {
 			air_experience = 15
@@ -15144,14 +15144,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_zeppelin_company
+		id = GER_WW1_zeppelin_company
 		icon = GFX_focus_zeppelin_bombing
 		cost = 5
-		relative_position_id = GER_embrace_zeppelin_technology
+		relative_position_id = GER_WW1_embrace_zeppelin_technology
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = GER_embrace_zeppelin_technology
+			focus = GER_WW1_embrace_zeppelin_technology
 		}
 		completion_reward = {
 			IF = {
@@ -15196,14 +15196,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_zeppelin_experimentations
+		id = GER_WW1_zeppelin_experimentations
 		icon = GFX_goal_generic_air_doctrine
 		cost = 3
-		relative_position_id = GER_embrace_zeppelin_technology
+		relative_position_id = GER_WW1_embrace_zeppelin_technology
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_embrace_zeppelin_technology
+			focus = GER_WW1_embrace_zeppelin_technology
 		}
 		completion_reward = {
 			air_experience = 25
@@ -15240,14 +15240,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_create_the_fliegertruppe
+		id = GER_WW1_create_the_fliegertruppe
 		icon = GFX_goal_generic_air_doctrine
 		cost = 5
-		relative_position_id = GER_expanding_the_luftstreitkrafte
+		relative_position_id = GER_WW1_expanding_the_luftstreitkrafte
 		x = -4
 		y = 1
 		prerequisite = {
-			focus = GER_expanding_the_luftstreitkrafte
+			focus = GER_WW1_expanding_the_luftstreitkrafte
 		}
 		completion_reward = {
 			add_command_power = 15
@@ -15276,14 +15276,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_establish_pilot_schools
+		id = GER_WW1_establish_pilot_schools
 		icon = GFX_focus_generic_military_academy
 		cost = 3
-		relative_position_id = GER_create_the_fliegertruppe
+		relative_position_id = GER_WW1_create_the_fliegertruppe
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = GER_create_the_fliegertruppe
+			focus = GER_WW1_create_the_fliegertruppe
 		}
 		completion_reward = {
 			air_experience = 15
@@ -15310,14 +15310,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_develop_airfields
+		id = GER_WW1_develop_airfields
 		icon = GFX_goal_generic_air_production
 		cost = 5
-		relative_position_id = GER_create_the_fliegertruppe
+		relative_position_id = GER_WW1_create_the_fliegertruppe
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_create_the_fliegertruppe
+			focus = GER_WW1_create_the_fliegertruppe
 		}
 		completion_reward = {
 			add_war_support = 0.03
@@ -15372,17 +15372,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_dicta_boelcke
+		id = GER_WW1_dicta_boelcke
 		icon = GFX_focus_FIN_expand_air_force_academy
 		cost = 6
-		relative_position_id = GER_establish_pilot_schools
+		relative_position_id = GER_WW1_establish_pilot_schools
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_establish_pilot_schools
+			focus = GER_WW1_establish_pilot_schools
 		}
 		prerequisite = {
-			focus = GER_develop_airfields
+			focus = GER_WW1_develop_airfields
 		}
 		completion_reward = {
 			air_experience = 50
@@ -15412,14 +15412,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_pioneer_aircraft_development
+		id = GER_WW1_pioneer_aircraft_development
 		icon = GFX_focus_generic_air_research_boost
 		cost = 3
-		relative_position_id = GER_expanding_the_luftstreitkrafte
+		relative_position_id = GER_WW1_expanding_the_luftstreitkrafte
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_expanding_the_luftstreitkrafte
+			focus = GER_WW1_expanding_the_luftstreitkrafte
 		}
 		completion_reward = {
 			air_experience = 25
@@ -15453,9 +15453,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fokkers_pursuit_concepts
+		id = GER_WW1_fokkers_pursuit_concepts
 		icon = GFX_focus_hol_fokker
-		relative_position_id = GER_pioneer_aircraft_development
+		relative_position_id = GER_WW1_pioneer_aircraft_development
 		cost = 5
 		x = -1
 		y = 1
@@ -15463,7 +15463,7 @@ focus_tree = {
 			has_tech = scout_plane2
 		}
 		prerequisite = {
-			focus = GER_pioneer_aircraft_development
+			focus = GER_WW1_pioneer_aircraft_development
 		}
 		completion_reward = {
 			if = {
@@ -15519,14 +15519,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_form_the_jagdstaffeln
+		id = GER_WW1_form_the_jagdstaffeln
 		icon = GFX_focus_generic_eagle
 		cost = 5
-		relative_position_id = GER_fokkers_pursuit_concepts
+		relative_position_id = GER_WW1_fokkers_pursuit_concepts
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_fokkers_pursuit_concepts
+			focus = GER_WW1_fokkers_pursuit_concepts
 		}
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -15552,17 +15552,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_albatros_ascendency
+		id = GER_WW1_albatros_ascendency
 		icon = GFX_goal_generic_build_airforce
 		cost = 7
-		relative_position_id = GER_dicta_boelcke
+		relative_position_id = GER_WW1_dicta_boelcke
 		x = 2
 		y = 1
 		prerequisite = {
-			focus = GER_form_the_jagdstaffeln
+			focus = GER_WW1_form_the_jagdstaffeln
 		}
 		prerequisite = {
-			focus = GER_dicta_boelcke
+			focus = GER_WW1_dicta_boelcke
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -15613,14 +15613,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_explore_army_aviation_roles
+		id = GER_WW1_explore_army_aviation_roles
 		icon = GFX_goal_generic_air_fighter2
 		cost = 3
-		relative_position_id = GER_pioneer_aircraft_development
+		relative_position_id = GER_WW1_pioneer_aircraft_development
 		x = 2
 		y = 1
 		prerequisite = {
-			focus = GER_pioneer_aircraft_development
+			focus = GER_WW1_pioneer_aircraft_development
 		}
 		completion_reward = {
 			air_experience = 50
@@ -15654,14 +15654,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_schlachtflieger_program
+		id = GER_WW1_schlachtflieger_program
 		icon = GFX_focus_eng_special_air_service
 		cost = 5
-		relative_position_id = GER_explore_army_aviation_roles
+		relative_position_id = GER_WW1_explore_army_aviation_roles
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = GER_explore_army_aviation_roles
+			focus = GER_WW1_explore_army_aviation_roles
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -15688,17 +15688,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_aeg_bombing_initiatives
+		id = GER_WW1_aeg_bombing_initiatives
 		icon = GFX_goal_generic_air_bomber
 		cost = 8
-		relative_position_id = GER_explore_army_aviation_roles
+		relative_position_id = GER_WW1_explore_army_aviation_roles
 		x = 1
 		y = 1
 		available = {
 			has_tech = tactical_bomber1
 		}
 		prerequisite = {
-			focus = GER_explore_army_aviation_roles
+			focus = GER_WW1_explore_army_aviation_roles
 		}
 		completion_reward = {
 			if = {
@@ -15752,18 +15752,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_refine_ground_attack
+		id = GER_WW1_refine_ground_attack
 		icon = GFX_focus_generic_air_defense
 		cost = 3
-		relative_position_id = GER_schlachtflieger_program
+		relative_position_id = GER_WW1_schlachtflieger_program
 		x = 0
 		y = 1
 		available = {
 			has_tech = cas1
 		}
 		prerequisite = {
-			focus = GER_schlachtflieger_program
-			focus = GER_aeg_bombing_initiatives
+			focus = GER_WW1_schlachtflieger_program
+			focus = GER_WW1_aeg_bombing_initiatives
 		}
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_konige_im_luftrevier
@@ -15782,18 +15782,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_establish_the_bogohls
+		id = GER_WW1_establish_the_bogohls
 		icon = GFX_focus_SWE_marauder_bombers
 		cost = 5
-		relative_position_id = GER_aeg_bombing_initiatives
+		relative_position_id = GER_WW1_aeg_bombing_initiatives
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_schlachtflieger_program
-			focus = GER_aeg_bombing_initiatives
+			focus = GER_WW1_schlachtflieger_program
+			focus = GER_WW1_aeg_bombing_initiatives
 		}
 		mutually_exclusive = {
-			focus = GER_heighten_airship_threat
+			focus = GER_WW1_heighten_airship_threat
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -15820,17 +15820,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_strategic_zeppelins
+		id = GER_WW1_strategic_zeppelins
 		icon = GFX_goal_generic_air_naval_bomber
 		cost = 5
-		relative_position_id = GER_zeppelin_company
+		relative_position_id = GER_WW1_zeppelin_company
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_zeppelin_company
+			focus = GER_WW1_zeppelin_company
 		}
 		prerequisite = {
-			focus = GER_zeppelin_experimentations
+			focus = GER_WW1_zeppelin_experimentations
 		}
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -15872,17 +15872,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_heighten_airship_threat
+		id = GER_WW1_heighten_airship_threat
 		icon = GFX_goal_generic_CAS
-		relative_position_id = GER_strategic_zeppelins
+		relative_position_id = GER_WW1_strategic_zeppelins
 		cost = 5
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = GER_strategic_zeppelins
+			focus = GER_WW1_strategic_zeppelins
 		}
 		mutually_exclusive = {
-			focus = GER_establish_the_bogohls
+			focus = GER_WW1_establish_the_bogohls
 		}
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_konige_im_luftrevier
@@ -15900,7 +15900,7 @@ focus_tree = {
 	}
 	#Pre-War Navy Tree
 	focus = {
-		id = GER_the_influence_of_sea_power
+		id = GER_WW1_the_influence_of_sea_power
 		icon = GFX_focus_dreadnought_GER
 		cost = 5
 		x = 78
@@ -15928,10 +15928,10 @@ focus_tree = {
 		}
 	}
 	#focus = {
-	#	id = GER_u_nineteen
+	#	id = GER_WW1_u_nineteen
 	#	icon = GFX_goal_generic_navy_submarine
 	#	cost = 6
-	#	relative_position_id = GER_the_influence_of_sea_power
+	#	relative_position_id = GER_WW1_the_influence_of_sea_power
 	#	x = -1
 	#	y = 1
 	#	available_if_capitulated = no
@@ -15939,7 +15939,7 @@ focus_tree = {
 	#		is_GER_a_monarchy = yes
 	#	}
 	#	prerequisite = {
-	#		focus = GER_the_influence_of_sea_power
+	#		focus = GER_WW1_the_influence_of_sea_power
 	#	}
 	#	completion_reward = {
 	#		if = {
@@ -15969,14 +15969,14 @@ focus_tree = {
 	#	}
 	#}
 	focus = {
-		id = GER_the_fleet_in_being
+		id = GER_WW1_the_fleet_in_being
 		icon = GFX_focus_generic_navy_battleship2
 		cost = 6
-		relative_position_id = GER_the_influence_of_sea_power
+		relative_position_id = GER_WW1_the_influence_of_sea_power
 		x = -5
 		y = 1
 		prerequisite = {
-			focus = GER_the_influence_of_sea_power
+			focus = GER_WW1_the_influence_of_sea_power
 		}
 		completion_reward = {
 			set_variable = {
@@ -16004,14 +16004,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_a_smarter_navy
+		id = GER_WW1_a_smarter_navy
 		icon = GFX_goal_generic_naval_industry
 		cost = 6
-		relative_position_id = GER_the_influence_of_sea_power
+		relative_position_id = GER_WW1_the_influence_of_sea_power
 		x = 5
 		y = 1
 		prerequisite = {
-			focus = GER_the_influence_of_sea_power
+			focus = GER_WW1_the_influence_of_sea_power
 		}
 		completion_reward = {
 			activate_mission_tooltip = GER_smarter_navy_mission
@@ -16033,18 +16033,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_utilise_the_navy_league
+		id = GER_WW1_utilise_the_navy_league
 		icon = GFX_focus_align_germany
 		cost = 5
-		relative_position_id = GER_the_fleet_in_being
+		relative_position_id = GER_WW1_the_fleet_in_being
 		x = 5
 		y = 1
 		bypass = {
-			has_completed_focus = GER_expansion_of_shipyards
+			has_completed_focus = GER_WW1_expansion_of_shipyards
 		}
 		prerequisite = {
-			focus = GER_the_fleet_in_being
-			focus = GER_a_smarter_navy
+			focus = GER_WW1_the_fleet_in_being
+			focus = GER_WW1_a_smarter_navy
 		}
 		completion_reward = {
 			#add_to_variable = {
@@ -16073,10 +16073,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_expansion_of_shipyards
+		id = GER_WW1_expansion_of_shipyards
 		icon = GFX_focus_GER_high_seas_fleet
 		cost = 5
-		relative_position_id = GER_utilise_the_navy_league
+		relative_position_id = GER_WW1_utilise_the_navy_league
 		x = 0
 		y = 2
 		available = {
@@ -16087,7 +16087,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_utilise_the_navy_league
+			focus = GER_WW1_utilise_the_navy_league
 		}
 		completion_reward = {
 			unlock_decision_tooltip = GER_fith_fleet_act_reich
@@ -16104,11 +16104,11 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_completed_focus = GER_utilise_the_navy_league
+						has_completed_focus = GER_WW1_utilise_the_navy_league
 					}
 				}
 				hidden_effect = {
-					unlock_national_focus = GER_utilise_the_navy_league
+					unlock_national_focus = GER_WW1_utilise_the_navy_league
 					set_country_flag = GER_no_navy_league_bonus
 				}
 			}
@@ -16123,14 +16123,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_full_steam_ahead
+		id = GER_WW1_full_steam_ahead
 		icon = GFX_focus_generic_north_atlantic_fleet
 		cost = 5
-		relative_position_id = GER_the_fleet_in_being
+		relative_position_id = GER_WW1_the_fleet_in_being
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = GER_the_fleet_in_being
+			focus = GER_WW1_the_fleet_in_being
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -16206,10 +16206,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fund_blohm_voss
+		id = GER_WW1_fund_blohm_voss
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 5
-		relative_position_id = GER_the_fleet_in_being
+		relative_position_id = GER_WW1_the_fleet_in_being
 		x = 1
 		y = 1
 		available = {
@@ -16219,7 +16219,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_the_fleet_in_being
+			focus = GER_WW1_the_fleet_in_being
 		}
 		completion_reward = {
 			if = {
@@ -16256,10 +16256,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_tirpitz_grand_fleet
+		id = GER_WW1_tirpitz_grand_fleet
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 6
-		relative_position_id = GER_full_steam_ahead
+		relative_position_id = GER_WW1_full_steam_ahead
 		x = 1
 		y = 1
 		bypass = {
@@ -16278,8 +16278,8 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_full_steam_ahead
-			focus = GER_fund_blohm_voss
+			focus = GER_WW1_full_steam_ahead
+			focus = GER_WW1_fund_blohm_voss
 		}
 		completion_reward = {
 			add_ideas = GER_idea_high_seas_fleet
@@ -16306,10 +16306,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_develop_derfflinger_class
+		id = GER_WW1_develop_derfflinger_class
 		icon = GFX_focus_battleship_renewed
 		cost = 5
-		relative_position_id = GER_tirpitz_grand_fleet
+		relative_position_id = GER_WW1_tirpitz_grand_fleet
 		x = 0
 		y = 1
 		available = {
@@ -16322,7 +16322,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_tirpitz_grand_fleet
+			focus = GER_WW1_tirpitz_grand_fleet
 		}
 		completion_reward = {
 			# add derfflinger class
@@ -16396,10 +16396,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_expand_kaiserliche_werften
+		id = GER_WW1_expand_kaiserliche_werften
 		icon = GFX_focus_generic_shipyard
 		cost = 7
-		relative_position_id = GER_the_fleet_in_being
+		relative_position_id = GER_WW1_the_fleet_in_being
 		x = 3
 		y = 1
 		available = {
@@ -16411,8 +16411,8 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_the_fleet_in_being
-			focus = GER_a_smarter_navy
+			focus = GER_WW1_the_fleet_in_being
+			focus = GER_WW1_a_smarter_navy
 		}
 		completion_reward = {
 			59 = { # Wilhelmshaven (Hannover)
@@ -16456,10 +16456,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_fund_ag_weser
+		id = GER_WW1_fund_ag_weser
 		icon = GFX_goal_generic_loans
 		cost = 5
-		relative_position_id = GER_expand_kaiserliche_werften
+		relative_position_id = GER_WW1_expand_kaiserliche_werften
 		x = -1
 		y = 1
 		available = {
@@ -16469,7 +16469,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_expand_kaiserliche_werften
+			focus = GER_WW1_expand_kaiserliche_werften
 		}
 		completion_reward = {
 			IF = {
@@ -16506,10 +16506,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_gruss_an_kiel
+		id = GER_WW1_gruss_an_kiel
 		icon = GFX_focus_battleship_production
 		cost = 5
-		relative_position_id = GER_expand_kaiserliche_werften
+		relative_position_id = GER_WW1_expand_kaiserliche_werften
 		x = 1
 		y = 1
 		available = {
@@ -16518,7 +16518,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = GER_expand_kaiserliche_werften
+			focus = GER_WW1_expand_kaiserliche_werften
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -16544,18 +16544,18 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_develop_light_cruisers
+		id = GER_WW1_develop_light_cruisers
 		icon = GFX_focus_generic_naval_ship
 		cost = 5
-		relative_position_id = GER_expand_kaiserliche_werften
+		relative_position_id = GER_WW1_expand_kaiserliche_werften
 		x = 0
 		y = 2
 		available = {
 			has_tech = improved_ship_hull_cruiser
 		}
 		prerequisite = {
-			focus = GER_fund_ag_weser
-			focus = GER_gruss_an_kiel
+			focus = GER_WW1_fund_ag_weser
+			focus = GER_WW1_gruss_an_kiel
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -16644,15 +16644,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_equip_anti_air
+		id = GER_WW1_equip_anti_air
 		icon = GFX_focus_generic_air_defense
 		cost = 5
-		relative_position_id = GER_a_smarter_navy
+		relative_position_id = GER_WW1_a_smarter_navy
 		x = -3
 		y = 1
 		prerequisite = {
-			focus = GER_the_fleet_in_being
-			focus = GER_a_smarter_navy
+			focus = GER_WW1_the_fleet_in_being
+			focus = GER_WW1_a_smarter_navy
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -16677,14 +16677,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_vulcan_contracts
+		id = GER_WW1_vulcan_contracts
 		icon = GFX_focus_GER_customs_union
 		cost = 5
-		relative_position_id = GER_a_smarter_navy
+		relative_position_id = GER_WW1_a_smarter_navy
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_a_smarter_navy
+			focus = GER_WW1_a_smarter_navy
 		}
 		completion_reward = {
 			if = {
@@ -16722,14 +16722,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_v_thirty_production
+		id = GER_WW1_v_thirty_production
 		icon = GFX_focus_generic_destroyer
 		cost = 5
-		relative_position_id = GER_a_smarter_navy
+		relative_position_id = GER_WW1_a_smarter_navy
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = GER_a_smarter_navy
+			focus = GER_WW1_a_smarter_navy
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -16749,15 +16749,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_develop_u_boats
+		id = GER_WW1_develop_u_boats
 		icon = GFX_focus_generic_cruiser_submarines
 		cost = 5
-		relative_position_id = GER_v_thirty_production
+		relative_position_id = GER_WW1_v_thirty_production
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_v_thirty_production
-			focus = GER_vulcan_contracts
+			focus = GER_WW1_v_thirty_production
+			focus = GER_WW1_vulcan_contracts
 		}
 		completion_reward = {
 			# TODO: Unlock Cruiser Submarine Special Research project
@@ -16782,14 +16782,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_zepplin_reconnaissance
+		id = GER_WW1_zepplin_reconnaissance
 		icon = GFX_focus_zeppelin
 		cost = 6
-		relative_position_id = GER_equip_anti_air
+		relative_position_id = GER_WW1_equip_anti_air
 		x = -1
 		y = 1
 		prerequisite = {
-			focus = GER_equip_anti_air
+			focus = GER_WW1_equip_anti_air
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -16812,14 +16812,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_invest_into_naval_bombers
+		id = GER_WW1_invest_into_naval_bombers
 		icon = GFX_focus_generic_seaplane
 		cost = 5
-		relative_position_id = GER_equip_anti_air
+		relative_position_id = GER_WW1_equip_anti_air
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_equip_anti_air
+			focus = GER_WW1_equip_anti_air
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -16858,15 +16858,15 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_develop_seaplane_carriers
+		id = GER_WW1_develop_seaplane_carriers
 		icon = GFX_focus_generic_seaplane_tender
 		cost = 5
-		relative_position_id = GER_zepplin_reconnaissance
+		relative_position_id = GER_WW1_zepplin_reconnaissance
 		x = 1
 		y = 1
 		prerequisite = {
-			focus = GER_zepplin_reconnaissance
-			focus = GER_invest_into_naval_bombers
+			focus = GER_WW1_zepplin_reconnaissance
+			focus = GER_WW1_invest_into_naval_bombers
 		}
 		completion_reward = {
 			navy_experience = 50

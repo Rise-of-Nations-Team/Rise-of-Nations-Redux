@@ -20,7 +20,7 @@ country_event = {
 			has_global_flag = weimar_republic
 		}
 		NOT = {
-			has_completed_focus = GER_constitutional_compromise
+			has_completed_focus = GER_WW1_constitutional_compromise
 		}
 	}
 	option = {
@@ -1311,7 +1311,7 @@ country_event = {
 		owns_state = 4
 		owns_state = 152
 		owns_state = 153
-		has_completed_focus = GER_german_cisleithania
+		has_completed_focus = GER_WW1_german_cisleithania
 	}
 	mean_time_to_happen = { days = 0 }
 	option = {
@@ -2365,7 +2365,7 @@ country_event = {
 		OR = {
 			has_global_flag = russian_revolution
 			GER = {
-				has_completed_focus = GER_strike_from_the_shadows
+				has_completed_focus = GER_WW1_strike_from_the_shadows
 			}
 		}
 	}
@@ -2377,7 +2377,7 @@ country_event = {
 		if = {
 			limit = {
 				GER = {
-					has_completed_focus = GER_strike_from_the_shadows
+					has_completed_focus = GER_WW1_strike_from_the_shadows
 				}
 			}
 			set_global_flag = strike_from_the_shadows
@@ -2841,7 +2841,7 @@ country_event = {
 			has_global_flag = zimmermann_telegram_intercepted
 		}
 		GER = {
-			has_completed_focus = GER_war_with_usa
+			has_completed_focus = GER_WW1_war_with_usa
 		}
 	}
 	fire_only_once = yes
@@ -4392,7 +4392,7 @@ country_event = {
 		}
 		is_puppet = no
 		fascism > 0.35
-		has_completed_focus = GER_oberster_kriegsherr
+		has_completed_focus = GER_WW1_oberster_kriegsherr
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -5455,7 +5455,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			complete_national_focus = GER_veteran_organisation
+			complete_national_focus = GER_WW1_veteran_organisation
 		}
 	}
 	option = {
@@ -5893,7 +5893,7 @@ country_event = {
 	desc = ww1_germany.114.d
 	trigger = {
 		tag = GER
-		has_completed_focus = GER_HRE_focus
+		has_completed_focus = GER_WW1_HRE_focus
 		has_country_leader = {
 			character = GER_erich_ludendorff
 			ruling_only = yes
@@ -6203,7 +6203,7 @@ country_event = {
 	trigger = {
 		original_tag = GER
 		has_war = no
-		has_completed_focus = GER_HRE_focus
+		has_completed_focus = GER_WW1_HRE_focus
 		owns_state = 55 # Frankfurt
 		owns_state = 53 # Regensburg
 		owns_state = 54 # Berlin
@@ -7071,7 +7071,7 @@ country_event = {
 		activate_advisor = GER_erich_von_falkenhayn
 		trigger = {
 			NOT = {
-				has_completed_focus = GER_quantitative_plan
+				has_completed_focus = GER_WW1_quantitative_plan
 			}
 		}
 	}
