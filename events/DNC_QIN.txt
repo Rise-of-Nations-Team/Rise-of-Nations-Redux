@@ -295,3 +295,22 @@ country_event = {
 		name = "How dare they!"
 	}
 }
+
+#STATES DECLARE NEUTRALITY
+country_event = {
+	id = dnc_qing.14
+	title = "Southern States Declare Neutrality!"
+	desc = dnc_qing.14.desc
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Unfortunate"
+		#<STATE-ID> = {
+			#add_dynamic_modifier = {
+				#modifier = QIN_neutral_state
+				#scope = QIN
+			#}
+		#}
+	}
+}
