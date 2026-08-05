@@ -45,3 +45,217 @@ QIN_boxer_setup = {
 		set_nationality = BOX
 	}
 }
+
+QIN_box_war_revolutionaries_setup_se = {
+	if = {
+		limit = {
+			check_variable = { QIN_box_war_chosen_revolution = 1 }
+			NOT = {
+				has_global_flag = QIN_mongol_revolution
+			}
+		}
+		all_states = {
+			limit = {
+				is_owned_by = QIN
+				is_core_of = MON
+			}
+			transfer_state_to = MON
+		}
+		MON = {
+			division_template = {
+				name = “Mongol Cavalry”
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+				}
+			}
+			declare_war_on = {
+				target = QIN
+				type = civil_war
+			}
+			add_civil_war_target = QIN
+		}
+		every_state = {
+			limit = {
+				is_owned_by = MON
+			}
+			random_select_amount = 5
+			create_unit = {
+				division = “name = \”Mongol Cavalry”\ division_template = \”Mongol Cavalry\” start_experience_factor = 0.5”
+				owner = MON
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { QIN_box_war_chosen_revolution = 3 }
+			NOT = {
+				has_global_flag = QIN_tibetan_revolution
+			}
+		}
+		all_states = {
+			limit = {
+				is_owned_by = QIN
+				is_core_of = TIB
+			}
+			transfer_state_to = TIB
+		}
+		TIB = {
+			division_template = {
+				name = “Tibetan Infantry”
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			declare_war_on = {
+				target = QIN
+				type = civil_war
+			}
+			add_civil_war_target = QIN
+		}
+		every_state = {
+			limit = {
+				is_owned_by = TIB
+			}
+			random_select_amount = 5
+			create_unit = {
+				division = “name = \”Tibetan Infantry”\ division_template = \”Tibetan Infantry\” start_experience_factor = 0.5”
+				owner = TIB
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { QIN_box_war_chosen_revolution = 3 }
+			NOT = {
+				has_global_flag = QIN_guangxi_revolution
+			}
+		}
+		all_states = {
+			limit = {
+				is_owned_by = QIN
+				is_core_of = GXC
+			}
+			transfer_state_to = GXC
+		}
+		GXC = {
+			division_template = {
+				name = “Guangxi Infantry”
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			declare_war_on = {
+				target = QIN
+				type = civil_war
+			}
+			add_civil_war_target = QIN
+		}
+		every_state = {
+			limit = {
+				is_owned_by = GXC
+			}
+			random_select_amount = 5
+			create_unit = {
+				division = “name = \”Guangxi Infantry”\ division_template = \”Guangxi Infantry\” start_experience_factor = 0.5”
+				owner = GXC
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { QIN_box_war_chosen_revolution = 4 }
+			NOT = {
+				has_global_flag = QIN_han_revolution
+			}
+		}
+		all_states = {
+			limit = {
+				is_owned_by = QIN
+				is_core_of = ZHL
+			}
+			transfer_state_to = ZHL
+		}
+		ZHL = {
+			division_template = {
+				name = “Han Infantry”
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			declare_war_on = {
+				target = QIN
+				type = civil_war
+			}
+			add_civil_war_target = QIN
+		}
+		every_state = {
+			limit = {
+				is_owned_by = ZHL
+			}
+			random_select_amount = 5
+			create_unit = {
+				division = “name = \”Han Infantry”\ division_template = \”Han Infantry\” start_experience_factor = 0.5”
+				owner = ZHL
+			}
+		}
+	}
+	else = {
+		limit = {
+			check_variable = { QIN_box_war_chosen_revolution < 5 }
+			AND = {
+				NOT = {
+					has_global_flag = QIN_manchu_revolution
+				}
+				has_global_flag = QIN_mongol_revolution
+				has_global_flag = QIN_tibetan_revolution
+				has_global_flag = QIN_guangxi_revolution
+				has_global_flag = QIN_han_revolution
+			}
+		}
+		all_states = {
+			limit = {
+				is_owned_by = QIN
+				is_core_of = MAR
+			}
+			transfer_state_to = MAR
+		}
+		MAR = {
+			division_template = {
+				name = “Manchu Infantry”
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			declare_war_on = {
+				target = QIN
+				type = civil_war
+			}
+			add_civil_war_target = QIN
+		}
+		every_state = {
+			limit = {
+				is_owned_by = MAR
+			}
+			random_select_amount = 5
+			create_unit = {
+				division = “name = \”Manchu Infantry”\ division_template = \”Manchu Infantry\” start_experience_factor = 0.5”
+				owner = MAR
+			}
+		}
+	}
+}
