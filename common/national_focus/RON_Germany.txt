@@ -8166,7 +8166,7 @@ focus_tree = {
 				}
 			}
 			create_wargoal = {
-				type = brothers_war
+				type = annex_everything
 				target = AUH
 			}
 		}
@@ -9301,7 +9301,7 @@ focus_tree = {
 				effect_tooltip = {
 					add_corps_commander_role = {
 						Character = GER_rudiger_von_der_goltz
-						traits={ media_personality ivander naval_liason }
+						traits={ media_personality invander naval_liason }
 						skill=2
 						attack_skill=1
 						defense_skill=1
@@ -9503,8 +9503,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_research_slot = 1
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = GER_albert_einstein
+			custom_effect_tooltip = available_scientist_tt
+			show_unit_leaders_tooltip = GER_albert_einstein
 			add_tech_bonus = {
 				name = GER_imperial_research_department
 				bonus = 1
@@ -9933,8 +9933,8 @@ focus_tree = {
 						state = 633
 					}
 				}
-				transfer_state_to = OST
-				add_core_of = OST
+				transfer_state_to = ROA
+				add_core_of = ROA
 			}
 			every_state = {
 				limit = {
@@ -9954,10 +9954,10 @@ focus_tree = {
 						state = 633
 					}
 				}
-				set_state_owner_to = OST
-				add_core_of = OST
+				set_state_owner_to = ROA
+				add_core_of = ROA
 			}
-			OST = {
+			ROA = {
 				every_state = {		
 					limit = {
 						OR = {
@@ -9987,7 +9987,7 @@ focus_tree = {
 							is_core_of = CAM
 						}
 					}
-					OST = {
+					ROA = {
 						add_state_claim = PREV
 					}
 				}
@@ -10012,41 +10012,36 @@ focus_tree = {
 				every_state = {
 					limit = {
 						is_fully_controlled_by = GER
-						is_claimed_by = OST
+						is_claimed_by = ROA
 					}
-					transfer_state_to = OST
+					transfer_state_to = ROA
 				}
 				every_state = {
 					limit = {
 						is_owned_by = GER
 						NOT = { is_fully_controlled_by = GER }
-						is_claimed_by = OST
+						is_claimed_by = ROA
 					}
-					set_state_owner_to = OST
+					set_state_owner_to = ROA
 				}
 			}
-			puppet = OST
+			puppet = ROA
 			every_unit_leader = {
 				limit = {
 					has_id = 19141
 				}
-				set_nationality = OST
+				set_nationality = ROA
 			}
 			custom_effect_tooltip = rhodesian_divisions
 			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					set_autonomy = {
-						target = OST
-						autonomous_state = autonomy_colony
-						freedom_level = 0.35
-					}
+				set_autonomy = {
+					target = ROA
+					autonomous_state = autonomy_colony
+					freedom_level = 0.35
 				}
 			}
 			hidden_effect = {
-				OST = {
+				ROA = {
 					set_capital = { state = 737 }
 					division_template = {
 						name = "Ostasien Marines"
@@ -10107,11 +10102,11 @@ focus_tree = {
 					745 = {
 						create_unit = {
 							division = "name = \"Ostasien Garrison\" division_template = \"Ostasien Marines\" start_experience_factor = 0.6"
-							owner = OST
+							owner = ROA
 						}
 						create_unit = {
 							division = "name = \"Tsingtao Police Force\" division_template = \"Police Force\" start_experience_factor = 0.1"
-							owner = OST
+							owner = ROA
 						}
 					}
 					set_politics = {
@@ -10128,47 +10123,47 @@ focus_tree = {
 				transfer_ship = {
 					prefer_name = "SMS Scharnhorst"
 					type = heavy_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Gneisenau"
 					type = heavy_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Dresden"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Emden"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Nürnberg"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Leipzig"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Niobe"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Amazone"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}
 				transfer_ship = {
 					prefer_name = "SMS Arcona"
 					type = light_cruiser
-					target = OST
+					target = ROA
 				}		
 			}
 		}
@@ -10192,7 +10187,7 @@ focus_tree = {
 			}
 			has_war = no
 			OR = {
-				OST = {
+				ROA = {
 					AND = {
 						owns_state = 745
 						is_subject_of = ROOT
@@ -10210,13 +10205,13 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					OST = {
+					ROA = {
 						exists = yes
 					}
 				}
 				hidden_effect = {
 					create_dynamic_country = {
-						original_tag = OST
+						original_tag = ROA
 						every_state = {
 							limit = {
 								OR = {
@@ -10272,7 +10267,7 @@ focus_tree = {
 					}
 				}
 				else = {
-					OST = {
+					ROA = {
 						transfer_state = 745
 						set_capital = { state = 745 }
 						hidden_effect = {
@@ -10328,31 +10323,31 @@ focus_tree = {
 					}
 				}
 			}
-			every_other_country = {
-				limit = {
-					NOT = {
-						tag = CHI
-					}
-					NOT = {
-						tag = QIN
-					}
-					NOT = {
-						tag = OST
-						has_cosmetic_tag = OST_LGC
-					}
-					OR = {
-						owns_state = 729
-						owns_state = 326
-						owns_state = 746
-						owns_state = 745
-						owns_state = 728
-					}
-				}
-				country_event = {
-					id = ww1_germany.48
-					days = 2
-				}
-			}
+			#every_other_country = {
+			#	limit = {
+			#		NOT = {
+			#			tag = CHI
+			#		}
+			#		NOT = {
+			#			tag = QIN
+			#		}
+			#		NOT = {
+			#			tag = ROA
+			#			has_cosmetic_tag = OST_LGC
+			#		}
+			#		OR = {
+			#			owns_state = 729
+			#			owns_state = 326
+			#			owns_state = 746
+			#			owns_state = 745
+			#			owns_state = 728
+			#		}
+			#	}
+			#	country_event = {
+			#		id = ww1_germany.48
+			#		days = 2
+			#	}
+			#}
 		}
 		ai_will_do = {
 			factor = 1
@@ -11003,7 +10998,7 @@ focus_tree = {
 				modifier = GER_colonial_protectorates_modifier
 			}
 			add_relation_modifier = {
-				target = OST
+				target = ROA
 				modifier = GER_colonial_protectorates_modifier
 			}
 		}
@@ -11651,11 +11646,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					OST = {
+					ROA = {
 						is_subject_of = ROOT
 					}
 				}
-				OST = {
+				ROA = {
 					add_state_claim = 753
 					add_state_claim = 669
 					add_state_claim = 634
@@ -11677,7 +11672,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						OST = {
+						ROA = {
 							is_subject_of = ROOT
 						}
 					}
@@ -11836,7 +11831,7 @@ focus_tree = {
 		y = 2
 		available = {
 			OR = {
-				OST = {
+				ROA = {
 					is_subject_of = ROOT
 				}
 				AND = {

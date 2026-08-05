@@ -397,11 +397,18 @@ characters={
 				date < 1920.1.1
 			}
 			available = {
+				or  = {
+					has_completed_focus = GER_WW1_military_advisers 
+					has_completed_focus = GER_WW1_central_powers_conference 
+				}
+				OR = {
+					has_government = neutrality
+					has_idea = GER_idea_wilhelm_ii
+				}
 				date < 1920.1.1
 			}
 			traits = {
 				smooth_talking_charmer
-				compassionate_gentleman
 			}
 			ai_will_do = {
 				factor = 1
@@ -1047,7 +1054,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ imperial_german_army }
+			traits={ }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -1233,7 +1240,10 @@ characters={
 			idea_token = GER_hans_von_seeckt
 			can_be_fired = no
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = GER
+					original_tag = CHI
+				}
 			}
 			traits = {
 				army_chief_drill_2
@@ -1253,13 +1263,16 @@ characters={
 						always = yes
 					}
 				}
+				custom_trigger_tooltip = {
+					tooltip = RON_character_not_dead_tt
+					date < 1936.12.27
+				}
 			}
 			visible = {
 				date > 1915.6.1
-				date < 1935.1.1
+				date < 1936.12.27
 				has_global_flag = GER_1918_revolution
 				has_completed_focus = GER_WW1_rejuvenate_officer_staff
-				original_tag = CHI
 			}
 		}
 		corps_commander={
@@ -1276,11 +1289,10 @@ characters={
 				}
 				OR = {
 					has_global_flag = GER_1918_revolution
-					has_completed_focus = GER_rejuvenate_officer_staff
-					original_tag = CHI
+					has_completed_focus = GER_WW1_rejuvenate_officer_staff
 				}
 				date > 1915.6.1
-				date < 1935.1.1
+				date < 1936.12.27
 			}
 		}
 	}
@@ -1300,8 +1312,14 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 			visible = {
-				date > 1910.1.1
-				date < 1932.1.1
+				OR = {
+					date > 1916.1.1
+					date < 1932.1.1
+					has_completed_focus = GER_WW1_rejuvenate_officer_staff
+				}
+				NOT = {
+					has_country_flag = great_war_loser
+				}
 			}
 		}
 	}
@@ -1326,10 +1344,38 @@ characters={
 		}
 	}
 	GER_helmuth_von_moltke={
-		name="Helmuth von Moltke"
+		name=GER_helmuth_von_moltke
 		portraits={
 			army={
 				large="gfx/leaders/GER/WW1/Portrait_Germany_Helmuth_von_Moltke.dds"
+				small="gfx/interface/ideas/ger/advisors/idea_GER_helmuth_von_moltke.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GER_helmuth_von_moltke
+			allowed = {
+				original_tag = GER
+			}
+			available  = {
+				OR = {
+					has_government = neutrality
+					has_idea = GER_idea_wilhelm_ii
+				}	
+				custom_trigger_tooltip = {
+					tooltip = RON_character_not_dead_tt
+					date < 1916.6.18
+				}
+			}
+			visible = {
+				date < 1916.6.18
+			}
+			cost = 150
+			traits  = {
+				army_chief_reform_2 
+			}
+			ai_will_do  = {
+				factor  = 2.000
 			}
 		}
 		field_marshal={
@@ -1340,7 +1386,7 @@ characters={
 			planning_skill=5
 			logistics_skill=5
 			visible = {
-				date < 1917.1.1
+				date < 1916.6.18
 			}
 		}
 	}
@@ -1575,7 +1621,7 @@ characters={
 					has_idea_with_trait = army_regrouping_1
 				}
 				custom_trigger_tooltip = {
-					tooltip = character_not_dead
+					tooltip = RON_character_not_dead_tt
 					date < 1919.10.25
 				}
 			}

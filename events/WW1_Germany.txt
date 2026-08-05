@@ -2394,123 +2394,123 @@ country_event = {
 	}
 }
 
-# CITY OF CONSENSSIONS
-#########################3
-country_event = {
-	id = ww1_germany.48
-	title = ww1_germany.48.t
-	desc = ww1_germany.48.d
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-	option = {
-		name = ww1_germany.48.a
-		set_country_flag = city_of_consenssion
-		add_ideas = GER_legation_profits
-		if = {
-			limit = {
-				owns_state = 729
-			}
-			LGC = {
-				transfer_state = 729
-				add_state_core = 729
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 326
-			}
-			LGC = {
-				transfer_state = 326
-				add_state_core = 326
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 746
-			}
-			LGC = {
-				transfer_state = 746
-				add_state_core = 746
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 745
-			}
-			LGC = {
-				transfer_state = 745
-				add_state_core = 745
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 728
-			}
-			LGC = {
-				transfer_state = 728
-				add_state_core = 728
-			}
-		}
-		LGC = {
-			give_military_access = ROOT
-		}
-		give_guarantee = LGC
-		ai_chance = {
-			base = 100
-			modifier = {
-				factor = 0
-				has_war_with = GER
-			}
-		}
-	}
-	option = {
-		name = ww1_germany.48.b
-		add_political_power = -75
-		if = {
-			limit = {
-				owns_state = 729
-			}
-			OST = {
-				add_state_core = 729
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 326
-			}
-			OST = {
-				add_state_core = 326
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 746
-			}
-			OST = {
-				add_state_core = 746
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 745
-			}
-			OST = {
-				add_state_core = 745
-			}
-		}
-		if = {
-			limit = {
-				owns_state = 728
-			}
-			OST = {
-				add_state_core = 728
-			}
-		}
-		ai_chance = {
-			base = 1
-		}
-	}
-}
+# # CITY OF CONSENSSIONS
+# #########################3
+# country_event = {
+# 	id = ww1_germany.48
+# 	title = ww1_germany.48.t
+# 	desc = ww1_germany.48.d
+# 	picture = GFX_report_event_generic_read_write
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = ww1_germany.48.a
+# 		set_country_flag = city_of_consenssion
+# 		add_ideas = GER_legation_profits
+# 		if = {
+# 			limit = {
+# 				owns_state = 729
+# 			}
+# 			LGC = {
+# 				transfer_state = 729
+# 				add_state_core = 729
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 326
+# 			}
+# 			LGC = {
+# 				transfer_state = 326
+# 				add_state_core = 326
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 746
+# 			}
+# 			LGC = {
+# 				transfer_state = 746
+# 				add_state_core = 746
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 745
+# 			}
+# 			LGC = {
+# 				transfer_state = 745
+# 				add_state_core = 745
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 728
+# 			}
+# 			LGC = {
+# 				transfer_state = 728
+# 				add_state_core = 728
+# 			}
+# 		}
+# 		LGC = {
+# 			give_military_access = ROOT
+# 		}
+# 		give_guarantee = LGC
+# 		ai_chance = {
+# 			base = 100
+# 			modifier = {
+# 				factor = 0
+# 				has_war_with = GER
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = ww1_germany.48.b
+# 		add_political_power = -75
+# 		if = {
+# 			limit = {
+# 				owns_state = 729
+# 			}
+# 			ROA = {
+# 				add_state_core = 729
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 326
+# 			}
+# 			ROA = {
+# 				add_state_core = 326
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 746
+# 			}
+# 			ROA = {
+# 				add_state_core = 746
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 745
+# 			}
+# 			ROA = {
+# 				add_state_core = 745
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				owns_state = 728
+# 			}
+# 			ROA = {
+# 				add_state_core = 728
+# 			}
+# 		}
+# 		ai_chance = {
+# 			base = 1
+# 		}
+# 	}
+# }
 
 # PUPPET OR DIE
 #########################
@@ -2523,23 +2523,11 @@ country_event = {
 	option = {
 		name = ww1_germany.49.a
 		GER = {
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = autonomy_tgwr_informal_protectorate
-				}
-				ROOT = { set_country_flag = protectorate }
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_tgwr_informal_protectorate
 			}
-			else = {
-				puppet = ROOT
-				ROOT = { add_ideas = protectorate }
-			}
+			ROOT = { set_country_flag = protectorate }
 		}
 		ai_chance = {
 			base = 5
