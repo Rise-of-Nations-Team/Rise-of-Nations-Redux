@@ -3635,7 +3635,7 @@ prestigious_projects = {
 					state = 274
 				}
 			}
-			MAF = { exists = no }
+			RKA = { exists = no }
 			NOT = { has_government = communism }
 			NOT = { has_country_flag = great_war_loser }
 		}
@@ -3687,17 +3687,17 @@ prestigious_projects = {
 		allowed = { tag = GER }
 		target_trigger = {
 			FROM = {
-				tag = MAF
+				tag = RKA
 			}
 		}
 		available = {
 			has_war = no
-			has_subject = MAF
+			has_subject = RKA
 			has_global_flag = frankfurt_treaty
 			OR = {
 				any_owned_state = {
 					NOT = {
-						is_owned_by = MAF
+						is_owned_by = RKA
 					}
 					OR = {
 						region = 140
@@ -3725,12 +3725,12 @@ prestigious_projects = {
 		}
 		visible = {
 			is_subject = no
-			has_subject = MAF
+			has_subject = RKA
 			NOT = { has_country_flag = great_war_loser }
 			OR = {
 				any_owned_state = {
 					NOT = {
-						is_owned_by = MAF
+						is_owned_by = RKA
 					}
 					OR = {
 						region = 140
@@ -3765,7 +3765,7 @@ prestigious_projects = {
 				OR = {
 					has_war = yes
 					is_subject = yes
-					NOT = { has_subject = MAF }
+					NOT = { has_subject = RKA }
 					has_government = communism
 				}
 			}	
@@ -3783,7 +3783,7 @@ prestigious_projects = {
 			every_owned_state = {
 				limit = {
 					NOT = {
-						is_owned_by = MAF
+						is_owned_by = RKA
 					}
 					OR = {
 						region = 140
@@ -3801,7 +3801,7 @@ prestigious_projects = {
 						state = 769
 					}
 				}
-				transfer_state_to = MAF
+				transfer_state_to = RKA
 				remove_claim_by = ROOT
 				if = {
 					limit = {
@@ -3823,7 +3823,7 @@ prestigious_projects = {
 							state = 1050
 						}
 					}
-					add_core_of = MAF
+					add_core_of = RKA
 				}
 			}
 			every_other_country = {
@@ -3845,7 +3845,7 @@ prestigious_projects = {
 							is_on_continent = africa
 							is_core_of = PREV
 						}
-						transfer_state_to = MAF
+						transfer_state_to = RKA
 						if = {
 							limit = {
 								OR = {
@@ -3865,12 +3865,12 @@ prestigious_projects = {
 									state = 541
 								}
 							}
-							add_core_of = MAF
+							add_core_of = RKA
 						}
 					}
-					every_unit_leader = { set_nationality = MAF }
+					every_unit_leader = { set_nationality = RKA }
 				}
-				MAF = { 
+				RKA = { 
 					annex_country = {
 						target = PREV
 						 transfer_troops = yes
@@ -3879,19 +3879,19 @@ prestigious_projects = {
 			}
 			if = {
 				limit = {
-					MAF = {
+					RKA = {
 						owns_state = 546
 						546 = {
 							is_capital = no
 						}
 					}
 				}
-				MAF = {
+				RKA = {
 					set_capital = { state = 546 }
 				}
 			}
 			hidden_effect = {
-				MAF = {
+				RKA = {
 					every_owned_state = {
 						limit = {
 							OR = {

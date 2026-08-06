@@ -9414,19 +9414,15 @@ focus_tree = {
 				NOT = {
 					has_idea = GER_idea_abwehr
 				}
-				RUS = {
-					AND = {
-						NOT = {
-							has_idea = RUS_threat_of_revolution
-						}
-						NOT = {
-							has_idea = RUS_threat_of_revolution2
-						}
-						NOT = {
-							has_idea = RUS_threat_of_revolution3
-						}
-					}
-				}
+				#RUS = {
+				#	AND = {
+				#		NOT = {
+				#			has_idea = RUS_threat_of_revolution
+				#			has_idea = RUS_threat_of_revolution2
+				#			has_idea = RUS_threat_of_revolution3
+				#		}
+				#	}
+				#}
 			}
 		}
 		completion_reward = {
@@ -10365,7 +10361,7 @@ focus_tree = {
 		y = 1
 		bypass = {
 			OR = {
-				country_exists = MAF
+				country_exists = RKA
 				AND = {
 					country_exists = CMR
 					country_exists = TOG
@@ -10494,7 +10490,7 @@ focus_tree = {
 		y = 1
 		bypass = {
 			OR = {
-				country_exists = MAF
+				country_exists = RKA
 				country_exists = TZN
 			}
 		}
@@ -10634,7 +10630,7 @@ focus_tree = {
 		y = 1
 		bypass = {
 			OR = {
-				country_exists = MAF
+				country_exists = RKA
 				country_exists = NMB
 			}
 		}
@@ -12213,7 +12209,7 @@ focus_tree = {
 			OR = {
 				has_war_with = QIN
 				has_war_with = CHI
-				has_war_with = ANC
+				has_war_with = ANH
 				has_war_with = SND
 			}
 		}
@@ -12222,7 +12218,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		will_lead_to_war_with = QIN
 		will_lead_to_war_with = CHI
-		will_lead_to_war_with = ANC
+		will_lead_to_war_with = ANH
 		will_lead_to_war_with = SND
 		completion_reward = {
 			add_named_threat = {
@@ -12408,15 +12404,6 @@ focus_tree = {
 				NOT = {
 					has_war_with = ROOT
 					has_idea = AUH_ww1_House_Habsburg_Lorraine
-					has_country_leader = {
-						character = HUN_franz_joseph_i
-					}
-					has_country_leader = {
-						character = HUN_franz_ferdinand_i
-					}
-					has_country_leader = {
-						character = HUN_karl_i
-					}
 				}
 			}
 		}
@@ -12559,10 +12546,11 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_game_rule = {
-							rule = rule_kaiserreich_flag
-							option = HISTORICAL_KAISERREICH_FLAG
-						}
+						#has_game_rule = {
+						#	rule = rule_kaiserreich_flag
+						#	option = HISTORICAL_KAISERREICH_FLAG
+						#}
+						always = yes
 					}
 					if = {
 						limit = {
@@ -15040,9 +15028,6 @@ focus_tree = {
 					generator = {
 						87
 						98
-						1204
-						1203
-						1267
 					}
 				}
 				add_ai_strategy = {
@@ -15089,7 +15074,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 50
+			base = 50
 			modifier = {
 				has_war = yes
 				factor = 10 # X10
