@@ -357,6 +357,15 @@ recruit_character = GER_erich_ludendorff #fascism
 	recruit_character = GER_joachim_von_preussen
 	recruit_character = GER_victoria_louise
 
+	if = {
+		limit = {
+			has_start_date < 1919.01.01
+		}
+		add_ideas = {
+			GER_strategiestreit
+		}
+	}
+
 }
 
 1914.1.1 = {

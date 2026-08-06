@@ -2319,6 +2319,438 @@ ideas = {
 				air_equipment = 0.1
 			}
 		}
+		GER_prussian_army_style = {
+			name = GER_prussian_army_style
+			picture = GER_fan_prussian_militarism
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		GER_prussian_army_style2 = {
+			name = GER_prussian_army_style
+			picture = GER_fan_prussian_militarism
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.1
+				army_org_factor = 0.05
+				org_loss_when_moving = -0.1
+				planning_speed = 0.1
+			}
+		}
+		GER_prussian_army_style3 = {
+			name = GER_prussian_army_style
+			picture = GER_fan_prussian_militarism
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.1
+				army_org_factor = 0.05
+				org_loss_when_moving = -0.1
+				planning_speed = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+		}
+		quantitative_war_planning = {
+			name = quantitative_war_planning
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				mobilization_speed = 0.15
+				mobilization_laws_cost_factor = -0.20
+			}
+		}
+		quantitative_war_planning2 = {
+			name = quantitative_war_planning
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				mobilization_speed = 0.15
+				mobilization_laws_cost_factor = -0.20
+				initiative_factor = 0.05
+				trait_engineer_xp_gain_factor = 0.1
+			}
+		}
+		quantitative_war_planning3 = {
+			name = quantitative_war_planning
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				mobilization_speed = 0.15
+				mobilization_laws_cost_factor = -0.20
+				initiative_factor = 0.05
+				trait_engineer_xp_gain_factor = 0.1
+			}
+		}
+		quantitative_war_planning4 = {
+			picture = GER_german_military
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				mobilization_speed = 0.15
+				mobilization_laws_cost_factor = -0.20
+				initiative_factor = 0.05
+				max_dig_in_factor = 0.20
+				army_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+				trait_engineer_xp_gain_factor = 0.1
+			}
+		}
+		GER_idea_schlieffen_plan = {
+			picture = CZE_planning_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_war_with = FRA
+			}
+			removal_cost = -1
+			modifier = {
+				#hidden_modifier = {
+				army_speed_factor = 0.10
+				#}
+			}
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = LUX
+				attack_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = HOL
+				attack_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.1
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = ENG
+						has_war_with = FRA
+						NOT = { controls_province = 11506 }
+					}
+					country_event = ww1_germany.132
+				}
+			}
+		}
+		GER_idea_schlieffen_plan2 = {
+			name = GER_idea_schlieffen_plan
+			picture = CZE_planning_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_war_with = FRA
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.15
+				org_loss_when_moving = 0.10
+			}
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.25
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = LUX
+				attack_bonus_against = 0.25
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.25
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = HOL
+				attack_bonus_against = 0.25
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = ENG
+						has_war_with = FRA
+						NOT = { controls_province = 11506 }
+					}
+					country_event = ww1_germany.132
+				}
+			}
+		}
+		GER_idea_schlieffen_moltke_plan = {
+			picture = CZE_planning_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_war_with = FRA
+			}
+			removal_cost = -1
+			modifier = {
+				#hidden_modifier = {
+				army_speed_factor = 0.20
+				org_loss_when_moving = 0.10
+				#}
+			}
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.5
+			}
+			targeted_modifier = {
+				tag = LUX
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.5
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.3
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = ENG
+						has_war_with = FRA
+						NOT = { controls_province = 11506 }
+					}
+					country_event = ww1_germany.132
+				}
+			}
+		}
+		GER_idea_schlieffen_moltke_plan_historical = {
+			name = GER_idea_schlieffen_moltke_plan
+			picture = CZE_planning_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_war_with = FRA
+			}
+			removal_cost = -1
+			modifier = {
+				#hidden_modifier = {
+				army_speed_factor = 0.20
+				org_loss_when_moving = 0.10
+				#}
+			}
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.5
+			}
+			targeted_modifier = {
+				tag = LUX
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.5
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.3
+				breakthrough_bonus_against = 0.3
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.2
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = ENG
+						has_war_with = FRA
+						NOT = { controls_province = 11506 }
+					}
+					country_event = ww1_germany.132
+				}
+			}
+		}
+		GER_idea_schlieffen_moltke_plan2 = {
+			name = GER_idea_schlieffen_moltke_plan
+			picture = CZE_planning_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				has_war_with = FRA
+			}
+			removal_cost = -1
+			modifier = {
+				#hidden_modifier = {
+				army_speed_factor = 0.25
+				org_loss_when_moving = 0.15
+				#}
+			}
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.35
+				breakthrough_bonus_against = 0.55
+			}
+			targeted_modifier = {
+				tag = LUX
+				attack_bonus_against = 0.35
+				breakthrough_bonus_against = 0.55
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.35
+				breakthrough_bonus_against = 0.35
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = ENG
+						has_war_with = FRA
+						NOT = { controls_province = 11506 }
+					}
+					country_event = ww1_germany.132
+				}
+			}
+		}
+		GER_strategiestreit = {
+			picture = GER_fan_prussian_militarism
+			allowed = {
+				always = no
+			}
+			cancel = {
+				has_war_with = FRA
+			}
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = GER_strategiestreit_tt
+			}
+			on_remove = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = GER_heeringens_plan
+						}
+						FRA = {
+							NOT = {
+								has_idea = neutrality_idea
+							}
+						}
+						BEL = {
+							NOT = {
+								is_in_faction_with = ROOT
+								has_war_with = FRA
+							}
+						}
+					}
+					country_event = ww1_germanrework.194
+				}
+			}
+		}
+		race_to_the_sea = {
+			# I know this idea is too forcing the battle outcomes
+			# but every game germany lost belgium immediately when they managed to get there
+			picture = FRA_fortification_focus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+			}
+			available = {
+				has_war_with = ENG
+				has_war_with = FRA
+				NOT = { controls_province = 11506 }
+			}
+		}
 	}
 	naval_manufacturer = {
 		designer = yes
