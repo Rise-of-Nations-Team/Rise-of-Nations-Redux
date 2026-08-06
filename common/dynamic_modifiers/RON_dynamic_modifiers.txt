@@ -13,3 +13,26 @@ QIN_population_defense = {
 	}
 	army_defence_factor = 0.25
 }
+
+QIN_neutral_state = {
+	icon = GFX_icon_unknown
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		QIN = {
+			NOT = {
+				has_war_with = BOX
+			}
+		}
+	}
+	on_add = {
+		set_demilitarized_zone = yes
+	}
+	on_remove = {
+		set_demilitarized_zone = no
+	}
+	local_factories = 0.0
+	local_manpower = 0.0
+	local_resources = 0.0
+}

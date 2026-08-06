@@ -1,0 +1,101 @@
+on_actions = {
+
+	on_startup = {
+
+		effect = {
+			if = {
+				limit = {
+					has_start_date < 1905.1.1
+				}
+				# Boxers take over Beijing
+				every_country = {
+					limit = {
+						OR = {
+							has_idea = DNC_eight_nation_alliance
+							original_tag = QIN
+						}
+					}
+					country_event = {
+						id = dnc_boxers.3
+						days = 156
+					}
+				}
+				# Summer rains event
+				every_country = {
+					limit = {
+						OR = {
+							has_idea = DNC_eight_nation_alliance
+							original_tag = QIN
+						}
+					}
+					country_event = {
+						id = dnc_boxers.4
+						days = 212
+						random_days = 30
+					}
+				}
+			}
+		}
+	}
+
+	on_state_control_changed = {
+
+		#Eight Nation Alliance loses scripted peace
+		effect = {
+			if = {
+				limit = {
+					tag = QIN
+					FROM = {
+						all_country = {
+							has_idea = DNC_eight_nation_alliance
+						}
+					}
+					FROM.FROM = {
+						AND = {
+							state = 1164
+							#state = Tientsin
+						}
+					}
+				}
+				FROM = {
+					white_peace = QIN
+					every_state = {
+						limit = {
+							is_core_of = QIN
+							NOT = {
+								is_owned_by = QIN
+							}
+						}
+						transfer_state_to = QIN
+						remove_claim_by = FROM
+						remove_core_of = FROM
+						set_global_flag = QIN_won_against_ENA_gf
+					}
+				}
+			}
+		}
+	}
+
+	on_weekly_QIN = {
+
+		# Boxer Civil War Revolutions check
+		effect = {
+			limit = {
+				if = {
+					tag = QIN
+					FROM = { tag = BOX }
+					QIN = {
+						limit = {
+							AND = {
+								has_war_with = FROM
+								surrender_progress > 0.15
+								{ value = 0 add = war_support add = stability divide = 2 less_than_or_equals = 50 }
+							}
+						}
+					}
+				}
+			}
+			# COUNTRY EVENT WITH RANDOMIZED REVOLUTIONARIES OPTIONS HERE
+		}
+	}
+}

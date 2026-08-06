@@ -699,41 +699,6 @@ on_actions = {
 			}
 		}
 
-		# Event trigger related
-		effect = {
-			limit = {
-				has_start_date < 1900.1.1
-			}
-			# Boxers take over Beijing
-			every_country = {
-				limit = {
-					OR = {
-						has_idea = DNC_eight_nation_alliance
-						original_tag = QIN
-					}
-				}
-				country_event = {
-					id = dnc_boxers.3
-					days = 156
-				}
-			}
-			# Summer rains event
-			every_country = {
-				limit = {
-					OR = {
-						has_idea = DNC_eight_nation_alliance
-						original_tag = QIN
-					}
-				}
-				country_event = {
-					id = dnc_boxers.4
-					days = 212
-					random_days = 30
-				}
-			}
-		}
-	}
-
 	on_monthly = {
 
 		# Construction AI
