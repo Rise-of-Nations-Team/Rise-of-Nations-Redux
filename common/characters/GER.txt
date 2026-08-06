@@ -884,6 +884,40 @@ characters={
 		}
 	}
 
+	GER_josias_von_heeringen={
+		name = GER_josias_von_heeringen
+		advisor={
+			slot = theorist
+			idea_token = GER_josias_von_heeringen
+			allowed = {
+				always = no #not selectable
+			}
+			available = {
+				is_GER_a_monarchy = yes
+			}
+			can_be_fired = no
+			visible = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+				date < 1926.8.9
+			}
+			ledger = army 
+			traits = {
+				deep_defence_expert 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="gfx/interface/ideas/ger/advisors/idea_GER_josias_von_heeringen.dds"
+			}
+		}
+	}
+
 	GER_peter_strasser={
 		name = "Peter Strasser"
 		portraits={
@@ -930,7 +964,7 @@ characters={
 	}
 
 	GER_erich_ludendorff={
-		name="Erich Ludendorff"
+		name=GER_erich_ludendorff
 		portraits={
 			army={
 				large="gfx/leaders/GER/WW1/Portrait_Germany_Erich_Ludendorff.dds"
