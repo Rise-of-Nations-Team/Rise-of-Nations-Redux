@@ -1217,11 +1217,31 @@ characters={
 	}
 
 	GER_erich_von_falkenhayn={
-		name="Erich von Falkenhayn"
+		name=GER_erich_von_falkenhayn
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_falkenhayn.dds"
+				small="gfx/interface/ideas/ger/advisors/idea_GER_erich_von_falkenhayn.dds"
 				large="gfx/leaders/GER/WW1/General-Erich_von_Falkenhayn.dds"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = GER_erich_von_falkenhayn
+			available = {
+				is_GER_a_monarchy = yes
+			}
+			visible = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			ledger = army 
+			traits = {
+				hurricane_bombardment_expert 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		corps_commander={
