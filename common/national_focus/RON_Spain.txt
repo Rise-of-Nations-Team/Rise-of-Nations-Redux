@@ -230,7 +230,12 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_intelligence_agency = yes
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				has_intelligence_agency = yes
+			}
 		}
 
 		cost = 5
@@ -247,6 +252,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
+					name = SPRDNC_servicio_de_inteligencia_militar
 					uses = 1
 					bonus = 1
 					category = decryption_tech
