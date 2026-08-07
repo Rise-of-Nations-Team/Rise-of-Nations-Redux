@@ -27,7 +27,11 @@ joint_focus = {
 
 	available = {
 		tag = SPR
-		num_subjects > 3
+		check_variable = {
+			value > 3
+			var = SPR.num_vrs
+			tooltip = SPRVR_imperio_espanol_tt
+		}
 		has_completed_focus = SPRDNC_reestablish_the_viceroyalties
 		has_government = neutrality
 	}
