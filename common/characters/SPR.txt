@@ -78,6 +78,7 @@ characters={
 		}
 		country_leader = {
 			ideology = catholic_monarchism
+			# Traits get applied by event
 		}
 	}
 
@@ -150,7 +151,33 @@ characters={
 			ideology = marxism
 			expire="1926.1.1.1"			
 		}
-	}	
+	}
+
+	SPR_camilo_polavieja = {
+		name = "Camilo García de Polavieja"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SPR/DNC/SPR_Camilo_Polavieja.dds"
+			}
+			army = {
+				large = "gfx/leaders/SPR/DNC/SPR_Camilo_Polavieja.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = 1914.1.15
+		}
+		corps_commander = {
+			traits = { old_guard career_officer politically_connected urban_assault_specialist jungle_rat }			
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			
+			expire = 1914.1.15
+		}
+	}
 
 	SPR_francisco_largo_caballero = { # 1933-1936
 		name = "Francisco Largo Caballero"
@@ -219,26 +246,6 @@ characters={
 					has_government = communism
 				}				
 			}			
-		}
-	}
-
-	SPR_camilo_polavieja = {
-		name = "Camilo García de Polavieja"
-		portraits = {
-			army = {
-				large = "gfx/leaders/SPR/DNC/SPR_Camilo_Polavieja.dds"
-			}
-		}
-		corps_commander = {
-			traits = { old_guard career_officer politically_connected urban_assault_specialist jungle_rat }			
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 2		
-			visible = {
-				date < 1914.1.1
-			}					
 		}
 	}
 
