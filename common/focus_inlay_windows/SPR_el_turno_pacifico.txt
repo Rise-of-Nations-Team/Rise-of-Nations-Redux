@@ -1,0 +1,39 @@
+spr_el_turno_pacifico_inlay_window = {
+
+	window_name = SPR_el_turno_pacifico_ui_window
+
+	visible = {
+		NOT = { has_completed_focus = SPRDNC_the_4th_carlist_war }
+		has_idea = SPR_rigged_elections_idea
+	}
+
+	scripted_images = {
+		spr_conservative_leader = {
+			GFX_portrait_francisco_silvela = {
+				has_country_flag = silvela_conservative_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 0
+				}
+			}
+			GFX_portrait_francisco_silvela_grayscale = yes
+		}
+		spr_liberal_leader = {
+			GFX_portrait_praxedes_mateo_sagasta = {
+				has_country_flag = sagasta_liberal_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 1
+				}
+			}
+			GFX_portrait_praxedes_mateo_sagasta_grayscale = yes
+		}
+	}
+
+	scripted_progressbars = {
+		turno_pacifico_progressbar_content = {
+			progress = turno_pacifico_integrity
+		}
+	}
+
+}
