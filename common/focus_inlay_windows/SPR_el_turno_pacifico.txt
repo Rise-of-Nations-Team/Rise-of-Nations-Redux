@@ -9,6 +9,20 @@ spr_el_turno_pacifico_inlay_window = {
 
 	scripted_images = {
 		spr_conservative_leader = {
+			GFX_portrait_antonio_maura = {
+				has_country_flag = maura_conservative_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 0
+				}
+			}
+			GFX_portrait_antonio_maura_grayscale = {
+				has_country_flag = maura_conservative_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 1
+				}
+			}
 			GFX_portrait_francisco_silvela = {
 				has_country_flag = silvela_conservative_leader
 				check_variable = {
@@ -19,6 +33,20 @@ spr_el_turno_pacifico_inlay_window = {
 			GFX_portrait_francisco_silvela_grayscale = yes
 		}
 		spr_liberal_leader = {
+			GFX_portrait_segismundo_moret = {
+				has_country_flag = moret_liberal_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 1
+				}
+			}
+			GFX_portrait_segismundo_moret_grayscale = {
+				has_country_flag = moret_liberal_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 0
+				}
+			}
 			GFX_portrait_praxedes_mateo_sagasta = {
 				has_country_flag = sagasta_liberal_leader
 				check_variable = {
