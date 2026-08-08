@@ -30,7 +30,20 @@ spr_el_turno_pacifico_inlay_window = {
 					value = 0
 				}
 			}
-			GFX_portrait_francisco_silvela_grayscale = yes
+			GFX_portrait_francisco_silvela_grayscale = {
+				has_country_flag = silvela_conservative_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 1
+				}
+			}
+			GFX_portrait_empty_seat = {
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 0
+				}
+			}
+			GFX_portrait_empty_seat_grayscale = yes
 		}
 		spr_liberal_leader = {
 			GFX_portrait_segismundo_moret = {
@@ -54,7 +67,20 @@ spr_el_turno_pacifico_inlay_window = {
 					value = 1
 				}
 			}
-			GFX_portrait_praxedes_mateo_sagasta_grayscale = yes
+			GFX_portrait_praxedes_mateo_sagasta_grayscale = {
+				has_country_flag = sagasta_liberal_leader
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 0
+				}
+			}
+			GFX_portrait_empty_seat = {
+				check_variable = {
+					var = SPR.dncleadingparty
+					value = 1
+				}
+			}
+			GFX_portrait_empty_seat_grayscale = yes
 		}
 	}
 
