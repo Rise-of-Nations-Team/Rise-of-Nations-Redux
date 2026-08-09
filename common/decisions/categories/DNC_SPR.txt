@@ -9,11 +9,24 @@ SPR_the_4th_carlist_war_cat = {
 	priority = 999
 }
 SPR_viceroyalties_cat = {
+	icon = GFX_decision_category_spr_carlism
 	allowed = {
 		original_tag = SPR
 	}
 	visible = {
 		has_completed_focus = SPRDNC_reestablish_the_viceroyalties
+	}
+	priority = 999
+}
+
+SPR_el_turno_pacifico_cat = {
+	icon = GFX_decision_category_usa_congress
+	allowed = {
+		tag = SPR
+	}
+
+	visible = {
+		always = yes
 	}
 	priority = 999
 }

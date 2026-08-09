@@ -2070,3 +2070,34 @@ SPR_viceroyalties_cat = {
 		}
 	}
 }
+
+SPR_el_turno_pacifico_cat = {
+	SPR_force_dismissal_of_government = {
+		allowed = {
+			tag = SPR
+		}
+		visible = {
+			has_government = neutrality
+		}
+		available = {
+			has_completed_focus = SPRDNC_el_rey_politico
+			check_variable = {
+				var = turno_pacifico_integrity
+				value > 90
+				tooltip = turno_pacifico_integrity_over_90
+			}
+		}
+
+		cost = 150
+
+		days_remove = 14
+
+		complete_effect = {
+			add_to_variable = {
+				var = turno_pacifico_integrity
+				value = -50
+				tooltip = spr_el_turno_pacifico_very_high_integrity_hit
+			}
+		}
+	}
+}

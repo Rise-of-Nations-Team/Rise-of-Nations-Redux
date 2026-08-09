@@ -4,7 +4,7 @@ guiTypes = {
 		name = "SPR_el_turno_pacifico_ui_window"
 		orientation = lower_left
 		position = { x = 0 y = 0 }
-		size = { width = 460 height = 500 }
+		size = { width = 460 height = 510 }
 		clipping = no
 
 		background = {
@@ -113,7 +113,7 @@ guiTypes = {
 		# Turno Pacifico status
 		instantTextBoxType = {
 			name = "SPR_turno_pacifico_status_title"
-			position = { x = 0 y = 350 }
+			position = { x = 0 y = 355 }
 			format = center
 			font = "hoi_24header"
 			text = "spr_turno_pacifico_status_title"
@@ -127,19 +127,19 @@ guiTypes = {
 			iconType = {
 				name = "turno_pacifico_progressbar_frame"
 				spriteType = "GFX_research_progressbar_frame"
-				position = { x = 38 y = 375 }
+				position = { x = 38 y = 385 }
 			}
 
 			iconType = {
 				name = "turno_pacifico_progressbar_content"
 				spriteType = "Gfx_research_progressbar"
-				position = { x = 41 y = 377}
+				position = { x = 41 y = 387}
 			}
 		}
 
 		containerWindowType = {
 			name = "spr_turno_pacifico_status_desc_container"
-			position = { x = 40 y = 390 }
+			position = { x = 40 y = 400 }
 			size = { width = 380 height = 80 }
 			clipping = no
 
@@ -149,21 +149,12 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "spr_turno_pacifico_status_desc_left"
+				name = "spr_turno_pacifico_status_desc"
 				position = { x = 10 y = 10 }
 				format = center
 				font = "hoi_16mbs"
-				text = spr_turno_pacifico_status_desc_1
-				maxWidth = 175
-				maxHeight = 60
-			}
-			instantTextBoxType = {
-				name = "spr_turno_pacifico_status_desc_right"
-				position = { x = 196 y = 10 }
-				format = center
-				font = "hoi_16mbs"
-				text = spr_turno_pacifico_status_desc_2
-				maxWidth = 175
+				text = spr_turno_pacifico_status_desc
+				maxWidth = 360
 				maxHeight = 60
 			}
 		}
