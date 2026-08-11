@@ -40,6 +40,25 @@ on_actions = {
 
 	on_state_control_changed = {
 
+		#Qing loses scripted peace
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						any_country = {
+							has_idea = DNC_eight_nation_ alliance
+						}
+					}
+					608 = {
+						is_controlled_by = FROM
+					}
+					QIN = {
+						white_peace = FROM
+						set_global_flag = QIN_lost_against_ENA_gf
+					}
+				}
+			}
+		}
 		#Eight Nation Alliance loses scripted peace
 		effect = {
 			if = {
@@ -103,7 +122,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					check_variable = { QIN_box_war_chosen_revolution < 5 }
+					check_variable = { QIN_box_war_chosen_revolution < 6 }
 				}
 				random_country = {
 					limit = {
