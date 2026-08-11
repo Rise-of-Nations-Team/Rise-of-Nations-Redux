@@ -95,7 +95,7 @@ country_event = {
 		QIN_box_war_revolutionaries_setup_se = yes
 	}
 	option = {
-		setup.1.d
+		setup.1.f
 		trigger = {
 			check_variable = { QIN_box_war_chosen_revolution = 4 }
 		}
@@ -117,5 +117,13 @@ country_event = {
 		}
 		set_global_flag = QIN_manchu_revolution
 		QIN_box_war_revolutionaries_setup_se = yes
+	}
+	option = {
+		setup.1.g
+		trigger = {
+			check_variable = { QIN_box_war_chosen_revolution = 5 }
+			set_global_flag = QIN_tuvan_revolution
+			QIN_box_war_revolutionaries_setup_se = yes
+		}
 	}
 }
