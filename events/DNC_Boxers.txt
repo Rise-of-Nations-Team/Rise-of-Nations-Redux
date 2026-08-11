@@ -74,12 +74,14 @@ country_event = {
 	trigger = {
 		tag = QIN
 		date > 1900.6.20
+		NOT = {
+			has_completed_focus = DNC_QIN_antiwestern_policy
+		}
 	}
 
 	immediate = {
 		hidden_effect = {
 			608 = {
-				transfer_state_to = BOX
 				add_dynamic_modifier = { modifier = QIN_boxer_rebellion }
 			}
 			QIN_boxer_setup = yes
@@ -88,16 +90,8 @@ country_event = {
 	}
 
 	option = {
-		name = dnc_boxers.3.a
+		name = “Something needs to be done about this.”
 		add_stability = -0.15
-	}
-
-	option = {
-		name = dnc_boxers.3.b
-		add_stability = -0.15
-		BOX = {
-			change_tag_from = ROOT
-		}
 	}
 }
 
