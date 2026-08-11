@@ -362,3 +362,136 @@ country_event = {
 		}
 	}
 }
+
+#[leader-name] FLEES THE CAPITAL
+country_event = {
+	id = dnc_qing.15
+	title = “[QIN.GetLeader]
+	desc = dnc_qing.15.d
+	is_triggered_only = yes
+
+	option = {
+		name = “The war is over.”
+		every_country = {
+			limit = {
+				has_idea = DNC_eight_nation_alliance
+			}
+			QIN = {
+				white_peace = PREV
+			}
+		}
+	}
+}
+
+#REVOLUTIONARIES FORM BREAKAWAY
+country_event = {
+	id = dnc_qing.16
+	title = {
+		text = “Mongolian Revolutionaries Form Breakaway State!”
+		trigger = {
+			QIN_box_war_chosen_revolution = 1
+		}
+	}
+	title = {
+		text = “Tibetan Revolutionaries Form Breakaway State!”
+		trigger = {
+			QIN_box_war_chosen_revolution = 2
+		}
+	}
+	title = {
+		text = “Guangxi Revolutionaries Form Breakaway State!”
+		trigger = {
+			QIN_box_war_chosen_revolution = 3
+		}
+	}
+	title = {
+		text = “Han Revolutionaries Form Breakaway State!”
+		trigger = {
+			QIN_box_war_chosen_revolution = 4
+		}
+	}
+	title = {
+		text = “Tuvan Revolutionaries Form Breakaway State!”
+		trigger = {
+			QIN_box_war_chosen_revolution = 5
+		}
+	}
+	title = {
+		text = “Manchu Revolutionaries Form Breakaway State!”
+		trigger = {
+			has_global_flag = QIN_mongol_revolution
+			has_global_flag = QIN_tibetan_revolution
+			has_global_flag = QIN_guangxi_revolution
+			has_global_flag = QIN_han_revolution
+			has_global_flag = QIN_tuvan_revolution
+		}
+	}
+	desc = dnc_qing.16.d
+	is_triggered_only = yes
+	option = {
+		name = “Crush the traitors!”
+		trigger = {
+			original_tag = QIN
+		}
+	}
+	option = {
+		name = “Forwards for our Chinese friends!”
+		trigger = {
+			has_idea = DNC_eight_nation_alliance
+		}
+		if = {
+			limit = {
+				QIN_box_war_chosen_revolution = 1
+			}
+			declare_war_on = {
+				tag = MON
+				type = topple_government
+			}
+		}
+		else_if = {
+			limit = {
+				QIN_box_war_chosen_revolution = @
+			}
+			declare_war_on = {
+				tag = TIB
+				type = topple_government
+			}
+		}
+		else_if = {
+			limit = {
+				QIN_box_war_chosen_revolution = 3
+			}
+			declare_war_on = {
+				tag = GXC
+				type = topple_government
+			}
+		}
+		else_if = {
+			limit = {
+				QIN_box_war_chosen_revolution = 4
+			}
+			declare_war_on = {
+				tag = ZHL
+				type = topple_government
+			}
+		}
+		else_if = {
+			limit = {
+				QIN_box_war_chosen_revolution = 5
+			}
+			declare_war_on = {
+				tag = TAN
+				type = topple_government
+			}
+		}
+		else = {
+			declare_war_on = {
+				tag = MAR
+				type = topple_government
+			}
+		}
+	}
+	option = {
+		name = “Let the Qing figure out their own issues.”
+	}
+}
