@@ -125,10 +125,6 @@ QIN_box_war_revolutionaries_setup_se = {
 			}
 			transfer_state_to = MON
 		}
-		329 = {
-			add_core_of = MON
-			transfer_state_to = MON
-		}
 		MON = {
 			set_capital = {
 				state = 330
@@ -348,6 +344,60 @@ QIN_box_war_revolutionaries_setup_se = {
 			create_unit = {
 				division = “name = \”Han Infantry”\ division_template = \”Han Infantry\” start_experience_factor = 0.5”
 				owner = ZHL
+			}
+		}
+		QIN = {
+			country_event = QIN.16
+		}
+
+		every_country = {
+			limit = {
+				has_idea = DNC_eight_nation_alliance
+			}
+			country_event = QIN.16
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { QIN_box_war_chosen_revolution = 5 }
+			NOT = {
+				has_global_flag = QIN_tuvn_revolution
+			}
+		}
+		all_states = {
+			limit = {
+				is_owned_by = QIN
+				is_core_of = TAN
+			}
+			transfer_state_to = TAN
+		}
+		TAN = {
+			set_capital = {
+				state = 326
+			}
+			division_template = {
+				name = “Tuvan Infantry”
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			declare_war_on = {
+				target = QIN
+				type = civil_war
+			}
+			add_civil_war_target = QIN
+		}
+		every_state = {
+			limit = {
+				is_owned_by = TAN
+			}
+			random_select_amount = 2
+			create_unit = {
+				division = “name = \”Tuvan Infantry”\ division_template = \”Tuvan Infantry\” start_experience_factor = 0.5”
+				owner = TAN
 			}
 		}
 		QIN = {
