@@ -73,9 +73,9 @@ QIN_han_setup = {
 		set_war_support = 0.75
 		set_stability = 0.30
 		#load_oob = " "
-		#set_capital = {
-			#state = 
-		#}
+		set_capital = {
+			state = 604
+		}
 	}
 }
 
@@ -105,10 +105,9 @@ QIN_manchu_setup = {
 		}
 		set_war_support = 0.75
 		set_stability = 0.30
-		#load_oob = " "
-		#set_capital = {
-			#state = 
-		#}
+		set_capital = {
+			state = 716
+		}
 	}
 }
 QIN_box_war_revolutionaries_setup_se = {
@@ -126,7 +125,14 @@ QIN_box_war_revolutionaries_setup_se = {
 			}
 			transfer_state_to = MON
 		}
+		329 = {
+			add_core_of = MON
+			transfer_state_to = MON
+		}
 		MON = {
+			set_capital = {
+				state = 330
+			}
 			division_template = {
 				name = “Mongol Cavalry”
 				regiments = {
@@ -168,6 +174,9 @@ QIN_box_war_revolutionaries_setup_se = {
 			transfer_state_to = TIB
 		}
 		TIB = {
+			set_capital = {
+				state = 757
+			}
 			division_template = {
 				name = “Tibetan Infantry”
 				regiments = {
@@ -209,6 +218,9 @@ QIN_box_war_revolutionaries_setup_se = {
 			transfer_state_to = GXC
 		}
 		GXC = {
+			set_capital = {
+				state = 594
+			}
 			division_template = {
 				name = “Guangxi Infantry”
 				regiments = {
@@ -294,9 +306,10 @@ QIN_box_war_revolutionaries_setup_se = {
 		all_states = {
 			limit = {
 				is_owned_by = QIN
-				is_core_of = MAR
+				is_core_of = MAN
 			}
 			transfer_state_to = MAR
+			add_core_of = MAR
 		}
 		MAR = {
 			division_template = {
