@@ -157,7 +157,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = RON_Submarine_Blueprint
+			leads_to_tech = torpedotech1
 			research_cost_coeff = 1
 		}
 
@@ -543,35 +543,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		categories = {
-			electronics
-		}
-	}
-
-	RON_Submarine_Blueprint = {
-
-		on_research_complete = {
-			custom_effect_tooltip = ron_submarines_tt
-		}
-
-		desc = "RON_SUBMARINES_SPECIAL"
-
-		research_cost = 1
-		start_year = 1902
-		folder = {
-			name = electronics_folder
-			position = { x = 6 y = @1902 }
-		}
-
-		path = {
-			leads_to_tech = torpedotech1
-			research_cost_coeff = 1
-		}
-
-		ai_will_do = {
-			factor = 10
 		}
 
 		categories = {
