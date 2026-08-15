@@ -1,0 +1,1719 @@
+focus_tree = {
+	id = RON_Sweden_Norway
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KNS
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2900 }
+
+
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	##########DAWN OF A NEW CENTURY FOCUS##########################################################################################
+	#################1900-1909#####################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+
+	
+	focus = {
+		id = KNS_economic_focus
+		icon = GFX_focus_RAJ_special_economic_zones
+		x = 40
+		y = 0
+		cost = 2
+		available = {
+			country_exists = KNS
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}		
+	}
+
+
+	focus = {
+		id = KNS_kiruna_narvik_railroad
+		icon = GFX_focus_generic_railroad
+		relative_position_id = KNS_economic_focus
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = { focus = KNS_economic_focus }
+		
+		completion_reward = { 
+			666 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+	
+			144 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+ 		}
+	}
+
+	focus = {
+		id = KNS_expand_civilian_work
+		icon = GFX_focus_generic_industry_2
+		relative_position_id = KNS_kiruna_narvik_railroad		
+		x = -1
+		y = 1
+		cost = 7
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = { focus = KNS_kiruna_narvik_railroad  }
+        completion_reward = {		
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+
+
+	focus = {
+		id = KNS_steel_foc
+		icon = GFX_goal_focus_steel
+		relative_position_id = KNS_kiruna_narvik_railroad		
+		x = 1
+		y = 1
+		cost = 7
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = { focus = KNS_kiruna_narvik_railroad  }
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+				type = steel
+				amount = 12
+			}
+		}
+		random_owned_controlled_state = {
+				add_resource = {
+				type = steel
+				amount = 12
+					}
+				}
+		}
+		
+	}
+
+
+	focus = {
+		id = KNS_vapenfabriker
+		icon = GFX_focus_generic_military_industry
+		relative_position_id = KNS_expand_civilian_work
+		x = -1
+		y = 1
+		cost = 7
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = { focus = KNS_expand_civilian_work  }
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+	focus = {
+		id = KNS_var_krig
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = KNS_vapenfabriker
+		x = 1
+		y = 1
+		cost = 7
+		available = {
+			country_exists = KNS
+			OR = {
+				threat > 0.20
+				has_war = yes
+			}	
+		}
+		prerequisite = { focus = KNS_vapenfabriker }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = partial_economic_mobilisation }
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			if = {
+				limit = { has_idea = partial_economic_mobilisation }
+				add_ideas = war_economy
+			}
+		}
+	}
+
+
+	focus = {
+		id = KNS_utveckla_treindustrin
+		icon = GFX_focus_generic_industry_1
+		relative_position_id = KNS_steel_foc
+		x = 1
+		y = 1
+		cost = 7
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = { focus = KNS_steel_foc  }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = KNS_tree_Industrial
+		}
+	}
+
+
+	
+	focus = {
+		id = KNS_the_plan
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		relative_position_id = KNS_utveckla_treindustrin
+		x = -1
+		y = 1
+		cost = 7
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = { focus = KNS_utveckla_treindustrin  }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+			}
+			country_event = DNC_Sweden_Norway.2 
+		}
+	}
+
+	
+	focus = {
+		id = KNS_two_armies_one_king
+		icon = GFX_focus_generic_army_attack
+		x = 31
+		y = 0
+		cost = 1
+		completion_reward = {
+			army_experience = 10
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_two_armies
+			custom_effect_tooltip = KNS_two_armies_one_king_tt				
+		}
+	}
+	focus = {
+		id = KNS_patrioism
+		icon = GFX_goal_sweden_norway_patriotism
+		relative_position_id = KNS_the_fortress_at_boden
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_the_fortress_at_boden
+			focus = KNS_the_works_at_kongsvinger
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# generation of soldiers
+	focus = {
+		id = KNS_soldiers
+		icon = GFX_goal_officers
+		relative_position_id = KNS_two_armies_one_king
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_two_armies_one_king
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	focus = {
+		id = KNS_the_works_at_kongsvinger
+		icon = GFX_goal_generic_defence
+		relative_position_id = KNS_soldiers		
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_soldiers }
+		completion_reward = {
+			# -8 riksdag, +10 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -8 }
+			set_variable = { KNS_arg_storting = 10 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_kongsvinger
+			custom_effect_tooltip = KNS_the_works_at_kongsvinger_tt
+		}
+	}	
+	# Prepare for the next clonflict
+	focus = {
+		id = KNS_next_conflict
+		icon = GFX_focus_SWE_hedgehog_defense
+		relative_position_id = KNS_two_armies_one_king
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_two_armies_one_king
+		
+		}
+		completion_reward = {
+			army_experience = 10
+			# +8 riksdag, -10 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 8 }
+			set_variable = { KNS_arg_storting = -10 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_boden
+			custom_effect_tooltip = KNS_the_fortress_at_boden_tt		
+		}
+	}
+	focus = {
+		id = KNS_the_fortress_at_boden
+		icon = GFX_goal_generic_defence
+		relative_position_id = KNS_next_conflict
+		x = 0
+		y = 1
+		cost = 15
+		prerequisite = { focus = KNS_next_conflict }
+
+		completion_reward = {
+			# +8 riksdag, -10 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 8 }
+			set_variable = { KNS_arg_storting = -10 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_boden
+			custom_effect_tooltip = KNS_the_fortress_at_boden_tt
+		}
+	}
+
+	# Open up the Stockholm military academy
+	focus = {
+		id = KNS_Stockholm_military_academy
+		icon = GFX_goal_military_academy
+		relative_position_id = KNS_patrioism
+		x = 1
+		y = 1
+		cost = 0
+		prerequisite = {
+			focus = KNS_patrioism		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# Open up new munitions factories
+	focus = {
+		id = KNS_munitions_factories
+		icon = GFX_goal_munitions_factories
+		relative_position_id = KNS_patrioism
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_patrioism
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# Promote promising commanders
+	focus = {
+		id = KNS_promising_commanders
+		icon = GFX_focus_generic_soldier_salute
+		relative_position_id = KNS_munitions_factories
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_munitions_factories
+			focus = KNS_Stockholm_military_academy
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	#Improve the Swedish Mauser gun
+	focus = {
+		id = KNS_Improve_Mauser_gun
+		icon = GFX_goal_generic_small_arms_2
+		relative_position_id = KNS_Stockholm_military_academy
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_munitions_factories
+			focus = KNS_Stockholm_military_academy
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# Open up army workshops
+	focus = {
+		id = KNS_army_workshops
+		icon = GFX_goal_national_arsenal
+		relative_position_id = KNS_munitions_factories
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_munitions_factories
+			focus = KNS_Stockholm_military_academy
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# Build the Kalix Line
+	focus = {
+		id = KNS_Kalix_Line
+		icon = GFX_goal_nested_fortifications
+		relative_position_id = KNS_army_workshops
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_promising_commanders
+			focus = KNS_army_workshops
+			focus = KNS_Improve_Mauser_gun
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# Improve naval defenses
+	focus = {
+		id = KNS_naval_defenses
+		icon = GFX_focus_generic_coastal_fort
+		relative_position_id = KNS_Improve_Mauser_gun
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_promising_commanders
+			focus = KNS_army_workshops
+			focus = KNS_Improve_Mauser_gun
+		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+	# A modern army
+	focus = {
+		id = KNS_modern_army
+		icon = GFX_goal_r56_goal_generic_march_infantry
+		relative_position_id = KNS_naval_defenses
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_Kalix_Line
+			focus = KNS_naval_defenses		
+		}
+		completion_reward = {
+		army_experience = 10
+		
+		}
+	}
+
+    focus = {
+		id = KNS_school
+		icon = GFX_goal_expand_national_schoolsystem
+		relative_position_id = KNS_expand_civilian_work
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = {
+			focus = KNS_steel_foc
+		}
+		prerequisite = {
+			focus = KNS_expand_civilian_work
+		}
+		completion_reward = {
+		    add_research_slot = 1			
+		}
+	}
+	focus = {
+		id = KNS_bostrom_cabinet
+		icon = GFX_goal_the_bostrom_cabinet
+		x = 15
+		y = 0
+		cost = 5
+		available = {
+			has_country_leader = {
+				character = SWE_erik_gustaf_bostrom
+				ruling_only = yes
+			}
+			country_exists = KNS
+
+		
+		}
+		completion_reward = {
+			remove_ideas = PHI_ideological_rebels 
+			add_ideas = public_iliteracy
+		}
+	}
+	focus = {
+		id = KNS_two_crowns_one_chancery
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = KNS_bostrom_cabinet
+		prerequisite = { focus = KNS_bostrom_cabinet }		
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_two_crowns
+			custom_effect_tooltip = KNS_two_crowns_one_chancery_tt
+		}
+	}
+
+	focus = {
+		id = KNS_the_committee_of_both_kingdoms
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = KNS_two_crowns_one_chancery		
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_two_crowns_one_chancery }
+
+		completion_reward = {
+			# +5 riksdag, +5 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 5 }
+			set_variable = { KNS_arg_storting = 5 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_committee
+			custom_effect_tooltip = KNS_the_committee_of_both_kingdoms_tt
+		}
+	}	
+	focus = {
+		id = KNS_fortress_question
+		icon = GFX_goal_boden_fortress_question
+		relative_position_id = KNS_the_consular_bill_of_may
+		x = -6
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = {
+			focus = KNS_the_consular_bill_of_may
+		}
+		completion_reward = {
+			138 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+			 		instant_build = yes
+				}
+			}		
+		}		
+	}
+	focus = {
+		id = KNS_the_communique_of_march
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = KNS_the_committee_of_both_kingdoms
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_the_committee_of_both_kingdoms }
+		mutually_exclusive = { focus = KNS_conditions_of_dependency }
+
+		completion_reward = {
+			# riksdag capped at 70
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -20 }
+			set_variable = { KNS_arg_storting = 25 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_riksdag_capped
+			set_country_flag = KNS_done_communique
+			custom_effect_tooltip = KNS_the_communique_of_march_tt
+		}
+	}
+
+	focus = {
+		id = KNS_conditions_of_dependency
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = KNS_the_committee_of_both_kingdoms
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_the_committee_of_both_kingdoms }
+		mutually_exclusive = { focus = KNS_the_communique_of_march }
+
+		completion_reward = {
+			# +25 riksdag, -30 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 25 }
+			set_variable = { KNS_arg_storting = -30 }
+			KNS_move_the_chambers = yes
+			add_stability = 0.10
+			set_country_flag = KNS_done_conditions
+			custom_effect_tooltip = KNS_conditions_of_dependency_tt
+		}
+	}
+
+	focus = {
+		id = KNS_a_chancery_of_two_desks
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = KNS_the_communique_of_march
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_the_communique_of_march }
+
+		completion_reward = {
+			# +4 riksdag, +8 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 4 }
+			set_variable = { KNS_arg_storting = 8 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_two_desks
+			custom_effect_tooltip = KNS_a_chancery_of_two_desks_tt
+		}
+	}
+
+	focus = {
+		id = KNS_the_principles_of_kristiania
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = KNS_conditions_of_dependency
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_conditions_of_dependency }
+
+		completion_reward = {
+			# +6 riksdag, -12 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 6 }
+			set_variable = { KNS_arg_storting = -12 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_kristiania
+			custom_effect_tooltip = KNS_the_principles_of_kristiania_tt
+		}
+	}
+
+	#Focus for The Consular Bill of May
+	focus = {
+		id = KNS_the_consular_bill_of_may
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = KNS_the_principles_of_kristiania
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = KNS_a_chancery_of_two_desks
+			focus = KNS_the_principles_of_kristiania
+		}
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_consular_bill
+			custom_effect_tooltip = KNS_the_consular_bill_of_may_tt
+		}
+	}
+
+	#THE NORWEGIAN CLAIM BRANCH
+	#Focus for The Storting's Demand
+	focus = {
+		id = KNS_the_stortings_demand
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = KNS_the_consular_bill_of_may	
+		prerequisite = {
+			focus = KNS_the_consular_bill_of_may
+		}			
+		x = 6
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			add_ideas = KNS_idea_a_claim_fifteen_years_old
+			set_country_flag = KNS_done_stortings_demand
+			custom_effect_tooltip = KNS_the_stortings_demand_tt
+		}
+	}
+
+	focus = {
+		id = KNS_the_pure_flag_precedent
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = KNS_the_stortings_demand
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_the_stortings_demand }
+
+		completion_reward = {
+			# -4 riksdag, +6 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -4 }
+			set_variable = { KNS_arg_storting = 6 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_pure_flag
+			custom_effect_tooltip = KNS_the_pure_flag_precedent_tt
+		}
+	}
+
+	focus = {
+		id = KNS_a_consular_service_of_our_own
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = KNS_the_pure_flag_precedent
+		x = -4
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_the_pure_flag_precedent }
+
+		completion_reward = {
+			# -6 riksdag, +8 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -6 }
+			set_variable = { KNS_arg_storting = 8 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_consular_claim
+			custom_effect_tooltip = KNS_a_consular_service_of_our_own_tt
+		}
+	}
+
+	focus = {
+		id = KNS_the_michelsen_ministry
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = KNS_the_pure_flag_precedent
+		x = 4
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_the_pure_flag_precedent }
+
+		completion_reward = {
+			# -8 riksdag, +10 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -8 }
+			set_variable = { KNS_arg_storting = 10 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_michelsen
+			custom_effect_tooltip = KNS_the_michelsen_ministry_tt
+		}
+	}
+
+	focus = {
+		id = KNS_two_flags_no_mark
+		icon = GFX_focus_SWE_united_kingdoms_of_norway_and_sweden
+		relative_position_id = KNS_a_consular_service_of_our_own
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_a_consular_service_of_our_own }
+
+		completion_reward = {
+			# -5 riksdag, +8 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -5 }
+			set_variable = { KNS_arg_storting = 8 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_two_flags
+			custom_effect_tooltip = KNS_two_flags_no_mark_tt
+		}
+	}
+
+	focus = {
+		id = KNS_a_foreign_minister_of_our_own
+		icon = GFX_focus_AUS_lawmaking_leniency
+		relative_position_id = KNS_two_flags_no_mark
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_two_flags_no_mark }
+
+		completion_reward = {
+			# -15 riksdag, +15 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -15 }
+			set_variable = { KNS_arg_storting = 15 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_own_foreign_minister
+			custom_effect_tooltip = KNS_a_foreign_minister_of_our_own_tt
+		}
+	}
+
+	focus = {
+		id = KNS_the_language_of_the_law
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = KNS_a_foreign_minister_of_our_own
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_a_foreign_minister_of_our_own }
+
+		completion_reward = {
+			# +6 storting only
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 0 }
+			set_variable = { KNS_arg_storting = 6 }
+			KNS_move_the_chambers = yes
+			add_stability = 0.10
+			set_country_flag = KNS_done_language
+			custom_effect_tooltip = KNS_the_language_of_the_law_tt
+		}
+	}
+
+	focus = {
+		id = KNS_double_proportionality
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = KNS_a_foreign_minister_of_our_own
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_a_foreign_minister_of_our_own }
+
+		completion_reward = {
+			# +8 riksdag, +4 storting
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = 8 }
+			set_variable = { KNS_arg_storting = 4 }
+			KNS_move_the_chambers = yes
+			set_country_flag = KNS_done_proportionality
+			custom_effect_tooltip = KNS_double_proportionality_tt
+		}
+	}
+
+	#Focus for The Seventh of June
+	focus = {
+		id = KNS_the_seventh_of_june
+		icon = GFX_goal_generic_territory_or_war
+		relative_position_id = KNS_the_michelsen_ministry
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_the_michelsen_ministry }
+
+		available = {
+			# armed by the gap
+			has_country_flag = KNS_the_seventh_of_june_is_armed
+		}
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_seventh_of_june
+			custom_effect_tooltip = KNS_the_seventh_of_june_tt
+		}
+	}
+
+	#Focus for The Plebiscite of August
+	focus = {
+		id = KNS_the_plebiscite_of_august
+		icon = GFX_focus_generic_treaty
+		relative_position_id = KNS_the_seventh_of_june
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_the_seventh_of_june }
+		mutually_exclusive = { focus = KNS_march_on_kristiania }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_plebiscite
+			custom_effect_tooltip = KNS_the_plebiscite_of_august_tt
+		}
+	}
+
+	#Focus for March on Kristiania
+	focus = {
+		id = KNS_march_on_kristiania
+		icon = GFX_goal_generic_major_war
+		relative_position_id = KNS_the_seventh_of_june
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_the_seventh_of_june }
+		mutually_exclusive = { focus = KNS_the_plebiscite_of_august }
+		will_lead_to_war_with = NOR
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_march
+			custom_effect_tooltip = KNS_march_on_kristiania_tt
+		}
+	}
+
+	#Focus for The Union Restored by Arms
+	focus = {
+		id = KNS_the_union_restored_by_arms
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = KNS_march_on_kristiania
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_march_on_kristiania }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_union_survives
+			add_ideas = KNS_idea_the_union_restored_by_arms
+			set_country_flag = KNS_done_union_by_arms
+			custom_effect_tooltip = KNS_the_union_restored_by_arms_tt
+		}
+	}
+
+	#Focus for A Bernadotte for Norway
+	focus = {
+		id = KNS_a_bernadotte_for_norway
+		icon = GFX_focus_generic_befriend_norway
+		relative_position_id = KNS_the_plebiscite_of_august
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_the_plebiscite_of_august }
+		mutually_exclusive = { focus = KNS_a_king_of_their_own_choosing }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_bernadotte
+			custom_effect_tooltip = KNS_a_bernadotte_for_norway_tt
+		}
+	}
+
+	#Focus for A King of Their Own Choosing
+	focus = {
+		id = KNS_a_king_of_their_own_choosing
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = KNS_the_plebiscite_of_august
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = KNS_the_plebiscite_of_august }
+		mutually_exclusive = { focus = KNS_a_bernadotte_for_norway }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			add_stability = 0.10
+			set_country_flag = KNS_done_own_king
+			custom_effect_tooltip = KNS_a_king_of_their_own_choosing_tt
+		}
+	}
+
+	focus = {
+		id = KNS_settle_the_dynasty_question
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = KNS_a_bernadotte_for_norway
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_a_bernadotte_for_norway }
+
+		completion_reward = {
+			# -75 PP
+			KNS_open_the_two_chambers = yes
+			add_political_power = -75
+			set_country_flag = KNS_done_dynasty_settled
+			custom_effect_tooltip = KNS_settle_the_dynasty_question_tt
+		}
+	}
+
+	#Focus for The Integrity Treaty
+	focus = {
+		id = KNS_the_integrity_treaty
+		relative_position_id = KNS_a_king_of_their_own_choosing
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_a_king_of_their_own_choosing }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			add_ideas = KNS_idea_the_integrity_treaty
+			set_country_flag = KNS_done_integrity_treaty
+			custom_effect_tooltip = KNS_the_integrity_treaty_tt
+		}
+	}	
+
+	focus = {
+		id = KNS_norrland_railway
+		icon = GFX_goal_r56_goal_generic_railroad
+		relative_position_id = KNS_the_consular_bill_of_may
+		x = -4
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = {
+			focus = KNS_the_consular_bill_of_may
+		}
+		completion_reward = {
+			38 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+			 		instant_build = yes
+				}
+			}
+			958 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			925 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = KNS_raise_wage
+		icon = GFX_NEE_raise_minimum_wage
+		relative_position_id = KNS_the_consular_bill_of_may
+		x = -8
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+		}
+		prerequisite = {
+			focus = KNS_the_consular_bill_of_may
+		}
+		completion_reward = {
+			add_ideas = RI_liberal_economy
+		}
+	}
+	focus = {
+		id = KNS_otter_cabinet
+		icon = GFX_goal_generic_parliament
+		relative_position_id = KNS_fortress_question
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 
+		}
+		prerequisite = {
+			focus = KNS_fortress_question
+		}
+		prerequisite = {
+			focus = KNS_norrland_railway
+		}
+		prerequisite = {
+			focus = KNS_raise_wage
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = KNS_kiruna_mine
+		icon = GFX_focus_generic_mineral_prospecting
+		relative_position_id = KNS_otter_cabinet
+		x = 3
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 			
+		}
+		prerequisite = {
+			focus = KNS_otter_cabinet
+		}
+		completion_reward = {
+			add_resource = {
+    type = oil
+    amount = 30
+    state = 110
+}			
+		}
+	}
+	focus = {
+		id = KNS_industrial_workers
+		icon = GFX_focus_generic_worker_administration
+		relative_position_id = KNS_otter_cabinet
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 		
+		}
+		prerequisite = {
+			focus = KNS_otter_cabinet
+		}
+		completion_reward = {
+			add_ideas = welfare_state_ARG
+		}
+	}
+	focus = {
+		id = KNS_department_agriculture
+		icon = GFX_focus_generic_agriculture
+		relative_position_id = KNS_otter_cabinet
+		x = -3
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 			
+		}
+		prerequisite = {
+			focus = KNS_otter_cabinet
+		}
+		completion_reward = {
+			add_ideas = RI_agriculture
+		}
+	}
+	focus = {
+		id = KNS_farm_fields
+		icon = GFX_focus_generic_agriculture2
+		relative_position_id = KNS_department_agriculture
+		x = -1
+		y = 1
+		cost = 10
+		available = {
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 		
+			country_exists = KNS
+		}
+		prerequisite = {
+			focus = KNS_department_agriculture
+		}
+		completion_reward = {
+			add_ideas = wheat_crops
+	 	}
+	}
+	focus = {
+		id = KNS_build_farms
+		icon = GFX_focus_generic_farmland
+		relative_position_id = KNS_department_agriculture
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 			
+		}
+		prerequisite = {
+			focus = KNS_department_agriculture
+		}
+		completion_reward = {
+			138 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+	  	}
+	}
+	
+	focus = {
+		id = KNS_new_resourcs
+		icon = GFX_focus_GER_factories_for_resources
+		relative_position_id = KNS_kiruna_mine
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 		
+		}
+		prerequisite = {
+			focus = KNS_kiruna_mine
+		}
+		completion_reward = {
+			add_resource = {
+   	 			type = steel
+    			amount = 20
+    			state = 110
+			}			
+		}
+	}
+	focus = {
+		id = KNS_better_mining_equipment
+		icon = GFX_focus_generic_mining_industry
+		relative_position_id = KNS_kiruna_mine
+		x = -1
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			}  			
+		}
+		prerequisite = {
+			focus = KNS_kiruna_mine
+		}
+		completion_reward = {
+			add_resource = {
+   			 	type = steel
+    			amount = 20
+    			state = 110
+			}			
+		}
+	}
+	focus = {
+		id = KNS_compensation_for_accidents
+		icon = GFX_goal_workplace_compensation
+		relative_position_id = KNS_industrial_workers
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 	
+		}
+		prerequisite = {
+			focus = KNS_industrial_workers
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = assembly_bonus
+				bonus = 1
+				uses = 1
+				technology = construction1	
+				technology = construction2
+			}	
+		}
+	}
+	focus = {
+		id = KNS_otters_civil_rights 
+		icon = GFX_focus_generic_support_the_left_right
+		relative_position_id = KNS_compensation_for_accidents
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 		
+		}
+		prerequisite = {
+			focus = KNS_compensation_for_accidents
+			focus = KNS_better_mining_equipment
+			focus = KNS_build_farms
+		}
+		completion_reward = {
+			add_ideas = dem_rights
+		}
+	}
+	
+	focus = {
+		id = KNS_resignation_of_otter
+		icon = GFX_focus_BEL_government_resigns
+		relative_position_id = KNS_otters_civil_rights
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_otters_civil_rights
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = KNS_second_bostrom_cabinet
+		icon = GFX_goal_the_bostrom_cabinet_2
+		relative_position_id = KNS_resignation_of_otter
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_resignation_of_otter
+		}
+		completion_reward = {
+			add_political_power = 50
+			
+		}
+	}
+	focus = {
+		id = KNS_Improve_literacy
+		icon = GFX_focus_generic_education
+		relative_position_id = KNS_second_bostrom_cabinet
+		x = 6
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_second_bostrom_cabinet
+		}
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 			
+		}	
+		completion_reward = {
+			swap_ideas = {
+				add_ideas = public_iliteracy
+				remove_ideas = public_iliteracy_2
+			}
+		}
+	}
+	focus = {
+		id = KNS_union_commitee
+		icon = GFX_focus_generic_commission
+		relative_position_id = KNS_second_bostrom_cabinet
+		x = -6
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_second_bostrom_cabinet
+		}
+		available = {
+			country_exists = NOR
+		}
+		completion_reward = {
+			add_country_leader_trait = union_organizer
+		}
+	}
+	focus = {
+		id = KNS_sanction_the_consular_bill
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = KNS_union_commitee	
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_union_commitee }
+		mutually_exclusive = { focus = KNS_a_riksakt_for_the_century }
+		mutually_exclusive = { focus = KNS_let_the_union_lapse }
+
+		completion_reward = {
+			# spends the veto outright
+			KNS_open_the_two_chambers = yes
+			set_variable = { KNS_arg_riksdag = -35 }
+			set_variable = { KNS_arg_storting = 40 }
+			KNS_move_the_chambers = yes
+			set_variable = { KNS_suspensive_veto = 3 }
+			set_country_flag = KNS_veto_spent
+			set_country_flag = KNS_done_sanctioned
+			custom_effect_tooltip = KNS_sanction_the_consular_bill_tt
+		}
+	}	
+	focus = {
+		id = KNS_the_crown_and_nothing_else
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = KNS_sanction_the_consular_bill		
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_sanction_the_consular_bill }
+
+		completion_reward = {
+			# personal union only
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_union_survives
+			add_stability = 0.05
+			set_country_flag = KNS_done_crown_only
+			custom_effect_tooltip = KNS_the_crown_and_nothing_else_tt
+		}
+	}	
+
+	focus = {
+		id = KNS_a_riksakt_for_the_century
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = KNS_union_commitee			
+		x = 0
+		y = 1
+		cost = 15
+		prerequisite = { focus = KNS_union_commitee }
+		mutually_exclusive = { focus = KNS_sanction_the_consular_bill }
+		mutually_exclusive = { focus = KNS_let_the_union_lapse }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_union_survives
+			add_ideas = KNS_idea_one_realm_in_two_chambers
+			set_country_flag = KNS_done_riksakt
+			custom_effect_tooltip = KNS_a_riksakt_for_the_century_tt
+		}
+	}
+	focus = {
+		id = KNS_a_parliament_of_the_union
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = KNS_a_riksakt_for_the_century		
+		x = 0
+		y = 1
+		cost = 15
+		prerequisite = { focus = KNS_a_riksakt_for_the_century }
+
+		completion_reward = {
+			# +120 PP, +0.15 stability
+			KNS_open_the_two_chambers = yes
+			add_stability = 0.15
+			add_political_power = 120
+			set_country_flag = KNS_done_union_parliament
+			custom_effect_tooltip = KNS_a_parliament_of_the_union_tt
+		}
+	}	
+	focus = {
+		id = KNS_let_the_union_lapse
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = KNS_union_commitee				
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_union_commitee }
+		mutually_exclusive = { focus = KNS_sanction_the_consular_bill }
+		mutually_exclusive = { focus = KNS_a_riksakt_for_the_century }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_union_lapse
+			custom_effect_tooltip = KNS_let_the_union_lapse_tt
+		}
+	}
+	focus = {
+		id = KNS_the_karlstad_table
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = KNS_let_the_union_lapse		
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = KNS_let_the_union_lapse }
+
+		completion_reward = {
+			KNS_open_the_two_chambers = yes
+			set_country_flag = KNS_done_karlstad
+			custom_effect_tooltip = KNS_the_karlstad_table_tt
+		}
+	}	
+	focus = {
+		id = KNS_union_crisis
+		icon = GFX_focus_NOR_the_stumbling_storting
+		relative_position_id = KNS_resignation_bostrom
+		x = 0
+		y = 1
+		cost = 0
+		available = {
+		country_exists = KNS
+		}
+		prerequisite = {
+			focus = KNS_resignation_bostrom
+		}
+		completion_reward = {
+			country_event = DNC_Sweden_Norway.11
+		}
+	}
+	focus = {
+		id = KNS_voting_rights
+		icon = GFX_goal_new_treaty
+		relative_position_id = KNS_second_bostrom_cabinet
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_second_bostrom_cabinet
+		}
+		completion_reward = {
+			add_political_power = -50
+			custom_effect_tooltip = "We will bring a vote to the floor"
+			hidden_effect = {
+			country_event = rondncnews.55
+			complete_national_focus = KNS_motion_fails
+			complete_national_focus = KNS_present_chambers
+			complete_national_focus = KNS_resignation_bostrom
+			}
+		}
+	}
+	focus = {
+		id = KNS_teacher_wages
+		icon = GFX_focus_SWE_education_reform
+		relative_position_id = KNS_Improve_literacy
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_Improve_literacy
+		}
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 		
+		}	
+		completion_reward = {
+			swap_ideas = {
+				add_ideas = CHL_welfare_state_2
+				remove_ideas = welfare_state_ARG
+			}
+		}
+	}
+	focus = {
+		id = KNS_build_schools_rural
+		icon = GFX_goal_TEX_rural_schools
+		relative_position_id = KNS_Improve_literacy
+		x = -2
+		y = 1
+		cost = 10
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 			
+		}		
+		prerequisite = {
+			focus = KNS_Improve_literacy
+		}
+		completion_reward = {
+			add_ideas = RI_indoctrinated_schools
+		}
+	}
+	focus = {
+		id = KNS_Introduce_education
+		icon = GFX_goal_r56_goal_generic_education
+		relative_position_id = KNS_build_schools_rural
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_teacher_wages
+		}
+		prerequisite = {
+			focus = KNS_build_schools_rural
+		}
+		available = {
+			country_exists = KNS
+			has_country_leader ={
+				character = SWE_fredrik_von_otter
+				ruling_only = yes
+			} 		
+		}	
+		completion_reward = {
+			remove_ideas = public_iliteracy
+		}
+	}
+	focus = {
+		id = KNS_draft_proposal
+		icon = GFX_focus_generic_vote
+		relative_position_id = KNS_voting_rights
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_voting_rights
+		}
+		completion_reward = {
+			custom_effect_tooltip = "The Draft has been made it surley will pass right?"
+		}
+	}
+	focus = {
+		id = KNS_present_chambers
+		icon = GFX_EUYL_free_elections
+		relative_position_id = KNS_draft_proposal
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_draft_proposal
+		}
+		completion_reward = {
+			custom_effect_tooltip = "We will present the draft to parliament"
+		}
+		
+	}
+	focus = {
+		id = KNS_motion_fails
+		icon = GFX_focus_generic_dissolve_parliament1
+		relative_position_id = KNS_present_chambers
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = KNS_present_chambers
+		}
+		mutually_exclusive = {
+			focus = KNS_motion_passes
+		}		
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = -50
+			custom_effect_tooltip = "Oh fiddlesticks what now"
+		}
+	}
+	focus = {
+		id = KNS_resignation_bostrom
+		icon = GFX_focus_generic_dissolve_parliament2
+		relative_position_id = KNS_motion_fails
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = KNS_motion_fails
+		}
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = KNS_motion_passes
+		icon = GFX_goal_constitutional_guarantees
+		relative_position_id = KNS_present_chambers
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = KNS_present_chambers
+		}
+		mutually_exclusive = {
+			focus = KNS_motion_fails
+		}		
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}	
+	focus = {
+		id = KNS_continue_as_normal
+		icon = GFX_goal_generic_parliament
+		relative_position_id = KNS_motion_passes
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = KNS_motion_passes
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}	
+}
