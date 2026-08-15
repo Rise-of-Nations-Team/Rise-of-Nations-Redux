@@ -1,3 +1,4 @@
+#!gfx:interface/RON_goals.gfx
 focus_tree = {
 	id = RON_Sweden_Norway
 	country = {
@@ -29,9 +30,6 @@ focus_tree = {
 		x = 40
 		y = 0
 		cost = 2
-		available = {
-			country_exists = KNS
-		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -50,9 +48,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = { focus = KNS_economic_focus }
 		
 		completion_reward = { 
@@ -81,9 +76,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 7
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = { focus = KNS_kiruna_narvik_railroad  }
         completion_reward = {		
 			random_owned_controlled_state = {
@@ -114,9 +106,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 7
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = { focus = KNS_kiruna_narvik_railroad  }
 	
 		completion_reward = {
@@ -144,9 +133,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 7
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = { focus = KNS_expand_civilian_work  }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -176,7 +162,6 @@ focus_tree = {
 		y = 1
 		cost = 7
 		available = {
-			country_exists = KNS
 			OR = {
 				threat > 0.20
 				has_war = yes
@@ -207,9 +192,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 7
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = { focus = KNS_steel_foc  }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -233,9 +215,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 7
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = { focus = KNS_utveckla_treindustrin  }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -274,7 +253,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KNS_patrioism
-		icon = GFX_goal_sweden_norway_patriotism
+		icon = GFX_goal_KNS_patriotism
 		relative_position_id = KNS_the_fortress_at_boden
 		x = 2
 		y = 1
@@ -516,9 +495,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 6
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = {
 			focus = KNS_steel_foc
 		}
@@ -531,7 +507,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KNS_bostrom_cabinet
-		icon = GFX_goal_the_bostrom_cabinet
+		icon = GFX_goal_KNS_the_bostrom_cabinet
 		x = 15
 		y = 0
 		cost = 5
@@ -539,11 +515,7 @@ focus_tree = {
 			has_country_leader = {
 				character = SWE_erik_gustaf_bostrom
 				ruling_only = yes
-			}
-			country_exists = KNS
-
-		
-		}
+			}		}
 		completion_reward = {
 			remove_ideas = PHI_ideological_rebels 
 			add_ideas = public_iliteracy
@@ -586,14 +558,11 @@ focus_tree = {
 	}	
 	focus = {
 		id = KNS_fortress_question
-		icon = GFX_goal_boden_fortress_question
+		icon = GFX_goal_KNS_boden_fortress_question
 		relative_position_id = KNS_the_consular_bill_of_may
 		x = -6
 		y = 1
 		cost = 10
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = {
 			focus = KNS_the_consular_bill_of_may
 		}
@@ -1031,9 +1000,6 @@ focus_tree = {
 		x = -4
 		y = 1
 		cost = 10
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = {
 			focus = KNS_the_consular_bill_of_may
 		}
@@ -1068,9 +1034,6 @@ focus_tree = {
 		x = -8
 		y = 1
 		cost = 10
-		available = {
-			country_exists = KNS
-		}
 		prerequisite = {
 			focus = KNS_the_consular_bill_of_may
 		}
@@ -1080,13 +1043,12 @@ focus_tree = {
 	}
 	focus = {
 		id = KNS_otter_cabinet
-		icon = GFX_goal_the_otter_cabinet
+		icon = GFX_goal_KNS_the_otter_cabinet
 		relative_position_id = KNS_fortress_question
 		x = 0
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1114,7 +1076,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1139,7 +1100,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1160,7 +1120,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1185,7 +1144,6 @@ focus_tree = {
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
 			} 		
-			country_exists = KNS
 		}
 		prerequisite = {
 			focus = KNS_department_agriculture
@@ -1231,7 +1189,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1256,7 +1213,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1281,7 +1237,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1308,7 +1263,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1343,7 +1297,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KNS_second_bostrom_cabinet
-		icon = GFX_goal_the_bostrom_cabinet_2
+		icon = GFX_goal_KNS_the_bostrom_cabinet_2
 		relative_position_id = KNS_resignation_of_otter
 		x = 0
 		y = 1
@@ -1367,7 +1321,6 @@ focus_tree = {
 			focus = KNS_second_bostrom_cabinet
 		}
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1557,7 +1510,6 @@ focus_tree = {
 			focus = KNS_Improve_literacy
 		}
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1578,7 +1530,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
@@ -1605,7 +1556,6 @@ focus_tree = {
 			focus = KNS_build_schools_rural
 		}
 		available = {
-			country_exists = KNS
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
 				ruling_only = yes
