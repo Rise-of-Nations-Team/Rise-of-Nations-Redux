@@ -1,0 +1,495 @@
+add_namespace = can_dnc_c
+
+# lot c - two nations, one crown
+
+country_event = {
+	id = can_dnc_c.1
+	title = can_dnc_c.1.t
+	desc = can_dnc_c.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.1.a
+		ai_chance = { base = 40 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		add_to_variable = { CANC_english_grievance = 1 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_the_deputation_was_heard
+	}
+
+	option = {
+		name = can_dnc_c.1.b
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_to_variable = { CANC_french_grievance = 1 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.1.c
+		ai_chance = { base = 20 }
+		subtract_from_variable = { CANC_french_grievance = 1 }
+		add_to_variable = { CANC_english_grievance = 1 }
+		custom_effect_tooltip = CANC_ledger_tt
+		467 = {
+			set_state_flag = CANC_the_ordinance_is_printed_twice
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_c.2
+	title = can_dnc_c.2.t
+	desc = can_dnc_c.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.2.a
+		ai_chance = { base = 35 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		subtract_from_variable = { CANC_french_grievance = 2 }
+		add_to_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_a_promise_to_the_bishops
+	}
+
+	option = {
+		name = can_dnc_c.2.b
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_to_variable = { CANC_french_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.2.c
+		ai_chance = { base = 20 }
+		add_autonomy_ratio = {
+			value = -0.03
+			localization = can_dnc_c.2.c
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = RI_friendly_foreign_policy
+			}
+		}
+		add_to_variable = { CANC_english_grievance = 1 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_c.3
+	title = can_dnc_c.3.t
+	desc = can_dnc_c.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.3.a
+		ai_chance = { base = 40 }
+		add_stability = 0.03
+		set_country_flag = CANC_sifton_was_warned
+	}
+
+	option = {
+		name = can_dnc_c.3.b
+		ai_chance = { base = 30 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_to_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.3.c
+		ai_chance = { base = 30 }
+		add_to_variable = { CANC_french_grievance = 2 }
+		subtract_from_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_fitzpatrick_held_the_pen
+	}
+}
+
+country_event = {
+	id = can_dnc_c.4
+	title = can_dnc_c.4.t
+	desc = can_dnc_c.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.4.a
+		ai_chance = { base = 35 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+		subtract_from_variable = { CANC_french_grievance = 3 }
+		add_to_variable = { CANC_english_grievance = 3 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_the_delegate_was_obeyed
+	}
+
+	option = {
+		name = can_dnc_c.4.b
+		ai_chance = { base = 40 }
+		add_autonomy_ratio = {
+			value = 0.03
+			localization = can_dnc_c.4.b
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_to_variable = { CANC_french_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.4.c
+		ai_chance = { base = 25 }
+		466 = {
+			set_state_flag = CANC_the_appeal_went_past_rome
+		}
+		add_to_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_c.5
+	title = can_dnc_c.5.t
+	desc = can_dnc_c.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.5.a
+		ai_chance = { base = 40 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.04
+		}
+		set_country_flag = CANC_the_member_for_saint_jacques
+	}
+
+	option = {
+		name = can_dnc_c.5.b
+		ai_chance = { base = 35 }
+		add_political_power = -50
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		add_to_variable = { CANC_french_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.5.c
+		ai_chance = { base = 25 }
+		random_list = {
+			45 = {
+				add_stability = 0.05
+				subtract_from_variable = { CANC_french_grievance = 3 }
+				custom_effect_tooltip = CANC_ledger_tt
+				set_country_flag = CANC_bourassa_took_the_seals
+			}
+			55 = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_to_variable = { CANC_english_grievance = 2 }
+				custom_effect_tooltip = CANC_ledger_tt
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_c.6
+	title = can_dnc_c.6.t
+	desc = can_dnc_c.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.6.a
+		ai_chance = { base = 35 }
+		add_autonomy_ratio = {
+			value = -0.03
+			localization = can_dnc_c.6.a
+		}
+		subtract_from_variable = { CANC_english_grievance = 2 }
+		add_to_variable = { CANC_french_grievance = 3 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.6.b
+		ai_chance = { base = 40 }
+		subtract_from_variable = { CANC_french_grievance = 2 }
+		add_to_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_champlain_walked_first
+	}
+
+	option = {
+		name = can_dnc_c.6.c
+		ai_chance = { base = 25 }
+		add_stability = 0.03
+		466 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_c.7
+	title = can_dnc_c.7.t
+	desc = can_dnc_c.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.7.a
+		ai_chance = { base = 40 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		add_to_variable = { CANC_french_grievance = 4 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_fallon_speaks_for_the_church
+	}
+
+	option = {
+		name = can_dnc_c.7.b
+		ai_chance = { base = 35 }
+		ENG = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = RI_hostile_foreign_policy
+			}
+		}
+		add_to_variable = { CANC_english_grievance = 3 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.7.c
+		ai_chance = { base = 25 }
+		add_stability = -0.05
+		add_to_variable = { CANC_french_grievance = 2 }
+		add_to_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_the_letter_was_printed
+	}
+}
+
+news_event = {
+	id = can_dnc_c.8
+	title = can_dnc_c.8.t
+	desc = can_dnc_c.8.d
+
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_c.8.a
+		trigger = { tag = CAN }
+		ai_chance = { base = 100 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		add_to_variable = { CANC_french_grievance = 2 }
+		add_to_variable = { CANC_english_grievance = 2 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_the_vote_of_29_march
+	}
+
+	option = {
+		name = can_dnc_c.8.b
+		trigger = {
+			NOT = { tag = CAN }
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.9
+	title = can_dnc_c.9.t
+	desc = can_dnc_c.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_c.9.a
+		ai_chance = { base = 35 }
+		add_war_support = 0.05
+		add_stability = -0.05
+		add_to_variable = { CANC_french_grievance = 6 }
+		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CANC_the_militia_cleared_the_square
+	}
+
+	option = {
+		name = can_dnc_c.9.b
+		ai_chance = { base = 40 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.04
+		}
+		add_to_variable = { CANC_english_grievance = 4 }
+		custom_effect_tooltip = CANC_ledger_tt
+	}
+
+	option = {
+		name = can_dnc_c.9.c
+		ai_chance = { base = 25 }
+		random_list = {
+			40 = {
+				add_stability = 0.05
+				subtract_from_variable = { CANC_french_grievance = 3 }
+				custom_effect_tooltip = CANC_ledger_tt
+				set_country_flag = CANC_the_square_listened
+			}
+			60 = {
+				add_stability = -0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.06
+				}
+				add_to_variable = { CANC_french_grievance = 2 }
+				custom_effect_tooltip = CANC_ledger_tt
+			}
+		}
+	}
+}
+
+news_event = {
+	id = can_dnc_c.10
+	title = can_dnc_c.10.t
+	desc = can_dnc_c.10.d
+
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { tag = CAN }
+				QUE = {
+					set_capital = { state = 466 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_c.10.a
+		trigger = { tag = CAN }
+		ai_chance = { base = 60 }
+		834 = {
+			remove_core_of = QUE
+		}
+		transfer_state = 834
+		QUE = {
+			add_state_claim = 834
+		}
+		add_stability = 0.03
+		set_country_flag = CANC_the_border_at_the_ottawa
+	}
+
+	option = {
+		name = can_dnc_c.10.b
+		trigger = { tag = CAN }
+		ai_chance = { base = 40 }
+		if = {
+			limit = {
+				OR = {
+					has_dlc = "Together for Victory"
+					has_dlc = "Man the Guns"
+				}
+			}
+			set_autonomy = {
+				target = QUE
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.6
+			}
+		}
+		else = {
+			puppet = QUE
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		set_country_flag = CANC_the_crown_was_offered_back
+	}
+
+	option = {
+		name = can_dnc_c.10.c
+		trigger = {
+			NOT = { tag = CAN }
+		}
+		ai_chance = { base = 100 }
+	}
+}

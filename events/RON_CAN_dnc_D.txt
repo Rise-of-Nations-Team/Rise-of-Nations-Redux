@@ -1,0 +1,438 @@
+add_namespace = can_dnc_d
+
+# the barr party at saint john
+country_event = {
+	id = can_dnc_d.1
+	title = can_dnc_d.1.t
+	desc = can_dnc_d.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.1.a
+		ai_chance = { base = 60 }
+		add_stability = 0.03
+		add_political_power = 25
+		add_manpower = 10000
+		470 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	option = {
+		name = can_dnc_d.1.b
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_stability = -0.03
+		add_manpower = 5000
+	}
+}
+
+# the doukhobor pilgrimage
+country_event = {
+	id = can_dnc_d.2
+	title = can_dnc_d.2.t
+	desc = can_dnc_d.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.2.a
+		ai_chance = { base = 50 }
+		add_manpower = 15000
+		add_stability = -0.05
+		set_country_flag = CANDNC_doukhobors_kept
+		469 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	option = {
+		name = can_dnc_d.2.b
+		ai_chance = { base = 50 }
+		add_political_power = 75
+		add_stability = 0.05
+		add_manpower = -10000
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		set_country_flag = CANDNC_doukhobors_broken
+	}
+}
+
+# the riot on powell street
+country_event = {
+	id = can_dnc_d.3
+	title = can_dnc_d.3.t
+	desc = can_dnc_d.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.3.a
+		ai_chance = { base = 45 }
+		add_war_support = 0.05
+		add_stability = -0.03
+		army_experience = 10
+		set_country_flag = CANDNC_militia_on_hastings
+		country_event = { id = can_dnc_d.4 days = 20 }
+	}
+
+	option = {
+		name = can_dnc_d.3.b
+		ai_chance = { base = 55 }
+		add_stability = 0.03
+		add_political_power = 25
+		hidden_effect = {
+			set_temp_variable = { CANDNC_claims_paid = 27000 }
+		}
+		custom_effect_tooltip = CANDNC_claims_paid_tt
+		country_event = { id = can_dnc_d.4 days = 20 }
+	}
+}
+
+# tokyo asks what happened on powell street
+country_event = {
+	id = can_dnc_d.4
+	title = can_dnc_d.4.t
+	desc = can_dnc_d.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.4.a
+		ai_chance = { base = 70 }
+		add_political_power = 25
+		add_stability = 0.03
+		if = {
+			limit = { country_exists = JAP }
+			JAP = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = RI_started_talks
+				}
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_d.4.b
+		ai_chance = { base = 30 }
+		add_war_support = 0.10
+		add_stability = -0.05
+		add_named_threat = { threat = 2 name = CANDNC_tokyo_ultimatum_threat }
+		if = {
+			limit = { country_exists = JAP }
+			JAP = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = RI_super_hostile_foreign_policy
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = CAN
+					generator = { 473 }
+				}
+			}
+		}
+	}
+}
+
+# hayashi's terms
+country_event = {
+	id = can_dnc_d.5
+	title = can_dnc_d.5.t
+	desc = can_dnc_d.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.5.a
+		ai_chance = { base = 70 }
+		add_stability = 0.05
+		add_political_power = 50
+		if = {
+			limit = { country_exists = JAP }
+			diplomatic_relation = {
+				country = JAP
+				relation = non_aggression_pact
+				active = yes
+			}
+			JAP = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = RI_pact_signed
+				}
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_d.5.b
+		ai_chance = { base = 30 }
+		add_war_support = 0.05
+		add_stability = -0.03
+		if = {
+			limit = { country_exists = JAP }
+			JAP = {
+				add_opinion_modifier = {
+					target = CAN
+					modifier = RI_hostile_foreign_policy
+				}
+			}
+		}
+		random_list = {
+			60 = {
+				add_political_power = 50
+			}
+			40 = {
+				add_stability = -0.05
+				add_manpower = -5000
+			}
+		}
+	}
+}
+
+# downing street answers
+country_event = {
+	id = can_dnc_d.6
+	title = can_dnc_d.6.t
+	desc = can_dnc_d.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.6.a
+		ai_chance = { base = 65 }
+		add_stability = 0.03
+		add_political_power = 25
+		clr_country_flag = CANDNC_exclusion_law
+		add_autonomy_ratio = {
+			value = -0.05
+			localization = CANDNC_the_exclusion_act_london_forbids
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = RI_friendly_foreign_policy
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_d.6.b
+		ai_chance = { base = 35 }
+		add_war_support = 0.08
+		add_stability = -0.05
+		add_named_threat = { threat = 1 name = CANDNC_disallowance_threat }
+		add_autonomy_ratio = {
+			value = 0.08
+			localization = CANDNC_the_exclusion_act_london_forbids
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = RI_hostile_foreign_policy
+			}
+			reverse_add_opinion_modifier = {
+				target = CAN
+				modifier = RI_withdraw_diplomats
+			}
+		}
+	}
+}
+
+# who is sent for at edmonton and regina
+country_event = {
+	id = can_dnc_d.7
+	title = can_dnc_d.7.t
+	desc = can_dnc_d.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.7.a
+		ai_chance = { base = 75 }
+		add_political_power = 100
+		add_stability = 0.03
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		set_country_flag = CANDNC_ottawa_names_them
+	}
+
+	option = {
+		name = can_dnc_d.7.b
+		ai_chance = { base = 25 }
+		add_political_power = 25
+		add_stability = 0.05
+		add_war_support = 0.03
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		set_country_flag = CANDNC_haultain_governs
+		469 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+# the vote at regina
+country_event = {
+	id = can_dnc_d.8
+	title = can_dnc_d.8.t
+	desc = can_dnc_d.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.8.a
+		ai_chance = { base = 10 }
+		add_stability = -0.10
+		add_named_threat = { threat = 3 name = CANDNC_western_secession_threat }
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.35
+			states = { 469 470 }
+		}
+	}
+
+	option = {
+		name = can_dnc_d.8.b
+		ai_chance = { base = 90 }
+		add_political_power = 75
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		469 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+# the exchange pulls the seat
+country_event = {
+	id = can_dnc_d.9
+	title = can_dnc_d.9.t
+	desc = can_dnc_d.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.9.a
+		ai_chance = { base = 60 }
+		add_political_power = 50
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		467 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_d.9.b
+		ai_chance = { base = 40 }
+		add_political_power = 100
+		add_stability = -0.03
+		hidden_effect = {
+			add_to_variable = { CANDNC_west_settled = -1 }
+		}
+	}
+}
+
+# turtle mountain comes down on frank
+news_event = {
+	id = can_dnc_d.10
+	title = can_dnc_d.10.t
+	desc = can_dnc_d.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = can_dnc_d.10.a
+		ai_chance = { base = 60 }
+		add_political_power = 25
+		add_stability = -0.03
+		add_manpower = -5000
+		470 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_d.10.b
+		ai_chance = { base = 40 }
+		add_stability = 0.05
+		add_war_support = -0.03
+		random_owned_controlled_state = {
+			limit = { state = 470 }
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}

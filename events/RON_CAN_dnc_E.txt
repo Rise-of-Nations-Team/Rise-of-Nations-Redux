@@ -1,0 +1,464 @@
+add_namespace = can_dnc_e
+
+# paardeberg, 27 february 1900
+news_event = {
+	id = can_dnc_e.1
+	title = can_dnc_e.1.t
+	desc = can_dnc_e.1.d
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CAN
+				}
+				set_country_flag = CANDNC_e_paardeberg_reported
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_e.1.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# the reply to the motion of the member for labelle
+country_event = {
+	id = can_dnc_e.2
+	title = can_dnc_e.2.t
+	desc = can_dnc_e.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		# let the despatch stand
+		name = can_dnc_e.2.a
+		add_political_power = 40
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_autonomy_ratio = {
+			value = 0.05
+			localization = can_dnc_e.2.a
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_decrease
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		# a private word to lord minto
+		name = can_dnc_e.2.b
+		add_political_power = -50
+		add_stability = 0.05
+		add_opinion_modifier = {
+			target = ENG
+			modifier = small_increase
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# the colonial office closes an account
+country_event = {
+	id = can_dnc_e.3
+	title = can_dnc_e.3.t
+	desc = can_dnc_e.3.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+	}
+
+	option = {
+		# we will man the citadel ourselves
+		name = can_dnc_e.3.a
+		add_manpower = 12000
+		army_experience = 20
+		add_political_power = -60
+		add_war_support = 0.05
+		464 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = 7361
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		# ask for terms
+		name = can_dnc_e.3.b
+		add_political_power = -40
+		add_stability = 0.05
+		remove_ideas = CAN2E_a_quarrel_with_downing_street
+		add_autonomy_ratio = {
+			value = -0.05
+			localization = can_dnc_e.3.b
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# london weighs disallowance of the militia act
+country_event = {
+	id = can_dnc_e.4
+	title = can_dnc_e.4.t
+	desc = can_dnc_e.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		# amend the letters patent
+		name = can_dnc_e.4.a
+		add_stability = 0.05
+		add_political_power = -40
+		add_opinion_modifier = {
+			target = ENG
+			modifier = medium_increase
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		# let them disallow it
+		name = can_dnc_e.4.b
+		add_war_support = 0.08
+		add_stability = -0.05
+		add_autonomy_ratio = {
+			value = 0.05
+			localization = can_dnc_e.4.b
+		}
+		add_named_threat = {
+			threat = 2
+			name = can_dnc_e.4.b
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+# the counties answer the standing army
+country_event = {
+	id = can_dnc_e.5
+	title = can_dnc_e.5.t
+	desc = can_dnc_e.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		# exempt the harvest counties
+		name = can_dnc_e.5.a
+		add_stability = 0.08
+		add_manpower = -15000
+		add_political_power = -30
+		remove_ideas = CAN2E_the_farmers_in_uniform
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		# the class of this year will report
+		name = can_dnc_e.5.b
+		add_stability = -0.05
+		add_war_support = 0.08
+		add_manpower = 20000
+		add_popularity = {
+			ideology = neutrality
+			amount = 0.03
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+# chamberlain asks three times
+country_event = {
+	id = can_dnc_e.6
+	title = can_dnc_e.6.t
+	desc = can_dnc_e.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		# the council, and nothing else
+		name = can_dnc_e.6.a
+		add_political_power = 50
+		add_autonomy_ratio = {
+			value = -0.05
+			localization = can_dnc_e.6.a
+		}
+		reverse_add_opinion_modifier = {
+			target = ENG
+			modifier = medium_increase
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		# money, and no council
+		name = can_dnc_e.6.b
+		add_political_power = -60
+		add_war_support = 0.05
+		set_country_flag = CANDNC_e_contribution_promised
+		add_opinion_modifier = {
+			target = ENG
+			modifier = large_increase
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		# no to all three
+		name = can_dnc_e.6.c
+		add_political_power = 75
+		add_stability = 0.05
+		add_autonomy_ratio = {
+			value = 0.05
+			localization = can_dnc_e.6.c
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = small_decrease
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# a dominion lays down warships
+news_event = {
+	id = can_dnc_e.7
+	title = can_dnc_e.7.t
+	desc = can_dnc_e.7.d
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CAN
+				}
+				USA = {
+					add_opinion_modifier = {
+						target = CAN
+						modifier = small_decrease
+					}
+				}
+				ENG = {
+					add_opinion_modifier = {
+						target = CAN
+						modifier = small_increase
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = can_dnc_e.7.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# the vote at st john's
+country_event = {
+	id = can_dnc_e.8
+	title = can_dnc_e.8.t
+	desc = can_dnc_e.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		# whitehall assents
+		name = can_dnc_e.8.a
+		trigger = {
+			331 = {
+				is_owned_by = ENG
+			}
+			is_subject_of = ENG
+		}
+		transfer_state = 331
+		add_political_power = -75
+		add_stability = -0.05
+		add_manpower = 12000
+		ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_decrease
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		# put the brigade ashore
+		name = can_dnc_e.8.b
+		add_war_support = 0.08
+		add_stability = -0.08
+		add_named_threat = {
+			threat = 3
+			name = can_dnc_e.8.b
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_decrease
+			}
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		# the terms are too dear
+		name = can_dnc_e.8.c
+		add_political_power = 60
+		add_stability = 0.05
+		331 = {
+			remove_claim_by = CAN
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+# washington answers the lynn canal
+country_event = {
+	id = can_dnc_e.9
+	title = can_dnc_e.9.t
+	desc = can_dnc_e.9.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				55 = {
+					set_country_flag = CANDNC_e_washington_stands_firm
+				}
+				45 = {
+					set_country_flag = CANDNC_e_washington_hesitates
+				}
+			}
+		}
+	}
+
+	option = {
+		# hold the passes
+		name = can_dnc_e.9.a
+		add_war_support = 0.10
+		add_stability = -0.05
+		army_experience = 25
+		USA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = hostile_status
+			}
+		}
+		ENG = {
+			give_guarantee = ROOT
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		# fall back below the summits
+		name = can_dnc_e.9.b
+		add_political_power = 50
+		add_war_support = -0.05
+		clr_country_flag = CANDNC_e_the_lynn_canal_grievance
+		USA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_increase
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+# the house divides on the cheque
+country_event = {
+	id = can_dnc_e.10
+	title = can_dnc_e.10.t
+	desc = can_dnc_e.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		# carry it on ontario votes
+		name = can_dnc_e.10.a
+		add_war_support = 0.08
+		add_stability = -0.08
+		add_popularity = {
+			ideology = neutrality
+			amount = 0.05
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = huge_increase
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		# hold the vote over to the session
+		name = can_dnc_e.10.b
+		add_political_power = -50
+		add_stability = 0.05
+		if = {
+			limit = {
+				NOT = { has_idea = CAN2E_a_quarrel_with_downing_street }
+			}
+			add_timed_idea = {
+				idea = CAN2E_a_quarrel_with_downing_street
+				days = 300
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}

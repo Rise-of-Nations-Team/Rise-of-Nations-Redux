@@ -1,0 +1,306 @@
+add_namespace = can_dnc_a
+
+# the house is told after the transports have sailed
+country_event = {
+	id = can_dnc_a.1
+	title = can_dnc_a.1.t
+	desc = can_dnc_a.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.1.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		set_country_flag = CANDNC_order_tabled
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.1.b
+		add_political_power = 25
+		add_opinion_modifier = { target = ENG modifier = RI_supports_own_country }
+		ai_chance = { base = 10 }
+	}
+}
+
+# london reminds ottawa who holds the king's commission
+country_event = {
+	id = can_dnc_a.2
+	title = can_dnc_a.2.t
+	desc = can_dnc_a.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.2.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_opinion_modifier = { target = ENG modifier = RI_super_hostile_foreign_policy }
+		country_event = { id = can_dnc_a.3 days = 30 }
+		ai_chance = { base = 5 }
+	}
+	option = {
+		name = can_dnc_a.2.b
+		add_political_power = 25
+		add_opinion_modifier = { target = ENG modifier = RI_withdraw_diplomats }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.2.c
+		add_war_support = 0.03
+		add_opinion_modifier = { target = ENG modifier = RI_paying_debt }
+		ai_chance = { base = 10 }
+	}
+}
+
+# the governor general asks to be relieved
+country_event = {
+	id = can_dnc_a.3
+	title = can_dnc_a.3.t
+	desc = can_dnc_a.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.3.a
+		add_autonomy_ratio = {
+			value = 0.05
+			localization = CANDNC_minto_asks_for_his_passports
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		set_country_flag = CANDNC_governor_named_in_ottawa
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.3.b
+		add_stability = 0.05
+		add_opinion_modifier = { target = ENG modifier = RI_reapprochment_talks }
+		ai_chance = { base = 10 }
+	}
+}
+
+# the three demands at the coronation conference
+country_event = {
+	id = can_dnc_a.4
+	title = can_dnc_a.4.t
+	desc = can_dnc_a.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.4.a
+		add_political_power = 25
+		add_to_variable = { CANDNC_imperial_credit = 1 }
+		set_country_flag = CANDNC_answered_on_the_council
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.4.b
+		army_experience = 10
+		set_country_flag = CANDNC_answered_on_defence
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.4.c
+		add_opinion_modifier = { target = ENG modifier = RI_trade_agreement }
+		set_country_flag = CANDNC_answered_on_the_tariff
+		ai_chance = { base = 10 }
+	}
+}
+
+# two readings of one resolution, 29 march 1909
+country_event = {
+	id = can_dnc_a.5
+	title = can_dnc_a.5.t
+	desc = can_dnc_a.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.5.a
+		add_stability = 0.05
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.5.b
+		add_political_power = 50
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.5.c
+		trigger = { has_country_flag = CANDNC_bourassa_doctrine }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_political_power = 25
+		ai_chance = { base = 5 }
+	}
+}
+
+# the wire from the colonial office
+country_event = {
+	id = can_dnc_a.6
+	title = can_dnc_a.6.t
+	desc = can_dnc_a.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.6.a
+		add_war_support = 0.05
+		army_experience = 10
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 300
+		}
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.6.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_opinion_modifier = { target = ENG modifier = RI_hostile_foreign_policy }
+		add_autonomy_ratio = {
+			value = 0.05
+			localization = CANDNC_the_call_that_cannot_be_refused
+		}
+		ai_chance = { base = 5 }
+	}
+}
+
+# the alaska award, four votes to two
+country_event = {
+	id = can_dnc_a.7
+	title = can_dnc_a.7.t
+	desc = can_dnc_a.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.7.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		add_opinion_modifier = { target = USA modifier = RI_hostile_foreign_policy }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.7.b
+		add_political_power = 50
+		set_country_flag = CANDNC_treaty_power_demanded
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.7.c
+		add_state_claim = 463
+		country_event = { id = can_dnc_a.8 days = 20 }
+		ai_chance = { base = 5 }
+	}
+}
+
+# american parties cut the line above the lynn canal
+country_event = {
+	id = can_dnc_a.8
+	title = can_dnc_a.8.t
+	desc = can_dnc_a.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.8.a
+		create_unit = {
+			division = "name = \"Yukon Field Force\" division_template = \"Infantry Brigade\" start_experience_factor = 0.2"
+			owner = ROOT
+		}
+		add_war_support = 0.05
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.8.b
+		create_wargoal = {
+			expire = 0
+			type = take_state_focus
+			target = USA
+			generator = { 463 }
+		}
+		add_named_threat = {
+			threat = 4
+			name = CANDNC_the_alaska_confrontation
+		}
+		ai_chance = { base = 5 }
+	}
+	option = {
+		name = can_dnc_a.8.c
+		add_political_power = 50
+		add_opinion_modifier = { target = USA modifier = RI_reapprochment_talks }
+		ai_chance = { base = 10 }
+	}
+}
+
+# a self-governing colony stops an imperial policy
+news_event = {
+	id = can_dnc_a.9
+	title = can_dnc_a.9.t
+	desc = can_dnc_a.9.d
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = can_dnc_a.9.a
+		trigger = { tag = CAN }
+		add_to_variable = { CANDNC_imperial_credit = 1 }
+		set_global_flag = CANDNC_dominion_veto_granted
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.9.b
+		trigger = { NOT = { tag = CAN } }
+		ai_chance = { base = 10 }
+	}
+}
+
+# the act is repealed and the flag goes up alone
+country_event = {
+	id = can_dnc_a.10
+	title = can_dnc_a.10.t
+	desc = can_dnc_a.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_a.10.a
+		add_political_power = 50
+		add_ai_strategy = {
+			type = befriend
+			id = USA
+			value = 100
+		}
+		ENG = {
+			add_opinion_modifier = { target = CAN modifier = RI_break_relations }
+		}
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = can_dnc_a.10.b
+		USA = { give_guarantee = CAN }
+		add_opinion_modifier = { target = USA modifier = RI_pact_signed }
+		add_stability = -0.05
+		ai_chance = { base = 10 }
+	}
+}

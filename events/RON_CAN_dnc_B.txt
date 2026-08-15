@@ -1,0 +1,414 @@
+add_namespace = can_dnc_b
+
+# the award of 20 october 1903
+country_event = {
+	id = can_dnc_b.1
+	title = can_dnc_b.1.t
+	desc = can_dnc_b.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.1.a
+		ai_chance = {
+			base = 60
+		}
+		add_ideas = CAN2B_the_unsigned_award
+		set_country_flag = CAN2B_award_unsigned
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_named_threat = {
+			threat = 1
+			name = CAN2B_alaska_grievance
+		}
+	}
+	option = {
+		name = can_dnc_b.1.b
+		ai_chance = {
+			base = 40
+		}
+		add_command_power = 25
+		add_autonomy_ratio = {
+			value = -0.03
+			localization = can_dnc_b.1.b
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = RI_friendly_foreign_policy
+		}
+	}
+}
+
+# canadian troops at tidewater
+country_event = {
+	id = can_dnc_b.2
+	title = can_dnc_b.2.t
+	desc = can_dnc_b.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.2.a
+		ai_chance = {
+			base = 50
+		}
+		set_country_flag = CAN2B_inlet_held
+		add_war_support = 0.05
+		add_ai_strategy = {
+			type = antagonize
+			id = USA
+			value = 150
+		}
+		USA = {
+			country_event = { id = can_dnc_b.3 days = 2 }
+		}
+	}
+	option = {
+		name = can_dnc_b.2.b
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 50
+		add_opinion_modifier = {
+			target = USA
+			modifier = RI_reapprochment_talks
+		}
+	}
+}
+
+# washington answers
+country_event = {
+	id = can_dnc_b.3
+	title = can_dnc_b.3.t
+	desc = can_dnc_b.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.3.a
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = CAN
+			generator = { 473 }
+		}
+		add_opinion_modifier = {
+			target = CAN
+			modifier = RI_hostile_foreign_policy
+		}
+	}
+	option = {
+		name = can_dnc_b.3.b
+		ai_chance = {
+			base = 65
+		}
+		add_opinion_modifier = {
+			target = CAN
+			modifier = RI_withdraw_diplomats
+		}
+		CAN = {
+			add_named_threat = {
+				threat = 2
+				name = CAN2B_panhandle_ultimatum
+			}
+		}
+	}
+}
+
+# the colonial office replies
+country_event = {
+	id = can_dnc_b.4
+	title = can_dnc_b.4.t
+	desc = can_dnc_b.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.4.a
+		ai_chance = {
+			base = 50
+		}
+		add_autonomy_ratio = {
+			value = 0.05
+			localization = can_dnc_b.4.a
+		}
+		reverse_add_opinion_modifier = {
+			target = ENG
+			modifier = RI_hostile_foreign_policy
+		}
+	}
+	option = {
+		name = can_dnc_b.4.b
+		ai_chance = {
+			base = 50
+		}
+		add_stability = 0.05
+		add_opinion_modifier = {
+			target = ENG
+			modifier = RI_friendly_foreign_policy
+		}
+	}
+}
+
+# thirty days
+news_event = {
+	id = can_dnc_b.5
+	title = can_dnc_b.5.t
+	desc = can_dnc_b.5.d
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = can_dnc_b.5.a
+		trigger = {
+			tag = CAN
+		}
+	}
+	option = {
+		name = can_dnc_b.5.b
+		trigger = {
+			tag = USA
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = can_dnc_b.5.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CAN
+					tag = USA
+				}
+			}
+		}
+	}
+}
+
+# the draft convention of washington
+country_event = {
+	id = can_dnc_b.6
+	title = can_dnc_b.6.t
+	desc = can_dnc_b.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.6.a
+		ai_chance = {
+			base = 55
+		}
+		set_country_flag = CAN2B_reciprocity_tabled
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		reverse_add_opinion_modifier = {
+			target = USA
+			modifier = RI_trade_agreement
+		}
+	}
+	option = {
+		name = can_dnc_b.6.b
+		ai_chance = {
+			base = 45
+		}
+		add_political_power = 50
+		add_command_power = 25
+	}
+}
+
+# no truck nor trade
+country_event = {
+	id = can_dnc_b.7
+	title = can_dnc_b.7.t
+	desc = can_dnc_b.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.7.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 50
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = can_dnc_b.7.b
+		ai_chance = {
+			base = 50
+		}
+		add_stability = 0.05
+		add_to_variable = { CAN2B_continental_pull = -2 }
+		if = {
+			limit = {
+				has_idea = CAN2B_continental_reciprocity
+			}
+			remove_ideas = CAN2B_continental_reciprocity
+		}
+	}
+}
+
+# the manifesto reprinted
+country_event = {
+	id = can_dnc_b.8
+	title = can_dnc_b.8.t
+	desc = can_dnc_b.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.8.a
+		ai_chance = {
+			base = 55
+		}
+		set_country_flag = CAN2B_manifesto_circulates
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		USA = {
+			add_opinion_modifier = {
+				target = CAN
+				modifier = RI_reapprochment_talks
+			}
+		}
+	}
+	option = {
+		name = can_dnc_b.8.b
+		ai_chance = {
+			base = 45
+		}
+		add_stability = 0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+}
+
+# the provinces vote
+news_event = {
+	id = can_dnc_b.9
+	title = can_dnc_b.9.t
+	desc = can_dnc_b.9.d
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = can_dnc_b.9.a
+		trigger = {
+			tag = CAN
+		}
+		add_political_power = 50
+	}
+	option = {
+		name = can_dnc_b.9.b
+		trigger = {
+			tag = ENG
+		}
+		add_opinion_modifier = {
+			target = CAN
+			modifier = RI_hostile_foreign_policy
+		}
+	}
+	option = {
+		name = can_dnc_b.9.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CAN
+					tag = ENG
+				}
+			}
+		}
+	}
+}
+
+# six weeks at ottawa
+country_event = {
+	id = can_dnc_b.10
+	title = can_dnc_b.10.t
+	desc = can_dnc_b.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.10.a
+		ai_chance = {
+			base = 55
+		}
+		set_country_flag = CAN2B_federal_republic
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = can_dnc_b.10.b
+		ai_chance = {
+			base = 45
+		}
+		add_command_power = 50
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+}
+
+# twelve pages, no distribution list
+country_event = {
+	id = can_dnc_b.11
+	title = can_dnc_b.11.t
+	desc = can_dnc_b.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_b.11.a
+		ai_chance = {
+			base = 70
+		}
+		army_experience = 25
+		add_command_power = 25
+	}
+	option = {
+		name = can_dnc_b.11.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_state_claim = 386
+		add_named_threat = {
+			threat = 3
+			name = CAN2B_frontier_reconnaissance
+		}
+		add_ai_strategy = {
+			type = antagonize
+			id = USA
+			value = 150
+		}
+		create_wargoal = {
+			type = take_state_focus
+			target = USA
+			generator = { 386 }
+		}
+	}
+}
