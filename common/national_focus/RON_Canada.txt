@@ -1,0 +1,6069 @@
+#!gfx:interface/RON_goals.gfx
+focus_tree = {
+	id = Canada_DNC
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = CAN
+			date < 1910.1.1
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 200 y = 3000 }
+
+	focus = {
+		id = CANDNC_the_question_of_1899
+		icon = GFX_goal_generic_parliament
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = CANDNC_the_crown_commits
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 0
+		y = 1
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_question_of_1899 }
+		mutually_exclusive = { focus = CANDNC_the_commons_must_vote }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_manpower = 15000
+			add_ideas = CAN_the_royal_prerogative
+			add_autonomy_ratio = {
+				value = -0.05
+				localization = CANDNC_the_crown_commits
+			}
+			set_country_flag = CANDNC_executive_prerogative
+		}
+	}
+
+	focus = {
+		id = CANDNC_the_commons_must_vote
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 20
+		y = 1
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_question_of_1899 }
+		mutually_exclusive = { focus = CANDNC_the_crown_commits }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = CAN_parliament_decides
+			add_autonomy_ratio = {
+				value = 0.05
+				localization = CANDNC_the_commons_must_vote
+			}
+			set_country_flag = CANDNC_parliamentary_prerogative
+		}
+	}
+
+	focus = {
+		id = CANDNC_the_school_of_the_minority
+		icon = GFX_focus_por_concordat
+		x = 5
+		y = 2
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_crown_commits focus = CANDNC_the_commons_must_vote }
+		mutually_exclusive = { focus = CANDNC_the_school_of_the_province }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
+			set_country_flag = CANDNC_school_of_the_minority
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_school_of_the_province
+			icon = GFX_focus_generic_education
+			x = 15
+			y = 2
+			cost = 15
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_crown_commits focus = CANDNC_the_commons_must_vote }
+			mutually_exclusive = { focus = CANDNC_the_school_of_the_minority }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.02
+				}
+				set_country_flag = CANDNC_school_of_the_province
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_government_by_order_in_council
+			icon = GFX_focus_AUS_lawmaking_leniency
+			x = 0
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_crown_commits }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 100
+				add_ideas = CAN_rule_by_order_in_council
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_bishops_of_the_west
+			icon = GFX_focus_por_concordat
+			x = 5
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_school_of_the_minority }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_census_of_1901
+		icon = GFX_focus_generic_manpower
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_school_of_the_minority focus = CANDNC_the_school_of_the_province }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_ordinance_of_1901
+			icon = GFX_focus_AUS_womens_education_initiative
+			x = 15
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_school_of_the_province }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				470 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_motion_of_the_member_for_labelle
+			icon = GFX_focus_BEL_government_resigns
+			x = 20
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_commons_must_vote }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_proclamation_of_edward_vii
+			icon = GFX_focus_generic_monarchy_1
+			x = 0
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_government_by_order_in_council }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_guarantee_of_1867
+			icon = GFX_focus_AFG_revive_the_1923_constitution
+			x = 5
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_bishops_of_the_west }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_redistribution_of_1903
+			icon = GFX_goal_generic_elections
+			x = 10
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_census_of_1901 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 100
+				add_stability = -0.03
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_school_belongs_to_the_province
+			icon = GFX_focus_generic_self_management
+			x = 15
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_ordinance_of_1901 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				276 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_each_case_decided_separately
+			icon = GFX_focus_generic_treaty
+			x = 20
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_motion_of_the_member_for_labelle }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_governor_generals_commission
+			icon = GFX_goal_ENG_london
+			x = 0
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_proclamation_of_edward_vii }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+				add_autonomy_ratio = {
+					value = -0.03
+					localization = CANDNC_the_governor_generals_commission
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_school_law_written_in_ottawa
+			icon = GFX_focus_AFG_education_reform
+			x = 5
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_guarantee_of_1867 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_separate_school_guarantee
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_poll_of_1904
+			icon = GFX_focus_ARG_the_clean_election
+			x = 10
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_redistribution_of_1903 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 120
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_province_writes_its_own_law
+			icon = GFX_focus_AUS_the_right_to_self_determination
+			x = 15
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_school_belongs_to_the_province }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_one_school_one_language
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_no_man_and_no_dollar
+			icon = GFX_goal_generic_trade
+			x = 20
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_each_case_decided_separately }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 110
+				add_war_support = -0.04
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_royal_tour_of_1901
+			icon = GFX_focus_eng_the_sun_never_sets
+			x = 0
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_governor_generals_commission }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.06
+				add_war_support = 0.04
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_apostolic_delegate
+			icon = GFX_focus_generic_conference
+			x = 5
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_school_law_written_in_ottawa }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_quebec_of_parent
+			icon = GFX_focus_ARG_alvears_democracy
+			x = 10
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_poll_of_1904 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				466 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_orange_order_and_the_west
+			icon = GFX_focus_generic_strike_at_democracy2
+			x = 15
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_province_writes_its_own_law }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.03
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_nationalist_league
+			icon = GFX_focus_BRA_defense_of_the_fatherland
+			x = 20
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_no_man_and_no_dollar }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_nationalist_press
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_outside_service_stays_ours
+			icon = GFX_goal_generic_dangerous_deal
+			x = 0
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_royal_tour_of_1901 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 120
+				add_ideas = CAN_the_patronage_of_the_service
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_autonomy_bills
+		icon = GFX_focus_AST_the_australian_commonwealth
+		x = 10
+		y = 7
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_quebec_of_parent }
+		prerequisite = { focus = CANDNC_the_apostolic_delegate focus = CANDNC_the_orange_order_and_the_west }
+		allow_branch = {
+			date > 1904.1.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			469 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			470 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_opposition_bench
+			icon = GFX_focus_ARG_defense_and_democracy
+			x = 20
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_nationalist_league }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_precedent_of_the_dominion
+			icon = GFX_goal_tfv_strengthen_commonwealth_ties
+			x = 0
+			y = 8
+			cost = 20
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_outside_service_stays_ours }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.10
+				army_experience = 25
+				add_ideas = CAN_the_standing_precedent
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_province_of_buffalo
+		icon = GFX_goal_USA_oklahoma_state
+		x = 5
+		y = 8
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_autonomy_bills }
+		mutually_exclusive = { focus = CANDNC_two_provinces_on_a_meridian }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.04
+			}
+			add_political_power = 130
+			469 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			470 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = CANDNC_province_of_buffalo
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_two_provinces_on_a_meridian
+			icon = GFX_goal_generic_demand_territory
+			x = 15
+			y = 8
+			cost = 15
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_autonomy_bills }
+			mutually_exclusive = { focus = CANDNC_the_province_of_buffalo }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.02
+				}
+				add_political_power = 100
+				469 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				470 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				set_country_flag = CANDNC_two_provinces
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_house_will_decide
+			icon = GFX_goal_generic_parliament
+			x = 20
+			y = 8
+			cost = 20
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_opposition_bench }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 150
+				add_ideas = CAN_the_word_of_the_house
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_price_of_the_precedent
+			icon = GFX_focus_generic_support_the_left_right
+			x = 0
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_precedent_of_the_dominion }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.08
+				add_ideas = CAN_the_price_of_the_precedent
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_haultain_takes_office
+			icon = GFX_focus_AUS_policy_of_the_union
+			x = 5
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_province_of_buffalo }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lieutenant_governors_call
+			icon = GFX_focus_BEL_king_of_the_belgians
+			x = 15
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_two_provinces_on_a_meridian }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 130
+				add_stability = -0.03
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_price_of_the_vote
+			icon = GFX_goal_tfv_sever_ties_with_uk
+			x = 20
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_house_will_decide }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 140
+				add_autonomy_ratio = {
+					value = 0.05
+					localization = CANDNC_the_price_of_the_vote
+				}
+				add_ideas = CAN_no_seat_at_the_table
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_provincial_rights_movement
+			icon = GFX_focus_AUS_the_right_to_self_determination
+			x = 5
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_haultain_takes_office }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_two_liberal_governments
+			icon = GFX_goal_generic_elections
+			x = 15
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lieutenant_governors_call }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 140
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_lands_the_mines_and_the_forests
+		icon = GFX_focus_generic_resource_extraction
+		x = 10
+		y = 11
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_provincial_rights_movement focus = CANDNC_two_liberal_governments }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = CAN_the_lands_the_mines_and_the_forests
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_a_federal_police_for_the_west
+			icon = GFX_focus_generic_home_defense
+			x = 5
+			y = 12
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lands_the_mines_and_the_forests }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.06
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lieutenant_governor
+			icon = GFX_focus_generic_monarchy_1
+			x = 10
+			y = 12
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lands_the_mines_and_the_forests }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_new_legislatures
+			icon = GFX_focus_AFG_parliamentary_democracy
+			x = 15
+			y = 12
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lands_the_mines_and_the_forests }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				469 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_power_of_disallowance
+		icon = GFX_goal_continuous_restrict_freedom
+		x = 5
+		y = 13
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_lieutenant_governor }
+		mutually_exclusive = { focus = CANDNC_the_judicial_committee_decides }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
+			add_political_power = 120
+			set_country_flag = CANDNC_power_of_disallowance
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_judicial_committee_decides
+			icon = GFX_focus_generic_court
+			x = 15
+			y = 13
+			cost = 15
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lieutenant_governor }
+			mutually_exclusive = { focus = CANDNC_the_power_of_disallowance }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_autonomy_ratio = {
+					value = -0.03
+					localization = CANDNC_the_judicial_committee_decides
+				}
+				add_stability = 0.08
+				set_country_flag = CANDNC_judicial_committee
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_veto_of_ottawa
+			icon = GFX_goal_continuous_suppression
+			x = 5
+			y = 14
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_power_of_disallowance }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 130
+				add_ideas = CAN_the_veto_of_ottawa
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lords_day_act
+			icon = GFX_focus_por_concordat
+			x = 10
+			y = 14
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_power_of_disallowance focus = CANDNC_the_judicial_committee_decides }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.06
+				add_ideas = CAN_the_lords_day
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_provinces_win_in_london
+			icon = GFX_goal_ENG_london
+			x = 15
+			y = 14
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_judicial_committee_decides }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.08
+				add_ideas = CAN_the_judicial_committee
+				add_autonomy_ratio = {
+					value = -0.03
+					localization = CANDNC_the_provinces_win_in_london
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_quebec_of_gouin
+		icon = GFX_focus_ARG_alvears_democracy
+		x = 5
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_lords_day_act }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			466 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = CANDNC_the_national_battlefields_commission
+		icon = GFX_goal_generic_construct_civilian
+		x = 10
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_lords_day_act }
+		allow_branch = {
+			date > 1907.1.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			466 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CANDNC_the_ontario_of_whitney
+		icon = GFX_focus_ARG_the_clean_election
+		x = 15
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_lords_day_act }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			276 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_timber_limits_of_quebec
+			icon = GFX_focus_generic_resource_extraction
+			x = 5
+			y = 16
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_quebec_of_gouin }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				466 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_tercentenary_of_quebec
+			icon = GFX_focus_generic_royal_wedding
+			x = 10
+			y = 16
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_national_battlefields_commission }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.07
+				add_war_support = 0.04
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_provincial_university
+			icon = GFX_focus_ARG_universidad_de_buenos_aires
+			x = 15
+			y = 16
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_ontario_of_whitney }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_research_slot = 1
+				add_ideas = CAN_the_provincial_universities
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_member_for_saint_jacques
+			icon = GFX_focus_usa_voter_registration_act
+			x = 5
+			y = 17
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_timber_limits_of_quebec }
+			allow_branch = {
+				date > 1907.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_civil_service_commission
+			icon = GFX_focus_AUS_lawmaking_leniency
+			x = 10
+			y = 17
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_tercentenary_of_quebec }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 80
+				add_ideas = CAN_the_merit_of_the_inside_service
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_bishop_of_london
+			icon = GFX_focus_por_concordat
+			x = 15
+			y = 17
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_provincial_university }
+			allow_branch = {
+				date > 1908.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_nationalists_in_the_assembly
+			icon = GFX_focus_BRA_defense_of_the_fatherland
+			x = 5
+			y = 18
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_member_for_saint_jacques }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_commission_of_conservation
+			icon = GFX_focus_generic_agriculture
+			x = 10
+			y = 18
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_civil_service_commission }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_circular_in_preparation
+			icon = GFX_focus_AUS_womens_education_initiative
+			x = 15
+			y = 18
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_bishop_of_london }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_school_of_the_circular
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_constitution_of_a_dominion
+		icon = GFX_focus_AST_a_democratic_bulwark
+		x = 10
+		y = 19
+		cost = 20
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_nationalists_in_the_assembly }
+		prerequisite = { focus = CANDNC_the_commission_of_conservation }
+		prerequisite = { focus = CANDNC_the_circular_in_preparation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 200
+			add_war_support = 0.05
+			add_ideas = CAN_the_settled_constitution
+			add_autonomy_ratio = {
+				value = 0.05
+				localization = CANDNC_the_constitution_of_a_dominion
+			}
+		}
+	}
+
+	focus = {
+		id = CANDNC_the_last_best_west
+		icon = GFX_focus_generic_immigration
+		x = 28
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = CAN_the_last_best_west
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_stalwart_peasant
+			icon = GFX_focus_ARG_immigration_wave
+			x = 26
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_last_best_west }
+			mutually_exclusive = { focus = CANDNC_a_british_west }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_sifton_volume_immigration
+				add_manpower = 15000
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_british_west
+			icon = GFX_focus_AST_realize_the_value_of_british_citizenship
+			x = 30
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_last_best_west }
+			mutually_exclusive = { focus = CANDNC_the_stalwart_peasant }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_oliver_selected_immigration
+				add_stability = 0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_secret_recruiting_contract
+			icon = GFX_focus_generic_concessions
+			x = 26
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_stalwart_peasant }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_north_atlantic_trading_company
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_block_settlements
+			icon = GFX_focus_generic_farmland
+			x = 26
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_secret_recruiting_contract }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_block_settlements
+				467 = { add_extra_state_shared_building_slots = 1 }
+				469 = { add_extra_state_shared_building_slots = 1 }
+				470 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_doukhobor_reserves
+			icon = GFX_focus_RAJ_sikh_religious_guarantees
+			x = 26
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_block_settlements }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_country_flag = CAN_doukhobor_reserves
+				custom_effect_tooltip = CAN_doukhobor_reserves_tt
+				469 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_mennonite_reserves
+			icon = GFX_focus_generic_agriculture2
+			x = 26
+			y = 5
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_doukhobor_reserves }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = { add_extra_state_shared_building_slots = 1 }
+				467 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_free_homesteads
+			icon = GFX_focus_generic_agriculture
+			x = 26
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_mennonite_reserves }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				469 = { add_extra_state_shared_building_slots = 1 }
+				470 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_hands_for_the_camps
+			icon = GFX_focus_generic_worker_expansion
+			x = 26
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_free_homesteads }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_hands_for_the_camps
+				682 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_two_hundred_thousand_a_year
+			icon = GFX_focus_generic_population_growth
+			x = 26
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_hands_for_the_camps }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				469 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				470 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_orange_lodges_answer
+			icon = GFX_focus_PER_stage_mass_protests
+			x = 26
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_two_hundred_thousand_a_year }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_orange_order
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_oliver_at_the_interior
+			icon = GFX_focus_generic_advisors
+			x = 30
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_british_west }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 100
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_end_the_paid_agents
+			icon = GFX_focus_HUN_negotiate_the_restrictions
+			x = 30
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_oliver_at_the_interior }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_immigration_act_of_1906
+			icon = GFX_focus_generic_bad_medical
+			x = 30
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_end_the_paid_agents }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_immigration_act_1906
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_barr_colonists
+			icon = GFX_focus_ETH_invite_italian_settlers
+			x = 30
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_immigration_act_of_1906 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+				470 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_assisted_passages
+			icon = GFX_focus_generic_merchant_fleet
+			x = 30
+			y = 6
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_barr_colonists }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_assisted_passages
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_power_to_deport
+			icon = GFX_goal_continuous_restrict_freedom
+			x = 30
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_assisted_passages }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_grazing_leases
+			icon = GFX_focus_CHL_focus_on_cattle_and_wool
+			x = 30
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_power_to_deport }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_grazing_leases
+				470 = {
+					add_resource = {
+						type = coal
+						amount = 3
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_fewer_hands_on_the_land
+			icon = GFX_focus_generic_agricultural_subsidies
+			x = 30
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_grazing_leases }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_census_of_the_northwest
+			icon = GFX_focus_generic_worker_administration
+			x = 28
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_orange_lodges_answer focus = CANDNC_fewer_hands_on_the_land }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+				set_country_flag = CAN_census_of_1906
+				custom_effect_tooltip = CAN_census_of_1906_tt
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lands_stay_with_ottawa
+			icon = GFX_focus_RAJ_provincial_autonomy
+			x = 28
+			y = 11
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = { date > 1905.7.20 }
+			prerequisite = { focus = CANDNC_the_census_of_the_northwest }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_dominion_lands
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_subsidy_in_lieu_of_lands
+			icon = GFX_focus_generic_money_for_equipment
+			x = 28
+			y = 12
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lands_stay_with_ottawa }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = { add_extra_state_shared_building_slots = 1 }
+				469 = { add_extra_state_shared_building_slots = 1 }
+				470 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_second_road_to_the_pacific
+			icon = GFX_focus_generic_railroad
+			x = 36
+			y = 0
+			cost = 10
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+				276 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_blair_plan
+			icon = GFX_focus_AST_new_south_wales_government_railways
+			x = 34
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_second_road_to_the_pacific }
+			mutually_exclusive = { focus = CANDNC_guarantee_the_bonds }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_blair_plan
+				276 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_guarantee_the_bonds
+			icon = GFX_focus_railway_contracts
+			x = 38
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_second_road_to_the_pacific }
+			mutually_exclusive = { focus = CANDNC_the_blair_plan }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_guaranteed_bonds
+				467 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_extend_the_intercolonial
+			icon = GFX_focus_CHL_connect_the_northern_railways
+			x = 34
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_blair_plan }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				464 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				465 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_one_operator_only
+			icon = GFX_focus_CHL_contract_efe
+			x = 34
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_extend_the_intercolonial }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_no_third_road
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_board_of_railway_commissioners
+			icon = GFX_goal_generic_government_deals
+			x = 34
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_one_operator_only }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_board_of_railway_commissioners
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_car_allotment_rules
+			icon = GFX_focus_generic_workers_and_farmers_rise
+			x = 34
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_board_of_railway_commissioners }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_inspection_and_grade
+			icon = GFX_focus_DEN_schleswigian_farmers
+			x = 34
+			y = 6
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_car_allotment_rules }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+				682 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_national_transcontinental
+			icon = GFX_focus_forest_railway
+			x = 34
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_inspection_and_grade }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				682 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				466 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_rate_case
+			icon = GFX_focus_generic_court
+			x = 34
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_national_transcontinental }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				469 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_treasury_carries_the_risk
+			icon = GFX_focus_generic_stockpile_currency
+			x = 34
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_rate_case }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_state_road
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_grand_trunk_pacific
+			icon = GFX_focus_generic_develop_rail_network
+			x = 38
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_guarantee_the_bonds }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				469 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_prince_rupert
+			icon = GFX_goal_generic_construct_naval_dockyard
+			x = 38
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_grand_trunk_pacific }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				473 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_mackenzie_and_mann
+			icon = GFX_focus_INS_sumatra_railway
+			x = 38
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_prince_rupert }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_charters_and_land_grants
+			icon = GFX_focus_RAJ_issue_bonds_on_the_stock_market
+			x = 38
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_mackenzie_and_mann }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+				276 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_quebec_bridge
+			icon = GFX_focus_PER_feat_of_engineering
+			x = 38
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_charters_and_land_grants }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = -0.05
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = construction_tech
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_yellowhead_pass
+			icon = GFX_focus_SIA_steel_arteries
+			x = 38
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_quebec_bridge }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				473 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = excavation_tech
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_three_transcontinentals
+			icon = GFX_focus_IRQ_found_the_iraqi_state_railways
+			x = 38
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_yellowhead_pass }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = { add_extra_state_shared_building_slots = 1 }
+				469 = { add_extra_state_shared_building_slots = 1 }
+				470 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_guaranteed_debt
+			icon = GFX_focus_CZE_forgive_trading_debts
+			x = 38
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_three_transcontinentals }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_guaranteed_debt
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_branch_lines
+			icon = GFX_focus_generic_improve_roads
+			x = 36
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_treasury_carries_the_risk focus = CANDNC_the_guaranteed_debt }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				469 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_national_policy
+			icon = GFX_focus_generic_industry_investment
+			x = 44
+			y = 0
+			cost = 10
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				276 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_hold_the_tariff_wall
+			icon = GFX_focus_GER_customs_union
+			x = 42
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_national_policy }
+			mutually_exclusive = { focus = CANDNC_look_south }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_national_policy_idea
+				276 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_look_south
+			icon = GFX_focus_generic_american_investments
+			x = 46
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_national_policy }
+			mutually_exclusive = { focus = CANDNC_hold_the_tariff_wall }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_open_the_continent
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_british_preference
+			icon = GFX_focus_eng_imperial_federation
+			x = 42
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_hold_the_tariff_wall }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_three_column_tariff
+			icon = GFX_focus_generic_treaty
+			x = 42
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_british_preference }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 100
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = {
+						value = 0.03
+						localization = CAN_tariff_autonomy
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_manufacturing_condition
+			icon = GFX_focus_CHL_expand_the_forestry
+			x = 42
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_three_column_tariff }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_manufacturing_condition
+				682 = { add_extra_state_shared_building_slots = 1 }
+				466 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_bounties_on_iron_and_steel
+			icon = GFX_focus_BRA_national_steel_company
+			x = 42
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_manufacturing_condition }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				464 = {
+					add_resource = {
+						type = steel
+						amount = 6
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_power_at_cost
+			icon = GFX_focus_generic_hydroelectric_energy
+			x = 42
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_bounties_on_iron_and_steel }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_cheap_power
+				276 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_silver_of_cobalt
+			icon = GFX_focus_CHL_silverworking
+			x = 42
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_power_at_cost }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				682 = {
+					add_resource = {
+						type = tungsten
+						amount = 6
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = excavation_tech
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_decennial_bank_act
+			icon = GFX_focus_CHL_strengthen_the_central_bank
+			x = 42
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_silver_of_cobalt }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_no_central_bank
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_west_pays_the_freight
+			icon = GFX_focus_AST_rural_concessions
+			x = 42
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_decennial_bank_act }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_western_grievance
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_crop_moving_issue
+			icon = GFX_focus_PRC_promote_paper_bills
+			x = 42
+			y = 10
+			cost = 5
+			available_if_capitulated = yes
+			allow_branch = { date > 1908.1.1 }
+			prerequisite = { focus = CANDNC_the_west_pays_the_freight }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_timed_idea = {
+					days = 180
+					idea = CAN_crop_moving_issue
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_cheaper_implements
+			icon = GFX_focus_HUN_expand_the_diosgyor_machinery_factory
+			x = 46
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_look_south }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				467 = { add_extra_state_shared_building_slots = 1 }
+				469 = { add_extra_state_shared_building_slots = 1 }
+				470 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_american_capital_at_walkerville
+			icon = GFX_focus_generic_industry_2
+			x = 46
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_cheaper_implements }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_american_capital
+				276 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_territorial_grain_growers
+			icon = GFX_focus_prc_agrarian_socialism
+			x = 46
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_american_capital_at_walkerville }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_grain_growers_grain_company
+			icon = GFX_focus_generic_workers
+			x = 46
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_territorial_grain_growers }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_grain_growers
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_matte_goes_south
+			icon = GFX_focus_generic_mining_industry
+			x = 46
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_grain_growers_grain_company }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				682 = {
+					add_resource = {
+						type = steel
+						amount = 5
+					}
+				}
+				add_opinion_modifier = {
+					target = USA
+					modifier = small_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_treaty_signed_at_paris
+			icon = GFX_focus_PHI_bell_trade_act
+			x = 46
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_matte_goes_south }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_increase
+				}
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = {
+						value = 0.05
+						localization = CAN_commercial_autonomy
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_newsprint_for_the_american_press
+			icon = GFX_focus_INS_import_lumber
+			x = 46
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_treaty_signed_at_paris }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_newsprint_exports
+				466 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				682 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_manufacturers_answer
+			icon = GFX_focus_JAP_ministry_of_commerce_and_industry
+			x = 46
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_newsprint_for_the_american_press }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_decrease
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_panic_of_1907
+			icon = GFX_focus_BRA_international_crisis
+			x = 46
+			y = 10
+			cost = 5
+			available_if_capitulated = yes
+			allow_branch = { date > 1907.10.1 }
+			prerequisite = { focus = CANDNC_the_manufacturers_answer }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_timed_idea = {
+					days = 365
+					idea = CAN_the_panic_of_1907
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_marquis_wheat
+			icon = GFX_focus_generic_agricultural_subsidies
+			x = 44
+			y = 11
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_west_pays_the_freight focus = CANDNC_the_manufacturers_answer }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_marquis_wheat
+				467 = { add_extra_state_shared_building_slots = 1 }
+				469 = { add_extra_state_shared_building_slots = 1 }
+				470 = { add_extra_state_shared_building_slots = 1 }
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_call_from_london
+			icon = GFX_focus_eng_the_sun_never_sets
+			x = 54
+			y = 0
+			cost = 5
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.05
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_order_in_council
+			icon = GFX_goal_generic_forceful_treaty
+			x = 52
+			y = 1
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_call_from_london }
+			mutually_exclusive = { focus = CANDNC_let_the_commons_vote }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_precedent_of_1899
+				add_command_power = 30
+				set_rule = {
+					can_send_volunteers = yes
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_let_the_commons_vote
+			icon = GFX_goal_generic_parliament
+			x = 56
+			y = 1
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_call_from_london }
+			mutually_exclusive = { focus = CANDNC_the_order_in_council }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_caucus_divided
+				add_political_power = 75
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_royal_canadian_regiment
+			icon = GFX_goal_hag_colonial_expedition
+			x = 52
+			y = 2
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_order_in_council focus = CANDNC_let_the_commons_vote }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = ENG
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_strathconas_horse
+			icon = GFX_goal_generic_cavalry
+			x = 56
+			y = 2
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_order_in_council focus = CANDNC_let_the_commons_vote }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_private_levy
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 600
+					producer = ENG
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_paardeberg
+			icon = GFX_goal_generic_major_war
+			x = 54
+			y = 3
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_royal_canadian_regiment }
+			prerequisite = { focus = CANDNC_the_strathconas_horse }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				army_experience = 50
+				add_war_support = 0.08
+				add_ideas = CAN_paardeberg_day
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_south_african_constabulary
+			icon = GFX_goal_generic_paramilitary
+			x = 52
+			y = 4
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_paardeberg }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					tech_support = 1
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = support_tech
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_canadian_mounted_rifles
+			icon = GFX_goal_generic_position_armies
+			x = 56
+			y = 4
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_paardeberg }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = CAN
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_vereeniging
+			icon = GFX_goal_new_treaty
+			x = 54
+			y = 5
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_south_african_constabulary focus = CANDNC_the_canadian_mounted_rifles }
+			ai_will_do = {
+				factor = 1
+			}
+			# the war ends and the volunteers go home
+			completion_reward = {
+				add_war_support = -0.05
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_veterans_of_the_veldt
+			icon = GFX_focus_AST_riling_veterans
+			x = 52
+			y = 6
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_vereeniging }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_veterans_of_the_veldt
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_no_precedent_for_the_next_war
+			icon = GFX_goal_generic_isolation
+			x = 56
+			y = 6
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_vereeniging }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_each_case_on_its_merits
+				add_stability = 0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lessons_of_the_veldt
+			icon = GFX_goal_generic_army_doctrines
+			x = 54
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_veterans_of_the_veldt focus = CANDNC_no_precedent_for_the_next_war }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_department_of_militia
+			icon = GFX_goal_generic_government_deals
+			x = 62
+			y = 0
+			cost = 5
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 75
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_militia_of_citizens
+			icon = GFX_focus_generic_manpower
+			x = 60
+			y = 1
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_department_of_militia }
+			mutually_exclusive = { focus = CANDNC_a_permanent_force }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_militia_of_citizens
+				add_manpower = 15000
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_permanent_force
+			icon = GFX_focus_AST_permanent_military_forces
+			x = 64
+			y = 1
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_department_of_militia }
+			mutually_exclusive = { focus = CANDNC_a_militia_of_citizens }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_permanent_force
+				army_experience = 25
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_twelve_day_camp
+			icon = GFX_focus_generic_commonwealth_build_infantry
+			x = 60
+			y = 2
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_militia_of_citizens }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 800
+					producer = ENG
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_county_drill_sheds
+			icon = GFX_goal_generic_soviet_construction
+			x = 60
+			y = 3
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_twelve_day_camp }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				276 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				466 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				464 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_rifle_associations
+			icon = GFX_focus_CAN_rifle_association
+			x = 60
+			y = 4
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_county_drill_sheds }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					sniper_1900 = 1
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_school_cadet_corps
+			icon = GFX_focus_generic_education
+			x = 60
+			y = 5
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_rifle_associations }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_school_cadet_corps
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_commissions_from_the_minister
+			icon = GFX_goal_generic_elections
+			x = 60
+			y = 6
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_school_cadet_corps }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_commissions_by_patronage
+				add_political_power = 100
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_double_the_permanent_force
+			icon = GFX_focus_AST_australian_regular_army
+			x = 64
+			y = 2
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_permanent_force }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1200
+					producer = ENG
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_schools_of_instruction
+			icon = GFX_focus_generic_advanced_military_studies
+			x = 64
+			y = 3
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_double_the_permanent_force }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				army_experience = 25
+				add_doctrine_cost_reduction = {
+					name = CAN_militia_schools
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_royal_military_college
+			icon = GFX_focus_generic_military_academy
+			x = 64
+			y = 4
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_schools_of_instruction }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_royal_military_college
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_royal_canadian_artillery
+			icon = GFX_goal_generic_army_artillery
+			x = 64
+			y = 5
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_royal_military_college }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					light_field_gun1 = 1
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_garrisons_of_the_dominion
+			icon = GFX_goal_hag_increase_colonial_garrisons
+			x = 64
+			y = 6
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_royal_canadian_artillery }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_permanent_garrisons
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_dundonald_crisis
+			icon = GFX_goal_purge_opposition
+			x = 62
+			y = 7
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_commissions_from_the_minister focus = CANDNC_the_garrisons_of_the_dominion }
+			allow_branch = {
+				date > 1904.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = -0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_militia_act_of_1904
+			icon = GFX_goal_constitutional_guarantees
+			x = 62
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_dundonald_crisis }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = support_tech
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_militia_council
+			icon = GFX_focus_eng_chiefs_of_staff_committee
+			x = 60
+			y = 9
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_militia_act_of_1904 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_militia_council
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_canadian_may_command
+			icon = GFX_goal_officers
+			x = 64
+			y = 9
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_militia_act_of_1904 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_command_power = 50
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_decrease
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_supporting_services
+			icon = GFX_goal_construction_engineering
+			x = 62
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_militia_council focus = CANDNC_a_canadian_may_command }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					tech_engineers = 1
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 2
+					category = support_tech
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_camp_at_petawawa
+			icon = GFX_goal_generic_army_artillery2
+			x = 60
+			y = 11
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_supporting_services }
+			allow_branch = {
+				date > 1905.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				276 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_in_aid_of_the_civil_power
+			icon = GFX_goal_continuous_suppression
+			x = 64
+			y = 11
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_supporting_services }
+			allow_branch = {
+				date > 1909.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_in_aid_of_the_civil_power
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_sir_william_otter
+			icon = GFX_focus_generic_advisors
+			x = 62
+			y = 12
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_supporting_services }
+			allow_branch = {
+				date > 1908.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_chief_of_the_general_staff
+				add_command_power = 50
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_general_staff_for_canada
+			icon = GFX_focus_generic_defensive_reorganization
+			x = 62
+			y = 13
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_sir_william_otter }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = CAN_chief_of_the_general_staff
+					add_idea = CAN_the_general_staff
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_question_of_the_rifle
+			icon = GFX_goal_generic_small_arms
+			x = 70
+			y = 0
+			cost = 5
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_ross_made_in_canada
+			icon = GFX_focus_AST_lithgow_small_arms_factory
+			x = 68
+			y = 1
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_question_of_the_rifle }
+			mutually_exclusive = { focus = CANDNC_the_lee_enfield_from_london }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_ross_rifle
+				466 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lee_enfield_from_london
+			icon = GFX_goal_ENG_london
+			x = 72
+			y = 1
+			cost = 5
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_question_of_the_rifle }
+			mutually_exclusive = { focus = CANDNC_the_ross_made_in_canada }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_lee_enfield_pattern
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ENG
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_contract_with_sir_charles_ross
+			icon = GFX_goal_generic_dangerous_deal
+			x = 68
+			y = 2
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_ross_made_in_canada }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				466 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_rifle_works_at_quebec
+			icon = GFX_goal_generic_construct_mil_factory
+			x = 68
+			y = 3
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_contract_with_sir_charles_ross }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				466 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_mark_i_is_issued
+			icon = GFX_goal_QIN_arming_soldiers
+			x = 68
+			y = 4
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_rifle_works_at_quebec }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					early_infantry_weapons_1900 = 1
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = CAN
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_rifle_that_jams
+			icon = GFX_goal_generic_political_pressure
+			x = 68
+			y = 5
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_mark_i_is_issued }
+			ai_will_do = {
+				factor = 1
+			}
+			# the board of officers reports
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = CAN_the_ross_rifle
+					add_idea = CAN_the_ross_under_report
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_stand_by_the_ross
+			icon = GFX_focus_spr_masters_of_our_own_fate
+			x = 68
+			y = 6
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_rifle_that_jams }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = CAN_the_ross_under_report
+					add_idea = CAN_faith_in_the_ross
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_buy_from_the_imperial_works
+			icon = GFX_goal_generic_positive_trade_relations
+			x = 72
+			y = 2
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lee_enfield_from_london }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 3000
+					producer = ENG
+				}
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_one_pattern_for_the_empire
+			icon = GFX_goal_tfv_strengthen_commonwealth_ties
+			x = 72
+			y = 3
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_buy_from_the_imperial_works }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					early_infantry_weapons_1900 = 1
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_dominion_arsenal
+			icon = GFX_goal_munitions_factories
+			x = 72
+			y = 4
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_one_pattern_for_the_empire }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				466 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_musketry_course
+			icon = GFX_focus_generic_army_attack
+			x = 72
+			y = 5
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_dominion_arsenal }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					sniper_1904 = 1
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_no_works_of_our_own
+			icon = GFX_goal_generic_trade
+			x = 72
+			y = 6
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_musketry_course }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = CAN_the_lee_enfield_pattern
+					add_idea = CAN_bound_to_the_imperial_works
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = ENG
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_schools_of_musketry
+			icon = GFX_goal_military_academy
+			x = 70
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_stand_by_the_ross focus = CANDNC_no_works_of_our_own }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_schools_of_musketry
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_take_over_halifax
+			icon = GFX_goal_nested_fortifications
+			x = 68
+			y = 8
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_schools_of_musketry }
+			allow_branch = {
+				date > 1905.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				464 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 7361
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = artillery
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_take_over_esquimalt
+			icon = GFX_focus_generic_coastal_fort
+			x = 72
+			y = 8
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_schools_of_musketry }
+			allow_branch = {
+				date > 1905.1.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				740 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 7259
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_last_british_garrisons
+			icon = GFX_goal_tfv_sever_ties_with_uk
+			x = 70
+			y = 9
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_take_over_halifax }
+			prerequisite = { focus = CANDNC_take_over_esquimalt }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_autonomy_ratio = {
+					value = 0.05
+					localization = CANDNC_the_last_british_garrisons
+				}
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_decrease
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_garrison_artillery
+			icon = GFX_goal_artillery_tactics
+			x = 68
+			y = 10
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_last_british_garrisons }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				set_technology = {
+					heavy_field_gun1 = 1
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_bill_for_two_fortresses
+			icon = GFX_goal_generic_consumer_goods
+			x = 72
+			y = 10
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_last_british_garrisons }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_bill_for_two_fortresses
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_arsenal_at_quebec
+			icon = GFX_goal_national_arsenal
+			x = 70
+			y = 11
+			cost = 7
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_garrison_artillery focus = CANDNC_the_bill_for_two_fortresses }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				466 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_defence_of_the_dominion
+			icon = GFX_goal_generic_defence
+			x = 70
+			y = 12
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_arsenal_at_quebec }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_defence_of_the_dominion
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 2
+					category = land_doctrine
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_colonial_conference_of_1902
+		icon = GFX_focus_generic_conference
+		x = 76
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		allow_branch = {
+			date > 1902.6.30
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_no_permanent_imperial_council
+			icon = GFX_focus_eng_imperial_federation
+			x = 76
+			y = 1
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_colonial_conference_of_1902 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_autonomy_without_a_seat
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_unilateral_preference
+			icon = GFX_goal_generic_positive_trade_relations
+			x = 80
+			y = 1
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_colonial_conference_of_1902 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_british_preference
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = 20
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_no_imperial_zollverein
+			icon = GFX_focus_ARG_revisit_the_roca_runciman_treaty
+			x = 76
+			y = 2
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_no_permanent_imperial_council }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = CANDNC_no_imperial_zollverein
+					category = industry
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_imperial_conference_of_1907
+			icon = GFX_goal_ENG_london
+			x = 76
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1907.4.15
+			}
+			prerequisite = { focus = CANDNC_no_imperial_zollverein }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 75
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_title_of_dominion
+			icon = GFX_focus_AST_the_australian_commonwealth
+			x = 76
+			y = 4
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_imperial_conference_of_1907 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_dominion_in_name
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_deakins_secretariat
+			icon = GFX_focus_eng_chiefs_of_staff_committee
+			x = 80
+			y = 4
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_imperial_conference_of_1907 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_autonomy_ratio = {
+					value = 0.03
+					localization = CANDNC_deakins_secretariat
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_dominions_department
+			icon = GFX_goal_generic_parliament
+			x = 76
+			y = 5
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_title_of_dominion }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_treaty_with_france
+			icon = GFX_focus_generic_diplomatic_treaty
+			x = 80
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1907.9.19
+			}
+			prerequisite = { focus = CANDNC_deakins_secretariat }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_french_commercial_treaty
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_fisheries_protection_service
+		icon = GFX_focus_PHI_rally_the_fisherfolk
+		x = 84
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_ideas = CAN_the_fisheries_protection_service
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_imperial_fortresses
+			icon = GFX_focus_generic_coastal_fort
+			x = 84
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1905.1.1
+			}
+			prerequisite = { focus = CANDNC_the_fisheries_protection_service }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_imperial_fortresses
+				add_tech_bonus = {
+					name = CANDNC_the_imperial_fortresses
+					category = cat_fortification
+					uses = 1
+					bonus = 0.5
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_cheque_to_the_admiralty
+			icon = GFX_goal_tfv_strengthen_commonwealth_ties
+			x = 84
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_imperial_fortresses }
+			mutually_exclusive = { focus = CANDNC_a_naval_service_of_our_own }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_increase
+				}
+				add_doctrine_cost_reduction = {
+					name = CANDNC_the_cheque_to_the_admiralty
+					cost_reduction = 0.5
+					uses = 2
+					category = naval_doctrine
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_naval_service_of_our_own
+			icon = GFX_focus_AST_royal_australian_navy
+			x = 88
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_imperial_fortresses }
+			mutually_exclusive = { focus = CANDNC_the_cheque_to_the_admiralty }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 50
+				add_ideas = CAN_the_naval_service_of_canada
+				add_offsite_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_a_regular_contribution
+		icon = GFX_goal_generic_dangerous_deal
+		x = 84
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_the_cheque_to_the_admiralty }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 25
+			}
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_admiralty_guarantee
+			icon = GFX_focus_eng_global_defense
+			x = 84
+			y = 4
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_regular_contribution }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_admiralty_guarantee
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_voice_at_the_imperial_table
+			icon = GFX_focus_eng_move_to_secure_the_dominions
+			x = 84
+			y = 5
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_admiralty_guarantee }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_command_power = 40
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_halifax_station
+			icon = GFX_focus_generic_atlantic_coast
+			x = 76
+			y = 6
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_voice_at_the_imperial_table }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 25
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_esquimalt_station
+			icon = GFX_focus_AST_british_pacific_fleet
+			x = 80
+			y = 6
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_voice_at_the_imperial_table }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 30
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_monk_refuses_the_estimates
+			icon = GFX_focus_generic_strike_at_democracy1
+			x = 84
+			y = 6
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_voice_at_the_imperial_table }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_quebec_grievance
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_imperial_naval_stores
+			icon = GFX_goal_generic_production2
+			x = 76
+			y = 7
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_halifax_station }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = CANDNC_imperial_naval_stores
+					category = naval_equipment
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_no_yard_of_our_own
+			icon = GFX_focus_generic_industry_3
+			x = 80
+			y = 7
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_esquimalt_station }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_no_yard_of_our_own
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_ligue_nationaliste
+			icon = GFX_focus_generic_support_the_left_right
+			x = 84
+			y = 7
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_monk_refuses_the_estimates }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_ligue_nationaliste
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_ready_aye_ready
+			icon = GFX_focus_eng_god_save_the_king
+			x = 76
+			y = 8
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_imperial_naval_stores }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.08
+				add_ideas = CAN_ready_aye_ready
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_battlecruiser_subscription
+			icon = GFX_grand_battlefleet_medium
+			x = 80
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_no_yard_of_our_own }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = -0.05
+				add_tech_bonus = {
+					name = CANDNC_the_battlecruiser_subscription
+					category = bc_tech
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_le_nationaliste
+			icon = GFX_goal_generic_neutrality_focus
+			x = 84
+			y = 8
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_ligue_nationaliste }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = CAN_the_ligue_nationaliste
+					add_idea = CAN_the_nationaliste_press
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_dominion_that_pays
+			icon = GFX_focus_eng_the_sun_never_sets
+			x = 80
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_ready_aye_ready }
+			prerequisite = { focus = CANDNC_the_battlecruiser_subscription }
+			prerequisite = { focus = CANDNC_le_nationaliste }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = CANDNC_a_dominion_that_pays
+					category = naval_doctrine
+					uses = 1
+					bonus = 1.0
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_cruiser_canada
+		icon = GFX_goal_generic_navy_cruiser
+		x = 88
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = CANDNC_a_naval_service_of_our_own }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 15
+			}
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_take_over_the_dockyards
+			icon = GFX_goal_generic_construct_naval_dockyard
+			x = 88
+			y = 4
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_cruiser_canada }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = CANDNC_take_over_the_dockyards
+					category = construction_tech
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_halifax_yard
+			icon = GFX_focus_BEL_cockerill_shipyards
+			x = 88
+			y = 5
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_take_over_the_dockyards }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 30
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_esquimalt_yard
+			icon = GFX_focus_ICE_modernizing_the_coast_guard
+			x = 92
+			y = 5
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_take_over_the_dockyards }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 30
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_officers_of_our_own
+			icon = GFX_focus_AST_coast_watchers
+			x = 88
+			y = 6
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_halifax_yard }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				army_experience = 25
+				navy_experience = 25
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_fisheries_patrol_expanded
+			icon = GFX_focus_PHI_philippine_naval_patrol
+			x = 92
+			y = 6
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_esquimalt_yard }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 25
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = 20
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_yard_on_the_st_lawrence
+			icon = GFX_goal_heavy_industry_factory
+			x = 88
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_officers_of_our_own }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_offsite_building = {
+					type = dockyard
+					level = 1
+				}
+				add_tech_bonus = {
+					name = CANDNC_a_yard_on_the_st_lawrence
+					category = naval_equipment
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_naval_militia
+			icon = GFX_focus_generic_manpower
+			x = 92
+			y = 7
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_fisheries_patrol_expanded }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 25
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_tin_pot_navy
+			icon = GFX_focus_generic_destroyer
+			x = 88
+			y = 8
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_yard_on_the_st_lawrence }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = -0.05
+				navy_experience = 40
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_australian_precedent
+			icon = GFX_focus_AST_stretch_the_fleet
+			x = 92
+			y = 8
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_naval_militia }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 30
+				add_tech_bonus = {
+					name = CANDNC_the_australian_precedent
+					category = ca_tech
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_two_oceans_one_budget
+			icon = GFX_focus_AST_the_ultimate_overseas_duty
+			x = 88
+			y = 9
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_tin_pot_navy }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_two_oceans_one_budget
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_new_zealand_cheque
+			icon = GFX_focus_MAN_manchurian_navy
+			x = 92
+			y = 9
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_australian_precedent }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+				add_doctrine_cost_reduction = {
+					name = CANDNC_the_new_zealand_cheque
+					cost_reduction = 0.5
+					uses = 1
+					category = naval_doctrine
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_fleet_of_our_own
+			icon = GFX_focus_generic_north_atlantic_fleet
+			x = 88
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_two_oceans_one_budget }
+			prerequisite = { focus = CANDNC_the_new_zealand_cheque }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				navy_experience = 50
+				add_ideas = CAN_a_fleet_of_our_own
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_hay_pauncefote_treaty
+		icon = GFX_col_focus_canal
+		x = 92
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		allow_branch = {
+			date > 1901.11.18
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = USA
+				modifier = small_increase
+			}
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_hay_herbert_convention
+			icon = GFX_focus_generic_treaty
+			x = 92
+			y = 1
+			cost = 8
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1903.1.24
+			}
+			prerequisite = { focus = CANDNC_the_hay_pauncefote_treaty }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = CANDNC_the_hay_herbert_convention
+					category = electronics
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_canadian_commissioners
+			icon = GFX_focus_generic_self_management
+			x = 92
+			y = 2
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_hay_herbert_convention }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_alverstone_award
+			icon = GFX_goal_generic_forceful_treaty
+			x = 92
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1903.10.20
+			}
+			prerequisite = { focus = CANDNC_the_canadian_commissioners }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_alaska_award
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_protest_and_submit
+			icon = GFX_goal_generic_improve_relations
+			x = 92
+			y = 4
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_alverstone_award }
+			mutually_exclusive = { focus = CANDNC_denounce_the_arbitration }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = CAN_the_alaska_award
+					add_idea = CAN_bound_by_london
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_denounce_the_arbitration
+			icon = GFX_goal_tfv_sever_ties_with_uk
+			x = 96
+			y = 4
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_alverstone_award }
+			mutually_exclusive = { focus = CANDNC_protest_and_submit }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.10
+				swap_ideas = {
+					remove_idea = CAN_the_alaska_award
+					add_idea = CAN_the_alaska_grievance
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_power_to_treat
+			icon = GFX_focus_eng_decolonization
+			x = 96
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_protest_and_submit focus = CANDNC_denounce_the_arbitration }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 100
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_yukon_without_a_port
+			icon = GFX_goal_generic_demand_territory
+			x = 96
+			y = 6
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_power_to_treat }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = CANDNC_the_yukon_without_a_port
+					category = excavation_tech
+					uses = 1
+					bonus = 0.5
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_great_lakes_limits
+			icon = GFX_focus_CONGO_legacy_of_lake_tanganyika
+			x = 96
+			y = 7
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_yukon_without_a_port }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_rush_bagot_agreement
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_boundary_waters_treaty
+			icon = GFX_goal_new_treaty
+			x = 96
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1909.1.11
+			}
+			prerequisite = { focus = CANDNC_the_great_lakes_limits }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_international_joint_commission
+			icon = GFX_focus_generic_little_entente
+			x = 96
+			y = 9
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_boundary_waters_treaty }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_international_joint_commission
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_department_of_external_affairs
+			icon = GFX_goal_generic_secret_weapon
+			x = 96
+			y = 10
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1909.6.1
+			}
+			prerequisite = { focus = CANDNC_the_international_joint_commission }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_department_of_external_affairs
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_room_on_bank_street
+			icon = GFX_goal_generic_parliament
+			x = 96
+			y = 11
+			cost = 8
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_department_of_external_affairs }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_autonomy_ratio = {
+					value = 0.02
+					localization = CANDNC_a_room_on_bank_street
+				}
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_foster_resolution
+		icon = GFX_focus_generic_treaty
+		x = 84
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		allow_branch = {
+			date > 1909.3.29
+		}
+		prerequisite = { focus = CANDNC_a_dominion_that_pays focus = CANDNC_a_fleet_of_our_own }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_the_imperial_defence_conference
+			icon = GFX_focus_generic_conference
+			x = 84
+			y = 13
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = {
+				date > 1909.7.1
+			}
+			prerequisite = { focus = CANDNC_the_foster_resolution }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.05
+				navy_experience = 50
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_two_readings_of_one_vote
+			icon = GFX_focus_generic_diplomatic_treaty
+			x = 84
+			y = 14
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_imperial_defence_conference }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_two_readings_of_one_vote
+			}
+		}
+
+	focus = {
+		id = CANDNC_the_conciliation_act
+		icon = GFX_goal_trade_union_deal
+		x = 102
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 60
+			add_ideas = CAN_the_labour_gazette
+		}
+	}
+
+	
+		focus = {
+			id = CANDNC_conciliation_before_all
+			icon = GFX_goal_generic_political_pressure
+			x = 100
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_conciliation_act }
+			mutually_exclusive = { focus = CANDNC_the_right_to_organize }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+				add_ideas = CAN_conciliation_doctrine
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_right_to_organize
+			icon = GFX_focus_eng_concessions_to_the_trade_unions
+			x = 104
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_conciliation_act }
+			mutually_exclusive = { focus = CANDNC_conciliation_before_all }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 50
+				add_ideas = CAN_recognized_unions
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lemieux_act
+			icon = GFX_focus_generic_court
+			x = 100
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = { date > 1906.1.1 }
+			prerequisite = { focus = CANDNC_conciliation_before_all }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+				swap_ideas = {
+					remove_idea = CAN_conciliation_doctrine
+					add_idea = CAN_the_lemieux_act
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_boards_of_investigation
+			icon = GFX_focus_generic_commission
+			x = 100
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lemieux_act }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_lethbridge_and_district_18
+			icon = GFX_focus_generic_coal_mining
+			x = 100
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_boards_of_investigation }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_aid_to_the_civil_power
+			icon = GFX_goal_generic_position_armies
+			x = 100
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = { date > 1909.1.1 }
+			prerequisite = { focus = CANDNC_lethbridge_and_district_18 }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				army_experience = 25
+				add_ideas = CAN_militia_in_the_coalfields
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_company_town
+			icon = GFX_focus_generic_industry_3
+			x = 100
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_aid_to_the_civil_power }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_company_town
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_congress_at_berlin
+			icon = GFX_focus_ITA_workers_unions
+			x = 104
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_right_to_organize }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_increase
+				}
+				add_ideas = CAN_the_international_unions
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_railway_brotherhood
+			icon = GFX_focus_generic_railroad
+			x = 104
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_congress_at_berlin }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_recognition_in_the_charters
+			icon = GFX_focus_generic_treaty
+			x = 104
+			y = 4
+			cost = 15
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_railway_brotherhood }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+				swap_ideas = {
+					remove_idea = CAN_recognized_unions
+					add_idea = CAN_recognition_in_the_charters
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_island_collieries
+			icon = GFX_focus_generic_mineral_prospecting
+			x = 104
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_recognition_in_the_charters }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_labour_in_parliament
+			icon = GFX_ARG_workers_in_parliament
+			x = 104
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_island_collieries }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_deputy_minister
+			icon = GFX_focus_generic_self_management
+			x = 102
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_company_town focus = CANDNC_labour_in_parliament }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 75
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_wage_returns
+			icon = GFX_focus_generic_printing_press
+			x = 102
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_deputy_minister }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_wage_returns
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_gate_on_the_pacific
+			icon = GFX_focus_generic_immigration
+			x = 110
+			y = 0
+			cost = 10
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_head_tax
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_open_door
+			icon = GFX_focus_ARG_immigration_wave
+			x = 108
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_gate_on_the_pacific }
+			mutually_exclusive = { focus = CANDNC_shut_the_gate }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				469 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				470 = {
+					add_extra_state_shared_building_slots = 1
+				}
+				add_ideas = CAN_the_open_door
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_shut_the_gate
+			icon = GFX_COS_limit_immigration_icon
+			x = 112
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_gate_on_the_pacific }
+			mutually_exclusive = { focus = CANDNC_the_open_door }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+				add_ideas = CAN_selection_over_volume
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_palliser_triangle
+			icon = GFX_focus_ETH_invite_italian_settlers
+			x = 108
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_open_door }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_hands_for_the_grade
+			icon = GFX_goal_generic_construct_infrastructure
+			x = 108
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_palliser_triangle }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_navvies_of_the_grade
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_record_year
+			icon = GFX_focus_generic_population_growth
+			x = 108
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_hands_for_the_grade }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_manpower = 20000
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_a_west_of_strangers
+			icon = GFX_goal_generic_national_unity
+			x = 108
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_record_year }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.05
+				add_ideas = CAN_a_west_of_strangers
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_price_of_the_open_door
+			icon = GFX_goal_generic_consumer_goods
+			x = 108
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_a_west_of_strangers }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_five_hundred_dollars
+			icon = GFX_focus_PHI_encourage_chinese_immigration
+			x = 112
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_shut_the_gate }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 75
+				add_ideas = CAN_the_five_hundred_dollar_tax
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_prohibited_classes
+			icon = GFX_goal_generic_forceful_treaty
+			x = 112
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_five_hundred_dollars }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_continuous_journey
+			icon = GFX_goal_continuous_restrict_freedom
+			x = 112
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = { date > 1907.6.1 }
+			prerequisite = { focus = CANDNC_the_prohibited_classes }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_government_by_order_in_council
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_two_hundred_dollars_in_hand
+			icon = GFX_goal_generic_dangerous_deal
+			x = 112
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_continuous_journey }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_closed_door
+			icon = GFX_focus_generic_oppression
+			x = 112
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_two_hundred_dollars_in_hand }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_closed_door
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_answer_for_vancouver
+			icon = GFX_focus_POL_riot_of_37
+			x = 110
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = { date > 1907.6.1 }
+			prerequisite = { focus = CANDNC_the_price_of_the_open_door focus = CANDNC_the_closed_door }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_war_support = 0.05
+				add_stability = -0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_compensation_commissions
+			icon = GFX_goal_generic_improve_relations
+			x = 108
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_answer_for_vancouver }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = QIN
+					modifier = medium_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lemieux_mission
+			icon = GFX_focus_generic_diplomatic_treaty
+			x = 112
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_answer_for_vancouver }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_opinion_modifier = {
+					target = JAP
+					modifier = large_increase
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_opium_act
+			icon = GFX_focus_RAJ_legalize_the_opium_trade
+			x = 110
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_compensation_commissions focus = CANDNC_the_lemieux_mission }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_first_prohibition
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_cities_of_the_dominion
+			icon = GFX_focus_SWE_urbanization
+			x = 118
+			y = 0
+			cost = 10
+			available_if_capitulated = yes
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_growing_cities
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_sanitary_city
+			icon = GFX_ARG_build_hospital
+			x = 116
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_cities_of_the_dominion }
+			mutually_exclusive = { focus = CANDNC_the_moral_city }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.05
+				add_manpower = 10000
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_moral_city
+			icon = GFX_focus_PHI_philippine_independent_church
+			x = 120
+			y = 1
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_cities_of_the_dominion }
+			mutually_exclusive = { focus = CANDNC_the_sanitary_city }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				add_stability = 0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_great_fires
+			icon = GFX_focus_ARG_rapid_urbanization
+			x = 116
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_sanitary_city }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_stone_and_brick
+			icon = GFX_goal_generic_construction
+			x = 116
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_great_fires }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_stone_and_brick
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_milk_and_the_water
+			icon = GFX_focus_generic_bad_medical
+			x = 116
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_stone_and_brick }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_pure_milk_and_filtered_water
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_tuberculosis_leagues
+			icon = GFX_focus_INS_expand_batavia_med_school
+			x = 116
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_milk_and_the_water }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_temperance_leagues
+			icon = GFX_focus_CHI_ban_immoral_entertainment
+			x = 120
+			y = 2
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_moral_city }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_dominion_alliance
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_local_option
+			icon = GFX_focus_RAJ_provincial_autonomy
+			x = 120
+			y = 3
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_temperance_leagues }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_lords_day_alliance
+			icon = GFX_focus_COG_recognize_the_kimbanguist_church
+			x = 120
+			y = 4
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_local_option }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_lords_day_act
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_provincial_prosecutor
+			icon = GFX_focus_SWI_federal_police
+			x = 120
+			y = 5
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_lords_day_alliance }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = 0.03
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_chief_medical_officer
+			icon = GFX_ARG_american_doctors
+			x = 118
+			y = 6
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_the_tuberculosis_leagues focus = CANDNC_the_provincial_prosecutor }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.02
+				}
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_publish_the_bryce_report
+			icon = GFX_goal_QIN_press_democratic
+			x = 116
+			y = 7
+			cost = 15
+			available_if_capitulated = yes
+			allow_branch = { date > 1907.1.1 }
+			prerequisite = { focus = CANDNC_the_chief_medical_officer }
+			mutually_exclusive = { focus = CANDNC_leave_it_in_the_file }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_bryce_report_published
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_leave_it_in_the_file
+			icon = GFX_goal_continuous_suppression
+			x = 120
+			y = 7
+			cost = 10
+			available_if_capitulated = yes
+			allow_branch = { date > 1907.1.1 }
+			prerequisite = { focus = CANDNC_the_chief_medical_officer }
+			mutually_exclusive = { focus = CANDNC_publish_the_bryce_report }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_political_power = 75
+				add_ideas = CAN_the_report_in_the_file
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_ventilation_and_isolation
+			icon = GFX_focus_RAJ_enrollment_of_dali_children
+			x = 116
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_publish_the_bryce_report }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_manpower = 10000
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_press_finds_out
+			icon = GFX_focus_generic_printing_press
+			x = 120
+			y = 8
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_leave_it_in_the_file }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_stability = -0.05
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_the_land_around_the_towns
+			icon = GFX_focus_generic_land_reclamation
+			x = 118
+			y = 9
+			cost = 10
+			available_if_capitulated = yes
+			prerequisite = { focus = CANDNC_ventilation_and_isolation focus = CANDNC_the_press_finds_out }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_land_around_the_towns
+			}
+		}
+
+	
+		focus = {
+			id = CANDNC_sifton_takes_the_chair
+			icon = GFX_focus_generic_conference
+			x = 118
+			y = 10
+			cost = 15
+			available_if_capitulated = yes
+			allow_branch = { date > 1909.1.1 }
+			prerequisite = { focus = CANDNC_the_land_around_the_towns }
+			ai_will_do = {
+				factor = 1
+			}
+			completion_reward = {
+				add_ideas = CAN_the_commission_of_conservation
+			}
+		}
+}
