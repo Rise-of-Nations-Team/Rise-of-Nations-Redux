@@ -15,6 +15,33 @@ focus_tree = {
 
 	continuous_focus_position = { x = 400 y = 4800 }
 
+	# Category navigation shortcuts (native focus-tree bookmarks)
+	shortcut = {
+		name = CAN_dnc_economy_sc
+		target = CANDNC_a_the_national_transcontinental
+		scroll_wheel_factor = 0.6
+	}
+	shortcut = {
+		name = CAN_dnc_political_sc
+		target = CANDNC_the_precedent_of_1899
+		scroll_wheel_factor = 0.6
+	}
+	shortcut = {
+		name = CAN_dnc_army_sc
+		target = CANDNC_a_paardebergs_battle_honour
+		scroll_wheel_factor = 0.6
+	}
+	shortcut = {
+		name = CAN_dnc_airforce_sc
+		target = CANDNC_a_the_silver_dart_flies
+		scroll_wheel_factor = 0.6
+	}
+	shortcut = {
+		name = CAN_dnc_navy_sc
+		target = CANDNC_a_a_naval_service_of_our_own
+		scroll_wheel_factor = 0.6
+	}
+
 	focus = {
 		id = CANDNC_the_precedent_of_1899
 		icon = GFX_goal_CAN_parliament
@@ -53,7 +80,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_paardebergs_battle_honour
-			icon = GFX_goal_CAN_join_british
+			icon = defence
 			x = 12
 			y = 2
 			cost = 10
@@ -136,7 +163,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_dundonald_goes_home
-			icon = GFX_focus_generic_home_defense
+			icon = GFX_goal_generic_officers
 			x = 12
 			y = 6
 			cost = 10
@@ -241,7 +268,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_niagara_at_cost
-			icon = GFX_focus_generic_public_works
+			icon = GFX_focus_electrification
 			x = 12
 			y = 9
 			cost = 10
@@ -264,7 +291,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_the_lemieux_act
-			icon = GFX_goal_trade_union_deal
+			icon = GFX_goal_generic_union_agreement
 			x = 12
 			y = 10
 			cost = 10
@@ -335,7 +362,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_a_the_panic_of_1907
-		icon = GFX_focus_usa_reestablish_the_gold_standard
+		icon = GFX_goal_generic_bankruptcy
 		x = 12
 		y = 14
 		cost = 15
@@ -400,7 +427,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_the_silver_dart_flies
-			icon = GFX_goal_CAN_coa_air_force
+			icon = GFX_RON_aerial_fleet
 			x = 20
 			y = 17
 			cost = 10
@@ -438,7 +465,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_the_fleet_unit_promised
-			icon = GFX_goal_generic_build_navy
+			icon = GFX_goal_generic_multiple_ships
 			x = 8
 			y = 19
 			cost = 10
@@ -541,7 +568,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_a_the_national_transcontinental
-		icon = GFX_goal_CAN_cpr
+		icon = GFX_goal_generic_railroad
 		x = 4
 		y = 4
 		cost = 15
@@ -695,7 +722,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_a_two_provinces_by_a_meridian
-		icon = GFX_focus_RAJ_provincial_autonomy
+		icon = GFX_focus_bo_constitution
 		x = 4
 		y = 8
 		cost = 15
@@ -788,7 +815,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_haultain_forms_the_government
-			icon = GFX_focus_generic_election
+			icon = GFX_goal_government_icon
 			x = 20
 			y = 9
 			cost = 10
@@ -854,7 +881,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_the_continuous_journey
-			icon = GFX_focus_generic_naval_ship
+			icon = GFX_passenger_cruiser_4
 			x = 4
 			y = 13
 			cost = 10
@@ -871,7 +898,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_a_the_opium_act
-			icon = GFX_focus_CHI_crackdown_on_illicit_goods
+			icon = GFX_generic_trade_sanctions
 			x = 4
 			y = 14
 			cost = 10
@@ -1028,7 +1055,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_b_the_defence_contribution
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_naval_defense_fund
 		x = 40
 		y = 3
 		cost = 10
@@ -1112,7 +1139,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_b_ships_under_the_white_ensign
-		icon = GFX_focus_generic_naval_ship_transfer
+		icon = GFX_focus_bo_navy
 		x = 44
 		y = 4
 		cost = 15
@@ -1174,7 +1201,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_the_squadron_stays_at_halifax
-			icon = GFX_focus_generic_coastal_fort
+			icon = GFX_goal_generic_multiple_ships
 			x = 36
 			y = 6
 			cost = 10
@@ -1206,7 +1233,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_the_ligue_nationaliste_marches
-			icon = GFX_goal_propaganda
+			icon = GFX_focus_bo_rally
 			x = 40
 			y = 6
 			cost = 10
@@ -1225,7 +1252,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_the_royal_naval_reserve_of_canada
-			icon = GFX_focus_generic_naval_discipline
+			icon = GFX_goal_ENG_sailor_enlistment
 			x = 44
 			y = 6
 			cost = 10
@@ -1358,7 +1385,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_wheat_for_liverpool_at_preference
-			icon = GFX_focus_generic_agriculture2
+			icon = GFX_focus_ron_generic_export_focus
 			x = 48
 			y = 7
 			cost = 10
@@ -1455,7 +1482,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_b_the_naval_scare_of_1909
-		icon = GFX_goal_GER_deutchland_class
+		icon = GFX_RON_German_Battleship_Programme
 		x = 36
 		y = 8
 		cost = 15
@@ -1471,7 +1498,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_sudbury_refines_at_home
-			icon = GFX_goal_CAN_imperial_oil
+			icon = GFX_goal_country_of_iron_and_steel
 			x = 40
 			y = 8
 			cost = 10
@@ -1606,7 +1633,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_the_pacific_cable_and_marconi
-			icon = GFX_focus_research
+			icon = ENG_project_northumberland
 			x = 40
 			y = 9
 			cost = 10
@@ -1626,7 +1653,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_b_a_dreadnought_for_the_king
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_focus_bo_big_navy
 		x = 36
 		y = 10
 		cost = 15
@@ -1793,7 +1820,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_the_empire_settlement
-			icon = GFX_focus_generic_manpower
+			icon = GFX_goal_generic_relocate_settlers
 			x = 28
 			y = 12
 			cost = 10
@@ -1825,7 +1852,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_b_the_admiraltys_guarantee
-			icon = GFX_focus_eng_global_defense
+			icon = GFX_goal_naval_treaty
 			x = 36
 			y = 12
 			cost = 10
@@ -1847,7 +1874,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_b_the_tenth_province
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_goal_CAN_newfoundland_labrador
 		x = 40
 		y = 12
 		cost = 15
@@ -1996,7 +2023,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_unrestricted_reciprocity
-		icon = GFX_focus_generic_befriend_usa
+		icon = trade_with_america
 		x = 68
 		y = 1
 		cost = 10
@@ -2040,7 +2067,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_c_the_dollar_comes_north
-			icon = GFX_focus_generic_industry_investment
+			icon = america_investors
 			x = 68
 			y = 3
 			cost = 10
@@ -2058,7 +2085,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_treaty_of_natural_products
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_trade_pact
 		x = 64
 		y = 3
 		cost = 10
@@ -2077,7 +2104,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_dingley_wall_holds
-		icon = GFX_focus_generic_british_trade
+		icon = GFX_focus_bo_closed_trade
 		x = 72
 		y = 3
 		cost = 10
@@ -2233,7 +2260,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_winnipeg_exchange_loses_its_grip
-		icon = GFX_goal_generic_solidarity
+		icon = GFX_goal_generic_financial_markets
 		x = 76
 		y = 6
 		cost = 10
@@ -2248,7 +2275,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_winter_port_at_portland
-		icon = GFX_goal_generic_shipyard
+		icon = GFX_focus_ron_trade_navy
 		x = 60
 		y = 7
 		cost = 10
@@ -2281,7 +2308,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_c_under_the_monroe_doctrine
-			icon = GFX_focus_ARG_align_with_the_monroe_doctrine
+			icon = GFX_USA_American_Shield
 			x = 68
 			y = 7
 			cost = 15
@@ -2398,7 +2425,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_defy_london
-		icon = GFX_focus_ARG_cut_ties_with_britain
+		icon = enemy_of_britain2
 		x = 76
 		y = 11
 		cost = 15
@@ -2434,7 +2461,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_c_reciprocity_without_the_union
-			icon = GFX_goal_generic_government_deals
+			icon = GFX_generic_free_trade
 			x = 60
 			y = 12
 			cost = 10
@@ -2458,7 +2485,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_c_the_question_of_union
-			icon = GFX_goal_generic_political_pressure
+			icon = GFX_USA_fate_of_our_nation
 			x = 76
 			y = 12
 			cost = 15
@@ -2490,7 +2517,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_plebiscite_on_union
-		icon = GFX_goal_generic_elections
+		icon = GFX_focus_bo_vote
 		x = 64
 		y = 13
 		cost = 15
@@ -2523,7 +2550,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_associate_not_the_state
-		icon = GFX_goal_generic_alliance
+		icon = GFX_goal_generic_join_washington
 		x = 80
 		y = 13
 		cost = 15
@@ -2556,7 +2583,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_campaign
-		icon = GFX_goal_propaganda
+		icon = GFX_focus_bo_rally
 		x = 64
 		y = 14
 		cost = 10
@@ -2590,7 +2617,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_c_the_junior_partner_of_a_giant
-			icon = GFX_focus_BRA_north_and_south_america
+			icon = GFX_Goal_USA_befriend_america
 			x = 80
 			y = 14
 			cost = 10
@@ -2682,7 +2709,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_west_goes_south
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_USA_help_canada_break_away
 		x = 64
 		y = 16
 		cost = 15
@@ -2706,7 +2733,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_nine_new_states
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_flag_usa
 		x = 72
 		y = 16
 		cost = 20
@@ -2904,7 +2931,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_denounce_the_arbitration
-			icon = GFX_focus_renounce_the_treaty_of_trianon
+			icon = renounce_treaty2
 			x = 88
 			y = 4
 			cost = 15
@@ -2925,7 +2952,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_power_to_treat
-			icon = GFX_focus_generic_diplomatic_treaty
+			icon = GFX_generic_focus_treaty_sign
 			x = 104
 			y = 4
 			cost = 15
@@ -2966,7 +2993,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_dundonald_goes_home
-			icon = GFX_focus_chi_army_reform
+			icon = GFX_goal_generic_army_modernizations
 			x = 96
 			y = 5
 			cost = 15
@@ -3022,7 +3049,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_commercial_treaty_power
-			icon = GFX_focus_generic_treaty
+			icon = GFX_goal_trade_pact
 			x = 108
 			y = 5
 			cost = 10
@@ -3124,7 +3151,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_agents_before_ambassadors
-			icon = GFX_goal_generic_improve_relations
+			icon = GFX_goal_generic_foreign_diplomacy
 			x = 104
 			y = 6
 			cost = 10
@@ -3161,7 +3188,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_fisheries_protection_fleet_armed
-			icon = GFX_focus_generic_destroyer
+			icon = GFX_focus_ron_patrol_boats
 			x = 96
 			y = 7
 			cost = 15
@@ -3246,7 +3273,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_loyalists_protest
-			icon = GFX_focus_eng_the_kings_party
+			icon = GFX_Goal_generic_propaganda_britain
 			x = 88
 			y = 8
 			cost = 15
@@ -3261,7 +3288,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_independence_resolution
-			icon = GFX_focus_ARG_cut_ties_with_britain
+			icon = GFX_focus_bo_constitution
 			x = 96
 			y = 8
 			cost = 20
@@ -3292,7 +3319,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_second_resolution
-			icon = GFX_focus_ICE_break_with_the_crown
+			icon = GFX_CANDNC_goal_generic_parliament
 			x = 96
 			y = 9
 			cost = 15
@@ -3366,7 +3393,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_naval_militia
-			icon = GFX_focus_generic_naval_discipline
+			icon = GFX_goal_CAN_coa_navy
 			x = 104
 			y = 9
 			cost = 10
@@ -3385,7 +3412,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_imperial_preference_lapses
-			icon = GFX_focus_generic_devaluation
+			icon = GFX_focus_bo_closed_trade
 			x = 88
 			y = 10
 			cost = 10
@@ -3415,7 +3442,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_loan_denied_in_london
-			icon = GFX_focus_AUS_repay_depth
+			icon = GFX_goal_generic_bankruptcy
 			x = 92
 			y = 10
 			cost = 15
@@ -3460,7 +3487,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_tokyo_treats_directly
-			icon = GFX_focus_asian_equality
+			icon = GFX_goal_align_japan
 			x = 100
 			y = 10
 			cost = 15
@@ -3637,7 +3664,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_alaska_by_force
-			icon = GFX_goal_CAN_strike_america
+			icon = attack_america
 			x = 84
 			y = 12
 			cost = 15
@@ -3816,7 +3843,7 @@ focus_tree = {
 	
 		focus = {
 			id = CANDNC_d_the_kingdom_of_canada_proclaimed
-			icon = GFX_focus_eng_god_save_the_king
+			icon = GFX_goal_bastion_of_monarchism
 			x = 92
 			y = 14
 			cost = 20
