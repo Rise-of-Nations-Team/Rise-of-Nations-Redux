@@ -1,0 +1,317 @@
+ideas = {
+	country = {
+
+		# path b, the imperial federation
+
+		CAN_b_the_kings_reservoir = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				experience_gain_army_factor = 0.05
+				war_support_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		# the three pillars
+
+		CAN_b_the_imperial_council = {
+			picture = generic_conference
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				opinion_gain_monthly_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+
+		CAN_b_an_advisory_council = {
+			picture = generic_political_support
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		CAN_b_the_imperial_zollverein = {
+			picture = free_trade
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		CAN_b_seats_at_westminster = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				opinion_gain_monthly_factor = 0.10
+				stability_factor = -0.05
+			}
+		}
+
+		# fork 1, the money or the men
+
+		CAN_b_the_naval_subsidy = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = 0.10
+				naval_coordination = 0.05
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		CAN_b_the_royal_naval_reserve = {
+			picture = generic_coastal_defense_ships
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = 0.10
+				mobilization_speed = 0.05
+				conscription_factor = -0.02
+			}
+		}
+
+		# quebec answers
+
+		CAN_b_the_nationalist_press = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		# fork 3, the schools of 1905
+
+		CAN_b_the_protestant_west_protests = {
+			picture = FRA_factory_strikes
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.03
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		CAN_b_a_province_governed_against_itself = {
+			picture = generic_oppression
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				conscription_factor = 0.05
+				stability_factor = -0.10
+			}
+		}
+
+		# fork 2, the tariff
+
+		CAN_b_wheat_at_preference = {
+			picture = generic_agrarian_society
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_infrastructure_factor = 0.10
+				trade_opinion_factor = -0.10
+			}
+		}
+
+		CAN_b_the_preference_kept_alone = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.02
+				political_power_factor = -0.05
+			}
+		}
+
+		CAN_b_the_tariff_war = {
+			picture = generic_economic_crisis
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				trade_opinion_factor = -0.20
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		CAN_b_the_nickel_of_the_empire = {
+			picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+				trade_opinion_factor = -0.10
+			}
+		}
+
+		# the admiralty's bill
+
+		CAN_b_the_dreadnought_bill = {
+			picture = ENG_dreadnought_race
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = 0.10
+				consumer_goods_factor = 0.08
+				political_power_factor = -0.10
+			}
+		}
+
+		CAN_b_the_dreadnought_canada = {
+			picture = generic_sea_focused_navy
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				navy_capital_ship_attack_factor = 0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+
+		# fork 4, who fills the west
+
+		CAN_b_the_last_best_west_for_britons = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				monthly_population = -0.05
+			}
+		}
+
+		CAN_b_the_agents_keep_paying = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.10
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		# 1907, the secretariat and its price
+
+		CAN_b_in_every_war_of_the_king = {
+			picture = AST_imperial_pressure
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				experience_gain_army_factor = 0.10
+				ai_call_ally_desire_factor = 200
+				join_faction_tension = -0.50
+				stability_factor = -0.10
+				political_power_factor = -0.10
+			}
+		}
+
+		CAN_b_newfoundlands_debt = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		# end of era
+
+		CAN_b_the_treasury_of_the_empire = {
+			picture = ENG_pax_britannica
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				industrial_capacity_factory = 0.10
+				research_speed_factor = 0.05
+				stability_factor = -0.10
+				trade_opinion_factor = -0.10
+			}
+		}
+
+		CAN_b_the_empires_squadron = {
+			picture = ENG_generic_navy_2
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = 0.15
+				production_speed_dockyard_factor = 0.10
+				naval_coordination = 0.10
+				stability_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+	}
+}

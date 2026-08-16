@@ -1,48 +1,32 @@
 add_namespace = can_dnc_c
 
-# lot c - two nations, one crown
+# path C, the continent is the market
 
+# 1902, roosevelt hears ottawa ask for reciprocity
 country_event = {
 	id = can_dnc_c.1
 	title = can_dnc_c.1.t
 	desc = can_dnc_c.1.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
 		name = can_dnc_c.1.a
-		ai_chance = { base = 40 }
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.02
-		}
-		add_to_variable = { CANC_english_grievance = 1 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_the_deputation_was_heard
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { country_event = { id = can_dnc_c.2 days = 3 } }
 	}
-
 	option = {
 		name = can_dnc_c.1.b
-		ai_chance = { base = 40 }
-		add_political_power = 50
-		add_to_variable = { CANC_french_grievance = 1 }
-		custom_effect_tooltip = CANC_ledger_tt
+		ai_chance = { base = 35 }
+		CAN = { country_event = { id = can_dnc_c.3 days = 3 } }
 	}
-
 	option = {
 		name = can_dnc_c.1.c
 		ai_chance = { base = 20 }
-		subtract_from_variable = { CANC_french_grievance = 1 }
-		add_to_variable = { CANC_english_grievance = 1 }
-		custom_effect_tooltip = CANC_ledger_tt
-		467 = {
-			set_state_flag = CANC_the_ordinance_is_printed_twice
-		}
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { country_event = { id = can_dnc_c.4 days = 3 } }
 	}
 }
 
@@ -50,90 +34,34 @@ country_event = {
 	id = can_dnc_c.2
 	title = can_dnc_c.2.t
 	desc = can_dnc_c.2.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_canada_treaty
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
 		name = can_dnc_c.2.a
-		ai_chance = { base = 35 }
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		subtract_from_variable = { CANC_french_grievance = 2 }
-		add_to_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_a_promise_to_the_bishops
-	}
-
-	option = {
-		name = can_dnc_c.2.b
-		ai_chance = { base = 45 }
-		add_political_power = 50
-		add_to_variable = { CANC_french_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-	}
-
-	option = {
-		name = can_dnc_c.2.c
-		ai_chance = { base = 20 }
-		add_autonomy_ratio = {
-			value = -0.03
-			localization = can_dnc_c.2.c
-		}
-		ENG = {
-			add_opinion_modifier = {
-				target = CAN
-				modifier = RI_friendly_foreign_policy
-			}
-		}
-		add_to_variable = { CANC_english_grievance = 1 }
-		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CAN_dnc_us_reciprocity_offered
+		add_political_power = 25
+		custom_effect_tooltip = can_dnc_c.2.a_tt
 	}
 }
 
+# 120 days to accept the alaska line
 country_event = {
 	id = can_dnc_c.3
 	title = can_dnc_c.3.t
 	desc = can_dnc_c.3.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
 		name = can_dnc_c.3.a
-		ai_chance = { base = 40 }
-		add_stability = 0.03
-		set_country_flag = CANC_sifton_was_warned
-	}
-
-	option = {
-		name = can_dnc_c.3.b
-		ai_chance = { base = 30 }
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
+		set_country_flag = CAN_dnc_us_alaska_first
+		custom_effect_tooltip = can_dnc_c.3.a_tt
+		hidden_effect = {
+			country_event = { id = can_dnc_c.5 days = 120 }
 		}
-		add_to_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-	}
-
-	option = {
-		name = can_dnc_c.3.c
-		ai_chance = { base = 30 }
-		add_to_variable = { CANC_french_grievance = 2 }
-		subtract_from_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_fitzpatrick_held_the_pen
 	}
 }
 
@@ -141,149 +69,61 @@ country_event = {
 	id = can_dnc_c.4
 	title = can_dnc_c.4.t
 	desc = can_dnc_c.4.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
 		name = can_dnc_c.4.a
-		ai_chance = { base = 35 }
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.04
-		}
-		subtract_from_variable = { CANC_french_grievance = 3 }
-		add_to_variable = { CANC_english_grievance = 3 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_the_delegate_was_obeyed
-	}
-
-	option = {
-		name = can_dnc_c.4.b
-		ai_chance = { base = 40 }
-		add_autonomy_ratio = {
-			value = 0.03
-			localization = can_dnc_c.4.b
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.03
-		}
-		add_to_variable = { CANC_french_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-	}
-
-	option = {
-		name = can_dnc_c.4.c
-		ai_chance = { base = 25 }
-		466 = {
-			set_state_flag = CANC_the_appeal_went_past_rome
-		}
-		add_to_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
+		set_country_flag = CAN_dnc_us_reciprocity_refused
+		add_stability = -0.02
+		custom_effect_tooltip = can_dnc_c.4.a_tt
 	}
 }
 
+# the offer lapses if the award was not accepted in time
 country_event = {
 	id = can_dnc_c.5
 	title = can_dnc_c.5.t
 	desc = can_dnc_c.5.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
-		tag = CAN
+		has_country_flag = CAN_dnc_us_alaska_first
+		NOT = { has_country_flag = CAN_dnc_alaska_award_accepted }
 	}
 
 	option = {
 		name = can_dnc_c.5.a
-		ai_chance = { base = 40 }
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.04
-		}
-		set_country_flag = CANC_the_member_for_saint_jacques
-	}
-
-	option = {
-		name = can_dnc_c.5.b
-		ai_chance = { base = 35 }
-		add_political_power = -50
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		add_to_variable = { CANC_french_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-	}
-
-	option = {
-		name = can_dnc_c.5.c
-		ai_chance = { base = 25 }
-		random_list = {
-			45 = {
-				add_stability = 0.05
-				subtract_from_variable = { CANC_french_grievance = 3 }
-				custom_effect_tooltip = CANC_ledger_tt
-				set_country_flag = CANC_bourassa_took_the_seals
-			}
-			55 = {
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.05
-				}
-				add_to_variable = { CANC_english_grievance = 2 }
-				custom_effect_tooltip = CANC_ledger_tt
-			}
-		}
+		clr_country_flag = CAN_dnc_us_alaska_first
+		set_country_flag = CAN_dnc_us_reciprocity_refused
+		set_country_flag = CAN_dnc_c_offer_lapsed
+		add_political_power = -25
+		add_opinion_modifier = { target = USA modifier = small_decrease }
 	}
 }
 
+# ottawa accepted the line, root is asked again
 country_event = {
 	id = can_dnc_c.6
 	title = can_dnc_c.6.t
 	desc = can_dnc_c.6.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_generic_usa_treaty
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
 		name = can_dnc_c.6.a
-		ai_chance = { base = 35 }
-		add_autonomy_ratio = {
-			value = -0.03
-			localization = can_dnc_c.6.a
-		}
-		subtract_from_variable = { CANC_english_grievance = 2 }
-		add_to_variable = { CANC_french_grievance = 3 }
-		custom_effect_tooltip = CANC_ledger_tt
+		ai_chance = { base = 70 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { country_event = { id = can_dnc_c.7 days = 3 } }
 	}
-
 	option = {
 		name = can_dnc_c.6.b
-		ai_chance = { base = 40 }
-		subtract_from_variable = { CANC_french_grievance = 2 }
-		add_to_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_champlain_walked_first
-	}
-
-	option = {
-		name = can_dnc_c.6.c
-		ai_chance = { base = 25 }
-		add_stability = 0.03
-		466 = {
-			add_extra_state_shared_building_slots = 1
-		}
+		ai_chance = { base = 30 }
+		CAN = { country_event = { id = can_dnc_c.8 days = 3 } }
 	}
 }
 
@@ -291,205 +131,1303 @@ country_event = {
 	id = can_dnc_c.7
 	title = can_dnc_c.7.t
 	desc = can_dnc_c.7.d
-
-	fire_only_once = yes
+	picture = GFX_report_event_canada_treaty
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
 		name = can_dnc_c.7.a
-		ai_chance = { base = 40 }
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		add_to_variable = { CANC_french_grievance = 4 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_fallon_speaks_for_the_church
-	}
-
-	option = {
-		name = can_dnc_c.7.b
-		ai_chance = { base = 35 }
-		ENG = {
-			add_opinion_modifier = {
-				target = CAN
-				modifier = RI_hostile_foreign_policy
-			}
-		}
-		add_to_variable = { CANC_english_grievance = 3 }
-		custom_effect_tooltip = CANC_ledger_tt
-	}
-
-	option = {
-		name = can_dnc_c.7.c
-		ai_chance = { base = 25 }
-		add_stability = -0.05
-		add_to_variable = { CANC_french_grievance = 2 }
-		add_to_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_the_letter_was_printed
-	}
-}
-
-news_event = {
-	id = can_dnc_c.8
-	title = can_dnc_c.8.t
-	desc = can_dnc_c.8.d
-
-	major = yes
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = can_dnc_c.8.a
-		trigger = { tag = CAN }
-		ai_chance = { base = 100 }
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.02
-		}
-		add_to_variable = { CANC_french_grievance = 2 }
-		add_to_variable = { CANC_english_grievance = 2 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_the_vote_of_29_march
-	}
-
-	option = {
-		name = can_dnc_c.8.b
-		trigger = {
-			NOT = { tag = CAN }
-		}
-		ai_chance = { base = 100 }
+		set_country_flag = CAN_dnc_us_reciprocity_offered
+		add_political_power = 25
+		custom_effect_tooltip = can_dnc_c.2.a_tt
 	}
 }
 
 country_event = {
-	id = can_dnc_c.9
-	title = can_dnc_c.9.t
-	desc = can_dnc_c.9.d
-
-	fire_only_once = yes
+	id = can_dnc_c.8
+	title = can_dnc_c.8.t
+	desc = can_dnc_c.8.d
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
-	trigger = {
-		tag = CAN
-	}
+	fire_only_once = yes
 
 	option = {
-		name = can_dnc_c.9.a
-		ai_chance = { base = 35 }
-		add_war_support = 0.05
-		add_stability = -0.05
-		add_to_variable = { CANC_french_grievance = 6 }
-		custom_effect_tooltip = CANC_ledger_tt
-		set_country_flag = CANC_the_militia_cleared_the_square
+		name = can_dnc_c.8.a
+		set_country_flag = CAN_dnc_us_reciprocity_refused
+		custom_effect_tooltip = can_dnc_c.4.a_tt
 	}
+}
+
+# roosevelt is asked whether the corollary covers canada
+country_event = {
+	id = can_dnc_c.10
+	title = can_dnc_c.10.t
+	desc = can_dnc_c.10.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
-		name = can_dnc_c.9.b
-		ai_chance = { base = 40 }
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.04
+		name = can_dnc_c.10.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 1.5
+				CAN = { has_country_flag = CAN_dnc_us_reciprocity }
+			}
 		}
-		add_to_variable = { CANC_english_grievance = 4 }
-		custom_effect_tooltip = CANC_ledger_tt
+		give_guarantee = CAN
+		add_ai_strategy = { type = protect id = CAN value = 200 }
+		add_opinion_modifier = { target = CAN modifier = large_increase }
+		CAN = { country_event = { id = can_dnc_c.11 days = 3 } }
 	}
+	option = {
+		name = can_dnc_c.10.b
+		ai_chance = { base = 35 }
+		CAN = { country_event = { id = can_dnc_c.12 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.10.c
+		ai_chance = { base = 15 }
+		CAN = { country_event = { id = can_dnc_c.13 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.11
+	title = can_dnc_c.11.t
+	desc = can_dnc_c.11.d
+	picture = GFX_report_event_generic_usa_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
-		name = can_dnc_c.9.c
-		ai_chance = { base = 25 }
-		random_list = {
-			40 = {
-				add_stability = 0.05
-				subtract_from_variable = { CANC_french_grievance = 3 }
-				custom_effect_tooltip = CANC_ledger_tt
-				set_country_flag = CANC_the_square_listened
+		name = can_dnc_c.11.a
+		set_country_flag = CAN_dnc_us_guarantee
+		add_ideas = CAN_c_the_eagles_wing
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	id = can_dnc_c.12
+	title = can_dnc_c.12.t
+	desc = can_dnc_c.12.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.12.a
+		set_country_flag = CAN_dnc_c_monroe_deferred
+		add_political_power = -10
+	}
+}
+
+# a coaling station at esquimalt for a guarantee
+country_event = {
+	id = can_dnc_c.13
+	title = can_dnc_c.13.t
+	desc = can_dnc_c.13.d
+	picture = GFX_report_event_usa_destroyers
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.13.a
+		set_country_flag = CAN_dnc_us_guarantee
+		set_country_flag = CAN_dnc_c_esquimalt_leased
+		add_ideas = CAN_c_the_eagles_wing
+		add_ideas = CAN_c_the_esquimalt_station
+		740 = { add_building_construction = { type = naval_base level = 1 instant_build = yes province = 7259 } }
+		USA = {
+			give_guarantee = CAN
+			add_ai_strategy = { type = protect id = CAN value = 200 }
+			add_opinion_modifier = { target = CAN modifier = large_increase }
+		}
+	}
+	option = {
+		name = can_dnc_c.13.b
+		set_country_flag = CAN_dnc_c_esquimalt_refused
+		add_political_power = 15
+		add_war_support = 0.02
+	}
+}
+
+# tokyo reads ottawa's letter after powell street
+country_event = {
+	id = can_dnc_c.15
+	title = can_dnc_c.15.t
+	desc = can_dnc_c.15.d
+	picture = GFX_report_event_japanese_reply
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.15.a
+		ai_chance = { base = 50 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { country_event = { id = can_dnc_c.16 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.15.b
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 1.5
+				CAN = { has_country_flag = CAN_dnc_us_guarantee }
 			}
-			60 = {
-				add_stability = -0.05
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.06
-				}
-				add_to_variable = { CANC_french_grievance = 2 }
-				custom_effect_tooltip = CANC_ledger_tt
-			}
+		}
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { country_event = { id = can_dnc_c.17 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.15.c
+		ai_chance = { base = 15 }
+		add_opinion_modifier = { target = CAN modifier = sanctions }
+		CAN = { country_event = { id = can_dnc_c.18 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.16
+	title = can_dnc_c.16.t
+	desc = can_dnc_c.16.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.16.a
+		set_country_flag = CAN_dnc_c_tokyo_protested
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.17
+	title = can_dnc_c.17.t
+	desc = can_dnc_c.17.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.17.a
+		set_country_flag = CAN_dnc_japan_agreement
+		add_stability = 0.03
+		add_political_power = 25
+		add_opinion_modifier = { target = JAP modifier = medium_increase }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.18
+	title = can_dnc_c.18.t
+	desc = can_dnc_c.18.d
+	picture = GFX_report_event_merchant_ship_01
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.18.a
+		set_country_flag = CAN_dnc_c_japan_boycott
+		add_political_power = -25
+		add_stability = -0.02
+	}
+}
+
+# the colonial office reads the customs bill
+country_event = {
+	id = can_dnc_c.20
+	title = can_dnc_c.20.t
+	desc = can_dnc_c.20.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.20.a
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { country_event = { id = can_dnc_c.21 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.20.b
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = rejected_demands }
+		CAN = { country_event = { id = can_dnc_c.22 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.20.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = rejected_demands }
+		CAN = { country_event = { id = can_dnc_c.23 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.21
+	title = can_dnc_c.21.t
+	desc = can_dnc_c.21.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.21.a
+		set_country_flag = CAN_dnc_c_london_resigned
+		add_opinion_modifier = { target = ENG modifier = medium_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.22
+	title = can_dnc_c.22.t
+	desc = can_dnc_c.22.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.22.a
+		set_country_flag = CAN_dnc_c_bill_reserved
+		add_political_power = -50
+		custom_effect_tooltip = can_dnc_c.22.a_tt
+	}
+}
+
+# sixty days to repeal
+country_event = {
+	id = can_dnc_c.23
+	title = can_dnc_c.23.t
+	desc = can_dnc_c.23.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.23.a
+		set_country_flag = CAN_dnc_c_london_summons
+		add_political_power = -25
+		custom_effect_tooltip = can_dnc_c.23.a_tt
+		hidden_effect = {
+			country_event = { id = can_dnc_c.24 days = 60 }
 		}
 	}
 }
 
-news_event = {
-	id = can_dnc_c.10
-	title = can_dnc_c.10.t
-	desc = can_dnc_c.10.d
-
-	major = yes
-	fire_only_once = yes
+country_event = {
+	id = can_dnc_c.24
+	title = can_dnc_c.24.t
+	desc = can_dnc_c.24.d
+	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_country_flag = CAN_dnc_bowed_to_london }
+		NOT = { has_country_flag = CAN_dnc_defied_london }
+	}
+
+	option = {
+		name = can_dnc_c.24.a
+		set_country_flag = CAN_dnc_c_summons_expired
+		add_political_power = -100
+		add_stability = -0.05
+		reverse_add_opinion_modifier = { target = ENG modifier = sanctions_relations }
+	}
+}
+
+# london cuts the painter, or does not
+country_event = {
+	id = can_dnc_c.25
+	title = can_dnc_c.25.t
+	desc = can_dnc_c.25.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.25.a
+		ai_chance = { base = 60 }
+		end_puppet = CAN
+		add_opinion_modifier = { target = CAN modifier = large_decrease }
+		CAN = { country_event = { id = can_dnc_c.26 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.25.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = embargoed_us }
+		add_opinion_modifier = { target = CAN modifier = sanctions }
+		CAN = { country_event = { id = can_dnc_c.27 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.26
+	title = can_dnc_c.26.t
+	desc = can_dnc_c.26.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.26.a
+		set_country_flag = CAN_dnc_independent
+		set_country_flag = CAN_dnc_c_let_go
+		if = {
+			limit = { is_subject_of = ENG }
+			ENG = { end_puppet = CAN }
+		}
+		if = {
+			limit = { is_in_faction_with = ENG NOT = { is_faction_leader = yes } }
+			leave_faction = yes
+		}
+		drop_cosmetic_tag = yes
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+		hidden_effect = { news_event = { id = can_dnc_c.91 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.27
+	title = can_dnc_c.27.t
+	desc = can_dnc_c.27.d
+	picture = GFX_report_event_merchant_ship_01
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.27.a
+		set_country_flag = CAN_dnc_independent
+		set_country_flag = CAN_dnc_c_boycotted
+		add_ideas = CAN_c_the_imperial_boycott
+		if = {
+			limit = { is_subject_of = ENG }
+			ENG = { end_puppet = CAN }
+		}
+		if = {
+			limit = { is_in_faction_with = ENG NOT = { is_faction_leader = yes } }
+			leave_faction = yes
+		}
+		drop_cosmetic_tag = yes
+		add_political_power = 50
+		add_war_support = 0.10
+		add_stability = -0.05
+		reverse_add_opinion_modifier = { target = USA modifier = took_stand_for_us }
+		hidden_effect = { news_event = { id = can_dnc_c.91 hours = 6 } }
+	}
+}
+
+# congress reads the plebiscite
+country_event = {
+	id = can_dnc_c.30
+	title = can_dnc_c.30.t
+	desc = can_dnc_c.30.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.30.a
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 1.5
+				CAN = { check_variable = { CAN_dnc_c_yes_share > 64 } }
+			}
+		}
+		add_political_power = 50
+		CAN = { country_event = { id = can_dnc_c.31 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.30.b
+		ai_chance = { base = 25 }
+		CAN = { country_event = { id = can_dnc_c.32 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.30.c
+		ai_chance = { base = 15 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { country_event = { id = can_dnc_c.33 days = 3 } }
+	}
+}
+
+# admitted as states: the player goes on as the united states
+country_event = {
+	id = can_dnc_c.31
+	title = can_dnc_c.31.t
+	desc = can_dnc_c.31.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.31.a
+		custom_effect_tooltip = CANDNC_c_union_tt
+		if = {
+			limit = { is_subject = yes }
+			OVERLORD = { end_puppet = ROOT }
+		}
+		every_state = {
+			limit = { is_owned_by = CAN }
+			add_core_of = USA
+		}
+		USA = {
+			set_country_flag = CAN_dnc_union_accomplished
+			news_event = { id = can_dnc_c.90 hours = 2 }
+			change_tag_from = CAN
+			annex_country = { target = CAN transfer_troops = yes }
+		}
+	}
+}
+
+# a territory first
+country_event = {
+	id = can_dnc_c.32
+	title = can_dnc_c.32.t
+	desc = can_dnc_c.32.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.32.a
+		set_country_flag = CAN_dnc_era_end
+		set_country_flag = CAN_dnc_c_us_territory
+		if = {
+			limit = { is_subject_of = ENG }
+			ENG = { end_puppet = CAN }
+		}
+		if = {
+			limit = { is_in_faction_with = ENG NOT = { is_faction_leader = yes } }
+			leave_faction = yes
+		}
+		USA = {
+			set_autonomy = {
+				target = CAN
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+		}
+		set_cosmetic_tag = CAN_USA
+		add_stability = -0.05
+		hidden_effect = { news_event = { id = can_dnc_c.90 hours = 6 } }
+	}
+	option = {
+		name = can_dnc_c.32.b
+		set_country_flag = CAN_dnc_c_territory_refused
+		set_country_flag = CAN_dnc_junior_partner
+		set_country_flag = CAN_dnc_era_end
+		set_country_flag = CAN_dnc_end_continental_partner
+		add_ideas = CAN_c_the_junior_partner
+		add_stability = -0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = can_dnc_c.33
+	title = can_dnc_c.33.t
+	desc = can_dnc_c.33.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.33.a
+		set_country_flag = CAN_dnc_c_admission_rejected
+		set_country_flag = CAN_dnc_junior_partner
+		set_country_flag = CAN_dnc_era_end
+		set_country_flag = CAN_dnc_end_continental_partner
+		add_ideas = CAN_c_the_junior_partner
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+
+# sixty days on capitol hill
+country_event = {
+	id = can_dnc_c.34
+	title = can_dnc_c.34.t
+	desc = can_dnc_c.34.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.34.a
+		custom_effect_tooltip = CANDNC_c_senate_clock_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_c.35
+	title = can_dnc_c.35.t
+	desc = can_dnc_c.35.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.35.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 1.5
+				CAN = { has_country_flag = CAN_dnc_c_root_talks }
+			}
+			modifier = {
+				factor = 0.5
+				CAN = { has_country_flag = CAN_dnc_c_senate_only }
+			}
+		}
+		add_political_power = 50
+		CAN = { country_event = { id = can_dnc_c.36 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.35.b
+		ai_chance = { base = 25 }
+		CAN = { country_event = { id = can_dnc_c.37 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.35.c
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 1.5
+				CAN = { has_country_flag = CAN_dnc_c_senate_only }
+			}
+		}
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { country_event = { id = can_dnc_c.38 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.36
+	title = can_dnc_c.36.t
+	desc = can_dnc_c.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.36.a
+		set_country_flag = CAN_dnc_c_treaty_ratified
+		add_political_power = 50
+		custom_effect_tooltip = can_dnc_c.36.a_tt
+	}
+}
+
+# one state, take it or leave it
+country_event = {
+	id = can_dnc_c.37
+	title = can_dnc_c.37.t
+	desc = can_dnc_c.37.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.37.a
+		set_country_flag = CAN_dnc_c_treaty_ratified
+		set_country_flag = CAN_dnc_c_one_state
+		add_stability = -0.05
+		custom_effect_tooltip = can_dnc_c.36.a_tt
+	}
+	option = {
+		name = can_dnc_c.37.b
+		set_country_flag = CAN_dnc_c_treaty_rejected
+		add_political_power = 25
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = can_dnc_c.38
+	title = can_dnc_c.38.t
+	desc = can_dnc_c.38.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.38.a
+		set_country_flag = CAN_dnc_c_treaty_rejected
+		add_stability = -0.03
+		add_political_power = -25
+	}
+}
+
+# the prairie petition reaches washington
+country_event = {
+	id = can_dnc_c.40
+	title = can_dnc_c.40.t
+	desc = can_dnc_c.40.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		CAN = { NOT = { has_country_flag = CAN_dnc_c_west_held_by_arms } }
+		CAN = { owns_state = 469 }
+	}
+
+	option = {
+		name = can_dnc_c.40.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 1.5
+				CAN = { has_country_flag = CAN_dnc_west_tied_south }
+			}
+		}
+		CAN = { country_event = { id = can_dnc_c.41 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.40.b
+		ai_chance = { base = 50 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { country_event = { id = can_dnc_c.42 days = 3 } }
+	}
+}
+
+# washington accepts: let them go, or hold them
+country_event = {
+	id = can_dnc_c.41
+	title = can_dnc_c.41.t
+	desc = can_dnc_c.41.d
+	picture = GFX_report_event_generic_rally2
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.41.a
+		set_country_flag = CAN_dnc_west_lost
+		set_country_flag = CAN_dnc_era_end
+		if = {
+			limit = { has_idea = CAN_c_the_american_prairie }
+			remove_ideas = CAN_c_the_american_prairie
+		}
+		USA = {
+			transfer_state = 467
+			transfer_state = 469
+			transfer_state = 470
+			add_state_core = 467
+			add_state_core = 469
+			add_state_core = 470
+		}
+		if = {
+			limit = { has_country_flag = CAN_dnc_c_terms_negotiated }
+			custom_effect_tooltip = can_dnc_c.41.a_terms_tt
+			add_political_power = 50
+			276 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
+			USA = { add_opinion_modifier = { target = CAN modifier = huge_increase } }
+		}
+		else = {
+			add_stability = -0.10
+			add_political_power = -50
+		}
+		hidden_effect = { news_event = { id = can_dnc_c.92 hours = 6 } }
+	}
+	option = {
+		name = can_dnc_c.41.b
+		set_country_flag = CAN_dnc_c_west_held_by_arms
+		set_country_flag = CAN_dnc_era_end
+		add_war_support = 0.10
+		add_stability = -0.10
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.3
+			states = { 467 469 470 }
+		}
+		USA = { country_event = { id = can_dnc_c.43 days = 5 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.42
+	title = can_dnc_c.42.t
+	desc = can_dnc_c.42.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.42.a
+		set_country_flag = CAN_dnc_c_west_stays
+		set_country_flag = CAN_dnc_junior_partner
+		set_country_flag = CAN_dnc_era_end
+		set_country_flag = CAN_dnc_end_continental_partner
+		add_ideas = CAN_c_the_junior_partner
+		add_stability = -0.05
+		add_political_power = 25
+	}
+}
+
+# washington watches ottawa fire on the prairies
+country_event = {
+	id = can_dnc_c.43
+	title = can_dnc_c.43.t
+	desc = can_dnc_c.43.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.43.a
+		ai_chance = { base = 60 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { country_event = { id = can_dnc_c.44 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.43.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = large_decrease }
+		add_political_power = 25
+		CAN = { country_event = { id = can_dnc_c.44 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.44
+	title = can_dnc_c.44.t
+	desc = {
+		text = can_dnc_c.44.d.a
+		trigger = { USA = { has_opinion = { target = CAN value < -20 } } }
+	}
+	desc = {
+		text = can_dnc_c.44.d.b
+		trigger = { NOT = { USA = { has_opinion = { target = CAN value < -20 } } } }
+	}
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.44.a
+		army_experience = 25
+	}
+}
+
+# the question is put
+country_event = {
+	id = can_dnc_c.45
+	title = can_dnc_c.45.t
+	desc = can_dnc_c.45.d
+	picture = GFX_report_event_generic_rally_3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.45.a
+		add_political_power = 10
+		custom_effect_tooltip = can_dnc_c.45.a_tt
+	}
+}
+
+# campaign, day 10
+country_event = {
+	id = can_dnc_c.46
+	title = can_dnc_c.46.t
+	desc = can_dnc_c.46.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.46.a
+		add_stability = -0.03
+		add_to_variable = { CAN_dnc_c_yes_bonus = 5 }
+		custom_effect_tooltip = can_dnc_c.yes_plus_five_tt
+	}
+	option = {
+		name = can_dnc_c.46.b
+		add_stability = -0.01
+		add_political_power = 15
+		subtract_from_variable = { CAN_dnc_c_yes_bonus = 5 }
+		custom_effect_tooltip = can_dnc_c.yes_minus_five_tt
+	}
+}
+
+# campaign, day 45
+country_event = {
+	id = can_dnc_c.47
+	title = can_dnc_c.47.t
+	desc = can_dnc_c.47.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.47.a
+		add_political_power = -50
+		set_country_flag = CAN_dnc_c_french_promised
+		add_to_variable = { CAN_dnc_c_yes_bonus = 5 }
+		custom_effect_tooltip = can_dnc_c.yes_plus_five_tt
+	}
+	option = {
+		name = can_dnc_c.47.b
+		subtract_from_variable = { CAN_dnc_c_yes_bonus = 5 }
+		custom_effect_tooltip = can_dnc_c.yes_minus_five_tt
+	}
+}
+
+# campaign, day 90
+country_event = {
+	id = can_dnc_c.48
+	title = can_dnc_c.48.t
+	desc = can_dnc_c.48.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.48.a
+		set_country_flag = CAN_dnc_c_campaign_closed
+		add_political_power = -25
+		add_to_variable = { CAN_dnc_c_yes_bonus = 5 }
+		custom_effect_tooltip = can_dnc_c.yes_plus_five_tt
+	}
+	option = {
+		name = can_dnc_c.48.b
+		set_country_flag = CAN_dnc_c_campaign_closed
+		custom_effect_tooltip = can_dnc_c.48.b_tt
+	}
+}
+
+# the country votes
+country_event = {
+	id = can_dnc_c.50
+	title = can_dnc_c.50.t
+	desc = {
+		text = can_dnc_c.50.d.yes
+		trigger = { has_country_flag = CAN_dnc_c_vote_yes }
+	}
+	desc = {
+		text = can_dnc_c.50.d.no
+		trigger = { has_country_flag = CAN_dnc_c_vote_no }
+	}
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	immediate = {
 		hidden_effect = {
+			set_variable = { CAN_dnc_c_yes_share = 40 }
 			if = {
-				limit = { tag = CAN }
-				QUE = {
-					set_capital = { state = 466 }
-				}
+				limit = { has_country_flag = CAN_dnc_american_west }
+				add_to_variable = { CAN_dnc_c_yes_share = 20 }
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_us_reciprocity }
+				add_to_variable = { CAN_dnc_c_yes_share = 10 }
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_us_guarantee }
+				add_to_variable = { CAN_dnc_c_yes_share = 10 }
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_ontario_loyalists_roused }
+				subtract_from_variable = { CAN_dnc_c_yes_share = 15 }
+			}
+			if = {
+				limit = { check_variable = { CAN_dnc_loyalist_anger > 3 } }
+				subtract_from_variable = { CAN_dnc_c_yes_share = 10 }
+			}
+			if = {
+				limit = { has_variable = CAN_dnc_c_yes_bonus }
+				add_to_variable = { CAN_dnc_c_yes_share = CAN_dnc_c_yes_bonus }
+			}
+			clamp_variable = { var = CAN_dnc_c_yes_share min = 0 max = 100 }
+			if = {
+				limit = { check_variable = { CAN_dnc_c_yes_share > 49 } }
+				set_country_flag = CAN_dnc_c_vote_yes
+			}
+			else = {
+				set_country_flag = CAN_dnc_c_vote_no
 			}
 		}
 	}
 
 	option = {
-		name = can_dnc_c.10.a
-		trigger = { tag = CAN }
-		ai_chance = { base = 60 }
-		834 = {
-			remove_core_of = QUE
-		}
-		transfer_state = 834
-		QUE = {
-			add_state_claim = 834
-		}
-		add_stability = 0.03
-		set_country_flag = CANC_the_border_at_the_ottawa
+		name = can_dnc_c.50.a
+		trigger = { has_country_flag = CAN_dnc_c_vote_yes }
+		add_political_power = 50
+		add_stability = -0.05
+		custom_effect_tooltip = can_dnc_c.50.share_tt
 	}
+	option = {
+		name = can_dnc_c.50.b
+		trigger = { has_country_flag = CAN_dnc_c_vote_no }
+		add_political_power = -50
+		add_stability = -0.05
+		custom_effect_tooltip = can_dnc_c.50.share_tt
+		hidden_effect = {
+			country_event = { id = can_dnc_c.51 days = 20 }
+		}
+	}
+}
+
+# the conventions meet at saskatoon
+country_event = {
+	id = can_dnc_c.51
+	title = can_dnc_c.51.t
+	desc = can_dnc_c.51.d
+	picture = GFX_report_event_generic_rally2
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
-		name = can_dnc_c.10.b
-		trigger = { tag = CAN }
-		ai_chance = { base = 40 }
+		name = can_dnc_c.51.a
+		add_political_power = -25
+		custom_effect_tooltip = can_dnc_c.51.a_tt
+		hidden_effect = {
+			USA = { country_event = { id = can_dnc_c.40 days = 150 } }
+		}
+	}
+	option = {
+		name = can_dnc_c.51.b
+		set_country_flag = CAN_dnc_c_west_held_by_arms
+		set_country_flag = CAN_dnc_era_end
+		add_war_support = 0.10
+		add_stability = -0.10
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.3
+			states = { 467 469 470 }
+		}
+		USA = { country_event = { id = can_dnc_c.43 days = 5 } }
+	}
+}
+
+# ottawa proposes a treaty of union
+country_event = {
+	id = can_dnc_c.55
+	title = can_dnc_c.55.t
+	desc = can_dnc_c.55.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.55.a
+		ai_chance = { base = 70 }
+		add_opinion_modifier = { target = CAN modifier = large_increase }
+		CAN = { country_event = { id = can_dnc_c.56 days = 3 } }
+	}
+	option = {
+		name = can_dnc_c.55.b
+		ai_chance = { base = 30 }
+		CAN = { country_event = { id = can_dnc_c.57 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.56
+	title = can_dnc_c.56.t
+	desc = can_dnc_c.56.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.56.a
+		set_country_flag = CAN_dnc_c_root_talks
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = can_dnc_c.57
+	title = can_dnc_c.57.t
+	desc = can_dnc_c.57.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.57.a
+		set_country_flag = CAN_dnc_c_senate_only
+		add_political_power = -10
+	}
+}
+
+# 19 april 1904
+country_event = {
+	id = can_dnc_c.60
+	title = can_dnc_c.60.t
+	desc = can_dnc_c.60.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.60.a
+		276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		add_political_power = -10
+	}
+	option = {
+		name = can_dnc_c.60.b
+		add_stability = 0.02
+		add_political_power = 10
+	}
+}
+
+# march 1903, vancouver
+country_event = {
+	id = can_dnc_c.61
+	title = can_dnc_c.61.t
+	desc = can_dnc_c.61.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.61.a
+		add_stability = 0.02
+		add_political_power = 10
+		set_country_flag = CAN_dnc_c_ubre_condemned
+	}
+	option = {
+		name = can_dnc_c.61.b
+		add_stability = -0.02
+		add_war_support = 0.02
+		set_country_flag = CAN_dnc_c_ubre_recognised
+		custom_effect_tooltip = can_dnc_c.61.b_tt
+	}
+}
+
+# september 1906, winnipeg
+country_event = {
+	id = can_dnc_c.62
+	title = can_dnc_c.62.t
+	desc = can_dnc_c.62.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.62.a
+		add_stability = 0.02
+		add_political_power = -15
+		set_country_flag = CAN_dnc_c_growers_seated
+	}
+	option = {
+		name = can_dnc_c.62.b
+		add_stability = -0.02
+		add_political_power = 10
+	}
+}
+
+# 29 august 1907, the south arm
+country_event = {
+	id = can_dnc_c.63
+	title = can_dnc_c.63.t
+	desc = can_dnc_c.63.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.63.a
+		add_political_power = -25
+		add_stability = 0.02
+		466 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		set_country_flag = CAN_dnc_c_public_engineers
+	}
+	option = {
+		name = can_dnc_c.63.b
+		add_political_power = 25
+		add_stability = -0.02
+	}
+}
+
+# january 1908, the panic arrives
+country_event = {
+	id = can_dnc_c.64
+	title = can_dnc_c.64.t
+	desc = can_dnc_c.64.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.64.a
+		add_political_power = -25
+		add_stability = 0.02
+		set_country_flag = CAN_dnc_c_dominion_notes
+	}
+	option = {
+		name = can_dnc_c.64.b
+		add_stability = -0.03
+		add_political_power = 15
+	}
+}
+
+# the terms of union
+country_event = {
+	id = can_dnc_c.65
+	title = can_dnc_c.65.t
+	desc = can_dnc_c.65.d
+	picture = GFX_report_event_generic_sign_treaty3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.65.a
+		set_country_flag = CAN_dnc_c_french_terms
+		subtract_from_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		add_stability = 0.02
+		custom_effect_tooltip = can_dnc_c.fracture_minus_tt
+	}
+	option = {
+		name = can_dnc_c.65.b
+		set_country_flag = CAN_dnc_c_english_terms
+		add_to_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		add_political_power = 25
+		custom_effect_tooltip = can_dnc_c.fracture_plus_tt
+	}
+}
+
+# 25 january 1905
+country_event = {
+	id = can_dnc_c.66
+	title = can_dnc_c.66.t
+	desc = can_dnc_c.66.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.66.a
+		add_stability = -0.05
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	option = {
+		name = can_dnc_c.66.b
+		add_political_power = -50
+		add_stability = -0.03
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+		276 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+}
+
+# ottawa asks for a place under the wing
+country_event = {
+	id = can_dnc_c.70
+	title = can_dnc_c.70.t
+	desc = can_dnc_c.70.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.70.a
+		ai_chance = { base = 70 }
 		if = {
-			limit = {
-				OR = {
-					has_dlc = "Together for Victory"
-					has_dlc = "Man the Guns"
-				}
-			}
-			set_autonomy = {
-				target = QUE
-				autonomous_state = autonomy_dominion
-				freedom_level = 0.6
-			}
+			limit = { CAN = { NOT = { is_guaranteed_by = ROOT } } }
+			give_guarantee = CAN
 		}
-		else = {
-			puppet = QUE
+		add_ai_strategy = { type = protect id = CAN value = 200 }
+		if = {
+			limit = { is_faction_leader = yes }
+			add_to_faction = CAN
 		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
-		set_country_flag = CANC_the_crown_was_offered_back
+		add_opinion_modifier = { target = CAN modifier = large_increase }
+		CAN = { country_event = { id = can_dnc_c.71 days = 3 } }
 	}
+	option = {
+		name = can_dnc_c.70.b
+		ai_chance = { base = 30 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { country_event = { id = can_dnc_c.72 days = 3 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_c.71
+	title = can_dnc_c.71.t
+	desc = can_dnc_c.71.d
+	picture = GFX_report_event_generic_usa_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
-		name = can_dnc_c.10.c
-		trigger = {
-			NOT = { tag = CAN }
+		name = can_dnc_c.71.a
+		set_country_flag = CAN_dnc_us_guarantee
+		if = {
+			limit = { NOT = { has_idea = CAN_c_the_eagles_wing } }
+			add_ideas = CAN_c_the_eagles_wing
 		}
-		ai_chance = { base = 100 }
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	id = can_dnc_c.72
+	title = can_dnc_c.72.t
+	desc = can_dnc_c.72.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.72.a
+		set_country_flag = CAN_dnc_c_wing_refused
+		add_political_power = 15
+	}
+}
+
+# news: the union grows by nine
+news_event = {
+	id = can_dnc_c.90
+	title = can_dnc_c.90.t
+	desc = can_dnc_c.90.d
+	picture = GFX_news_event_generic_usa_treaty
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.90.a
+	}
+}
+
+# news: the painter is cut
+news_event = {
+	id = can_dnc_c.91
+	title = can_dnc_c.91.t
+	desc = can_dnc_c.91.d
+	picture = GFX_news_event_canada_treaty
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.91.a
+	}
+}
+
+# news: the prairies change flags
+news_event = {
+	id = can_dnc_c.92
+	title = can_dnc_c.92.t
+	desc = can_dnc_c.92.d
+	picture = GFX_news_event_generic_read_write
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_c.92.a
 	}
 }
