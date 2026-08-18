@@ -222,5 +222,33 @@ ideas = {
 				justify_war_goal_time = 0.25
 			}
 		}
+
+		KNS_welfare_state = {
+			picture = ARG_social_welfare_fund_ns
+			modifier = {
+				stability_factor = 0.15
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.5
+			}
+		}
+		
+		KNS_a_good_agriculture = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				local_resources_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.10
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.05
+			}
+		}		
+
 	}
 }

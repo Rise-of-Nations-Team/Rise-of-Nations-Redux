@@ -136,23 +136,23 @@ focus_tree = {
 		prerequisite = { focus = KNS_expand_civilian_work  }
 		completion_reward = {
 			random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
-}
 
 	focus = {
 		id = KNS_var_krig
@@ -562,7 +562,7 @@ focus_tree = {
 		relative_position_id = KNS_the_consular_bill_of_may
 		x = -6
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KNS_the_consular_bill_of_may
 		}
@@ -999,7 +999,7 @@ focus_tree = {
 		relative_position_id = KNS_the_consular_bill_of_may
 		x = -4
 		y = 1
-		cost = 10
+		cost = 6
 		prerequisite = {
 			focus = KNS_the_consular_bill_of_may
 		}
@@ -1033,7 +1033,7 @@ focus_tree = {
 		relative_position_id = KNS_the_consular_bill_of_may
 		x = -8
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = KNS_the_consular_bill_of_may
 		}
@@ -1047,7 +1047,7 @@ focus_tree = {
 		relative_position_id = KNS_fortress_question
 		x = 0
 		y = 1
-		cost = 10
+		cost = 4
 		available = {
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
@@ -1074,7 +1074,7 @@ focus_tree = {
 		relative_position_id = KNS_otter_cabinet
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
@@ -1086,10 +1086,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_resource = {
-    type = oil
-    amount = 30
-    state = 110
-}			
+    			type = oil
+    			amount = 30
+    			state = 110
+			}			
 		}
 	}
 	focus = {
@@ -1098,7 +1098,7 @@ focus_tree = {
 		relative_position_id = KNS_otter_cabinet
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7
 		available = {
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
@@ -1109,7 +1109,7 @@ focus_tree = {
 			focus = KNS_otter_cabinet
 		}
 		completion_reward = {
-			add_ideas = welfare_state_ARG
+			add_ideas = KNS_welfare_state
 		}
 	}
 	focus = {
@@ -1118,7 +1118,7 @@ focus_tree = {
 		relative_position_id = KNS_otter_cabinet
 		x = -3
 		y = 1
-		cost = 10
+		cost = 7
 		available = {
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
@@ -1129,7 +1129,7 @@ focus_tree = {
 			focus = KNS_otter_cabinet
 		}
 		completion_reward = {
-			add_ideas = RI_agriculture
+			add_ideas = KNS_a_good_agriculture
 		}
 	}
 	focus = {
@@ -1187,7 +1187,7 @@ focus_tree = {
 		relative_position_id = KNS_kiruna_mine
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
@@ -1211,7 +1211,7 @@ focus_tree = {
 		relative_position_id = KNS_kiruna_mine
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
 			has_country_leader ={
 				character = SWE_fredrik_von_otter
@@ -1284,7 +1284,7 @@ focus_tree = {
 		relative_position_id = KNS_otters_civil_rights
 		x = 0
 		y = 1
-		cost = 10
+		cost = 1
 		prerequisite = {
 			focus = KNS_otters_civil_rights
 		}
@@ -1301,7 +1301,7 @@ focus_tree = {
 		relative_position_id = KNS_resignation_of_otter
 		x = 0
 		y = 1
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = KNS_resignation_of_otter
 		}
@@ -1492,10 +1492,7 @@ focus_tree = {
 			add_political_power = -50
 			custom_effect_tooltip = "We will bring a vote to the floor"
 			hidden_effect = {
-			country_event = rondncnews.55
-			complete_national_focus = KNS_motion_fails
-			complete_national_focus = KNS_present_chambers
-			complete_national_focus = KNS_resignation_bostrom
+				country_event = rondncnews.55
 			}
 		}
 	}
@@ -1666,4 +1663,21 @@ focus_tree = {
 			add_political_power = 50
 		}
 	}	
+	focus = {
+		id = KNS_a_union_of_equal_kingdoms
+		icon = GFX_goal_KNS_union_of_equal_kingdoms
+		relative_position_id = KNS_continue_as_normal
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = KNS_continue_as_normal
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}		
 }
