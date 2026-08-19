@@ -123,7 +123,7 @@ characters={
 	}
 	
 	NOR_haakon_vii = {
-		name = NOR_haakon_vii
+		name = "Prince Christian Frederik von Glücksburg"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NOR/WW1/Portrait_Norway_Haakon_VII.dds"
@@ -132,16 +132,6 @@ characters={
 			army = {
 				large = "gfx/leaders/NOR/WW1/Portrait_Norway_Haakon_VII.dds"
 				small = "GFX_idea_NOR_haakon_vii_military_advisor"
-			}
-			navy = {
-				large = "gfx/leaders/NOR/WW1/Portrait_Norway_Haakon_VII.dds"
-				small = "GFX_idea_NOR_haakon_vii_military_advisor"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				tag = NOR
-				has_government = neutrality
 			}
 		}
 		advisor={
@@ -159,8 +149,6 @@ characters={
 					has_government = democratic
 					has_government = neutrality
 				}
-				has_completed_focus = NOR_traditions_and_monarchy
-				has_character_flag = NOR_monarch_has_advisor_role
 			}
 			traits = {
 				navy_capital_ship_2
@@ -170,31 +158,20 @@ characters={
 				factor = 2
 			}
 		}
-		country_leader = {
-			ideology = constitutional_monarchism
-			traits = { naw_naval_officer compassionate_gentleman }
-			expire = "1957.6.22"
-			id = -1
-			desc = "POLITICS_HAAKON_VII_DESC"
+		navy_leader = {
+			traits = { trait_royal navy_career_officer navy_media_personality gentlemanly }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id = -1
+			visible = {
+				NOT = {
+					is_country_leader = yes
+				}
+			}
 		}
-		#field_marshal = {
-		#	traits = { infantry_officer media_personality inspirational_leader }
-		#	skill = 1
-		#	attack_skill = 1
-		#	defense_skill = 1
-		#	planning_skill = 1
-		#	logistics_skill = 1
-		#	legacy_id = -1
-		#}
-		#navy_leader = {
-		#	traits = { navy_career_officer navy_media_personality gentlemanly }
-		#	skill = 2
-		#	attack_skill = 1
-		#	defense_skill = 2
-		#	maneuvering_skill = 2
-		#	coordination_skill = 2
-		#	legacy_id = -1
-		#}
 	}
 	
 	NOR_monarchist_coalition = {
