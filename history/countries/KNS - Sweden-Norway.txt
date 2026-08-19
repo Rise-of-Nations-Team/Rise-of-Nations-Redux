@@ -1,60 +1,31 @@
 
 capital = 141
-oob = "SWE_1910"
-add_ideas = {
-	export_focus
-	tax_average
-	tariffs_average
-	civilian_economy
-	press_free
-	private_control
-	fdi_allowed
-	foreign_volunteers
-	train_medium
-	officer_train_low
-	security_liberty_first
-	education_budget5
-	health_budget5
-	foreign_neutral
-	police_budget5
-}
+#oob = "SWE_1910"
 
 set_research_slots = 3
 set_convoys = 25
 set_stability = 0.9
+set_war_support = 0.1
 add_ideas = {
 	KNS_Swedish_neutrality
 	KNS_swed_nor_union
 	KNS_Undeveloped_North_Region
 	en_svensk_tiger	
+	SWE_oscar_ii_idea
 }
 
-set_stability = 0.9
-set_war_support = 0.1
-### WW1 Start Date
+promote_character = SWE_erik_gustaf_bostrom
+promote_character = SWE_oscar_ii
+
 set_politics = {
 	ruling_party = democratic
-	last_election = "1907.1.12"
+	last_election = "1891.7.10"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 90
-	communism = 9
-	fascism = 1
-}
-
-create_country_leader = {
-	name = "Oscar II"
-	picture = "gfx/leaders/KNS/DNC/SWE_NOR_Oscar_II.dds"
-	expire = "1950.10.29"
-	ideology = constitutional_monarchism
-}
-
-create_country_leader = {
-	name = "Oscar II"
-	picture = "gfx/leaders/KNS/DNC/SWE_NOR_Oscar_II.dds"
-	expire = "1950.10.29"
-	ideology = despotism
+	democratic = 60
+	neutrality = 30
+	fascism = 10
 }

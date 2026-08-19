@@ -54,15 +54,15 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = SWE_karl_staaff
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					liberal_democratic_paragon 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+			allowed = {
+				original_tag  = SWE
+			}
+			traits  = {
+				liberal_democratic_paragon 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}        
 	}	
 
@@ -111,13 +111,14 @@ characters={
 			}		
 		}
 		country_leader={
-			ideology=despotism
+			ideology=monarchism
+			traits = { SWE_sveriges_kung cultured_monarch weak_statesman }			
 			id=-1
 		}		
 	}    
 
-	SWE_gustaf_adolf_v_dnc={
-		name=SWE_gustaf_adolf_v_dnc
+	SWE_gustaf_adolf_v={
+		name="Prince Gustaf Adolf Bernadotte"
 		portraits={
 			civilian={
 				large="gfx/leaders/SWE/WW1/Portrait_Sweden_Gustav_V.dds"
@@ -126,20 +127,20 @@ characters={
 				large="gfx/leaders/SWE/WW1/Portrait_Sweden_Gustav_V.dds"
 			}			
 		}
-		country_leader={
-			ideology=despotism
-			traits = { SWE_sveriges_kung }
-			id=-1
-		}
 		navy_leader={
-			traits={ navy_media_personality ironside }
+			traits={ trait_royal navy_media_personality ironside }
 			skill=2
 			attack_skill=2
 			defense_skill=2
 			maneuvering_skill=1
 			coordination_skill=1
 			visible = {
-				NOT = { has_government = communism }
+				NOT = { 
+					OR = {
+						has_government = communism
+						is_country_leader = yes								
+					}
+				}
 			}
 		}		
 	}
@@ -267,11 +268,11 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = SWE_emil_morcke
-			allowed  = {
+			allowed = {
 				original_tag  = SWE
 			}
-			ledger  = army 
-			traits  = {
+			ledger = army 
+			traits = {
 				army_regrouping_2 
 			}
 			ai_will_do  = {
@@ -281,8 +282,8 @@ characters={
 		advisor={
 			slot = theorist
 			idea_token = SWE_emil_morcke_theorist
-			ledger  = army 
-			allowed  = {
+			ledger = army 
+			allowed = {
 				original_tag  = SWE
 			}
 			traits  = {
@@ -388,15 +389,15 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = SWE_ernst_meyer
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					captain_of_industry 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+			allowed = {
+				original_tag  = SWE
+			}
+			traits  = {
+				captain_of_industry 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 	}
 
@@ -575,36 +576,7 @@ characters={
 		}
 	}
 
-	SWE_gustaf_adolf_v_ww2={
-		name=SWE_gustaf_adolf_v_ww2
-		portraits={
-			civilian={
-				large="gfx/leaders/SWE/Portrait_Sweden_Gustaf_V.dds"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Sweden_Gustaf_V.dds"
-			}			
-		}
-		country_leader={
-			ideology=despotism
-			traits = { SWE_sveriges_kung }
-			expire="1950.10.29.8"
-			id=-1
-		}
-		navy_leader={
-			traits={ navy_media_personality ironside }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
-			visible = {
-				NOT = { has_government = communism }
-			}
-		}		
-	}
-
-	SWE_gustaf_adolf_vi_ww2={
+	SWE_gustaf_adolf_vi={
 		name=SWE_gustaf_adolf_vi_ww2
 		portraits={
 			civilian={
@@ -612,7 +584,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology=monarchism
 			traits = { SWE_swedish_imperialist headstrong }
 			expire="1965.1.1"
 			id=-1
@@ -2168,20 +2140,6 @@ characters={
 	}
 
 	#1949-1960
-
-	SWE_gustaf_adolf_vi_cw={
-		name=SWE_gustaf_adolf_vi_cw
-		portraits={
-			civilian={
-				large="gfx/leaders/SWE/CW/Sweden_Gustav_VI_Adolf_Despotism_1970.dds"
-			}
-		}
-		country_leader={
-			ideology=despotism
-			traits = { SWE_swedish_imperialist headstrong }
-			id=-1
-		}
-	}
 
 	SWE_carl_xvi_gustaf_cw={
 		name=SWE_carl_xvi_gustaf_cw

@@ -2,9 +2,7 @@ ideas = {
 	country = {
 
 		swedish_neutrality_1 = {
-
-			picture = PLACEHOLDER_idea_icon
-
+			picture = SWE_swedish_neutrality
 			allowed = {
 				always = no
 			}
@@ -23,9 +21,7 @@ ideas = {
 		}
 
 		swedish_neutrality_2 = {
-
-			picture = PLACEHOLDER_idea_icon
-
+			picture = SWE_swedish_neutrality
 			allowed = {
 				always = no
 			}
@@ -44,9 +40,7 @@ ideas = {
 		}
 
 		swedish_neutrality_3 = {
-
-			picture = PLACEHOLDER_idea_icon
-
+			picture = SWE_swedish_neutrality
 			allowed = {
 				always = no
 			}
@@ -65,9 +59,7 @@ ideas = {
 		}
 
 		swedish_neutrality_final = {
-
-			picture = PLACEHOLDER_idea_icon
-
+			picture = SWE_swedish_neutrality
 			allowed = {
 				always = no
 			}
@@ -113,11 +105,11 @@ ideas = {
 			}
 		}
 
-		Gustaf_V = {
+		SWE_oscar_ii_idea = {
 
-			name = SWE_gustaf_adolf_v_ww2
+			name = SWE_oscar_ii
 
-			picture = gustaf_v
+			picture = SWE_king_oscar_ii
 
 			allowed = {
 				always = no
@@ -125,18 +117,42 @@ ideas = {
 
 			cancel = {
 				has_government = communism
+				has_country_leader = {
+					character = SWE_oscar_ii
+					ruling_only = yes
+				}
 			}
 
 			traits = {
-				SWE_sveriges_kung
+				SWE_sveriges_kung cultured_monarch
 			}
-		}
+		}	
+		
+		SWE_gustaf_v_idea_ww1 = {
+			name= SWE_gustaf_adolf_v			
+			allowed = {
+				original_tag = SWE
+			}
+			picture = SWE_king_gustaf_ww1
+			cancel = {
+				has_government = communism
+				has_country_leader = {
+					character = SWE_gustaf_adolf_v
+					ruling_only = yes
+				}				
+			}
+			
+			removal_cost = -1
+			
+			traits = { SWE_sveriges_kung SWE_former_autocrat }
+			
+		}		
 
-		scandi_winter = { # for sweden after seperation
+		scandi_winter = { 
 
 			name = russian_winter
 
-			picture = russian_winter
+			picture = SOV_soviet_winter
 
 			allowed = {
 				always = no
@@ -172,77 +188,6 @@ ideas = {
 				enemy_declare_war_tension = 0.5
 				trade_opinion_factor = 0.5
 				army_defence_factor = 0.5
-			}
-		}
-
-		KNS_Swedish_neutrality = {
-
-			picture = Swedish_neutrality
-
-			allowed = {
-				always = no
-			}
-
-			modifier = {
-				political_power_gain = 0.10
-				join_faction_tension = 0.75
-				mobilization_laws_cost_factor = 0.25
-				guarantee_cost = 0.35
-			}
-		}
-
-		KNS_swed_nor_union = {
-
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				country_exists = NOR
-				NOT = { NOR = { is_subject_of = ROOT } }
-			}
-
-			available = {
-				NOT = { country_exists = NOR }
-			}
-
-			modifier = {
-				political_power_gain = 0.20
-				stability_factor = 0.15
-			}
-		}
-
-		KNS_Undeveloped_North_Region = {
-
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				date > 1910.1.1
-			}
-
-			modifier = {
-				production_speed_arms_factory_factor = -0.10
-				production_speed_industrial_complex_factor = -0.10
-				industrial_capacity_factory = -0.15
-				research_speed_factor = -0.04
-			}
-		}
-
-		KNS_tree_Industrial = {
-		
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				date > 1910.1.1
-			}
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.03
-				production_factory_efficiency_gain_factor = 0.07
 			}
 		}
 	}

@@ -42,20 +42,13 @@ set_popularities = {
 	fascism = 1
 }
 
-if = {
-	limit = {
-		has_start_date > 1907.12.8
-		has_start_date < 1950.10.29
-	}
-	add_ideas = {
-		kungen_gustaf_v
-	}
-}
-
 recruit_character = SWE_oscar_ii
+recruit_character = SWE_gustaf_adolf_v
 recruit_character = SWE_erik_gustaf_bostrom
 recruit_character = SWE_fredrik_von_otter
+recruit_character = SWE_johan_ramstedt 
 recruit_character = SWE_knut_gillis_bildt
+recruit_character = SWE_karl_staaff
 recruit_character = SWE_elise_ottesen
 recruit_character = SWE_constantin_fallenius
 recruit_character = SWE_emil_morcke
@@ -66,57 +59,117 @@ recruit_character = SWE_ernst_meyer
 recruit_character = SWE_axel_vennersten
 recruit_character = SWE_otto_lybeck
 recruit_character = SWE_lise_meitner
+recruit_character = SWE_arvid_lindman
 
-1900.9.12 = {
- promote_character = SWE_fredrik_von_otter
+#Start off as Swedish-Norway
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_oscar_ii
 }
 
-1902.6.5 = {
- promote_character = SWE_erik_gustaf_bostrom
+set_nationality = {
+    target_country = KNS
+    character = SWE_gustaf_adolf_v
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_erik_gustaf_bostrom
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_fredrik_von_otter
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_johan_ramstedt
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_knut_gillis_bildt
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_karl_staaff
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_elise_ottesen
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_constantin_fallenius
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_emil_morcke
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_carl_gustaf_hammarskjold
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_ernst_linder
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_sten_ankarcrona
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_ernst_meyer
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_axel_vennersten
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_otto_lybeck
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_lise_meitner
+}
+
+set_nationality = {
+    target_country = KNS
+    character = SWE_arvid_lindman
 }
 
 1905.1.1 = {
- recruit_character = SWE_claes_lindstrom
- recruit_character = SWE_johan_ramstedt 
- retire_character = SWE_fredrik_von_otter 
-}
-
-1905.1.2 = {
- promote_character = SWE_johan_ramstedt 
-}
-
-1905.1.3 = {
- retire_character = SWE_erik_gustaf_bostrom	
- recruit_character = SWE_karl_staaff
-}
-
-1905.11.7 = {
- retire_character = SWE_johan_ramstedt 	
- promote_character = SWE_karl_staaff
-}
-
-1905.11.8 = { 	
- recruit_character = SWE_arvid_lindman
-}
-
-1906.5.29 = { 	
- promote_character = SWE_arvid_lindman
-}
-
-1907.12.7 = {
- recruit_character = SWE_gustaf_adolf_v_dnc
-}
-
-1907.12.8 = {
- retire_character = SWE_oscar_ii
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1906.5.29"
+		election_frequency = 60
+		elections_allowed = yes
+    }	
+	recruit_character = SWE_claes_lindstrom
+	promote_character = SWE_erik_gustaf_bostrom 
 }
 
 1910.1.1 = {
 	set_politics = {
-	ruling_party = democratic
-	last_election = "1906.5.29"
-	election_frequency = 60
-	elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1906.5.29"
+		election_frequency = 60
+		elections_allowed = yes
     }
 
 	set_technology = {
@@ -137,28 +190,37 @@ recruit_character = SWE_lise_meitner
 		horses = 1
 		ww1_electronic_mechanical_engineering = 1
 	}
+	add_country_leader_role = {
+		character = SWE_gustaf_adolf_v
+		promote_leader = yes
+		country_leader = {
+			ideology = monarchism
+			expire = "1951.1.1.1"
+			traits = { SWE_sveriges_kung SWE_former_autocrat }
+		}		
+	}
+	set_character_name = {
+		character = SWE_gustaf_adolf_v
+		name = SWE_gustaf_adolf_v
+	}	
 	recruit_character = SWE_per_sylvan
-    recruit_character = SWE_hugo_sillen		
-}
-
-1911.11.7 = { 	
- retire_character = SWE_arvid_lindman
-}
-
-1911.11.8 = { 	
- recruit_character = SWE_hjalmar_hammarskjold
+    recruit_character = SWE_hugo_sillen
+ 	recruit_character = SWE_hjalmar_hammarskjold		
+ 	retire_character = SWE_oscar_ii	
+	retire_character = SWE_fredrik_von_otter 	
 }
 
 1914.1.1 = {
 	oob = "SWE_1914"
 	set_politics = {
-	ruling_party = democratic
-	last_election = "1911.10.7"
-	election_frequency = 60
-	elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1911.10.7"
+		election_frequency = 60
+		elections_allowed = yes
     }
 	recruit_character = SWE_harald_malmberg
-    recruit_character = SWE_axel_rappe			
+    recruit_character = SWE_axel_rappe	
+	retire_character = SWE_arvid_lindman		
 }
 
 1914.2.17 = { 	
@@ -193,19 +255,10 @@ recruit_character = SWE_lise_meitner
 	retire_character = SWE_axel_vennersten			
 }
 
-1925.2.1 = {
- recruit_character = SWE_gustaf_adolf_v_ww2
- recruit_character = SWE_per_albin_hansson 
- retire_character = SWE_hugo_sillen 
-}
-
-1925.2.2 = {
- retire_character = SWE_gustaf_adolf_v_dnc
- recruit_character = SWE_gustaf_adolf_vi_ww2
-}
-
-1926.11.6 = { 	
- retire_character = SWE_carl_swartz
+1925.1.1 = {
+	recruit_character = SWE_per_albin_hansson 
+	retire_character = SWE_hugo_sillen 
+	recruit_character = SWE_gustaf_adolf_vi
 }
 
 1930.1.1 = {
@@ -232,7 +285,8 @@ recruit_character = SWE_lise_meitner
     recruit_character = SWE_tage_erlander
     recruit_character = SWE_sven_olov_lindholm
     retire_character = SWE_constantin_fallenius	
-    retire_character = SWE_ernst_meyer																		
+    retire_character = SWE_ernst_meyer
+ 	retire_character = SWE_carl_swartz																			
 }
 
 1933.1.1 = {
@@ -277,23 +331,23 @@ recruit_character = SWE_lise_meitner
 			neutrality_idea
 		}
 	}
- recruit_character = SWE_gosta_ehrensvard
- recruit_character = SWE_fabian_tamm 
- recruit_character = SWE_erik_anderberg
- recruit_character = SWE_torsten_rapp
- recruit_character = SWE_bengt_nordenskiold 
- recruit_character = SWE_albin_strom  
- recruit_character = SWE_karl_kilbom 
- recruit_character = SWE_anton_nilsson
- recruit_character = SWE_per_edvin_skold
- recruit_character = SWE_axel_wennergren
- recruit_character = SWE_christian_gunther
- recruit_character = SWE_thorwald_bergquist
- recruit_character = SWE_carl_petersen
- recruit_character = SWE_oscar_nygren
- recruit_character = SWE_axel_gyllenkrok 
- recruit_character = SWE_ernst_af_klercker 
- recruit_character = SWE_gosta_bagge      
+	recruit_character = SWE_gosta_ehrensvard
+	recruit_character = SWE_fabian_tamm 
+	recruit_character = SWE_erik_anderberg
+	recruit_character = SWE_torsten_rapp
+	recruit_character = SWE_bengt_nordenskiold 
+	recruit_character = SWE_albin_strom  
+	recruit_character = SWE_karl_kilbom 
+	recruit_character = SWE_anton_nilsson
+	recruit_character = SWE_per_edvin_skold
+	recruit_character = SWE_axel_wennergren
+	recruit_character = SWE_christian_gunther
+	recruit_character = SWE_thorwald_bergquist
+	recruit_character = SWE_carl_petersen
+	recruit_character = SWE_oscar_nygren
+	recruit_character = SWE_axel_gyllenkrok 
+	recruit_character = SWE_ernst_af_klercker 
+	recruit_character = SWE_gosta_bagge      
 }
 
 ### END OF WW1 Start Date
@@ -451,10 +505,6 @@ recruit_character = SWE_lise_meitner
  retire_character = SWE_sven_olov_lindholm
 }
 
-1950.10.29 = {
- retire_character = SWE_gustaf_adolf_v_ww2 
-}
-
 1951.1.1 = {
  retire_character = SWE_helge_jung
 }
@@ -482,14 +532,12 @@ recruit_character = SWE_lise_meitner
 	set_popularities = {
 		democratic = 100
 	}
- recruit_character = SWE_gustaf_adolf_vi_cw
- retire_character = SWE_elise_ottesen
- recruit_character = SWE_olof_palme  
+	retire_character = SWE_elise_ottesen
+	recruit_character = SWE_olof_palme  
 }
 
 1960.2.1 = {
- retire_character = SWE_gustaf_adolf_vi_ww2
- recruit_character = SWE_nils_olof_falldin
+ 	recruit_character = SWE_nils_olof_falldin
 }
 
 1960.2.1 = {
@@ -524,7 +572,7 @@ recruit_character = SWE_lise_meitner
 }
 
 1973.11.11 = {
- retire_character = SWE_gustaf_adolf_vi_cw
+ retire_character = SWE_gustaf_adolf_vi
 }
 
 1975.1.1 = {
