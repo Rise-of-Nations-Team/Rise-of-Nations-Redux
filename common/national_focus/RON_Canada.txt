@@ -1952,6 +1952,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_b_the_admiraltys_guarantee }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_arthur_currie
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_imperial_federation
 			set_country_flag = CAN_dnc_end_imperial_treasury
@@ -1981,6 +1982,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_b_esquimalt_manned_by_canadians }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_arthur_currie
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_imperial_federation
 			set_country_flag = CAN_dnc_end_imperial_squadron
@@ -2723,6 +2725,7 @@ focus_tree = {
 		available = { has_country_flag = CAN_dnc_c_treaty_ratified }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_james_j_hill
 			custom_effect_tooltip = CANDNC_c_union_tt
 			if = {
 				limit = { is_subject = yes }
@@ -2753,6 +2756,7 @@ focus_tree = {
 			available = { has_country_flag = CAN_dnc_c_treaty_rejected }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
+			recruit_character = CAN_james_j_hill
 				set_country_flag = CAN_dnc_junior_partner
 				set_country_flag = CAN_dnc_era_end
 				set_country_flag = CAN_dnc_end_continental_partner
@@ -2786,6 +2790,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_c_the_governor_general_goes_home }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_james_j_hill
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_end_continental_partner
 			set_country_flag = CAN_dnc_independent
@@ -3832,6 +3837,7 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_d_a_flag_of_our_own }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
+			recruit_character = CAN_reginald_fessenden
 				set_country_flag = CAN_dnc_era_end
 				set_country_flag = CAN_dnc_sovereign
 				set_country_flag = CAN_dnc_end_sovereign_kingdom
@@ -3871,6 +3877,7 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_d_a_flag_of_our_own }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
+			recruit_character = CAN_reginald_fessenden
 				set_country_flag = CAN_dnc_era_end
 				set_country_flag = CAN_dnc_sovereign
 				set_country_flag = CAN_dnc_end_sovereign_republic
@@ -4949,6 +4956,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CANDNC_army_a_nation_of_marksmen }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_tdb_evans
 			army_experience = 50
 			add_political_power = -50
 			add_tech_bonus = { name = CANDNC_army_permanent_bonus bonus = 0.5 uses = 1 category = land_doctrine }
@@ -5140,6 +5148,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_navy_a_naval_militia focus = CANDNC_navy_a_permanent_naval_service }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_walter_hose
 			navy_experience = 25
 			add_tech_bonus = { name = CANDNC_navy_service_act_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
 		}
@@ -6011,6 +6020,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_a_legation_in_tokyo }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_je_bernier
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_pacific_gateway
 			swap_ideas = { remove_idea = CAN_p_eyes_on_the_pacific add_idea = CAN_p_gateway_of_the_pacific }
@@ -6073,6 +6083,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_the_entrepot_of_the_north_pacific }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			recruit_character = CAN_je_bernier
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_two_markets
 			swap_ideas = { remove_idea = CAN_p_eyes_on_the_pacific add_idea = CAN_p_two_markets }
