@@ -1,194 +1,194 @@
 characters = {
 
-ITA_enrico_fermi = {
-    name = ITA_enrico_fermi
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_enrico_fermi
-            small = GFX_portrait_ITA_enrico_fermi_small
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_nuclear_specialist scientist_trait_gifted_engineer }
-        skills = {
-            specialization_nuclear = 3
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
-
-ITA_gaetano_crocco = {
-    name = ITA_gaetano_crocco
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_gaetano_crocco
-            small = GFX_idea_gaetano_crocco
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_rocketry_specialist }
-        skills = {
-            specialization_air = 2
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
-
-ITA_robert_longhi = {
-    name = ITA_robert_longhi
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_robert_longhi
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_jet_expert scientist_trait_gifted_engineer }
-        skills = {
-            specialization_air = 2
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
-
-ITA_mario_castoldi = {
-    name = ITA_mario_castoldi
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_mario_castoldi
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_aircraft_specialist }
-        skills = {
-            specialization_air = 2
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
-
-ITA_mario_calderara = {
-    name = "Mario Calderara"
-    portraits = {
-        civilian = {
-            large = "gfx/leaders/ITA/DNC/ITA_Mario_Calderara_Scientist.dds"
-        }		
-        army = {
-            large = "gfx/leaders/ITA/DNC/ITA_Mario_Calderara_Navy.dds"
-			small = "gfx/interface/ideas/ITA/idea_ITA_Mario_Calderara.dds"
-        }
-    }
-	advisor={
-		cost = 100
-		slot = theorist
-		idea_token = ITA_mario_calderara
-		ledger = navy
-		allowed = {
-			original_tag = ITA
+	ITA_enrico_fermi = {
+		name = ITA_enrico_fermi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_enrico_fermi
+				small = GFX_portrait_ITA_enrico_fermi_small
+			}
 		}
-		traits = {
-			naval_aviation_pioneer
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_nuclear = 3
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
 		}
-        visible = {
-            date < 1945.1.1
-            date > 1907.1.1
-        }
-		available = {
-            date < 1945.1.1
-            date > 1907.1.1			
-		}		
-	}	
-    scientist = {
-        traits = { scientist_trait_brilliant_theorist scientist_trait_aircraft_specialist }
-        skills = {
-            specialization_air = 3
-        }
-        visible = {
-            date < 1945.1.1
-            date > 1907.1.1
-        }
-    }
-	navy_leader={
-		traits={ regia_marina_trait navy_career_officer air_controller flight_deck_manager ironside }
-		skill=3
-		attack_skill=2
-		defense_skill=2
-		maneuvering_skill=5
-		coordination_skill=4
-        visible = {
-            date < 1945.1.1
-            date > 1907.1.1
+	}
+
+	ITA_gaetano_crocco = {
+		name = ITA_gaetano_crocco
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_gaetano_crocco
+				small = GFX_idea_gaetano_crocco
+			}
 		}
-	}	
-}
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
+		}
+	}
 
-ITA_giovanni_giorgi = {
-    name = ITA_giovanni_giorgi
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_giovanni_giorgi
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_electronics_specialist }
-        skills = {
-            specialization_air = 2
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
+	ITA_robert_longhi = {
+		name = ITA_robert_longhi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_robert_longhi
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
+		}
+	}
 
-ITA_filippo_bonfiglietti = {
-    name = ITA_filippo_bonfiglietti
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_filippo_bonfiglietti
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_surface_ship_specialist }
-        skills = {
-            specialization_naval = 2
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
+	ITA_mario_castoldi = {
+		name = ITA_mario_castoldi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_mario_castoldi
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
+		}
+	}
 
-ITA_curio_bernardis = {
-    name = ITA_curio_bernardis
-    portraits = {
-        army = {
-            large = GFX_portrait_ITA_curio_bernardis
-        }
-    }
-    scientist = {
-        traits = { scientist_trait_submarine_specialist scientist_trait_bright }
-        skills = {
-            specialization_naval = 2
-        }
-        visible = {
-            date < 1940.1.1
-            date > 1910.1.1
-        }
-    }
-}
+	ITA_mario_calderara = {
+		name = "Mario Calderara"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ITA/DNC/ITA_Mario_Calderara_Scientist.dds"
+			}		
+			army = {
+				large = "gfx/leaders/ITA/DNC/ITA_Mario_Calderara_Navy.dds"
+				small = "gfx/interface/ideas/ITA/idea_ITA_Mario_Calderara.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = ITA_mario_calderara
+			ledger = navy
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+			visible = {
+				date < 1945.1.1
+				date > 1907.1.1
+			}
+			available = {
+				date < 1945.1.1
+				date > 1907.1.1			
+			}		
+		}	
+		scientist = {
+			traits = { scientist_trait_brilliant_theorist scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 3
+			}
+			visible = {
+				date < 1945.1.1
+				date > 1907.1.1
+			}
+		}
+		navy_leader={
+			traits={ regia_marina_trait navy_career_officer air_controller flight_deck_manager ironside }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=5
+			coordination_skill=4
+			visible = {
+				date < 1945.1.1
+				date > 1907.1.1
+			}
+		}	
+	}
+
+	ITA_giovanni_giorgi = {
+		name = ITA_giovanni_giorgi
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_giovanni_giorgi
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_electronics_specialist }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
+		}
+	}
+
+	ITA_filippo_bonfiglietti = {
+		name = ITA_filippo_bonfiglietti
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_filippo_bonfiglietti
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
+		}
+	}
+
+	ITA_curio_bernardis = {
+		name = ITA_curio_bernardis
+		portraits = {
+			army = {
+				large = GFX_portrait_ITA_curio_bernardis
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_submarine_specialist scientist_trait_bright }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+				date < 1940.1.1
+				date > 1910.1.1
+			}
+		}
+	}
  # 1900-1919
 
 	ITA_umberto_i = {
