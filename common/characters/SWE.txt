@@ -225,6 +225,44 @@ characters={
 
 	#GENERALS	
 
+	SWE_hemming_gadd={
+		name="Hemming Gadd"
+		portraits={
+			army={
+				large="gfx/leaders/SWE/DNC/SWE_hemming_gadd.dds"
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine infantry_officer old_guard }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=0
+			visible = {
+				date < 1910.1.1
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SWE_hemming_gadd
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost =  150
+			ai_will_do = {
+				factor = 1.000
+			}
+			visible = {
+				date < 1910.1.1
+			}			
+		}
+	}	
+
 	SWE_constantin_fallenius={
 		name=SWE_constantin_fallenius
 		portraits={
@@ -236,11 +274,11 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = SWE_constantin_fallenius
-			allowed  = {
+			allowed = {
 				original_tag  = SWE
 			}
-			ledger  = army 
-			traits  = {
+			ledger = army 
+			traits = {
 				army_cavalry_1 
 			}
 			ai_will_do  = {
@@ -332,6 +370,67 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
+		}
+	}	
+
+	SWE_erik_oxenstierna={
+		name="Erik Carl Gabriel Oxenstierna"
+		portraits={
+			army={
+				large="gfx/leaders/SWE/WW1/SWE_erik_oxenstierna.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SWE_erik_oxenstierna
+			allowed = {
+				original_tag = SWE
+			}
+			traits = {
+				army_chief_defensive_1
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+			visible ={
+				date < 1914.1.1
+			}			
+		}		
+		corps_commander={
+			traits={ hill_fighter }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=0
+			visible ={
+				date < 1914.1.1
+			}
+		}
+	}	
+
+	SWE_fredrik_holmquist={
+		name="Peter Fredrik Holmquist"
+		portraits={
+			army={
+				large="gfx/leaders/SWE/WW1/SWE_fredrik_holmquist.dds"
+			}
+		}
+		corps_commander={
+			traits={ 
+				trait_cautious
+			}
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=0
+			visible = {
+				date < 1922.1.1
+			}
 		}
 	}	
 
