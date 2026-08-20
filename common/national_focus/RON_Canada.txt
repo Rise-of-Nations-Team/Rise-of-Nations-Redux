@@ -6703,4 +6703,826 @@ focus_tree = {
 			swap_ideas = { remove_idea = CAN_p2_golden_corridor_pre add_idea = CAN_p2_golden_corridor }
 		}
 	}
+
+	### CANADA DNC - CONTINENTAL AND ISOLATIONIST EXPANSIONS (C2/D2) ###
+
+	focus = {
+		id = CANDNC_c2_the_permanent_tariff_board
+		icon = GFX_focus_generic_british_trade
+		x = 56
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_c_the_junior_partner_by_default }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = CAN_c2_tariff_board
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_a_zollverein_and_no_more
+		icon = GFX_goal_CAN_maple_leaf
+		x = 56
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_permanent_tariff_board }
+		mutually_exclusive = { focus = CANDNC_c2_let_the_zollverein_ripen }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_let_the_zollverein_ripen
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 60
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_permanent_tariff_board }
+		mutually_exclusive = { focus = CANDNC_c2_a_zollverein_and_no_more }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_treaty_made_perpetual
+		icon = GFX_focus_generic_treaty
+		x = 56
+		y = 22
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_a_zollverein_and_no_more }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_perpetual_treaty
+			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+			USA = { country_event = { id = can_dnc_c2.5 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_continental_delegations
+		icon = GFX_goal_generic_parliament
+		x = 60
+		y = 22
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_let_the_zollverein_ripen }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_delegations
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_a_continent_two_flags
+		icon = GFX_goal_generic_improve_relations
+		x = 56
+		y = 25
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_treaty_made_perpetual }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_two_flag_continent
+			add_political_power = 100
+			add_stability = 0.05
+			add_ideas = CAN_c2_two_flag_continent
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_continental_secretariat
+		icon = GFX_focus_generic_treaty
+		x = 64
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_c_the_boundary_waters_treaty focus = CANDNC_c_the_dollar_comes_north focus = CANDNC_c_under_the_monroe_doctrine }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_secretariat
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_alaska_scar_healed
+		icon = GFX_focus_generic_railroad
+		x = 64
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_continental_secretariat }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			471 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			473 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_newfoundland_at_the_door
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 68
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_c_nine_new_states focus = CANDNC_c_the_northern_associate focus = CANDNC_c_the_junior_partner_by_default }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_oldest_colony_comes_in
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 68
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_newfoundland_at_the_door }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+			add_stability = 0.02
+			USA = { country_event = { id = can_dnc_c2.1 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_treaty_of_relations
+		icon = GFX_focus_generic_treaty
+		x = 72
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_c_the_northern_associate }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_platt_guarantee
+			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
+			add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_esquimalt_lease
+		icon = GFX_goal_generic_build_navy
+		x = 68
+		y = 21
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_treaty_of_relations }
+		mutually_exclusive = { focus = CANDNC_c2_the_garrison_remains_ours }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.03
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+			USA = { country_event = { id = can_dnc_c2.2 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_garrison_remains_ours
+		icon = GFX_focus_generic_coastal_fort
+		x = 72
+		y = 21
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_treaty_of_relations }
+		mutually_exclusive = { focus = CANDNC_c2_the_esquimalt_lease }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_political_power = -50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_league_against_the_treaty
+		icon = GFX_goal_CAN_maple_leaf
+		x = 72
+		y = 22
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_esquimalt_lease focus = CANDNC_c2_the_garrison_remains_ours }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.02
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_ask_for_the_stars
+		icon = GFX_Goal_USA_befriend_america
+		x = 68
+		y = 23
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_league_against_the_treaty }
+		mutually_exclusive = { focus = CANDNC_c2_take_back_the_treaty }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -50
+			USA = { country_event = { id = can_dnc_c2.3 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_take_back_the_treaty
+		icon = GFX_goal_generic_parliament
+		x = 72
+		y = 23
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_league_against_the_treaty }
+		mutually_exclusive = { focus = CANDNC_c2_ask_for_the_stars }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -50
+			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_advisers_go_home
+		icon = GFX_goal_generic_financial_markets
+		x = 72
+		y = 24
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_take_back_the_treaty }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_autonomy_ratio = { value = 0.05 localization = CANDNC_c2_the_advisers_go_home }
+			swap_ideas = { remove_idea = CAN_c2_platt_guarantee add_idea = CAN_c2_paying_out }
+			USA = { country_event = { id = can_dnc_c2.6 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_guarantee_outgrown
+		icon = GFX_goal_CAN_maple_leaf
+		x = 72
+		y = 26
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_advisers_go_home }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_guarantee_outgrown
+			add_political_power = 100
+			add_stability = 0.05
+			swap_ideas = { remove_idea = CAN_c2_paying_out add_idea = CAN_c2_equal_pact }
+			add_autonomy_ratio = { value = 0.10 localization = CANDNC_c2_the_guarantee_outgrown }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_stars_sewn_on
+		icon = GFX_Goal_USA_befriend_america
+		x = 80
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_c_nine_new_states }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_statehood_transition
+			add_stability = -0.03
+			ENG = { country_event = { id = can_dnc_c2.7 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_northern_bloc
+		icon = GFX_goal_generic_parliament
+		x = 76
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_stars_sewn_on }
+		mutually_exclusive = { focus = CANDNC_c2_party_men_not_a_bloc }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_northern_bloc
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_party_men_not_a_bloc
+		icon = GFX_Goal_USA_befriend_america
+		x = 80
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_stars_sewn_on }
+		mutually_exclusive = { focus = CANDNC_c2_the_northern_bloc }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_loyalists_reconciled
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 76
+		y = 21
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_northern_bloc focus = CANDNC_c2_party_men_not_a_bloc }
+		mutually_exclusive = { focus = CANDNC_c2_free_passage_for_the_irreconcilables }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -25
+			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_free_passage_for_the_irreconcilables
+		icon = GFX_goal_generic_national_unity
+		x = 80
+		y = 21
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_northern_bloc focus = CANDNC_c2_party_men_not_a_bloc }
+		mutually_exclusive = { focus = CANDNC_c2_the_loyalists_reconciled }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -20000
+			ENG = { country_event = { id = can_dnc_c2.8 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_quebec_clause_at_the_court
+		icon = GFX_focus_generic_treaty
+		x = 80
+		y = 23
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_loyalists_reconciled focus = CANDNC_c2_free_passage_for_the_irreconcilables }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			USA = { country_event = { id = can_dnc_c2.4 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_the_long_way_to_the_union
+		icon = GFX_Goal_USA_befriend_america
+		x = 64
+		y = 24
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_continental_delegations focus = CANDNC_c2_ask_for_the_stars }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_c2_installments
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = CANDNC_c2_a_president_from_the_north
+		icon = GFX_Goal_USA_befriend_america
+		x = 76
+		y = 25
+		cost = 10
+		prerequisite = { focus = CANDNC_c2_the_quebec_clause_at_the_court focus = CANDNC_c2_the_long_way_to_the_union }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_president_north
+			add_political_power = 150
+			add_stability = 0.05
+			add_ideas = CAN_c2_president_north
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_doctrine_of_armed_neutrality
+		icon = GFX_goal_generic_improve_relations
+		x = 88
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_kingdom_of_canada_proclaimed focus = CANDNC_d_the_republic_of_canada_proclaimed }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_armed_neutrality
+			add_war_support = 0.05
+			ENG = { country_event = { id = can_dnc_d2.1 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_a_militia_after_the_swiss_pattern
+		icon = GFX_goal_generic_position_armies
+		x = 84
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_doctrine_of_armed_neutrality }
+		mutually_exclusive = { focus = CANDNC_d2_the_permanent_force_of_the_fortress }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_swiss_militia
+			add_manpower = 30000
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_permanent_force_of_the_fortress
+		icon = GFX_goal_generic_position_armies
+		x = 88
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_doctrine_of_armed_neutrality }
+		mutually_exclusive = { focus = CANDNC_d2_a_militia_after_the_swiss_pattern }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_fortress_force
+			army_experience = 40
+			add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_ross_perfected
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 84
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_a_militia_after_the_swiss_pattern focus = CANDNC_d2_the_permanent_force_of_the_fortress }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = { name = CANDNC_d2_ross_bonus bonus = 0.5 uses = 1 category = infantry_weapons }
+			466 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			add_tech_bonus = { name = CANDNC_d2_arty_bonus bonus = 0.5 uses = 1 category = artillery }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_mosquito_flotilla
+		icon = GFX_goal_generic_build_navy
+		x = 92
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_doctrine_of_armed_neutrality }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = { name = CANDNC_d2_flotilla_bonus bonus = 0.5 uses = 1 category = dd_tech }
+			navy_experience = 30
+			466 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+			add_ideas = CAN_d2_mosquito_flotilla
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_fessenden_net
+		icon = GFX_goal_generic_build_navy
+		x = 92
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_mosquito_flotilla }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = { name = CANDNC_d2_net_bonus bonus = 0.5 uses = 1 category = electronics }
+			add_ideas = CAN_d2_fessenden_net
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_schemes_red_and_blue
+		icon = GFX_focus_generic_coastal_fort
+		x = 88
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_ross_perfected }
+		prerequisite = { focus = CANDNC_d2_the_fessenden_net }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_ideas = CAN_d2_defence_schemes
+			USA = { country_event = { id = can_dnc_d2.5 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_garrison_state
+		icon = GFX_focus_generic_coastal_fort
+		x = 88
+		y = 23
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_schemes_red_and_blue }
+		mutually_exclusive = { focus = CANDNC_d2_the_hermit_dominion focus = CANDNC_d2_the_empire_of_the_cold }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_garrison_state
+			add_ideas = CAN_d2_garrison_state
+			add_war_support = 0.10
+			add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_emparons_nous_de_lindustrie
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 100
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_d_a_wall_against_both focus = CANDNC_d_nothing_bought_abroad }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_bouchette_plan
+			466 = { add_extra_state_shared_building_slots = 1 }
+			276 = { add_extra_state_shared_building_slots = 1 }
+			add_tech_bonus = { name = CANDNC_d2_bouchette_bonus bonus = 0.5 uses = 1 category = industry }
+			FRA = { country_event = { id = can_dnc_d2.8 days = 5 } }
+			custom_effect_tooltip = CANDNC_c2_paris_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_white_coal_of_the_people
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 96
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_emparons_nous_de_lindustrie }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_ideas = CAN_d2_white_coal
+			USA = { country_event = { id = can_dnc_d2.4 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_nitrogen_from_the_falls
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 96
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_white_coal_of_the_people }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_nitrogen
+			276 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_trust_of_three_forges
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 100
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_emparons_nous_de_lindustrie }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			464 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			682 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_resource = { type = steel amount = 6 state = 464 }
+			add_tech_bonus = { name = CANDNC_d2_forges_bonus bonus = 0.5 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_a_bank_upon_silver
+		icon = GFX_goal_generic_financial_markets
+		x = 104
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_cobalt_reserve }
+		mutually_exclusive = { focus = CANDNC_d2_a_bank_upon_gold }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_silver_bank
+			add_political_power = 50
+			ENG = { country_event = { id = can_dnc_d2.2 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_a_bank_upon_gold
+		icon = GFX_goal_generic_financial_markets
+		x = 108
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_cobalt_reserve }
+		mutually_exclusive = { focus = CANDNC_d2_a_bank_upon_silver }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_d2_gold_bank
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_bring_home_the_mill_hands
+		icon = GFX_goal_generic_national_unity
+		x = 100
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_white_coal_of_the_people focus = CANDNC_d2_the_trust_of_three_forges }
+		mutually_exclusive = { focus = CANDNC_d2_the_narrow_door }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 25000
+			add_stability = 0.02
+			USA = { country_event = { id = can_dnc_d2.6 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_narrow_door
+		icon = GFX_goal_generic_national_unity
+		x = 104
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_white_coal_of_the_people focus = CANDNC_d2_the_trust_of_three_forges }
+		mutually_exclusive = { focus = CANDNC_d2_bring_home_the_mill_hands }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_ideas = CAN_d2_narrow_door
+			JAP = { country_event = { id = can_dnc_d2.7 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_tokyo_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_public_elevators
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 96
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_d_a_wall_against_both }
+		mutually_exclusive = { focus = CANDNC_d2_the_grain_growers_defied }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_ideas = CAN_d2_prairie_trust
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_grain_growers_defied
+		icon = GFX_goal_generic_parliament
+		x = 100
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_d_a_wall_against_both }
+		mutually_exclusive = { focus = CANDNC_d2_the_public_elevators }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+			add_ideas = CAN_d2_prairie_grudge
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_hudson_bay_railway
+		icon = GFX_focus_generic_railroad
+		x = 112
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_a_bank_upon_silver focus = CANDNC_d2_a_bank_upon_gold }
+		mutually_exclusive = { focus = CANDNC_d2_the_georgian_bay_ship_canal }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			467 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			468 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			468 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
+			add_ideas = CAN_d2_churchill_port
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_georgian_bay_ship_canal
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 116
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_a_bank_upon_silver focus = CANDNC_d2_a_bank_upon_gold }
+		mutually_exclusive = { focus = CANDNC_d2_the_hudson_bay_railway }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			276 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			466 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			276 = { add_extra_state_shared_building_slots = 1 }
+			add_ideas = CAN_d2_inner_river
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_clay_belts_peopled
+		icon = GFX_goal_generic_national_unity
+		x = 112
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_hudson_bay_railway focus = CANDNC_d2_the_georgian_bay_ship_canal }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			682 = { add_extra_state_shared_building_slots = 1 }
+			466 = { add_extra_state_shared_building_slots = 1 }
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_constables_in_the_ice
+		icon = GFX_goal_CAN_maple_leaf
+		x = 120
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_kingdom_of_canada_proclaimed focus = CANDNC_d_the_republic_of_canada_proclaimed }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = CAN_d2_arctic_law
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_poirier_sector
+		icon = GFX_goal_generic_parliament
+		x = 120
+		y = 21
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_constables_in_the_ice }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = CAN_d2_sector_law
+			ENG = { country_event = { id = can_dnc_d2.3 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_berniers_patrols
+		icon = GFX_goal_generic_build_navy
+		x = 120
+		y = 22
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_poirier_sector }
+		prerequisite = { focus = CANDNC_d2_the_fessenden_net }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 25
+			472 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
+			swap_ideas = { remove_idea = CAN_d2_arctic_law add_idea = CAN_d2_arctic_watch }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_hermit_dominion
+		icon = GFX_goal_CAN_maple_leaf
+		x = 100
+		y = 23
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_the_public_elevators focus = CANDNC_d2_the_grain_growers_defied }
+		mutually_exclusive = { focus = CANDNC_d2_the_garrison_state focus = CANDNC_d2_the_empire_of_the_cold }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_hermit_dominion
+			add_stability = 0.05
+			add_political_power = 100
+			add_ideas = CAN_d2_hermit_dominion
+		}
+	}
+
+	focus = {
+		id = CANDNC_d2_the_empire_of_the_cold
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 116
+		y = 23
+		cost = 10
+		prerequisite = { focus = CANDNC_d2_berniers_patrols }
+		prerequisite = { focus = CANDNC_d2_the_clay_belts_peopled }
+		mutually_exclusive = { focus = CANDNC_d2_the_garrison_state focus = CANDNC_d2_the_hermit_dominion }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_empire_of_cold
+			add_political_power = 100
+			add_ideas = CAN_d2_empire_of_cold
+		}
+	}
 }
