@@ -6260,4 +6260,447 @@ focus_tree = {
 			add_political_power = -25
 		}
 	}
+
+	### CANADA DNC - PACIFIC EXPANSION (P2) ###
+
+	focus = {
+		id = CANDNC_p2_a_battalion_from_powell_street
+		icon = GFX_goal_generic_position_armies
+		x = 120
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_pacific_gateway }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 15
+			add_ideas = CAN_p2_integrated_militia
+			add_stability = -0.02
+			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
+			ENG = { country_event = { id = can_dnc_p2.5 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_joint_keels_at_esquimalt_and_kure
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 120
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_a_battalion_from_powell_street }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 40
+			473 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+			add_tech_bonus = { name = CANDNC_p2_joint_keels_bonus bonus = 0.5 uses = 1 category = cl_tech }
+			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
+			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+			ENG = { country_event = { id = can_dnc_p2.6 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_pacific_squadron
+		icon = GFX_goal_generic_navy_cruiser
+		x = 120
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_joint_keels_at_esquimalt_and_kure }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 30
+			add_tech_bonus = { name = CANDNC_p2_squadron_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_pacific_defence_compact
+		icon = GFX_focus_generic_treaty
+		x = 120
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_pacific_squadron }
+		mutually_exclusive = { focus = CANDNC_p2_the_panhandle_bargain }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = CAN_p2_pacific_compact
+			reverse_add_opinion_modifier = { target = JAP modifier = large_increase }
+			reverse_add_opinion_modifier = { target = USA modifier = medium_decrease }
+			ENG = { country_event = { id = can_dnc_p2.10 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_empires_pacific_gate
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 120
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_pacific_defence_compact }
+		mutually_exclusive = { focus = CANDNC_p2_a_power_in_our_own_right }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+			add_stability = 0.05
+			add_ideas = CAN_p2_empires_gate
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_a_power_in_our_own_right
+		icon = GFX_goal_generic_improve_relations
+		x = 124
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_pacific_defence_compact }
+		mutually_exclusive = { focus = CANDNC_p2_the_empires_pacific_gate }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_autonomy_ratio = { value = 0.10 localization = CANDNC_p2_a_power_in_our_own_right }
+			reverse_add_opinion_modifier = { target = ENG modifier = medium_decrease }
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_vancouver_conference
+		icon = GFX_goal_generic_parliament
+		x = 124
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_empires_pacific_gate focus = CANDNC_p2_a_power_in_our_own_right }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_pacific_recognized
+			add_political_power = 150
+			add_stability = 0.05
+			add_ideas = CAN_p2_recognized_power
+			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_victoria_conference
+		icon = GFX_focus_generic_treaty
+		x = 124
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_pacific_gateway }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = CAN_p2_host_of_peace
+			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+			RUS = { country_event = { id = can_dnc_p2.1 days = 5 } }
+			custom_effect_tooltip = CANDNC_p2_petersburg_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_honest_broker
+		icon = GFX_focus_generic_treaty
+		x = 124
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_victoria_conference }
+		mutually_exclusive = { focus = CANDNC_p2_a_thumb_on_the_scale }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+			swap_ideas = { remove_idea = CAN_p2_host_of_peace add_idea = CAN_p2_honest_broker }
+			reverse_add_opinion_modifier = { target = RUS modifier = medium_increase }
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+			JAP = { country_event = { id = can_dnc_p2.2 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_tokyo_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_a_thumb_on_the_scale
+		icon = GFX_goal_JAP_anglo_jap_alliance
+		x = 128
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_victoria_conference }
+		mutually_exclusive = { focus = CANDNC_p2_the_honest_broker }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = JAP modifier = large_increase }
+			reverse_add_opinion_modifier = { target = RUS modifier = medium_decrease }
+			add_war_support = 0.03
+			swap_ideas = { remove_idea = CAN_p2_host_of_peace add_idea = CAN_p2_honest_broker }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_ottawa_understanding
+		icon = GFX_focus_generic_treaty
+		x = 124
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_honest_broker focus = CANDNC_p2_a_thumb_on_the_scale }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+			USA = { country_event = { id = can_dnc_p2.4 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_white_fleet_off_esquimalt
+		icon = GFX_goal_generic_build_navy
+		x = 128
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_ottawa_understanding focus = CANDNC_p2_the_rate_war focus = CANDNC_p2_the_gentlemens_conference }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.03
+			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+			add_ideas = CAN_p2_pacific_scare
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_hold_the_line
+		icon = GFX_focus_generic_coastal_fort
+		x = 124
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_white_fleet_off_esquimalt }
+		mutually_exclusive = { focus = CANDNC_p2_the_modus_vivendi }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.08
+			reverse_add_opinion_modifier = { target = USA modifier = medium_decrease }
+			473 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_modus_vivendi
+		icon = GFX_focus_generic_treaty
+		x = 132
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_white_fleet_off_esquimalt }
+		mutually_exclusive = { focus = CANDNC_p2_hold_the_line }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+			swap_ideas = { remove_idea = CAN_p2_pacific_scare add_idea = CAN_p2_tariff_truce }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_panhandle_bargain
+		icon = GFX_goal_generic_financial_markets
+		x = 128
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_hold_the_line focus = CANDNC_p2_the_modus_vivendi }
+		mutually_exclusive = { focus = CANDNC_p2_the_pacific_defence_compact }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -150
+			USA = { country_event = { id = can_dnc_p2.9 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_panhandle_province
+		icon = GFX_goal_generic_improve_relations
+		x = 128
+		y = 20
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_panhandle_bargain }
+		available = { has_country_flag = CAN_dnc_panhandle_sold }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			463 = { add_extra_state_shared_building_slots = 2 }
+			463 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			463 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
+			add_ideas = CAN_p2_panhandle_province
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_silk_trains
+		icon = GFX_focus_generic_railroad
+		x = 132
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_p_two_markets_one_dominion }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			473 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_political_power = 25
+			add_ideas = CAN_p2_silk_income
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_yen_finishes_the_line
+		icon = GFX_focus_generic_railroad
+		x = 136
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_p_two_markets_one_dominion }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			471 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			473 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_empress_run
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 132
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_silk_trains }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+			swap_ideas = { remove_idea = CAN_p2_silk_income add_idea = CAN_p2_merchant_marine }
+			QIN = { country_event = { id = can_dnc_p2.7 days = 5 } }
+			custom_effect_tooltip = CANDNC_p2_shanghai_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_villages_on_the_skeena
+		icon = GFX_goal_generic_national_unity
+		x = 136
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_yen_finishes_the_line }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 10000
+			473 = { add_extra_state_shared_building_slots = 1 }
+			add_stability = -0.02
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+			JAP = { country_event = { id = can_dnc_p2.3 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_tokyo_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_rate_war
+		icon = GFX_focus_generic_british_trade
+		x = 132
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_empress_run }
+		mutually_exclusive = { focus = CANDNC_p2_the_gentlemens_conference }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = CAN_p2_counting_house
+			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+			USA = { country_event = { id = can_dnc_p2.8 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_gentlemens_conference
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 128
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_empress_run }
+		mutually_exclusive = { focus = CANDNC_p2_the_rate_war }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = CAN_p2_counting_house
+			reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_a_province_in_two_tongues
+		icon = GFX_goal_generic_parliament
+		x = 136
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_villages_on_the_skeena }
+		mutually_exclusive = { focus = CANDNC_p2_the_company_coast }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			reverse_add_opinion_modifier = { target = JAP modifier = large_increase }
+			add_ideas = CAN_p2_two_tongues
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_company_coast
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 140
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_villages_on_the_skeena }
+		mutually_exclusive = { focus = CANDNC_p2_a_province_in_two_tongues }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_stability = 0.03
+			add_ideas = CAN_p2_company_coast
+			reverse_add_opinion_modifier = { target = JAP modifier = small_decrease }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_all_the_silk_of_asia
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 136
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_the_rate_war focus = CANDNC_p2_the_gentlemens_conference }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			swap_ideas = { remove_idea = CAN_p2_counting_house add_idea = CAN_p2_golden_corridor_pre }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p2_the_golden_corridor
+		icon = GFX_goal_generic_financial_markets
+		x = 136
+		y = 19
+		cost = 10
+		prerequisite = { focus = CANDNC_p2_all_the_silk_of_asia }
+		prerequisite = { focus = CANDNC_p2_the_modus_vivendi }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_golden_corridor
+			473 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_stability = 0.05
+			swap_ideas = { remove_idea = CAN_p2_golden_corridor_pre add_idea = CAN_p2_golden_corridor }
+		}
+	}
 }
