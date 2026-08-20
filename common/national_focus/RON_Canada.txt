@@ -1952,7 +1952,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_b_the_admiraltys_guarantee }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_arthur_currie
+			add_corps_commander_role = { character = CAN_willoughby_gwatkin traits = { thorough_planner career_officer } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 }
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_imperial_federation
 			set_country_flag = CAN_dnc_end_imperial_treasury
@@ -1982,7 +1982,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_b_esquimalt_manned_by_canadians }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_arthur_currie
+			add_corps_commander_role = { character = CAN_willoughby_gwatkin traits = { thorough_planner career_officer } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 }
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_imperial_federation
 			set_country_flag = CAN_dnc_end_imperial_squadron
@@ -2360,7 +2360,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_customs_union
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_CAN_sig_customs_union
 		x = 68
 		y = 10
 		cost = 15
@@ -2500,7 +2500,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_plebiscite_on_union
-		icon = GFX_focus_bo_vote
+		icon = GFX_CAN_sig_plebiscite
 		x = 64
 		y = 13
 		cost = 15
@@ -2725,7 +2725,6 @@ focus_tree = {
 		available = { has_country_flag = CAN_dnc_c_treaty_ratified }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_james_j_hill
 			custom_effect_tooltip = CANDNC_c_union_tt
 			if = {
 				limit = { is_subject = yes }
@@ -2756,7 +2755,6 @@ focus_tree = {
 			available = { has_country_flag = CAN_dnc_c_treaty_rejected }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			recruit_character = CAN_james_j_hill
 				set_country_flag = CAN_dnc_junior_partner
 				set_country_flag = CAN_dnc_era_end
 				set_country_flag = CAN_dnc_end_continental_partner
@@ -2790,7 +2788,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_c_the_governor_general_goes_home }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_james_j_hill
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_end_continental_partner
 			set_country_flag = CAN_dnc_independent
@@ -3837,7 +3834,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_d_a_flag_of_our_own }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			recruit_character = CAN_reginald_fessenden
 				set_country_flag = CAN_dnc_era_end
 				set_country_flag = CAN_dnc_sovereign
 				set_country_flag = CAN_dnc_end_sovereign_kingdom
@@ -3877,7 +3873,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_d_a_flag_of_our_own }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			recruit_character = CAN_reginald_fessenden
 				set_country_flag = CAN_dnc_era_end
 				set_country_flag = CAN_dnc_sovereign
 				set_country_flag = CAN_dnc_end_sovereign_republic
@@ -4724,7 +4719,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_army_the_south_african_contingents
-		icon = GFX_goal_CAN_coa_army
+		icon = GFX_CAN_sig_militia_root
 		x = 150
 		y = 0
 		cost = 8
@@ -4948,7 +4943,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_army_a_permanent_force_worth_the_name
-		icon = GFX_goal_CAN_coa_army
+		icon = GFX_CAN_sig_permanent_force
 		x = 154
 		y = 7
 		cost = 8
@@ -4956,7 +4951,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CANDNC_army_a_nation_of_marksmen }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_tdb_evans
+			add_corps_commander_role = { character = CAN_tdb_evans traits = { career_officer } skill = 2 attack_skill = 2 defense_skill = 2 planning_skill = 1 logistics_skill = 2 }
 			army_experience = 50
 			add_political_power = -50
 			add_tech_bonus = { name = CANDNC_army_permanent_bonus bonus = 0.5 uses = 1 category = land_doctrine }
@@ -5148,7 +5143,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_navy_a_naval_militia focus = CANDNC_navy_a_permanent_naval_service }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_walter_hose
+			add_naval_commander_role = { character = CAN_walter_hose traits = { blockade_runner } skill = 2 attack_skill = 2 defense_skill = 2 maneuvering_skill = 2 coordination_skill = 1 }
 			navy_experience = 25
 			add_tech_bonus = { name = CANDNC_navy_service_act_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
 		}
@@ -5184,7 +5179,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_navy_a_fleet_unit_of_our_own
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_CAN_sig_fleet_unit
 		x = 168
 		y = 7
 		cost = 8
@@ -5216,7 +5211,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_eco_the_last_best_west
-		icon = GFX_focus_generic_agriculture
+		icon = GFX_CAN_sig_last_best_west
 		x = 194
 		y = 0
 		cost = 8
@@ -5519,7 +5514,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_air_the_aerial_experiment_association
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_CAN_sig_aea_root
 		x = 230
 		y = 0
 		cost = 8
@@ -5663,7 +5658,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_air_a_flying_corps_of_our_own
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_CAN_sig_flying_corps
 		x = 226
 		y = 7
 		cost = 8
@@ -5679,7 +5674,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_air_the_royal_flying_corps_canada
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_CAN_sig_wing_imperial
 		x = 230
 		y = 7
 		cost = 8
@@ -5819,7 +5814,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_p_signed_in_our_own_name
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_CAN_sig_signed_own_name
 		x = 132
 		y = 5
 		cost = 10
@@ -5854,7 +5849,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_p_the_yokohama_specie_bank
-		icon = GFX_goal_generic_financial_markets
+		icon = GFX_CAN_sig_specie_bank
 		x = 136
 		y = 7
 		cost = 10
@@ -5916,7 +5911,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_p_break_the_exclusion_league
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_CAN_sig_break_exclusion
 		x = 124
 		y = 9
 		cost = 10
@@ -5964,7 +5959,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_p_the_rising_sun_at_esquimalt
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_CAN_sig_rising_sun_esquimalt
 		x = 124
 		y = 11
 		cost = 10
@@ -6020,7 +6015,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_a_legation_in_tokyo }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_je_bernier
+			add_naval_commander_role = { character = CAN_je_bernier traits = { seawolf blockade_runner } skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 4 coordination_skill = 3 }
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_pacific_gateway
 			swap_ideas = { remove_idea = CAN_p_eyes_on_the_pacific add_idea = CAN_p_gateway_of_the_pacific }
@@ -6031,7 +6026,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_p_the_hayashi_understanding
-		icon = GFX_focus_generic_treaty
+		icon = GFX_CAN_sig_hayashi
 		x = 132
 		y = 10
 		cost = 10
@@ -6083,7 +6078,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_the_entrepot_of_the_north_pacific }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			recruit_character = CAN_je_bernier
+			add_naval_commander_role = { character = CAN_je_bernier traits = { seawolf blockade_runner } skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 4 coordination_skill = 3 }
 			set_country_flag = CAN_dnc_era_end
 			set_country_flag = CAN_dnc_two_markets
 			swap_ideas = { remove_idea = CAN_p_eyes_on_the_pacific add_idea = CAN_p_two_markets }
@@ -6094,7 +6089,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_one_dollar_for_the_continent
-		icon = GFX_goal_generic_financial_markets
+		icon = GFX_CAN_sig_one_dollar
 		x = 64
 		y = 17
 		cost = 10
@@ -6124,7 +6119,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_c_the_border_posts_come_down
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_CAN_sig_border_down
 		x = 72
 		y = 17
 		cost = 10
@@ -6173,7 +6168,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_d_a_wall_against_both
-		icon = GFX_focus_generic_british_trade
+		icon = GFX_CAN_sig_wall_both
 		x = 88
 		y = 14
 		cost = 10
@@ -6190,7 +6185,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_d_the_cobalt_reserve
-		icon = GFX_goal_generic_financial_markets
+		icon = GFX_CAN_sig_cobalt
 		x = 96
 		y = 14
 		cost = 10
@@ -6236,7 +6231,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_d_the_border_garrisons
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_CAN_sig_border_garrisons
 		x = 92
 		y = 15
 		cost = 10
@@ -6252,7 +6247,7 @@ focus_tree = {
 
 	focus = {
 		id = CANDNC_d_nothing_bought_abroad
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_CAN_sig_nothing_abroad
 		x = 92
 		y = 16
 		cost = 10

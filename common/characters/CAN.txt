@@ -2312,14 +2312,6 @@ characters={
 				small = "GFX_idea_generic_army_europe_4"
 			}
 		}
-		corps_commander = {
-			traits = { career_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-		}
 	}
 
 	CAN_walter_hose = {
@@ -2329,14 +2321,6 @@ characters={
 				large = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
 				small = "GFX_idea_generic_navy_europe_2"
 			}
-		}
-		navy_leader = {
-			traits = { blockade_runner }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 2
-			coordination_skill = 1
 		}
 	}
 
@@ -2388,6 +2372,8 @@ characters={
 			slot = political_advisor
 			idea_token = CAN_james_j_hill
 			allowed = { original_tag = CAN }
+			visible = { OR = { has_completed_focus = CANDNC_c_the_northern_associate has_completed_focus = CANDNC_c_nine_new_states has_completed_focus = CANDNC_c_the_junior_partner_by_default } }
+			available = { OR = { has_completed_focus = CANDNC_c_the_northern_associate has_completed_focus = CANDNC_c_nine_new_states has_completed_focus = CANDNC_c_the_junior_partner_by_default } }
 			cost = 100
 			traits = { war_industrialist captain_of_industry }
 			ai_will_do = { factor = 3 }
@@ -2405,6 +2391,8 @@ characters={
 			slot = theorist
 			idea_token = CAN_reginald_fessenden
 			allowed = { original_tag = CAN }
+			visible = { OR = { has_completed_focus = CANDNC_d_the_kingdom_of_canada_proclaimed has_completed_focus = CANDNC_d_the_republic_of_canada_proclaimed } }
+			available = { OR = { has_completed_focus = CANDNC_d_the_kingdom_of_canada_proclaimed has_completed_focus = CANDNC_d_the_republic_of_canada_proclaimed } }
 			cost = 100
 			traits = { military_theorist }
 			ai_will_do = { factor = 3 }
@@ -2419,13 +2407,15 @@ characters={
 				small = "GFX_idea_generic_navy_europe_3"
 			}
 		}
-		navy_leader = {
-			traits = { seawolf blockade_runner }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			maneuvering_skill = 4
-			coordination_skill = 3
+	}
+
+	CAN_willoughby_gwatkin = {
+		name = "Willoughby Gwatkin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				small = "GFX_idea_generic_army_europe_6"
+			}
 		}
 	}
 
