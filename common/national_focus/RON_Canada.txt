@@ -58,33 +58,14 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = CANDNC_a_every_case_on_its_own_merits
-		icon = GFX_goal_generic_neutrality_focus
-		x = 12
-		y = 1
-		cost = 10
-		prerequisite = { focus = CANDNC_the_precedent_of_1899 }
-		mutually_exclusive = { focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_d_not_one_more_man_for_the_transvaal focus = CANDNC_e_two_peoples_one_order_in_council }
-		available = { has_country_flag = CAN_dnc_question_posed }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			set_country_flag = CAN_dnc_path_loyal
-			add_ideas = CAN_a_the_middle_way
-			add_political_power = 75
-			add_opinion_modifier = { target = ENG modifier = RI_reapprochment_talks }
-			reverse_add_opinion_modifier = { target = ENG modifier = RI_reapprochment_talks }
-		}
-	}
-
-	
+		
 		focus = {
 			id = CANDNC_a_paardebergs_battle_honour
 			icon = defence
 			x = 12
 			y = 2
 			cost = 10
-			prerequisite = { focus = CANDNC_a_every_case_on_its_own_merits }
+			prerequisite = { focus = CANDNC_b_one_flag_one_fleet_one_throne }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				army_experience = 30
@@ -970,11 +951,11 @@ focus_tree = {
 	focus = {
 		id = CANDNC_b_one_flag_one_fleet_one_throne
 		icon = GFX_focus_eng_imperial_federation
-		x = 40
+		x = 24
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_the_precedent_of_1899 }
-		mutually_exclusive = { focus = CANDNC_a_every_case_on_its_own_merits focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_d_not_one_more_man_for_the_transvaal focus = CANDNC_e_two_peoples_one_order_in_council }
+		mutually_exclusive = { focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_d_not_one_more_man_for_the_transvaal focus = CANDNC_p_the_other_ocean }
 		available = { has_country_flag = CAN_dnc_question_posed }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -1013,7 +994,7 @@ focus_tree = {
 		id = CANDNC_b_the_coronation_conference_three_yeses
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 40
-		y = 2
+		y = 3
 		cost = 15
 		prerequisite = { focus = CANDNC_b_one_flag_one_fleet_one_throne }
 		ai_will_do = { factor = 1 }
@@ -1030,7 +1011,7 @@ focus_tree = {
 		id = CANDNC_b_a_seat_on_the_imperial_council
 		icon = GFX_goal_ENG_london
 		x = 32
-		y = 3
+		y = 4
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_coronation_conference_three_yeses }
 		available = {
@@ -1057,7 +1038,7 @@ focus_tree = {
 		id = CANDNC_b_the_defence_contribution
 		icon = GFX_focus_naval_defense_fund
 		x = 40
-		y = 3
+		y = 4
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_coronation_conference_three_yeses }
 		ai_will_do = { factor = 1 }
@@ -1073,7 +1054,7 @@ focus_tree = {
 		id = CANDNC_b_the_imperial_zollverein
 		icon = GFX_focus_generic_british_trade
 		x = 48
-		y = 3
+		y = 4
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_coronation_conference_three_yeses }
 		available = {
@@ -1098,7 +1079,7 @@ focus_tree = {
 			id = CANDNC_b_the_imperial_council_sits
 			icon = GFX_goal_generic_parliament
 			x = 32
-			y = 4
+			y = 5
 			cost = 10
 			prerequisite = { focus = CANDNC_b_a_seat_on_the_imperial_council }
 			ai_will_do = { factor = 1 }
@@ -1122,7 +1103,7 @@ focus_tree = {
 		id = CANDNC_b_the_cheque_to_the_admiralty
 		icon = GFX_goal_naval_spending_bill
 		x = 36
-		y = 4
+		y = 5
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_defence_contribution }
 		mutually_exclusive = { focus = CANDNC_b_ships_under_the_white_ensign }
@@ -1141,7 +1122,7 @@ focus_tree = {
 		id = CANDNC_b_ships_under_the_white_ensign
 		icon = GFX_focus_bo_navy
 		x = 44
-		y = 4
+		y = 5
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_defence_contribution }
 		mutually_exclusive = { focus = CANDNC_b_the_cheque_to_the_admiralty }
@@ -1167,7 +1148,7 @@ focus_tree = {
 			id = CANDNC_b_members_for_canada_at_westminster
 			icon = GFX_goal_generic_elections
 			x = 32
-			y = 5
+			y = 6
 			cost = 15
 			prerequisite = { focus = CANDNC_b_the_imperial_council_sits }
 			available = { has_country_flag = CAN_dnc_imperial_council_seat }
@@ -1187,7 +1168,7 @@ focus_tree = {
 		id = CANDNC_b_chamberlain_goes_to_the_country
 		icon = GFX_focus_generic_election
 		x = 40
-		y = 5
+		y = 6
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_defence_contribution }
 		ai_will_do = { factor = 1 }
@@ -1203,7 +1184,7 @@ focus_tree = {
 			id = CANDNC_b_the_squadron_stays_at_halifax
 			icon = GFX_goal_generic_multiple_ships
 			x = 36
-			y = 6
+			y = 7
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_cheque_to_the_admiralty }
 			ai_will_do = { factor = 1 }
@@ -1235,7 +1216,7 @@ focus_tree = {
 			id = CANDNC_b_the_ligue_nationaliste_marches
 			icon = GFX_focus_bo_rally
 			x = 40
-			y = 6
+			y = 7
 			cost = 10
 			prerequisite = { focus = CANDNC_b_chamberlain_goes_to_the_country }
 			ai_will_do = { factor = 1 }
@@ -1254,7 +1235,7 @@ focus_tree = {
 			id = CANDNC_b_the_royal_naval_reserve_of_canada
 			icon = GFX_goal_ENG_sailor_enlistment
 			x = 44
-			y = 6
+			y = 7
 			cost = 10
 			prerequisite = { focus = CANDNC_b_ships_under_the_white_ensign }
 			ai_will_do = { factor = 1 }
@@ -1269,7 +1250,7 @@ focus_tree = {
 		id = CANDNC_b_the_empires_granary
 		icon = GFX_focus_generic_agriculture
 		x = 48
-		y = 6
+		y = 7
 		cost = 15
 		prerequisite = { focus = CANDNC_b_chamberlain_goes_to_the_country }
 		mutually_exclusive = { focus = CANDNC_b_the_free_traders_hold }
@@ -1294,7 +1275,7 @@ focus_tree = {
 			id = CANDNC_b_the_free_traders_hold
 			icon = GFX_goal_ENG_continue_isolationism
 			x = 52
-			y = 6
+			y = 7
 			cost = 10
 			prerequisite = { focus = CANDNC_b_chamberlain_goes_to_the_country }
 			mutually_exclusive = { focus = CANDNC_b_the_empires_granary }
@@ -1316,7 +1297,7 @@ focus_tree = {
 		id = CANDNC_b_buy_quebec_with_the_schools
 		icon = GFX_focus_generic_concessions
 		x = 28
-		y = 7
+		y = 8
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_ligue_nationaliste_marches }
 		mutually_exclusive = { focus = CANDNC_b_the_orange_majority_governs }
@@ -1341,7 +1322,7 @@ focus_tree = {
 			id = CANDNC_b_the_orange_majority_governs
 			icon = GFX_focus_generic_oppression
 			x = 32
-			y = 7
+			y = 8
 			cost = 15
 			prerequisite = { focus = CANDNC_b_the_ligue_nationaliste_marches }
 			mutually_exclusive = { focus = CANDNC_b_buy_quebec_with_the_schools }
@@ -1361,7 +1342,7 @@ focus_tree = {
 		id = CANDNC_b_the_furnaces_of_sydney
 		icon = GFX_focus_generic_steel
 		x = 40
-		y = 7
+		y = 8
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_ligue_nationaliste_marches }
 		ai_will_do = { factor = 1 }
@@ -1387,7 +1368,7 @@ focus_tree = {
 			id = CANDNC_b_wheat_for_liverpool_at_preference
 			icon = GFX_focus_ron_generic_export_focus
 			x = 48
-			y = 7
+			y = 8
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_empires_granary }
 			ai_will_do = { factor = 1 }
@@ -1422,7 +1403,7 @@ focus_tree = {
 			id = CANDNC_b_hold_the_imperial_tariff_anyway
 			icon = GFX_goal_industrial_bill
 			x = 52
-			y = 7
+			y = 8
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_free_traders_hold }
 			ai_will_do = { factor = 1 }
@@ -1453,7 +1434,7 @@ focus_tree = {
 			id = CANDNC_b_the_sixty_five_seats_guaranteed
 			icon = GFX_goal_constitutional_guarantees
 			x = 28
-			y = 8
+			y = 9
 			cost = 10
 			prerequisite = { focus = CANDNC_b_buy_quebec_with_the_schools }
 			ai_will_do = { factor = 1 }
@@ -1469,7 +1450,7 @@ focus_tree = {
 			id = CANDNC_b_the_nationalist_press_sued
 			icon = GFX_focus_generic_court
 			x = 32
-			y = 8
+			y = 9
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_orange_majority_governs }
 			ai_will_do = { factor = 1 }
@@ -1484,7 +1465,7 @@ focus_tree = {
 		id = CANDNC_b_the_naval_scare_of_1909
 		icon = GFX_RON_German_Battleship_Programme
 		x = 36
-		y = 8
+		y = 9
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_squadron_stays_at_halifax }
 		ai_will_do = { factor = 1 }
@@ -1500,7 +1481,7 @@ focus_tree = {
 			id = CANDNC_b_sudbury_refines_at_home
 			icon = GFX_goal_country_of_iron_and_steel
 			x = 40
-			y = 8
+			y = 9
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_furnaces_of_sydney }
 			ai_will_do = { factor = 1 }
@@ -1528,7 +1509,7 @@ focus_tree = {
 			id = CANDNC_b_the_fleet_unit_under_the_white_ensign
 			icon = GFX_goal_generic_navy_cruiser
 			x = 44
-			y = 8
+			y = 9
 			cost = 15
 			prerequisite = { focus = CANDNC_b_the_royal_naval_reserve_of_canada }
 			ai_will_do = { factor = 1 }
@@ -1550,7 +1531,7 @@ focus_tree = {
 			id = CANDNC_b_marquis_wheat_for_the_empire
 			icon = GFX_goal_agricultural_innovation
 			x = 48
-			y = 8
+			y = 9
 			cost = 10
 			prerequisite = { focus = CANDNC_b_wheat_for_liverpool_at_preference }
 			ai_will_do = { factor = 1 }
@@ -1567,7 +1548,7 @@ focus_tree = {
 			id = CANDNC_b_the_payne_aldrich_scare
 			icon = GFX_goal_generic_dangerous_deal
 			x = 52
-			y = 8
+			y = 9
 			cost = 15
 			prerequisite = { focus = CANDNC_b_hold_the_imperial_tariff_anyway }
 			ai_will_do = { factor = 1 }
@@ -1583,7 +1564,7 @@ focus_tree = {
 			id = CANDNC_b_a_french_battalion_for_the_king
 			icon = GFX_focus_generic_manpower
 			x = 28
-			y = 9
+			y = 10
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_sixty_five_seats_guaranteed }
 			ai_will_do = { factor = 1 }
@@ -1616,7 +1597,7 @@ focus_tree = {
 			id = CANDNC_b_the_tercentenary_as_an_imperial_fete
 			icon = GFX_focus_eng_god_save_the_king
 			x = 32
-			y = 9
+			y = 10
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_nationalist_press_sued }
 			ai_will_do = { factor = 1 }
@@ -1635,7 +1616,7 @@ focus_tree = {
 			id = CANDNC_b_the_pacific_cable_and_marconi
 			icon = ENG_project_northumberland
 			x = 40
-			y = 9
+			y = 10
 			cost = 10
 			prerequisite = { focus = CANDNC_b_sudbury_refines_at_home }
 			ai_will_do = { factor = 1 }
@@ -1655,7 +1636,7 @@ focus_tree = {
 		id = CANDNC_b_a_dreadnought_for_the_king
 		icon = GFX_focus_bo_big_navy
 		x = 36
-		y = 10
+		y = 11
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_naval_scare_of_1909 }
 		available = {
@@ -1702,7 +1683,7 @@ focus_tree = {
 			id = CANDNC_b_the_imperial_munitions_contracts
 			icon = GFX_goal_munitions_factories
 			x = 40
-			y = 10
+			y = 11
 			cost = 15
 			prerequisite = { focus = CANDNC_b_the_pacific_cable_and_marconi }
 			ai_will_do = { factor = 1 }
@@ -1730,7 +1711,7 @@ focus_tree = {
 			id = CANDNC_b_canadian_yards_for_imperial_hulls
 			icon = GFX_goal_generic_construct_naval_dockyard
 			x = 44
-			y = 10
+			y = 11
 			cost = 10
 			prerequisite = { focus = CANDNC_b_the_fleet_unit_under_the_white_ensign }
 			ai_will_do = { factor = 1 }
@@ -1759,7 +1740,7 @@ focus_tree = {
 		id = CANDNC_b_a_british_west
 		icon = GFX_focus_generic_farmland
 		x = 28
-		y = 11
+		y = 12
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_imperial_munitions_contracts }
 		mutually_exclusive = { focus = CANDNC_b_siftons_agents_keep_paying }
@@ -1777,7 +1758,7 @@ focus_tree = {
 			id = CANDNC_b_siftons_agents_keep_paying
 			icon = GFX_focus_generic_population_growth
 			x = 32
-			y = 11
+			y = 12
 			cost = 15
 			prerequisite = { focus = CANDNC_b_the_imperial_munitions_contracts }
 			mutually_exclusive = { focus = CANDNC_b_a_british_west }
@@ -1793,7 +1774,7 @@ focus_tree = {
 		id = CANDNC_b_the_imperial_secretariat
 		icon = GFX_focus_generic_diplomatic_treaty
 		x = 40
-		y = 11
+		y = 12
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_imperial_munitions_contracts }
 		ai_will_do = { factor = 1 }
@@ -1822,7 +1803,7 @@ focus_tree = {
 			id = CANDNC_b_the_empire_settlement
 			icon = GFX_goal_generic_relocate_settlers
 			x = 28
-			y = 12
+			y = 13
 			cost = 10
 			prerequisite = { focus = CANDNC_b_a_british_west }
 			ai_will_do = { factor = 1 }
@@ -1838,7 +1819,7 @@ focus_tree = {
 			id = CANDNC_b_the_doukhobors_are_left_alone
 			icon = GFX_focus_generic_self_management
 			x = 32
-			y = 12
+			y = 13
 			cost = 10
 			prerequisite = { focus = CANDNC_b_siftons_agents_keep_paying }
 			ai_will_do = { factor = 1 }
@@ -1854,7 +1835,7 @@ focus_tree = {
 			id = CANDNC_b_the_admiraltys_guarantee
 			icon = GFX_goal_naval_treaty
 			x = 36
-			y = 12
+			y = 13
 			cost = 10
 			prerequisite = { focus = CANDNC_b_a_dreadnought_for_the_king }
 			ai_will_do = { factor = 1 }
@@ -1876,7 +1857,7 @@ focus_tree = {
 		id = CANDNC_b_the_tenth_province
 		icon = GFX_goal_CAN_newfoundland_labrador
 		x = 40
-		y = 12
+		y = 13
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_imperial_secretariat }
 		ai_will_do = { factor = 1 }
@@ -1892,7 +1873,7 @@ focus_tree = {
 			id = CANDNC_b_esquimalt_manned_by_canadians
 			icon = GFX_focus_generic_coastal_fort
 			x = 44
-			y = 12
+			y = 13
 			cost = 10
 			prerequisite = { focus = CANDNC_b_canadian_yards_for_imperial_hulls }
 			ai_will_do = { factor = 1 }
@@ -1930,7 +1911,7 @@ focus_tree = {
 			id = CANDNC_b_the_terms_of_union_with_newfoundland
 			icon = GFX_focus_generic_treaty
 			x = 40
-			y = 13
+			y = 14
 			cost = 15
 			prerequisite = { focus = CANDNC_b_the_tenth_province }
 			available = { has_country_flag = CAN_dnc_newfoundland_offered }
@@ -1966,7 +1947,7 @@ focus_tree = {
 		id = CANDNC_b_the_treasury_of_the_empire
 		icon = GFX_focus_eng_the_sun_never_sets
 		x = 36
-		y = 14
+		y = 15
 		cost = 20
 		prerequisite = { focus = CANDNC_b_the_admiraltys_guarantee }
 		ai_will_do = { factor = 1 }
@@ -1995,7 +1976,7 @@ focus_tree = {
 		id = CANDNC_b_the_empires_squadron
 		icon = GFX_focus_generic_large_navy
 		x = 44
-		y = 14
+		y = 15
 		cost = 20
 		prerequisite = { focus = CANDNC_b_esquimalt_manned_by_canadians }
 		ai_will_do = { factor = 1 }
@@ -2028,7 +2009,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_the_precedent_of_1899 }
-		mutually_exclusive = { focus = CANDNC_a_every_case_on_its_own_merits focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_d_not_one_more_man_for_the_transvaal focus = CANDNC_e_two_peoples_one_order_in_council }
+		mutually_exclusive = { focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_d_not_one_more_man_for_the_transvaal focus = CANDNC_p_the_other_ocean }
 		available = { has_country_flag = CAN_dnc_question_posed }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -2831,7 +2812,7 @@ focus_tree = {
 			y = 1
 			cost = 10
 			prerequisite = { focus = CANDNC_the_precedent_of_1899 }
-			mutually_exclusive = { focus = CANDNC_a_every_case_on_its_own_merits focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_e_two_peoples_one_order_in_council }
+			mutually_exclusive = { focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_p_the_other_ocean }
 			available = {
 				has_country_flag = CAN_dnc_question_posed
 			}
@@ -3903,33 +3884,12 @@ focus_tree = {
 		}
 
 	focus = {
-		id = CANDNC_e_two_peoples_one_order_in_council
-		icon = GFX_focus_what_are_we
-		x = 124
-		y = 1
-		cost = 10
-		prerequisite = { focus = CANDNC_the_precedent_of_1899 }
-		mutually_exclusive = { focus = CANDNC_a_every_case_on_its_own_merits focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_d_not_one_more_man_for_the_transvaal }
-		available = {
-			has_country_flag = CAN_dnc_question_posed
-		}
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			set_country_flag = CAN_dnc_path_nations
-			add_ideas = CAN_e_the_question_of_the_two_races
-			add_political_power = 25
-			country_event = { id = can_dnc_e.1 days = 2 }
-		}
-	}
-
-	focus = {
 		id = CANDNC_e_a_country_of_two_nations
 		icon = GFX_focus_RAJ_two_nation_theory
 		x = 116
 		y = 2
 		cost = 20
-		prerequisite = { focus = CANDNC_e_two_peoples_one_order_in_council }
-		mutually_exclusive = { focus = CANDNC_e_one_language_for_one_dominion }
+		prerequisite = { focus = CANDNC_d_not_one_more_man_for_the_transvaal }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_binational
@@ -3951,11 +3911,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_one_language_for_one_dominion
 			icon = GFX_goal_QIN_5_races_one_flag
-			x = 132
-			y = 2
+			x = 54
+			y = 3
 			cost = 20
-			prerequisite = { focus = CANDNC_e_two_peoples_one_order_in_council }
-			mutually_exclusive = { focus = CANDNC_e_a_country_of_two_nations }
+			prerequisite = { focus = CANDNC_b_one_flag_one_fleet_one_throne }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_unilingual
@@ -3973,16 +3932,10 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_the_ligue_nationaliste_is_founded
 		icon = GFX_goal_generic_solidarity
-		x = 124
+		x = 116
 		y = 3
 		cost = 15
-		prerequisite = { focus = CANDNC_e_two_peoples_one_order_in_council }
-		available = {
-			OR = {
-				has_country_flag = CAN_dnc_binational
-				has_country_flag = CAN_dnc_unilingual
-			}
-		}
+		prerequisite = { focus = CANDNC_e_a_country_of_two_nations }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_e_the_nationalist_press
@@ -3995,7 +3948,7 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_le_nationaliste_and_the_acjc
 			icon = GFX_goal_QIN_press_democratic
-			x = 124
+			x = 112
 			y = 4
 			cost = 15
 			prerequisite = { focus = CANDNC_e_the_ligue_nationaliste_is_founded }
@@ -4019,10 +3972,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_gouin_takes_quebec
 			icon = GFX_focus_generic_election
-			x = 124
-			y = 5
+			x = 22
+			y = 2
 			cost = 15
-			prerequisite = { focus = CANDNC_e_le_nationaliste_and_the_acjc }
+			prerequisite = { focus = CANDNC_b_one_flag_one_fleet_one_throne }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				add_political_power = 25
@@ -4034,8 +3987,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_delegate_apostolic
 			icon = GFX_focus_por_concordat
-			x = 124
-			y = 6
+			x = 22
+			y = 3
 			cost = 15
 			prerequisite = { focus = CANDNC_e_gouin_takes_quebec }
 			ai_will_do = { factor = 1 }
@@ -4048,8 +4001,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_bourassa_beats_gouin_in_saint_jacques
 			icon = GFX_focus_generic_election
-			x = 124
-			y = 7
+			x = 22
+			y = 4
 			cost = 20
 			prerequisite = { focus = CANDNC_e_the_delegate_apostolic }
 			ai_will_do = { factor = 1 }
@@ -4062,8 +4015,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_naval_question_comes_to_quebec
 			icon = GFX_goal_generic_navy_cruiser
-			x = 124
-			y = 8
+			x = 22
+			y = 5
 			cost = 20
 			prerequisite = { focus = CANDNC_e_bourassa_beats_gouin_in_saint_jacques }
 			ai_will_do = { factor = 1 }
@@ -4073,32 +4026,14 @@ focus_tree = {
 			}
 		}
 
-	focus = {
-		id = CANDNC_e_the_motion_of_13_march_carried
-		icon = GFX_goal_generic_parliament
-		x = 116
-		y = 3
-		cost = 15
-		prerequisite = { focus = CANDNC_e_a_country_of_two_nations }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			set_country_flag = CAN_dnc_no_precedent
-			add_political_power = 25
-			custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
-			add_stability = 0.03
-			custom_effect_tooltip = CAN_e_ontario_ws_m3_tt
-			add_war_support = -0.03
-		}
-	}
-
 	
 		focus = {
 			id = CANDNC_e_the_ligues_programme
 			icon = GFX_focus_generic_self_management
-			x = 116
+			x = 120
 			y = 4
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_motion_of_13_march_carried }
+			prerequisite = { focus = CANDNC_e_the_ligue_nationaliste_is_founded }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				add_autonomy_ratio = {
@@ -4113,10 +4048,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_clause_sixteen_as_written
 			icon = GFX_focus_generic_university_2
-			x = 116
+			x = 112
 			y = 5
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_ligues_programme }
+			prerequisite = { focus = CANDNC_e_le_nationaliste_and_the_acjc focus = CANDNC_e_the_ligues_programme }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_schools_guaranteed
@@ -4136,7 +4071,7 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_french_from_the_red_river_west
 			icon = GFX_focus_generic_university_2
-			x = 116
+			x = 112
 			y = 6
 			cost = 15
 			prerequisite = { focus = CANDNC_e_clause_sixteen_as_written }
@@ -4159,10 +4094,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_an_opening_to_paris
 			icon = GFX_focus_chi_reach_out_to_france
-			x = 116
-			y = 7
+			x = 120
+			y = 5
 			cost = 15
-			prerequisite = { focus = CANDNC_e_french_from_the_red_river_west }
+			prerequisite = { focus = CANDNC_e_the_ligues_programme }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				add_opinion_modifier = { target = FRA modifier = medium_increase }
@@ -4174,28 +4109,14 @@ focus_tree = {
 		}
 
 	
-		focus = {
-			id = CANDNC_e_the_sixty_five_seats_locked
-			icon = GFX_goal_constitutional_guarantees
-			x = 112
-			y = 5
-			cost = 15
-			prerequisite = { focus = CANDNC_e_the_ligues_programme }
-			ai_will_do = { factor = 1 }
-			completion_reward = {
-				add_political_power = 25
-				country_event = { id = can_dnc_e.5 days = 2 }
-			}
-		}
-
 	
 		focus = {
 			id = CANDNC_e_the_tercentenary_of_1608_a_french_fete
 			icon = GFX_focus_fra_french_union
-			x = 112
-			y = 7
+			x = 120
+			y = 6
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_sixty_five_seats_locked }
+			prerequisite = { focus = CANDNC_e_an_opening_to_paris }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_tercentenary_french
@@ -4211,8 +4132,8 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_the_answer_voted_down
 		icon = GFX_goal_generic_parliament
-		x = 132
-		y = 3
+		x = 54
+		y = 4
 		cost = 15
 		prerequisite = { focus = CANDNC_e_one_language_for_one_dominion }
 		ai_will_do = { factor = 1 }
@@ -4230,8 +4151,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_regina_ordinance_for_all
 			icon = GFX_focus_generic_university_2
-			x = 132
-			y = 4
+			x = 54
+			y = 5
 			cost = 15
 			prerequisite = { focus = CANDNC_e_the_answer_voted_down }
 			ai_will_do = { factor = 1 }
@@ -4252,28 +4173,14 @@ focus_tree = {
 		}
 
 	
-		focus = {
-			id = CANDNC_e_the_nationalist_press_sued
-			icon = GFX_focus_generic_court
-			x = 132
-			y = 5
-			cost = 15
-			prerequisite = { focus = CANDNC_e_the_regina_ordinance_for_all }
-			ai_will_do = { factor = 1 }
-			completion_reward = {
-				add_political_power = 25
-				add_popularity = { ideology = neutrality popularity = -0.03 }
-			}
-		}
-
 	
 		focus = {
 			id = CANDNC_e_the_sunday_law_enforced
 			icon = GFX_focus_por_concordat
-			x = 132
+			x = 54
 			y = 6
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_nationalist_press_sued }
+			prerequisite = { focus = CANDNC_e_the_regina_ordinance_for_all }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				add_political_power = 25
@@ -4282,38 +4189,14 @@ focus_tree = {
 		}
 
 	
-		focus = {
-			id = CANDNC_e_the_tercentenary_as_an_imperial_fete
-			icon = GFX_focus_eng_god_save_the_king
-			x = 132
-			y = 7
-			cost = 15
-			prerequisite = { focus = CANDNC_e_the_sunday_law_enforced }
-			ai_will_do = { factor = 1 }
-			completion_reward = {
-				set_country_flag = CAN_dnc_tercentenary_imperial
-				reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
-				navy_experience = 10
-				custom_effect_tooltip = CAN_e_ontario_ws_p3_tt
-				add_war_support = 0.03
-				custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
-				add_stability = -0.02
-				custom_effect_tooltip = CAN_e_fracture_p2_tt
-				hidden_effect = {
-					add_to_variable = { CAN_dnc_fracture = 2 }
-					clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
-				}
-			}
-		}
-
 	
 		focus = {
 			id = CANDNC_e_the_sixty_five_seats_questioned
 			icon = GFX_goal_generic_political_pressure
-			x = 136
-			y = 5
+			x = 54
+			y = 8
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_regina_ordinance_for_all }
+			prerequisite = { focus = CANDNC_e_fallons_church }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				custom_effect_tooltip = CAN_e_ontario_ws_p2_tt
@@ -4326,8 +4209,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_representation_act_amended
 			icon = GFX_goal_ENG_london
-			x = 136
-			y = 6
+			x = 54
+			y = 9
 			cost = 15
 			prerequisite = { focus = CANDNC_e_the_sixty_five_seats_questioned }
 			available = {
@@ -4354,7 +4237,7 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_fallons_church
 			icon = GFX_focus_por_concordat
-			x = 136
+			x = 54
 			y = 7
 			cost = 15
 			prerequisite = { focus = CANDNC_e_the_sunday_law_enforced }
@@ -4375,11 +4258,10 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_a_special_status_for_quebec
 		icon = GFX_focus_YUG_banovina_of_croatia
-		x = 116
+		x = 112
 		y = 9
 		cost = 20
-		prerequisite = { focus = CANDNC_e_the_naval_question_comes_to_quebec }
-		mutually_exclusive = { focus = CANDNC_e_the_nationalist_ministry }
+		prerequisite = { focus = CANDNC_e_the_nationalist_ministry }
 		available = {
 			has_country_flag = CAN_dnc_binational
 		}
@@ -4398,11 +4280,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_nationalist_ministry
 			icon = GFX_goal_KOR_ministers_change
-			x = 120
-			y = 9
+			x = 116
+			y = 8
 			cost = 20
-			prerequisite = { focus = CANDNC_e_the_naval_question_comes_to_quebec }
-			mutually_exclusive = { focus = CANDNC_e_a_special_status_for_quebec }
+			prerequisite = { focus = CANDNC_e_the_bilingual_civil_service }
 			available = {
 				has_country_flag = CAN_dnc_binational
 			}
@@ -4419,11 +4300,10 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_coerce_quebec
 		icon = GFX_focus_generic_oppression
-		x = 128
-		y = 9
+		x = 54
+		y = 10
 		cost = 20
-		prerequisite = { focus = CANDNC_e_the_naval_question_comes_to_quebec }
-		mutually_exclusive = { focus = CANDNC_e_the_gilded_minority }
+		prerequisite = { focus = CANDNC_e_the_representation_act_amended }
 		available = {
 			has_country_flag = CAN_dnc_unilingual
 		}
@@ -4447,14 +4327,11 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_gilded_minority
 			icon = GFX_focus_generic_concessions
-			x = 132
-			y = 9
+			x = 22
+			y = 6
 			cost = 20
 			prerequisite = { focus = CANDNC_e_the_naval_question_comes_to_quebec }
-			mutually_exclusive = { focus = CANDNC_e_coerce_quebec }
-			available = {
-				has_country_flag = CAN_dnc_unilingual
-			}
+			mutually_exclusive = { focus = CANDNC_e_no_navy_without_quebecs_assent }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_e_sf2_gilded
@@ -4467,7 +4344,7 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_the_statute_of_quebec
 		icon = GFX_focus_YUG_devolved_croatia
-		x = 116
+		x = 112
 		y = 10
 		cost = 15
 		prerequisite = { focus = CANDNC_e_a_special_status_for_quebec }
@@ -4487,10 +4364,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_a_french_regiment_of_the_line
 			icon = GFX_focus_generic_commonwealth_build_infantry
-			x = 116
-			y = 11
+			x = 120
+			y = 8
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_statute_of_quebec }
+			prerequisite = { focus = CANDNC_e_the_tercentenary_of_1608_a_french_fete }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				custom_effect_tooltip = CAN_e_carabiniers_tt
@@ -4512,10 +4389,11 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_no_navy_without_quebecs_assent
 			icon = GFX_goal_cut_naval_budget
-			x = 116
-			y = 12
+			x = 26
+			y = 6
 			cost = 20
-			prerequisite = { focus = CANDNC_e_a_french_regiment_of_the_line }
+			prerequisite = { focus = CANDNC_e_the_naval_question_comes_to_quebec }
+			mutually_exclusive = { focus = CANDNC_e_the_gilded_minority }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_no_navy_1909
@@ -4540,9 +4418,10 @@ focus_tree = {
 			id = CANDNC_e_the_compact_of_two_nations
 			icon = GFX_goal_CAN_quebec_deal
 			x = 116
-			y = 13
+			y = 11
 			cost = 20
-			prerequisite = { focus = CANDNC_e_no_navy_without_quebecs_assent }
+			prerequisite = { focus = CANDNC_e_the_statute_of_quebec }
+			prerequisite = { focus = CANDNC_e_a_nationalist_canada }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_era_end
@@ -4559,10 +4438,10 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_bourassa_at_the_interior
 		icon = GFX_focus_generic_population_growth
-		x = 120
-		y = 10
+		x = 112
+		y = 7
 		cost = 15
-		prerequisite = { focus = CANDNC_e_the_nationalist_ministry }
+		prerequisite = { focus = CANDNC_e_french_from_the_red_river_west }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_e_a_bilingual_interior
@@ -4577,10 +4456,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_bilingual_civil_service
 			icon = GFX_NEE_expand_civil_service
-			x = 120
-			y = 11
+			x = 116
+			y = 7
 			cost = 15
-			prerequisite = { focus = CANDNC_e_bourassa_at_the_interior }
+			prerequisite = { focus = CANDNC_e_french_from_the_red_river_west focus = CANDNC_e_the_tercentenary_of_1608_a_french_fete }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				add_political_power = -25
@@ -4593,9 +4472,9 @@ focus_tree = {
 			id = CANDNC_e_autonomy_in_the_empire
 			icon = GFX_focus_generic_self_management
 			x = 120
-			y = 12
+			y = 9
 			cost = 20
-			prerequisite = { focus = CANDNC_e_the_bilingual_civil_service }
+			prerequisite = { focus = CANDNC_e_a_french_regiment_of_the_line focus = CANDNC_e_the_nationalist_ministry }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_no_navy_1909
@@ -4612,7 +4491,7 @@ focus_tree = {
 			id = CANDNC_e_a_nationalist_canada
 			icon = GFX_focus_TUR_misak_i_milli
 			x = 120
-			y = 13
+			y = 10
 			cost = 20
 			prerequisite = { focus = CANDNC_e_autonomy_in_the_empire }
 			ai_will_do = { factor = 1 }
@@ -4638,8 +4517,8 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_the_naval_contribution_over_quebecs_head
 		icon = GFX_goal_naval_spending_bill
-		x = 128
-		y = 10
+		x = 54
+		y = 11
 		cost = 20
 		prerequisite = { focus = CANDNC_e_coerce_quebec }
 		ai_will_do = { factor = 1 }
@@ -4665,8 +4544,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_separatist_crisis
 			icon = GFX_goal_CAN_quebec_conflict
-			x = 128
-			y = 11
+			x = 54
+			y = 12
 			cost = 20
 			prerequisite = { focus = CANDNC_e_the_naval_contribution_over_quebecs_head }
 			ai_will_do = { factor = 1 }
@@ -4686,8 +4565,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_riot_act_in_montreal
 			icon = GFX_goal_generic_occupy_start_war
-			x = 128
-			y = 12
+			x = 54
+			y = 13
 			cost = 20
 			prerequisite = { focus = CANDNC_e_the_separatist_crisis }
 			available = {
@@ -4726,8 +4605,8 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_one_dominion_one_tongue
 			icon = GFX_goal_QIN_5_races_one_flag
-			x = 128
-			y = 13
+			x = 54
+			y = 14
 			cost = 20
 			prerequisite = { focus = CANDNC_e_the_riot_act_in_montreal }
 			available = {
@@ -4760,8 +4639,8 @@ focus_tree = {
 	focus = {
 		id = CANDNC_e_gouins_machine
 		icon = GFX_goal_generic_party_bottle
-		x = 132
-		y = 10
+		x = 22
+		y = 7
 		cost = 15
 		prerequisite = { focus = CANDNC_e_the_gilded_minority }
 		ai_will_do = { factor = 1 }
@@ -4776,10 +4655,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_plains_of_abraham_bought
 			icon = GFX_focus_generic_public_works
-			x = 132
-			y = 11
+			x = 24
+			y = 8
 			cost = 15
-			prerequisite = { focus = CANDNC_e_gouins_machine }
+			prerequisite = { focus = CANDNC_e_gouins_machine focus = CANDNC_e_the_navy_deferred_the_contracts_placed }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				add_stability = 0.03
@@ -4792,10 +4671,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_navy_deferred_the_contracts_placed
 			icon = GFX_goal_generic_construct_naval_dockyard
-			x = 132
-			y = 12
+			x = 26
+			y = 7
 			cost = 15
-			prerequisite = { focus = CANDNC_e_the_plains_of_abraham_bought }
+			prerequisite = { focus = CANDNC_e_no_navy_without_quebecs_assent }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_navy_deferred
@@ -4816,10 +4695,10 @@ focus_tree = {
 		focus = {
 			id = CANDNC_e_the_quiet_province
 			icon = GFX_focus_generic_concessions
-			x = 132
-			y = 13
+			x = 24
+			y = 9
 			cost = 20
-			prerequisite = { focus = CANDNC_e_the_navy_deferred_the_contracts_placed }
+			prerequisite = { focus = CANDNC_e_the_plains_of_abraham_bought }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 				set_country_flag = CAN_dnc_era_end
@@ -5815,6 +5694,564 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			air_experience = 10
+		}
+	}
+
+	### CANADA DNC - PACIFIC PATH + SPICY ADDITIONS ###
+
+	focus = {
+		id = CANDNC_p_the_other_ocean
+		icon = GFX_goal_JAP_anglo_jap_alliance
+		x = 128
+		y = 1
+		cost = 10
+		prerequisite = { focus = CANDNC_the_precedent_of_1899 }
+		mutually_exclusive = { focus = CANDNC_b_one_flag_one_fleet_one_throne focus = CANDNC_c_unrestricted_reciprocity focus = CANDNC_d_not_one_more_man_for_the_transvaal }
+		available = { has_country_flag = CAN_dnc_question_posed }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_path_pacific
+			add_ideas = CAN_p_eyes_on_the_pacific
+			add_political_power = 25
+			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
+			add_opinion_modifier = { target = JAP modifier = medium_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_under_the_umbrella_of_the_alliance
+		icon = GFX_focus_generic_treaty
+		x = 124
+		y = 2
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_other_ocean }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_silk_tea_and_steamers
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 132
+		y = 2
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_other_ocean }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_extra_state_shared_building_slots = 1 }
+			473 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_a_commissioner_at_yokohama
+		icon = GFX_goal_generic_improve_relations
+		x = 124
+		y = 3
+		cost = 10
+		prerequisite = { focus = CANDNC_p_under_the_umbrella_of_the_alliance }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+			add_autonomy_ratio = { value = 0.02 localization = CANDNC_p_a_commissioner_at_yokohama }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_silk_trains
+		icon = GFX_focus_generic_railroad
+		x = 132
+		y = 3
+		cost = 10
+		prerequisite = { focus = CANDNC_p_silk_tea_and_steamers }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			276 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_a_minister_sails_for_tokyo
+		icon = GFX_goal_JAP_anglo_jap_alliance
+		x = 128
+		y = 4
+		cost = 10
+		prerequisite = { focus = CANDNC_p_a_commissioner_at_yokohama focus = CANDNC_p_the_silk_trains }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			JAP = { country_event = { id = can_dnc_p.1 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_tokyo_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_ambassador_countersigns
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 124
+		y = 5
+		cost = 10
+		prerequisite = { focus = CANDNC_p_a_minister_sails_for_tokyo }
+		mutually_exclusive = { focus = CANDNC_p_signed_in_our_own_name }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_autonomy_ratio = { value = 0.02 localization = CANDNC_p_the_ambassador_countersigns }
+			ENG = { country_event = { id = can_dnc_p.2 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_signed_in_our_own_name
+		icon = GFX_goal_generic_improve_relations
+		x = 132
+		y = 5
+		cost = 10
+		prerequisite = { focus = CANDNC_p_a_minister_sails_for_tokyo }
+		mutually_exclusive = { focus = CANDNC_p_the_ambassador_countersigns }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_autonomy_ratio = { value = 0.05 localization = CANDNC_p_signed_in_our_own_name }
+			add_war_support = 0.03
+			reverse_add_opinion_modifier = { target = ENG modifier = medium_decrease }
+			ENG = { country_event = { id = can_dnc_p.3 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_treaty_in_force
+		icon = GFX_focus_generic_treaty
+		x = 128
+		y = 6
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_ambassador_countersigns focus = CANDNC_p_signed_in_our_own_name }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_p_the_japanese_treaty
+			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
+			add_opinion_modifier = { target = JAP modifier = medium_increase }
+			USA = { country_event = { id = can_dnc_p.4 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_yokohama_specie_bank
+		icon = GFX_goal_generic_financial_markets
+		x = 136
+		y = 7
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_treaty_in_force }
+		mutually_exclusive = { focus = CANDNC_p_the_city_keeps_our_paper }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = CAN_p_yen_capital
+			473 = { add_extra_state_shared_building_slots = 1 }
+			ENG = { country_event = { id = can_dnc_p.5 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_city_keeps_our_paper
+		icon = GFX_goal_generic_financial_markets
+		x = 132
+		y = 7
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_treaty_in_force }
+		mutually_exclusive = { focus = CANDNC_p_the_yokohama_specie_bank }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_five_hundred_miles_closer
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 136
+		y = 8
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_yokohama_specie_bank focus = CANDNC_p_the_city_keeps_our_paper }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
+			473 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			473 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_city_against_the_treaty
+		icon = GFX_goal_generic_national_unity
+		x = 128
+		y = 8
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_treaty_in_force }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_break_the_exclusion_league
+		icon = GFX_goal_generic_position_armies
+		x = 124
+		y = 9
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_city_against_the_treaty }
+		mutually_exclusive = { focus = CANDNC_p_the_kings_peace_and_a_quiet_word }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.03
+			reverse_add_opinion_modifier = { target = JAP modifier = large_increase }
+			JAP = { country_event = { id = can_dnc_p.6 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_tokyo_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_kings_peace_and_a_quiet_word
+		icon = GFX_goal_generic_parliament
+		x = 132
+		y = 9
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_city_against_the_treaty }
+		mutually_exclusive = { focus = CANDNC_p_break_the_exclusion_league }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			reverse_add_opinion_modifier = { target = JAP modifier = small_decrease }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_door_stays_open
+		icon = GFX_goal_generic_national_unity
+		x = 124
+		y = 10
+		cost = 10
+		prerequisite = { focus = CANDNC_p_break_the_exclusion_league }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 15000
+			473 = { add_extra_state_shared_building_slots = 1 }
+			add_ideas = CAN_p_the_open_door
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_rising_sun_at_esquimalt
+		icon = GFX_goal_generic_build_navy
+		x = 124
+		y = 11
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_door_stays_open }
+		mutually_exclusive = { focus = CANDNC_p_keels_from_kure }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 15
+			JAP = { country_event = { id = can_dnc_p.7 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_tokyo_will_answer_tt
+			USA = { country_event = { id = can_dnc_p.8 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_keels_from_kure
+		icon = GFX_goal_generic_navy_cruiser
+		x = 128
+		y = 11
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_door_stays_open }
+		mutually_exclusive = { focus = CANDNC_p_the_rising_sun_at_esquimalt }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			navy_experience = 30
+			add_tech_bonus = { name = CANDNC_p_kure_bonus bonus = 0.5 uses = 1 category = cl_tech }
+			473 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_a_legation_in_tokyo
+		icon = GFX_goal_generic_improve_relations
+		x = 124
+		y = 12
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_rising_sun_at_esquimalt focus = CANDNC_p_keels_from_kure }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+			add_autonomy_ratio = { value = 0.05 localization = CANDNC_p_a_legation_in_tokyo }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_pacific_gateway
+		icon = GFX_goal_JAP_anglo_jap_alliance
+		x = 124
+		y = 13
+		cost = 10
+		prerequisite = { focus = CANDNC_p_a_legation_in_tokyo }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_era_end
+			set_country_flag = CAN_dnc_pacific_gateway
+			swap_ideas = { remove_idea = CAN_p_eyes_on_the_pacific add_idea = CAN_p_gateway_of_the_pacific }
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_hayashi_understanding
+		icon = GFX_focus_generic_treaty
+		x = 132
+		y = 10
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_kings_peace_and_a_quiet_word }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_trade_without_the_flag
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 132
+		y = 11
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_hayashi_understanding }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			ENG = { country_event = { id = can_dnc_p.9 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_the_entrepot_of_the_north_pacific
+		icon = GFX_focus_generic_british_trade
+		x = 136
+		y = 12
+		cost = 10
+		prerequisite = { focus = CANDNC_p_trade_without_the_flag }
+		prerequisite = { focus = CANDNC_p_five_hundred_miles_closer }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			473 = { add_extra_state_shared_building_slots = 2 }
+			473 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_ideas = CAN_p_the_entrepot
+		}
+	}
+
+	focus = {
+		id = CANDNC_p_two_markets_one_dominion
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 132
+		y = 13
+		cost = 10
+		prerequisite = { focus = CANDNC_p_the_entrepot_of_the_north_pacific }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = CAN_dnc_era_end
+			set_country_flag = CAN_dnc_two_markets
+			swap_ideas = { remove_idea = CAN_p_eyes_on_the_pacific add_idea = CAN_p_two_markets }
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = CANDNC_c_one_dollar_for_the_continent
+		icon = GFX_goal_generic_financial_markets
+		x = 64
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_c_the_customs_union }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 25
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c_the_banks_take_national_charters
+		icon = GFX_goal_generic_financial_markets
+		x = 64
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_c_one_dollar_for_the_continent }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			276 = { add_extra_state_shared_building_slots = 1 }
+			466 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c_the_border_posts_come_down
+		icon = GFX_goal_generic_national_unity
+		x = 72
+		y = 17
+		cost = 10
+		prerequisite = { focus = CANDNC_c_the_customs_union }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 20000
+			add_stability = 0.03
+			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+		}
+	}
+
+	focus = {
+		id = CANDNC_c_the_railways_pass_to_wall_street
+		icon = GFX_focus_generic_railroad
+		x = 76
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_c_hills_lines_from_st_paul focus = CANDNC_c_the_border_posts_come_down }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+			276 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			467 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			USA = { country_event = { id = can_dnc_p.10 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_c_the_continental_defence_understanding
+		icon = GFX_goal_generic_position_armies
+		x = 72
+		y = 18
+		cost = 10
+		prerequisite = { focus = CANDNC_c_the_border_posts_come_down }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = { name = CANDNC_c_continental_defence_bonus bonus = 0.5 uses = 1 category = land_doctrine }
+			USA = { country_event = { id = can_dnc_p.11 days = 5 } }
+			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
+		}
+	}
+
+	focus = {
+		id = CANDNC_d_a_wall_against_both
+		icon = GFX_focus_generic_british_trade
+		x = 88
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_imperial_preference_lapses }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+			276 = { add_extra_state_shared_building_slots = 1 }
+			add_stability = -0.02
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = CANDNC_d_the_cobalt_reserve
+		icon = GFX_goal_generic_financial_markets
+		x = 96
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_loan_denied_in_london }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			682 = { add_extra_state_shared_building_slots = 1 }
+			682 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d_a_telegraph_of_the_air
+		icon = GFX_goal_country_of_iron_and_steel
+		x = 104
+		y = 14
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_silver_dart_bought }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = { name = CANDNC_d_fessenden_bonus bonus = 0.5 uses = 1 category = electronics }
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CANDNC_d_the_dominion_feeds_itself
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 88
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_d_a_wall_against_both }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_tech_bonus = { name = CANDNC_d_selffeed_bonus bonus = 0.5 uses = 1 category = industry }
+			469 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d_the_border_garrisons
+		icon = GFX_focus_generic_coastal_fort
+		x = 92
+		y = 15
+		cost = 10
+		prerequisite = { focus = CANDNC_d_a_wall_against_both focus = CANDNC_d_otters_general_staff }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 20000
+			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+		}
+	}
+
+	focus = {
+		id = CANDNC_d_nothing_bought_abroad
+		icon = GFX_goal_generic_position_armies
+		x = 92
+		y = 16
+		cost = 10
+		prerequisite = { focus = CANDNC_d_the_border_garrisons }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			466 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			276 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			add_tech_bonus = { name = CANDNC_d_armoury_bonus bonus = 0.5 uses = 1 category = industry }
+			add_political_power = -25
 		}
 	}
 }
