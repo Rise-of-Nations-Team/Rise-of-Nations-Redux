@@ -1,0 +1,129 @@
+GER_german_brothers = {
+	allowed = {	
+		original_tag = GER
+	}
+	enable = {
+		has_government = neutrality
+		date < 1919.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = "AUH"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "AUH"
+		value = 200
+	}
+}
+
+GER_supply_austria = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date < 1919.1.1
+		is_in_faction_with = AUH
+	}
+	abort = {
+		has_global_flag = great_war_ends
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AUH
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = AUH
+		value = 50
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = AUH
+		value = 400
+	}
+}
+
+GER_build_army = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_army_manpower = {
+			size < 3000000
+		}
+		NOT = {
+			AND = {
+				has_war_with_major = yes
+				OR = {
+					stockpile_ratio = {
+						archetype = infantry_equipment
+						ratio < 0.1
+					}
+					stockpile_ratio = {
+						archetype = field_gun_equipment
+						ratio < 0.1
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1000
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 1000
+	}
+}
+
+GER_prepare_front_FRA = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		date < 1919.1.1		
+		is_subject = no
+		NOT = {
+			has_war_with = FRA
+			has_war_together_with = FRA
+			is_in_faction_with = FRA
+		}
+		OR = {
+			has_wargoal_against = FRA
+			is_justifying_wargoal_against = FRA
+			any_allied_country = {
+				OR = {
+					has_wargoal_against = FRA
+					has_war_with = FRA
+					is_justifying_wargoal_against = FRA
+					FRA = {
+						OR = {
+							is_justifying_wargoal_against = PREV
+							has_wargoal_against = PREV
+						}
+					}
+				}
+			}
+			FRA = {
+				OR = {
+					is_justifying_wargoal_against = ROOT
+					has_wargoal_against = ROOT
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRA
+		value = 1
+	}
+}
