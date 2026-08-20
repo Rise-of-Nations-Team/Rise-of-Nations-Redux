@@ -113,6 +113,7 @@ ideas = {
 			cancel = {
 				date > 1946.1.1
 			}
+			picture = ENG_sun_never_sets			
 			modifier = {
 				opinion_gain_monthly_same_ideology = 5
 			}
@@ -134,6 +135,7 @@ ideas = {
 
 		ENG_splendid_isolation = {
 			allowed = { always = no }
+			picture = ENG_splendid_isolation			
 			cancel = {
 				date > 1909.1.1
 			}
@@ -150,6 +152,7 @@ ideas = {
 
 		ENG_dreadnought_race = {
 			allowed = { always = no }
+			picture = ENG_dreadnought_race			
 			cancel = {
 				date > 1915.1.1
 			}
@@ -193,87 +196,144 @@ ideas = {
 		}
 		
 		ENG_victorian_era = {
-		picture = ENG_victorian_era
-	  
-		allowed = {
-			tag = ENG
-		}
+			picture = ENG_victorian_era
 		
-		cancel = {
-			date > 1901.1.22
+			allowed = {
+				tag = ENG
+				has_idea = queen_victoria
+			}
+			
+			cancel = {
+				date > 1901.1.22
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.08
+			}
 		}
 
-		modifier = {
-			political_power_gain = 0.15
-			stability_factor = 0.08
-		}
-	  }
+		ENG_overextended_empire = {
+			picture = ENG_overextended_empire
 
-	  ENG_overextended_empire = {
-		picture = ENG_overextension
+			allowed = {
+				tag = ENG
+			}
+			
+			cancel = {
+				date > 1946.1.1
+			}
 
-		allowed = {
-			tag = ENG
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.04
+				resistance_activity = 0.035
+			}
 		}
+
+		ENG_pax_britannica = {
+			picture = ENG_pax_britannica
+
+			allowed = {
+				tag = ENG
+			}
+
+			rule = {
+				can_create_factions = no
+			}
+			
+			cancel = {
+				date > 1910.1.1
+			}
+
+			modifier = {
+				political_power_gain = 0.08
+				stability_factor = 0.06
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		ENG_boer_offensive = {
+			picture = ENG_boer_offensive
+
+			allowed = {
+				tag = ENG
+			}
+			
+			cancel = {
+				NOT = { has_war_with = OFR }
+				NOT = { has_war_with = SRE }
+			}
+
+			modifier = {
+				mobilization_speed = 0.038
+				army_attack_factor = 0.04
+				army_defence_factor = -0.035
+				army_org = -5.3
+				experience_gain_army = 0.05
+			}
+		}
+
+		queen_victoria = {
+			name = ENG_queen_victoria			
+			picture = ENG_queen_victoria			
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				NOT ={
+					has_government = communism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = ENG
+						has_government = democratic 
+						NOT = {
+							tag = ROOT
+						}
+					}
+				}
+			}			
+			removal_cost = -1			
+			traits = { DNC_Beloved_Monarch }
+		}	
 		
-		cancel = {
-			date > 1946.1.1
-		}
-
-		modifier = {
-			stability_factor = -0.15
-			political_power_gain = -0.04
-			resistance_activity = 0.035
-		}
-	  }
-
-	  ENG_pax_britannica = {
-		picture = ENG_pax_britannica
-
-		allowed = {
-			tag = ENG
-		}
-
-		rule = {
-			can_create_factions = no
-		}
-		
-		cancel = {
-			date > 1910.1.1
-		}
-
-		modifier = {
-			political_power_gain = 0.08
-			stability_factor = 0.06
-			production_speed_buildings_factor = 0.05
-		}
-	  }
-
-	  ENG_boer_offensive = {
-		picture = ENG_boer_offensive
-
-		allowed = {
-			tag = ENG
-		}
-		
-		cancel = {
-			NOT = { has_war_with = OFR }
-			NOT = { has_war_with = SRE }
-		}
-
-		#rule = {
-		#	
-		#}
-
-		modifier = {
-			mobilization_speed = 0.038
-			army_attack_factor = 0.04
-			army_defence_factor = -0.035
-			army_org = -5.3
-			experience_gain_army = 0.05
-		}
-	  }
-
-
+		edward_vii = {
+			name = ENG_edward_vii
+			picture = ENG_edward_vii			
+			allowed = {
+				original_tag = ENG
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					any_country_with_original_tag = {
+						original_tag_to_check = ENG
+						has_government = democratic
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = fascism
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = king_edward_death
+					}
+				}
+			}
+			removal_cost = -1
+			traits = {
+				eng_bertie
+			}
+		}		
 	}
 }
