@@ -71,6 +71,14 @@ set_variable = {
 	ITA_support = 40
 }
 
+# The register reads these every month; a variable read before it is written counts as zero.
+set_variable = { AUH_nat_restless_count = 0 }
+set_variable = { AUH_nat_rising_count = 0 }
+set_variable = { AUH_nat_strain_pp = 0 }
+set_variable = { AUH_nat_strain_stability = 0 }
+set_variable = { AUH_nat_strain_conscription = 0 }
+set_variable = { AUH_quote_frozen = 0 }
+
 # The Ausgleich engine
 if = {
 	limit = {
@@ -307,6 +315,12 @@ if = {
 	}
 	puppet = BOS
 }
+
+1903.7.13 = { retire_character = AUH_beni_kallay }
+1904.10.8 = { retire_character = AUH_gustav_ratzenhofer }
+1905.6.13 = { retire_character = AUH_joseph_karl_von_osterreich }
+1906.7.8 = { retire_character = AUH_edmund_von_krieghammer }
+1910.3.10 = { retire_character = AUH_karl_lueger }
 
 1907.2.2 = {
 	retire_character = AUH_george_ritter_von_schonerer
