@@ -8,6 +8,12 @@ set_technology = {
 	ww1_light_cruiser0 = 1
 }
 
+# without this the infantry regiment type is inactive and the 1900 brigades never spawn
+set_technology = {
+	early_infantry_weapons_1890 = 1
+	early_infantry_weapons_1900 = 1
+}
+
 if = {
 	limit = {
 		has_start_date < 1966.01.01
