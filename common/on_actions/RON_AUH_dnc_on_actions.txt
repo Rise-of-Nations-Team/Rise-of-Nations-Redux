@@ -1,0 +1,15 @@
+on_actions = {
+
+	# The register of the nationalities is read once a month, and only in Vienna.
+	on_monthly_AUH = {
+		effect = {
+			if = {
+				limit = {
+					tag = AUH
+					has_country_flag = AUH_dnc_question_posed
+				}
+				AUH_nat_monthly = yes
+			}
+		}
+	}
+}

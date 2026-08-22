@@ -1,0 +1,704 @@
+#####################################
+#	Austria-Hungary DNC companies	#
+#####################################
+ideas = {
+	industrial_concern = {
+
+		AUH_witkowitz = {
+			picture = generic_industrial_concern_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_arm_witkowitz_unlocked
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_arm_the_gun_steel_programme
+					has_completed_focus = AUHDNC_nav_the_erzherzog_karl_class
+					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_arm_witkowitz_unlocked
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_arm_the_gun_steel_programme
+					has_completed_focus = AUHDNC_nav_the_erzherzog_karl_class
+					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.10 naval_armor = 0.05 }
+			modifier = { production_factory_max_efficiency_factor = 0.05 }
+			equipment_bonus = {
+				capital_ship = { armor_value = 0.05 }
+			}
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 2 }
+		}
+		AUH_poldi_huette = {
+			picture = generic_industrial_concern_2
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.05 electronics = 0.05 }
+			modifier = { production_factory_max_efficiency_factor = 0.03 research_speed_factor = 0.02 }
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_boehler = {
+			picture = generic_industrial_concern_3
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_arm_the_artillery_question
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_arm_the_artillery_question
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.05 artillery = 0.05 }
+			modifier = { production_factory_efficiency_gain_factor = 0.05 }
+			equipment_bonus = {
+				artillery_equipment = { reliability = 0.05 }
+			}
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_alpine_montan = {
+			picture = generic_exploit_mines
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_eco_the_coal_comes_first
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_eco_the_coal_comes_first
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { excavation_tech = 0.05 industry = 0.05 }
+			modifier = { local_resources_factor = 0.05 production_lack_of_resource_penalty_factor = -0.05 }
+			traits = { mining_company }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_ostrava_karvina = {
+			picture = generic_energy_concern
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_eco_the_coal_comes_first
+					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_eco_the_coal_comes_first
+					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { excavation_tech = 0.10 }
+			modifier = { local_resources_factor = 0.05 production_speed_industrial_complex_factor = 0.03 }
+			traits = { mining_company }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_bruex_lignite = {
+			picture = generic_industrial_concern_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_coal_comes_first
+					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_coal_comes_first
+					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { excavation_tech = 0.05 synth_resources = 0.05 }
+			modifier = { fuel_gain_factor = 0.05 consumer_goods_factor = -0.02 }
+			traits = { mining_company }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_carpathian_field = {
+			picture = generic_refining_concern_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_capital_stays_at_home
+					has_completed_focus = AUHDNC_r_the_oil_of_boryslaw
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_capital_stays_at_home
+					has_completed_focus = AUHDNC_r_the_oil_of_boryslaw
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { excavation_tech = 0.10 synth_resources = 0.05 }
+			modifier = { local_resources_factor = 0.10 fuel_gain_factor = 0.05 }
+			traits = { refinery_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_ganz = {
+			picture = generic_electronics_concern_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_current_of_the_mountains
+					has_country_flag = AUH_h_company_ganz_electric
+					has_country_flag = AUH_h_company_ganz_traction
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_current_of_the_mountains
+					has_country_flag = AUH_h_company_ganz_electric
+					has_country_flag = AUH_h_company_ganz_traction
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { electronics = 0.10 construction_tech = 0.05 }
+			modifier = { production_speed_infrastructure_factor = 0.10 }
+			traits = { electronics_concern }
+
+			ai_will_do = { factor = 2 }
+		}
+		AUH_laurin_klement = {
+			picture = generic_motorized_equipment_manufacturer_1
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_new_engineering
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_new_engineering
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { motorized_equipment = 0.05 industry = 0.05 }
+			modifier = { production_factory_efficiency_gain_factor = 0.05 }
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_nesselsdorfer = {
+			picture = generic_railroads
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_new_engineering
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_new_engineering
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { train_tech = 0.10 motorized_equipment = 0.05 }
+			modifier = { production_speed_infrastructure_factor = 0.05 }
+			equipment_bonus = {
+				train_equipment = { build_cost_ic = -0.05 }
+			}
+			traits = { railway_company }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_puch = {
+			picture = generic_motorized_equipment_manufacturer_2
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_new_engineering
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_new_engineering
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { motorized_equipment = 0.10 }
+			modifier = { production_factory_max_efficiency_factor = 0.03 army_speed_factor = 0.02 }
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_oesterreichischer_lloyd = {
+			picture = generic_convoys
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_austrian_lloyd
+			}
+			available = {
+				has_completed_focus = AUHDNC_nav_the_austrian_lloyd
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.05 tp_tech = 0.05 }
+			modifier = { trade_opinion_factor = 0.10 convoy_retreat_speed = 0.10 }
+			equipment_bonus = {
+				convoy = { build_cost_ic = -0.05 }
+			}
+			traits = { trade_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_oesterreichisch_ungarische_bank = {
+			picture = generic_foreign_capital
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_company_common_bank
+					has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals
+					has_completed_focus = AUHDNC_h_a_bank_of_our_own
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_company_common_bank
+					has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals
+					has_completed_focus = AUHDNC_h_a_bank_of_our_own
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.05 }
+			modifier = { political_power_gain = 0.05 consumer_goods_factor = -0.02 }
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 2 }
+		}
+		AUH_creditanstalt = {
+			picture = generic_economic_increase
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.05 }
+			modifier = { consumer_goods_factor = -0.03 trade_opinion_factor = 0.05 }
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_pesti_kereskedelmi = {
+			picture = generic_economic_recovery
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
+					has_completed_focus = AUHDNC_h_a_bank_of_our_own
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
+					has_completed_focus = AUHDNC_h_a_bank_of_our_own
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { construction_tech = 0.05 }
+			modifier = { production_speed_buildings_factor = 0.03 political_power_gain = 0.03 }
+			traits = { trade_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_state_ironworks = {
+			picture = generic_improved_industries
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_h_company_upland_ironworks
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_h_the_iron_of_the_state_works
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_h_company_upland_ironworks
+					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
+					has_completed_focus = AUHDNC_h_the_iron_of_the_state_works
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { industry = 0.05 construction_tech = 0.05 }
+			modifier = { production_speed_arms_factory_factor = 0.05 }
+			traits = { industrial_concern }
+
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		AUH_skoda = {
+			picture = generic_artillery_manufacturer_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_arm_skoda_unlocked
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+					has_completed_focus = AUHDNC_arm_the_gun_steel_programme
+					has_completed_focus = AUHDNC_r_the_clubs_of_bohemia
+					has_completed_focus = AUHDNC_m_the_siege_train_at_pilsen
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_arm_skoda_unlocked
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+					has_completed_focus = AUHDNC_arm_the_gun_steel_programme
+					has_completed_focus = AUHDNC_r_the_clubs_of_bohemia
+					has_completed_focus = AUHDNC_m_the_siege_train_at_pilsen
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { artillery = 0.12 }
+			modifier = { army_artillery_attack_factor = 0.05 }
+			equipment_bonus = {
+				artillery_equipment = { soft_attack = 0.05 build_cost_ic = 0.05 }
+				super_heavy_artillery_equipment = { soft_attack = 0.10 build_cost_ic = -0.05 }
+			}
+			traits = { artillery_manufacturer }
+
+			ai_will_do = { factor = 3 }
+		}
+		AUH_artilleriearsenal_wien = {
+			picture = generic_artillery_manufacturer_2
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_arm_artilleriearsenal_wien_unlocked
+					has_completed_focus = AUHDNC_arm_the_bronze_barrel
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_arm_artilleriearsenal_wien_unlocked
+					has_completed_focus = AUHDNC_arm_the_bronze_barrel
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { artillery = 0.08 }
+			modifier = { production_speed_arms_factory_factor = 0.05 }
+			equipment_bonus = {
+				artillery_equipment = { build_cost_ic = -0.10 reliability = 0.10 soft_attack = -0.05 }
+			}
+			traits = { artillery_manufacturer }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_steyr_oewg = {
+			picture = generic_infantry_equipment_manufacturer_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_arm_steyr_oewg_unlocked
+					has_completed_focus = AUHDNC_arm_the_mannlicher_standard
+					has_completed_focus = AUHDNC_arm_the_schwarzlose_machine_gun
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+					has_completed_focus = AUHDNC_m_the_mannlicher_and_the_schwarzlose
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_arm_steyr_oewg_unlocked
+					has_completed_focus = AUHDNC_arm_the_mannlicher_standard
+					has_completed_focus = AUHDNC_arm_the_schwarzlose_machine_gun
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+					has_completed_focus = AUHDNC_m_the_mannlicher_and_the_schwarzlose
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { infantry_weapons = 0.10 }
+			modifier = { production_factory_efficiency_gain_factor = 0.03 }
+			equipment_bonus = {
+				infantry_equipment = { build_cost_ic = -0.05 reliability = 0.05 }
+			}
+			traits = { infantry_equipment_manufacturer }
+
+			ai_will_do = { factor = 3 }
+		}
+		AUH_weiss_manfred = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_weiss_manfred_unlocked
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+					has_completed_focus = AUHDNC_h_the_gun_works_of_the_capital
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_weiss_manfred_unlocked
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+					has_completed_focus = AUHDNC_h_the_gun_works_of_the_capital
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { support_tech = 0.08 infantry_weapons = 0.05 }
+			modifier = { production_factory_max_efficiency_factor = 0.04 }
+			equipment_bonus = {
+				support_equipment = { build_cost_ic = -0.05 reliability = 0.05 }
+			}
+			traits = { support_equipment_manufacturer }
+
+			ai_will_do = { factor = 2 }
+		}
+		AUH_feg_frommer = {
+			picture = generic_infantry_equipment_manufacturer_3
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_h_company_fegyver_es_gepgyar
+					has_country_flag = AUH_h_company_fegyver_designer_variant
+					has_completed_focus = AUHDNC_h_the_gun_works_of_the_capital
+					has_completed_focus = AUHDNC_h_a_design_office_of_our_own
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_h_company_fegyver_es_gepgyar
+					has_country_flag = AUH_h_company_fegyver_designer_variant
+					has_completed_focus = AUHDNC_h_the_gun_works_of_the_capital
+					has_completed_focus = AUHDNC_h_a_design_office_of_our_own
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { infantry_weapons = 0.08 }
+			modifier = { production_speed_arms_factory_factor = 0.05 }
+			equipment_bonus = {
+				infantry_equipment = { soft_attack = 0.05 build_cost_ic = 0.05 }
+			}
+			traits = { automatic_weapons_manufacturer }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_austro_daimler = {
+			picture = generic_motorized_equipment_manufacturer_3
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_air_austro_daimler_aero_available
+					has_completed_focus = AUHDNC_eco_the_new_engineering
+					has_completed_focus = AUHDNC_m_the_motor_column_and_the_traction_train
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_air_austro_daimler_aero_available
+					has_completed_focus = AUHDNC_eco_the_new_engineering
+					has_completed_focus = AUHDNC_m_the_motor_column_and_the_traction_train
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { motorized_equipment = 0.10 }
+			modifier = { army_speed_factor = 0.03 army_fuel_consumption_factor = -0.05 }
+			equipment_bonus = {
+				motorized_equipment = { maximum_speed = 0.05 reliability = 0.05 }
+			}
+			traits = { motorized_equipment_manufacturer }
+
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		AUH_stabilimento_tecnico_triestino = {
+			picture = generic_naval_manufacturer_1
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_kuk_kriegsmarine
+			}
+			available = {
+				has_completed_focus = AUHDNC_nav_the_kuk_kriegsmarine
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { naval_equipment = 0.10 bb_tech = 0.05 }
+			modifier = { production_speed_dockyard_factor = 0.05 }
+			equipment_bonus = {
+				capital_ship = { armor_value = 0.05 build_cost_ic = 0.05 }
+			}
+			traits = { naval_manufacturer }
+
+			ai_will_do = { factor = 3 }
+		}
+		AUH_seearsenal_pola = {
+			picture = generic_naval_manufacturer_2
+			allowed = { original_tag = AUH }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_arsenal_at_pola
+			}
+			available = {
+				has_completed_focus = AUHDNC_nav_the_arsenal_at_pola
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { naval_equipment = 0.05 ss_tech = 0.10 }
+			modifier = { refit_speed = 0.20 refit_ic_cost = -0.10 production_speed_dockyard_factor = -0.05 }
+			equipment_bonus = {
+				ship_hull_submarine = { naval_range = 0.05 reliability = 0.05 }
+			}
+			traits = { submarine_manufacturer }
+
+			ai_will_do = { factor = 1 }
+		}
+		AUH_danubius_fiume = {
+			picture = generic_naval_manufacturer_3
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_danubius_unlocked
+					has_country_flag = AUH_h_company_danubius
+					has_completed_focus = AUHDNC_nav_the_keels_of_both_crowns
+					has_completed_focus = AUHDNC_h_keels_for_the_kingdoms_yards
+					has_completed_focus = AUHDNC_h_the_kingdoms_flag_at_sea
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_danubius_unlocked
+					has_country_flag = AUH_h_company_danubius
+					has_completed_focus = AUHDNC_nav_the_keels_of_both_crowns
+					has_completed_focus = AUHDNC_h_keels_for_the_kingdoms_yards
+					has_completed_focus = AUHDNC_h_the_kingdoms_flag_at_sea
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { naval_equipment = 0.05 dd_tech = 0.10 }
+			modifier = { production_speed_dockyard_factor = 0.10 industrial_capacity_dockyard = 0.05 }
+			equipment_bonus = {
+				screen_ship = { build_cost_ic = -0.05 }
+			}
+			traits = { naval_manufacturer }
+
+			ai_will_do = { factor = 2 }
+		}
+		AUH_whitehead_fiume = {
+			picture = generic_navy_submarines
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_nav_the_whitehead_works
+					has_completed_focus = AUHDNC_m_the_school_of_the_coast
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_nav_the_whitehead_works
+					has_completed_focus = AUHDNC_m_the_school_of_the_coast
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { cat_torpedoes = 0.15 }
+			modifier = { naval_torpedo_hit_chance_factor = 0.05 trade_opinion_factor = -0.05 }
+			traits = { naval_manufacturer }
+
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+
+		AUH_etrich = {
+			picture = generic_air_manufacturer_1
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_air_etrich_available
+					has_completed_focus = AUHDNC_air_heavier_than_air
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_air_etrich_available
+					has_completed_focus = AUHDNC_air_heavier_than_air
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { air_equipment = 0.10 }
+			modifier = { air_range_factor = 0.05 air_accidents_factor = -0.10 air_agility_factor = -0.05 }
+			traits = { light_aircraft_manufacturer }
+
+			ai_will_do = { factor = 2 }
+		}
+		AUH_lohner = {
+			picture = generic_air_manufacturer_2
+			allowed = { original_tag = AUH }
+			visible = {
+				OR = {
+					has_country_flag = AUH_air_lohner_available
+					has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt
+					has_completed_focus = AUHDNC_air_a_flying_troop
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_air_lohner_available
+					has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt
+					has_completed_focus = AUHDNC_air_a_flying_troop
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = { air_equipment = 0.08 }
+			modifier = { production_factory_max_efficiency_factor = 0.05 production_speed_air_base_factor = 0.05 air_agility_factor = -0.05 }
+			traits = { medium_aircraft_manufacturer }
+
+			ai_will_do = { factor = 1 }
+		}
+	}
+}
