@@ -60,10 +60,9 @@ joint_focus = {
  		SPB = {
  			remove_civil_war_target = SPF
  		}
- 		SPF = {
+ 		every_country = {
+ 			limit = { tag = SPF }
  			remove_civil_war_target = SPB
- 		}
- 		SPF = {
  			white_peace = SPB
  		}
  		create_faction = SPA_MONARCHIST_FACTION
@@ -96,7 +95,8 @@ joint_focus = {
  			SPB = {
  				has_completed_focus = SPB_SPF_remind_italy
  			}
- 			SPF = {
+ 			any_country = {
+ 				tag = SPF
  				has_completed_focus = SPB_SPF_put_our_differences_aside
  			}
  		}
