@@ -8,8 +8,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				conscription = 0.005
-				war_support_factor = 0.05
+			conscription = 0.02
+			war_support_factor = 0.10
+			army_org_factor = 0.05
+			stability_factor = -0.05
 			}
 		}
 
@@ -18,8 +20,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.05
-				army_defence_factor = 0.05
+			war_support_factor = 0.10
+			army_defence_factor = 0.05
+			naval_defense_factor = 0.10
+			political_power_factor = -0.10
 			}
 		}
 
@@ -28,8 +32,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				political_power_factor = 0.1
-				experience_gain_navy = 0.05
+			political_power_factor = 0.15
+			experience_gain_navy_factor = 0.10
+			trade_opinion_factor = 0.10
+			war_support_factor = 0.05
+			consumer_goods_factor = 0.03
 			}
 		}
 
@@ -38,9 +45,12 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				political_power_factor = 0.1
-				trade_opinion_factor = 0.15
-				war_support_factor = 0.05
+			political_power_factor = 0.15
+			trade_opinion_factor = 0.20
+			war_support_factor = 0.10
+			stability_factor = 0.05
+			justify_war_goal_time = -0.25
+			consumer_goods_factor = 0.03
 			}
 		}
 
@@ -49,7 +59,9 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				political_power_factor = 0.05
+			political_power_factor = 0.10
+			trade_opinion_factor = 0.10
+			consumer_goods_factor = 0.02
 			}
 		}
 
@@ -58,9 +70,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				trade_opinion_factor = 0.15
-				political_power_factor = 0.05
-				stability_factor = 0.03
+			trade_opinion_factor = 0.20
+			political_power_factor = 0.10
+			stability_factor = 0.05
+			war_support_factor = -0.05
+			justify_war_goal_time = 0.25
 			}
 		}
 
@@ -69,8 +83,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				stability_factor = -0.05
-				war_support_factor = 0.1
+			stability_factor = -0.10
+			war_support_factor = 0.15
+			conscription = 0.01
+			consumer_goods_factor = 0.02
 			}
 		}
 
@@ -79,8 +95,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.03
-				trade_opinion_factor = 0.1
+			consumer_goods_factor = -0.05
+			trade_opinion_factor = 0.15
+			political_power_factor = 0.05
+			war_support_factor = -0.10
 			}
 		}
 
@@ -89,8 +107,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.02
-				political_power_factor = 0.03
+			consumer_goods_factor = -0.05
+			political_power_factor = 0.05
+			production_speed_infrastructure_factor = 0.10
+			trade_opinion_factor = 0.05
 			}
 		}
 
@@ -99,8 +119,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.02
-				production_speed_dockyard_factor = 0.1
+			consumer_goods_factor = -0.05
+			production_speed_dockyard_factor = 0.15
+			industrial_capacity_dockyard = 0.10
+			trade_opinion_factor = 0.10
+			political_power_factor = -0.05
 			}
 		}
 
@@ -109,8 +132,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.03
-				production_speed_industrial_complex_factor = 0.05
+			consumer_goods_factor = -0.05
+			production_speed_industrial_complex_factor = 0.10
+			trade_opinion_factor = 0.10
+			industrial_capacity_dockyard = 0.05
 			}
 		}
 
@@ -119,8 +144,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.03
-				trade_opinion_factor = 0.1
+			consumer_goods_factor = -0.05
+			trade_opinion_factor = 0.15
+			production_speed_industrial_complex_factor = 0.10
+			political_power_factor = 0.05
+			stability_factor = -0.03
 			}
 		}
 
@@ -129,10 +157,15 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.1
-				trade_opinion_factor = 0.2
-				stability_factor = 0.05
+			consumer_goods_factor = -0.10
+			production_speed_buildings_factor = 0.15
+			trade_opinion_factor = 0.25
+			stability_factor = 0.05
+			industrial_capacity_factory = 0.10
+			industrial_capacity_dockyard = 0.10
+			political_power_factor = 0.10
+			war_support_factor = -0.10
+			justify_war_goal_time = 0.50
 			}
 		}
 
@@ -141,8 +174,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.03
-				political_power_factor = 0.05
+			stability_factor = 0.05
+			political_power_factor = 0.10
+			monthly_population = 0.10
+			consumer_goods_factor = 0.02
 			}
 		}
 
@@ -151,8 +186,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				war_support_factor = 0.1
-				justify_war_goal_time = -0.25
+			war_support_factor = 0.15
+			justify_war_goal_time = -0.25
+			stability_factor = -0.05
+			trade_opinion_factor = -0.05
 			}
 		}
 
@@ -161,8 +198,10 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.05
-				war_support_factor = -0.05
+			stability_factor = 0.10
+			war_support_factor = -0.10
+			justify_war_goal_time = 0.50
+			political_power_factor = 0.05
 			}
 		}
 
@@ -171,9 +210,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				conscription = 0.005
-				research_speed_factor = 0.02
-				stability_factor = -0.03
+			conscription = 0.02
+			research_speed_factor = 0.05
+			monthly_population = 0.15
+			political_power_factor = 0.05
+			stability_factor = -0.10
 			}
 		}
 
@@ -182,8 +223,11 @@ ideas = {
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				industrial_capacity_factory = 0.05
-				stability_factor = 0.03
+			industrial_capacity_factory = 0.10
+			stability_factor = 0.05
+			political_power_factor = 0.05
+			monthly_population = -0.10
+			conscription_factor = -0.05
 			}
 		}
 
