@@ -1137,9 +1137,7 @@ country_event = {
 					slot = political_advisor
 					cost = 100
 					idea_token = AUH_arm_the_successor_at_the_ministry
-					allowed = { original_tag = AUH }
 					traits = { armaments_organizer }
-					ai_will_do = { factor = 1 }
 				}
 				activate = no
 			}
@@ -1304,9 +1302,7 @@ country_event = {
 					cost = 100
 					idea_token = AUH_arm_schemua_at_the_staff
 					ledger = army
-					allowed = { original_tag = AUH }
 					traits = { army_chief_organizational_1 }
-					ai_will_do = { factor = 1 }
 				}
 				activate = no
 			}
@@ -1960,7 +1956,7 @@ country_event = {
 		add_to_variable = { var = SER_support value = 5 }
 		clamp_variable = { var = SER_support min = 0 max = 100 }
 		custom_effect_tooltip = AUH_eco_SER_up_tt
-		add_ai_strategy = { type = befriend id = "SER" value = 40 }
+		add_ai_strategy = { type = befriend id = SER value = 40 }
 	}
 }
 
