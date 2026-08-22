@@ -1,0 +1,3673 @@
+add_namespace = can_dnc_r
+
+
+
+country_event = {
+	id = can_dnc_r.101
+	title = can_dnc_r.101.t
+	desc = can_dnc_r.101.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.101.a
+		ai_chance = { base = 50 }
+		add_political_power = -25
+		add_stability = 0.03
+		add_manpower = 5000
+	}
+	option = {
+		name = can_dnc_r.101.b
+		ai_chance = { base = 30 }
+		add_political_power = 10
+		add_stability = -0.03
+		add_popularity = { ideology = communism popularity = 0.03 }
+		army_experience = 10
+	}
+	option = {
+		name = can_dnc_r.101.c
+		ai_chance = { base = 20 }
+		add_timed_idea = { idea = CAN_r_work_stopped_on_the_line days = 90 }
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = can_dnc_r.102
+	title = can_dnc_r.102.t
+	desc = can_dnc_r.102.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.102.a
+		ai_chance = { base = 60 }
+		add_political_power = -50
+		add_stability = 0.05
+		469 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.102.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_stability = -0.05
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+		custom_effect_tooltip = CAN_r_loyalist_anger_plus_one_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_r.103
+	title = can_dnc_r.103.t
+	desc = can_dnc_r.103.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.103.a
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		add_war_support = 0.05
+		navy_experience = 15
+		if = {
+			limit = { check_variable = { CAN_dnc_loyalist_anger > 0 } }
+			subtract_from_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			custom_effect_tooltip = CAN_r_loyalist_anger_minus_one_tt
+		}
+		reverse_add_opinion_modifier = { target = ENG modifier = RI_supports_own_country }
+	}
+	option = {
+		name = can_dnc_r.103.b
+		ai_chance = { base = 50 }
+		add_stability = 0.03
+		add_political_power = 25
+		add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+		custom_effect_tooltip = CAN_r_loyalist_anger_plus_one_tt
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.104
+	title = can_dnc_r.104.t
+	desc = can_dnc_r.104.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.104.a
+		ai_chance = { base = 50 }
+		add_political_power = 25
+		add_stability = 0.03
+		add_popularity = { ideology = democratic popularity = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.104.b
+		ai_chance = { base = 50 }
+		navy_experience = 25
+		add_war_support = 0.03
+		add_political_power = -25
+		464 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.701
+	title = can_dnc_r.701.t
+	desc = can_dnc_r.701.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.701.a
+		ai_chance = { base = 60 }
+		add_political_power = -25
+		add_stability = 0.05
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.701.b
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		army_experience = 30
+		reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.702
+	title = can_dnc_r.702.t
+	desc = can_dnc_r.702.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.702.a
+		ai_chance = { base = 55 }
+		add_political_power = -25
+		army_experience = 25
+		add_equipment_to_stockpile = { type = early_infantry_equipment_1890 amount = 2000 producer = ENG }
+	}
+	option = {
+		name = can_dnc_r.702.b
+		ai_chance = { base = 45 }
+		add_political_power = -25
+		add_equipment_to_stockpile = { type = light_field_gun_equipment_1890 amount = 36 producer = ENG }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.703
+	title = can_dnc_r.703.t
+	desc = can_dnc_r.703.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.703.a
+		ai_chance = { base = 50 }
+		add_political_power = 25
+		add_stability = -0.05
+		add_to_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+	}
+	option = {
+		name = can_dnc_r.703.b
+		ai_chance = { base = 50 }
+		add_stability = 0.03
+		add_manpower = -10000
+		add_war_support = -0.03
+		set_country_flag = CAN_dnc_r_quebec_exempted
+	}
+}
+
+country_event = {
+	id = can_dnc_r.704
+	title = can_dnc_r.704.t
+	desc = can_dnc_r.704.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.704.a
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_ideas = CAN_r_the_ross_in_the_mud
+	}
+	option = {
+		name = can_dnc_r.704.b
+		ai_chance = { base = 60 }
+		add_political_power = -50
+		add_tech_bonus = { name = CANDNC_army_ross_mark_bonus bonus = 1.0 uses = 1 category = infantry_weapons }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.705
+	title = can_dnc_r.705.t
+	desc = can_dnc_r.705.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.705.a
+		ai_chance = { base = 50 }
+		add_political_power = -25
+		add_war_support = 0.05
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.705.b
+		ai_chance = { base = 50 }
+		add_war_support = -0.03
+		reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+		set_country_flag = CAN_dnc_r_ships_lent_in_war
+	}
+}
+
+country_event = {
+	id = can_dnc_r.706
+	title = can_dnc_r.706.t
+	desc = can_dnc_r.706.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.706.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	option = {
+		name = can_dnc_r.706.b
+		ai_chance = { base = 40 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = -50
+		remove_ideas = CAN_fx_no_ships_without_the_people
+	}
+}
+
+country_event = {
+	id = can_dnc_r.707
+	title = can_dnc_r.707.t
+	desc = can_dnc_r.707.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.707.a
+		ai_chance = { base = 50 }
+		add_political_power = 25
+		add_stability = -0.05
+		add_to_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+	}
+	option = {
+		name = can_dnc_r.707.b
+		ai_chance = { base = 50 }
+		add_war_support = -0.03
+		reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+		set_country_flag = CAN_dnc_r_ships_lent_in_war
+	}
+}
+
+country_event = {
+	id = can_dnc_r.708
+	title = can_dnc_r.708.t
+	desc = can_dnc_r.708.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.708.a
+		ai_chance = { base = 60 }
+		add_political_power = -25
+		navy_experience = 15
+	}
+	option = {
+		name = can_dnc_r.708.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+		remove_ideas = CAN_r_cadets_at_sea
+	}
+}
+
+country_event = {
+	id = can_dnc_r.709
+	title = can_dnc_r.709.t
+	desc = can_dnc_r.709.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.709.a
+		ai_chance = { base = 50 }
+		navy_experience = 10
+		if = {
+			limit = { 464 = { is_controlled_by = ROOT } }
+			464 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = { id = 7361 } } }
+		}
+	}
+	option = {
+		name = can_dnc_r.709.b
+		ai_chance = { base = 50 }
+		navy_experience = 10
+		if = {
+			limit = { 473 = { is_controlled_by = ROOT } }
+			473 = { add_building_construction = { type = naval_base level = 2 instant_build = yes province = { id = 1408 } } }
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.710
+	title = can_dnc_r.710.t
+	desc = can_dnc_r.710.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.710.a
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		add_stability = -0.10
+		add_war_support = 0.05
+		add_to_variable = { CAN_dnc_fracture = 2 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		reverse_add_opinion_modifier = { target = ENG modifier = large_increase }
+	}
+	option = {
+		name = can_dnc_r.710.b
+		ai_chance = { base = 50 }
+		add_political_power = -25
+		add_stability = -0.03
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.201
+	title = can_dnc_r.201.t
+	desc = can_dnc_r.201.d
+	picture = GFX_report_event_generic_naval_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.201.a
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		navy_experience = 50
+		add_to_variable = { CAN_dnc_imp_navy = 0.05 tooltip = experience_gain_navy_factor_tt }
+		reverse_add_opinion_modifier = { target = ENG modifier = large_increase }
+	}
+	option = {
+		name = can_dnc_r.201.b
+		ai_chance = { base = 30 }
+		add_political_power = 25
+		modify_timed_idea = { idea = CAN_r_the_defence_estimates days = 365 }
+		reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.201.c
+		ai_chance = { base = 20 }
+		navy_experience = 25
+		add_manpower = -5000
+		add_stability = -0.02
+		add_to_variable = { CAN_dnc_imp_goods = -0.01 tooltip = consumer_goods_factor_tt }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.202
+	title = can_dnc_r.202.t
+	desc = can_dnc_r.202.d
+	picture = GFX_report_event_canada_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.202.a
+		ai_chance = { base = 45 }
+		add_war_support = 0.05
+		add_political_power = 25
+		add_popularity = { ideology = democratic popularity = 0.02 }
+	}
+	option = {
+		name = can_dnc_r.202.b
+		ai_chance = { base = 35 }
+		army_experience = 35
+		add_political_power = -25
+		add_manpower = 3000
+	}
+	option = {
+		name = can_dnc_r.202.c
+		ai_chance = { base = 20 }
+		add_political_power = 25
+		add_stability = -0.03
+		add_to_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		custom_effect_tooltip = CANDNC_b_fracture_plus_one_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_r.203
+	title = can_dnc_r.203.t
+	desc = can_dnc_r.203.d
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.203.a
+		ai_chance = { base = 30 }
+		add_stability = -0.05
+		add_war_support = 0.03
+		add_popularity = { ideology = neutrality popularity = -0.03 }
+		add_to_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		custom_effect_tooltip = CANDNC_b_fracture_plus_one_tt
+	}
+	option = {
+		name = can_dnc_r.203.b
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		add_stability = 0.03
+		subtract_from_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		custom_effect_tooltip = CANDNC_b_fracture_minus_one_tt
+	}
+	option = {
+		name = can_dnc_r.203.c
+		ai_chance = { base = 30 }
+		add_political_power = 25
+		add_war_support = -0.05
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.204
+	title = can_dnc_r.204.t
+	desc = can_dnc_r.204.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.204.a
+		ai_chance = { base = 60 }
+		add_political_power = 25
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = -0.03 }
+	}
+	option = {
+		name = can_dnc_r.204.b
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		add_stability = 0.03
+		subtract_from_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		custom_effect_tooltip = CANDNC_b_fracture_minus_one_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_r.205
+	title = can_dnc_r.205.t
+	desc = can_dnc_r.205.d
+	picture = GFX_report_event_DNC_British_Imperial_Conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.205.a
+		ai_chance = { base = 55 }
+		army_experience = 50
+		add_command_power = 25
+		add_war_support = 0.05
+		add_political_power = -25
+	}
+	option = {
+		name = can_dnc_r.205.b
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_stability = 0.03
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.206
+	title = can_dnc_r.206.t
+	desc = can_dnc_r.206.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.206.a
+		ai_chance = { base = 40 }
+		add_manpower = 10000
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.206.b
+		ai_chance = { base = 60 }
+		add_political_power = -25
+		add_manpower = 15000
+		469 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.207
+	title = can_dnc_r.207.t
+	desc = can_dnc_r.207.d
+	picture = GFX_report_event_imperial_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.207.a
+		ai_chance = { base = 60 }
+		add_political_power = -25
+		CAN = {
+			add_political_power = 50
+			add_command_power = 25
+			army_experience = 25
+			add_opinion_modifier = { target = ENG modifier = RI_pact_signed }
+		}
+	}
+	option = {
+		name = can_dnc_r.207.b
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		CAN = {
+			add_stability = -0.05
+			add_to_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			custom_effect_tooltip = CANDNC_b_fracture_plus_one_tt
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.208
+	title = can_dnc_r.208.t
+	desc = can_dnc_r.208.d
+	picture = GFX_report_event_ast_navy
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.208.a
+		ai_chance = { base = 60 }
+		CAN = {
+			navy_experience = 50
+			add_stability = 0.05
+		}
+	}
+	option = {
+		name = can_dnc_r.208.b
+		ai_chance = { base = 40 }
+		navy_experience = 50
+		CAN = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_to_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			custom_effect_tooltip = CANDNC_b_fracture_plus_one_tt
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.301
+	title = can_dnc_r.301.t
+	desc = can_dnc_r.301.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.301.a
+		add_stability = 0.03
+		add_political_power = -10
+	}
+	option = {
+		name = can_dnc_r.301.b
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+		add_war_support = 0.03
+		add_stability = -0.02
+		subtract_from_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+		custom_effect_tooltip = CAN_r_c_loyalist_calm_one_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_r.302
+	title = can_dnc_r.302.t
+	desc = can_dnc_r.302.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.302.a
+		add_stability = -0.03
+		add_political_power = 25
+		add_popularity = { ideology = democratic popularity = 0.02 }
+	}
+	option = {
+		name = can_dnc_r.302.b
+		add_political_power = -50
+		add_stability = 0.02
+		276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.303
+	title = can_dnc_r.303.t
+	desc = can_dnc_r.303.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.303.a
+		add_political_power = -25
+		682 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		471 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+	option = {
+		name = can_dnc_r.303.b
+		add_political_power = 25
+		add_stability = -0.02
+		reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.304
+	title = can_dnc_r.304.t
+	desc = can_dnc_r.304.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.304.a
+		467 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		469 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+		add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+		custom_effect_tooltip = CAN_r_c_loyalist_anger_one_tt
+	}
+	option = {
+		name = can_dnc_r.304.b
+		add_political_power = -25
+		add_stability = 0.03
+		reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.305
+	title = can_dnc_r.305.t
+	desc = can_dnc_r.305.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.305.a
+		add_political_power = -25
+		add_stability = 0.03
+	}
+	option = {
+		name = can_dnc_r.305.b
+		add_political_power = 15
+		add_stability = -0.03
+		473 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.306
+	title = can_dnc_r.306.t
+	desc = can_dnc_r.306.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.306.a
+		add_political_power = -25
+		add_stability = 0.02
+		682 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+	option = {
+		name = can_dnc_r.306.b
+		add_political_power = 15
+		add_stability = -0.03
+		add_to_variable = { CAN_dnc_c_market_trade = 0.02 tooltip = trade_opinion_factor_tt }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.307
+	title = can_dnc_r.307.t
+	desc = can_dnc_r.307.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.307.a
+		add_political_power = -10
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+		add_to_variable = { CAN_dnc_c_market_resources = 0.03 tooltip = local_resources_factor_tt }
+	}
+	option = {
+		name = can_dnc_r.307.b
+		add_political_power = 25
+		add_stability = 0.02
+		reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.308
+	title = can_dnc_r.308.t
+	desc = can_dnc_r.308.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.308.a
+		add_political_power = 15
+		add_stability = -0.03
+		add_popularity = { ideology = neutrality popularity = 0.02 }
+	}
+	option = {
+		name = can_dnc_r.308.b
+		add_political_power = -25
+		add_stability = 0.02
+		465 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.309
+	title = can_dnc_r.309.t
+	desc = can_dnc_r.309.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.309.a
+		add_political_power = -25
+		army_experience = 15
+		reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.309.b
+		army_experience = 10
+		add_stability = 0.02
+		add_war_support = 0.02
+		add_manpower = 5000
+	}
+}
+
+country_event = {
+	id = can_dnc_r.310
+	title = can_dnc_r.310.t
+	desc = can_dnc_r.310.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.310.a
+		add_stability = 0.02
+		add_political_power = 10
+	}
+	option = {
+		name = can_dnc_r.310.b
+		add_political_power = 25
+		add_war_support = 0.03
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.311
+	title = can_dnc_r.311.t
+	desc = can_dnc_r.311.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.311.a
+		add_political_power = 25
+		add_to_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		custom_effect_tooltip = CAN_r_c_fracture_plus_one_tt
+	}
+	option = {
+		name = can_dnc_r.311.b
+		add_stability = 0.03
+		subtract_from_variable = { CAN_dnc_fracture = 1 }
+		clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+		custom_effect_tooltip = CAN_r_c_fracture_minus_one_tt
+		set_country_flag = CAN_dnc_r_double_majority
+		custom_effect_tooltip = CAN_r_c_double_majority_tt
+	}
+}
+
+country_event = {
+	id = can_dnc_r.312
+	title = can_dnc_r.312.t
+	desc = can_dnc_r.312.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.312.a
+		add_stability = 0.03
+		add_popularity = { ideology = democratic popularity = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.312.b
+		add_political_power = 25
+		add_war_support = -0.02
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.313
+	title = can_dnc_r.313.t
+	desc = can_dnc_r.313.d
+	picture = GFX_report_event_generic_rally2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = can_dnc_r.313.a
+		add_stability = 0.05
+		add_political_power = 25
+		reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.313.b
+		add_political_power = 50
+		add_stability = -0.03
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.351
+	title = can_dnc_r.351.t
+	desc = can_dnc_r.351.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.351.a
+		ai_chance = { base = 50 }
+		add_opinion_modifier = { target = FROM modifier = small_decrease }
+		FROM = { add_political_power = 50 }
+	}
+	option = {
+		name = can_dnc_r.351.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = FROM modifier = large_decrease }
+		FROM = {
+			add_timed_idea = { idea = CAN_r_the_imperial_cold_shoulder days = 365 }
+			add_stability = -0.03
+		}
+	}
+	option = {
+		name = can_dnc_r.351.c
+		ai_chance = { base = 15 }
+		add_opinion_modifier = { target = FROM modifier = medium_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 50 }
+		FROM = {
+			add_war_support = 0.05
+			add_stability = -0.05
+			add_manpower = 10000
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.352
+	title = can_dnc_r.352.t
+	desc = can_dnc_r.352.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.352.a
+		ai_chance = { base = 55 }
+		add_opinion_modifier = { target = FROM modifier = small_increase }
+		if = {
+			limit = { 331 = { OR = { is_owned_by = ENG is_owned_by = NFL } } }
+			FROM = { transfer_state = 331 }
+		}
+		if = {
+			limit = { 332 = { OR = { is_owned_by = ENG is_owned_by = NFL } } }
+			FROM = { transfer_state = 332 }
+		}
+		FROM = {
+			set_country_flag = CAN_dnc_newfoundland_joined
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+	option = {
+		name = can_dnc_r.352.b
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = FROM modifier = medium_decrease }
+		FROM = {
+			add_stability = -0.03
+			add_war_support = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.353
+	title = can_dnc_r.353.t
+	desc = can_dnc_r.353.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.353.a
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		add_stability = 0.05
+		set_country_flag = CAN_dnc_r_league_answered
+	}
+	option = {
+		name = can_dnc_r.353.b
+		ai_chance = { base = 25 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = 25
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		set_country_flag = CAN_dnc_r_league_dispersed
+	}
+	option = {
+		name = can_dnc_r.353.c
+		ai_chance = { base = 25 }
+		add_political_power = -25
+		add_war_support = 0.05
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		set_country_flag = CAN_dnc_r_league_conceded
+	}
+}
+
+country_event = {
+	id = can_dnc_r.354
+	title = can_dnc_r.354.t
+	desc = can_dnc_r.354.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.354.a
+		ai_chance = { base = 45 }
+		add_timed_idea = { idea = CAN_r_the_debt_retired days = 730 }
+		add_stability = 0.03
+	}
+	option = {
+		name = can_dnc_r.354.b
+		ai_chance = { base = 35 }
+		467 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+		if = {
+			limit = { 683 = { is_owned_by = ROOT } }
+			683 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+		add_political_power = -25
+	}
+	option = {
+		name = can_dnc_r.354.c
+		ai_chance = { base = 20 }
+		army_experience = 50
+		add_equipment_to_stockpile = { type = early_infantry_equipment_1900 amount = 4000 producer = ROOT }
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = can_dnc_r.355
+	title = can_dnc_r.355.t
+	desc = can_dnc_r.355.d
+	picture = GFX_report_event_generic_naval
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.355.a
+		ai_chance = { base = 60 }
+		473 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.355.b
+		ai_chance = { base = 40 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = 25
+		USA = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.356
+	title = can_dnc_r.356.t
+	desc = can_dnc_r.356.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.356.a
+		ai_chance = { base = 65 }
+		add_opinion_modifier = { target = FROM modifier = large_increase }
+		FROM = {
+			add_opinion_modifier = { target = ENG modifier = large_increase }
+			add_political_power = 50
+		}
+	}
+	option = {
+		name = can_dnc_r.356.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = FROM modifier = medium_decrease }
+		FROM = { add_stability = -0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.357
+	title = can_dnc_r.357.t
+	desc = can_dnc_r.357.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.357.a
+		ai_chance = { base = 60 }
+		466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		add_stability = 0.02
+	}
+	option = {
+		name = can_dnc_r.357.b
+		ai_chance = { base = 40 }
+		276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		add_stability = -0.03
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = can_dnc_r.358
+	title = can_dnc_r.358.t
+	desc = can_dnc_r.358.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.358.a
+		ai_chance = { base = 65 }
+		add_opinion_modifier = { target = FROM modifier = large_increase }
+		add_ai_strategy = { type = alliance id = CAN value = 100 }
+		FROM = { add_political_power = 50 }
+	}
+	option = {
+		name = can_dnc_r.358.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = FROM modifier = small_decrease }
+		FROM = { add_stability = -0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.401
+	title = can_dnc_r.401.t
+	desc = can_dnc_r.401.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.401.a
+		ai_chance = { base = 40 }
+		add_war_support = 0.05
+		add_political_power = 25
+		add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+		ENG = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+	}
+	option = {
+		name = can_dnc_r.401.b
+		ai_chance = { base = 35 }
+		add_political_power = 50
+		add_stability = 0.03
+	}
+	option = {
+		name = can_dnc_r.401.c
+		ai_chance = { base = 25 }
+		army_experience = 15
+		add_war_support = 0.03
+		471 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		USA = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.402
+	title = can_dnc_r.402.t
+	desc = can_dnc_r.402.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.402.a
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_war_support = 0.03
+		ENG = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+	}
+	option = {
+		name = can_dnc_r.402.b
+		ai_chance = { base = 35 }
+		add_stability = 0.03
+		ENG = { add_opinion_modifier = { target = ROOT modifier = small_increase } }
+	}
+	option = {
+		name = can_dnc_r.402.c
+		ai_chance = { base = 25 }
+		add_political_power = -25
+		add_to_variable = { CAN_dnc_sov_trade_opinion_factor = 0.05 tooltip = trade_opinion_factor_tt }
+		FRA = { add_opinion_modifier = { target = ROOT modifier = RI_started_trade } }
+		ENG = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.403
+	title = can_dnc_r.403.t
+	desc = can_dnc_r.403.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.403.a
+		ai_chance = { base = 55 }
+		add_war_support = 0.05
+		add_political_power = 25
+		USA = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+	}
+	option = {
+		name = can_dnc_r.403.b
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = can_dnc_r.404
+	title = can_dnc_r.404.t
+	desc = can_dnc_r.404.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.404.a
+		ai_chance = { base = 45 }
+		add_political_power = 25
+		add_stability = -0.03
+		add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+	}
+	option = {
+		name = can_dnc_r.404.b
+		ai_chance = { base = 35 }
+		set_country_flag = CAN_dnc_d_promised_the_crown
+		add_stability = 0.03
+		add_war_support = -0.02
+		subtract_from_variable = { CAN_dnc_loyalist_anger = 1 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+	}
+	option = {
+		name = can_dnc_r.404.c
+		ai_chance = { base = 20 }
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_stability = -0.05
+		add_to_variable = { CAN_dnc_loyalist_anger = 2 }
+		clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.405
+	title = can_dnc_r.405.t
+	desc = can_dnc_r.405.d
+	picture = GFX_report_event_generic_usa_treaty
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.405.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = FROM modifier = RI_country_recognised }
+		FROM = {
+			set_country_flag = CAN_dnc_d_washington_recognises
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+	option = {
+		name = can_dnc_r.405.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = FROM modifier = RI_visited_capital }
+	}
+	option = {
+		name = can_dnc_r.405.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = FROM modifier = small_decrease }
+		FROM = {
+			custom_effect_tooltip = CANDNC_d_annexation_talk_tt
+			add_stability = -0.03
+			add_war_support = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.406
+	title = can_dnc_r.406.t
+	desc = can_dnc_r.406.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.406.a
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = FROM modifier = RI_trade_agreement }
+		FROM = {
+			if = {
+				limit = { has_idea = CAN_d_no_credit_anywhere }
+				swap_ideas = {
+					remove_idea = CAN_d_no_credit_anywhere
+					add_idea = CAN_d_no_credit_in_london
+				}
+			}
+			add_stability = 0.03
+		}
+	}
+	option = {
+		name = can_dnc_r.406.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = FROM modifier = medium_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 30 }
+		FROM = {
+			add_political_power = -25
+			add_war_support = 0.05
+		}
+	}
+	option = {
+		name = can_dnc_r.406.c
+		ai_chance = { base = 25 }
+		add_opinion_modifier = { target = FROM modifier = RI_friendly_foreign_policy }
+		FROM = {
+			set_country_flag = CAN_dnc_london_offers_kingdom
+			custom_effect_tooltip = CANDNC_d_crown_offered_tt
+			add_stability = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.407
+	title = can_dnc_r.407.t
+	desc = can_dnc_r.407.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.407.a
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = FROM modifier = RI_friendly_foreign_policy }
+		if = {
+			limit = { FROM = { is_subject = no NOT = { has_war_with = ROOT } } }
+			give_guarantee = FROM
+		}
+		FROM = {
+			add_stability = 0.05
+			add_political_power = 25
+		}
+	}
+	option = {
+		name = can_dnc_r.407.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = FROM modifier = RI_new_loans }
+		FROM = {
+			add_stability = 0.03
+			if = {
+				limit = { has_idea = CAN_d_no_credit_anywhere }
+				swap_ideas = {
+					remove_idea = CAN_d_no_credit_anywhere
+					add_idea = CAN_d_the_credit_returns_slowly
+				}
+			}
+			else_if = {
+				limit = { has_idea = CAN_d_no_credit_in_london }
+				swap_ideas = {
+					remove_idea = CAN_d_no_credit_in_london
+					add_idea = CAN_d_the_credit_returns_slowly
+				}
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.407.c
+		ai_chance = { base = 25 }
+		add_opinion_modifier = { target = FROM modifier = small_decrease }
+		FROM = {
+			add_stability = -0.03
+			add_political_power = 25
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.408
+	title = can_dnc_r.408.t
+	desc = can_dnc_r.408.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.408.a
+		ai_chance = { base = 55 }
+		add_opinion_modifier = { target = FROM modifier = RI_supports_own_country }
+		FROM = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+	option = {
+		name = can_dnc_r.408.b
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = FROM modifier = small_decrease }
+		FROM = {
+			add_political_power = 50
+			add_war_support = 0.02
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.451
+	title = can_dnc_r.451.t
+	desc = can_dnc_r.451.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.451.a
+		ai_chance = { base = 45 }
+		add_stability = 0.05
+		add_popularity = { ideology = democratic popularity = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.451.b
+		ai_chance = { base = 30 }
+		add_political_power = 50
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.451.c
+		ai_chance = { base = 25 }
+		add_political_power = 25
+		add_war_support = 0.03
+		ENG = { add_opinion_modifier = { target = CAN modifier = small_increase } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.452
+	title = can_dnc_r.452.t
+	desc = can_dnc_r.452.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.452.a
+		ai_chance = { base = 45 }
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	option = {
+		name = can_dnc_r.452.b
+		ai_chance = { base = 30 }
+		add_war_support = 0.05
+		army_experience = 25
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.452.c
+		ai_chance = { base = 25 }
+		add_political_power = 75
+		add_popularity = { ideology = democratic popularity = -0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.453
+	title = can_dnc_r.453.t
+	desc = can_dnc_r.453.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.453.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = RI_country_recognised }
+		add_ai_strategy = { type = befriend id = CAN value = 30 }
+		CAN = { add_stability = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.453.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = 25 }
+	}
+	option = {
+		name = can_dnc_r.453.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 20 }
+		CAN = { add_war_support = 0.05 add_stability = -0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.454
+	title = can_dnc_r.454.t
+	desc = can_dnc_r.454.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.454.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = RI_country_recognised }
+		add_ai_strategy = { type = befriend id = CAN value = 30 }
+		CAN = { add_political_power = 25 }
+	}
+	option = {
+		name = can_dnc_r.454.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.454.c
+		ai_chance = { base = 20 }
+		add_ai_strategy = { type = antagonize id = CAN value = 20 }
+		CAN = { add_war_support = 0.05 add_stability = -0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.455
+	title = can_dnc_r.455.t
+	desc = can_dnc_r.455.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.455.a
+		ai_chance = { base = 40 }
+		add_timed_idea = { idea = CAN_r_the_price_of_pride days = 365 }
+		add_political_power = 50
+	}
+	option = {
+		name = can_dnc_r.455.b
+		ai_chance = { base = 35 }
+		add_stability = 0.03
+		add_political_power = -25
+	}
+	option = {
+		name = can_dnc_r.455.c
+		ai_chance = { base = 25 }
+		276 = { add_extra_state_shared_building_slots = 1 }
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = can_dnc_r.456
+	title = can_dnc_r.456.t
+	desc = can_dnc_r.456.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.456.a
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_timed_idea = { idea = CAN_r_the_silver_rush days = 365 }
+	}
+	option = {
+		name = can_dnc_r.456.b
+		ai_chance = { base = 35 }
+		add_stability = 0.05
+	}
+	option = {
+		name = can_dnc_r.456.c
+		ai_chance = { base = 25 }
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+		add_political_power = 25
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = can_dnc_r.457
+	title = can_dnc_r.457.t
+	desc = can_dnc_r.457.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.457.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.457.b
+		ai_chance = { base = 30 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_timed_idea = { idea = CAN_r_the_cables_cut days = 365 } }
+	}
+	option = {
+		name = can_dnc_r.457.c
+		ai_chance = { base = 25 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { add_political_power = 25 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.458
+	title = can_dnc_r.458.t
+	desc = can_dnc_r.458.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.458.a
+		ai_chance = { base = 40 }
+		276 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_border = yes } } }
+	}
+	option = {
+		name = can_dnc_r.458.b
+		ai_chance = { base = 30 }
+		467 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_border = yes } } }
+	}
+	option = {
+		name = can_dnc_r.458.c
+		ai_chance = { base = 30 }
+		473 = { add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_naval_base = yes } } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.459
+	title = can_dnc_r.459.t
+	desc = can_dnc_r.459.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.459.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		add_ai_strategy = { type = befriend id = CAN value = 15 }
+	}
+	option = {
+		name = can_dnc_r.459.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		add_ai_strategy = { type = contain id = CAN value = 10 }
+	}
+	option = {
+		name = can_dnc_r.459.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_war_support = 0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.460
+	title = can_dnc_r.460.t
+	desc = can_dnc_r.460.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.460.a
+		ai_chance = { base = 35 }
+		add_equipment_to_stockpile = { type = early_infantry_equipment_1890 amount = 2000 producer = CAN }
+		add_political_power = -25
+	}
+	option = {
+		name = can_dnc_r.460.b
+		ai_chance = { base = 40 }
+		army_experience = 25
+		add_stability = 0.02
+	}
+	option = {
+		name = can_dnc_r.460.c
+		ai_chance = { base = 25 }
+		add_manpower = 5000
+		add_political_power = 25
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = can_dnc_r.461
+	title = can_dnc_r.461.t
+	desc = can_dnc_r.461.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.461.a
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 10 }
+	}
+	option = {
+		name = can_dnc_r.461.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.461.c
+		ai_chance = { base = 25 }
+		CAN = { navy_experience = 10 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.462
+	title = can_dnc_r.462.t
+	desc = can_dnc_r.462.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.462.a
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 15 }
+	}
+	option = {
+		name = can_dnc_r.462.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.462.c
+		ai_chance = { base = 25 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_war_support = 0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.463
+	title = can_dnc_r.463.t
+	desc = can_dnc_r.463.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.463.a
+		ai_chance = { base = 40 }
+		add_timed_idea = { idea = CAN_r_the_bare_shops days = 365 }
+		add_war_support = 0.05
+	}
+	option = {
+		name = can_dnc_r.463.b
+		ai_chance = { base = 30 }
+		add_to_variable = { CAN_dnc_fortress_defence = -0.05 tooltip = CAN_dnc_fortress_defence_m5_tt }
+		add_stability = 0.05
+		add_political_power = 25
+	}
+	option = {
+		name = can_dnc_r.463.c
+		ai_chance = { base = 30 }
+		add_timed_idea = { idea = CAN_r_the_railway_levy days = 365 }
+		add_political_power = -50
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = can_dnc_r.464
+	title = can_dnc_r.464.t
+	desc = can_dnc_r.464.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.464.a
+		ai_chance = { base = 40 }
+		682 = { add_extra_state_shared_building_slots = 1 }
+		add_manpower = 10000
+	}
+	option = {
+		name = can_dnc_r.464.b
+		ai_chance = { base = 35 }
+		466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		add_manpower = 5000
+	}
+	option = {
+		name = can_dnc_r.464.c
+		ai_chance = { base = 25 }
+		add_manpower = 15000
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = can_dnc_r.465
+	title = can_dnc_r.465.t
+	desc = can_dnc_r.465.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.465.a
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_stability = -0.05
+		add_popularity = { ideology = democratic popularity = -0.03 }
+	}
+	option = {
+		name = can_dnc_r.465.b
+		ai_chance = { base = 30 }
+		add_political_power = 25
+		add_stability = -0.03
+		add_timed_idea = { idea = CAN_r_the_west_sulks days = 365 }
+	}
+	option = {
+		name = can_dnc_r.465.c
+		ai_chance = { base = 30 }
+		add_stability = 0.03
+		add_political_power = -25
+		467 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.466
+	title = can_dnc_r.466.t
+	desc = can_dnc_r.466.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.466.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.466.b
+		ai_chance = { base = 30 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_war_support = 0.02 }
+	}
+	option = {
+		name = can_dnc_r.466.c
+		ai_chance = { base = 25 }
+		CAN = { add_political_power = 25 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.467
+	title = can_dnc_r.467.t
+	desc = can_dnc_r.467.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.467.a
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_war_support = 0.03
+	}
+	option = {
+		name = can_dnc_r.467.b
+		ai_chance = { base = 35 }
+		add_political_power = 25
+		472 = { add_extra_state_shared_building_slots = 1 }
+	}
+	option = {
+		name = can_dnc_r.467.c
+		ai_chance = { base = 20 }
+		navy_experience = 15
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = can_dnc_r.468
+	title = can_dnc_r.468.t
+	desc = can_dnc_r.468.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.468.a
+		ai_chance = { base = 45 }
+		diplomatic_relation = { country = CAN relation = non_aggression_pact active = yes }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { add_stability = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.468.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.468.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_timed_idea = { idea = CAN_r_the_tariff_answered days = 365 } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.469
+	title = can_dnc_r.469.t
+	desc = can_dnc_r.469.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.469.a
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		if = { limit = { 332 = { is_owned_by = ENG } } CAN = { transfer_state = 332 } }
+		CAN = { add_stability = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.469.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = 25 }
+	}
+	option = {
+		name = can_dnc_r.469.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 10 }
+		CAN = { add_war_support = 0.05 add_political_power = 50 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.501
+	title = can_dnc_r.501.t
+	desc = can_dnc_r.501.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.501.a
+		add_political_power = 25
+		add_war_support = -0.02
+		custom_effect_tooltip = CAN_e_anger_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.501.b
+		add_political_power = -50
+		custom_effect_tooltip = CAN_e_ontario_ws_p2_tt
+		add_war_support = 0.02
+		custom_effect_tooltip = CAN_e_anger_m1_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.501.c
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
+		add_stability = 0.02
+		custom_effect_tooltip = CAN_e_anger_p2_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_loyalist_anger = 2 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.502
+	title = can_dnc_r.502.t
+	desc = can_dnc_r.502.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.502.a
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_quebec_stability_m3_tt
+		add_stability = -0.03
+		custom_effect_tooltip = CAN_e_fracture_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.502.b
+		add_political_power = -25
+		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
+		add_stability = 0.02
+		custom_effect_tooltip = CAN_e_ontario_ws_m2_tt
+		add_war_support = -0.02
+		custom_effect_tooltip = CAN_e_fracture_m1_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.503
+	title = can_dnc_r.503.t
+	desc = can_dnc_r.503.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.503.a
+		add_political_power = -25
+		add_stability = 0.03
+		add_popularity = { ideology = neutrality popularity = -0.03 }
+		466 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	option = {
+		name = can_dnc_r.503.b
+		add_political_power = 50
+		add_stability = -0.02
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.504
+	title = can_dnc_r.504.t
+	desc = can_dnc_r.504.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.504.a
+		add_political_power = -25
+		custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
+		add_stability = 0.03
+		custom_effect_tooltip = CAN_e_anger_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.504.b
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
+		add_stability = -0.02
+		custom_effect_tooltip = CAN_e_anger_m1_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.505
+	title = can_dnc_r.505.t
+	desc = can_dnc_r.505.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.505.a
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_quebec_stability_m3_tt
+		add_stability = -0.03
+		custom_effect_tooltip = CAN_e_fracture_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.505.b
+		add_political_power = -50
+		468 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = can_dnc_r.506
+	title = can_dnc_r.506.t
+	desc = can_dnc_r.506.d
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.506.a
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_ontario_ws_m3_tt
+		add_war_support = -0.03
+		custom_effect_tooltip = CAN_e_anger_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.506.b
+		add_political_power = -50
+		276 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = CAN_e_anger_m1_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.507
+	title = can_dnc_r.507.t
+	desc = can_dnc_r.507.d
+	picture = GFX_report_event_imperial_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.507.a
+		add_stability = 0.05
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_fracture_m1_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.507.b
+		add_political_power = -50
+		navy_experience = 25
+		464 = {
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = CAN_e_ontario_ws_p3_tt
+		add_war_support = 0.03
+		custom_effect_tooltip = CAN_e_anger_m2_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_loyalist_anger = 2 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.508
+	title = can_dnc_r.508.t
+	desc = can_dnc_r.508.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.508.a
+		add_political_power = -25
+		custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
+		add_stability = 0.03
+		add_tech_bonus = {
+			name = CANFX_e_the_bilingual_civil_service_bonus
+			bonus = 0.5
+			uses = 1
+			category = support_tech
+		}
+	}
+	option = {
+		name = can_dnc_r.508.b
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
+		add_stability = -0.02
+		add_popularity = { ideology = neutrality popularity = -0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.509
+	title = can_dnc_r.509.t
+	desc = can_dnc_r.509.d
+	picture = GFX_report_event_imperial_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.509.a
+		add_political_power = 10
+		CAN = {
+			add_opinion_modifier = { target = ENG modifier = small_increase }
+		}
+	}
+	option = {
+		name = can_dnc_r.509.b
+		add_political_power = -10
+		CAN = {
+			custom_effect_tooltip = CAN_e_ontario_ws_p2_tt
+			add_war_support = 0.02
+			reverse_add_opinion_modifier = { target = ENG modifier = rejected_demands }
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.510
+	title = can_dnc_r.510.t
+	desc = can_dnc_r.510.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.510.a
+		add_stability = 0.03
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+		custom_effect_tooltip = CAN_e_anger_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+	option = {
+		name = can_dnc_r.510.b
+		add_political_power = -50
+		276 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = CAN_e_anger_m2_tt
+		hidden_effect = {
+			subtract_from_variable = { CAN_dnc_loyalist_anger = 2 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.511
+	title = can_dnc_r.511.t
+	desc = can_dnc_r.511.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.511.a
+		add_command_power = 25
+		add_manpower = 10000
+		468 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.511.b
+		add_political_power = 50
+		add_stability = 0.03
+		custom_effect_tooltip = CAN_e_fracture_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_fracture = 1 }
+			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.512
+	title = can_dnc_r.512.t
+	desc = can_dnc_r.512.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.512.a
+		add_political_power = -25
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.512.b
+		add_political_power = 25
+		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
+		add_stability = 0.02
+		add_popularity = { ideology = neutrality popularity = -0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.513
+	title = can_dnc_r.513.t
+	desc = can_dnc_r.513.d
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.513.a
+		reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
+		custom_effect_tooltip = CAN_e_ontario_ws_p2_tt
+		add_war_support = 0.02
+		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
+		add_stability = -0.02
+	}
+	option = {
+		name = can_dnc_r.513.b
+		add_political_power = -25
+		custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
+		add_stability = 0.03
+		custom_effect_tooltip = CAN_e_anger_p1_tt
+		hidden_effect = {
+			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
+			clamp_variable = { var = CAN_dnc_loyalist_anger min = 0 max = 10 }
+			set_variable = { CAN_dnc_fracture_stab = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_stab = -0.015 }
+			set_variable = { CAN_dnc_fracture_cons = CAN_dnc_fracture }
+			multiply_variable = { CAN_dnc_fracture_cons = -0.01 }
+			set_variable = { CAN_dnc_anger_pp = CAN_dnc_loyalist_anger }
+			multiply_variable = { CAN_dnc_anger_pp = -0.015 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier } } }
+				add_dynamic_modifier = { modifier = CAN_dnc_two_nations_modifier }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = can_dnc_r.514
+	title = can_dnc_r.514.t
+	desc = can_dnc_r.514.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.514.a
+		add_political_power = 25
+		add_stability = 0.03
+		add_popularity = { ideology = neutrality popularity = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.514.b
+		add_political_power = -50
+		468 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
+		add_stability = 0.02
+	}
+}
+
+# the sod-busters arrive
+country_event = {
+	id = can_dnc_r.801
+	title = can_dnc_r.801.t
+	desc = can_dnc_r.801.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.801.a
+		ai_chance = { base = 60 }
+		add_manpower = 10000
+		add_stability = -0.03
+		467 = { add_extra_state_shared_building_slots = 1 }
+	}
+
+	option = {
+		name = can_dnc_r.801.b
+		ai_chance = { base = 40 }
+		add_stability = 0.03
+		add_political_power = 25
+		add_manpower = 3000
+	}
+}
+
+# the liverpool price
+country_event = {
+	id = can_dnc_r.802
+	title = can_dnc_r.802.t
+	desc = can_dnc_r.802.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.802.a
+		ai_chance = { base = 60 }
+		add_political_power = 25
+		add_stability = 0.03
+		reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+	}
+
+	option = {
+		name = can_dnc_r.802.b
+		ai_chance = { base = 40 }
+		add_political_power = -25
+		add_timed_idea = { idea = CAN_r_the_bumper_crop days = 180 }
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+# the minneapolis terms
+country_event = {
+	id = can_dnc_r.803
+	title = can_dnc_r.803.t
+	desc = can_dnc_r.803.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.803.a
+		ai_chance = { base = 55 }
+		add_political_power = -25
+		add_timed_idea = { idea = CAN_r_the_bumper_crop days = 180 }
+		reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+	}
+
+	option = {
+		name = can_dnc_r.803.b
+		ai_chance = { base = 45 }
+		add_political_power = -50
+		467 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		add_stability = 0.03
+	}
+}
+
+# the older west answers the sheepskin coats
+country_event = {
+	id = can_dnc_r.804
+	title = can_dnc_r.804.t
+	desc = can_dnc_r.804.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.804.a
+		ai_chance = { base = 60 }
+		add_stability = -0.05
+		add_manpower = 10000
+		add_popularity = { ideology = democratic popularity = -0.03 }
+	}
+
+	option = {
+		name = can_dnc_r.804.b
+		ai_chance = { base = 40 }
+		add_stability = 0.03
+		add_political_power = 25
+		add_manpower = -5000
+	}
+}
+
+# the marquis harvest
+country_event = {
+	id = can_dnc_r.805
+	title = can_dnc_r.805.t
+	desc = can_dnc_r.805.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.805.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		add_political_power = 25
+		469 = { add_extra_state_shared_building_slots = 1 }
+	}
+
+	option = {
+		name = can_dnc_r.805.b
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_war_support = 0.03
+		add_manpower = 5000
+	}
+}
+
+# the bounty cheque at sydney
+country_event = {
+	id = can_dnc_r.806
+	title = can_dnc_r.806.t
+	desc = can_dnc_r.806.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.806.a
+		ai_chance = { base = 55 }
+		add_political_power = -50
+		464 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		add_stability = 0.03
+	}
+
+	option = {
+		name = can_dnc_r.806.b
+		ai_chance = { base = 45 }
+		add_political_power = 25
+		add_stability = -0.03
+		464 = { add_extra_state_shared_building_slots = 1 }
+	}
+}
+
+# the grand trunk asks more
+country_event = {
+	id = can_dnc_r.807
+	title = can_dnc_r.807.t
+	desc = can_dnc_r.807.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.807.a
+		ai_chance = { base = 55 }
+		add_political_power = -50
+		add_timed_idea = { idea = CAN_r_the_credit_boom days = 365 }
+		471 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+
+	option = {
+		name = can_dnc_r.807.b
+		ai_chance = { base = 45 }
+		add_political_power = 25
+		add_stability = -0.05
+		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
+	}
+}
+
+# the minister of railways walks out
+country_event = {
+	id = can_dnc_r.808
+	title = can_dnc_r.808.t
+	desc = can_dnc_r.808.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.808.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		add_political_power = -25
+	}
+
+	option = {
+		name = can_dnc_r.808.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_stability = -0.03
+		add_popularity = { ideology = democratic popularity = -0.02 }
+	}
+}
+
+# the promoters go to court
+country_event = {
+	id = can_dnc_r.809
+	title = can_dnc_r.809.t
+	desc = can_dnc_r.809.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.809.a
+		ai_chance = { base = 60 }
+		add_political_power = -50
+		add_stability = 0.05
+		276 = { add_extra_state_shared_building_slots = 1 }
+	}
+
+	option = {
+		name = can_dnc_r.809.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_timed_idea = { idea = CAN_r_the_syndicate_at_the_falls days = 730 }
+	}
+}
+
+# current at the market rate
+country_event = {
+	id = can_dnc_r.810
+	title = can_dnc_r.810.t
+	desc = can_dnc_r.810.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.810.a
+		ai_chance = { base = 55 }
+		add_stability = -0.03
+		add_political_power = 25
+		276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+
+	option = {
+		name = can_dnc_r.810.b
+		ai_chance = { base = 45 }
+		add_stability = 0.03
+		add_political_power = -25
+		add_popularity = { ideology = democratic popularity = 0.02 }
+	}
+}
+
+# silver at cobalt
+country_event = {
+	id = can_dnc_r.811
+	title = can_dnc_r.811.t
+	desc = can_dnc_r.811.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.811.a
+		ai_chance = { base = 55 }
+		add_manpower = 10000
+		add_stability = -0.03
+		add_resource = { type = steel amount = 2 state = 682 }
+	}
+
+	option = {
+		name = can_dnc_r.811.b
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_resource = { type = chromium amount = 2 state = 682 }
+		add_stability = 0.03
+	}
+}
+
+# the western farmers petition
+country_event = {
+	id = can_dnc_r.812
+	title = can_dnc_r.812.t
+	desc = can_dnc_r.812.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.812.a
+		ai_chance = { base = 55 }
+		add_stability = -0.05
+		add_political_power = 25
+		276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+
+	option = {
+		name = can_dnc_r.812.b
+		ai_chance = { base = 45 }
+		add_stability = 0.05
+		add_political_power = -25
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+	}
+}
+
+# washington receives the offer of an open road south
+country_event = {
+	id = can_dnc_r.813
+	title = can_dnc_r.813.t
+	desc = can_dnc_r.813.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.813.a
+		ai_chance = {
+			base = 60
+			modifier = { factor = 2 FROM = { has_country_flag = CAN_dnc_path_continental } }
+			modifier = { factor = 0.5 FROM = { has_country_flag = CAN_dnc_us_tariff_war } }
+		}
+		add_opinion_modifier = { target = FROM modifier = RI_trade_agreement }
+		FROM = { country_event = { id = can_dnc_r.814 hours = 6 } }
+	}
+	option = {
+		name = can_dnc_r.813.b
+		ai_chance = {
+			base = 40
+			modifier = { factor = 2 FROM = { has_country_flag = CAN_dnc_us_tariff_war } }
+		}
+		add_opinion_modifier = { target = FROM modifier = RI_trade_agreement_declined }
+		FROM = { country_event = { id = can_dnc_r.815 hours = 6 } }
+	}
+}
+
+# washington opens the gate
+country_event = {
+	id = can_dnc_r.814
+	title = can_dnc_r.814.t
+	desc = can_dnc_r.814.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.814.a
+		ai_chance = { base = 10 }
+		add_stability = 0.05
+		add_political_power = 50
+		set_country_flag = CAN_dnc_us_reciprocity
+		469 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		470 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+	}
+}
+
+# washington keeps its wall
+country_event = {
+	id = can_dnc_r.815
+	title = can_dnc_r.815.t
+	desc = can_dnc_r.815.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.815.a
+		ai_chance = { base = 10 }
+		add_stability = -0.05
+		add_political_power = -25
+		add_timed_idea = { idea = CAN_r_the_bumper_crop days = 180 }
+	}
+}
+
+# the bankers come to ottawa
+country_event = {
+	id = can_dnc_r.816
+	title = can_dnc_r.816.t
+	desc = can_dnc_r.816.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.816.a
+		ai_chance = { base = 55 }
+		add_political_power = 50
+		add_stability = -0.03
+		466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+	}
+
+	option = {
+		name = can_dnc_r.816.b
+		ai_chance = { base = 45 }
+		add_political_power = -25
+		add_stability = 0.05
+		add_popularity = { ideology = democratic popularity = 0.02 }
+	}
+}
+
+# gold in the vaults
+country_event = {
+	id = can_dnc_r.817
+	title = can_dnc_r.817.t
+	desc = can_dnc_r.817.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.817.a
+		ai_chance = { base = 55 }
+		add_political_power = -50
+		add_stability = 0.05
+		add_timed_idea = { idea = CAN_r_the_decennial_compact days = 365 }
+	}
+
+	option = {
+		name = can_dnc_r.817.b
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_stability = -0.03
+	}
+}
+
+# the panic stops at the line
+country_event = {
+	id = can_dnc_r.818
+	title = can_dnc_r.818.t
+	desc = can_dnc_r.818.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.818.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		add_political_power = 25
+		reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
+	}
+
+	option = {
+		name = can_dnc_r.818.b
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_stability = -0.03
+		add_timed_idea = { idea = CAN_r_the_credit_boom days = 365 }
+	}
+}
+
+# bell writes from baddeck
+country_event = {
+	id = can_dnc_r.819
+	title = can_dnc_r.819.t
+	desc = can_dnc_r.819.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.819.a
+		ai_chance = { base = 60 }
+		add_political_power = -25
+		air_experience = 15
+		add_timed_idea = { idea = CAN_r_bells_workshop days = 365 }
+	}
+
+	option = {
+		name = can_dnc_r.819.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		air_experience = 5
+	}
+}
+
+# london receives the dominion's request for a place in the imperial air service
+country_event = {
+	id = can_dnc_r.820
+	title = can_dnc_r.820.t
+	desc = can_dnc_r.820.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.820.a
+		ai_chance = {
+			base = 65
+			modifier = { factor = 1.5 FROM = { has_country_flag = CAN_dnc_path_imperial } }
+		}
+		add_opinion_modifier = { target = FROM modifier = RI_supports_own_country }
+		FROM = { country_event = { id = can_dnc_r.821 hours = 6 } }
+	}
+	option = {
+		name = can_dnc_r.820.b
+		ai_chance = {
+			base = 35
+			modifier = { factor = 2 FROM = { has_country_flag = CAN_dnc_path_sovereign } }
+		}
+		FROM = { country_event = { id = can_dnc_r.822 hours = 6 } }
+	}
+}
+
+# london opens farnborough
+country_event = {
+	id = can_dnc_r.821
+	title = can_dnc_r.821.t
+	desc = can_dnc_r.821.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.821.a
+		ai_chance = { base = 10 }
+		air_experience = 25
+		add_political_power = 25
+		add_tech_bonus = { name = CAN_r_farnborough_bonus bonus = 1.0 uses = 1 category = air_equipment }
+	}
+}
+
+# london answers coolly
+country_event = {
+	id = can_dnc_r.822
+	title = can_dnc_r.822.t
+	desc = can_dnc_r.822.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.822.a
+		ai_chance = { base = 10 }
+		add_political_power = -25
+		add_war_support = -0.02
+		air_experience = 10
+	}
+}
+
+# the silver dart lifts off the ice
+country_event = {
+	id = can_dnc_r.823
+	title = can_dnc_r.823.t
+	desc = can_dnc_r.823.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.823.a
+		ai_chance = { base = 60 }
+		add_war_support = 0.03
+		add_political_power = 25
+		air_experience = 10
+	}
+
+	option = {
+		name = can_dnc_r.823.b
+		ai_chance = { base = 40 }
+		add_political_power = -25
+		air_experience = 25
+		464 = { add_building_construction = { type = air_base level = 1 instant_build = yes } }
+	}
+}
+
+# the generals at petawawa
+country_event = {
+	id = can_dnc_r.824
+	title = can_dnc_r.824.t
+	desc = can_dnc_r.824.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.824.a
+		ai_chance = { base = 55 }
+		army_experience = 25
+		add_political_power = 25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = can_dnc_r.824.b
+		ai_chance = { base = 45 }
+		add_political_power = -25
+		air_experience = 25
+		276 = { add_building_construction = { type = air_base level = 1 instant_build = yes } }
+	}
+}
+
+# our men at brooklands
+country_event = {
+	id = can_dnc_r.825
+	title = can_dnc_r.825.t
+	desc = can_dnc_r.825.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.825.a
+		ai_chance = { base = 60 }
+		air_experience = 20
+		reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+	}
+
+	option = {
+		name = can_dnc_r.825.b
+		ai_chance = { base = 40 }
+		add_political_power = -25
+		air_experience = 30
+		add_war_support = 0.02
+	}
+}
+
+# the roundel on the wing
+country_event = {
+	id = can_dnc_r.826
+	title = can_dnc_r.826.t
+	desc = can_dnc_r.826.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.826.a
+		ai_chance = { base = 55 }
+		add_political_power = -25
+		air_experience = 25
+		add_stability = 0.03
+	}
+
+	option = {
+		name = can_dnc_r.826.b
+		ai_chance = { base = 45 }
+		add_political_power = 25
+		reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+		reverse_add_opinion_modifier = { target = USA modifier = small_increase }
+	}
+}
+
+# london receives the offer of a canadian wing inside the imperial flying service
+country_event = {
+	id = can_dnc_r.827
+	title = can_dnc_r.827.t
+	desc = can_dnc_r.827.d
+	is_triggered_only = yes
+
+	option = {
+		name = can_dnc_r.827.a
+		ai_chance = {
+			base = 65
+			modifier = { factor = 1.5 FROM = { has_country_flag = CAN_dnc_path_imperial } }
+		}
+		air_experience = 10
+		add_opinion_modifier = { target = FROM modifier = RI_supports_own_faction }
+		FROM = { country_event = { id = can_dnc_r.828 hours = 6 } }
+	}
+	option = {
+		name = can_dnc_r.827.b
+		ai_chance = {
+			base = 35
+			modifier = { factor = 2 FROM = { has_country_flag = CAN_dnc_path_sovereign } }
+		}
+		air_experience = 15
+		FROM = { country_event = { id = can_dnc_r.829 hours = 6 } }
+	}
+}
+
+# london accepts the wing
+country_event = {
+	id = can_dnc_r.828
+	title = can_dnc_r.828.t
+	desc = can_dnc_r.828.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.828.a
+		ai_chance = { base = 10 }
+		air_experience = 25
+		add_political_power = 25
+		add_war_support = 0.03
+		276 = { add_building_construction = { type = air_base level = 1 instant_build = yes } }
+	}
+}
+
+# london takes the men, not the wing
+country_event = {
+	id = can_dnc_r.829
+	title = can_dnc_r.829.t
+	desc = can_dnc_r.829.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.829.a
+		ai_chance = { base = 10 }
+		add_political_power = -25
+		add_war_support = -0.03
+		add_stability = -0.03
+	}
+}
+
+# a canadian name in a foreign squadron list
+country_event = {
+	id = can_dnc_r.830
+	title = can_dnc_r.830.t
+	desc = can_dnc_r.830.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = can_dnc_r.830.a
+		ai_chance = { base = 60 }
+		add_political_power = 25
+		air_experience = 10
+		reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
+	}
+
+	option = {
+		name = can_dnc_r.830.b
+		ai_chance = { base = 40 }
+		add_war_support = 0.03
+		add_political_power = -25
+		air_experience = 20
+	}
+}
+
+country_event = {
+	id = can_dnc_r.601
+	title = can_dnc_r.601.t
+	desc = can_dnc_r.601.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.601.a
+		ai_chance = { base = 60 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { add_political_power = 25 }
+	}
+	option = {
+		name = can_dnc_r.601.b
+		ai_chance = { base = 30 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.601.c
+		ai_chance = { base = 10 }
+		CAN = { add_political_power = -25 add_stability = -0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.602
+	title = can_dnc_r.602.t
+	desc = can_dnc_r.602.d
+	picture = GFX_report_event_canada_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.602.a
+		ai_chance = { base = 50 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+	}
+	option = {
+		name = can_dnc_r.602.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = -25 }
+	}
+	option = {
+		name = can_dnc_r.602.c
+		ai_chance = { base = 15 }
+		CAN = { add_political_power = -10 add_autonomy_ratio = { value = -0.01 localization = CANDNC_p_a_commissioner_at_yokohama } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.603
+	title = can_dnc_r.603.t
+	desc = can_dnc_r.603.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.603.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = -25 }
+	}
+	option = {
+		name = can_dnc_r.603.b
+		ai_chance = { base = 40 }
+
+	}
+	option = {
+		name = can_dnc_r.603.c
+		ai_chance = { base = 15 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { add_stability = 0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.605
+	title = can_dnc_r.605.t
+	desc = can_dnc_r.605.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.605.a
+		ai_chance = { base = 60 }
+		add_stability = -0.03
+		add_political_power = 25
+		add_war_support = 0.02
+	}
+	option = {
+		name = can_dnc_r.605.b
+		ai_chance = { base = 40 }
+		add_timed_idea = { idea = CAN_r_a_literacy_test days = 540 }
+		JAP = { add_opinion_modifier = { target = CAN modifier = medium_decrease } }
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = can_dnc_r.606
+	title = can_dnc_r.606.t
+	desc = can_dnc_r.606.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.606.a
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { navy_experience = 15 add_political_power = 25 }
+	}
+	option = {
+		name = can_dnc_r.606.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = -25 }
+	}
+	option = {
+		name = can_dnc_r.606.c
+		ai_chance = { base = 20 }
+
+	}
+}
+
+country_event = {
+	id = can_dnc_r.607
+	title = can_dnc_r.607.t
+	desc = can_dnc_r.607.d
+	picture = GFX_report_event_canada_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.607.a
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { add_autonomy_ratio = { value = 0.02 localization = CANDNC_p_a_legation_in_tokyo } }
+	}
+	option = {
+		name = can_dnc_r.607.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = -25 }
+	}
+	option = {
+		name = can_dnc_r.607.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_stability = -0.02 add_war_support = 0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.608
+	title = can_dnc_r.608.t
+	desc = can_dnc_r.608.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.608.a
+		ai_chance = { base = 50 }
+		add_stability = 0.05
+		ENG = { add_opinion_modifier = { target = CAN modifier = small_increase } }
+	}
+	option = {
+		name = can_dnc_r.608.b
+		ai_chance = { base = 50 }
+		add_autonomy_ratio = { value = 0.03 localization = CANDNC_p_the_pacific_gateway }
+		add_political_power = 25
+		ENG = { add_opinion_modifier = { target = CAN modifier = small_decrease } }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.609
+	title = can_dnc_r.609.t
+	desc = can_dnc_r.609.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.609.a
+		ai_chance = { base = 50 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { add_stability = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.609.b
+		ai_chance = { base = 30 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { add_ideas = CAN_a_the_yokohama_tariff }
+	}
+	option = {
+		name = can_dnc_r.609.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_stability = -0.03 add_political_power = -25 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.611
+	title = can_dnc_r.611.t
+	desc = can_dnc_r.611.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.611.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = large_decrease }
+		add_ai_strategy = { type = antagonize id = CAN value = 25 }
+		CAN = { add_war_support = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.611.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+	}
+	option = {
+		name = can_dnc_r.611.c
+		ai_chance = { base = 15 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_political_power = 25 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.612
+	title = can_dnc_r.612.t
+	desc = can_dnc_r.612.d
+	picture = GFX_report_event_canada_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.612.a
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_autonomy_ratio = { value = 0.02 localization = CANDNC_p2_a_power_in_our_own_right } }
+	}
+	option = {
+		name = can_dnc_r.612.b
+		ai_chance = { base = 40 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_timed_idea = { idea = CAN_r_whitehalls_cold_shoulder days = 365 } }
+	}
+	option = {
+		name = can_dnc_r.612.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_stability = -0.05 add_war_support = 0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.613
+	title = can_dnc_r.613.t
+	desc = can_dnc_r.613.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.613.a
+		ai_chance = { base = 35 }
+		add_resource = { type = coal amount = 3 state = 473 }
+		473 = { add_extra_state_shared_building_slots = 1 }
+		add_stability = 0.03
+	}
+	option = {
+		name = can_dnc_r.613.b
+		ai_chance = { base = 35 }
+		add_tech_bonus = { name = CANDNC_p2_conference_bonus bonus = 1.0 uses = 1 category = electronics }
+		add_political_power = 25
+	}
+	option = {
+		name = can_dnc_r.613.c
+		ai_chance = { base = 30 }
+		QIN = { add_opinion_modifier = { target = CAN modifier = large_increase } }
+		JAP = { add_opinion_modifier = { target = CAN modifier = small_increase } }
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = can_dnc_r.614
+	title = can_dnc_r.614.t
+	desc = can_dnc_r.614.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.614.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = large_increase }
+		CAN = { navy_experience = 25 add_war_support = 0.03 }
+	}
+	option = {
+		name = can_dnc_r.614.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { 471 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }
+	}
+	option = {
+		name = can_dnc_r.614.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { add_political_power = 25 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.615
+	title = can_dnc_r.615.t
+	desc = can_dnc_r.615.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.615.a
+		ai_chance = { base = 40 }
+		USA = { add_opinion_modifier = { target = CAN modifier = small_increase } }
+		add_war_support = -0.02
+		add_stability = 0.02
+	}
+	option = {
+		name = can_dnc_r.615.b
+		ai_chance = { base = 40 }
+		USA = { add_opinion_modifier = { target = CAN modifier = small_decrease } }
+		add_war_support = 0.03
+		army_experience = 10
+	}
+	option = {
+		name = can_dnc_r.615.c
+		ai_chance = { base = 20 }
+		ENG = { add_opinion_modifier = { target = CAN modifier = small_increase } }
+		add_political_power = -25
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = can_dnc_r.616
+	title = can_dnc_r.616.t
+	desc = can_dnc_r.616.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.616.a
+		ai_chance = { base = 45 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+	}
+	option = {
+		name = can_dnc_r.616.b
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = medium_decrease }
+		CAN = { add_timed_idea = { idea = CAN_r_the_tariff_bill days = 365 } }
+	}
+	option = {
+		name = can_dnc_r.616.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = small_increase }
+		CAN = { add_political_power = 50 add_stability = 0.02 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.617
+	title = can_dnc_r.617.t
+	desc = can_dnc_r.617.d
+	picture = GFX_report_event_canada_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.617.a
+		ai_chance = { base = 35 }
+		add_opinion_modifier = { target = CAN modifier = medium_increase }
+		CAN = { add_political_power = 50 modify_timed_idea = { idea = CAN_r_the_panhandle_cheque days = -180 } }
+	}
+	option = {
+		name = can_dnc_r.617.b
+		ai_chance = { base = 45 }
+
+	}
+	option = {
+		name = can_dnc_r.617.c
+		ai_chance = { base = 20 }
+		add_opinion_modifier = { target = CAN modifier = small_decrease }
+		CAN = { add_stability = -0.03 }
+	}
+}
+
+country_event = {
+	id = can_dnc_r.619
+	title = can_dnc_r.619.t
+	desc = can_dnc_r.619.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = can_dnc_r.619.a
+		ai_chance = { base = 60 }
+		add_stability = -0.03
+		add_autonomy_ratio = { value = 0.02 localization = CANDNC_p2_a_province_in_two_tongues }
+		JAP = { add_opinion_modifier = { target = CAN modifier = medium_increase } }
+	}
+	option = {
+		name = can_dnc_r.619.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_stability = 0.02
+		JAP = { add_opinion_modifier = { target = CAN modifier = small_decrease } }
+	}
+}

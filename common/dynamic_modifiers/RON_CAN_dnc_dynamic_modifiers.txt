@@ -1,0 +1,141 @@
+CAN_dnc_dominion_credit_modifier = {
+	icon = GFX_idea_generic_build_infrastructure
+	enable = { always = yes }
+	production_speed_infrastructure_factor = CAN_dnc_credit_infra
+	production_speed_buildings_factor = CAN_dnc_credit_buildings
+	consumer_goods_factor = CAN_dnc_credit_goods
+	political_power_factor = CAN_dnc_credit_pp
+}
+
+CAN_dnc_militia_modifier = {
+	icon = GFX_idea_generic_army_war_college
+	enable = { always = yes }
+	army_org_factor = CAN_dnc_militia_army_org_factor
+	training_time_factor = CAN_dnc_militia_training_time_factor
+	planning_speed = CAN_dnc_militia_planning_speed
+	max_planning_factor = CAN_dnc_militia_max_planning_factor
+	land_doctrine_cost_factor = CAN_dnc_militia_land_doctrine_cost_factor
+	army_core_defence_factor = CAN_dnc_militia_army_core_defence_factor
+	experience_gain_army_factor = CAN_dnc_militia_experience_gain_army_factor
+	mobilization_speed = CAN_dnc_militia_mobilization_speed
+	conscription = CAN_dnc_militia_conscription
+	max_dig_in_factor = CAN_dnc_militia_max_dig_in_factor
+	army_artillery_attack_factor = CAN_dnc_militia_army_artillery_attack_factor
+	supply_consumption_factor = CAN_dnc_militia_supply_consumption_factor
+}
+
+CAN_dnc_naval_service_modifier = {
+	icon = GFX_idea_generic_coastal_navy
+	enable = { always = yes }
+	navy_org_factor = CAN_dnc_naval_navy_org_factor
+	naval_coordination = CAN_dnc_naval_naval_coordination
+	experience_gain_navy_factor = CAN_dnc_naval_experience_gain_navy_factor
+	naval_doctrine_cost_factor = CAN_dnc_naval_naval_doctrine_cost_factor
+	production_speed_dockyard_factor = CAN_dnc_naval_production_speed_dockyard_factor
+	naval_hit_chance = CAN_dnc_naval_naval_hit_chance
+	screening_efficiency = CAN_dnc_naval_screening_efficiency
+	navy_max_range_factor = CAN_dnc_naval_navy_max_range_factor
+	naval_defense_factor = CAN_dnc_naval_naval_defense_factor
+	repair_speed_factor = CAN_dnc_naval_repair_speed_factor
+	naval_accidents_chance = CAN_dnc_naval_naval_accidents_chance
+}
+
+CAN_dnc_imperial_ledger = {
+	enable = { always = yes }
+	icon = GFX_idea_ENG_pax_britannica
+	trade_opinion_factor = CAN_dnc_imp_trade
+	political_power_factor = CAN_dnc_imp_pp
+	consumer_goods_factor = CAN_dnc_imp_goods
+	experience_gain_navy_factor = CAN_dnc_imp_navy
+}
+
+CAN_dnc_c_continental_market = {
+	enable = { always = yes }
+	icon = GFX_idea_free_trade
+	trade_opinion_factor = CAN_dnc_c_market_trade
+	industrial_capacity_factory = CAN_dnc_c_market_factory
+	local_resources_factor = CAN_dnc_c_market_resources
+	consumer_goods_factor = CAN_dnc_c_market_goods
+	political_power_factor = CAN_dnc_c_market_pp
+}
+
+CAN_dnc_continental_ledger = {
+	icon = GFX_idea_generic_foreign_capital
+	enable = { always = yes }
+	industrial_capacity_factory = CAN_dnc_ledger_icf
+	consumer_goods_factor = CAN_dnc_ledger_cg
+	political_power_factor = CAN_dnc_ledger_pp
+	trade_opinion_factor = CAN_dnc_ledger_trade
+}
+
+CAN_dnc_sovereign_standing = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_pp_unity_bonus
+	political_power_factor = CAN_dnc_sov_political_power_factor
+	stability_factor = CAN_dnc_sov_stability_factor
+	trade_opinion_factor = CAN_dnc_sov_trade_opinion_factor
+	production_speed_buildings_factor = CAN_dnc_sov_production_speed_buildings_factor
+	justify_war_goal_time = CAN_dnc_sov_justify_war_goal_time
+}
+
+CAN_dnc_fortress_modifier = {
+	icon = GFX_idea_generic_fortify_the_borders
+	enable = { always = yes }
+	army_core_defence_factor = CAN_dnc_fortress_defence
+	consumer_goods_factor = CAN_dnc_fortress_goods
+	industrial_capacity_factory = CAN_dnc_fortress_industry
+	trade_opinion_factor = CAN_dnc_fortress_trade
+}
+
+CAN_dnc_two_nations_modifier = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	stability_factor = CAN_dnc_fracture_stab
+	conscription_factor = CAN_dnc_fracture_cons
+	political_power_factor = CAN_dnc_anger_pp
+}
+
+CAN_r_dominion_economy = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_production_bonus
+	industrial_capacity_factory = CAN_dnc_eco_industrial_capacity_factory
+	production_speed_buildings_factor = CAN_dnc_eco_production_speed_buildings_factor
+	production_speed_infrastructure_factor = CAN_dnc_eco_production_speed_infrastructure_factor
+	consumer_goods_factor = CAN_dnc_eco_consumer_goods_factor
+	monthly_population = CAN_dnc_eco_monthly_population
+	research_speed_factor = CAN_dnc_eco_research_speed_factor
+	trade_opinion_factor = CAN_dnc_eco_trade_opinion_factor
+	political_power_factor = CAN_dnc_eco_political_power_factor
+	local_resources_factor = CAN_dnc_eco_local_resources_factor
+}
+
+CAN_r_canadian_aviation = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_air_bonus
+	experience_gain_air_factor = CAN_dnc_air_experience_gain_air_factor
+	air_accidents_factor = CAN_dnc_air_air_accidents_factor
+	production_speed_air_base_factor = CAN_dnc_air_production_speed_air_base_factor
+	air_doctrine_cost_factor = CAN_dnc_air_air_doctrine_cost_factor
+	air_training_xp_gain_factor = CAN_dnc_air_air_training_xp_gain_factor
+	air_manpower_requirement_factor = CAN_dnc_air_air_manpower_requirement_factor
+}
+
+CAN_dnc_pacific_commerce = {
+	icon = GFX_idea_free_trade
+	enable = { always = yes }
+	trade_opinion_factor = CAN_dnc_pacific_trade_opinion_factor
+	consumer_goods_factor = CAN_dnc_pacific_consumer_goods_factor
+	industrial_capacity_dockyard = CAN_dnc_pacific_industrial_capacity_dockyard
+	political_power_factor = CAN_dnc_pacific_political_power_factor
+	production_speed_buildings_factor = CAN_dnc_pacific_production_speed_buildings_factor
+}
+
+CAN_dnc_pacific_squadron = {
+	icon = GFX_idea_generic_coastal_navy
+	enable = { always = yes }
+	naval_defense_factor = CAN_dnc_squadron_naval_defense_factor
+	naval_hit_chance = CAN_dnc_squadron_naval_hit_chance
+	navy_max_range_factor = CAN_dnc_squadron_navy_max_range_factor
+	experience_gain_navy_factor = CAN_dnc_squadron_experience_gain_navy_factor
+	production_speed_dockyard_factor = CAN_dnc_squadron_production_speed_dockyard_factor
+}
