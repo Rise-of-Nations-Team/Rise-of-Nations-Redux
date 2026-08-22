@@ -2844,7 +2844,59 @@ focus_tree = {
 			}
 			hidden_effect = {
 				country_event = { id = auh_dnc.750 days = 3 }
-				add_ai_strategy = { type = building_target id = air_base value = 10 }
+				add_ai_strategy = { type = build_building id = air_base value = 10 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_air_the_dirigible_question
+		icon = GFX_focus_GER_graf_zeppelin
+		x = -1
+		y = 1
+		relative_position_id = AUHDNC_air_the_militar_aeronautische_anstalt
+		cost = 10
+		prerequisite = { focus = AUHDNC_air_the_militar_aeronautische_anstalt }
+		mutually_exclusive = { focus = AUHDNC_air_heavier_than_air }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 2 has_country_flag = AUH_dnc_path_sword }
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = AUH_air_the_aeronautical_establishment }
+				swap_ideas = { remove_idea = AUH_air_the_aeronautical_establishment add_idea = AUH_air_the_airship_service }
+			}
+			else = {
+				add_ideas = AUH_air_the_airship_service
+			}
+			add_tech_bonus = { name = AUHDNC_air_the_airship_programme_bonus bonus = 1.0 uses = 2 category = heavy_air }
+			add_tech_bonus = { name = AUHDNC_air_the_gondola_motor_bonus bonus = 1.0 uses = 1 category = air_equipment }
+			air_experience = 15
+			army_experience = 15
+			add_political_power = -25
+			set_country_flag = AUH_air_the_airship_road
+			set_country_flag = AUH_air_austro_daimler_aero_available
+			custom_effect_tooltip = AUH_air_austro_daimler_aero_tt
+			4 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			custom_effect_tooltip = AUH_air_modify_aviation_tt
+			add_to_variable = { AUH_dnc_air_air_range_factor = 0.10 tooltip = air_range_factor_tt }
+			add_to_variable = { AUH_dnc_air_recon_factor = 0.05 tooltip = recon_factor_tt }
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_sword }
+				add_command_power = 25
+				add_war_support = 0.03
+				custom_effect_tooltip = AUH_air_the_corps_wants_a_ship_tt
+			}
+			else = {
+				add_stability = 0.03
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_country_flag = AUH_air_the_taube_is_ours } }
+					country_event = { id = auh_dnc.757 days = 30 }
+				}
+				add_ai_strategy = { type = build_building id = air_base value = 10 }
 			}
 		}
 	}
@@ -2899,58 +2951,6 @@ focus_tree = {
 			}
 			else = {
 				add_stability = 0.02
-			}
-		}
-	}
-
-	focus = {
-		id = AUHDNC_air_the_dirigible_question
-		icon = GFX_focus_GER_graf_zeppelin
-		x = -1
-		y = 1
-		relative_position_id = AUHDNC_air_the_militar_aeronautische_anstalt
-		cost = 10
-		prerequisite = { focus = AUHDNC_air_the_militar_aeronautische_anstalt }
-		mutually_exclusive = { focus = AUHDNC_air_heavier_than_air }
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 2 has_country_flag = AUH_dnc_path_sword }
-		}
-		completion_reward = {
-			if = {
-				limit = { has_idea = AUH_air_the_aeronautical_establishment }
-				swap_ideas = { remove_idea = AUH_air_the_aeronautical_establishment add_idea = AUH_air_the_airship_service }
-			}
-			else = {
-				add_ideas = AUH_air_the_airship_service
-			}
-			add_tech_bonus = { name = AUHDNC_air_the_airship_programme_bonus bonus = 1.0 uses = 2 category = heavy_air }
-			add_tech_bonus = { name = AUHDNC_air_the_gondola_motor_bonus bonus = 1.0 uses = 1 category = air_equipment }
-			air_experience = 15
-			army_experience = 15
-			add_political_power = -25
-			set_country_flag = AUH_air_the_airship_road
-			set_country_flag = AUH_air_austro_daimler_aero_available
-			custom_effect_tooltip = AUH_air_austro_daimler_aero_tt
-			4 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
-			custom_effect_tooltip = AUH_air_modify_aviation_tt
-			add_to_variable = { AUH_dnc_air_air_range_factor = 0.10 tooltip = air_range_factor_tt }
-			add_to_variable = { AUH_dnc_air_recon_factor = 0.05 tooltip = recon_factor_tt }
-			if = {
-				limit = { has_country_flag = AUH_dnc_path_sword }
-				add_command_power = 25
-				add_war_support = 0.03
-				custom_effect_tooltip = AUH_air_the_corps_wants_a_ship_tt
-			}
-			else = {
-				add_stability = 0.03
-			}
-			hidden_effect = {
-				if = {
-					limit = { NOT = { has_country_flag = AUH_air_the_taube_is_ours } }
-					country_event = { id = auh_dnc.757 days = 30 }
-				}
-				add_ai_strategy = { type = building_target id = air_base value = 10 }
 			}
 		}
 	}
@@ -3030,7 +3030,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			4 = {
-				add_building_construction = { type = military_factory level = 1 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 				add_extra_state_shared_building_slots = 1
 			}
 			add_ideas = AUH_air_the_line_in_the_estimates
@@ -3065,7 +3065,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				country_event = { id = auh_dnc.754 days = 60 }
-				add_ai_strategy = { type = building_target id = air_base value = 15 }
+				add_ai_strategy = { type = build_building id = air_base value = 15 }
 			}
 		}
 	}
@@ -3234,7 +3234,7 @@ focus_tree = {
 			else = {
 				army_experience = 10
 			}
-			hidden_effect = { add_ai_strategy = { type = building_target id = air_base value = 20 } }
+			hidden_effect = { add_ai_strategy = { type = build_building id = air_base value = 20 } }
 		}
 	}
 
@@ -3359,7 +3359,7 @@ focus_tree = {
 			else = {
 				add_stability = 0.02
 			}
-			hidden_effect = { add_ai_strategy = { type = building_target id = air_base value = 20 } }
+			hidden_effect = { add_ai_strategy = { type = build_building id = air_base value = 20 } }
 		}
 	}
 
@@ -3441,7 +3441,7 @@ focus_tree = {
 				add_political_power = 25
 				army_experience = 10
 			}
-			hidden_effect = { add_ai_strategy = { type = building_target id = air_base value = 15 } }
+			hidden_effect = { add_ai_strategy = { type = build_building id = air_base value = 15 } }
 		}
 	}
 
@@ -3468,7 +3468,7 @@ focus_tree = {
 			air_experience = 25
 			army_experience = 15
 			885 = {
-				add_building_construction = { type = military_factory level = 1 instant_build = yes }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = AUH_air_modify_aviation_tt
@@ -3498,7 +3498,7 @@ focus_tree = {
 			else = {
 				add_war_support = 0.03
 			}
-			hidden_effect = { add_ai_strategy = { type = building_target id = air_base value = 10 } }
+			hidden_effect = { add_ai_strategy = { type = build_building id = air_base value = 10 } }
 		}
 	}
 
@@ -3538,7 +3538,7 @@ focus_tree = {
 				4 = { add_building_construction = { type = air_base level = 1 instant_build = yes } }
 				army_experience = 15
 			}
-			hidden_effect = { add_ai_strategy = { type = building_target id = air_base value = 10 } }
+			hidden_effect = { add_ai_strategy = { type = build_building id = air_base value = 10 } }
 		}
 	}
 
@@ -3635,7 +3635,7 @@ focus_tree = {
 			else = {
 				add_political_power = -25
 			}
-			hidden_effect = { add_ai_strategy = { type = building_target id = air_base value = 20 } }
+			hidden_effect = { add_ai_strategy = { type = build_building id = air_base value = 20 } }
 		}
 	}
 
@@ -3783,7 +3783,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				country_event = { id = auh_dnc.756 days = 5 }
-				add_ai_strategy = { type = building_target id = air_base value = 25 }
+				add_ai_strategy = { type = build_building id = air_base value = 25 }
 			}
 		}
 	}
@@ -4544,7 +4544,7 @@ focus_tree = {
 			army_experience = 25
 			add_command_power = 25
 			add_political_power = 50
-			set_technology = { tech_mountaineers = 1 }
+			set_technology = { mountaineers = 1 }
 			add_tech_bonus = { name = AUH_tb_the_mountain_establishment bonus = 1.0 uses = 1 category = mountaineers_tech }
 			add_ideas = AUH_arm_the_mountain_brigades
 			153 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
@@ -9281,7 +9281,6 @@ focus_tree = {
 			clamp_variable = { var = ROM_support min = 0 max = 100 }
 			custom_effect_tooltip = AUH_h_nat_ROM_down_tt
 			country_event = { id = auh_dnc.311 days = 30 }
-			add_ai_strategy = { type = area_priority id = europe value = 20 }
 		}
 	}
 
@@ -12844,7 +12843,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 			}
-			set_technology = { tech_mountaineers = 1 }
+			set_technology = { mountaineers = 1 }
 			add_tech_bonus = { name = AUH_m_the_passes_bonus bonus = 1.0 uses = 1 category = mountaineers_tech }
 			army_experience = 25
 			add_command_power = 25
@@ -15891,7 +15890,6 @@ focus_tree = {
 			add_stability = 0.05
 			add_ideas = AUH_r_a_thousand_small_lines
 			add_tech_bonus = { name = AUH_r_the_small_lines_bonus bonus = 1.0 uses = 1 category = construction_tech }
-			add_ai_strategy = { type = area_priority id = europe value = 20 }
 		}
 	}
 
