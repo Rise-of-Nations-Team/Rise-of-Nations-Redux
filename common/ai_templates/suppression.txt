@@ -42,7 +42,8 @@ suppression_generic = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_tech = armored_car1 }
+				NOT = { has_tech = dnc_armoured_car }
+				NOT = { has_tech = NSB_dnc_armoured_car }
 			}
 			modifier = {
 				factor = 0
@@ -65,7 +66,7 @@ suppression_generic = {
 
 		target_template = {
 			regiments = {
-				armored_car = 10
+				armoured_car_brigade = 10
 			}
 			support = {
 				military_police = 1

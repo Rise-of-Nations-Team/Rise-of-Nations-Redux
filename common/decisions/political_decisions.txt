@@ -1955,23 +1955,6 @@ political_actions = {
 
 		available = {
             fascism > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
-			if = {
-				limit = {
-					has_aat = yes 
-					original_tag = NOR 
-				}
-				NOT = { 
-					has_idea = NOR_anti_communist_sentiment_ns
-				}
-			}
         }
 	
 		modifier = {
@@ -2069,14 +2052,6 @@ political_actions = {
 
 		available = {
             democratic > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
         }
 	
 		modifier = {
@@ -2109,14 +2084,6 @@ political_actions = {
 
 		available = {
             communism > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
         }
 	
 		modifier = {
@@ -2170,14 +2137,6 @@ political_actions = {
 
 		available = {
             neutrality > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
         }
 	
 		modifier = {
@@ -2205,52 +2164,7 @@ political_actions = {
 		icon = generic_civil_support
 
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Graveyard of Empires"
-					original_tag = RAJ
-					has_idea = ENG_dominion_fascist_propaganda
-					
-				}
-			}
-			else = {
-				fascism < 0.2
-			}
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
-			IF = {
-				limit = {
-					has_aat = yes 
-					original_tag = NOR 
-				}
-				NOT = {
-					has_idea = NOR_anti_communist_sentiment_ns
-				}
-			}
-			IF = {
-				limit = {
-					has_dlc = "Trial of Allegiance"
-					original_tag = CHL
-				}
-				custom_trigger_tooltip = {
-					tooltip = CHL_can_not_have_anarchy_tt
-					NOT = {
-						OR = {
-							has_idea = idea_CHL_near_anarchic_society
-							has_idea = idea_CHL_near_anarchic_society_2
-							has_idea = idea_CHL_near_anarchic_society_3
-							has_idea = idea_CHL_near_anarchic_society_4
-						}
-					}
-				}
-			}
-
+			fascism < 0.2
 			if = {
 				limit = {
 					original_tag = RAJ
@@ -2317,12 +2231,6 @@ political_actions = {
 			remove_fascist_spirits_effect = yes
 			custom_effect_tooltip = ban_fascist_party_tt
 			add_stability = ban_ideology_var
-			if = {
-				limit = {
-					has_idea = ENG_dominion_fascist_propaganda
-				}
-				remove_ideas = ENG_dominion_fascist_propaganda
-			}
 		}
 
 		ai_will_do = {
@@ -2348,14 +2256,6 @@ political_actions = {
 
 		available = {
 			democratic < 0.2
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
 		}
 
 		visible = {
@@ -2427,31 +2327,6 @@ political_actions = {
 
 		available = {
 			communism < 0.2
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
-			IF = {
-				limit = {
-					has_dlc = "Trial of Allegiance"
-					original_tag = CHL
-				}
-				custom_trigger_tooltip = {
-					tooltip = CHL_can_not_have_anarchy_tt
-					NOT = {
-						OR = {
-							has_idea = idea_CHL_near_anarchic_society
-							has_idea = idea_CHL_near_anarchic_society_2
-							has_idea = idea_CHL_near_anarchic_society_3
-							has_idea = idea_CHL_near_anarchic_society_4
-						}
-					}
-				}
-			}
 		}
 
 		visible = {
@@ -2500,15 +2375,6 @@ political_actions = {
 					value = 0.66
 				}
 				set_country_flag = banned_communism_flag
-				if = {#NSB -> If country has Trotskyist Revolutionary Uprisings NS, swap it with the weakened version
-					limit = {
-						has_idea = SOV_trotskyist_revolutionary_agitation
-					}
-					swap_ideas = {
-						remove_idea = SOV_trotskyist_revolutionary_agitation
-						add_idea = SOV_trotskyist_revolutionary_agitation_weakened
-					}
-				}
 			}
 			remove_communist_spirits_effect = yes
 			custom_effect_tooltip = ban_communist_party_tt
@@ -2548,14 +2414,6 @@ political_actions = {
 
 		available = {
 			neutrality < 0.2
-			IF = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
 		}
 
 		remove_trigger = {
@@ -2604,14 +2462,6 @@ political_actions = {
 		available = {
 			if = {
 				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
-			if = {
-				limit = {
 					has_dlc = "Battle for the Bosporus"
 					original_tag = BUL
 				}
@@ -2658,14 +2508,6 @@ political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
 			if = {
 				limit = {
 					tag = TUR
@@ -2725,14 +2567,6 @@ political_actions = {
 		available = {
 			if = {
 				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
-			if = {
-				limit = {
 					original_tag = BUL
 					has_dlc = "Battle for the Bosporus"
 				}
@@ -2779,14 +2613,6 @@ political_actions = {
 		icon = generic_political_discourse
 
 		available = {
-			if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-					has_idea = SPR_political_violence
-				}
-			}
 			if = {
 				limit = {
 					tag = TUR

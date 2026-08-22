@@ -2618,7 +2618,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = "This will increase black anger"
 				add_to_variable = { blackanger = 15 }
-				clamp_variable = { blackanger = 100 }	
+				clamp_variable = { var = blackanger max = 100 }	
 
 			COL = {
 				country_event = {
@@ -5091,7 +5091,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			deamnd_increase_eco = yes
 			custom_effect_tooltip = "Party support will be changed in some states"
 			add_to_variable = { a369democratic_support = 10 }
 			custom_effect_tooltip = "Party support will be changed in some states"
@@ -5200,10 +5199,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			subtract_from_variable = { whiteanger = 15 }
-			clamp_variable = { whiteanger = 100 }		
+			clamp_variable = { var = whiteanger max = 100 }		
 			custom_effect_tooltip = "This will increase black anger"
 			add_to_variable = { blackanger = 15 }
-			clamp_variable = { blackanger = 100 }	
+			clamp_variable = { var = blackanger max = 100 }	
 			add_country_leader_trait = agricultural_modernizer
 		}
 	}
@@ -5938,7 +5937,7 @@ focus_tree = {
 			custom_effect_tooltip = "This will increase black anger"
 			add_to_variable = { blackanger = 90 }
 			custom_effect_tooltip = "This will cause massive shifts in black and white anger"
-			clamp_variable = { whiteanger = 100 }
+			clamp_variable = { var = whiteanger max = 100 }
 			remove_ideas = USA_jim_crow_laws
 			NMX = {
 				add_ideas = USA_jim_crow_laws
@@ -6078,7 +6077,7 @@ focus_tree = {
 			custom_effect_tooltip = "This will increase white anger"
 						custom_effect_tooltip = "This will increase white anger"
 			add_to_variable = { whiteanger = 10 }
-			clamp_variable = { whiteanger = 100 }
+			clamp_variable = { var = whiteanger max = 100 }
 
 		}
 	}
@@ -6126,7 +6125,7 @@ focus_tree = {
 		completion_reward = {
 						custom_effect_tooltip = "This will increase white anger"
 			add_to_variable = { whiteanger = 15 }
-			clamp_variable = { whiteanger = 100 }
+			clamp_variable = { var = whiteanger max = 100 }
 			USA_congress_small_support = yes			
 		}
 	}
@@ -6146,7 +6145,7 @@ focus_tree = {
 		completion_reward = {
 						custom_effect_tooltip = "This will increase white anger"
 			add_to_variable = { whiteanger = 15 }
-			clamp_variable = { whiteanger = 100 }
+			clamp_variable = { var = whiteanger max = 100 }
 			USA_congress_small_support = yes		
 			add_political_power = 10
 		}
@@ -6375,8 +6374,8 @@ focus_tree = {
 		    popularity = -.05
 		}					
 			swap_ideas = {
-				remove_idea = usa_segregation
-				add_idea = usa_segregation3
+				remove_idea = USA_jim_crow_laws
+				add_idea = USA_jim_crow_laws2
 			}
 					375 = {
 				add_extra_state_shared_building_slots = 2
@@ -6440,8 +6439,8 @@ custom_effect_tooltip = "Democratic Party support will be changed in SOUTHERN st
 		
 		completion_reward = {
 					swap_ideas = {
-				remove_idea = usa_segregation3
-				add_idea = usa_segregation4
+				remove_idea = USA_jim_crow_laws2
+				add_idea = USA_jim_crow_laws3
 			} 	
 			add_popularity = {
 		    ideology = democratic
@@ -7716,7 +7715,7 @@ remove_ideas = USA_the_two_party_system
 		
 		
 		completion_reward = { 
-			ENG_Rearmarment_Budget_level_up = yes
+			USA_rearmament_budget_level_up = yes
 		}
 	}
 ######################################
@@ -7949,7 +7948,7 @@ remove_ideas = USA_the_two_party_system
 		}
 		
 		completion_reward = { 
-			ENG_Rearmarment_Budget_level_up = yes
+			USA_rearmament_budget_level_up = yes
 		}
 	}
 
@@ -8166,7 +8165,7 @@ remove_ideas = USA_the_two_party_system
 		}
 		
 		completion_reward = { 
-			ENG_Rearmarment_Budget_level_up = yes
+			USA_rearmament_budget_level_up = yes
 		}
 	}
 
@@ -8553,7 +8552,7 @@ random_owned_state = {
 		}
 		
 		completion_reward = { 
-			ENG_Rearmarment_Budget_level_up = yes
+			USA_rearmament_budget_level_up = yes
 			add_tech_bonus = {
 				bonus = 1.2
 				uses = 3
@@ -8671,7 +8670,7 @@ random_owned_state = {
 		completion_reward = { 
 
 		add_political_power = 10
-			ENG_Rearmarment_Budget_level_up = yes
+			USA_rearmament_budget_level_up = yes
 		}
 	}
 
