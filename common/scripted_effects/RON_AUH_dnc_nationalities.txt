@@ -1,0 +1,154 @@
+# Austria-Hungary : one register, twelve columns.
+# Under 35 a people is restless and the Crown's title over its provinces lapses in law.
+# Under 20 the provinces will not answer the levy. Under 5 they rise.
+
+# A concession moves one column of the register.
+AUH_nat_concede = {
+	add_to_variable = { var = $NAT$_support value = $AMOUNT$ }
+	clamp_variable = { var = $NAT$_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_$NAT$_up_tt
+}
+
+# Monthly drift. Grievance feeds itself, a quiet realm recovers, contentment is not free.
+AUH_nat_drift = {
+	if = {
+		limit = { check_variable = { var = $NAT$_support value = 35 compare = less_than } }
+		subtract_from_variable = { var = $NAT$_support value = 1 }
+		custom_effect_tooltip = AUH_nat_$NAT$_down_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = $NAT$_support value = 50 compare = less_than }
+			has_stability > 0.7
+		}
+		add_to_variable = { var = $NAT$_support value = 1 }
+		custom_effect_tooltip = AUH_nat_$NAT$_up_tt
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = $NAT$_support value = 70 compare = greater_than }
+			has_stability < 0.6
+		}
+		subtract_from_variable = { var = $NAT$_support value = 1 }
+		custom_effect_tooltip = AUH_nat_$NAT$_down_tt
+	}
+	clamp_variable = { var = $NAT$_support min = 0 max = 100 }
+}
+
+# Clear the band a province was last counted in.
+AUH_nat_state_clear = {
+	if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+	if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+	if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } remove_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+}
+
+# The three thresholds read for one people.
+# A province cored by two peoples answers to whichever column is read last.
+AUH_nat_thresholds = {
+	every_owned_state = {
+		limit = { is_core_of = $NAT$ }
+		AUH_nat_state_clear = yes
+		if = {
+			limit = { owner = { check_variable = { var = $NAT$_support value = 5 compare = less_than } } }
+			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			set_compliance = 0
+			add_resistance = 20
+		}
+		else_if = {
+			limit = { owner = { check_variable = { var = $NAT$_support value = 20 compare = less_than } } }
+			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			set_compliance = 0
+		}
+		else_if = {
+			limit = { owner = { check_variable = { var = $NAT$_support value = 35 compare = less_than } } }
+			add_dynamic_modifier = { modifier = AUH_nat_restless }
+		}
+	}
+	if = {
+		limit = { check_variable = { var = $NAT$_support value = 35 compare = less_than } }
+		every_owned_state = {
+			limit = { is_core_of = $NAT$ is_core_of = AUH }
+			remove_core_of = AUH
+			set_state_flag = AUH_nat_title_lapsed
+		}
+	}
+	else = {
+		every_owned_state = {
+			limit = { is_core_of = $NAT$ has_state_flag = AUH_nat_title_lapsed }
+			add_core_of = AUH
+			clr_state_flag = AUH_nat_title_lapsed
+		}
+	}
+}
+
+# One column counted against the threshold of restlessness.
+AUH_nat_count = {
+	if = {
+		limit = { check_variable = { var = $NAT$_support value = 35 compare = less_than } }
+		add_to_variable = { AUH_nat_restless_count = 1 }
+	}
+}
+
+# What the whole register costs the Crown this month.
+AUH_nat_reckoning = {
+	set_variable = { AUH_nat_restless_count = 0 }
+	AUH_nat_count = { NAT = AUS }
+	AUH_nat_count = { NAT = HUN }
+	AUH_nat_count = { NAT = CZE }
+	AUH_nat_count = { NAT = POL }
+	AUH_nat_count = { NAT = UKR }
+	AUH_nat_count = { NAT = ROM }
+	AUH_nat_count = { NAT = CRO }
+	AUH_nat_count = { NAT = SER }
+	AUH_nat_count = { NAT = BOS }
+	AUH_nat_count = { NAT = SLV }
+	AUH_nat_count = { NAT = ITA }
+	AUH_nat_count = { NAT = SLO }
+	set_variable = { AUH_nat_strain_stability = AUH_nat_restless_count }
+	multiply_variable = { AUH_nat_strain_stability = -0.03 }
+	set_variable = { AUH_nat_strain_pp = AUH_nat_restless_count }
+	multiply_variable = { AUH_nat_strain_pp = -0.02 }
+	if = {
+		limit = {
+			check_variable = { var = AUH_nat_restless_count value = 1 compare = greater_than_or_equals }
+			NOT = { has_dynamic_modifier = { modifier = AUH_nat_the_register_strained } }
+		}
+		add_dynamic_modifier = { modifier = AUH_nat_the_register_strained }
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = AUH_nat_restless_count value = 1 compare = less_than }
+			has_dynamic_modifier = { modifier = AUH_nat_the_register_strained }
+		}
+		remove_dynamic_modifier = { modifier = AUH_nat_the_register_strained }
+	}
+}
+
+# The register is read once a month. Bohemia is read before the Uplands.
+AUH_nat_monthly = {
+	AUH_nat_drift = { NAT = AUS }
+	AUH_nat_drift = { NAT = HUN }
+	AUH_nat_drift = { NAT = CZE }
+	AUH_nat_drift = { NAT = POL }
+	AUH_nat_drift = { NAT = UKR }
+	AUH_nat_drift = { NAT = ROM }
+	AUH_nat_drift = { NAT = CRO }
+	AUH_nat_drift = { NAT = SER }
+	AUH_nat_drift = { NAT = BOS }
+	AUH_nat_drift = { NAT = SLV }
+	AUH_nat_drift = { NAT = ITA }
+	AUH_nat_drift = { NAT = SLO }
+	AUH_nat_thresholds = { NAT = AUS }
+	AUH_nat_thresholds = { NAT = HUN }
+	AUH_nat_thresholds = { NAT = CZE }
+	AUH_nat_thresholds = { NAT = POL }
+	AUH_nat_thresholds = { NAT = UKR }
+	AUH_nat_thresholds = { NAT = ROM }
+	AUH_nat_thresholds = { NAT = CRO }
+	AUH_nat_thresholds = { NAT = SER }
+	AUH_nat_thresholds = { NAT = BOS }
+	AUH_nat_thresholds = { NAT = SLV }
+	AUH_nat_thresholds = { NAT = ITA }
+	AUH_nat_thresholds = { NAT = SLO }
+	AUH_nat_reckoning = yes
+}

@@ -48,13 +48,70 @@ set_variable = {
 	UKR_support = 50
 }
 set_variable = {
-	SER_support = 15
+	SER_support = 25
 }
 set_variable = {
 	SLV_support = 47
 }
 set_variable = {
 	ROM_support = 55
+}
+set_variable = {
+	SLO_support = 35
+}
+set_variable = {
+	ITA_support = 40
+}
+
+# The Ausgleich engine
+if = {
+	limit = {
+		has_start_date < 1910.01.01
+	}
+	set_country_flag = AUH_dnc_ausgleich_open
+	set_variable = {
+		AUH_gemeinsamkeit = 30
+	}
+	set_variable = {
+		AUH_quote = 34
+	}
+	set_variable = {
+		AUH_months_to_renewal = 48
+	}
+	set_variable = {
+		AUH_ausgleich_months = 48
+	}
+	set_variable = {
+		AUH_ausgleich_clock_seen = 48
+	}
+	set_variable = {
+		AUH_ausgleich_tier = 2
+	}
+	set_variable = {
+		AUH_renewal_window = 0
+	}
+	set_variable = {
+		AUH_renewal_armed = 1
+	}
+	set_variable = {
+		AUH_renewal_cost = 102
+	}
+	set_variable = {
+		AUH_renewal_odds = 55
+	}
+	set_variable = {
+		AUH_missed_renewals = 0
+	}
+	set_variable = {
+		AUH_ceiling_months = 0
+	}
+	set_variable = {
+		AUH_next_term = 120
+	}
+	set_variable = {
+		AUH_bill_carried = 0
+	}
+	add_ideas = AUH_dnc_the_hungarian_bargain
 }
 
 set_stability = 0.5

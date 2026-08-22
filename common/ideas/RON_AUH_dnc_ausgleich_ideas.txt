@@ -1,0 +1,132 @@
+################################################################################
+# AUSTRIA-HUNGARY - THE AUSGLEICH
+################################################################################
+# Five tiers, swapped by AUH_dnc_wear_the_settlement, plus what a failure leaves
+
+ideas = {
+	country = {
+
+		# Tier 1 - the Community under 20
+		AUH_dnc_the_personal_union = {
+			picture = generic_local_self_management
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.20
+				stability_factor = 0.10
+				conscription_factor = -0.25
+				army_org_factor = -0.10
+				justify_war_goal_time = 0.50
+				production_speed_industrial_complex_factor = -0.10
+			}
+		}
+
+		# Tier 2 - the Community 20 to 39
+		AUH_dnc_the_hungarian_bargain = {
+			picture = generic_agrarian_society
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				conscription_factor = -0.10
+				army_org_factor = -0.05
+				supply_consumption_factor = -0.05
+				production_speed_dockyard_factor = -0.25
+			}
+		}
+
+		# Tier 3 - the Community 40 to 59
+		AUH_dnc_the_two_parliaments = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.10
+				trade_opinion_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		# Tier 4 - the Community 60 to 79
+		AUH_dnc_the_indivisible_army = {
+			picture = generic_army_problems
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.05
+				conscription_factor = 0.10
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		# Tier 5 - the Community 80 and over
+		AUH_dnc_the_einheitsreich = {
+			picture = generic_political_support
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.15
+				war_support_factor = 0.05
+				conscription_factor = 0.20
+				army_morale_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		# Left by a renewal that failed
+		AUH_dnc_the_provisorium = {
+			picture = chi_hyper_inflation
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		# The customs union given up with the settlement
+		AUH_dnc_two_customs_territories = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				consumer_goods_factor = 0.10
+				local_resources_factor = -0.05
+				production_speed_industrial_complex_factor = -0.10
+				political_power_factor = -0.05
+			}
+		}
+
+		# The counties on strike
+		AUH_dnc_hungarian_national_resistance = {
+			picture = generic_purge
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.30
+				stability_factor = -0.10
+				conscription_factor = -0.20
+				army_morale_factor = -0.05
+			}
+		}
+
+	}
+}
