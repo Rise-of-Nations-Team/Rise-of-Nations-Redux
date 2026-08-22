@@ -353,14 +353,7 @@ AUH_franz_koritschoner={
 			logistics_skill=3
 			legacy_id=3004
 			visible = {
-				NOT = {
-					has_government = communism 
-					HUN = {
-						has_country_leader = {
-							character = HUN_joseph_august
-						}
-					}	
-				}
+				NOT = { has_government = communism }
 			}
 		}
 	}
@@ -1007,30 +1000,7 @@ AUH_franz_koritschoner={
 			maneuvering_skill=2
 			coordination_skill=4
 			visible = {
-				NOT = {
-					has_government = communism
-					date > 1933.4.7
-				}
-				if = {
-					limit = {
-						tag = POL
-					}
-					has_country_leader = {
-						character = POL_karol_stefan_i
-					}
-				}
-				else_if = {
-					limit = {
-						country_exists = POL
-					}
-					NOT = {
-						POL = {
-							has_country_leader = {
-								character = POL_karol_stefan_i
-							}
-						}
-					}
-				}
+				NOT = { has_government = communism }
 			}
 		}
 	}
