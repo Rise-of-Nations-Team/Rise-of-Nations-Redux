@@ -7,20 +7,6 @@ ideas = {
 		AUH_witkowitz = {
 			picture = generic_industrial_concern_1
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_arm_witkowitz_unlocked
-					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
-					has_completed_focus = AUHDNC_arm_the_gun_steel_programme
-					has_completed_focus = AUHDNC_nav_the_erzherzog_karl_class
-					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_arm_witkowitz_unlocked
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { industry = 0.10 naval_armor = 0.05 }
@@ -35,9 +21,6 @@ ideas = {
 		AUH_poldi_huette = {
 			picture = generic_industrial_concern_2
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
-			}
 			available = {
 				always = yes
 			}
@@ -52,12 +35,6 @@ ideas = {
 		AUH_boehler = {
 			picture = generic_industrial_concern_3
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
-					has_completed_focus = AUHDNC_arm_the_artillery_question
-				}
-			}
 			available = {
 				OR = {
 				}
@@ -76,12 +53,6 @@ ideas = {
 		AUH_alpine_montan = {
 			picture = generic_exploit_mines
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
-					has_completed_focus = AUHDNC_eco_the_coal_comes_first
-				}
-			}
 			available = {
 				OR = {
 				}
@@ -97,13 +68,6 @@ ideas = {
 		AUH_ostrava_karvina = {
 			picture = generic_energy_concern
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
-					has_completed_focus = AUHDNC_eco_the_coal_comes_first
-					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
-				}
-			}
 			available = {
 				OR = {
 				}
@@ -119,12 +83,6 @@ ideas = {
 		AUH_bruex_lignite = {
 			picture = generic_industrial_concern_1
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_coal_comes_first
-					has_completed_focus = AUHDNC_r_the_coal_of_the_kingdom
-				}
-			}
 			available = {
 				OR = {
 				}
@@ -140,12 +98,6 @@ ideas = {
 		AUH_carpathian_field = {
 			picture = generic_refining_concern_1
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_capital_stays_at_home
-					has_completed_focus = AUHDNC_r_the_oil_of_boryslaw
-				}
-			}
 			available = {
 				OR = {
 				}
@@ -161,19 +113,6 @@ ideas = {
 		AUH_ganz = {
 			picture = generic_electronics_concern_1
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_current_of_the_mountains
-					has_country_flag = AUH_h_company_ganz_electric
-					has_country_flag = AUH_h_company_ganz_traction
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_h_company_ganz_electric
-					has_country_flag = AUH_h_company_ganz_traction
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { electronics = 0.10 construction_tech = 0.05 }
@@ -185,9 +124,6 @@ ideas = {
 		AUH_laurin_klement = {
 			picture = generic_motorized_equipment_manufacturer_1
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_eco_the_new_engineering
-			}
 			available = {
 				always = yes
 			}
@@ -202,9 +138,6 @@ ideas = {
 		AUH_nesselsdorfer = {
 			picture = generic_railroads
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_eco_the_new_engineering
-			}
 			available = {
 				always = yes
 			}
@@ -222,9 +155,6 @@ ideas = {
 		AUH_puch = {
 			picture = generic_motorized_equipment_manufacturer_2
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_eco_the_new_engineering
-			}
 			available = {
 				always = yes
 			}
@@ -239,9 +169,6 @@ ideas = {
 		AUH_oesterreichischer_lloyd = {
 			picture = generic_convoys
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_nav_the_austrian_lloyd
-			}
 			available = {
 				always = yes
 			}
@@ -259,19 +186,6 @@ ideas = {
 		AUH_oesterreichisch_ungarische_bank = {
 			picture = generic_foreign_capital
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_a_company_common_bank
-					has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals
-					has_completed_focus = AUHDNC_a_the_charter_of_the_common_bank
-					has_completed_focus = AUHDNC_r_the_bank_stays_common
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_a_company_common_bank
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { industry = 0.05 }
@@ -283,9 +197,6 @@ ideas = {
 		AUH_creditanstalt = {
 			picture = generic_economic_increase
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
-			}
 			available = {
 				always = yes
 			}
@@ -300,12 +211,6 @@ ideas = {
 		AUH_pesti_kereskedelmi = {
 			picture = generic_economic_recovery
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
-					has_completed_focus = AUHDNC_h_a_bank_of_our_own
-				}
-			}
 			available = {
 				OR = {
 				}
@@ -321,18 +226,6 @@ ideas = {
 		AUH_state_ironworks = {
 			picture = generic_improved_industries
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_h_company_upland_ironworks
-					has_completed_focus = AUHDNC_eco_the_works_of_the_two_halves
-					has_completed_focus = AUHDNC_h_the_iron_of_the_state_works
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_h_company_upland_ironworks
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { industry = 0.05 construction_tech = 0.05 }
@@ -350,20 +243,6 @@ ideas = {
 		AUH_skoda = {
 			picture = generic_artillery_manufacturer_1
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_arm_skoda_unlocked
-					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
-					has_completed_focus = AUHDNC_arm_the_gun_steel_programme
-					has_completed_focus = AUHDNC_r_the_clubs_of_bohemia
-					has_completed_focus = AUHDNC_m_the_siege_train_at_pilsen
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_arm_skoda_unlocked
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { artillery = 0.12 }
@@ -379,17 +258,6 @@ ideas = {
 		AUH_artilleriearsenal_wien = {
 			picture = generic_artillery_manufacturer_2
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_arm_artilleriearsenal_wien_unlocked
-					has_completed_focus = AUHDNC_arm_the_bronze_barrel
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_arm_artilleriearsenal_wien_unlocked
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { artillery = 0.08 }
@@ -404,20 +272,6 @@ ideas = {
 		AUH_steyr_oewg = {
 			picture = generic_infantry_equipment_manufacturer_1
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_arm_steyr_oewg_unlocked
-					has_completed_focus = AUHDNC_arm_the_mannlicher_standard
-					has_completed_focus = AUHDNC_arm_the_schwarzlose_machine_gun
-					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
-					has_completed_focus = AUHDNC_m_the_mannlicher_and_the_schwarzlose
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_arm_steyr_oewg_unlocked
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { infantry_weapons = 0.10 }
@@ -432,18 +286,6 @@ ideas = {
 		AUH_weiss_manfred = {
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_weiss_manfred_unlocked
-					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
-					has_completed_focus = AUHDNC_h_the_gun_works_of_the_capital
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_weiss_manfred_unlocked
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { support_tech = 0.08 infantry_weapons = 0.05 }
@@ -488,18 +330,6 @@ ideas = {
 		AUH_austro_daimler = {
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_country_flag = AUH_air_austro_daimler_aero_available
-					has_completed_focus = AUHDNC_eco_the_new_engineering
-					has_completed_focus = AUHDNC_m_the_motor_column_and_the_traction_train
-				}
-			}
-			available = {
-				OR = {
-					has_country_flag = AUH_air_austro_daimler_aero_available
-				}
-			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { motorized_equipment = 0.10 }
@@ -520,9 +350,6 @@ ideas = {
 		AUH_stabilimento_tecnico_triestino = {
 			picture = generic_naval_manufacturer_1
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_nav_the_kuk_kriegsmarine
-			}
 			available = {
 				always = yes
 			}
@@ -540,9 +367,6 @@ ideas = {
 		AUH_seearsenal_pola = {
 			picture = generic_naval_manufacturer_2
 			allowed = { original_tag = AUH }
-			visible = {
-				has_completed_focus = AUHDNC_nav_the_arsenal_at_pola
-			}
 			available = {
 				always = yes
 			}
@@ -592,12 +416,6 @@ ideas = {
 		AUH_whitehead_fiume = {
 			picture = generic_navy_submarines
 			allowed = { original_tag = AUH }
-			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_nav_the_whitehead_works
-					has_completed_focus = AUHDNC_m_the_school_of_the_coast
-				}
-			}
 			available = {
 				OR = {
 				}
