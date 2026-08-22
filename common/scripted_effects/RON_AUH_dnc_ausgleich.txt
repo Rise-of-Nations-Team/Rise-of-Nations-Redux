@@ -18,7 +18,7 @@ AUH_dnc_ausgleich_clamp = {
 }
 
 # Wears one settlement spirit and only one
-AUH_dnc_wear_the_settlement = {
+AUH_dnc_wear_AUH_dnc_the_personal_union = {
 	if = {
 		limit = { has_idea = AUH_dnc_the_personal_union }
 		remove_ideas = AUH_dnc_the_personal_union
@@ -39,7 +39,103 @@ AUH_dnc_wear_the_settlement = {
 		limit = { has_idea = AUH_dnc_the_einheitsreich }
 		remove_ideas = AUH_dnc_the_einheitsreich
 	}
-	add_ideas = $SPIRIT$
+	add_ideas = AUH_dnc_the_personal_union
+}
+
+AUH_dnc_wear_AUH_dnc_the_hungarian_bargain = {
+	if = {
+		limit = { has_idea = AUH_dnc_the_personal_union }
+		remove_ideas = AUH_dnc_the_personal_union
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_hungarian_bargain }
+		remove_ideas = AUH_dnc_the_hungarian_bargain
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_two_parliaments }
+		remove_ideas = AUH_dnc_the_two_parliaments
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_indivisible_army }
+		remove_ideas = AUH_dnc_the_indivisible_army
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_einheitsreich }
+		remove_ideas = AUH_dnc_the_einheitsreich
+	}
+	add_ideas = AUH_dnc_the_hungarian_bargain
+}
+
+AUH_dnc_wear_AUH_dnc_the_two_parliaments = {
+	if = {
+		limit = { has_idea = AUH_dnc_the_personal_union }
+		remove_ideas = AUH_dnc_the_personal_union
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_hungarian_bargain }
+		remove_ideas = AUH_dnc_the_hungarian_bargain
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_two_parliaments }
+		remove_ideas = AUH_dnc_the_two_parliaments
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_indivisible_army }
+		remove_ideas = AUH_dnc_the_indivisible_army
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_einheitsreich }
+		remove_ideas = AUH_dnc_the_einheitsreich
+	}
+	add_ideas = AUH_dnc_the_two_parliaments
+}
+
+AUH_dnc_wear_AUH_dnc_the_indivisible_army = {
+	if = {
+		limit = { has_idea = AUH_dnc_the_personal_union }
+		remove_ideas = AUH_dnc_the_personal_union
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_hungarian_bargain }
+		remove_ideas = AUH_dnc_the_hungarian_bargain
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_two_parliaments }
+		remove_ideas = AUH_dnc_the_two_parliaments
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_indivisible_army }
+		remove_ideas = AUH_dnc_the_indivisible_army
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_einheitsreich }
+		remove_ideas = AUH_dnc_the_einheitsreich
+	}
+	add_ideas = AUH_dnc_the_indivisible_army
+}
+
+AUH_dnc_wear_AUH_dnc_the_einheitsreich = {
+	if = {
+		limit = { has_idea = AUH_dnc_the_personal_union }
+		remove_ideas = AUH_dnc_the_personal_union
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_hungarian_bargain }
+		remove_ideas = AUH_dnc_the_hungarian_bargain
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_two_parliaments }
+		remove_ideas = AUH_dnc_the_two_parliaments
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_indivisible_army }
+		remove_ideas = AUH_dnc_the_indivisible_army
+	}
+	if = {
+		limit = { has_idea = AUH_dnc_the_einheitsreich }
+		remove_ideas = AUH_dnc_the_einheitsreich
+	}
+	add_ideas = AUH_dnc_the_einheitsreich
 }
 
 # Reads the Community off and puts on the spirit it calls for
@@ -70,22 +166,22 @@ AUH_dnc_refresh_the_settlement = {
 
 		if = {
 			limit = { check_variable = { var = AUH_ausgleich_tier value = 5 compare = equals } }
-			AUH_dnc_wear_the_settlement = { SPIRIT = AUH_dnc_the_einheitsreich }
+			AUH_dnc_wear_AUH_dnc_the_einheitsreich = yes
 		}
 		else_if = {
 			limit = { check_variable = { var = AUH_ausgleich_tier value = 4 compare = equals } }
-			AUH_dnc_wear_the_settlement = { SPIRIT = AUH_dnc_the_indivisible_army }
+			AUH_dnc_wear_AUH_dnc_the_indivisible_army = yes
 		}
 		else_if = {
 			limit = { check_variable = { var = AUH_ausgleich_tier value = 3 compare = equals } }
-			AUH_dnc_wear_the_settlement = { SPIRIT = AUH_dnc_the_two_parliaments }
+			AUH_dnc_wear_AUH_dnc_the_two_parliaments = yes
 		}
 		else_if = {
 			limit = { check_variable = { var = AUH_ausgleich_tier value = 2 compare = equals } }
-			AUH_dnc_wear_the_settlement = { SPIRIT = AUH_dnc_the_hungarian_bargain }
+			AUH_dnc_wear_AUH_dnc_the_hungarian_bargain = yes
 		}
 		else = {
-			AUH_dnc_wear_the_settlement = { SPIRIT = AUH_dnc_the_personal_union }
+			AUH_dnc_wear_AUH_dnc_the_personal_union = yes
 		}
 	}
 }
@@ -146,6 +242,11 @@ AUH_dnc_ausgleich_monthly = {
 		if = {
 			limit = { check_variable = { var = AUH_months_to_renewal value = 1 compare = less_than } }
 			set_variable = { AUH_months_to_renewal = 48 }
+			# the tree parks the Community alongside the clock; what the halves hold in common survives the question being re-posed
+			if = {
+				limit = { check_variable = { var = AUH_gemeinsamkeit value = 1 compare = less_than } }
+				set_variable = { AUH_gemeinsamkeit = 30 }
+			}
 		}
 		set_variable = { AUH_renewal_window = 0 }
 		set_variable = { AUH_renewal_armed = 1 }
@@ -221,7 +322,10 @@ AUH_dnc_ausgleich_watch = {
 		limit = {
 			NOT = { has_country_flag = AUH_dnc_floor_crisis }
 			NOT = { has_country_flag = AUH_dnc_union_dissolved }
-			check_variable = { var = AUH_missed_renewals value = 2 compare = greater_than_or_equals }
+			OR = {
+				check_variable = { var = AUH_missed_renewals value = 2 compare = greater_than_or_equals }
+				check_variable = { var = AUH_gemeinsamkeit value = 8 compare = less_than }
+			}
 		}
 		set_country_flag = AUH_dnc_floor_crisis
 		country_event = { id = auh_ausgleich.4 hours = 6 }
@@ -230,6 +334,7 @@ AUH_dnc_ausgleich_watch = {
 		limit = {
 			has_country_flag = AUH_dnc_floor_crisis
 			check_variable = { var = AUH_missed_renewals value = 1 compare = less_than }
+			check_variable = { var = AUH_gemeinsamkeit value = 20 compare = greater_than_or_equals }
 		}
 		clr_country_flag = AUH_dnc_floor_crisis
 	}

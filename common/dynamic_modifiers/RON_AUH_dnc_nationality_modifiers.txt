@@ -16,7 +16,7 @@ AUH_nat_refuses_the_levy = {
 }
 
 AUH_nat_in_revolt = {
-	icon = GFX_idea_generic_civil_support
+	icon = GFX_idea_generic_oppression
 
 	local_manpower = -0.75
 	local_building_slots_factor = -0.35
@@ -25,10 +25,11 @@ AUH_nat_in_revolt = {
 	compliance_growth = -0.50
 }
 
+# Scales with the number of columns standing below the line.
 AUH_nat_the_register_strained = {
 	icon = GFX_idea_generic_disjointed_gov
 
-	political_power_factor = -0.10
-	stability_factor = -0.05
-	conscription_factor = -0.10
+	political_power_factor = AUH_nat_strain_pp
+	stability_factor = AUH_nat_strain_stability
+	conscription_factor = AUH_nat_strain_conscription
 }
