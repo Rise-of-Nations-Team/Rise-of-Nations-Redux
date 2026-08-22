@@ -1209,6 +1209,15 @@ characters = {
 			traits = { navy_chief_maneuver_1 }
 			ai_will_do = { factor = 2 }
 		}
+		navy_leader = {
+			traits = { old_guard_navy navy_career_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = { NOT = { has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm } }
+		}
 	}
 
 	# Commander of the aeronautical establishment
@@ -1377,6 +1386,108 @@ characters = {
 		}
 	}
 
+
+	# Director of the war archive
+	AUH_emil_von_woinovich = {
+		name = AUH_emil_von_woinovich
+		portraits = {
+			army = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_20.dds"
+				small = "GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = AUH_emil_von_woinovich
+			ledger = army
+			allowed = { original_tag = AUH }
+			visible = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			available = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			cost = 100
+			traits = { military_theorist }
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	# Motor man of the army airship
+	AUH_ferdinand_porsche = {
+		name = AUH_ferdinand_porsche
+		portraits = {
+			air = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				small = "GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = AUH_ferdinand_porsche
+			ledger = air
+			allowed = { original_tag = AUH }
+			visible = { OR = { has_completed_focus = AUHDNC_air_the_dirigible_question has_completed_focus = AUHDNC_air_the_airship_of_the_army } }
+			available = { OR = { has_completed_focus = AUHDNC_air_the_dirigible_question has_completed_focus = AUHDNC_air_the_airship_of_the_army } }
+			cost = 150
+			traits = { talented_engineer }
+			research_bonus = {
+				air_equipment = 0.05
+				motorized_equipment = 0.05
+			}
+			ai_will_do = { factor = 3 }
+		}
+	}
+
+	# Austrian builder of the Paris school
+	AUH_alfred_von_pischof = {
+		name = AUH_alfred_von_pischof
+		portraits = {
+			air = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				small = "GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = AUH_alfred_von_pischof
+			ledger = air
+			allowed = { original_tag = AUH }
+			visible = { has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt }
+			available = { has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt }
+			cost = 100
+			traits = { air_warfare_theorist }
+			research_bonus = {
+				air_equipment = 0.05
+			}
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	# Publicist of the aeronautical question
+	AUH_hermann_hoernes = {
+		name = AUH_hermann_hoernes
+		portraits = {
+			air = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				small = "GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = AUH_hermann_hoernes
+			ledger = air
+			allowed = { original_tag = AUH }
+			visible = { has_completed_focus = AUHDNC_air_the_aero_club }
+			available = { has_completed_focus = AUHDNC_air_the_aero_club }
+			cost = 100
+			traits = { air_warfare_theorist }
+			research_bonus = {
+				air_doctrine = 0.05
+			}
+			ai_will_do = { factor = 2 }
+		}
+	}
+
 	### Commanders of the DNC era
 
 	# Commander in chief of the Honved
@@ -1479,6 +1590,20 @@ characters = {
 				small = "GFX_idea_generic_army_europe_2"
 			}
 		}
+		advisor = {
+			slot = theorist
+			idea_token = AUH_gustav_ratzenhofer
+			ledger = army
+			allowed = { original_tag = AUH }
+			visible = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			available = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			cost = 100
+			traits = { military_theorist }
+			research_bonus = {
+				land_doctrine = 0.04
+			}
+			ai_will_do = { factor = 2 }
+		}
 		corps_commander = {
 			traits = { old_guard skilled_staffer }
 			skill = 2
@@ -1532,4 +1657,37 @@ characters = {
 		}
 	}
 
+	# Writer on the fleet question
+	AUH_alfred_von_koudelka = {
+		name = AUH_alfred_von_koudelka
+		portraits = {
+			navy = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+				small = "GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = AUH_alfred_von_koudelka
+			ledger = navy
+			allowed = { original_tag = AUH }
+			visible = { OR = { has_completed_focus = AUHDNC_nav_the_flottenverein has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office } }
+			available = { OR = { has_completed_focus = AUHDNC_nav_the_flottenverein has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office } }
+			cost = 100
+			traits = { naval_theorist }
+			research_bonus = {
+				naval_doctrine = 0.05
+			}
+			ai_will_do = { factor = 2 }
+		}
+		navy_leader = {
+			traits = { navy_career_officer blue_water_expert }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			visible = { has_completed_focus = AUHDNC_nav_the_flottenverein }
+		}
+	}
 }

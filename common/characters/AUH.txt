@@ -118,19 +118,7 @@ characters={
 		}
 	}
 
-	AUH_adolf_hitler={
-		name=GER_adolf_hitler
-		portraits={
-			civilian={
-				large="gfx/leaders/AUH/WW1/Fascist_Young_Hitler.dds"
-			}
-		}
-		country_leader={
-			ideology=nazism
-		}
-	}
-
-	AUH_franz_koritschoner={
+AUH_franz_koritschoner={
 		name=AUH_franz_koritschoner
 		portraits={
 			civilian={
@@ -1370,7 +1358,11 @@ characters={
 					}
 				}				
 				date < 1930.1.1
-				date > 1909.12.31
+				OR = {
+					has_completed_focus = AUHDNC_a_the_coalition_takes_office
+					has_completed_focus = AUHDNC_h_the_plural_ballot
+					date > 1909.12.31
+				}
 			}
 			available = {				
 				if = {
@@ -1391,7 +1383,11 @@ characters={
 					}
 				}
 				date < 1930.1.1
-				date > 1909.12.31				
+				OR = {
+					has_completed_focus = AUHDNC_a_the_coalition_takes_office
+					has_completed_focus = AUHDNC_h_the_plural_ballot
+					date > 1909.12.31
+				}				
 			}			
 			traits = {
 				smooth_talking_charmer
@@ -2163,30 +2159,4 @@ characters={
 	
 	#SCIENTIST
 
-	AUH_nikola_tesla={
-		name=AUH_nikola_tesla
-		portraits={
-			civilian = {
-				large="gfx/SER/WW1/Portrait_Serbia_Nikola_Tesla_WW1_scientist.dds"
-			}
-		}		
-        scientist = {
-            traits = { scientist_trait_electronics_specialist scientist_trait_bright scientist_trait_genius }
-            skills = {
-                specialization_air = 3
-            }
-			available = {
-                date < 1944.1.1				
-				BOS = {
-					exists  = no 
-				}
-			}			
-            visible = {
-                date < 1944.1.1
-				BOS = {
-					exists  = no 
-				}				
-            }
-        }		
-	}	
 }
