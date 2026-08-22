@@ -215,20 +215,7 @@ focus_tree = {
 			add_opinion_modifier = { target = ENG modifier = RI_supports_enemy_country }
 			add_opinion_modifier = { target = USA modifier = RI_hostile_foreign_policy }
 			custom_effect_tooltip = CAN_r_panhandle_lost_tt
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			740 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			hidden_effect = {
 				add_ai_strategy = { type = antagonize id = USA value = 20 }
@@ -255,14 +242,6 @@ focus_tree = {
 			set_country_flag = CAN_dnc_head_tax_500
 			custom_effect_tooltip = CANDNC_a_head_tax_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			if = {
 				limit = { has_country_flag = CAN_dnc_vancouver_riot }
 				add_stability = 0.03
@@ -349,12 +328,6 @@ focus_tree = {
 			add_popularity = { ideology = democratic popularity = 0.03 }
 			every_state = {
 				limit = { OR = { state = 469 state = 470 } }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			if = {
 				limit = { has_country_flag = CAN_dnc_a_oliver_at_interior }
@@ -404,7 +377,6 @@ focus_tree = {
 				producer = ENG
 			}
 			464 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = naval_base
 					level = 2
@@ -419,7 +391,6 @@ focus_tree = {
 				}
 			}
 			473 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = naval_base
 					level = 2
@@ -472,23 +443,9 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 				add_resource = {
 					type = aluminium
 					amount = 4
-				}
-			}
-			682 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
 				}
 			}
 			add_tech_bonus = {
@@ -534,11 +491,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_king_at_labour_tt
 			show_ideas_tooltip = CAN_rodolphe_lemieux
 			682 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 		}
@@ -556,11 +508,6 @@ focus_tree = {
 			completion_reward = {
 			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
 			473 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			set_country_flag = CAN_dnc_vancouver_riot
 			add_stability = -0.05
@@ -633,14 +580,6 @@ focus_tree = {
 			add_opinion_modifier = { target = FRA modifier = RI_trade_agreement }
 			custom_effect_tooltip = CAN_r_fielding_signs_in_paris_tt
 			show_ideas_tooltip = CAN_ws_fielding
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = {
 				name = CAN_r_three_columns_bonus
 				bonus = 1.0
@@ -665,14 +604,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_a_fieldings_three_columns }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			add_stability = 0.05
 			add_political_power = -25
 			if = {
@@ -730,14 +661,6 @@ focus_tree = {
 				clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
 				custom_effect_tooltip = CAN_r_fracture_minus_one_tt
 			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			custom_effect_tooltip = CAN_r_plains_of_abraham_tt
 			army_experience = 15
 			country_event = { id = can_dnc_a.60 days = 30 }
@@ -768,11 +691,6 @@ focus_tree = {
 			}
 			every_state = {
 				limit = { OR = { state = 276 state = 467 } }
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			hidden_effect = {
 				add_ai_strategy = { type = befriend id = USA value = 40 }
@@ -812,9 +730,6 @@ focus_tree = {
 				add_stability = 0.03
 				custom_effect_tooltip = CAN_r_dominion_writes_its_own_papers_tt
 			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			country_event = { id = can_dnc_a.56 days = 30 }
 		}
 		}
@@ -833,11 +748,6 @@ focus_tree = {
 			air_experience = 25
 			add_tech_bonus = { name = CANFX_a_the_silver_dart_flies_bonus bonus = 1.0 uses = 1 category = air_equipment }
 			464 = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_timed_idea = { idea = CAN_r_the_baddeck_airmen days = 365 }
 			custom_effect_tooltip = CAN_r_bell_and_mccurdy_tt
@@ -869,12 +779,6 @@ focus_tree = {
 			set_country_flag = CAN_dnc_naval_service_resolved
 			add_ideas = CAN_r_the_naval_service_act
 			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
 				add_building_construction = {
 					type = naval_base
 					level = 1
@@ -927,12 +831,6 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
 				add_building_construction = {
 					type = naval_base
 					level = 1
@@ -1011,22 +909,11 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_state = {
 				limit = { is_core_of = CAN is_controlled_by = CAN }
-				add_extra_state_shared_building_slots = 1
 			}
 			every_state = {
 				limit = { OR = { state = 276 state = 466 } }
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 			}
 			464 = {
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -1074,9 +961,6 @@ focus_tree = {
 				subtract_from_variable = { CAN_dnc_fracture = 1 }
 				clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
 				custom_effect_tooltip = CAN_r_fracture_minus_one_tt
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
 			}
 			hidden_effect = {
 				ENG = { add_ai_strategy = { type = protect id = CAN value = -50 } }
@@ -1151,25 +1035,11 @@ focus_tree = {
 				category = construction_tech
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 			every_state = {
 				limit = { is_core_of = CAN is_controlled_by = CAN }
-				add_extra_state_shared_building_slots = 1
 			}
 			every_state = {
 				limit = { OR = { state = 466 state = 467 } }
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -1224,42 +1094,11 @@ focus_tree = {
 			set_country_flag = CAN_dnc_national_transcontinental
 			add_ideas = CAN_a_three_transcontinentals
 			add_political_power = -25
-			682 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			683 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			466 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			467 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			465 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = {
 				name = CAN_r_transcontinental_bonus
@@ -1290,29 +1129,7 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_a_the_national_transcontinental }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			471 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 				add_building_construction = {
 					type = naval_base
 					level = 2
@@ -1364,14 +1181,6 @@ focus_tree = {
 			add_popularity = { ideology = communism popularity = 0.02 }
 			every_state = {
 				limit = { OR = { state = 682 state = 683 } }
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
 			}
 			add_to_variable = { CAN_dnc_credit_infra = 0.05 tooltip = CAN_r_credit_infra_5_tt }
 			country_event = { id = can_dnc_r.101 days = 30 }
@@ -1389,14 +1198,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_a_camps_on_the_line }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = { name = CANFX_a_the_bridge_falls_at_quebec_bonus bonus = 1.0 uses = 1 category = industry }
 			add_tech_bonus = {
 				name = CANFX_a_the_bridge_falls_at_quebec_bonus
@@ -1432,34 +1233,11 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.05
 			add_ideas = CAN_a_the_intercolonial_way
-			464 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
 			465 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			466 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			467 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = {
 				name = CAN_r_blair_bonus
@@ -1491,30 +1269,14 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
 				add_building_construction = {
 					type = naval_base
 					level = 2
 					instant_build = yes
 					province = { id = 7361 }
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			465 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_ideas = CAN_r_the_winter_port
 			add_stability = 0.05
@@ -1551,11 +1313,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_patronage_lever_lost_tt
 			every_state = {
 				limit = { OR = { state = 467 state = 469 state = 470 } }
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = CAN_dnc_dominion_credit_modifier } } }
@@ -1578,27 +1335,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_a_the_board_of_railway_commissioners }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_manpower = 15000
 			add_political_power = 50
 			add_stability = 0.03
@@ -1630,33 +1366,12 @@ focus_tree = {
 			add_manpower = 10000
 			add_ideas = CAN_a_ottawa_keeps_the_land
 			custom_effect_tooltip = CAN_r_dominion_lands_kept_tt
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_popularity = { ideology = democratic popularity = 0.03 }
 			if = {
 				limit = { has_country_flag = CAN_dnc_schools_provincial }
 				add_political_power = 25
 			}
 			467 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}
@@ -1673,12 +1388,6 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			add_ideas = CAN_fx_prairie_machines
-			470 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = { ideology = democratic popularity = 0.05 }
@@ -1707,25 +1416,10 @@ focus_tree = {
 			add_political_power = 25
 			add_ideas = CAN_r_the_provincial_telephones
 			467 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			470 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			469 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = CAN_r_bell_bought_out_tt
 			show_ideas_tooltip = CAN_bell_telephone
@@ -1755,12 +1449,6 @@ focus_tree = {
 			}
 			add_political_power = 25
 			add_stability = 0.03
-			469 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			custom_effect_tooltip = CAN_r_forty_five_students_tt
 			if = {
 				limit = { has_idea = CAN_r_the_provincial_telephones }
@@ -1789,21 +1477,9 @@ focus_tree = {
 			add_manpower = 10000
 			469 = {
 				set_state_name = CAN_a_state_buffalo
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			470 = {
 				set_state_name = CAN_a_state_buffalo_north
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 			custom_effect_tooltip = CAN_r_haultain_names_it_tt
@@ -1825,14 +1501,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_a_the_province_of_buffalo }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_political_power = -50
 			add_stability = 0.05
 			add_popularity = { ideology = neutrality popularity = 0.08 }
@@ -1856,22 +1524,6 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			add_ideas = CAN_a_buffalos_own_land
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_manpower = 15000
 			add_political_power = -25
 			add_stability = 0.03
@@ -1896,18 +1548,8 @@ focus_tree = {
 			completion_reward = {
 			add_ideas = CAN_fx_buffalo_bloc
 			470 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			469 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_political_power = -75
 			add_war_support = 0.05
@@ -1941,9 +1583,6 @@ focus_tree = {
 				limit = { has_idea = CAN_r_the_coast_in_uproar }
 				remove_ideas = CAN_r_the_coast_in_uproar
 			}
-			473 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			hidden_effect = {
 				add_ai_strategy = { type = befriend id = JAP value = 30 }
 				JAP = { add_ai_strategy = { type = befriend id = CAN value = 30 } }
@@ -1971,11 +1610,6 @@ focus_tree = {
 			custom_effect_tooltip = CANDNC_a_continuous_journey_tt
 			add_popularity = { ideology = neutrality popularity = 0.02 }
 			473 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			if = {
 				limit = { has_idea = CAN_r_the_gentlemens_word }
@@ -2002,9 +1636,6 @@ focus_tree = {
 			add_timed_idea = { idea = CAN_r_the_opium_commission days = 365 }
 			custom_effect_tooltip = CAN_r_first_drug_law_tt
 			add_popularity = { ideology = democratic popularity = 0.02 }
-			473 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			hidden_effect = {
 				QIN = { add_ai_strategy = { type = befriend id = CAN value = 20 } }
 			}
@@ -2062,14 +1693,6 @@ focus_tree = {
 				reverse_add_opinion_modifier = { target = JAP modifier = RI_supports_enemy_country }
 				reverse_add_opinion_modifier = { target = ENG modifier = RI_supports_enemy_country }
 				reverse_add_opinion_modifier = { target = ENG modifier = RI_supports_enemy_politics }
-				473 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
 				hidden_effect = {
 					JAP = { add_ai_strategy = { type = antagonize id = CAN value = 30 } }
 				}
@@ -2104,14 +1727,6 @@ focus_tree = {
 			add_political_power = -25
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 			custom_effect_tooltip = CAN_r_league_in_victoria_tt
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			if = {
 				limit = { has_idea = CAN_r_the_statute_stands }
 				add_stability = 0.03
@@ -2321,22 +1936,6 @@ focus_tree = {
 			add_stability = -0.05
 			add_to_variable = { CAN_dnc_imp_trade = 0.10 tooltip = trade_opinion_factor_tt }
 			add_tech_bonus = { name = CANDNC_r_b_zollverein_bonus bonus = 1.0 uses = 1 category = industry }
-			467 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			every_other_country = {
 				limit = { is_subject_of = ENG NOT = { tag = CAN } }
 				add_opinion_modifier = { target = CAN modifier = RI_started_trade }
@@ -2410,12 +2009,6 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_imp_goods = 0.03 tooltip = consumer_goods_factor_tt }
 			add_tech_bonus = { name = CANDNC_r_b_cheque_bonus bonus = 1.0 uses = 1 category = naval_doctrine }
 			464 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 7361
-				}
 			}
 			ENG = {
 				navy_experience = 25
@@ -2445,22 +2038,6 @@ focus_tree = {
 			add_command_power = 25
 			add_manpower = 5000
 			add_ideas = CAN_r_canadian_crews_admiralty_hulls
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_to_variable = { CAN_dnc_imp_navy = 0.10 tooltip = experience_gain_navy_factor_tt }
 			add_to_variable = { CAN_dnc_imp_goods = 0.02 tooltip = consumer_goods_factor_tt }
 			add_tech_bonus = { name = CANDNC_r_b_white_ensign_bonus bonus = 1.0 uses = 1 category = cl_tech }
@@ -2550,30 +2127,12 @@ focus_tree = {
 			add_stability = 0.05
 			add_ideas = CAN_r_the_squadron_on_station
 			464 = {
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 7361
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					instant_build = yes
-					province = 7361
-				}
 				add_resource = {
 					type = coal
 					amount = 4
 				}
 			}
 			473 = {
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 10548
-				}
 			}
 			add_to_variable = { CAN_dnc_imp_navy = 0.05 tooltip = experience_gain_navy_factor_tt }
 			add_to_variable = { CAN_dnc_imp_goods = 0.02 tooltip = consumer_goods_factor_tt }
@@ -2625,20 +2184,8 @@ focus_tree = {
 			add_command_power = 25
 			add_war_support = 0.03
 			464 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 7361
-				}
 			}
 			466 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 3691
-				}
 			}
 			add_tech_bonus = { name = CANDNC_r_b_naval_reserve_bonus bonus = 1.0 uses = 1 category = naval_doctrine }
 			add_to_variable = { CAN_dnc_imp_navy = 0.05 tooltip = experience_gain_navy_factor_tt }
@@ -2663,41 +2210,7 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_manpower = 10000
-			467 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			465 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			682 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = { name = CANDNC_r_b_granary_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_imp_trade = 0.10 tooltip = trade_opinion_factor_tt }
@@ -2729,14 +2242,6 @@ focus_tree = {
 			}
 			reverse_add_opinion_modifier = { target = ENG modifier = RI_supports_own_country }
 			add_to_variable = { CAN_dnc_imp_trade = -0.05 tooltip = trade_opinion_factor_tt }
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = { name = CANDNC_r_b_free_traders_bonus bonus = 1.0 uses = 1 category = industry }
 			add_popularity = { ideology = neutrality popularity = 0.02 }
 			custom_effect_tooltip = CANDNC_r_b_loyalty_not_terms_tt
@@ -2765,14 +2270,6 @@ focus_tree = {
 				limit = { has_idea = CAN_b_the_nationalist_press }
 				remove_ideas = CAN_b_the_nationalist_press
 				custom_effect_tooltip = CANDNC_r_b_press_quiets_tt
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 			}
 			subtract_from_variable = { CAN_dnc_fracture = 1 }
 			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
@@ -2804,22 +2301,6 @@ focus_tree = {
 			add_stability = -0.05
 			add_ideas = CAN_b_a_province_governed_against_itself
 			add_popularity = { ideology = neutrality popularity = 0.05 }
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_to_variable = { CAN_dnc_fracture = 2 }
 			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
 			custom_effect_tooltip = CANDNC_b_fracture_plus_two_tt
@@ -2841,19 +2322,6 @@ focus_tree = {
 			add_ideas = CAN_r_the_sydney_contracts
 			add_political_power = 25
 			add_war_support = 0.03
-			464 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_resource = {
 				type = steel
 				amount = 6
@@ -2863,14 +2331,6 @@ focus_tree = {
 				type = coal
 				amount = 3
 				state = 464
-			}
-			465 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = { name = CANDNC_r_b_sydney_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
@@ -2896,31 +2356,8 @@ focus_tree = {
 			add_stability = 0.05
 			add_manpower = 10000
 			467 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			470 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = { name = CANDNC_r_b_liverpool_rate_bonus bonus = 1.0 uses = 1 category = train_tech }
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
@@ -2950,22 +2387,6 @@ focus_tree = {
 				add_ideas = CAN_b_the_tariff_war
 			}
 			add_political_power = 25
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = { name = CANDNC_r_b_imperial_tariff_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
 			reverse_add_opinion_modifier = { target = ENG modifier = RI_supports_own_faction }
@@ -2998,7 +2419,6 @@ focus_tree = {
 				remove_ideas = CAN_b_the_nationalist_press
 				custom_effect_tooltip = CANDNC_r_b_press_quiets_tt
 			}
-			466 = { add_extra_state_shared_building_slots = 1 }
 			subtract_from_variable = { CAN_dnc_fracture = 1 }
 			clamp_variable = { var = CAN_dnc_fracture min = 0 max = 10 }
 			custom_effect_tooltip = CANDNC_b_fracture_minus_one_tt
@@ -3046,14 +2466,6 @@ focus_tree = {
 			add_tech_bonus = { name = CANFX_b_the_naval_scare_of_1909_bonus bonus = 1.0 uses = 1 category = bb_tech }
 			add_tech_bonus = { name = CANDNC_r_b_naval_scare_cruisers_bonus bonus = 1.0 uses = 1 category = ca_tech }
 			add_war_support = 0.10
-			464 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_to_variable = { CAN_dnc_imp_navy = 0.05 tooltip = experience_gain_navy_factor_tt }
 			add_named_threat = { threat = 2 name = CANDNC_b_the_naval_scare_of_1909 }
 			add_ai_strategy = { type = antagonize id = GER value = 25 }
@@ -3078,19 +2490,6 @@ focus_tree = {
 			add_ideas = CAN_b_the_nickel_of_the_empire
 			add_political_power = 25
 			add_stability = 0.02
-			682 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_resource = {
 				type = chromium
 				amount = 8
@@ -3130,14 +2529,6 @@ focus_tree = {
 				category = naval_equipment
 			}
 			add_tech_bonus = { name = CANDNC_r_b_fleet_unit_doctrine_bonus bonus = 1.0 uses = 1 category = naval_doctrine }
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
 			add_to_variable = { CAN_dnc_imp_navy = 0.10 tooltip = experience_gain_navy_factor_tt }
 			add_to_variable = { CAN_dnc_imp_goods = 0.03 tooltip = consumer_goods_factor_tt }
 			ENG = { add_ai_strategy = { type = protect id = CAN value = 100 } }
@@ -3162,23 +2553,6 @@ focus_tree = {
 			add_manpower = 20000
 			add_stability = 0.05
 			add_political_power = 50
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			471 = { add_extra_state_shared_building_slots = 1 }
 			add_tech_bonus = { name = CANDNC_r_b_marquis_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
 			custom_effect_tooltip = CANDNC_r_b_another_province_to_the_larder_tt
@@ -3202,14 +2576,6 @@ focus_tree = {
 			add_stability = -0.03
 			add_war_support = 0.05
 			add_timed_idea = { idea = CAN_r_the_payne_aldrich_ultimatum days = 180 }
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
 			add_ai_strategy = { type = antagonize id = USA value = 25 }
 			USA = { add_ai_strategy = { type = antagonize id = CAN value = 25 } }
@@ -3286,7 +2652,6 @@ focus_tree = {
 			add_stability = -0.03
 			add_timed_idea = { idea = CAN_r_the_imperial_tercentenary days = 365 }
 			add_popularity = { ideology = democratic popularity = 0.03 }
-			466 = { add_extra_state_shared_building_slots = 1 }
 			reverse_add_opinion_modifier = { target = ENG modifier = RI_visited_capital }
 			reverse_add_opinion_modifier = { target = FRA modifier = small_increase }
 			add_to_variable = { CAN_dnc_fracture = 1 }
@@ -3316,20 +2681,7 @@ focus_tree = {
 				category = electronics
 			}
 			add_tech_bonus = { name = CANDNC_r_b_pacific_cable_bonus bonus = 1.0 uses = 1 category = support_tech }
-			464 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			473 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_to_variable = { CAN_dnc_imp_pp = 0.05 tooltip = political_power_factor_tt }
 			reverse_add_opinion_modifier = { target = ENG modifier = RI_supports_own_country }
@@ -3399,14 +2751,6 @@ focus_tree = {
 				set_country_flag = CAN_dnc_b_fleet_unit_money
 				add_to_variable = { CAN_dnc_imp_navy = 0.05 tooltip = experience_gain_navy_factor_tt }
 				add_to_variable = { CAN_dnc_imp_goods = 0.02 tooltip = consumer_goods_factor_tt }
-				464 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
 			}
 			add_command_power = 25
 			add_tech_bonus = { name = CANDNC_r_b_dreadnought_bonus bonus = 1.0 uses = 2 category = bb_tech }
@@ -3437,22 +2781,6 @@ focus_tree = {
 			add_political_power = 50
 			army_experience = 25
 			add_war_support = 0.05
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = { name = CANFX_b_the_imperial_munitions_contracts_bonus bonus = 1.0 uses = 1 category = infantry_weapons }
 			add_tech_bonus = { name = CANDNC_r_b_cordite_bonus bonus = 1.0 uses = 1 category = artillery }
 			add_equipment_to_stockpile = {
@@ -3482,30 +2810,6 @@ focus_tree = {
 			navy_experience = 25
 			add_political_power = 25
 			add_ideas = CAN_r_the_imperial_yards
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = { name = CANDNC_r_b_imperial_yards_bonus bonus = 1.0 uses = 1 category = naval_equipment }
 			add_to_variable = { CAN_dnc_imp_navy = 0.05 tooltip = experience_gain_navy_factor_tt }
 			reverse_add_opinion_modifier = { target = ENG modifier = RI_took_investment }
@@ -3531,19 +2835,6 @@ focus_tree = {
 			add_stability = 0.05
 			add_popularity = { ideology = democratic popularity = 0.03 }
 			469 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = { name = CANDNC_r_b_british_west_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
@@ -3569,33 +2860,7 @@ focus_tree = {
 			add_manpower = 50000
 			add_political_power = -25
 			add_stability = -0.03
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			467 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = { name = CANDNC_r_b_agents_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
@@ -3666,22 +2931,6 @@ focus_tree = {
 			add_political_power = 25
 			add_stability = 0.03
 			add_timed_idea = { idea = CAN_r_the_empire_settlement_scheme days = 730 }
-			470 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_to_variable = { CAN_dnc_imp_goods = 0.02 tooltip = consumer_goods_factor_tt }
 			reverse_add_opinion_modifier = { target = ENG modifier = RI_took_investment }
 			country_event = { id = can_dnc_r.206 days = 30 }
@@ -3701,7 +2950,6 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			469 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			469 = { add_extra_state_shared_building_slots = 1 }
 			add_stability = 0.05
 			add_political_power = 50
 			add_manpower = 15000
@@ -3761,14 +3009,6 @@ focus_tree = {
 			add_state_claim = 332
 			add_political_power = 50
 			add_stability = 0.03
-			464 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = { name = CANDNC_r_b_tenth_province_bonus bonus = 1.0 uses = 1 category = industry }
 			if = {
 				limit = { country_exists = NFL }
@@ -3798,33 +3038,7 @@ focus_tree = {
 			add_command_power = 25
 			add_manpower = 10000
 			add_ideas = CAN_r_the_western_gate
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 10548
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					instant_build = yes
-					province = 10548
-				}
-			}
 			464 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					instant_build = yes
-					province = 7361
-				}
 			}
 			if = {
 				limit = { NOT = { has_template = "Garrison Artillery" } }
@@ -3878,29 +3092,12 @@ focus_tree = {
 			transfer_state = 331
 			transfer_state = 332
 			331 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 12505
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 				add_resource = {
 					type = steel
 					amount = 4
 				}
 			}
 			332 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_manpower = 20000
 			add_stability = 0.05
@@ -3962,30 +3159,8 @@ focus_tree = {
 			every_state = {
 				limit = { is_core_of = CAN is_controlled_by = CAN }
 				random_select_amount = 4
-				add_extra_state_shared_building_slots = 1
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			464 = {
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_autonomy_ratio = {
 				value = -0.10
@@ -4053,41 +3228,7 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_imp_navy = 0.15 tooltip = experience_gain_navy_factor_tt }
 			add_to_variable = { CAN_dnc_imp_trade = 0.05 tooltip = trade_opinion_factor_tt }
 			add_to_variable = { CAN_dnc_imp_goods = 0.05 tooltip = consumer_goods_factor_tt }
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 7361
-				}
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 1408
-				}
-			}
 			465 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 4285
-				}
 			}
 			every_unit_leader = {
 				limit = { is_character = CAN_charles_kingsmill }
@@ -4162,18 +3303,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_c_unrestricted_reciprocity_bonus bonus = 1.0 uses = 1 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = { has_country_flag = CAN_dnc_alaska_standoff }
@@ -4224,10 +3353,8 @@ focus_tree = {
 			add_timed_idea = { idea = CAN_r_swallowing_alverstone days = 365 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			471 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			473 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -4251,18 +3378,6 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			set_country_flag = CAN_dnc_american_capital
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			682 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_c_branch_plants
 			add_timed_idea = { idea = CAN_r_the_investment_rush days = 365 }
@@ -4299,18 +3414,6 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_decrease }
 			add_ai_strategy = { type = befriend id = USA value = 50 }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_resource = { type = coal amount = 4 state = 470 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = { CAN_dnc_c_market_trade = 0.05 tooltip = trade_opinion_factor_tt }
@@ -4339,14 +3442,6 @@ focus_tree = {
 		available = { has_country_flag = CAN_dnc_us_reciprocity_refused }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_resource = { type = steel amount = 6 state = 276 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_c_the_dingley_wall
@@ -4377,24 +3472,15 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_national_transcontinental
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
 			471 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 			682 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 			683 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			465 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			466 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_c_hayss_debt
@@ -4429,12 +3515,7 @@ focus_tree = {
 			add_political_power = 50
 			add_manpower = 15000
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			276 = {
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_c_international_unions_bonus bonus = 1.0 uses = 1 category = industry }
@@ -4468,15 +3549,9 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = CAN_dnc_hill_lines
 			set_country_flag = CAN_dnc_west_tied_south
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
 			469 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 			470 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_c_hills_lines
@@ -4513,14 +3588,7 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_c_hayss_line_to_prince_rupert }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = naval_base level = 3 instant_build = yes province = 10548 }
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			471 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_manpower = 15000
@@ -4557,18 +3625,6 @@ focus_tree = {
 			add_manpower = 50000
 			add_ideas = CAN_c_the_american_prairie
 			custom_effect_tooltip = generic_skip_one_line_tt
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_political_power = 25
 			add_stability = -0.05
@@ -4610,10 +3666,8 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_c_market_pp = -0.05 tooltip = political_power_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			467 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			469 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = CAN_r_c_fort_william_idle_tt
 			hidden_effect = {
@@ -4645,7 +3699,6 @@ focus_tree = {
 				466 = { damage_building = { type = infrastructure damage = 1 } }
 			}
 			466 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = -0.05
@@ -4677,11 +3730,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_c_the_last_best_west_for_americans }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			682 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_resource = { type = chromium amount = 4 state = 682 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_c_the_silver_camps
@@ -4709,11 +3757,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_c_grain_goes_by_duluth }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			467 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			469 = { add_extra_state_shared_building_slots = 1 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_c_the_grain_growers_company
 			add_stability = 0.05
@@ -4755,7 +3798,6 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_c_market_goods = -0.02 tooltip = consumer_goods_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			466 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			add_tech_bonus = { name = CAN_r_c_portland_line_bonus bonus = 1.0 uses = 1 category = train_tech }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4777,15 +3819,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_sintaluta_precedent
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
 			467 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			470 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = 0.05
@@ -4857,12 +3893,8 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = CAN_dnc_fortresses_transferred
 			464 = {
-				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 7361 }
-				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 7361 }
 			}
 			740 = {
-				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 7259 }
-				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 7259 }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			navy_experience = 35
@@ -4937,7 +3969,6 @@ focus_tree = {
 				add_political_power = -25
 			}
 			custom_effect_tooltip = CAN_r_c_whitney_hydro_tt
-			276 = { add_extra_state_shared_building_slots = 1 }
 			country_event = { id = can_dnc_c.66 days = 5 }
 		}
 	}
@@ -5029,18 +4060,12 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_c_market_goods = -0.03 tooltip = consumer_goods_factor_tt }
 			add_to_variable = { CAN_dnc_c_market_pp = -0.10 tooltip = political_power_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
 				random_select_amount = 3
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_c_customs_union_bonus bonus = 1.0 uses = 2 category = industry }
@@ -5170,12 +4195,7 @@ focus_tree = {
 			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = CAN_r_c_hydro_at_niagara_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
 			466 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
@@ -5218,18 +4238,6 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
 			add_ai_strategy = { type = befriend id = USA value = 50 }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			469 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = { CAN_dnc_c_market_trade = 0.10 tooltip = trade_opinion_factor_tt }
 			add_to_variable = { CAN_dnc_c_market_resources = 0.05 tooltip = local_resources_factor_tt }
@@ -5295,10 +4303,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_c_reciprocity_without_the_union }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_political_power = 50
 			add_stability = 0.10
 			subtract_from_variable = { CAN_dnc_loyalist_anger = 2 }
@@ -5437,20 +4441,9 @@ focus_tree = {
 				remove_ideas = CAN_c_the_continent_is_the_market
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			every_core_state = {
 				limit = { is_fully_controlled_by = ROOT }
 				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
@@ -5867,15 +4860,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_federal_money_arrives_tt
 			every_state = {
 				limit = { is_owned_by = CAN is_core_of = CAN }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 			}
 			464 = { add_building_construction = { type = naval_base level = 1 instant_build = yes province = { id = 7361 } } }
 			473 = { add_building_construction = { type = naval_base level = 1 instant_build = yes province = { id = 1408 } } }
@@ -5938,14 +4922,6 @@ focus_tree = {
 			add_political_power = 75
 			add_manpower = 20000
 			add_tech_bonus = { name = CAN_r_american_patterns_bonus bonus = 1.0 uses = 1 category = industry }
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_decrease }
 			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
 			diplomatic_relation = { country = USA relation = military_access active = yes }
@@ -6008,18 +4984,6 @@ focus_tree = {
 			add_war_support = -0.05
 			add_manpower = 20000
 			add_tech_bonus = { name = CAN_r_branch_plant_patterns_bonus bonus = 1.0 uses = 1 category = industry }
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			467 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			reverse_add_opinion_modifier = { target = ENG modifier = large_decrease }
 			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
@@ -6297,11 +5261,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = CAN_r_surveyors_on_the_lynn_canal_tt
 			471 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			USA = {
@@ -6405,12 +5364,6 @@ focus_tree = {
 				army_experience = 15
 				add_war_support = 0.05
 				471 = {
-					add_building_construction = {
-						type = bunker
-						level = 1
-						instant_build = yes
-						province = 7869
-					}
 				}
 			}
 			USA = {
@@ -6487,14 +5440,6 @@ focus_tree = {
 			add_ideas = CAN_r_signed_in_our_own_name
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_paris_tariff_bonus bonus = 1.0 uses = 1 category = industry }
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = CAN_r_standing_alone_grows_tt
 			add_to_variable = { CAN_dnc_sov_political_power_factor = 0.05 tooltip = political_power_factor_tt }
@@ -6597,17 +5542,6 @@ focus_tree = {
 			completion_reward = {
 			custom_effect_tooltip = CAN_r_posts_in_stone_tt
 			471 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 7869
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_manpower = 5000
 			add_command_power = 25
@@ -6656,18 +5590,6 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			464 = {
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 7361
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					instant_build = yes
-					province = 7361
-				}
 				add_resource = {
 					type = coal
 					amount = 4
@@ -6679,18 +5601,6 @@ focus_tree = {
 				}
 			}
 			473 = {
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 1408
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					instant_build = yes
-					province = 1408
-				}
 				create_unit = {
 					division = "name = \"Esquimalt Garrison\" division_template = \"Infantry Brigade\" start_experience_factor = 0.2"
 					owner = CAN
@@ -6777,11 +5687,6 @@ focus_tree = {
 			add_political_power = 25
 			add_manpower = 5000
 			471 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = { name = CANFX_d_skagway_in_the_sights_bonus bonus = 1.0 uses = 1 category = excavation_tech }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6811,21 +5716,7 @@ focus_tree = {
 			navy_experience = 40
 			add_manpower = 5000
 			custom_effect_tooltip = CAN_r_the_cutters_armed_tt
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
 			473 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 1408
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_r_the_fisheries_fleet
@@ -6920,9 +5811,6 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_a_dozen_conventions_bonus bonus = 1.0 uses = 1 category = industry }
-			466 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = CAN_r_standing_alone_grows_tt
 			add_to_variable = { CAN_dnc_sov_trade_opinion_factor = 0.10 tooltip = trade_opinion_factor_tt }
@@ -7071,21 +5959,10 @@ focus_tree = {
 			every_core_state = {
 				limit = { is_fully_controlled_by = ROOT }
 				random_select_amount = 4
-				add_extra_state_shared_building_slots = 1
 			}
 			276 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			466 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = CAN_r_standing_alone_grows_tt
@@ -7184,12 +6061,6 @@ focus_tree = {
 			completion_reward = {
 			custom_effect_tooltip = CAN_r_the_fortress_accounts_tt
 			464 = {
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
-					province = 7361
-				}
 				add_resource = {
 					type = coal
 					amount = 3
@@ -7244,19 +6115,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_the_naval_militia_bonus bonus = 1.0 uses = 2 category = naval_doctrine }
 			464 = {
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
 			}
 			466 = {
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 3691
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			ENG = {
@@ -7285,20 +6145,7 @@ focus_tree = {
 			}
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 			276 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
 			}
 			464 = {
 				add_resource = {
@@ -7450,14 +6297,6 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = CAN_r_a_minister_from_tokyo days = 365 }
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = CAN_r_standing_alone_grows_tt
 			add_to_variable = { CAN_dnc_sov_trade_opinion_factor = 0.05 tooltip = trade_opinion_factor_tt }
@@ -7534,11 +6373,6 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = { type = early_infantry_equipment_1900 amount = 1000 producer = CAN }
 			466 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 		}
@@ -7566,20 +6400,6 @@ focus_tree = {
 				add_opinion_modifier = { target = CAN modifier = medium_decrease }
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 1408
-				}
-			}
 			add_tech_bonus = { name = CAN_r_cruisers_of_canadian_design_bonus bonus = 1.0 uses = 1 category = cl_tech }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -7667,11 +6487,6 @@ focus_tree = {
 			add_political_power = 25
 			custom_effect_tooltip = CAN_r_baldwins_workshop_tt
 			464 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
@@ -7707,22 +6522,8 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_a_week_of_the_northern_season_tt
 			add_ideas = CAN_d_marquis_wheat
 			custom_effect_tooltip = generic_skip_one_line_tt
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			every_state = {
 				limit = { OR = { state = 467 state = 470 } }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = { name = CAN_r_experimental_farms_bonus bonus = 1.0 uses = 1 category = industry }
@@ -7774,17 +6575,6 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = { type = early_infantry_equipment_1900 amount = 1000 producer = CAN }
 			471 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 7869
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_timed_idea = { idea = CAN_r_the_yukon_front days = 730 }
 			add_tech_bonus = { name = CAN_r_guns_for_the_yukon_bonus bonus = 1.0 uses = 1 category = artillery }
@@ -8160,15 +6950,6 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANDNC_r_kingdom_cruisers_bonus bonus = 1.0 uses = 1 category = naval_equipment }
 			add_doctrine_cost_reduction = { name = CANDNC_r_kingdom_cruisers_bonus cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8239,18 +7020,6 @@ focus_tree = {
 				remove_ideas = CAN_fx_crown_advised_at_home
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			464 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANDNC_r_republic_arms_bonus bonus = 1.0 uses = 1 category = naval_equipment }
 			add_tech_bonus = { name = CANDNC_r_republic_arms_bonus bonus = 1.0 uses = 1 category = land_doctrine }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8310,7 +7079,6 @@ focus_tree = {
 			add_ai_strategy = { type = befriend id = FRA value = 25 }
 			every_state = {
 				limit = { is_core_of = QUE is_controlled_by = ROOT }
-				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = CAN_r_two_nations_modifier_tt
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
@@ -8361,11 +7129,6 @@ focus_tree = {
 					OR = { state = 467 state = 469 state = 470 }
 					is_controlled_by = ROOT
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = CAN_r_two_nations_modifier_tt
 			custom_effect_tooltip = CAN_e_fracture_p2_tt
@@ -8404,9 +7167,6 @@ focus_tree = {
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 			custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
 			add_stability = 0.03
-			468 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			hidden_effect = {
 				subtract_from_variable = { CAN_dnc_fracture = 1 }
@@ -8453,11 +7213,6 @@ focus_tree = {
 				add_stability = -0.02
 			}
 			468 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			hidden_effect = {
@@ -8488,22 +7243,6 @@ focus_tree = {
 			prerequisite = { focus = CANDNC_b_one_flag_one_fleet_one_throne }
 			ai_will_do = { factor = 1 }
 			completion_reward = {
-			466 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-			468 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 			add_political_power = 50
 			add_stability = 0.05
 			add_tech_bonus = {
@@ -8571,9 +7310,6 @@ focus_tree = {
 			}
 			else = {
 				add_ideas = CAN_r_the_opposition_on_the_floor
-			}
-			468 = {
-				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			hidden_effect = {
@@ -8666,12 +7402,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 468 }
 				limit = { is_core_of = QUE }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			hidden_effect = {
@@ -8715,11 +7445,6 @@ focus_tree = {
 					OR = { state = 469 state = 470 }
 					is_controlled_by = ROOT
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			custom_effect_tooltip = CAN_e_anger_p1_tt
@@ -8755,21 +7480,11 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			467 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			every_state = {
 				limit = {
 					OR = { state = 469 state = 470 }
 					is_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
 				}
 			}
 			add_ideas = CAN_r_the_french_fact_in_the_west
@@ -8872,11 +7587,6 @@ focus_tree = {
 			add_popularity = { ideology = neutrality popularity = 0.03 }
 			add_timed_idea = { idea = CAN_r_the_tercentenary_fete days = 365 }
 			468 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
 			}
 			custom_effect_tooltip = CAN_e_anger_p1_tt
 			hidden_effect = {
@@ -8955,18 +7665,10 @@ focus_tree = {
 			add_ideas = CAN_fx_english_schoolhouse
 			set_country_flag = CAN_dnc_schools_provincial
 			set_country_flag = CAN_dnc_unilingual_west
-			469 = { add_extra_state_shared_building_slots = 2 }
-			470 = { add_extra_state_shared_building_slots = 2 }
-			467 = { add_extra_state_shared_building_slots = 1 }
 			every_state = {
 				limit = {
 					OR = { state = 467 state = 469 state = 470 }
 					is_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
 				}
 			}
 			add_political_power = 50
@@ -9057,9 +7759,6 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
 			add_ai_strategy = { type = befriend id = ENG value = 10 }
 			add_timed_idea = { idea = CAN_r_the_boards_of_trade_petition days = 365 }
-			276 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			custom_effect_tooltip = CAN_e_fracture_p1_tt
 			hidden_effect = {
 				add_to_variable = { CAN_dnc_fracture = 1 }
@@ -9102,14 +7801,6 @@ focus_tree = {
 			add_war_support = 0.05
 			custom_effect_tooltip = CAN_e_quebec_stability_m10_tt
 			add_stability = -0.10
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_popularity = { ideology = neutrality popularity = -0.03 }
 			custom_effect_tooltip = CAN_e_fracture_p3_tt
 			hidden_effect = {
@@ -9190,9 +7881,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_e_ontario_ws_m3_tt
 			add_war_support = -0.03
 			add_popularity = { ideology = neutrality popularity = 0.03 }
-			468 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			custom_effect_tooltip = CAN_e_anger_p1_tt
 			hidden_effect = {
@@ -9332,24 +8020,6 @@ focus_tree = {
 			completion_reward = {
 			set_country_flag = CAN_dnc_e_sf2_gilded
 			466 = {
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			468 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_political_power = 50
 			custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
@@ -9377,19 +8047,8 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = CAN_dnc_quebec_special_status
 			add_ideas = CAN_e_quebec_particular_status
-			468 = {
-				add_extra_state_shared_building_slots = 2
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			every_state = {
 				limit = { is_core_of = QUE is_controlled_by = ROOT }
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_political_power = -50
 			custom_effect_tooltip = CAN_e_quebec_stability_p5_tt
@@ -9501,14 +8160,6 @@ focus_tree = {
 			add_war_support = -0.03
 			custom_effect_tooltip = CAN_e_estimates_to_quebec_tt
 			hidden_effect = {
-				468 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-				}
 			}
 			reverse_add_opinion_modifier = { target = ENG modifier = protest_action }
 			add_popularity = { ideology = neutrality popularity = 0.03 }
@@ -9569,12 +8220,6 @@ focus_tree = {
 			}
 			every_state = {
 				limit = { is_core_of = QUE is_controlled_by = ROOT }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = {
 				name = CAN_r_compact_bonus
@@ -9637,8 +8282,6 @@ focus_tree = {
 			add_stability = 0.03
 			custom_effect_tooltip = CAN_e_west_ws_m5_tt
 			add_war_support = -0.05
-			467 = { add_extra_state_shared_building_slots = 1 }
-			469 = { add_extra_state_shared_building_slots = 1 }
 			add_opinion_modifier = { target = FRA modifier = small_increase }
 			add_ai_strategy = { type = befriend id = FRA value = 25 }
 			custom_effect_tooltip = CAN_e_anger_p1_tt
@@ -9686,9 +8329,6 @@ focus_tree = {
 			add_stability = 0.05
 			custom_effect_tooltip = CAN_e_ontario_ws_m2_tt
 			add_war_support = -0.02
-			276 = {
-				add_extra_state_shared_building_slots = 1
-			}
 			custom_effect_tooltip = CAN_e_fracture_m1_tt
 			hidden_effect = {
 				subtract_from_variable = { CAN_dnc_fracture = 1 }
@@ -9798,20 +8438,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 468 }
 				limit = { is_core_of = QUE }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = {
 				name = CAN_r_nationalist_canada_bonus
@@ -10044,36 +8670,12 @@ focus_tree = {
 				limit = { has_country_flag = CAN_dnc_quebec_coerced }
 				custom_effect_tooltip = CAN_e_one_tongue_held_tt
 				468 = {
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
 				}
 				add_command_power = 25
 			}
 			else = {
 				custom_effect_tooltip = CAN_e_one_tongue_settled_tt
 				add_stability = 0.05
-				468 = {
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_tech_bonus = {
 				name = CAN_r_one_tongue_bonus
@@ -10115,19 +8717,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			466 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			468 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_political_power = -50
 			custom_effect_tooltip = CAN_e_quebec_stability_p5_tt
@@ -10156,11 +8745,6 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
 			add_political_power = 50
 			468 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 			}
 			add_timed_idea = { idea = CAN_r_the_battlefields_park days = 365 }
 			custom_effect_tooltip = CAN_e_anger_m1_tt
@@ -10194,14 +8778,6 @@ focus_tree = {
 			ai_will_do = { factor = 1 }
 			completion_reward = {
 			set_country_flag = CAN_dnc_navy_deferred
-			468 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
 			navy_experience = 10
 			add_political_power = 25
 			custom_effect_tooltip = CAN_e_quebec_stability_p3_tt
@@ -10260,22 +8836,6 @@ focus_tree = {
 			}
 			else = {
 				add_ideas = CAN_e_the_quiet_province
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			468 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
 			}
 			add_political_power = 150
 			add_stability = 0.10
@@ -13434,11 +11994,6 @@ focus_tree = {
 			add_ai_strategy = { type = befriend id = JAP value = 50 }
 			add_ai_strategy = { type = befriend id = QIN value = 20 }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 10548 }
-			}
 			add_tech_bonus = { name = CANDNC_p_the_other_ocean_bonus bonus = 1.0 uses = 1 category = naval_equipment }
 			navy_experience = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -13488,11 +12043,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_the_other_ocean }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 10548 }
-			}
 			add_equipment_to_stockpile = { type = convoy_1 amount = 30 producer = CAN }
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
 			add_to_variable = { CAN_dnc_pacific_trade_opinion_factor = 0.05 tooltip = trade_opinion_factor_tt }
@@ -13666,10 +12216,6 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
 			466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			464 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			add_tech_bonus = { name = CANDNC_p_treaty_bonus bonus = 1.0 uses = 1 category = industry }
@@ -13701,11 +12247,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_p_yen_capital
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = { add_extra_state_shared_building_slots = 1 }
 			ENG = { country_event = { id = can_dnc_p.5 days = 5 } }
 			custom_effect_tooltip = CANDNC_p_london_will_answer_tt
 			add_to_variable = { CAN_dnc_pacific_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
@@ -13734,11 +12275,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_lombard_street_terms
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			466 = { add_extra_state_shared_building_slots = 1 }
 			add_political_power = 75
 			add_stability = 0.05
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
@@ -13767,16 +12303,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_the_yokohama_specie_bank focus = CANDNC_p_the_city_keeps_our_paper }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			471 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 10548 }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANDNC_p_prince_rupert_bonus bonus = 1.0 uses = 1 category = construction_tech }
 			add_to_variable = { CAN_dnc_pacific_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
 			add_to_variable = { CAN_dnc_pacific_trade_opinion_factor = 0.05 tooltip = trade_opinion_factor_tt }
@@ -13873,10 +12399,6 @@ focus_tree = {
 		mutually_exclusive = { focus = CANDNC_p_break_the_exclusion_league }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
 			add_political_power = -75
 			add_stability = 0.10
 			reverse_add_opinion_modifier = { target = JAP modifier = small_decrease }
@@ -13902,10 +12424,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 25000
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_ideas = CAN_p_the_open_door
 			add_stability = -0.05
 			reverse_add_opinion_modifier = { target = JAP modifier = large_increase }
@@ -13938,8 +12456,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			diplomatic_relation = { country = JAP relation = military_access active = yes }
 			473 = {
-				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 1408 }
-				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 1408 }
 			}
 			add_resource = { type = coal amount = 4 state = 473 }
 			if = {
@@ -13972,10 +12488,6 @@ focus_tree = {
 			navy_experience = 50
 			add_tech_bonus = { name = CANDNC_p_kure_bonus bonus = 1.0 uses = 2 category = cl_tech }
 			add_tech_bonus = { name = CANDNC_p_kure_bonus bonus = 1.0 uses = 1 category = dd_tech }
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-			}
 			add_doctrine_cost_reduction = { name = CANDNC_p_kure_bonus cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -14068,18 +12580,6 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_squadron_navy_max_range_factor = 0.10 tooltip = navy_max_range_factor_tt }
 			add_to_variable = { CAN_dnc_squadron_naval_defense_factor = 0.05 tooltip = naval_defense_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 10548 }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			471 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANDNC_p_gateway_bonus bonus = 1.0 uses = 2 category = industry }
 			add_tech_bonus = { name = CANDNC_p_gateway_bonus bonus = 1.0 uses = 1 category = naval_doctrine }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -14180,16 +12680,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_five_hundred_miles_closer }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 10548 }
-			}
-			471 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_ideas = CAN_p_the_entrepot
 			add_tech_bonus = { name = CANDNC_p_entrepot_bonus bonus = 1.0 uses = 1 category = industry }
 			add_to_variable = { CAN_dnc_pacific_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
@@ -14201,7 +12691,6 @@ focus_tree = {
 			if = {
 				limit = { has_completed_focus = CANDNC_p_five_hundred_miles_closer }
 				custom_effect_tooltip = CANDNC_p_bonded_at_prince_rupert_tt
-				471 = { add_extra_state_shared_building_slots = 1 }
 			}
 		}
 	}
@@ -14238,7 +12727,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_state = {
 				limit = { is_core_of = CAN is_controlled_by = CAN is_coastal = yes }
-				add_extra_state_shared_building_slots = 1
 			}
 			473 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
 			464 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
@@ -14277,8 +12765,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_one_dollar_tt
 			add_ideas = CAN_fx_the_continental_dollar
-			466 = { add_extra_state_shared_building_slots = 2 }
-			276 = { add_extra_state_shared_building_slots = 1 }
 			add_stability = -0.05
 			add_political_power = 25
 			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
@@ -14317,14 +12803,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_c_one_dollar_for_the_continent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
 			add_stability = 0.05
 			add_political_power = 50
 			add_timed_idea = { idea = CAN_r_national_charters days = 730 }
@@ -14367,7 +12845,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_border_states_tt
 			every_state = {
 				limit = { is_owned_by = ROOT OR = { state = 276 state = 465 state = 466 state = 467 state = 470 state = 473 } }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			USA = { add_ai_strategy = { type = befriend id = CAN value = 50 } }
 			custom_effect_tooltip = CAN_r_ledger_step_tt
@@ -14499,14 +12976,6 @@ focus_tree = {
 				add_ideas = CAN_r_the_wall
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANDNC_r_wall_bonus bonus = 1.0 uses = 1 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -14544,11 +13013,6 @@ focus_tree = {
 			add_stability = 0.05
 			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			682 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_resource = { type = chromium amount = 4 state = 682 }
 			add_tech_bonus = { name = CANDNC_r_cobalt_bonus bonus = 1.0 uses = 1 category = excavation_tech }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -14620,15 +13084,7 @@ focus_tree = {
 			add_manpower = 10000
 			add_tech_bonus = { name = CANDNC_d_selffeed_bonus bonus = 1.0 uses = 1 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			469 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			467 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -14723,14 +13179,6 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
 			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			}
 			add_equipment_to_stockpile = { type = early_infantry_equipment_1890 amount = 2500 producer = CAN }
 			add_equipment_to_stockpile = { type = light_field_gun_equipment_1890 amount = 48 producer = CAN }
 			add_tech_bonus = { name = CANDNC_d_armoury_bonus bonus = 1.0 uses = 1 category = industry }
@@ -14813,11 +13261,6 @@ focus_tree = {
 			if = { limit = { NOT = { has_country_flag = CAN_dnc_slot_granted } } add_research_slot = 1 set_country_flag = CAN_dnc_slot_granted }
 			custom_effect_tooltip = CAN_dnc_slot_tt
 			navy_experience = 50
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 1408 }
-			}
 			add_tech_bonus = { name = CANDNC_p2_joint_keels_bonus bonus = 1.0 uses = 2 category = cl_tech }
 			add_tech_bonus = { name = CANDNC_p2_joint_keels_bonus bonus = 1.0 uses = 1 category = naval_equipment }
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
@@ -14952,10 +13395,6 @@ focus_tree = {
 				custom_effect_tooltip = CANDNC_p2_compact_tolerated_tt
 				add_autonomy_ratio = { value = 0.02 localization = CANDNC_p2_the_empires_pacific_gate }
 			}
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 1408 }
-			}
 			navy_experience = 25
 			add_to_variable = { CAN_dnc_squadron_navy_max_range_factor = 0.10 tooltip = navy_max_range_factor_tt }
 			set_country_flag = CAN_dnc_p2_gate_for_empire
@@ -15055,12 +13494,6 @@ focus_tree = {
 			add_to_variable = { CAN_dnc_squadron_navy_max_range_factor = 0.10 tooltip = navy_max_range_factor_tt }
 			add_to_variable = { CAN_dnc_squadron_naval_hit_chance = 0.05 tooltip = naval_hit_chance_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 10548 }
-			}
 			276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			add_tech_bonus = { name = CANDNC_p2_conference_bonus bonus = 1.0 uses = 2 category = naval_doctrine }
 			add_tech_bonus = { name = CANDNC_p2_conference_bonus bonus = 1.0 uses = 1 category = electronics }
@@ -15253,11 +13686,6 @@ focus_tree = {
 			add_war_support = 0.10
 			add_stability = 0.03
 			reverse_add_opinion_modifier = { target = USA modifier = medium_decrease }
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = 1408 }
-				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 10548 }
-			}
 			add_command_power = 50
 			add_timed_idea = { idea = CAN_r_coast_defence_drive days = 365 }
 			add_tech_bonus = { name = CANDNC_p2_hold_the_line_bonus bonus = 1.0 uses = 1 category = artillery }
@@ -15380,13 +13808,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			463 = {
 				add_core_of = CAN
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 2 instant_build = yes province = 13091 }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 				add_resource = { type = coal amount = 4 }
 			}
-			473 = { add_extra_state_shared_building_slots = 1 }
 			add_ideas = CAN_p2_panhandle_province
 			add_manpower = 15000
 			add_tech_bonus = { name = CANDNC_p2_panhandle_bonus bonus = 1.0 uses = 1 category = construction_tech }
@@ -15412,14 +13835,7 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_two_markets_one_dominion }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			276 = {
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
 			466 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			add_political_power = 50
@@ -15448,16 +13864,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p_two_markets_one_dominion }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 10548 }
-			}
-			471 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			470 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
 			add_timed_idea = { idea = CAN_r_yen_subscriptions days = 730 }
@@ -15489,10 +13895,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p2_the_silk_trains }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-			}
 			swap_ideas = { remove_idea = CAN_p2_silk_income add_idea = CAN_p2_merchant_marine }
 			QIN = { country_event = { id = can_dnc_p2.7 days = 5 } }
 			custom_effect_tooltip = CANDNC_p2_shanghai_will_answer_tt
@@ -15520,14 +13922,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 20000
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			471 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_stability = -0.05
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
 			JAP = { country_event = { id = can_dnc_p2.3 days = 5 } }
@@ -15562,10 +13956,6 @@ focus_tree = {
 			custom_effect_tooltip = CANDNC_p_washington_will_answer_tt
 			add_timed_idea = { idea = CAN_r_the_rate_war days = 365 }
 			add_war_support = 0.03
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-			}
 			add_equipment_to_stockpile = { type = convoy_1 amount = 30 producer = CAN }
 			USA = { add_ai_strategy = { type = antagonize id = CAN value = 15 } }
 			add_to_variable = { CAN_dnc_pacific_trade_opinion_factor = 0.05 tooltip = trade_opinion_factor_tt }
@@ -15592,10 +13982,6 @@ focus_tree = {
 			add_political_power = 50
 			add_ai_strategy = { type = befriend id = USA value = 25 }
 			USA = { add_ai_strategy = { type = befriend id = CAN value = 25 } }
-			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_to_variable = { CAN_dnc_pacific_trade_opinion_factor = 0.05 tooltip = trade_opinion_factor_tt }
 			add_to_variable = { CAN_dnc_pacific_consumer_goods_factor = -0.02 tooltip = consumer_goods_factor_tt }
 			add_timed_idea = { idea = CAN_r_the_shipping_cartel days = 730 }
@@ -15623,12 +14009,6 @@ focus_tree = {
 			add_ideas = CAN_p2_two_tongues
 			add_stability = -0.05
 			add_manpower = 15000
-			471 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			473 = { add_extra_state_shared_building_slots = 1 }
 			add_popularity = { ideology = democratic popularity = -0.03 }
 			add_autonomy_ratio = { value = 0.03 localization = CANDNC_p2_a_province_in_two_tongues }
 			add_tech_bonus = { name = CANDNC_p2_two_tongues_bonus bonus = 1.0 uses = 1 category = industry }
@@ -15649,14 +14029,6 @@ focus_tree = {
 		mutually_exclusive = { focus = CANDNC_p2_a_province_in_two_tongues }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			471 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_stability = 0.05
 			add_ideas = CAN_p2_company_coast
 			reverse_add_opinion_modifier = { target = JAP modifier = small_decrease }
@@ -15680,14 +14052,6 @@ focus_tree = {
 		prerequisite = { focus = CANDNC_p2_the_rate_war focus = CANDNC_p2_the_gentlemens_conference }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			swap_ideas = { remove_idea = CAN_p2_counting_house add_idea = CAN_p2_golden_corridor_pre }
 			add_political_power = 50
@@ -15720,25 +14084,6 @@ focus_tree = {
 			set_country_flag = CAN_dnc_golden_corridor
 			custom_effect_tooltip = CANDNC_p2_golden_corridor_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
-			473 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-				add_building_construction = { type = naval_base level = 1 instant_build = yes province = 10548 }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			471 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = 0.10
 			add_political_power = 150
@@ -15916,14 +14261,6 @@ focus_tree = {
 			diplomatic_relation = { country = USA relation = non_aggression_pact active = yes }
 			USA = { add_ai_strategy = { type = befriend id = CAN value = 100 } }
 			add_tech_bonus = { name = CAN_r_a_generation_ahead_bonus bonus = 1.0 uses = 1 category = industry }
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = CAN_r_arbitration_written_in_tt
 			set_country_flag = CAN_dnc_r_treaty_perpetual
 			USA = { country_event = { id = can_dnc_c2.5 days = 5 } }
@@ -15978,18 +14315,6 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_two_flags_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			473 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			467 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			464 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
 			set_country_flag = CAN_dnc_two_flag_continent
@@ -16123,7 +14448,6 @@ focus_tree = {
 				NFL = { add_opinion_modifier = { target = ROOT modifier = medium_increase } }
 				add_ai_strategy = { type = befriend id = NFL value = 50 }
 			}
-			464 = { add_extra_state_shared_building_slots = 1 }
 			custom_effect_tooltip = CAN_r_newfoundland_delegation_tt
 			add_ai_strategy = { type = befriend id = USA value = 25 }
 			set_country_flag = CAN_dnc_newfoundland_offered
@@ -16148,10 +14472,6 @@ focus_tree = {
 			464 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
 			if = {
 				limit = { 331 = { is_owned_by = ROOT } }
-				331 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = { type = dockyard level = 1 instant_build = yes }
-				}
 			}
 			else = {
 				custom_effect_tooltip = CANDNC_p_london_will_answer_tt
@@ -16213,8 +14533,6 @@ focus_tree = {
 			navy_experience = 25
 			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
 			473 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
 				add_building_construction = { type = naval_base level = 2 instant_build = yes province = { id = 1408 } }
 			}
 			add_ideas = CAN_r_the_leased_dockyard
@@ -16402,7 +14720,6 @@ focus_tree = {
 				add_ideas = CAN_c2_paying_out
 			}
 			add_tech_bonus = { name = CAN_r_our_own_credit_bonus bonus = 1.0 uses = 1 category = industry }
-			276 = { add_extra_state_shared_building_slots = 1 }
 			custom_effect_tooltip = CAN_r_debt_refunded_tt
 			set_country_flag = CAN_dnc_r_advisers_gone
 			if = {
@@ -16502,7 +14819,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_federal_money_arrives_tt
 			every_state = {
 				limit = { is_owned_by = ROOT is_core_of = CAN }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			276 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
@@ -16543,7 +14859,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_north_votes_together_tt
 			every_state = {
 				limit = { is_owned_by = ROOT OR = { state = 467 state = 469 state = 470 } }
-				add_extra_state_shared_building_slots = 1
 			}
 			if = {
 				limit = { has_idea = CAN_r_the_northern_states }
@@ -16567,8 +14882,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = CAN_fx_the_committee_chairs
 			276 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
-			466 = { add_extra_state_shared_building_slots = 1 }
-			473 = { add_extra_state_shared_building_slots = 1 }
 			add_stability = 0.05
 			add_political_power = 50
 			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
@@ -16632,7 +14945,6 @@ focus_tree = {
 			add_war_support = -0.05
 			add_ideas = CAN_r_the_empty_pews
 			add_popularity = { ideology = neutrality popularity = -0.05 }
-			276 = { add_extra_state_shared_building_slots = 1 }
 			custom_effect_tooltip = CAN_r_ships_chartered_tt
 			ENG = { add_manpower = 20000 }
 			every_other_country = {
@@ -16780,7 +15092,6 @@ focus_tree = {
 			custom_effect_tooltip = CAN_r_northern_program_tt
 			every_state = {
 				limit = { is_owned_by = ROOT is_core_of = CAN }
-				add_extra_state_shared_building_slots = 1
 			}
 			276 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
 			466 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
@@ -16957,10 +15268,6 @@ focus_tree = {
 			add_tech_bonus = { name = CANDNC_d2_arty_bonus bonus = 1.0 uses = 1 category = artillery }
 			army_experience = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			}
 			add_equipment_to_stockpile = { type = early_infantry_equipment_1890 amount = 3000 producer = CAN }
 			add_equipment_to_stockpile = { type = light_field_gun_equipment_1890 amount = 60 producer = CAN }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -17000,14 +15307,6 @@ focus_tree = {
 			navy_experience = 35
 			add_command_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-			}
 			464 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
 			473 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
 			if = {
@@ -17158,16 +15457,12 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			464 = {
-				add_building_construction = { type = naval_base level = 2 instant_build = yes }
 				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_naval_base = yes } }
 			}
 			473 = {
-				add_building_construction = { type = naval_base level = 2 instant_build = yes }
 				add_building_construction = { type = coastal_bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_naval_base = yes } }
 			}
 			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 				add_building_construction = { type = bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_border = yes } }
 			}
 			467 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { all_provinces = yes limit_to_border = yes } } }
@@ -17225,15 +15520,6 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = CAN_errol_bouchette
 			custom_effect_tooltip = generic_skip_one_line_tt
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			682 = { add_extra_state_shared_building_slots = 1 }
 			add_tech_bonus = { name = CANDNC_d2_bouchette_bonus bonus = 1.0 uses = 2 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -17264,16 +15550,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = { has_idea = CAN_fx_the_peoples_current }
@@ -17315,10 +15591,6 @@ focus_tree = {
 			add_ideas = CAN_d2_nitrogen
 			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			}
 			466 = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
 			add_tech_bonus = { name = CANDNC_r_nitrogen_bonus bonus = 1.0 uses = 1 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -17348,18 +15620,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			custom_effect_tooltip = generic_skip_one_line_tt
-			464 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			}
-			682 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_resource = { type = steel amount = 8 state = 464 }
 			add_resource = { type = steel amount = 4 state = 682 }
 			add_tech_bonus = { name = CANDNC_d2_forges_bonus bonus = 1.0 uses = 1 category = industry }
@@ -17412,12 +15672,6 @@ focus_tree = {
 				remove_ideas = CAN_d_the_credit_returns_slowly
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = { add_extra_state_shared_building_slots = 1 }
-			466 = { add_extra_state_shared_building_slots = 1 }
-			682 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
 			ENG = { country_event = { id = can_dnc_d2.2 days = 5 } }
@@ -17451,11 +15705,6 @@ focus_tree = {
 				remove_ideas = CAN_d_the_credit_returns_slowly
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
-			466 = { add_extra_state_shared_building_slots = 2 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			reverse_add_opinion_modifier = { target = USA modifier = small_increase }
 			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
@@ -17480,10 +15729,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = CAN_r_the_trains_from_lowell days = 730 }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			465 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			reverse_add_opinion_modifier = { target = USA modifier = small_decrease }
@@ -17549,13 +15794,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_manpower = 10000
 			custom_effect_tooltip = generic_skip_one_line_tt
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
 			469 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
 			470 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -17585,10 +15824,6 @@ focus_tree = {
 			add_political_power = 120
 			add_stability = -0.10
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
 			466 = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = CAN_d2_prairie_grudge
@@ -17627,13 +15862,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			custom_effect_tooltip = generic_skip_one_line_tt
-			467 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
 			468 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = naval_base level = 2 instant_build = yes }
 			}
 			683 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			469 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
@@ -17665,15 +15894,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			custom_effect_tooltip = generic_skip_one_line_tt
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-			}
-			466 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-			}
 			682 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			add_tech_bonus = { name = CANDNC_r_canal_bonus bonus = 1.0 uses = 1 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -17705,15 +15925,6 @@ focus_tree = {
 			add_manpower = 25000
 			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
-			682 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			466 = { add_extra_state_shared_building_slots = 2 }
-			470 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = CAN_r_the_plough_marches_north days = 730 }
 			if = {
@@ -17836,18 +16047,6 @@ focus_tree = {
 			add_timed_idea = { idea = CAN_r_paid_in_full days = 365 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_resource = { type = steel amount = 6 state = 682 }
-			466 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			276 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			}
-			467 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANDNC_r_hermit_bonus bonus = 1.0 uses = 2 category = industry }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -17909,23 +16108,6 @@ focus_tree = {
 				add_ideas = CAN_d2_empire_of_cold
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			468 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = naval_base level = 2 instant_build = yes }
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }
-			}
-			472 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			683 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
-			740 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-			}
 			add_tech_bonus = { name = CANFX_d2_the_empire_of_the_cold_bonus bonus = 1.0 uses = 1 category = electronics }
 			add_tech_bonus = { name = CANFX_d2_the_empire_of_the_cold_bonus bonus = 1.0 uses = 1 category = naval_equipment }
 			custom_effect_tooltip = generic_skip_one_line_tt
