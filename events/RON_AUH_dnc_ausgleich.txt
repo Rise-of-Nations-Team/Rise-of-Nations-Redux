@@ -55,7 +55,10 @@ country_event = {
 			has_political_power > 200
 		}
 		add_political_power = -200
-		subtract_from_variable = { AUH_quote = 1 }
+		if = {
+			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			subtract_from_variable = { AUH_quote = 1 }
+		}
 		add_to_variable = { HUN_support = 8 }
 		subtract_from_variable = { AUS_support = 4 }
 		subtract_from_variable = { CZE_support = 3 }
@@ -75,7 +78,10 @@ country_event = {
 		}
 		add_stability = -0.10
 		add_war_support = 0.05
-		add_to_variable = { AUH_quote = 2 }
+		if = {
+			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			add_to_variable = { AUH_quote = 2 }
+		}
 		subtract_from_variable = { AUH_gemeinsamkeit = 6 }
 		subtract_from_variable = { HUN_support = 12 }
 		subtract_from_variable = { CRO_support = 5 }
@@ -115,7 +121,10 @@ country_event = {
 		add_political_power = 50
 		add_stability = 0.05
 		add_to_variable = { AUH_gemeinsamkeit = 4 }
-		add_to_variable = { AUH_quote = 1 }
+		if = {
+			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			add_to_variable = { AUH_quote = 1 }
+		}
 		add_to_variable = { AUS_support = 3 }
 		add_to_variable = { CZE_support = 2 }
 		subtract_from_variable = { HUN_support = 3 }
@@ -237,6 +246,7 @@ country_event = {
 			set_variable = { AUH_renewal_window = 0 }
 			set_variable = { AUH_renewal_armed = 0 }
 			set_variable = { AUH_missed_renewals = 0 }
+			if = { limit = { has_idea = AUH_dnc_the_provisorium } remove_ideas = AUH_dnc_the_provisorium }
 			AUH_dnc_refresh_the_settlement = yes
 			AUH_dnc_ausgleich_clamp = yes
 		}
@@ -262,7 +272,7 @@ country_event = {
 					days = 730
 				}
 			}
-			set_variable = { AUH_missed_renewals = 1 }
+			set_country_flag = AUH_dnc_held_by_the_army
 			AUH_dnc_refresh_the_settlement = yes
 			AUH_dnc_ausgleich_clamp = yes
 		}
@@ -278,7 +288,10 @@ country_event = {
 			has_political_power > 200
 		}
 		add_political_power = -200
-		set_variable = { AUH_quote = 30 }
+		if = {
+			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			set_variable = { AUH_quote = 30 }
+		}
 		add_to_variable = { AUH_gemeinsamkeit = 18 }
 		add_to_variable = { HUN_support = 12 }
 		subtract_from_variable = { AUS_support = 8 }
@@ -333,7 +346,10 @@ country_event = {
 		}
 		add_stability = -0.06
 		subtract_from_variable = { AUH_gemeinsamkeit = 12 }
-		subtract_from_variable = { AUH_quote = 2 }
+		if = {
+			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			subtract_from_variable = { AUH_quote = 2 }
+		}
 		subtract_from_variable = { HUN_support = 5 }
 		add_to_variable = { CRO_support = 2 }
 		custom_effect_tooltip = auh_ausgleich_gave_way_tt

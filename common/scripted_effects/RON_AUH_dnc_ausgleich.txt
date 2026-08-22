@@ -10,7 +10,11 @@
 # Clamps everything this engine writes to
 AUH_dnc_ausgleich_clamp = {
 	clamp_variable = { var = AUH_gemeinsamkeit min = 0 max = 100 }
-	clamp_variable = { var = AUH_quote min = 25 max = 70 }
+	# an abolished quota is zero and must survive the clamp; a frozen one does not move at all
+	if = {
+		limit = { NOT = { check_variable = { var = AUH_quote value = 0 compare = equals } } }
+		clamp_variable = { var = AUH_quote min = 25 max = 70 }
+	}
 	clamp_variable = { var = HUN_support min = 0 max = 100 }
 	clamp_variable = { var = AUS_support min = 0 max = 100 }
 	clamp_variable = { var = CZE_support min = 0 max = 100 }
@@ -295,6 +299,7 @@ AUH_dnc_ausgleich_watch = {
 			check_variable = { var = AUH_months_to_renewal value = 1 compare = less_than }
 			check_variable = { var = AUH_renewal_window value = 1 compare = less_than }
 			NOT = { has_country_flag = AUH_dnc_union_dissolved }
+			NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } }
 		}
 		set_variable = { AUH_renewal_window = 1 }
 		set_variable = { AUH_renewal_armed = 0 }
@@ -311,10 +316,12 @@ AUH_dnc_ausgleich_watch = {
 	if = {
 		limit = {
 			check_variable = { var = AUH_ceiling_months value = 12 compare = greater_than_or_equals }
+			NOT = { has_country_flag = AUH_dnc_ceiling_asked }
 			NOT = { has_idea = AUH_dnc_hungarian_national_resistance }
 			NOT = { has_country_flag = AUH_dnc_union_dissolved }
 		}
 		set_variable = { AUH_ceiling_months = 0 }
+		set_country_flag = AUH_dnc_ceiling_asked
 		country_event = { id = auh_ausgleich.5 hours = 6 }
 	}
 
@@ -333,10 +340,19 @@ AUH_dnc_ausgleich_watch = {
 	if = {
 		limit = {
 			has_country_flag = AUH_dnc_floor_crisis
-			check_variable = { var = AUH_missed_renewals value = 1 compare = less_than }
-			check_variable = { var = AUH_gemeinsamkeit value = 20 compare = greater_than_or_equals }
+			OR = {
+				AND = {
+					check_variable = { var = AUH_missed_renewals value = 1 compare = less_than }
+					check_variable = { var = AUH_gemeinsamkeit value = 20 compare = greater_than_or_equals }
+				}
+				AND = {
+					has_country_flag = AUH_dnc_held_by_the_army
+					NOT = { has_idea = AUH_dnc_hungarian_national_resistance }
+				}
+			}
 		}
 		clr_country_flag = AUH_dnc_floor_crisis
+		clr_country_flag = AUH_dnc_held_by_the_army
 	}
 }
 

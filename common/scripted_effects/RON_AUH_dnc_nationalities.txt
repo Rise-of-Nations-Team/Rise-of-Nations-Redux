@@ -1,5 +1,9 @@
 # The register of the nationalities: one column per people, read once a month.
 
+AUH_nat_clear_all = {
+	every_owned_state = { AUH_nat_state_clear = yes }
+}
+
 AUH_nat_state_clear = {
 	if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
 	if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
@@ -26,17 +30,27 @@ AUH_nat_drift_AUS = {
 AUH_nat_thresholds_AUS = {
 	every_owned_state = {
 		limit = { is_core_of = AUS }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = AUS_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = AUS_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = AUS_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = AUS_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = AUS_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -46,6 +60,10 @@ AUH_nat_count_AUS = {
 	if = {
 		limit = { check_variable = { var = AUS_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = AUS_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -87,17 +105,27 @@ AUH_nat_drift_HUN = {
 AUH_nat_thresholds_HUN = {
 	every_owned_state = {
 		limit = { is_core_of = HUN }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = HUN_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = HUN_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = HUN_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = HUN_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = HUN_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -107,6 +135,10 @@ AUH_nat_count_HUN = {
 	if = {
 		limit = { check_variable = { var = HUN_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = HUN_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -148,17 +180,27 @@ AUH_nat_drift_CZE = {
 AUH_nat_thresholds_CZE = {
 	every_owned_state = {
 		limit = { is_core_of = CZE }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = CZE_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = CZE_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = CZE_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = CZE_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = CZE_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -168,6 +210,10 @@ AUH_nat_count_CZE = {
 	if = {
 		limit = { check_variable = { var = CZE_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = CZE_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -209,17 +255,27 @@ AUH_nat_drift_POL = {
 AUH_nat_thresholds_POL = {
 	every_owned_state = {
 		limit = { is_core_of = POL }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = POL_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = POL_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = POL_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = POL_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = POL_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -229,6 +285,10 @@ AUH_nat_count_POL = {
 	if = {
 		limit = { check_variable = { var = POL_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = POL_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -270,17 +330,27 @@ AUH_nat_drift_UKR = {
 AUH_nat_thresholds_UKR = {
 	every_owned_state = {
 		limit = { is_core_of = UKR }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = UKR_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = UKR_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = UKR_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = UKR_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = UKR_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -290,6 +360,10 @@ AUH_nat_count_UKR = {
 	if = {
 		limit = { check_variable = { var = UKR_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = UKR_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -331,17 +405,27 @@ AUH_nat_drift_ROM = {
 AUH_nat_thresholds_ROM = {
 	every_owned_state = {
 		limit = { is_core_of = ROM }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = ROM_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = ROM_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = ROM_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = ROM_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = ROM_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -351,6 +435,10 @@ AUH_nat_count_ROM = {
 	if = {
 		limit = { check_variable = { var = ROM_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = ROM_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -392,17 +480,27 @@ AUH_nat_drift_CRO = {
 AUH_nat_thresholds_CRO = {
 	every_owned_state = {
 		limit = { is_core_of = CRO }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = CRO_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = CRO_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = CRO_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = CRO_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = CRO_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -412,6 +510,10 @@ AUH_nat_count_CRO = {
 	if = {
 		limit = { check_variable = { var = CRO_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = CRO_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -453,17 +555,27 @@ AUH_nat_drift_SER = {
 AUH_nat_thresholds_SER = {
 	every_owned_state = {
 		limit = { is_core_of = SER }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = SER_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = SER_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = SER_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = SER_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = SER_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -473,6 +585,10 @@ AUH_nat_count_SER = {
 	if = {
 		limit = { check_variable = { var = SER_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = SER_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -514,17 +630,27 @@ AUH_nat_drift_BOS = {
 AUH_nat_thresholds_BOS = {
 	every_owned_state = {
 		limit = { is_core_of = BOS }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = BOS_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = BOS_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = BOS_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = BOS_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = BOS_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -534,6 +660,10 @@ AUH_nat_count_BOS = {
 	if = {
 		limit = { check_variable = { var = BOS_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = BOS_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -575,17 +705,27 @@ AUH_nat_drift_SLV = {
 AUH_nat_thresholds_SLV = {
 	every_owned_state = {
 		limit = { is_core_of = SLV }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = SLV_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = SLV_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = SLV_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = SLV_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = SLV_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -595,6 +735,10 @@ AUH_nat_count_SLV = {
 	if = {
 		limit = { check_variable = { var = SLV_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = SLV_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -636,17 +780,27 @@ AUH_nat_drift_ITA = {
 AUH_nat_thresholds_ITA = {
 	every_owned_state = {
 		limit = { is_core_of = ITA }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = ITA_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = ITA_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = ITA_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = ITA_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = ITA_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -656,6 +810,10 @@ AUH_nat_count_ITA = {
 	if = {
 		limit = { check_variable = { var = ITA_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = ITA_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -697,17 +855,27 @@ AUH_nat_drift_SLO = {
 AUH_nat_thresholds_SLO = {
 	every_owned_state = {
 		limit = { is_core_of = SLO }
-		AUH_nat_state_clear = yes
 		if = {
 			limit = { owner = { check_variable = { var = SLO_support value = 5 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_in_revolt }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } remove_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } } } add_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = SLO_support value = 20 compare = less_than } } }
-			add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
+			limit = {
+				owner = { check_variable = { var = SLO_support value = 20 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+			}
+			if = { limit = { has_dynamic_modifier = { modifier = AUH_nat_restless } } remove_dynamic_modifier = { modifier = AUH_nat_restless } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } } } add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
 		}
 		else_if = {
-			limit = { owner = { check_variable = { var = SLO_support value = 35 compare = less_than } } }
+			limit = {
+				owner = { check_variable = { var = SLO_support value = 35 compare = less_than } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_in_revolt } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy } }
+				NOT = { has_dynamic_modifier = { modifier = AUH_nat_restless } }
+			}
 			add_dynamic_modifier = { modifier = AUH_nat_restless }
 		}
 	}
@@ -717,6 +885,10 @@ AUH_nat_count_SLO = {
 	if = {
 		limit = { check_variable = { var = SLO_support value = 35 compare = less_than } }
 		add_to_variable = { var = AUH_nat_restless_count value = 1 }
+	}
+	if = {
+		limit = { check_variable = { var = SLO_support value = 5 compare = less_than } }
+		add_to_variable = { var = AUH_nat_rising_count value = 1 }
 	}
 }
 
@@ -740,6 +912,7 @@ AUH_nat_concede_SLO_8 = {
 
 AUH_nat_reckoning = {
 	set_variable = { AUH_nat_restless_count = 0 }
+	set_variable = { AUH_nat_rising_count = 0 }
 	AUH_nat_count_AUS = yes
 	AUH_nat_count_HUN = yes
 	AUH_nat_count_CZE = yes
@@ -752,6 +925,16 @@ AUH_nat_reckoning = {
 	AUH_nat_count_SLV = yes
 	AUH_nat_count_ITA = yes
 	AUH_nat_count_SLO = yes
+	# the strain scales with how many columns stand below the line
+	set_variable = { AUH_nat_strain_pp = AUH_nat_restless_count }
+	multiply_variable = { AUH_nat_strain_pp = -0.03 }
+	clamp_variable = { var = AUH_nat_strain_pp min = -0.30 max = 0 }
+	set_variable = { AUH_nat_strain_stability = AUH_nat_restless_count }
+	multiply_variable = { AUH_nat_strain_stability = -0.02 }
+	clamp_variable = { var = AUH_nat_strain_stability min = -0.20 max = 0 }
+	set_variable = { AUH_nat_strain_conscription = AUH_nat_restless_count }
+	multiply_variable = { AUH_nat_strain_conscription = -0.02 }
+	clamp_variable = { var = AUH_nat_strain_conscription min = -0.20 max = 0 }
 	if = {
 		limit = {
 			check_variable = { var = AUH_nat_restless_count value = 1 compare = greater_than_or_equals }
@@ -769,6 +952,7 @@ AUH_nat_reckoning = {
 }
 
 AUH_nat_monthly = {
+	AUH_nat_clear_all = yes
 	AUH_nat_drift_AUS = yes
 	AUH_nat_drift_HUN = yes
 	AUH_nat_drift_CZE = yes
@@ -808,4 +992,112 @@ AUH_nat_the_rising_breaks = {
 		add_dynamic_modifier = { modifier = AUH_nat_refuses_the_levy }
 		remove_dynamic_modifier = { modifier = AUH_nat_in_revolt }
 	}
+	if = {
+		limit = { check_variable = { var = AUS_support value = 5 compare = less_than } }
+		set_variable = { AUS_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = HUN_support value = 5 compare = less_than } }
+		set_variable = { HUN_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = CZE_support value = 5 compare = less_than } }
+		set_variable = { CZE_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = POL_support value = 5 compare = less_than } }
+		set_variable = { POL_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = UKR_support value = 5 compare = less_than } }
+		set_variable = { UKR_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = ROM_support value = 5 compare = less_than } }
+		set_variable = { ROM_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = CRO_support value = 5 compare = less_than } }
+		set_variable = { CRO_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = SER_support value = 5 compare = less_than } }
+		set_variable = { SER_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = BOS_support value = 5 compare = less_than } }
+		set_variable = { BOS_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = SLV_support value = 5 compare = less_than } }
+		set_variable = { SLV_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = ITA_support value = 5 compare = less_than } }
+		set_variable = { ITA_support = 8 }
+	}
+	if = {
+		limit = { check_variable = { var = SLO_support value = 5 compare = less_than } }
+		set_variable = { SLO_support = 8 }
+	}
+}
+
+AUH_nat_concede_BOS_15 = {
+	add_to_variable = { var = BOS_support value = 15 }
+	clamp_variable = { var = BOS_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_BOS_up_tt
+}
+
+AUH_nat_concede_CRO_12 = {
+	add_to_variable = { var = CRO_support value = 12 }
+	clamp_variable = { var = CRO_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_CRO_up_tt
+}
+
+AUH_nat_concede_CZE_10 = {
+	add_to_variable = { var = CZE_support value = 10 }
+	clamp_variable = { var = CZE_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_CZE_up_tt
+}
+
+AUH_nat_concede_ITA_15 = {
+	add_to_variable = { var = ITA_support value = 15 }
+	clamp_variable = { var = ITA_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_ITA_up_tt
+}
+
+AUH_nat_concede_POL_12 = {
+	add_to_variable = { var = POL_support value = 12 }
+	clamp_variable = { var = POL_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_POL_up_tt
+}
+
+AUH_nat_concede_ROM_12 = {
+	add_to_variable = { var = ROM_support value = 12 }
+	clamp_variable = { var = ROM_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_ROM_up_tt
+}
+
+AUH_nat_concede_SER_15 = {
+	add_to_variable = { var = SER_support value = 15 }
+	clamp_variable = { var = SER_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_SER_up_tt
+}
+
+AUH_nat_concede_SLO_15 = {
+	add_to_variable = { var = SLO_support value = 15 }
+	clamp_variable = { var = SLO_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_SLO_up_tt
+}
+
+AUH_nat_concede_SLV_15 = {
+	add_to_variable = { var = SLV_support value = 15 }
+	clamp_variable = { var = SLV_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_SLV_up_tt
+}
+
+AUH_nat_concede_UKR_15 = {
+	add_to_variable = { var = UKR_support value = 15 }
+	clamp_variable = { var = UKR_support min = 0 max = 100 }
+	custom_effect_tooltip = AUH_nat_UKR_up_tt
 }
