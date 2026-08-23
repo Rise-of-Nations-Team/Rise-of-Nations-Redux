@@ -204,7 +204,7 @@ AUH_franz_koritschoner={
 			}
 		}
 		field_marshal={
-			traits={ imperial_austrian_army old_guard artillery_specialist artillery_expert offensive_doctrine organizer brilliant_strategist career_officer }
+			traits={ imperial_austrian_army old_guard artillery_specialist2 offensive_doctrine organizer brilliant_strategist career_officer }
 			skill=5
 			attack_skill=4
 			defense_skill=3
@@ -394,7 +394,7 @@ AUH_franz_koritschoner={
 			}
 		}
 		corps_commander={
-			traits={ imperial_austrian_army war_hero brilliant_strategist engineer_officer artillery_officer artillery_specialist }
+			traits={ imperial_austrian_army war_hero brilliant_strategist engineer_officer artillery_officer artillery_specialist2 }
 			skill=5
 			attack_skill=5
 			defense_skill=3
@@ -486,7 +486,7 @@ AUH_franz_koritschoner={
 			}
 		}
 		corps_commander={
-			traits={ imperial_austrian_army politically_connected old_guard artillery_officer artillery_specialist }
+			traits={ imperial_austrian_army politically_connected old_guard artillery_officer artillery_specialist2 }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -778,7 +778,7 @@ AUH_franz_koritschoner={
 			}
 		}
 		corps_commander={
-			traits={ imperial_austrian_army war_hero brilliant_strategist career_officer artillery_officer artillery_specialist }
+			traits={ imperial_austrian_army war_hero brilliant_strategist career_officer artillery_officer artillery_specialist2 }
 			skill=3
 			attack_skill=2
 			defense_skill=2
@@ -965,9 +965,7 @@ AUH_franz_koritschoner={
 			slot = high_command
 			idea_token = AUH_alexander_von_broschaarenau
 			ledger  = army 
-			traits  = {
-				army_infantry_1 
-			}
+			traits  = { army_infantry_1 connected_citizen }
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -1287,9 +1285,7 @@ AUH_franz_koritschoner={
 			allowed  = {
 				original_tag  = AUH 
 			}
-			traits  = {
-				quartermaster_general 
-			}
+			traits  = { quartermaster_general head_of_intelligence }
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -1390,9 +1386,7 @@ AUH_franz_koritschoner={
 					date > 1909.12.31
 				}				
 			}			
-			traits = {
-				smooth_talking_charmer
-			}
+			traits = { smooth_talking_charmer backed_by_political_coalition }
 			ai_will_do = {
 				factor = 2
 			}
@@ -1524,9 +1518,7 @@ AUH_franz_koritschoner={
 			allowed  = {
 				original_tag  = AUH 
 			}
-			traits  = {
-				war_industrialist 
-			}
+			traits  = { war_industrialist head_of_intelligence }
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -1550,9 +1542,7 @@ AUH_franz_koritschoner={
 				allowed  = {
 				original_tag  = AUH 
 			}
-			traits  = {
-				army_logistics_1 
-			}
+			traits  = { army_logistics_1 general_staffer }
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -1577,9 +1567,7 @@ AUH_franz_koritschoner={
 			allowed  = {
 				original_tag  = AUH 
 			}
-			traits  = {
-				military_theorist 
-			}
+			traits  = { military_theorist head_of_intelligence }
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -1657,9 +1645,7 @@ AUH_franz_koritschoner={
 				original_tag  = AUH 
 				has_dlc = "La Resistance"
 			}
-			traits  = {
-				head_of_intelligence 
-			}
+			traits  = { head_of_intelligence dogged_investigator }
 			visible = {
 				date < 1949.1.1
 			}			
@@ -1685,9 +1671,7 @@ AUH_franz_koritschoner={
 			available = {
 				date < 1924.1.1
 			}
-			traits = {
-				war_industrialist
-			}
+			traits = { war_industrialist financial_expert }
 			ai_will_do = {
 				factor = 2
 			}
@@ -1831,9 +1815,7 @@ AUH_franz_koritschoner={
 					custom_effect_tooltip = increase_SER_discontent_by_5_tt
 				}
 			}
-			traits = {
-				social_reformer
-			}
+			traits = { social_reformer linchpin_of_infrastructure }
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -2028,9 +2010,7 @@ AUH_franz_koritschoner={
 			available = {
 				date < 1945.1.1
 			}
-			traits = {
-				silent_lawyer
-			}
+			traits = { silent_lawyer diplomat }
 			ai_will_do = {
 				factor = 2
 			}
@@ -2085,9 +2065,7 @@ AUH_franz_koritschoner={
 			available = {
 				date < 1949.1.1
 			}
-			traits = {
-				noble_beurocrat
-			}
+			traits = { noble_beurocrat colonial_governor }
 			ai_will_do = {
 				factor = 2
 			}
