@@ -1,0 +1,462 @@
+add_namespace = auh_court
+
+# A recurring pool of stand-alone crisis events for Austria-Hungary, 1900-1909.
+# Fired at random by a monthly chance roll wired into RON_AUH_dnc_on_actions.txt.
+# Purely additive: these touch only political_power, stability, war_support,
+# manpower, army/navy experience, AUH_strike_pressure, and small (1-4 point)
+# nudges to the register's nationality support variables. The register itself,
+# the Ausgleich engine, the focus tree, the companies and the cast are untouched.
+
+country_event = {
+	id = auh_court.1
+	title = auh_court.1.t
+	desc = auh_court.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.1.a
+		ai_chance = { factor = 35 }
+		add_political_power = 30
+		add_stability = -0.04
+		add_war_support = -0.02
+		add_to_variable = { var = AUS_support value = -2 }
+		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_skoda_coverup_tt
+	}
+	option = {
+		name = auh_court.1.b
+		ai_chance = { factor = 35 }
+		add_political_power = -40
+		add_stability = 0.04
+		add_army_experience = 10
+		add_to_variable = { var = AUS_support value = 2 }
+		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_skoda_inquiry_tt
+	}
+	option = {
+		name = auh_court.1.c
+		ai_chance = { factor = 30 }
+		add_political_power = -15
+		add_stability = 0.02
+		add_army_experience = 5
+		add_to_variable = { var = AUS_support value = 1 }
+		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_skoda_scapegoat_tt
+	}
+}
+
+country_event = {
+	id = auh_court.2
+	title = auh_court.2.t
+	desc = auh_court.2.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.2.a
+		ai_chance = { factor = 35 }
+		add_political_power = 15
+		add_war_support = 0.02
+		add_stability = -0.02
+		add_to_variable = { var = CZE_support value = -4 }
+		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_garrison_courtmartial_tt
+	}
+	option = {
+		name = auh_court.2.b
+		ai_chance = { factor = 35 }
+		add_political_power = -10
+		add_manpower = -3000
+		add_stability = 0.01
+	}
+	option = {
+		name = auh_court.2.c
+		ai_chance = { factor = 30 }
+		add_political_power = -20
+		add_war_support = -0.02
+		add_stability = 0.02
+		add_to_variable = { var = CZE_support value = 3 }
+		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_garrison_concession_tt
+	}
+}
+
+country_event = {
+	id = auh_court.3
+	title = auh_court.3.t
+	desc = auh_court.3.d
+	picture = GFX_report_event_generic_worker_protests
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.3.a
+		ai_chance = { factor = 30 }
+		add_political_power = -15
+		add_stability = 0.02
+		subtract_from_variable = { var = AUH_strike_pressure value = 10 }
+		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		custom_effect_tooltip = AUH_a_strike_pressure_down_tt
+	}
+	option = {
+		name = auh_court.3.b
+		ai_chance = { factor = 30 }
+		add_political_power = 20
+		add_stability = -0.05
+		add_war_support = -0.02
+		add_to_variable = { var = AUH_strike_pressure value = 15 }
+		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		custom_effect_tooltip = AUH_a_strike_pressure_up_tt
+	}
+	option = {
+		name = auh_court.3.c
+		ai_chance = { factor = 40 }
+		add_political_power = -35
+		add_stability = 0.03
+		subtract_from_variable = { var = AUH_strike_pressure value = 15 }
+		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		custom_effect_tooltip = AUH_a_strike_pressure_down_tt
+		add_to_variable = { var = CZE_support value = 2 }
+		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		add_to_variable = { var = ITA_support value = 2 }
+		clamp_variable = { var = ITA_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_franchise_promise_tt
+	}
+}
+
+country_event = {
+	id = auh_court.4
+	title = auh_court.4.t
+	desc = auh_court.4.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.4.a
+		ai_chance = { factor = 35 }
+		add_political_power = 25
+		add_stability = -0.04
+		add_war_support = -0.01
+	}
+	option = {
+		name = auh_court.4.b
+		ai_chance = { factor = 30 }
+		add_political_power = -35
+		add_stability = 0.04
+	}
+	option = {
+		name = auh_court.4.c
+		ai_chance = { factor = 35 }
+		add_political_power = -10
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = auh_court.5
+	title = auh_court.5.t
+	desc = auh_court.5.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.5.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.03
+		add_political_power = -15
+	}
+	option = {
+		name = auh_court.5.b
+		ai_chance = { factor = 30 }
+		add_political_power = 15
+		add_stability = -0.02
+	}
+	option = {
+		name = auh_court.5.c
+		ai_chance = { factor = 30 }
+		add_stability = 0.01
+		add_political_power = -5
+	}
+}
+
+country_event = {
+	id = auh_court.6
+	title = auh_court.6.t
+	desc = auh_court.6.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.6.a
+		ai_chance = { factor = 35 }
+		add_political_power = -20
+		add_stability = 0.02
+	}
+	option = {
+		name = auh_court.6.b
+		ai_chance = { factor = 30 }
+		add_stability = -0.03
+		add_war_support = 0.03
+		add_to_variable = { var = UKR_support value = -3 }
+		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_timetable_suspicion_tt
+	}
+	option = {
+		name = auh_court.6.c
+		ai_chance = { factor = 35 }
+		add_political_power = -30
+		add_army_experience = 8
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = auh_court.7
+	title = auh_court.7.t
+	desc = auh_court.7.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.7.a
+		ai_chance = { factor = 35 }
+		add_manpower = -1500
+		add_stability = 0.03
+		add_to_variable = { var = HUN_support value = 3 }
+		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_flood_response_tt
+	}
+	option = {
+		name = auh_court.7.b
+		ai_chance = { factor = 30 }
+		add_stability = -0.03
+		add_to_variable = { var = HUN_support value = -3 }
+		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_flood_neglect_tt
+	}
+	option = {
+		name = auh_court.7.c
+		ai_chance = { factor = 35 }
+		add_political_power = -30
+		add_stability = 0.02
+		add_to_variable = { var = HUN_support value = 2 }
+		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_flood_commission_tt
+	}
+}
+
+country_event = {
+	id = auh_court.8
+	title = auh_court.8.t
+	desc = auh_court.8.d
+	picture = GFX_report_event_generic_destroyed_vehicles
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.8.a
+		ai_chance = { factor = 35 }
+		add_manpower = -1500
+		add_stability = 0.02
+		add_to_variable = { var = UKR_support value = 3 }
+		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_oilfire_response_tt
+	}
+	option = {
+		name = auh_court.8.b
+		ai_chance = { factor = 30 }
+		add_stability = -0.02
+		add_to_variable = { var = UKR_support value = -3 }
+		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_oilfire_neglect_tt
+	}
+	option = {
+		name = auh_court.8.c
+		ai_chance = { factor = 35 }
+		add_political_power = -25
+		add_stability = 0.02
+		add_army_experience = 5
+		add_to_variable = { var = UKR_support value = 2 }
+		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_oilfire_code_tt
+	}
+}
+
+country_event = {
+	id = auh_court.9
+	title = auh_court.9.t
+	desc = auh_court.9.d
+	picture = GFX_report_event_generic_funeral
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.9.a
+		ai_chance = { factor = 30 }
+		add_political_power = -20
+		add_stability = 0.03
+		add_to_variable = { var = ROM_support value = -2 }
+		clamp_variable = { var = ROM_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_cholera_closed_tt
+	}
+	option = {
+		name = auh_court.9.b
+		ai_chance = { factor = 30 }
+		add_political_power = 10
+		add_stability = -0.04
+		add_manpower = -1000
+	}
+	option = {
+		name = auh_court.9.c
+		ai_chance = { factor = 40 }
+		add_political_power = -15
+		add_stability = 0.02
+		add_war_support = 0.01
+		add_to_variable = { var = ROM_support value = 2 }
+		clamp_variable = { var = ROM_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_cholera_measured_tt
+	}
+}
+
+country_event = {
+	id = auh_court.10
+	title = auh_court.10.t
+	desc = auh_court.10.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.10.a
+		ai_chance = { factor = 35 }
+		add_stability = 0.03
+		add_political_power = -15
+		add_to_variable = { var = ITA_support value = -4 }
+		clamp_variable = { var = ITA_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_trieste_roundup_tt
+	}
+	option = {
+		name = auh_court.10.b
+		ai_chance = { factor = 30 }
+		add_stability = -0.01
+		add_political_power = 10
+	}
+	option = {
+		name = auh_court.10.c
+		ai_chance = { factor = 35 }
+		add_stability = -0.03
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = auh_court.11
+	title = auh_court.11.t
+	desc = auh_court.11.d
+	picture = GFX_report_event_generic_political_pressure
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.11.a
+		ai_chance = { factor = 35 }
+		add_war_support = 0.03
+		add_stability = -0.02
+		add_political_power = 15
+		add_to_variable = { var = SER_support value = -4 }
+		clamp_variable = { var = SER_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_pigwar_embargo_tt
+	}
+	option = {
+		name = auh_court.11.b
+		ai_chance = { factor = 30 }
+		add_political_power = -25
+		add_stability = 0.02
+		add_to_variable = { var = SER_support value = 3 }
+		clamp_variable = { var = SER_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_pigwar_quota_tt
+	}
+	option = {
+		name = auh_court.11.c
+		ai_chance = { factor = 35 }
+		add_political_power = 10
+		add_stability = -0.01
+		add_to_variable = { var = SER_support value = -1 }
+		clamp_variable = { var = SER_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_pigwar_technical_tt
+	}
+}
+
+country_event = {
+	id = auh_court.12
+	title = auh_court.12.t
+	desc = auh_court.12.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.12.a
+		ai_chance = { factor = 35 }
+		add_political_power = 20
+		add_stability = -0.02
+		add_to_variable = { var = BOS_support value = -3 }
+		clamp_variable = { var = BOS_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_bosnia_discipline_tt
+	}
+	option = {
+		name = auh_court.12.b
+		ai_chance = { factor = 30 }
+		add_political_power = -30
+		add_stability = 0.03
+		add_to_variable = { var = BOS_support value = 3 }
+		clamp_variable = { var = BOS_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_bosnia_tribunal_tt
+	}
+	option = {
+		name = auh_court.12.c
+		ai_chance = { factor = 35 }
+		add_political_power = -10
+		add_stability = 0.01
+		add_to_variable = { var = BOS_support value = 1 }
+		clamp_variable = { var = BOS_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_court_bosnia_reassign_tt
+	}
+}
+
+country_event = {
+	id = auh_court.13
+	title = auh_court.13.t
+	desc = auh_court.13.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = { tag = AUH }
+	option = {
+		name = auh_court.13.a
+		ai_chance = { factor = 35 }
+		add_stability = 0.02
+		add_war_support = -0.02
+		add_political_power = -10
+	}
+	option = {
+		name = auh_court.13.b
+		ai_chance = { factor = 30 }
+		add_stability = -0.02
+		add_political_power = 15
+		add_army_experience = 5
+	}
+	option = {
+		name = auh_court.13.c
+		ai_chance = { factor = 35 }
+		add_manpower = -800
+		add_stability = 0.03
+	}
+}
