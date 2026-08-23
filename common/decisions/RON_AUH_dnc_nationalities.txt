@@ -156,4 +156,40 @@ AUH_dnc_nationalities_cat = {
 			AUH_nat_the_rising_breaks = yes
 		}
 	}
+
+	AUH_r_convene_the_estates = {
+		icon = GFX_decision_category_generic_political_actions
+		cost = 50
+		days_remove = 365
+		fire_only_once = no
+		visible = {
+			has_completed_focus = AUHDNC_r_the_estates_are_summoned
+		}
+		remove_effect = {
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = { var = AUH_gemeinsamkeit min = 0 max = 100 }
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 15
+				check_variable = { var = AUH_gemeinsamkeit value = 40 compare = less_than }
+			}
+		}
+	}
+
+		# Flavor: the joint bank of issue finally gets a governor named to answer for it in both capitals.
+	AUH_eco_charter_the_common_banks_governor = {
+		icon = GFX_decision_generic_decision
+		cost = 10
+		fire_only_once = yes
+		visible = { has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals }
+		available = { always = yes }
+		complete_effect = {
+			custom_effect_tooltip = AUH_eco_common_banks_governor_tt
+			add_political_power = 15
+			add_stability = 0.01
+		}
+	}
 }
