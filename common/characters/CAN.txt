@@ -44,7 +44,8 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				silent_workhorse 
+				silent_workhorse
+				financial_expert
 			}
             visible = {
 				date > 1905.1.1
@@ -277,9 +278,10 @@ characters={
 			allowed  = {
 				original_tag  = CAN
 			}
-			ledger  = army 
+			ledger  = army
 			traits  = {
-				army_regrouping_2 
+				army_regrouping_2
+				army_radio_intelligence_1
 			}
 			cost = 100
 			ai_will_do  = {
@@ -319,9 +321,10 @@ characters={
 			allowed  = {
 				original_tag  = CAN
 			}
-			ledger  = army 
+			ledger  = army
 			traits  = {
-				army_regrouping_2 
+				army_regrouping_2
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do  = {
@@ -367,9 +370,10 @@ characters={
 			visible = {
                 date < 1919.1.1	
 			}
-			ledger  = army 
+			ledger  = army
 			traits  = {
-				army_logistics_2 
+				army_logistics_2
+				army_concealment_2
 			}
 			cost = 100
 			ai_will_do  = {
@@ -858,6 +862,7 @@ characters={
 			}
 			traits = {
 				military_theorist
+				grand_battle_plan_expert
 			}
 			available = {
 				date > 1925.1.1
@@ -931,6 +936,7 @@ characters={
 			}
 			traits = {
 				air_warfare_theorist
+				victory_through_airpower
 			}
             visible = {
 				date > 1918.1.1
@@ -1645,7 +1651,8 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				quartermaster_general 
+				quartermaster_general
+				compassionate_gentleman
 			}
             visible = {
 				date > 1928.1.1
@@ -1672,7 +1679,8 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				ideological_crusader 
+				ideological_crusader
+				economist
 			}
             visible = {
                 date < 1941.1.1			
@@ -1755,11 +1763,12 @@ characters={
 				has_completed_focus = CAN_crown_corporations 
 			}
 			traits = {
-				captain_of_industry 
+				captain_of_industry
+				armaments_organizer
 			}
             visible = {
 				date > 1933.1.1
-                date < 1958.1.1			
+                date < 1958.1.1
             }
 			available = {
 				date > 1933.1.1
@@ -1785,7 +1794,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { captain_of_industry }
+			traits = { captain_of_industry financial_expert }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1803,7 +1812,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { silent_workhorse }
+			traits = { silent_workhorse economic_organizer }
 			ai_will_do = { factor = 1 modifier = { add = 100 date < 1905.3.1 } }
 		}
 	}
@@ -1839,7 +1848,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { smooth_talking_con_man }
+			traits = { smooth_talking_con_man smooth_talking_charmer }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1857,7 +1866,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { silent_workhorse }
+			traits = { silent_workhorse old_figurehead }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1875,7 +1884,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { captain_of_industry }
+			traits = { captain_of_industry economist }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1893,7 +1902,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { ideological_crusader }
+			traits = { ideological_crusader editor }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1911,7 +1920,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { quartermaster_general }
+			traits = { quartermaster_general war_industrialist }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1929,7 +1938,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { silent_workhorse }
+			traits = { silent_workhorse editor }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1947,7 +1956,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 has_country_flag = CAN_dnc_path_imperial }
 			available = { date < 1910.1.1 has_country_flag = CAN_dnc_path_imperial }
-			traits = { ideological_crusader }
+			traits = { ideological_crusader old_figurehead }
 			ai_will_do = { factor = 1 }
 		}
 	
@@ -1958,7 +1967,7 @@ characters={
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
 			cost = 100
-			traits = { military_theorist }
+			traits = { military_theorist mobile_warfare_expert }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1976,7 +1985,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 has_country_flag = CAN_dnc_path_continental }
 			available = { date < 1910.1.1 has_country_flag = CAN_dnc_path_continental }
-			traits = { smooth_talking_con_man }
+			traits = { smooth_talking_con_man captain_of_industry }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -1994,7 +2003,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 has_country_flag = CAN_dnc_path_sovereign }
 			available = { date < 1910.1.1 has_country_flag = CAN_dnc_path_sovereign }
-			traits = { captain_of_industry }
+			traits = { captain_of_industry editor }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -2012,7 +2021,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 has_country_flag = CAN_dnc_path_pacific }
 			available = { date < 1910.1.1 has_country_flag = CAN_dnc_path_pacific }
-			traits = { smooth_talking_con_man }
+			traits = { smooth_talking_con_man economist }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -2103,7 +2112,7 @@ characters={
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
 			cost = 100
-			traits = { military_theorist }
+			traits = { military_theorist propaganda_expert }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -2121,7 +2130,7 @@ characters={
 			allowed = { original_tag = CAN }
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
-			traits = { army_logistics_2 }
+			traits = { army_logistics_2 captain_of_industry }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -2253,7 +2262,7 @@ characters={
 			visible = { has_completed_focus = CANDNC_air_the_aerial_experiment_association date < 1910.1.1 }
 			available = { has_completed_focus = CANDNC_air_the_aerial_experiment_association date < 1910.1.1 }
 			cost = 100
-			traits = { air_warfare_theorist }
+			traits = { air_warfare_theorist light_aircraft_manufacturer }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -2272,7 +2281,7 @@ characters={
 			visible = { date < 1910.1.1 }
 			available = { date < 1910.1.1 }
 			cost = 100
-			traits = { naval_theorist }
+			traits = { naval_theorist council_of_theorists }
 			ai_will_do = { factor = 1 }
 		}
 	}
@@ -2291,7 +2300,7 @@ characters={
 			visible = { has_completed_focus = CANDNC_p_keels_from_kure }
 			available = { has_completed_focus = CANDNC_p_keels_from_kure }
 			cost = 100
-			traits = { naval_theorist }
+			traits = { naval_theorist grand_fleet_proponent }
 			ai_will_do = { factor = 2 }
 		}
 	}
@@ -2310,7 +2319,7 @@ characters={
 			visible = { has_completed_focus = CANDNC_c_the_continental_defence_understanding }
 			available = { has_completed_focus = CANDNC_c_the_continental_defence_understanding }
 			cost = 100
-			traits = { military_theorist }
+			traits = { military_theorist mass_assault_expert }
 			ai_will_do = { factor = 2 }
 		}
 	}
@@ -2408,7 +2417,7 @@ characters={
 			visible = { OR = { has_completed_focus = CANDNC_d_the_kingdom_of_canada_proclaimed has_completed_focus = CANDNC_d_the_republic_of_canada_proclaimed } }
 			available = { OR = { has_completed_focus = CANDNC_d_the_kingdom_of_canada_proclaimed has_completed_focus = CANDNC_d_the_republic_of_canada_proclaimed } }
 			cost = 100
-			traits = { military_theorist }
+			traits = { military_theorist submarine_specialist }
 			ai_will_do = { factor = 3 }
 		}
 	}
