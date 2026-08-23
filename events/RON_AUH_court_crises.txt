@@ -1,7 +1,9 @@
 add_namespace = auh_court
 
 # A recurring pool of stand-alone crisis events for Austria-Hungary, 1900-1909.
-# Fired at random by a monthly chance roll wired into RON_AUH_dnc_on_actions.txt.
+# NOT YET WIRED: no on_action, decision, or focus calls these events. They are
+# is_triggered_only with no caller, so none of them can fire until a delivery
+# mechanism (e.g. a monthly chance roll in RON_AUH_dnc_on_actions.txt) is added.
 # Purely additive: these touch only political_power, stability, war_support,
 # manpower, army/navy experience, AUH_strike_pressure, and small (1-4 point)
 # nudges to the register's nationality support variables. The register itself,
@@ -88,7 +90,7 @@ country_event = {
 	id = auh_court.3
 	title = auh_court.3.t
 	desc = auh_court.3.d
-	picture = GFX_report_event_generic_worker_protests
+	picture = GFX_report_event_generic_riot
 	is_triggered_only = yes
 	fire_only_once = no
 	trigger = { tag = AUH }
@@ -256,7 +258,7 @@ country_event = {
 	id = auh_court.8
 	title = auh_court.8.t
 	desc = auh_court.8.d
-	picture = GFX_report_event_generic_destroyed_vehicles
+	picture = GFX_report_event_generic_ruins
 	is_triggered_only = yes
 	fire_only_once = no
 	trigger = { tag = AUH }
@@ -360,7 +362,7 @@ country_event = {
 	id = auh_court.11
 	title = auh_court.11.t
 	desc = auh_court.11.d
-	picture = GFX_report_event_generic_political_pressure
+	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = no
 	trigger = { tag = AUH }
