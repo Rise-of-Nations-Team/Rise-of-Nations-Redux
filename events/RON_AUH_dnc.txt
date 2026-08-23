@@ -4751,3 +4751,471 @@ country_event = {
 		ENG = { add_opinion_modifier = { target = AUH modifier = RI_visited_capital } }
 	}
 }
+
+country_event = {
+	id = auh_dnc.507
+	title = auh_dnc.507.t
+	desc = auh_dnc.507.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	trigger = { tag = SER }
+	option = {
+		name = auh_dnc.507.a
+		ai_chance = {
+			base = 35
+			modifier = { factor = 1.5 has_opinion = { target = FROM value < -20 } }
+			modifier = { factor = 1.5 has_opinion = { target = FROM value < -50 } }
+			modifier = { factor = 0.5 strength_ratio = { tag = FROM ratio < 0.3 } }
+		}
+		add_war_support = 0.05
+		add_political_power = -10
+		set_country_flag = SER_bp_mobilized
+		custom_effect_tooltip = AUH_bp_507a_tt
+		RUS = { country_event = { id = auh_dnc.508 days = 10 } }
+	}
+	option = {
+		name = auh_dnc.507.b
+		ai_chance = {
+			base = 65
+			modifier = { factor = 1.4 strength_ratio = { tag = FROM ratio < 0.3 } }
+		}
+		add_political_power = 10
+		set_country_flag = SER_bp_protested
+		custom_effect_tooltip = AUH_bp_507b_tt
+		RUS = { country_event = { id = auh_dnc.508 days = 10 } }
+	}
+}
+
+country_event = {
+	id = auh_dnc.508
+	title = auh_dnc.508.t
+	desc = auh_dnc.508.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	trigger = { tag = RUS }
+	option = {
+		name = auh_dnc.508.a
+		ai_chance = {
+			base = 35
+			modifier = { factor = 1.6 FROM = { has_country_flag = SER_bp_mobilized } }
+			modifier = { factor = 0.6 FROM = { has_country_flag = SER_bp_protested } }
+			modifier = { factor = 0.4 AUH = { has_opinion = { target = GER value > 30 } } }
+			modifier = { factor = 0.3 AUH = { has_opinion = { target = GER value > 60 } } }
+			modifier = { factor = 0.6 strength_ratio = { tag = GER ratio < 1 } }
+		}
+		if = { limit = { country_exists = AUH } add_opinion_modifier = { target = AUH modifier = large_decrease } AUH = { add_opinion_modifier = { target = RUS modifier = large_decrease } } }
+		if = { limit = { country_exists = SER } SER = { add_opinion_modifier = { target = RUS modifier = large_increase } } }
+		hidden_effect = { add_ai_strategy = { type = antagonize id = AUH value = 50 } }
+		set_global_flag = AUH_bp_powder_keg_lit
+		custom_effect_tooltip = AUH_bp_508a_tt
+		AUH = { country_event = { id = auh_dnc.509 days = 12 } }
+	}
+	option = {
+		name = auh_dnc.508.b
+		ai_chance = {
+			base = 65
+			modifier = { factor = 1.4 AUH = { has_opinion = { target = GER value > 30 } } }
+			modifier = { factor = 1.3 AUH = { has_opinion = { target = GER value > 60 } } }
+			modifier = { factor = 0.6 FROM = { has_country_flag = SER_bp_mobilized } }
+		}
+		if = { limit = { country_exists = GER } add_opinion_modifier = { target = GER modifier = medium_decrease } }
+		if = { limit = { country_exists = SER } SER = { add_opinion_modifier = { target = RUS modifier = small_decrease } } }
+		hidden_effect = { add_ai_strategy = { type = antagonize id = GER value = 20 } }
+		set_global_flag = AUH_bp_crisis_settled_quietly
+		custom_effect_tooltip = AUH_bp_508b_tt
+		AUH = { country_event = { id = auh_dnc.509 days = 12 } }
+	}
+}
+
+country_event = {
+	id = auh_dnc.509
+	title = auh_dnc.509.t
+	desc = auh_dnc.509.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_dnc.509.a
+		trigger = { has_global_flag = AUH_bp_powder_keg_lit }
+		ai_chance = { base = 100 }
+		create_wargoal = { type = annex_everything target = SER }
+		add_war_support = 0.10
+		add_political_power = -25
+		add_named_threat = { threat = 1 name = AUH_bp_the_powder_keg_threat }
+		hidden_effect = { add_ai_strategy = { type = antagonize id = SER value = 50 } }
+		add_to_variable = { AUH_bp_the_powder_keg = 2 }
+		clamp_variable = { var = AUH_bp_the_powder_keg min = 0 max = 5 }
+		custom_effect_tooltip = AUH_bp_509a_tt
+	}
+	option = {
+		name = auh_dnc.509.b
+		trigger = { has_global_flag = AUH_bp_crisis_settled_quietly }
+		ai_chance = { base = 100 }
+		add_political_power = 25
+		add_stability = 0.03
+		if = { limit = { country_exists = GER } add_opinion_modifier = { target = GER modifier = small_increase } }
+		subtract_from_variable = { AUH_bp_the_powder_keg = 1 }
+		clamp_variable = { var = AUH_bp_the_powder_keg min = 0 max = 5 }
+		custom_effect_tooltip = AUH_bp_509b_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.424
+	title = auh_dnc.424.t
+	desc = auh_dnc.424.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = MNT
+	}
+	option = {
+		name = auh_dnc.424.a
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 3 strength_ratio = { tag = AUH ratio < 0.2 } }
+			modifier = { factor = 0.4 has_opinion = { target = AUH value < -50 } }
+			modifier = { factor = 1.5 has_war = yes }
+			modifier = { factor = 0.5 has_country_flag = AUH_dnc_provinces_declared }
+		}
+		add_opinion_modifier = { target = AUH modifier = medium_increase }
+		custom_effect_tooltip = AUH_m_cattaro_ceded_tt
+		hidden_effect = {
+			AUH = {
+				set_country_flag = AUH_m_cattaro_ceded
+				country_event = { id = auh_dnc.425 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = auh_dnc.424.b
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 0.3 strength_ratio = { tag = AUH ratio < 0.2 } }
+			modifier = { factor = 2 has_opinion = { target = AUH value < -50 } }
+			modifier = { factor = 0.5 has_war = yes }
+			modifier = { factor = 1.5 has_country_flag = AUH_dnc_provinces_declared }
+		}
+		add_opinion_modifier = { target = AUH modifier = large_decrease }
+		custom_effect_tooltip = AUH_m_cattaro_refused_tt
+		hidden_effect = {
+			AUH = {
+				set_country_flag = AUH_m_cattaro_refused
+				country_event = { id = auh_dnc.425 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = auh_dnc.425
+	title = auh_dnc.425.t
+	desc = {
+		text = auh_dnc.425.ceded.d
+		trigger = { has_country_flag = AUH_m_cattaro_ceded }
+	}
+	desc = {
+		text = auh_dnc.425.refused.d
+		trigger = { has_country_flag = AUH_m_cattaro_refused }
+	}
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = AUH
+	}
+	option = {
+		name = auh_dnc.425.a
+		trigger = { has_country_flag = AUH_m_cattaro_ceded }
+		ai_chance = { factor = 100 }
+		add_political_power = 25
+		add_to_variable = { var = SER_support value = -3 } clamp_variable = { var = SER_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_m_tt_ser_down
+	}
+	option = {
+		name = auh_dnc.425.b
+		trigger = { has_country_flag = AUH_m_cattaro_refused }
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { country_exists = MNT }
+			create_wargoal = { type = annex_everything target = MNT }
+			add_named_threat = { threat = 2 name = AUH_m_the_bay_threat }
+		}
+		add_war_support = 0.05
+		add_to_variable = { var = SER_support value = -15 } clamp_variable = { var = SER_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_m_tt_ser_down
+	}
+}
+
+country_event = {
+	id = auh_dnc.320
+	title = auh_dnc.320.t
+	desc = auh_dnc.320.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	option = {
+		name = auh_dnc.320.a
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 2 has_country_flag = AUH_h_road_independence }
+			modifier = { factor = 2 check_variable = { AUH_gemeinsamkeit < 40 } }
+		}
+		add_stability = 0.03
+		set_country_flag = AUH_h_the_household_leans_accept
+		custom_effect_tooltip = AUH_h_household_accept_tt
+		country_event = { id = auh_dnc.321 days = 20 random_days = 20 }
+	}
+	option = {
+		name = auh_dnc.320.b
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 2 check_variable = { AUH_gemeinsamkeit > 55 } }
+			modifier = { factor = 2 check_variable = { AUH_h_the_price_paid < 30 } }
+		}
+		add_stability = -0.02
+		set_country_flag = AUH_h_the_household_leans_stall
+		custom_effect_tooltip = AUH_h_household_stall_tt
+		country_event = { id = auh_dnc.322 days = 20 random_days = 20 }
+	}
+}
+
+country_event = {
+	id = auh_dnc.321
+	title = auh_dnc.321.t
+	desc = auh_dnc.321.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_dnc.321.a
+		ai_chance = { factor = 100 }
+		set_country_flag = AUH_h_the_household_yielded
+		add_political_power = 50
+		add_stability = 0.02
+		add_to_variable = { HUN_support = 8 }
+		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_h_nat_HUN_up_tt
+		custom_effect_tooltip = AUH_h_household_yields_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.322
+	title = auh_dnc.322.t
+	desc = auh_dnc.322.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_dnc.322.a
+		ai_chance = { factor = 100 }
+		set_country_flag = AUH_h_the_household_dug_in
+		add_political_power = -75
+		add_stability = -0.03
+		add_to_variable = { AUH_gemeinsamkeit = -5 }
+		clamp_variable = { var = AUH_gemeinsamkeit min = 0 max = 100 }
+		custom_effect_tooltip = AUH_h_gemein_down_tt
+		custom_effect_tooltip = AUH_h_household_digs_in_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.658
+	title = auh_dnc.658.t
+	desc = auh_dnc.658.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = auh_dnc.658.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = AUH_arm_the_counties_are_told_tt
+		custom_effect_tooltip = AUH_arm_hun_reads_the_limit_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.659
+	title = auh_dnc.659.t
+	desc = auh_dnc.659.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = auh_dnc.659.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = AUH_arm_hun_is_paid_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.660
+	title = auh_dnc.660.t
+	desc = auh_dnc.660.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = auh_dnc.660.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = AUH_arm_the_diets_carry_it_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.711
+	title = auh_dnc.711.t
+	desc = auh_dnc.711.d
+	picture = GFX_report_event_generic_strike
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+
+	option = {
+		name = auh_dnc.711.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 2
+				check_variable = { var = AUH_strike_pressure value = 30 compare = greater_than_or_equals }
+			}
+		}
+		add_stability = -0.03
+		add_war_support = -0.02
+		add_political_power = -25
+		add_to_variable = { var = AUH_strike_pressure value = 10 }
+		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		custom_effect_tooltip = AUH_a_strike_pressure_up_tt
+		set_country_flag = { flag = AUH_dnc_port_strike_delay value = 1 days = 45 }
+		custom_effect_tooltip = AUH_dnc_port_strike_delay_tt
+	}
+
+	option = {
+		name = auh_dnc.711.b
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 2
+				check_variable = { var = AUH_strike_pressure value = 15 compare = less_than }
+			}
+		}
+		add_stability = 0.02
+		add_political_power = 25
+		subtract_from_variable = { var = AUH_strike_pressure value = 5 }
+		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		custom_effect_tooltip = AUH_a_strike_pressure_down_tt
+	}
+}
+
+country_event = {
+	id = auh_dnc.661
+	title = auh_dnc.661.t
+	desc = auh_dnc.661.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = AUH
+	}
+
+	option = {
+		name = auh_dnc.661.a
+		ai_chance = {
+			factor = 60
+			modifier = { factor = 1.4 has_stability < 0.45 }
+			modifier = { factor = 0.6 has_country_flag = AUH_dnc_path_sword }
+		}
+		add_political_power = 25
+	}
+	option = {
+		name = auh_dnc.661.b
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 2 has_country_flag = AUH_dnc_path_sword }
+			modifier = { factor = 1.3 has_stability > 0.5 }
+		}
+		add_command_power = 20
+		add_stability = -0.02
+		add_to_variable = { var = AUH_arm_staff_grudge value = 1 }
+		clamp_variable = { var = AUH_arm_staff_grudge min = 0 max = 3 }
+		custom_effect_tooltip = AUH_arm_staff_grudge_tt
+	}
+}
+
+# r.18 - The diet returns its verdict
+country_event = {
+	id = auh_dnc.217
+	title = auh_dnc.217.t
+	desc = auh_dnc.217.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = auh_dnc.217.a
+		ai_chance = { base = 60 }
+		add_to_variable = { CZE_support = 8 }
+		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_r_sup_CZE_up_tt
+		add_stability = 0.05
+		add_political_power = 30
+		set_country_flag = AUH_r_diet_swept
+		custom_effect_tooltip = AUH_r_the_bench_is_settled_tt
+	}
+	option = {
+		name = auh_dnc.217.b
+		ai_chance = { base = 40 }
+		subtract_from_variable = { CZE_support = 3 }
+		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		custom_effect_tooltip = AUH_r_sup_CZE_down_tt
+		add_to_variable = { AUH_ring_seats = 4 }
+		clamp_variable = { var = AUH_ring_seats min = 0 max = 600 }
+		custom_effect_tooltip = AUH_r_seats_up_tt
+		add_stability = -0.03
+		add_political_power = -15
+		set_country_flag = AUH_r_diet_hung
+		custom_effect_tooltip = AUH_r_the_house_is_split_tt
+	}
+}
+
+# r.19 - A coronation, and a ledger
+country_event = {
+	id = auh_dnc.218
+	title = auh_dnc.218.t
+	desc = auh_dnc.218.d
+	picture = GFX_report_event_crowd_in_prague
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = auh_dnc.218.a
+		ai_chance = { base = 100 }
+		trigger = { has_country_flag = AUH_r_diet_swept }
+		custom_effect_tooltip = AUH_r_the_coronation_is_untroubled_tt
+	}
+	option = {
+		name = auh_dnc.218.b
+		ai_chance = { base = 100 }
+		trigger = { has_country_flag = AUH_r_diet_hung }
+		add_stability = -0.05
+		add_political_power = -25
+		custom_effect_tooltip = AUH_r_the_crown_answers_a_fractured_house_tt
+	}
+	option = {
+		name = auh_dnc.218.c
+		ai_chance = { base = 100 }
+		trigger = {
+			NOT = { has_country_flag = AUH_r_diet_swept }
+			NOT = { has_country_flag = AUH_r_diet_hung }
+		}
+		custom_effect_tooltip = AUH_r_the_old_estates_never_voted_tt
+	}
+}
