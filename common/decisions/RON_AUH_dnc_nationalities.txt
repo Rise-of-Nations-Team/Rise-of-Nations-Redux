@@ -1,5 +1,17 @@
 AUH_dnc_nationalities_cat = {
 
+	# The register itself, read where the Crown actually acts on it -- no clicking through
+	# to the national spirits tray to see who needs conciliating.
+	AUH_nat_the_register_overview = {
+		icon = GFX_decision_generic_decision
+		cost = 0
+		days_remove = 1
+		fire_only_once = no
+		allowed = { always = yes }
+		visible = { always = yes }
+		remove_effect = { custom_effect_tooltip = AUH_nat_register_overview_noop_tt }
+	}
+
 	# Conciliation. The Crown buys a column of the register back, and the concession takes a month to be felt.
 
 	AUH_conciliate_AUS = {
