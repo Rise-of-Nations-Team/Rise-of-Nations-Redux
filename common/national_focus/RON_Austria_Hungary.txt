@@ -4016,6 +4016,18 @@ focus_tree = {
 				limit = { has_character = AUH_friedrich_von_beck_rzikowsky }
 				hidden_effect = { every_unit_leader = { limit = { is_character = AUH_friedrich_von_beck_rzikowsky } add_skill_level = 1 } }
 				custom_effect_tooltip = AUH_arm_beck_at_the_staff_tt
+				remove_advisor_role = { character = AUH_friedrich_von_beck_rzikowsky slot = army_chief }
+				add_advisor_role = {
+					character = AUH_friedrich_von_beck_rzikowsky
+					advisor = {
+						slot = army_chief
+						cost = 100
+						idea_token = AUH_arm_beck_the_old_chief
+						ledger = army
+						traits = { army_chief_defensive_1 }
+					}
+					activate = no
+				}
 			}
 			add_tech_bonus = { name = AUH_tb_the_defensive_regulations bonus = 1.0 uses = 1 category = cat_fortification }
 			set_country_flag = AUH_arm_the_interior_plan
@@ -5499,6 +5511,40 @@ focus_tree = {
 			custom_effect_tooltip = AUH_bp_the_upper_counties_spared_tt
 			add_ai_strategy = { type = befriend id = SER value = 60 }
 			country_event = { id = auh_dnc.506 days = 90 }
+			if = {
+				limit = { has_global_flag = AUH_bp_powder_keg_lit }
+				if = {
+					limit = { has_character = AUH_leopold_berchtold }
+					custom_effect_tooltip = AUH_bp_berchtold_appointed_tt
+					add_advisor_role = {
+						character = AUH_leopold_berchtold
+						advisor = {
+							slot = political_advisor
+							idea_token = AUH_bp_berchtold_at_the_ballhausplatz
+							cost = 100
+							traits = { diplomat }
+						}
+						activate = no
+					}
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = AUH_bp_crisis_settled_quietly }
+				if = {
+					limit = { has_character = AUH_stephan_burian_von_rajecz }
+					custom_effect_tooltip = AUH_bp_burian_appointed_tt
+					add_advisor_role = {
+						character = AUH_stephan_burian_von_rajecz
+						advisor = {
+							slot = political_advisor
+							idea_token = AUH_bp_burian_at_the_ballhausplatz
+							cost = 100
+							traits = { diplomat }
+						}
+						activate = no
+					}
+				}
+			}
 		}
 	}
 
@@ -5906,6 +5952,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_eco_bilinski_unlocked_tt
 			custom_effect_tooltip = AUH_eco_popovics_unlocked_tt
+			unlock_decision_tooltip = AUH_eco_charter_the_common_banks_governor
 			add_ai_strategy = { type = build_building id = industrial_complex value = 30 }
 		}
 	}
@@ -7373,13 +7420,27 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = AUH_eco_the_estimate_that_balances
-			add_political_power = 150
-			add_stability = 0.10
-			add_tech_bonus = {
-				name = AUHFX_the_estimate_bonus
-				bonus = 2.0
-				uses = 2
-				category = industry
+			if = {
+				limit = { check_variable = { var = AUH_quote value = 40 compare = greater_than_or_equals } }
+				add_political_power = 150
+				add_stability = 0.10
+				add_tech_bonus = {
+					name = AUHFX_the_estimate_bonus
+					bonus = 2.0
+					uses = 2
+					category = industry
+				}
+			}
+			else = {
+				custom_effect_tooltip = AUH_eco_estimate_ausgleich_strain_tt
+				add_political_power = 75
+				add_stability = 0.03
+				add_tech_bonus = {
+					name = AUHFX_the_estimate_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
 			}
 			4 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
 			9 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
@@ -7489,6 +7550,7 @@ focus_tree = {
 			add_ideas = AUH_h_the_price_is_named
 			set_country_flag = AUH_h_advisor_szell
 			custom_effect_tooltip = AUH_h_advisor_szell_tt
+			country_event = { id = auh_dnc.323 days = 0 }
 			custom_effect_tooltip = AUH_h_the_apostolic_king_tt
 			add_ai_strategy = { type = befriend id = GER value = 20 }
 			custom_effect_tooltip = AUH_h_decisions_price_of_budapest_tt
@@ -7525,6 +7587,7 @@ focus_tree = {
 			custom_effect_tooltip = AUH_h_price_paid_tt
 			set_country_flag = AUH_h_advisor_apponyi
 			custom_effect_tooltip = AUH_h_advisor_apponyi_tt
+			country_event = { id = auh_dnc.323 days = 0 }
 			add_ai_strategy = { type = avoid_starting_wars value = 30 }
 			custom_effect_tooltip = AUH_h_road_constitutional_tt
 		}
@@ -11603,6 +11666,7 @@ focus_tree = {
 			custom_effect_tooltip = AUH_m_tt_aus_up
 			add_to_variable = { var = SER_support value = -5 } clamp_variable = { var = SER_support min = 0 max = 100 }
 			custom_effect_tooltip = AUH_m_tt_ser_down
+			country_event = { id = auh_dnc.426 days = 1 }
 		}
 	}
 
@@ -13178,6 +13242,13 @@ focus_tree = {
 			add_political_power = 50
 			custom_effect_tooltip = AUH_m_shooting_societies_tt
 			add_equipment_to_stockpile = { type = early_infantry_equipment_1904 amount = 800 producer = AUH }
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_sword }
+				custom_effect_tooltip = AUH_m_kaiserjager_military_cabinet_tt
+			}
+			else = {
+				custom_effect_tooltip = AUH_m_kaiserjager_civilian_cabinet_tt
+			}
 		}
 	}
 
@@ -17845,6 +17916,47 @@ focus_tree = {
 			custom_effect_tooltip = AUH_r_no_mediation_tt
 			set_country_flag = AUH_r_segment_f_open
 			add_war_support = 0.05
+			hidden_effect = {
+				if = {
+					limit = { is_guaranteed_by = GER }
+					set_country_flag = AUH_r_slav_powers_asked_ger
+				}
+				else_if = {
+					limit = { is_guaranteed_by = RUS }
+					set_country_flag = AUH_r_slav_powers_asked_rus
+				}
+				else_if = {
+					limit = { is_guaranteed_by = ITA }
+					set_country_flag = AUH_r_slav_powers_asked_ita
+				}
+				else_if = {
+					limit = { GER = { has_opinion = { target = AUH value > 30 } } }
+					set_country_flag = AUH_r_slav_powers_asked_ger
+				}
+				else_if = {
+					limit = { RUS = { has_opinion = { target = AUH value > 30 } } }
+					set_country_flag = AUH_r_slav_powers_asked_rus
+				}
+				else_if = {
+					limit = { ITA = { has_opinion = { target = AUH value > 30 } } }
+					set_country_flag = AUH_r_slav_powers_asked_ita
+				}
+				else = {
+					set_country_flag = AUH_r_slav_powers_asked_ger
+				}
+				if = {
+					limit = { has_country_flag = AUH_r_slav_powers_asked_ger country_exists = GER }
+					GER = { country_event = { id = auh_dnc.219 days = 5 } }
+				}
+				else_if = {
+					limit = { has_country_flag = AUH_r_slav_powers_asked_rus country_exists = RUS }
+					RUS = { country_event = { id = auh_dnc.219 days = 5 } }
+				}
+				else_if = {
+					limit = { has_country_flag = AUH_r_slav_powers_asked_ita country_exists = ITA }
+					ITA = { country_event = { id = auh_dnc.219 days = 5 } }
+				}
+			}
 		}
 	}
 
@@ -18566,6 +18678,7 @@ focus_tree = {
 			add_tech_bonus = { name = AUH_r_the_ancient_order_bonus bonus = 1.0 uses = 1 category = industry }
 			set_country_flag = AUH_r_deputation_ready
 			9 = { add_building_construction = { type = infrastructure level = 2 instant_build = yes } }
+			unlock_decision_tooltip = AUH_r_convene_the_estates
 		}
 	}
 
