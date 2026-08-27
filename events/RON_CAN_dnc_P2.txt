@@ -1,7 +1,4 @@
 add_namespace = can_dnc_p2
-
-# pacific expansion
-
 country_event = {
 	id = can_dnc_p2.1
 	title = can_dnc_p2.1.t
@@ -9,19 +6,22 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.1.a
 		ai_chance = { base = 12 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 		CAN = { add_political_power = 50 }
 	}
+
 	option = {
 		name = can_dnc_p2.1.b
 		ai_chance = { base = 4 }
 		CAN = { add_political_power = 25 }
-		USA = { add_opinion_modifier = { target = CAN modifier = small_decrease } }
+		USA = {
+			add_opinion_modifier = { target = CAN modifier = small_decrease }
+		}
 	}
+
 	option = {
 		name = can_dnc_p2.1.c
 		ai_chance = { base = 6 }
@@ -37,17 +37,18 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.2.a
 		ai_chance = { base = 10 }
 		add_opinion_modifier = { target = CAN modifier = large_increase }
 	}
+
 	option = {
 		name = can_dnc_p2.2.b
 		ai_chance = { base = 6 }
 		add_opinion_modifier = { target = CAN modifier = small_decrease }
 	}
+
 	option = {
 		name = can_dnc_p2.2.c
 		ai_chance = { base = 2 }
@@ -63,18 +64,19 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.3.a
 		ai_chance = { base = 10 }
 		CAN = { add_manpower = 10000 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 	}
+
 	option = {
 		name = can_dnc_p2.3.b
 		ai_chance = { base = 6 }
 		CAN = { add_stability = 0.02 }
 	}
+
 	option = {
 		name = can_dnc_p2.3.c
 		ai_chance = { base = 2 }
@@ -89,19 +91,20 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.4.a
 		ai_chance = { base = 8 }
 		CAN = { add_political_power = 50 }
 		add_opinion_modifier = { target = CAN modifier = small_increase }
 	}
+
 	option = {
 		name = can_dnc_p2.4.b
 		ai_chance = { base = 6 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		CAN = { add_war_support = 0.03 }
 	}
+
 	option = {
 		name = can_dnc_p2.4.c
 		ai_chance = { base = 2 }
@@ -116,22 +119,34 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.5.a
 		ai_chance = { base = 8 }
-		CAN = { add_autonomy_ratio = { value = 0.02 localization = CAN_p2_battalion_precedent } }
+		CAN = {
+			add_autonomy_ratio = {
+				value = 0.02
+				localization = CAN_p2_battalion_precedent
+			}
+		}
 	}
+
 	option = {
 		name = can_dnc_p2.5.b
 		ai_chance = { base = 6 }
 		add_opinion_modifier = { target = CAN modifier = small_decrease }
 	}
+
 	option = {
 		name = can_dnc_p2.5.c
 		ai_chance = { base = 2 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
-		CAN = { add_stability = 0.03 add_autonomy_ratio = { value = 0.03 localization = CAN_p2_battalion_precedent } }
+		CAN = {
+			add_stability = 0.03
+			add_autonomy_ratio = {
+				value = 0.03
+				localization = CAN_p2_battalion_precedent
+			}
+		}
 	}
 }
 
@@ -142,21 +157,27 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.6.a
 		ai_chance = { base = 8 }
-		CAN = { navy_experience = 15 add_political_power = 25 }
+		CAN = {
+			navy_experience = 15
+			add_political_power = 25
+		}
 	}
+
 	option = {
 		name = can_dnc_p2.6.b
 		ai_chance = { base = 6 }
 	}
+
 	option = {
 		name = can_dnc_p2.6.c
 		ai_chance = { base = 2 }
 		add_opinion_modifier = { target = CAN modifier = small_decrease }
-		JAP = { add_opinion_modifier = { target = CAN modifier = medium_increase } }
+		JAP = {
+			add_opinion_modifier = { target = CAN modifier = medium_increase }
+		}
 		CAN = { navy_experience = 10 }
 	}
 }
@@ -168,18 +189,19 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.7.a
 		ai_chance = { base = 10 }
 		CAN = { add_political_power = 50 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 	}
+
 	option = {
 		name = can_dnc_p2.7.b
 		ai_chance = { base = 6 }
 		CAN = { add_political_power = 25 }
 	}
+
 	option = {
 		name = can_dnc_p2.7.c
 		ai_chance = { base = 2 }
@@ -194,18 +216,19 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.8.a
 		ai_chance = { base = 6 }
 		CAN = { add_political_power = -25 }
 	}
+
 	option = {
 		name = can_dnc_p2.8.b
 		ai_chance = { base = 8 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		CAN = { add_stability = -0.02 }
 	}
+
 	option = {
 		name = can_dnc_p2.8.c
 		ai_chance = { base = 2 }
@@ -221,24 +244,35 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.9.a
 		ai_chance = { base = 4 }
-		CAN = { set_country_flag = CAN_dnc_panhandle_sold transfer_state = 463 add_state_core = 463 add_ideas = CAN_p2_pacific_neutrality add_political_power = -100 }
+		CAN = {
+			set_country_flag = CAN_dnc_panhandle_sold
+			transfer_state = 463
+			add_state_core = 463
+			add_ideas = CAN_p2_pacific_neutrality
+			add_political_power = -100
+		}
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 	}
+
 	option = {
 		name = can_dnc_p2.9.b
 		ai_chance = { base = 10 }
 		add_opinion_modifier = { target = CAN modifier = small_increase }
 		CAN = { add_political_power = 50 }
 	}
+
 	option = {
 		name = can_dnc_p2.9.c
 		ai_chance = { base = 6 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
-		CAN = { add_war_support = 0.05 add_state_claim = 463 add_ideas = CAN_p2_revanchism }
+		CAN = {
+			add_war_support = 0.05
+			add_state_claim = 463
+			add_ideas = CAN_p2_revanchism
+		}
 	}
 }
 
@@ -249,22 +283,31 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p2.10.a
 		ai_chance = { base = 8 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
-		CAN = { set_country_flag = CAN_dnc_compact_blessed add_political_power = 50 }
+		CAN = {
+			set_country_flag = CAN_dnc_compact_blessed
+			add_political_power = 50
+		}
 	}
+
 	option = {
 		name = can_dnc_p2.10.b
 		ai_chance = { base = 6 }
 		CAN = { add_stability = 0.05 }
 	}
+
 	option = {
 		name = can_dnc_p2.10.c
 		ai_chance = { base = 2 }
 		add_opinion_modifier = { target = CAN modifier = large_decrease }
-		CAN = { add_autonomy_ratio = { value = 0.05 localization = CANDNC_p2_a_power_in_our_own_right } }
+		CAN = {
+			add_autonomy_ratio = {
+				value = 0.05
+				localization = CANDNC_p2_a_power_in_our_own_right
+			}
+		}
 	}
 }

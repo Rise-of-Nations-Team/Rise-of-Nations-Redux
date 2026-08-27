@@ -1,7 +1,4 @@
 add_namespace = can_dnc_p
-
-# path P, the other ocean
-
 country_event = {
 	id = can_dnc_p.1
 	title = can_dnc_p.1.t
@@ -9,22 +6,25 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.1.a
 		ai_chance = { base = 60 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 	}
+
 	option = {
 		name = can_dnc_p.1.b
 		ai_chance = { base = 30 }
 		add_opinion_modifier = { target = CAN modifier = small_increase }
 	}
+
 	option = {
 		name = can_dnc_p.1.c
 		ai_chance = { base = 10 }
 		CAN = { add_political_power = -25 }
-		ENG = { add_opinion_modifier = { target = CAN modifier = small_decrease } }
+		ENG = {
+			add_opinion_modifier = { target = CAN modifier = small_decrease }
+		}
 	}
 }
 
@@ -35,18 +35,19 @@ country_event = {
 	picture = GFX_report_event_canada_treaty
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.2.a
 		ai_chance = { base = 55 }
 		add_opinion_modifier = { target = CAN modifier = small_decrease }
 	}
+
 	option = {
 		name = can_dnc_p.2.b
 		ai_chance = { base = 35 }
 		add_opinion_modifier = { target = CAN modifier = small_decrease }
 		CAN = { add_political_power = -10 }
 	}
+
 	option = {
 		name = can_dnc_p.2.c
 		ai_chance = { base = 10 }
@@ -62,18 +63,19 @@ country_event = {
 	picture = GFX_report_event_canada_treaty
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.3.a
 		ai_chance = { base = 45 }
 		add_opinion_modifier = { target = CAN modifier = large_decrease }
 	}
+
 	option = {
 		name = can_dnc_p.3.b
 		ai_chance = { base = 35 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		CAN = { add_ideas = CAN_p_preference_withdrawn }
 	}
+
 	option = {
 		name = can_dnc_p.3.c
 		ai_chance = { base = 20 }
@@ -89,16 +91,17 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.4.a
 		ai_chance = { base = 55 }
 	}
+
 	option = {
 		name = can_dnc_p.4.b
 		ai_chance = { base = 30 }
 		add_opinion_modifier = { target = CAN modifier = small_decrease }
 	}
+
 	option = {
 		name = can_dnc_p.4.c
 		ai_chance = { base = 15 }
@@ -113,17 +116,18 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.5.a
 		ai_chance = { base = 40 }
 		CAN = { add_political_power = 50 }
 	}
+
 	option = {
 		name = can_dnc_p.5.b
 		ai_chance = { base = 40 }
 		CAN = { add_ideas = CAN_p_the_city_charges_a_premium }
 	}
+
 	option = {
 		name = can_dnc_p.5.c
 		ai_chance = { base = 20 }
@@ -138,13 +142,13 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.6.a
 		ai_chance = { base = 70 }
 		add_opinion_modifier = { target = CAN modifier = large_increase }
 		CAN = { add_stability = 0.03 }
 	}
+
 	option = {
 		name = can_dnc_p.6.b
 		ai_chance = { base = 30 }
@@ -159,23 +163,30 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.7.a
 		ai_chance = { base = 50 }
 		add_opinion_modifier = { target = CAN modifier = large_increase }
-		CAN = { set_country_flag = CAN_dnc_ijn_station navy_experience = 25 }
+		CAN = {
+			set_country_flag = CAN_dnc_ijn_station
+			navy_experience = 25
+		}
 	}
+
 	option = {
 		name = can_dnc_p.7.b
 		ai_chance = { base = 35 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 		CAN = { navy_experience = 15 }
 	}
+
 	option = {
 		name = can_dnc_p.7.c
 		ai_chance = { base = 15 }
-		CAN = { add_political_power = -50 add_war_support = -0.03 }
+		CAN = {
+			add_political_power = -50
+			add_war_support = -0.03
+		}
 	}
 }
 
@@ -186,19 +197,22 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.8.a
 		ai_chance = { base = 45 }
 		add_opinion_modifier = { target = CAN modifier = large_decrease }
 		CAN = { add_war_support = 0.05 }
 	}
+
 	option = {
 		name = can_dnc_p.8.b
 		ai_chance = { base = 35 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
-		ENG = { add_opinion_modifier = { target = CAN modifier = small_decrease } }
+		ENG = {
+			add_opinion_modifier = { target = CAN modifier = small_decrease }
+		}
 	}
+
 	option = {
 		name = can_dnc_p.8.c
 		ai_chance = { base = 20 }
@@ -213,18 +227,25 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.9.a
 		ai_chance = { base = 55 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
-		CAN = { if = { limit = { has_idea = CAN_p_preference_withdrawn } remove_ideas = CAN_p_preference_withdrawn } add_political_power = 50 }
+		CAN = {
+			if = {
+				limit = { has_idea = CAN_p_preference_withdrawn }
+				remove_ideas = CAN_p_preference_withdrawn
+			}
+			add_political_power = 50
+		}
 	}
+
 	option = {
 		name = can_dnc_p.9.b
 		ai_chance = { base = 35 }
 		add_opinion_modifier = { target = CAN modifier = small_increase }
 	}
+
 	option = {
 		name = can_dnc_p.9.c
 		ai_chance = { base = 10 }
@@ -240,13 +261,13 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.10.a
 		ai_chance = { base = 60 }
 		add_opinion_modifier = { target = CAN modifier = medium_increase }
 		CAN = { add_political_power = 25 }
 	}
+
 	option = {
 		name = can_dnc_p.10.b
 		ai_chance = { base = 40 }
@@ -262,13 +283,13 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = can_dnc_p.11.a
 		ai_chance = { base = 60 }
 		add_opinion_modifier = { target = CAN modifier = large_increase }
 		CAN = { army_experience = 15 }
 	}
+
 	option = {
 		name = can_dnc_p.11.b
 		ai_chance = { base = 40 }
