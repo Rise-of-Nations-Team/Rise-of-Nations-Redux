@@ -620,7 +620,10 @@ country_event = {
 			set_country_flag = CAN_dnc_union_accomplished
 			news_event = { id = can_dnc_c.90 hours = 2 }
 			change_tag_from = CAN
-			annex_country = { target = CAN transfer_troops = yes }
+			annex_country = {
+				target = CAN
+				transfer_troops = yes
+			}
 		}
 	}
 }
@@ -985,7 +988,10 @@ country_event = {
 	picture = GFX_report_event_generic_army
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { name = can_dnc_c.44.a army_experience = 25 }
+	option = {
+		name = can_dnc_c.44.a
+		army_experience = 25
+	}
 }
 
 country_event = {
@@ -1401,14 +1407,20 @@ country_event = {
 	option = {
 		name = can_dnc_c.66.a
 		add_stability = -0.05
-		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
 	}
 
 	option = {
 		name = can_dnc_c.66.b
 		add_political_power = -50
 		add_stability = -0.03
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 		276 = {
 			add_building_construction = {
 				type = infrastructure
