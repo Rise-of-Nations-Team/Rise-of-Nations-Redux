@@ -7714,10 +7714,10 @@ focus_tree = {
 		y = 2
 		available = {
 			is_faction_leader = yes
-			country_exists = AUH
+			country_exists = AUS
 		}
 		bypass = {
-			AUH = {
+			AUS = {
 				exists = yes
 				NOT = {
 					is_in_faction_with = ROOT
@@ -7737,7 +7737,7 @@ focus_tree = {
 				id = ITA
 				value = 200
 			}
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = GER_backstab
@@ -7755,7 +7755,7 @@ focus_tree = {
 				leave_faction = yes
 			}
 			add_opinion_modifier = {
-				target = AUH
+				target = AUS
 				modifier = GER_backstab
 			}
 			ITA = {
@@ -7769,7 +7769,7 @@ focus_tree = {
 					value = 200
 				}
 				diplomatic_relation = {
-					country = AUH
+					country = AUS
 					relation = guarantee
 					active = no
 				}
@@ -7798,7 +7798,7 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				AUH = {
+				AUS = {
 					is_ai = no
 				}
 			}
@@ -7817,37 +7817,37 @@ focus_tree = {
 			hidden_effect = {
 				add_ai_strategy = {
 					type = prepare_for_war
-					id = AUH
+					id = AUS
 					value = 100
 				}
 				add_ai_strategy = {
 					type = contain
-					id = AUH
+					id = AUS
 					value = 100
 				}
 				ITA = {
 					add_ai_strategy = {
 						type = prepare_for_war
-						id = AUH
+						id = AUS
 						value = 100
 					}
 					add_ai_strategy = {
 						type = contain
-						id = AUH
+						id = AUS
 						value = 100
 					}
 				}
 			}
-			AUH = {
+			AUS = {
 				hidden_effect = {
 					add_ai_strategy = {
 						type = prepare_for_war
-						id = AUH
+						id = AUS
 						value = 100
 					}
 					add_ai_strategy = {
 						type = contain
-						id = AUH
+						id = AUS
 						value = 100
 					}
 				}
@@ -8019,14 +8019,14 @@ focus_tree = {
 			}			
 		}
 		bypass = {
-			AUH = {
+			AUS = {
 				NOT = {
 					is_in_faction_with = ROOT
 				}
 			}
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_state_claim = 159
 				add_state_claim = 160
 			}
@@ -8119,7 +8119,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 5
-		will_lead_to_war_with = AUH
+		will_lead_to_war_with = AUS
 		available = {
 			is_subject = no
 			NOT = {
@@ -8128,10 +8128,10 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				AUH = {
+				AUS = {
 					exists = no
 				}
-				has_war_with = AUH
+				has_war_with = AUS
 			}
 		}
 		available_if_capitulated = yes
@@ -8169,7 +8169,7 @@ focus_tree = {
 			}
 			create_wargoal = {
 				type = annex_everything
-				target = AUH
+				target = AUS
 			}
 		}
 		ai_will_do = {
@@ -8189,7 +8189,7 @@ focus_tree = {
 		will_lead_to_war_with = SWI
 		available = {
 			is_faction_leader = yes
-			AUH = {
+			AUS = {
 				exists = no
 			}
 			NOT = {
@@ -8236,10 +8236,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			is_subject = no
-			is_in_faction_with = AUH
+			is_in_faction_with = AUS
 		}
 		bypass = {
-			AUH = {
+			AUS = {
 				exists = no
 			}
 		}
@@ -8281,7 +8281,7 @@ focus_tree = {
 				target = SER
 				modifier = embargo
 			}
-			AUH = {
+			AUS = {
 				if = {
 					limit = {
 						OR = {
@@ -9550,13 +9550,13 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					AUH = {
+					AUS = {
 						NOT = {
 							has_war_with = ROOT
 						}
 					}
 				}
-				AUH = {
+				AUS = {
 					add_ideas = GER_idea_central_powers_joint_staff
 				}
 				add_doctrine_cost_reduction = {
@@ -12271,11 +12271,11 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			NOT = { country_exists = AUH }
+			NOT = { country_exists = AUS }
 			country_exists = HUN
 		}
 		bypass = {
-			country_exists = AUH
+			country_exists = AUS
 			OR = {
 				has_war_with = HUN
 				NOT = { country_exists = HUN }
@@ -12317,9 +12317,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 			OR = {
-				NOT = { country_exists = AUH }
+				NOT = { country_exists = AUS }
 				AND = {
-					AUH = {
+					AUS = {
 						has_war_with = ROOT
 						is_in_faction_with = FRA
 					}
@@ -12400,7 +12400,7 @@ focus_tree = {
 		y = 7
 		available_if_capitulated = yes
 		available = {
-			NOT = { country_exists = AUH }
+			NOT = { country_exists = AUS }
 			HUN = {
 				is_in_faction = no
 				NOT = {
@@ -12738,15 +12738,15 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_war_with = AUH
-						is_in_faction_with = AUH
+						has_war_with = AUS
+						is_in_faction_with = AUS
 					}
 				}
 				diplomatic_relation = {
-					country = AUH
+					country = AUS
 					relation = non_aggression_pact
 				}
-				AUH = {
+				AUS = {
 					diplomatic_relation = {
 						country = ROOT
 						relation = non_aggression_pact
