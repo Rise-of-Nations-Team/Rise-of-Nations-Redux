@@ -1,117 +1,448 @@
-### Colours a nationality's support number by the same thresholds the register itself
-### reads every month (see AUH_nat_thresholds_<NAT> in RON_AUH_dnc_nationalities.txt):
-### green at 35 and above, yellow below that, red below 20.
-
 defined_text = {
 	name = GetAUS_supportColor
-	text = { trigger = { check_variable = { var = AUS_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = AUS_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetHUN_supportColor
-	text = { trigger = { check_variable = { var = HUN_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = HUN_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetCZE_supportColor
-	text = { trigger = { check_variable = { var = CZE_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = CZE_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetPOL_supportColor
-	text = { trigger = { check_variable = { var = POL_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = POL_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetUKR_supportColor
-	text = { trigger = { check_variable = { var = UKR_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = UKR_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetROM_supportColor
-	text = { trigger = { check_variable = { var = ROM_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = ROM_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetCRO_supportColor
-	text = { trigger = { check_variable = { var = CRO_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = CRO_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetSER_supportColor
-	text = { trigger = { check_variable = { var = SER_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = SER_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetBOS_supportColor
-	text = { trigger = { check_variable = { var = BOS_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = BOS_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetSLV_supportColor
-	text = { trigger = { check_variable = { var = SLV_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = SLV_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetITA_supportColor
-	text = { trigger = { check_variable = { var = ITA_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = ITA_support value = 35 compare = less_than } } localization_key = Y }
-	text = { localization_key = G }
-}
-defined_text = {
-	name = GetSLO_supportColor
-	text = { trigger = { check_variable = { var = SLO_support value = 20 compare = less_than } } localization_key = R }
-	text = { trigger = { check_variable = { var = SLO_support value = 35 compare = less_than } } localization_key = Y }
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUS_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUS_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
 	text = { localization_key = G }
 }
 
-### The worst-off nationality decides which face the register itself wears in the outliner.
+defined_text = {
+	name = GetHUN_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = HUN_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = HUN_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetCZE_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = CZE_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = CZE_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetPOL_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = POL_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = POL_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetUKR_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = UKR_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = UKR_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetROM_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = ROM_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = ROM_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetCRO_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = CRO_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = CRO_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetSER_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = SER_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SER_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetBOS_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = BOS_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = BOS_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetSLV_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = SLV_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SLV_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetITA_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = ITA_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = ITA_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
+defined_text = {
+	name = GetSLO_supportColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = SLO_support
+				value = 20
+				compare = less_than
+			}
+		}
+		localization_key = R
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = SLO_support
+				value = 35
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = G }
+}
+
 defined_text = {
 	name = AUH_nat_worst_color
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { var = AUS_support value = 5 compare = less_than }
-				check_variable = { var = HUN_support value = 5 compare = less_than }
-				check_variable = { var = CZE_support value = 5 compare = less_than }
-				check_variable = { var = POL_support value = 5 compare = less_than }
-				check_variable = { var = UKR_support value = 5 compare = less_than }
-				check_variable = { var = ROM_support value = 5 compare = less_than }
-				check_variable = { var = CRO_support value = 5 compare = less_than }
-				check_variable = { var = SER_support value = 5 compare = less_than }
-				check_variable = { var = BOS_support value = 5 compare = less_than }
-				check_variable = { var = SLV_support value = 5 compare = less_than }
-				check_variable = { var = ITA_support value = 5 compare = less_than }
-				check_variable = { var = SLO_support value = 5 compare = less_than }
+				check_variable = {
+					var = AUS_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = HUN_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = CZE_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = POL_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = UKR_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = ROM_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = CRO_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = SER_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = BOS_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = SLV_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = ITA_support
+					value = 5
+					compare = less_than
+				}
+				check_variable = {
+					var = SLO_support
+					value = 5
+					compare = less_than
+				}
 			}
 		}
 		localization_key = R
 	}
+
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { var = AUS_support value = 35 compare = less_than }
-				check_variable = { var = HUN_support value = 35 compare = less_than }
-				check_variable = { var = CZE_support value = 35 compare = less_than }
-				check_variable = { var = POL_support value = 35 compare = less_than }
-				check_variable = { var = UKR_support value = 35 compare = less_than }
-				check_variable = { var = ROM_support value = 35 compare = less_than }
-				check_variable = { var = CRO_support value = 35 compare = less_than }
-				check_variable = { var = SER_support value = 35 compare = less_than }
-				check_variable = { var = BOS_support value = 35 compare = less_than }
-				check_variable = { var = SLV_support value = 35 compare = less_than }
-				check_variable = { var = ITA_support value = 35 compare = less_than }
-				check_variable = { var = SLO_support value = 35 compare = less_than }
+				check_variable = {
+					var = AUS_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = HUN_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = CZE_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = POL_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = UKR_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = ROM_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = CRO_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = SER_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = BOS_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = SLV_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = ITA_support
+					value = 35
+					compare = less_than
+				}
+				check_variable = {
+					var = SLO_support
+					value = 35
+					compare = less_than
+				}
 			}
 		}
 		localization_key = Y

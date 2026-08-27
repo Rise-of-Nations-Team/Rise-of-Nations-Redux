@@ -1,7 +1,4 @@
 AUH_dnc_nationalities_cat = {
-
-	# The register itself, read where the Crown actually acts on it -- no clicking through
-	# to the national spirits tray to see who needs conciliating.
 	AUH_nat_the_register_overview = {
 		icon = GFX_decision_generic_decision
 		cost = 0
@@ -9,19 +6,38 @@ AUH_dnc_nationalities_cat = {
 		fire_only_once = no
 		allowed = { always = yes }
 		visible = { always = yes }
-		remove_effect = { custom_effect_tooltip = AUH_nat_register_overview_noop_tt }
+		remove_effect = {
+			custom_effect_tooltip = AUH_nat_register_overview_noop_tt
+		}
 	}
-
-	# Conciliation. The Crown buys a column of the register back, and the concession takes a month to be felt.
 
 	AUH_conciliate_AUS = {
 		icon = GFX_decision_generic_nationalism
 		cost = 75
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = AUS_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = AUS_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_AUS_8 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = AUS_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = AUS_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_HUN = {
@@ -29,9 +45,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 75
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = HUN_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = HUN_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_HUN_8 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = HUN_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = HUN_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_CZE = {
@@ -39,9 +74,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 70
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = CZE_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = CZE_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_CZE_10 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = CZE_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = CZE_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_POL = {
@@ -49,9 +103,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 55
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = POL_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = POL_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_POL_12 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = POL_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = POL_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_CRO = {
@@ -59,9 +132,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 55
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = CRO_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = CRO_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_CRO_12 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = CRO_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = CRO_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_ROM = {
@@ -69,9 +161,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 55
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = ROM_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = ROM_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_ROM_12 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = ROM_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = ROM_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_UKR = {
@@ -79,9 +190,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 45
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = UKR_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = UKR_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_UKR_15 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = UKR_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = UKR_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_SER = {
@@ -89,9 +219,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 45
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = SER_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = SER_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_SER_15 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = SER_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = SER_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_BOS = {
@@ -99,9 +248,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 45
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = BOS_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = BOS_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_BOS_15 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = BOS_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = BOS_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_SLV = {
@@ -109,9 +277,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 45
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = SLV_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = SLV_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_SLV_15 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = SLV_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = SLV_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_ITA = {
@@ -119,9 +306,28 @@ AUH_dnc_nationalities_cat = {
 		cost = 45
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = ITA_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = ITA_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_ITA_15 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = ITA_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = ITA_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
 
 	AUH_conciliate_SLO = {
@@ -129,12 +335,29 @@ AUH_dnc_nationalities_cat = {
 		cost = 45
 		days_remove = 30
 		fire_only_once = no
-		available = { custom_trigger_tooltip = { tooltip = AUH_nat_room_to_give_tt check_variable = { var = SLO_support value = 100 compare = less_than } } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nat_room_to_give_tt
+				check_variable = {
+					var = SLO_support
+					value = 100
+					compare = less_than
+				}
+			}
+		}
 		remove_effect = { AUH_nat_concede_SLO_15 = yes }
-		ai_will_do = { factor = 1 modifier = { factor = 20 check_variable = { var = SLO_support value = 35 compare = less_than } } }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				check_variable = {
+					var = SLO_support
+					value = 35
+					compare = less_than
+				}
+			}
+		}
 	}
-
-	# The rising. A column that has fallen through the floor is given one season to be answered.
 
 	AUH_dnc_the_rising = {
 		icon = GFX_decision_generic_nationalism
@@ -142,19 +365,25 @@ AUH_dnc_nationalities_cat = {
 		activation = {
 			tag = AUH
 			has_country_flag = AUH_dnc_question_posed
-			check_variable = { var = AUH_nat_rising_count value = 1 compare = greater_than_or_equals }
+			check_variable = {
+				var = AUH_nat_rising_count
+				value = 1
+				compare = greater_than_or_equals
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = AUH_nat_rising_ends_tt
-				check_variable = { var = AUH_nat_rising_count value = 1 compare = less_than }
+				check_variable = {
+					var = AUH_nat_rising_count
+					value = 1
+					compare = less_than
+				}
 			}
 		}
 		days_mission_timeout = 120
 		days_re_enable = 30
-		timeout_effect = {
-			AUH_nat_the_rising_breaks = yes
-		}
+		timeout_effect = { AUH_nat_the_rising_breaks = yes }
 	}
 
 	AUH_r_convene_the_estates = {
@@ -167,24 +396,33 @@ AUH_dnc_nationalities_cat = {
 		}
 		remove_effect = {
 			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
-			clamp_variable = { var = AUH_gemeinsamkeit min = 0 max = 100 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
 			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
 		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 15
-				check_variable = { var = AUH_gemeinsamkeit value = 40 compare = less_than }
+				check_variable = {
+					var = AUH_gemeinsamkeit
+					value = 40
+					compare = less_than
+				}
 			}
 		}
 	}
 
-		# Flavor: the joint bank of issue finally gets a governor named to answer for it in both capitals.
 	AUH_eco_charter_the_common_banks_governor = {
 		icon = GFX_decision_generic_decision
 		cost = 10
 		fire_only_once = yes
-		visible = { has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals }
+		visible = {
+			has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals
+		}
 		available = { always = yes }
 		complete_effect = {
 			custom_effect_tooltip = AUH_eco_common_banks_governor_tt

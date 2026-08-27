@@ -1,21 +1,11 @@
 add_namespace = auh_nat_crisis
-
-# Consequence events for the regional (AUHDNC_r_...) and economic (AUHDNC_eco_...) focus
-# branches. These sit beside the nationality register in
-# common/scripted_effects/RON_AUH_dnc_nationalities.txt -- they nudge a column of the
-# register by a few points and spend real coin, order or standing on it, but they never
-# touch AUH_gemeinsamkeit, AUH_quote or the Ausgleich engine's own variables.
-# Wired into specific focuses' completion_reward externally; not self-triggering.
-
 country_event = {
 	id = auh_nat_crisis.1
 	title = auh_nat_crisis.1.t
 	desc = auh_nat_crisis.1.d
 	picture = GFX_report_event_generic_army
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.1.a
 		ai_chance = { factor = 30 }
@@ -23,30 +13,52 @@ country_event = {
 		add_stability = 0.02
 		add_manpower = -2000
 		subtract_from_variable = { var = HUN_support value = 3 }
-		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_HUN_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.1.b
 		ai_chance = { factor = 40 }
 		add_stability = -0.04
 		add_to_variable = { var = AUS_support value = 2 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_up_tt
 		add_to_variable = { var = HUN_support value = 2 }
-		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_HUN_up_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.1.c
 		ai_chance = { factor = 30 }
 		add_political_power = -20
 		add_stability = 0.03
 		subtract_from_variable = { var = HUN_support value = 4 }
-		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_HUN_down_tt
 		add_to_variable = { var = AUS_support value = 3 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_up_tt
 	}
 }
@@ -56,31 +68,43 @@ country_event = {
 	title = auh_nat_crisis.2.t
 	desc = auh_nat_crisis.2.d
 	picture = GFX_report_event_generic_stock_traders
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.2.a
 		ai_chance = { factor = 45 }
 		add_political_power = -40
 		add_stability = 0.05
 		add_to_variable = { var = CZE_support value = 2 }
-		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_CZE_up_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.2.b
 		ai_chance = { factor = 25 }
 		add_stability = -0.08
 		add_political_power = 25
 		subtract_from_variable = { var = CZE_support value = 4 }
-		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_CZE_down_tt
 		subtract_from_variable = { var = POL_support value = 2 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.2.c
 		ai_chance = { factor = 30 }
@@ -88,7 +112,11 @@ country_event = {
 		add_war_support = -0.02
 		add_political_power = 10
 		subtract_from_variable = { var = AUS_support value = 2 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_down_tt
 	}
 }
@@ -98,40 +126,60 @@ country_event = {
 	title = auh_nat_crisis.3.t
 	desc = auh_nat_crisis.3.d
 	picture = GFX_report_event_generic_riot
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.3.a
 		ai_chance = { factor = 35 }
 		add_political_power = -20
 		add_stability = 0.03
 		subtract_from_variable = { var = HUN_support value = 4 }
-		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_HUN_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.3.b
 		ai_chance = { factor = 30 }
 		add_stability = -0.05
 		add_to_variable = { var = HUN_support value = 3 }
-		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_HUN_up_tt
 		subtract_from_variable = { var = AUS_support value = 2 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.3.c
 		ai_chance = { factor = 35 }
 		add_political_power = -35
 		add_stability = 0.04
 		add_to_variable = { var = AUS_support value = 2 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_up_tt
 		add_to_variable = { var = HUN_support value = 1 }
-		clamp_variable = { var = HUN_support min = 0 max = 100 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_HUN_up_tt
 	}
 }
@@ -141,44 +189,72 @@ country_event = {
 	title = auh_nat_crisis.4.t
 	desc = auh_nat_crisis.4.d
 	picture = GFX_report_event_generic_strike
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.4.a
 		ai_chance = { factor = 40 }
 		add_political_power = -25
 		add_to_variable = { var = CZE_support value = 3 }
-		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_CZE_up_tt
 		subtract_from_variable = { var = AUS_support value = 3 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.4.b
 		ai_chance = { factor = 25 }
 		add_to_variable = { var = AUS_support value = 2 }
-		clamp_variable = { var = AUS_support min = 0 max = 100 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_AUS_up_tt
 		subtract_from_variable = { var = CZE_support value = 4 }
-		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_CZE_down_tt
 		add_to_variable = { var = AUH_strike_pressure value = 10 }
-		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		clamp_variable = {
+			var = AUH_strike_pressure
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_a_strike_pressure_up_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.4.c
 		ai_chance = { factor = 35 }
 		add_stability = -0.02
 		add_manpower = -1500
 		subtract_from_variable = { var = AUH_strike_pressure value = 5 }
-		clamp_variable = { var = AUH_strike_pressure min = 0 max = 100 }
+		clamp_variable = {
+			var = AUH_strike_pressure
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_a_strike_pressure_down_tt
 		add_to_variable = { var = CZE_support value = 1 }
-		clamp_variable = { var = CZE_support min = 0 max = 100 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_CZE_up_tt
 	}
 }
@@ -188,34 +264,50 @@ country_event = {
 	title = auh_nat_crisis.5.t
 	desc = auh_nat_crisis.5.d
 	picture = GFX_report_event_generic_strike
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.5.a
 		ai_chance = { factor = 40 }
 		add_political_power = -25
 		add_stability = 0.02
 		add_to_variable = { var = POL_support value = 2 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_up_tt
 		add_to_variable = { var = UKR_support value = 2 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_up_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.5.b
 		ai_chance = { factor = 25 }
 		add_stability = -0.05
 		add_war_support = 0.03
 		subtract_from_variable = { var = POL_support value = 3 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_down_tt
 		subtract_from_variable = { var = UKR_support value = 3 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.5.c
 		ai_chance = { factor = 35 }
@@ -229,42 +321,66 @@ country_event = {
 	title = auh_nat_crisis.6.t
 	desc = auh_nat_crisis.6.d
 	picture = GFX_report_event_generic_riot
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.6.a
 		ai_chance = { factor = 35 }
 		add_political_power = -20
 		add_to_variable = { var = UKR_support value = 3 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_up_tt
 		subtract_from_variable = { var = POL_support value = 3 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.6.b
 		ai_chance = { factor = 30 }
 		add_stability = -0.03
 		add_to_variable = { var = POL_support value = 2 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_up_tt
 		subtract_from_variable = { var = UKR_support value = 4 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.6.c
 		ai_chance = { factor = 35 }
 		add_political_power = -15
 		add_manpower = -2500
 		subtract_from_variable = { var = POL_support value = 1 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_down_tt
 		subtract_from_variable = { var = UKR_support value = 1 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_down_tt
 	}
 }
@@ -274,42 +390,66 @@ country_event = {
 	title = auh_nat_crisis.7.t
 	desc = auh_nat_crisis.7.d
 	picture = GFX_report_event_generic_rally
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.7.a
 		ai_chance = { factor = 30 }
 		add_stability = -0.05
 		add_to_variable = { var = POL_support value = 3 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_up_tt
 		subtract_from_variable = { var = UKR_support value = 3 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.7.b
 		ai_chance = { factor = 40 }
 		add_political_power = -30
 		add_to_variable = { var = UKR_support value = 3 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_up_tt
 		subtract_from_variable = { var = POL_support value = 4 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_down_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.7.c
 		ai_chance = { factor = 30 }
 		add_political_power = -10
 		add_stability = -0.02
 		add_to_variable = { var = POL_support value = 1 }
-		clamp_variable = { var = POL_support min = 0 max = 100 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_POL_up_tt
 		add_to_variable = { var = UKR_support value = 1 }
-		clamp_variable = { var = UKR_support min = 0 max = 100 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_UKR_up_tt
 	}
 }
@@ -319,10 +459,8 @@ country_event = {
 	title = auh_nat_crisis.8.t
 	desc = auh_nat_crisis.8.d
 	picture = GFX_report_event_generic_rally
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
 		name = auh_nat_crisis.8.a
 		ai_chance = { factor = 30 }
@@ -330,43 +468,77 @@ country_event = {
 		if = {
 			limit = { has_idea = AUH_r_the_city_is_italian }
 			subtract_from_variable = { var = SLV_support value = 3 }
-			clamp_variable = { var = SLV_support min = 0 max = 100 }
+			clamp_variable = {
+				var = SLV_support
+				min = 0
+				max = 100
+			}
 			custom_effect_tooltip = AUH_nat_SLV_down_tt
 			add_to_variable = { var = ITA_support value = 2 }
-			clamp_variable = { var = ITA_support min = 0 max = 100 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
 			custom_effect_tooltip = AUH_nat_ITA_up_tt
 		}
 		else = {
 			subtract_from_variable = { var = ITA_support value = 3 }
-			clamp_variable = { var = ITA_support min = 0 max = 100 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
 			custom_effect_tooltip = AUH_nat_ITA_down_tt
 			add_to_variable = { var = SLV_support value = 2 }
-			clamp_variable = { var = SLV_support min = 0 max = 100 }
+			clamp_variable = {
+				var = SLV_support
+				min = 0
+				max = 100
+			}
 			custom_effect_tooltip = AUH_nat_SLV_up_tt
 		}
 	}
+
 	option = {
 		name = auh_nat_crisis.8.b
 		ai_chance = { factor = 40 }
 		add_political_power = -30
 		add_stability = 0.02
 		add_to_variable = { var = ITA_support value = 1 }
-		clamp_variable = { var = ITA_support min = 0 max = 100 }
+		clamp_variable = {
+			var = ITA_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_ITA_up_tt
 		add_to_variable = { var = SLV_support value = 1 }
-		clamp_variable = { var = SLV_support min = 0 max = 100 }
+		clamp_variable = {
+			var = SLV_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_SLV_up_tt
 	}
+
 	option = {
 		name = auh_nat_crisis.8.c
 		ai_chance = { factor = 30 }
 		add_stability = -0.05
 		add_war_support = 0.02
 		subtract_from_variable = { var = ITA_support value = 2 }
-		clamp_variable = { var = ITA_support min = 0 max = 100 }
+		clamp_variable = {
+			var = ITA_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_ITA_down_tt
 		subtract_from_variable = { var = SLV_support value = 2 }
-		clamp_variable = { var = SLV_support min = 0 max = 100 }
+		clamp_variable = {
+			var = SLV_support
+			min = 0
+			max = 100
+		}
 		custom_effect_tooltip = AUH_nat_SLV_down_tt
 	}
 }

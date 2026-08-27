@@ -1,35 +1,29 @@
-#####################################
-#	Austria-Hungary DNC companies	#
-#####################################
 ideas = {
 	industrial_concern = {
-
 		AUH_witkowitz = {
 			picture = generic_industrial_concern_1
 			allowed = { original_tag = AUH }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { bb_tech = 0.1 }
-			modifier = { production_factory_max_efficiency_factor = 0.05 }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
 			equipment_bonus = {
 				capital_ship = { armor_value = 0.07 }
 			}
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 2 }
 		}
 		AUH_poldi_huette = {
 			picture = generic_industrial_concern_2
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { engineers_tech = 0.08 }
 			modifier = { research_speed_factor = 0.05 }
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_boehler = {
@@ -43,7 +37,6 @@ ideas = {
 				artillery_equipment = { reliability = 0.05 }
 			}
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_alpine_montan = {
@@ -52,9 +45,10 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { excavation_tech = 0.1 }
-			modifier = { production_lack_of_resource_penalty_factor = -0.05 }
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.05
+			}
 			traits = { mining_company }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_ostrava_karvina = {
@@ -65,7 +59,6 @@ ideas = {
 			research_bonus = { industry = 0.08 }
 			modifier = { industrial_capacity_factory = 0.05 }
 			traits = { mining_company }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_bruex_lignite = {
@@ -76,7 +69,6 @@ ideas = {
 			research_bonus = { construction_tech = 0.05 }
 			modifier = { fuel_gain_factor = 0.07 }
 			traits = { mining_company }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_carpathian_field = {
@@ -87,7 +79,6 @@ ideas = {
 			research_bonus = { logistics_tech = 0.08 }
 			modifier = { local_resources_factor = 0.1 }
 			traits = { refinery_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_ganz = {
@@ -96,68 +87,64 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { electronics = 0.1 }
-			modifier = { production_speed_industrial_complex_factor = 0.05 }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+			}
 			traits = { electronics_concern }
-
 			ai_will_do = { factor = 2 }
 		}
 		AUH_laurin_klement = {
 			picture = generic_motorized_equipment_manufacturer_1
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { motorized_equipment = 0.1 }
 			modifier = { army_speed_factor = 0.03 }
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_nesselsdorfer = {
 			picture = generic_railroads
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { train_tech = 0.1 }
-			modifier = { production_speed_infrastructure_factor = 0.05 }
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+			}
 			equipment_bonus = {
 				train_equipment = { build_cost_ic = -0.05 }
 			}
 			traits = { railway_company }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_puch = {
 			picture = generic_motorized_equipment_manufacturer_2
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { armor = 0.08 }
-			modifier = { production_factory_efficiency_gain_factor = 0.05 }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_oesterreichischer_lloyd = {
 			picture = generic_convoys
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { tp_tech = 0.1 }
-			modifier = { trade_opinion_factor = 0.1 convoy_retreat_speed = 0.1 }
+			modifier = {
+				trade_opinion_factor = 0.1
+				convoy_retreat_speed = 0.1
+			}
 			traits = { trade_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_oesterreichisch_ungarische_bank = {
@@ -165,22 +152,21 @@ ideas = {
 			allowed = { original_tag = AUH }
 			cost = 150
 			removal_cost = 10
-			modifier = { stability_factor = 0.05 political_power_gain = 0.03 }
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.03
+			}
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 2 }
 		}
 		AUH_creditanstalt = {
 			picture = generic_economic_increase
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			modifier = { production_speed_buildings_factor = 0.08 }
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_pesti_kereskedelmi = {
@@ -188,9 +174,11 @@ ideas = {
 			allowed = { original_tag = AUH }
 			cost = 150
 			removal_cost = 10
-			modifier = { political_power_factor = 0.05 consumer_goods_factor = -0.02 }
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
 			traits = { trade_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_state_ironworks = {
@@ -204,15 +192,12 @@ ideas = {
 				infantry_equipment = { reliability = 0.05 }
 			}
 			traits = { industrial_concern }
-
 			ai_will_do = { factor = 1 }
 		}
 	}
 
 	materiel_manufacturer = {
-
 		designer = yes
-
 		AUH_skoda = {
 			picture = generic_artillery_manufacturer_1
 			allowed = { original_tag = AUH }
@@ -224,7 +209,6 @@ ideas = {
 				heavy_artillery_equipment = { soft_attack = 0.07 build_cost_ic = 0.05 }
 			}
 			traits = { artillery_manufacturer }
-
 			ai_will_do = { factor = 3 }
 		}
 		AUH_artilleriearsenal_wien = {
@@ -238,7 +222,6 @@ ideas = {
 				artillery_equipment = { reliability = 0.08 }
 			}
 			traits = { artillery_manufacturer }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_steyr_oewg = {
@@ -247,12 +230,13 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { infantry_weapons = 0.1 }
-			modifier = { production_factory_start_efficiency_factor = 0.05 }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+			}
 			equipment_bonus = {
 				infantry_equipment = { reliability = 0.07 build_cost_ic = -0.05 }
 			}
 			traits = { infantry_equipment_manufacturer }
-
 			ai_will_do = { factor = 3 }
 		}
 		AUH_weiss_manfred = {
@@ -266,7 +250,6 @@ ideas = {
 				support_equipment = { reliability = 0.05 build_cost_ic = -0.05 }
 			}
 			traits = { support_equipment_manufacturer }
-
 			ai_will_do = { factor = 2 }
 		}
 		AUH_feg_frommer = {
@@ -291,12 +274,13 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { infantry_tech = 0.08 }
-			modifier = { production_factory_efficiency_gain_factor = 0.05 }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
 			equipment_bonus = {
 				infantry_equipment = { soft_attack = 0.05 build_cost_ic = 0.05 }
 			}
 			traits = { automatic_weapons_manufacturer }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_austro_daimler = {
@@ -304,27 +288,25 @@ ideas = {
 			allowed = { original_tag = AUH }
 			cost = 150
 			removal_cost = 10
-			research_bonus = { motorized_equipment = 0.1 cat_mechanized_equipment = 0.08 }
+			research_bonus = {
+				motorized_equipment = 0.1
+				cat_mechanized_equipment = 0.08
+			}
 			modifier = { army_fuel_consumption_factor = -0.05 }
 			equipment_bonus = {
 				armoured_car_chassis = { maximum_speed = 0.05 reliability = 0.05 }
 			}
 			traits = { motorized_equipment_manufacturer }
-
 			ai_will_do = { factor = 2 }
 		}
 	}
 
 	naval_manufacturer = {
-
 		designer = yes
-
 		AUH_stabilimento_tecnico_triestino = {
 			picture = generic_naval_manufacturer_1
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { bb_tech = 0.1 }
@@ -333,15 +315,12 @@ ideas = {
 				capital_ship = { armor_value = 0.05 build_cost_ic = 0.05 }
 			}
 			traits = { naval_manufacturer }
-
 			ai_will_do = { factor = 3 }
 		}
 		AUH_seearsenal_pola = {
 			picture = generic_naval_manufacturer_2
 			allowed = { original_tag = AUH }
-			available = {
-				always = yes
-			}
+			available = { always = yes }
 			cost = 150
 			removal_cost = 10
 			research_bonus = { ss_tech = 0.1 }
@@ -350,7 +329,6 @@ ideas = {
 				ship_hull_submarine = { naval_range = 0.05 reliability = 0.05 }
 			}
 			traits = { submarine_manufacturer }
-
 			ai_will_do = { factor = 1 }
 		}
 		AUH_danubius_fiume = {
@@ -382,7 +360,6 @@ ideas = {
 				screen_ship = { build_cost_ic = -0.05 }
 			}
 			traits = { naval_manufacturer }
-
 			ai_will_do = { factor = 2 }
 		}
 		AUH_whitehead_fiume = {
@@ -391,20 +368,20 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { torpedotech = 0.1 ship_modules_tech = 0.08 }
-			modifier = { naval_torpedo_hit_chance_factor = 0.07 trade_opinion_factor = -0.05 }
+			modifier = {
+				naval_torpedo_hit_chance_factor = 0.07
+				trade_opinion_factor = -0.05
+			}
 			equipment_bonus = {
 				screen_ship = { naval_range = 0.05 reliability = 0.05 }
 			}
 			traits = { naval_manufacturer }
-
 			ai_will_do = { factor = 2 }
 		}
 	}
 
 	aircraft_manufacturer = {
-
 		designer = yes
-
 		AUH_etrich = {
 			picture = generic_air_manufacturer_1
 			allowed = { original_tag = AUH }
@@ -423,9 +400,12 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { air_equipment = 0.1 }
-			modifier = { air_range_factor = 0.05 air_accidents_factor = -0.1 air_agility_factor = -0.05 }
+			modifier = {
+				air_range_factor = 0.05
+				air_accidents_factor = -0.1
+				air_agility_factor = -0.05
+			}
 			traits = { light_aircraft_manufacturer }
-
 			ai_will_do = { factor = 2 }
 		}
 		AUH_lohner = {
@@ -448,9 +428,11 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { naval_equipment = 0.08 air_equipment = 0.08 }
-			modifier = { production_factory_max_efficiency_factor = 0.05 production_speed_air_base_factor = 0.05 }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_air_base_factor = 0.05
+			}
 			traits = { medium_aircraft_manufacturer }
-
 			ai_will_do = { factor = 1 }
 		}
 	}
