@@ -8,12 +8,12 @@ set_fuel_ratio = 0.8
 
 if = {
 	limit = {
-		has_start_date < 1919.01.01
+		has_start_date < 1910.1.1
 	}
 	add_ideas = {
-		military_tradition2
-		GER_ww1_North_German_Confederation
-		ww1_Scramble_for_Africa
+		#military_tradition2
+		#GER_ww1_North_German_Confederation
+		#ww1_Scramble_for_Africa
 		DNC_naval_arms_race
 		#GER_bloated_naval_budget1
 		#GER_failed_kultur_kampf
@@ -363,10 +363,13 @@ recruit_character = GER_erich_ludendorff #fascism
 			has_start_date < 1919.01.01
 		}
 		add_ideas = {
+			GER_idea_norddeutscher_bund_legacy
+			GER_idea_OHL
+			limited_conscription
+			GER_idea_naval_arms_race
 			GER_strategiestreit
 		}
 	}
-
 }
 
 1914.1.1 = {
