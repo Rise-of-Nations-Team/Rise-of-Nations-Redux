@@ -443,6 +443,16 @@ focus_tree = {
 		}
 		icon = GFX_goal_naval_spending_bill
 		cost = 3
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 3 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -1095,6 +1105,16 @@ focus_tree = {
 		}
 		icon = GFX_focus_generic_military_dictatorship
 		cost = 3
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 150
@@ -1308,6 +1328,16 @@ focus_tree = {
 		prerequisite = { focus = AUHDNC_a_a_cabinet_of_the_bodyguard }
 		icon = GFX_goal_support_democracy
 		cost = 3
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 2 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 100
@@ -1381,6 +1411,16 @@ focus_tree = {
 		prerequisite = { focus = AUHDNC_a_a_cabinet_of_the_bodyguard }
 		icon = GFX_focus_generic_strike_at_democracy3
 		cost = 3
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			country_event = { id = auh_admin_crisis.4 days = 15 }
@@ -3045,6 +3085,12 @@ focus_tree = {
 			custom_effect_tooltip = AUH_arm_three_establishments_tt
 			set_country_flag = AUH_arm_the_staff_has_its_own_credit
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 2 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = equipment_production_factor
 					id = infantry
@@ -3269,6 +3315,12 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_arm_potiorek_tt
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 2 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = build_building
 					id = bunker
@@ -3364,6 +3416,12 @@ focus_tree = {
 			}
 			set_country_flag = AUH_arm_the_offensive_school
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 3 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = antagonize
 					id = SER
@@ -3934,6 +3992,12 @@ focus_tree = {
 			set_country_flag = AUH_arm_the_fortress_credit_spent
 			country_event = { id = auh_dnc.605 days = 400 }
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 2 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = build_building
 					id = bunker
@@ -4098,6 +4162,12 @@ focus_tree = {
 			set_country_flag = AUH_arm_the_fortress_credit_spent
 			country_event = { id = auh_dnc.605 days = 400 }
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 3 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = build_building
 					id = bunker
@@ -4319,6 +4389,12 @@ focus_tree = {
 			set_country_flag = AUH_arm_the_fortress_credit_spent
 			country_event = { id = auh_dnc.605 days = 400 }
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 2 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = antagonize
 					id = SER
@@ -4551,6 +4627,12 @@ focus_tree = {
 			set_country_flag = AUH_arm_the_new_military_law_passed
 			set_country_flag = AUH_dnc_army_era_end
 			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 2 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
 				add_ai_strategy = {
 					type = build_building
 					id = arms_factory
@@ -8869,6 +8951,16 @@ focus_tree = {
 		prerequisite = { focus = AUHDNC_m_the_sword_settles_it }
 		icon = GFX_focus_generic_military_dictatorship
 		cost = 7.5
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_m_the_cabinet_of_generals
@@ -8988,6 +9080,16 @@ focus_tree = {
 		prerequisite = { focus = AUHDNC_m_a_cabinet_of_generals }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 5
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_timed_idea = {
@@ -9058,6 +9160,14 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = auh_mil_crisis.3 days = 20 }
 			add_ideas = AUH_m_the_preventive_war_memoranda
+			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 3 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
+			}
 			set_country_flag = AUH_m_conrad_at_the_staff
 			army_experience = 50
 			add_command_power = 50
@@ -9197,6 +9307,14 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = AUH_m_the_party_of_the_crown_in_zagreb
 			set_country_flag = AUH_m_zagreb_by_the_minority
+			hidden_effect = {
+				add_to_variable = { var = AUH_forgery_ledger value = 7 }
+				clamp_variable = {
+					var = AUH_forgery_ledger
+					min = 0
+					max = 100
+				}
+			}
 			add_political_power = 50
 			every_state = {
 				limit = {
@@ -9343,6 +9461,16 @@ focus_tree = {
 		available = {
 			has_country_flag = AUH_m_flag_counties_resisted
 		}
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_m_the_kingdom_under_the_army
@@ -9472,6 +9600,14 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_m_the_kundschaftsdienst
+			hidden_effect = {
+				add_to_variable = { var = AUH_forgery_ledger value = 5 }
+				clamp_variable = {
+					var = AUH_forgery_ledger
+					min = 0
+					max = 100
+				}
+			}
 			add_political_power = 50
 			add_command_power = 25
 			add_tech_bonus = {
@@ -9520,6 +9656,16 @@ focus_tree = {
 		prerequisite = { focus = AUHDNC_m_the_frankist_wager }
 		icon = GFX_focus_YUG_banovina_of_croatia
 		cost = 5
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 2 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_m_the_settlement_in_question
@@ -9583,6 +9729,14 @@ focus_tree = {
 				add_idea = AUH_m_the_counter_espionage_group
 			}
 			set_country_flag = AUH_m_counter_espionage_established
+			hidden_effect = {
+				add_to_variable = { var = AUH_forgery_ledger value = 8 }
+				clamp_variable = {
+					var = AUH_forgery_ledger
+					min = 0
+					max = 100
+				}
+			}
 			add_political_power = 50
 			add_command_power = 25
 			add_tech_bonus = {
@@ -9858,6 +10012,16 @@ focus_tree = {
 		}
 		icon = GFX_focus_generic_universal_suffrage
 		cost = 7.5
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 4 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_m_the_patent_of_the_franchise

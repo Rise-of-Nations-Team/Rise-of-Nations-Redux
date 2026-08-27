@@ -1,0 +1,829 @@
+AUH_dnc_delegations_cat = {
+	AUH_del_carry_the_common_estimates = {
+		icon = GFX_decision_category_generic_political_actions
+		cost = 50
+		days_remove = 45
+		days_re_enable = 270
+		fire_only_once = no
+		remove_effect = {
+			add_political_power = 25
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 10
+				check_variable = {
+					var = AUH_gemeinsamkeit
+					value = 40
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	AUH_del_press_the_quota_upward = {
+		icon = GFX_decision_generic_decision
+		cost = 75
+		days_remove = 60
+		days_re_enable = 300
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_del_quota_room_up_tt
+				check_variable = {
+					var = AUH_quote
+					value = 40
+					compare = less_than
+				}
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = AUH_quote value = 1 }
+			clamp_variable = {
+				var = AUH_quote
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_eco_quote_up_tt
+			subtract_from_variable = { var = HUN_support value = 1 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_down
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				check_variable = {
+					var = AUH_quote
+					value = 30
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	AUH_del_let_the_quota_slip = {
+		icon = GFX_decision_generic_decision
+		cost = 25
+		days_remove = 45
+		days_re_enable = 300
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_del_quota_room_down_tt
+				check_variable = {
+					var = AUH_quote
+					value = 30
+					compare = greater_than
+				}
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = AUH_quote value = 1 }
+			clamp_variable = {
+				var = AUH_quote
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_eco_quote_down_tt
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_up
+			add_to_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 8
+				check_variable = {
+					var = HUN_support
+					value = 30
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	AUH_del_the_credits_for_the_common_army = {
+		icon = GFX_decision_generic_military
+		cost = 60
+		days_remove = 60
+		days_re_enable = 240
+		fire_only_once = no
+		remove_effect = {
+			army_experience = 10
+			add_war_support = 0.01
+			add_to_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+	}
+}
+
+AUH_dnc_serbia_ladder_cat = {
+	AUH_serb_the_tariff_wall = {
+		icon = GFX_decision_generic_factory
+		cost = 40
+		days_remove = 60
+		days_re_enable = 120
+		fire_only_once = no
+		available = {
+			NOT = { has_war_with = SER }
+			NOT = { has_country_flag = AUH_serb_pig_war_declared }
+		}
+		remove_effect = {
+			set_country_flag = {
+				flag = AUH_serb_tariff_wall_standing
+				value = 1
+				days = 180
+			}
+			custom_effect_tooltip = AUH_serb_tariff_wall_tt
+			SER = {
+				add_opinion_modifier = { target = AUH modifier = medium_decrease }
+			}
+			subtract_from_variable = { var = SER_support value = 1 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_flag = AUH_dnc_path_sword
+					has_country_flag = AUH_dnc_path_magyar
+				}
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
+			}
+		}
+	}
+
+	AUH_serb_the_pig_war = {
+		icon = GFX_decision_generic_nationalism
+		cost = 75
+		days_remove = 90
+		fire_only_once = no
+		visible = {
+			NOT = { has_country_flag = AUH_serb_pig_war_declared }
+		}
+		available = {
+			NOT = { has_war_with = SER }
+			custom_trigger_tooltip = {
+				tooltip = AUH_serb_tariff_first_tt
+				has_country_flag = AUH_serb_tariff_wall_standing
+			}
+		}
+		remove_effect = {
+			set_country_flag = {
+				flag = AUH_serb_pig_war_declared
+				value = 1
+				days = 730
+			}
+			custom_effect_tooltip = AUH_serb_pig_war_tt
+			SER = {
+				add_opinion_modifier = { target = AUH modifier = large_decrease }
+			}
+			add_named_threat = {
+				threat = 1
+				name = AUH_serb_the_pig_war_threat
+			}
+			add_war_support = 0.02
+			subtract_from_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				OR = {
+					has_country_flag = AUH_dnc_path_sword
+					has_country_flag = AUH_dnc_path_magyar
+				}
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
+			}
+		}
+	}
+
+	AUH_serb_the_loan_is_blocked = {
+		icon = GFX_decision_gre_investment_decisions
+		cost = 50
+		days_remove = 45
+		days_re_enable = 240
+		fire_only_once = no
+		available = {
+			NOT = { has_war_with = SER }
+		}
+		remove_effect = {
+			SER = {
+				add_opinion_modifier = { target = AUH modifier = medium_decrease }
+			}
+			add_political_power = 25
+			custom_effect_tooltip = AUH_serb_loan_blocked_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_country_flag = AUH_dnc_path_sword
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
+			}
+		}
+	}
+
+	AUH_serb_the_hand_reopened = {
+		icon = GFX_decision_generic_nationalism
+		cost = 50
+		days_remove = 45
+		days_re_enable = 180
+		fire_only_once = no
+		available = {
+			NOT = { has_war_with = SER }
+		}
+		remove_effect = {
+			clr_country_flag = AUH_serb_tariff_wall_standing
+			clr_country_flag = AUH_serb_pig_war_declared
+			custom_effect_tooltip = AUH_serb_hand_reopened_tt
+			SER = {
+				add_opinion_modifier = { target = AUH modifier = medium_increase }
+			}
+			add_to_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_up
+			add_to_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 6
+				check_variable = {
+					var = SER_support
+					value = 25
+					compare = less_than
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+	}
+}
+
+AUH_dnc_county_instruments_cat = {
+	AUH_cty_the_royal_commissioners = {
+		icon = GFX_decision_eng_install_government
+		cost = 50
+		days_remove = 60
+		days_re_enable = 120
+		fire_only_once = no
+		remove_effect = {
+			add_stability = 0.02
+			subtract_from_variable = { var = HUN_support value = 1 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_down
+			add_to_variable = { var = AUH_county_resistance value = 3 }
+			clamp_variable = {
+				var = AUH_county_resistance
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_cty_ledger_up_tt
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				has_country_flag = AUH_dnc_path_sword
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+
+	AUH_cty_the_gendarmes_ride_out = {
+		icon = GFX_decision_generic_military
+		cost = 40
+		days_remove = 45
+		days_re_enable = 90
+		fire_only_once = no
+		remove_effect = {
+			add_war_support = 0.01
+			subtract_from_variable = { var = AUH_strike_pressure value = 5 }
+			clamp_variable = {
+				var = AUH_strike_pressure
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_clock_street_calms_tt
+			add_to_variable = { var = AUH_county_resistance value = 4 }
+			clamp_variable = {
+				var = AUH_county_resistance
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_cty_ledger_up_tt
+			subtract_from_variable = { var = HUN_support value = 1 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_down
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				check_variable = {
+					var = AUH_strike_pressure
+					value = 40
+					compare = greater_than
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+
+	AUH_cty_the_taxes_by_the_bayonet = {
+		icon = GFX_decision_generic_tank
+		cost = 25
+		days_remove = 30
+		days_re_enable = 90
+		fire_only_once = no
+		remove_effect = {
+			add_political_power = 50
+			army_experience = 5
+			add_to_variable = { var = AUH_county_resistance value = 5 }
+			clamp_variable = {
+				var = AUH_county_resistance
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_cty_ledger_up_tt
+			subtract_from_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_down
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				has_country_flag = AUH_dnc_path_sword
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+
+	AUH_cty_the_instruments_rest = {
+		icon = GFX_decision_generic_decision
+		cost = 25
+		days_remove = 60
+		days_re_enable = 120
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_cty_ledger_live_tt
+				check_variable = {
+					var = AUH_county_resistance
+					value = 0
+					compare = greater_than
+				}
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = AUH_county_resistance value = 5 }
+			clamp_variable = {
+				var = AUH_county_resistance
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_cty_ledger_down_tt
+			add_to_variable = { var = HUN_support value = 1 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_up
+			add_to_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				check_variable = {
+					var = AUH_county_resistance
+					value = 40
+					compare = greater_than
+				}
+			}
+		}
+	}
+}
+
+AUH_dnc_heirs_chancellery_cat = {
+	AUH_hc_a_card_on_every_desk = {
+		icon = GFX_decision_hol_draw_up_staff_plans
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		fire_only_once = no
+		remove_effect = {
+			add_to_variable = { var = AUH_belvedere_dossier value = 2 }
+			clamp_variable = {
+				var = AUH_belvedere_dossier
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_dossier_tt
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				check_variable = {
+					var = AUH_belvedere_dossier
+					value = 25
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	AUH_hc_a_minister_is_marked = {
+		icon = GFX_decision_generic_operation
+		cost = 50
+		days_remove = 45
+		days_re_enable = 180
+		fire_only_once = no
+		remove_effect = {
+			set_country_flag = AUH_hc_minister_marked
+			custom_effect_tooltip = AUH_hc_minister_marked_tt
+			add_to_variable = { var = AUH_belvedere_dossier value = 3 }
+			clamp_variable = {
+				var = AUH_belvedere_dossier
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_dossier_tt
+			subtract_from_variable = { var = AUS_support value = 1 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_aus_down
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				check_variable = {
+					var = AUH_belvedere_dossier
+					value = 25
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	AUH_hc_the_generals_are_briefed = {
+		icon = GFX_decision_generic_military
+		cost = 50
+		days_remove = 60
+		days_re_enable = 180
+		fire_only_once = no
+		remove_effect = {
+			army_experience = 10
+			add_command_power = 10
+			add_to_variable = { var = AUH_belvedere_dossier value = 1 }
+			clamp_variable = {
+				var = AUH_belvedere_dossier
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_dossier_tt
+		}
+		ai_will_do = { factor = 2 }
+	}
+
+	AUH_hc_the_word_dropped_at_court = {
+		icon = GFX_decision_generic_decision
+		cost = 25
+		days_remove = 30
+		days_re_enable = 90
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_hc_cards_to_spend_tt
+				check_variable = {
+					var = AUH_belvedere_dossier
+					value = 5
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = AUH_belvedere_dossier value = 3 }
+			clamp_variable = {
+				var = AUH_belvedere_dossier
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_hc_dossier_spent_tt
+			add_political_power = 50
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = {
+					var = AUH_belvedere_dossier
+					value = 30
+					compare = less_than
+				}
+			}
+		}
+	}
+}
+
+AUH_dnc_memoranda_cat = {
+	AUH_mem_the_press_bureau_is_funded = {
+		icon = GFX_decision_generic_decision
+		cost = 40
+		days_remove = 30
+		days_re_enable = 90
+		fire_only_once = no
+		remove_effect = {
+			add_to_variable = { var = AUH_forgery_ledger value = 1 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_up_tt
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+
+	AUH_mem_the_documents_of_provenance = {
+		icon = GFX_decision_generic_operation
+		cost = 50
+		days_remove = 60
+		days_re_enable = 120
+		fire_only_once = no
+		remove_effect = {
+			add_to_variable = { var = AUH_forgery_ledger value = 2 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_up_tt
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_flag = AUH_dnc_path_sword
+					has_country_flag = AUH_dnc_path_magyar
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+
+	AUH_mem_the_coalition_stands_accused = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 75
+		days_remove = 90
+		days_re_enable = 240
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_mem_ledger_ready_tt
+				check_variable = {
+					var = AUH_forgery_ledger
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = AUH_forgery_ledger value = 3 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_spent_tt
+			subtract_from_variable = { var = CRO_support value = 2 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_cro_down
+			subtract_from_variable = { var = SER_support value = 1 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+			add_war_support = 0.02
+			add_named_threat = {
+				threat = 1
+				name = AUH_mem_the_trial_read_abroad
+			}
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+
+	AUH_mem_the_papers_are_burned = {
+		icon = GFX_decision_generic_decision
+		cost = 25
+		days_remove = 30
+		days_re_enable = 90
+		fire_only_once = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_mem_ledger_exists_tt
+				check_variable = {
+					var = AUH_forgery_ledger
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = AUH_forgery_ledger value = 2 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_burned_tt
+			add_to_variable = { var = CRO_support value = 1 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_cro_up
+			add_to_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+	}
+}
