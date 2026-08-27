@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		POR_unstable_monarchy = {
-
+			picture = POR_unstable_monarchy
 			available = {
 				tag = POR
 			}
@@ -23,7 +23,7 @@ ideas = {
 		}
 
 		POR_overstreched_empire = {
-
+			picture = ENG_overextended_empire
 			available = {
 				tag = POR
 			}
@@ -45,7 +45,7 @@ ideas = {
 		}
 
 		POR_poor_economy = {
-
+			picture = POR_poor_economy
 			available = {
 				tag = POR
 			}
@@ -67,7 +67,7 @@ ideas = {
 		}
 
 		POR_recovering_economy = {
-		
+			picture = generic_economy_good		
 			available = {
 				tag = POR
 			}
@@ -87,5 +87,42 @@ ideas = {
 				political_power_gain = 0.025
 			}
 		}
+
+		POR_casa_braganza_idea = {
+			picture = POR_casa_braganca
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		POR_casa_braganza_idea1 = {
+			picture = POR_casa_braganca
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				army_leader_start_planning_level = 1
+				army_leader_start_attack_level = 1
+			}
+		}		
+
 	}
 }
