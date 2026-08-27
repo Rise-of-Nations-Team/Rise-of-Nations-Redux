@@ -458,9 +458,125 @@ AUH_clock_check = {
 		set_country_flag = AUH_clock_lovcen_settled
 		country_event = { id = auh_clock.184 days = 2 }
 	}
+	AUH_clock_counties_check = yes
 }
 
 AUH_clock_the_old_man_dies = {
 	set_country_flag = AUH_old_man_dead
 	country_event = { id = auh_clock.8 hours = 6 }
+}
+
+AUH_clock_counties_check = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_counties_called }
+			NOT = { has_country_flag = AUH_a_counties_folded }
+			NOT = { has_war_with = HUN }
+			OR = {
+				has_country_flag = AUH_x_counties_over_the_edge
+				has_country_flag = AUH_b_accession_secession
+				AND = {
+					check_variable = {
+						var = AUH_county_resistance
+						value = 60
+						compare = greater_than_or_equals
+					}
+					OR = {
+						has_country_flag = AUH_clock_word_refused
+						has_country_flag = AUH_clock_house_dissolved
+						has_country_flag = AUH_cty_instruments_used
+					}
+				}
+			}
+		}
+		set_country_flag = AUH_clock_counties_called
+		country_event = { id = auh_clock.190 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_x_civil_war_running
+			has_war_with = HUN
+		}
+		add_to_variable = { var = AUH_x_civil_war_months value = 1 }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_clock_mediation_offered
+			}
+			NOT = {
+				has_country_flag = AUH_clock_counties_settled
+			}
+			has_country_flag = AUH_x_civil_war_running
+			has_war_with = HUN
+			has_capitulated = no
+			HUN = { has_capitulated = no }
+			check_variable = {
+				var = AUH_x_civil_war_months
+				value = 8
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_x_civil_war_months
+					value = 12
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = AUH_clock_mediation_offered
+			country_event = { id = auh_clock.195 days = 2 }
+		}
+		else = {
+			random_list = {
+				75 = { }
+				25 = {
+					set_country_flag = AUH_clock_mediation_offered
+					country_event = { id = auh_clock.195 days = 2 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_clock_counties_settled
+			}
+			has_country_flag = AUH_x_civil_war_running
+			OR = {
+				AND = {
+					has_war_with = HUN
+					HUN = {
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.6
+						}
+					}
+				}
+				NOT = { country_exists = HUN }
+			}
+		}
+		set_country_flag = AUH_clock_counties_settled
+		country_event = { id = auh_clock.196 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_clock_counties_settled
+			}
+			has_country_flag = AUH_x_civil_war_running
+			has_war_with = HUN
+			OR = {
+				has_capitulated = yes
+				surrender_progress > 0.4
+			}
+		}
+		set_country_flag = AUH_clock_counties_settled
+		country_event = { id = auh_clock.197 days = 2 }
+	}
 }
