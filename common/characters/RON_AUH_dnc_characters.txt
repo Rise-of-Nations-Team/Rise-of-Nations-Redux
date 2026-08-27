@@ -463,12 +463,14 @@ characters = {
 				OR = {
 					has_country_flag = AUH_a_franchise_brandished
 					has_country_flag = AUH_m_franchise_by_patent
+					has_country_flag = AUH_x_decree_carried
 				}
 			}
 			available = {
 				OR = {
 					has_country_flag = AUH_a_franchise_brandished
 					has_country_flag = AUH_m_franchise_by_patent
+					has_country_flag = AUH_x_decree_carried
 				}
 			}
 			cost = 100
@@ -1159,10 +1161,16 @@ characters = {
 			idea_token = AUH_michal_bobrzynski
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+				OR = {
+					has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+					has_country_flag = AUH_clock_bobrzynski_installed
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+				OR = {
+					has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+					has_country_flag = AUH_clock_bobrzynski_installed
+				}
 			}
 			cost = 100
 			traits = { silent_lawyer accomplished_professor }

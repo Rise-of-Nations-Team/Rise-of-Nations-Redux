@@ -327,6 +327,113 @@ AUH_dnc_serbia_ladder_cat = {
 			}
 		}
 	}
+
+	AUH_serb_the_last_rung_of_the_ladder = {
+		icon = GFX_decision_generic_nationalism
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		visible = {
+			has_country_flag = AUH_serb_pig_war_declared
+			NOT = { has_country_flag = AUH_clock_serbia_named }
+		}
+		available = {
+			country_exists = SER
+			NOT = { has_war_with = SER }
+			NOT = { has_country_flag = AUH_clock_serbia_named }
+		}
+		remove_effect = {
+			set_country_flag = AUH_clock_serbia_window_pig
+			country_event = { id = auh_clock.100 days = 2 }
+			custom_effect_tooltip = AUH_serb_last_rung_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
+			}
+		}
+	}
+
+	AUH_serb_the_sumadija_pacification = {
+		icon = GFX_decision_generic_military
+		cost = 40
+		days_remove = 60
+		days_re_enable = 90
+		fire_only_once = no
+		visible = { has_country_flag = AUH_clock_sumadija_open }
+		available = {
+			country_exists = SER
+			NOT = { has_war_with = SER }
+		}
+		remove_effect = {
+			army_experience = 5
+			add_war_support = 0.01
+			add_stability = -0.01
+			subtract_from_variable = { var = SER_support value = 1 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+			custom_effect_tooltip = AUH_serb_pacification_tt
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+	}
+
+	AUH_serb_the_case_against_belgrade = {
+		icon = GFX_decision_generic_operation
+		cost = 50
+		days_remove = 21
+		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = AUH_forgery_case_opened }
+		}
+		available = {
+			NOT = { has_war_with = SER }
+		}
+		remove_effect = {
+			set_country_flag = AUH_forgery_case_opened
+			country_event = { id = auh_clock.140 days = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_flag = AUH_dnc_path_sword
+					has_country_flag = AUH_dnc_path_magyar
+				}
+			}
+			modifier = {
+				factor = 2
+				check_variable = {
+					var = AUH_forgery_ledger
+					value = 6
+					compare = greater_than_or_equals
+				}
+			}
+		}
+	}
 }
 
 AUH_dnc_county_instruments_cat = {
@@ -337,6 +444,7 @@ AUH_dnc_county_instruments_cat = {
 		days_re_enable = 120
 		fire_only_once = no
 		remove_effect = {
+			hidden_effect = { set_country_flag = AUH_cty_instruments_used }
 			add_stability = 0.02
 			subtract_from_variable = { var = HUN_support value = 1 }
 			clamp_variable = {
@@ -380,6 +488,7 @@ AUH_dnc_county_instruments_cat = {
 		days_re_enable = 90
 		fire_only_once = no
 		remove_effect = {
+			hidden_effect = { set_country_flag = AUH_cty_instruments_used }
 			add_war_support = 0.01
 			subtract_from_variable = { var = AUH_strike_pressure value = 5 }
 			clamp_variable = {
@@ -434,6 +543,7 @@ AUH_dnc_county_instruments_cat = {
 		days_re_enable = 90
 		fire_only_once = no
 		remove_effect = {
+			hidden_effect = { set_country_flag = AUH_cty_instruments_used }
 			add_political_power = 50
 			army_experience = 5
 			add_to_variable = { var = AUH_county_resistance value = 5 }

@@ -5516,6 +5516,9 @@ focus_tree = {
 				has_country_flag = AUH_active_policy
 				has_country_flag = AUH_dnc_ballhausplatz_active
 			}
+			NOT = {
+				has_country_flag = AUH_bp_protectorate_signed
+			}
 		}
 		bypass = {
 			OR = {
@@ -8180,6 +8183,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = AUHDNC_h_treat_with_the_independence_party
+			focus = AUHDNC_h_the_bank_of_the_kingdom
 		}
 		mutually_exclusive = { focus = AUHDNC_h_the_union_renewed_by_treaty }
 		icon = GFX_goal_generic_isolation
@@ -8216,6 +8220,7 @@ focus_tree = {
 			set_country_flag = AUH_h_the_quota_abolished
 			set_variable = { AUH_quote = 0 }
 			custom_effect_tooltip = AUH_h_quota_abolished_tt
+			country_event = { id = auh_clock.162 days = 3 }
 			add_to_variable = { CZE_support = -5 }
 			clamp_variable = {
 				var = CZE_support
@@ -8633,6 +8638,10 @@ focus_tree = {
 				factor = 5
 				has_country_flag = AUH_h_road_independence
 			}
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_h_the_north_read_demonstration
+			}
 		}
 		completion_reward = {
 			add_manpower = 15000
@@ -8803,6 +8812,7 @@ focus_tree = {
 			set_country_flag = AUH_h_personal_union_declared
 			custom_effect_tooltip = AUH_h_cosmetic_union_tt
 			set_country_flag = AUH_dnc_era_end
+			country_event = { id = auh_clock.164 days = 3 }
 			add_to_variable = { AUH_gemeinsamkeit = -20 }
 			clamp_variable = {
 				var = AUH_gemeinsamkeit
@@ -8834,6 +8844,61 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_h_nat_AUS_down_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_h_the_bank_of_the_kingdom
+		relative_position_id = AUHDNC_h_treat_with_the_independence_party
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_h_treat_with_the_independence_party
+		}
+		icon = GFX_goal_generic_government_deals
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_country_flag = AUH_h_road_independence
+			}
+		}
+		completion_reward = {
+			set_country_flag = AUH_h_the_bank_charter_tabled
+			add_political_power = 50
+			add_to_variable = { AUH_h_the_price_paid = 5 }
+			clamp_variable = {
+				var = AUH_h_the_price_paid
+				min = 0
+				max = 100
+			}
+			hidden_effect = {
+				set_variable = {
+					AUH_h_mod_conscription = AUH_h_the_price_paid
+				}
+				multiply_variable = { AUH_h_mod_conscription = 0.002 }
+				set_variable = { AUH_h_mod_recpop = AUH_h_the_price_paid }
+				multiply_variable = { AUH_h_mod_recpop = 0.0015 }
+				set_variable = { AUH_h_mod_org = AUH_h_the_price_paid }
+				multiply_variable = { AUH_h_mod_org = -0.0015 }
+			}
+			custom_effect_tooltip = AUH_h_price_paid_tt
+			add_to_variable = { HUN_support = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_h_nat_HUN_up_tt
+			add_to_variable = { AUH_gemeinsamkeit = -2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_h_gemein_down_tt
+			country_event = { id = auh_clock.160 days = 1 }
 		}
 	}
 
@@ -9795,6 +9860,7 @@ focus_tree = {
 			NOT = {
 				OR = {
 					has_country_flag = AUH_dnc_provinces_declared
+					has_country_flag = AUH_bp_protectorate_signed
 					has_completed_focus = AUHDNC_bp_the_provinces_are_declared
 				}
 			}
@@ -9915,6 +9981,7 @@ focus_tree = {
 			NOT = {
 				OR = {
 					has_country_flag = AUH_dnc_provinces_declared
+					has_country_flag = AUH_bp_protectorate_signed
 					has_completed_focus = AUHDNC_bp_the_provinces_are_declared
 				}
 			}
@@ -9978,7 +10045,10 @@ focus_tree = {
 			add_opinion_modifier = { target = OTT modifier = large_decrease }
 			if = {
 				limit = {
-					has_completed_focus = AUHDNC_bp_the_meeting_at_buchlovice
+					OR = {
+						has_completed_focus = AUHDNC_bp_the_meeting_at_buchlovice
+						has_country_flag = AUH_clock_buchlau_understanding
+					}
 				}
 				add_named_threat = {
 					threat = 2
@@ -10491,6 +10561,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_m_tt_hun_down
 			add_stability = -0.05
+			set_country_flag = AUH_clock_serbia_named
 			country_event = { id = auh_dnc.417 days = 5 }
 			country_event = { id = auh_dnc.421 days = 12 }
 		}
@@ -14651,6 +14722,17 @@ focus_tree = {
 			add_named_threat = { threat = 3 name = AUH_x_punitive_threat }
 			create_wargoal = { type = puppet_wargoal_focus target = SER }
 			set_country_flag = AUH_x_punitive_expedition
+			set_country_flag = AUH_clock_serbia_named
+			if = {
+				limit = { has_country_flag = AUH_clock_east_war_window }
+				set_country_flag = AUH_clock_serbia_window_east
+			}
+			else = {
+				set_country_flag = AUH_clock_serbia_window_konak
+			}
+			hidden_effect = {
+				country_event = { id = auh_dnc.417 days = 5 }
+			}
 		}
 	}
 
@@ -14668,6 +14750,10 @@ focus_tree = {
 			modifier = {
 				factor = 3
 				has_country_flag = AUH_dnc_path_iron_ring
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = AUH_hofburg_mea_culpa_open
 			}
 		}
 		completion_reward = {
@@ -14694,6 +14780,15 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_x_coalition_received_tt
 			set_country_flag = AUH_x_coalition_received
+			if = {
+				limit = {
+					has_country_flag = AUH_hofburg_mea_culpa_open
+				}
+				custom_effect_tooltip = AUH_forgery_reception_due_tt
+				hidden_effect = {
+					country_event = { id = auh_clock.147 days = 3 }
+				}
+			}
 		}
 	}
 
@@ -14825,6 +14920,10 @@ focus_tree = {
 			set_country_flag = AUH_bell_kingdom_resolved
 			set_country_flag = AUH_x_law_of_the_millions
 			custom_effect_tooltip = AUH_x_millions_tt
+			custom_effect_tooltip = AUH_x_gentry_will_answer_tt
+			hidden_effect = {
+				country_event = { id = auh_clock.170 days = 3 }
+			}
 		}
 	}
 
@@ -14837,6 +14936,12 @@ focus_tree = {
 		icon = GFX_focus_generic_vote
 		cost = 5
 		allow_branch = { has_country_flag = AUH_clock_bell_kingdom }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_decree_carried_trig_tt
+				has_country_flag = AUH_x_decree_carried
+			}
+		}
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = 150
@@ -14909,6 +15014,7 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			set_country_flag = AUH_x_street_conceded
 			set_country_flag = AUH_bell_street_resolved
 			custom_effect_tooltip = AUH_x_ballot_conceded_tt
 		}
@@ -14926,6 +15032,7 @@ focus_tree = {
 		cost = 3
 		allow_branch = {
 			has_country_flag = AUH_clock_bell_street
+			has_country_flag = AUH_x_street_conceded
 			has_completed_focus = AUHDNC_a_the_register_of_the_peoples
 		}
 		ai_will_do = { factor = 10 }
@@ -15040,7 +15147,13 @@ focus_tree = {
 		cost = 3
 		allow_branch = { has_country_flag = AUH_clock_bell_east }
 		available = {
-			has_country_flag = AUH_dnc_provinces_declared
+			OR = {
+				has_country_flag = AUH_dnc_provinces_declared
+				AND = {
+					has_country_flag = AUH_clock_east_patience
+					country_exists = OTT
+				}
+			}
 		}
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -15096,6 +15209,15 @@ focus_tree = {
 				set_country_flag = AUH_x_disposal_condominium
 				custom_effect_tooltip = AUH_x_disposal_condominium_tt
 			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = AUH_clock_disposal_routed }
+				}
+				custom_effect_tooltip = AUH_clock_disposal_council_tt
+				hidden_effect = {
+					country_event = { id = auh_clock.112 days = 1 }
+				}
+			}
 		}
 	}
 
@@ -15126,6 +15248,23 @@ focus_tree = {
 			set_country_flag = AUH_bell_lemberg_resolved
 			set_country_flag = AUH_x_vistula_crown_claimed
 			custom_effect_tooltip = AUH_x_vistula_tt
+			set_country_flag = AUH_x_vistula_war_hook
+			custom_effect_tooltip = AUH_x_vistula_war_hook_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						country_exists = RUS
+						NOT = { has_war_with = RUS }
+					}
+					RUS = {
+						country_event = { id = auh_clock.133 days = 6 }
+					}
+				}
+				else = {
+					country_event = { id = auh_clock.135 days = 6 }
+				}
+				country_event = { id = auh_clock.134 days = 14 }
+			}
 		}
 	}
 

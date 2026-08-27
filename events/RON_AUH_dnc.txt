@@ -2740,6 +2740,26 @@ country_event = {
 				country_event = { id = auh_dnc.418 days = 10 }
 			}
 		}
+		hidden_effect = {
+			set_country_flag = AUH_clock_berlin_asked
+			random_list = {
+				65 = {
+					modifier = {
+						factor = 2
+						has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
+					}
+					modifier = {
+						factor = 1.5
+						has_opinion = { target = GER value > 60 }
+					}
+					country_event = { id = auh_clock.101 days = 4 }
+				}
+				35 = {
+					modifier = { factor = 2 threat > 0.25 }
+					country_event = { id = auh_clock.102 days = 4 }
+				}
+			}
+		}
 		ai_chance = { base = 65 }
 	}
 
@@ -2762,6 +2782,26 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = AUH_m_uncovered_tt
+		hidden_effect = {
+			set_country_flag = AUH_clock_serbia_without_berlin
+			random_list = {
+				45 = {
+					modifier = {
+						factor = 2
+						has_country_flag = AUH_clock_serbia_window_konak
+					}
+					modifier = {
+						factor = 2
+						has_country_flag = AUH_clock_serbia_window_east
+					}
+					country_event = { id = auh_clock.103 days = 6 }
+				}
+				55 = {
+					modifier = { factor = 2 threat > 0.25 }
+					country_event = { id = auh_clock.104 days = 6 }
+				}
+			}
+		}
 		ai_chance = { base = 35 }
 	}
 }

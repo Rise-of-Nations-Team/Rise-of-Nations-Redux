@@ -211,6 +211,12 @@ AUH_clock_check = {
 			set_country_flag = AUH_clock_bell_east
 			set_global_flag = AUH_the_constitution_restored_in_the_east
 			country_event = { id = auh_clock.7 days = 2 }
+			if = {
+				limit = {
+					NOT = { has_country_flag = AUH_bp_buchlovice }
+				}
+				country_event = { id = auh_clock.110 days = 12 }
+			}
 		}
 		else = {
 			random_list = {
@@ -219,6 +225,12 @@ AUH_clock_check = {
 					set_country_flag = AUH_clock_bell_east
 					set_global_flag = AUH_the_constitution_restored_in_the_east
 					country_event = { id = auh_clock.7 days = 2 }
+					if = {
+						limit = {
+							NOT = { has_country_flag = AUH_bp_buchlovice }
+						}
+						country_event = { id = auh_clock.110 days = 12 }
+					}
 				}
 			}
 		}
@@ -238,6 +250,40 @@ AUH_clock_check = {
 		}
 		set_country_flag = AUH_clock_bell_lemberg
 		country_event = { id = auh_clock.9 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_messina_fired }
+			country_exists = ITA
+			check_variable = {
+				var = AUH_clock_months
+				value = 105
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_clock_messina_fired
+		country_event = { id = auh_clock.150 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_march_called }
+			has_country_flag = AUH_clock_bell_street
+			has_country_flag = AUH_bell_street_resolved
+			check_variable = {
+				var = AUH_clock_months
+				value = 74
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = AUH_strike_pressure
+				value = 45
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_clock_march_called
+		country_event = { id = auh_clock.120 days = 5 }
 	}
 
 	if = {
@@ -355,6 +401,62 @@ AUH_clock_check = {
 			14 = { }
 			1 = { AUH_clock_the_old_man_dies = yes }
 		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_lovcen_posted }
+			has_completed_focus = AUHDNC_nav_the_bay_of_cattaro
+			OR = {
+				has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
+				has_completed_focus = AUHDNC_bp_the_frontier_shut_to_the_kingdom
+			}
+			country_exists = MNT
+			NOT = { has_war_with = MNT }
+		}
+		random_list = {
+			85 = { }
+			15 = {
+				set_country_flag = AUH_clock_lovcen_posted
+				country_event = { id = auh_clock.180 days = 3 }
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_serbia_settled }
+			has_war_with = SER
+			OR = {
+				has_country_flag = AUH_clock_serbia_named
+				has_country_flag = AUH_m_the_campaign_opened
+				has_country_flag = AUH_x_punitive_expedition
+			}
+			SER = {
+				OR = {
+					has_capitulated = yes
+					surrender_progress > 0.5
+				}
+			}
+		}
+		set_country_flag = AUH_clock_serbia_settled
+		country_event = { id = auh_clock.107 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_lovcen_settled }
+			has_country_flag = AUH_clock_lovcen_war_named
+			has_war_with = MNT
+			MNT = {
+				OR = {
+					has_capitulated = yes
+					surrender_progress > 0.3
+				}
+			}
+		}
+		set_country_flag = AUH_clock_lovcen_settled
+		country_event = { id = auh_clock.184 days = 2 }
 	}
 }
 
