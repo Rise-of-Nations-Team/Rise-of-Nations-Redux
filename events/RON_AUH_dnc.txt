@@ -184,7 +184,10 @@ country_event = {
 		ai_chance = { factor = 30 }
 		set_country_flag = AUH_a_exception_armed
 		custom_effect_tooltip = AUH_a_exception_armed_tt
-		add_timed_idea = { idea = AUH_a_the_garrison_answers days = 365 }
+		add_timed_idea = {
+			idea = AUH_a_the_garrison_answers
+			days = 365
+		}
 		add_to_variable = { var = AUH_a_exceptions value = 1 }
 		set_variable = {
 			AUH_a_exception_resistance = AUH_a_exceptions
@@ -280,7 +283,10 @@ country_event = {
 			max = 100
 		}
 		custom_effect_tooltip = AUH_a_port_conciliation_loyalty_tt
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 	}
 }
 
@@ -458,7 +464,10 @@ country_event = {
 			max = 100
 		}
 		custom_effect_tooltip = AUH_a_summary_law_kingdom_loyalty_tt
-		add_timed_idea = { idea = AUH_a_the_counties_refuse days = 365 }
+		add_timed_idea = {
+			idea = AUH_a_the_counties_refuse
+			days = 365
+		}
 		add_to_variable = { var = AUH_strike_pressure value = 10 }
 		clamp_variable = {
 			var = AUH_strike_pressure
@@ -503,7 +512,10 @@ country_event = {
 			max = 100
 		}
 		custom_effect_tooltip = AUH_a_strike_pressure_down_tt
-		add_popularity = { ideology = democratic popularity = 0.04 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
 		add_political_power = -25
 		set_country_flag = AUH_a_yielded_to_the_ring
 	}
@@ -542,7 +554,10 @@ country_event = {
 		custom_effect_tooltip = AUH_a_exception_counter_tt
 		set_country_flag = AUH_a_exception_armed
 		custom_effect_tooltip = AUH_a_exception_armed_tt
-		add_popularity = { ideology = communism popularity = 0.08 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.08
+		}
 		add_to_variable = { var = AUS_support value = -5 }
 		clamp_variable = {
 			var = AUS_support
@@ -609,7 +624,10 @@ country_event = {
 		}
 		custom_effect_tooltip = AUH_a_pact_published_loyalty_tt
 		add_stability = -0.05
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 		add_political_power = 25
 	}
 }
@@ -649,7 +667,10 @@ country_event = {
 		custom_effect_tooltip = AUH_a_old_capital_loyalty_tt
 		add_stability = 0.05
 		add_command_power = 25
-		add_timed_idea = { idea = AUH_a_the_garrison_answers days = 365 }
+		add_timed_idea = {
+			idea = AUH_a_the_garrison_answers
+			days = 365
+		}
 	}
 
 	option = {
@@ -874,7 +895,10 @@ country_event = {
 		}
 		add_stability = 0.05
 		add_political_power = 50
-		add_timed_idea = { idea = AUH_a_the_session_spent days = 365 }
+		add_timed_idea = {
+			idea = AUH_a_the_session_spent
+			days = 365
+		}
 		set_country_flag = AUH_a_beck_kept_at_the_staff
 	}
 }
@@ -2230,7 +2254,10 @@ country_event = {
 					type = bunker
 					level = 1
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 		}
@@ -2243,7 +2270,10 @@ country_event = {
 					type = bunker
 					level = 1
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 		}
@@ -2256,7 +2286,10 @@ country_event = {
 					type = bunker
 					level = 1
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 		}
@@ -2605,7 +2638,10 @@ country_event = {
 	option = {
 		name = auh_dnc.504.a
 		ai_chance = { base = 45 }
-		add_timed_idea = { idea = AUH_bp_the_indemnity days = 365 }
+		add_timed_idea = {
+			idea = AUH_bp_the_indemnity
+			days = 365
+		}
 		add_stability = 0.03
 		if = {
 			limit = { country_exists = OTT }
@@ -2925,7 +2961,10 @@ country_event = {
 		}
 		custom_effect_tooltip = AUH_eco_ITA_up_tt
 		add_political_power = 25
-		add_timed_idea = { idea = AUH_eco_the_months_we_lost days = 365 }
+		add_timed_idea = {
+			idea = AUH_eco_the_months_we_lost
+			days = 365
+		}
 	}
 }
 
@@ -3367,7 +3406,10 @@ country_event = {
 			max = 100
 		}
 		custom_effect_tooltip = AUH_eco_AUS_down_tt
-		add_popularity = { ideology = communism popularity = 0.03 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
 		if = {
 			limit = {
 				has_idea = AUH_eco_the_concession_to_the_ring
@@ -4284,7 +4326,10 @@ country_event = {
 		name = auh_dnc.317.b
 		add_political_power = -75
 		add_stability = 0.03
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 		custom_effect_tooltip = AUH_h_ev317_b_tt
 	}
 }
@@ -4354,7 +4399,10 @@ country_event = {
 			set_variable = { AUH_h_mod_org = 0 }
 		}
 		set_country_flag = AUH_h_franchise_resolved
-		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
 		custom_effect_tooltip = AUH_h_ev318_b_tt
 	}
 
@@ -4567,7 +4615,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = auh_dnc.403.a
-		add_timed_idea = { idea = AUH_m_the_loan_repriced days = 365 }
+		add_timed_idea = {
+			idea = AUH_m_the_loan_repriced
+			days = 365
+		}
 		add_political_power = 25
 		custom_effect_tooltip = AUH_m_spread_paid_tt
 		ai_chance = { base = 45 }
@@ -5493,7 +5544,10 @@ country_event = {
 		}
 		custom_effect_tooltip = AUH_m_tt_cro_up
 		add_political_power = 50
-		add_timed_idea = { idea = AUH_m_the_unsigned_promise days = 365 }
+		add_timed_idea = {
+			idea = AUH_m_the_unsigned_promise
+			days = 365
+		}
 		custom_effect_tooltip = AUH_m_promise_unsigned_tt
 		ai_chance = { base = 45 }
 	}
@@ -5719,7 +5773,10 @@ country_event = {
 				instant_build = yes
 			}
 		}
-		add_timed_idea = { idea = AUH_nav_the_yard_learns days = 365 }
+		add_timed_idea = {
+			idea = AUH_nav_the_yard_learns
+			days = 365
+		}
 		add_to_variable = { var = AUS_support value = -3 }
 		clamp_variable = {
 			var = AUS_support
@@ -5879,13 +5936,19 @@ country_event = {
 		add_stability = 0.05
 		add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
 		custom_effect_tooltip = AUH_nav_tt_gemeinsamkeit_up_2
-		add_timed_idea = { idea = AUH_nav_the_yard_learns days = 730 }
+		add_timed_idea = {
+			idea = AUH_nav_the_yard_learns
+			days = 730
+		}
 		navy_experience = 25
 	}
 
 	option = {
 		name = auh_dnc.652.c
-		add_timed_idea = { idea = AUH_nav_the_yard_learns days = 730 }
+		add_timed_idea = {
+			idea = AUH_nav_the_yard_learns
+			days = 730
+		}
 		if = {
 			limit = { country_exists = GER }
 			GER = {
@@ -5951,7 +6014,10 @@ country_event = {
 				add_opinion_modifier = { target = AUH modifier = medium_increase }
 			}
 		}
-		add_timed_idea = { idea = AUH_nav_the_yard_learns days = 730 }
+		add_timed_idea = {
+			idea = AUH_nav_the_yard_learns
+			days = 730
+		}
 		navy_experience = 25
 	}
 
@@ -6234,7 +6300,10 @@ country_event = {
 		}
 		custom_effect_tooltip = AUH_r_sup_SLV_up_tt
 		add_stability = 0.05
-		add_timed_idea = { idea = AUH_r_the_altar_is_first days = 540 }
+		add_timed_idea = {
+			idea = AUH_r_the_altar_is_first
+			days = 540
+		}
 		set_country_flag = AUH_r_catholics_paid_first
 	}
 }
@@ -6590,7 +6659,10 @@ country_event = {
 		custom_effect_tooltip = AUH_r_sup_POL_up_tt
 		every_state = {
 			limit = {
-				OR = { state = 89 state = 91 }
+				OR = {
+					state = 89
+					state = 91
+				}
 				NOT = {
 					has_dynamic_modifier = {
 						modifier = AUH_r_the_province_holds_itself_down
@@ -6680,7 +6752,10 @@ country_event = {
 				instant_build = yes
 			}
 		}
-		add_timed_idea = { idea = AUH_r_the_river_works days = 900 }
+		add_timed_idea = {
+			idea = AUH_r_the_river_works
+			days = 900
+		}
 		custom_effect_tooltip = AUH_r_corridor_stays_closed_tt
 	}
 
@@ -6725,7 +6800,10 @@ country_event = {
 	option = {
 		name = auh_dnc.207.a
 		ai_chance = { base = 45 }
-		add_timed_idea = { idea = AUH_r_the_chair_is_vacated days = 900 }
+		add_timed_idea = {
+			idea = AUH_r_the_chair_is_vacated
+			days = 900
+		}
 		ENG = {
 			add_opinion_modifier = {
 				target = AUH
@@ -6747,7 +6825,10 @@ country_event = {
 	option = {
 		name = auh_dnc.207.c
 		ai_chance = { base = 20 }
-		add_timed_idea = { idea = AUH_r_free_science days = 900 }
+		add_timed_idea = {
+			idea = AUH_r_free_science
+			days = 900
+		}
 		add_to_variable = { CZE_support = 5 }
 		clamp_variable = {
 			var = CZE_support
@@ -6776,7 +6857,10 @@ country_event = {
 		}
 		custom_effect_tooltip = AUH_r_sup_AUS_up_tt
 		add_political_power = -50
-		add_timed_idea = { idea = AUH_r_the_bloc_is_bought days = 540 }
+		add_timed_idea = {
+			idea = AUH_r_the_bloc_is_bought
+			days = 540
+		}
 		set_country_flag = AUH_r_bloc_bought_once
 	}
 
@@ -7540,7 +7624,10 @@ country_event = {
 				factor = 0.4
 				has_opinion = { target = AUH value < -50 }
 			}
-			modifier = { factor = 1.5 has_war = yes }
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
 			modifier = {
 				factor = 0.5
 				has_country_flag = AUH_dnc_provinces_declared
@@ -7568,7 +7655,10 @@ country_event = {
 				factor = 2
 				has_opinion = { target = AUH value < -50 }
 			}
-			modifier = { factor = 0.5 has_war = yes }
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
 			modifier = {
 				factor = 1.5
 				has_country_flag = AUH_dnc_provinces_declared
@@ -7857,7 +7947,10 @@ country_event = {
 		name = auh_dnc.661.a
 		ai_chance = {
 			factor = 60
-			modifier = { factor = 1.4 has_stability < 0.45 }
+			modifier = {
+				factor = 1.4
+				has_stability < 0.45
+			}
 			modifier = {
 				factor = 0.6
 				has_country_flag = AUH_dnc_path_sword
@@ -7874,7 +7967,10 @@ country_event = {
 				factor = 2
 				has_country_flag = AUH_dnc_path_sword
 			}
-			modifier = { factor = 1.3 has_stability > 0.5 }
+			modifier = {
+				factor = 1.3
+				has_stability > 0.5
+			}
 		}
 		add_command_power = 20
 		add_stability = -0.02
