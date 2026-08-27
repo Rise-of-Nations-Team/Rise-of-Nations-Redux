@@ -62,14 +62,20 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = can_dnc_e.3.a
-		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
 		add_stability = -0.02
 	}
 
 	option = {
 		name = can_dnc_e.3.b
 		add_political_power = -25
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 		add_stability = -0.01
 	}
 }
@@ -214,7 +220,10 @@ country_event = {
 		trigger = { has_country_flag = CAN_dnc_binational }
 		add_political_power = 25
 		add_stability = -0.02
-		add_popularity = { ideology = neutrality popularity = 0.02 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
 	}
 
 	option = {
@@ -317,7 +326,10 @@ country_event = {
 		name = can_dnc_e.14.a
 		custom_effect_tooltip = CAN_e_quebec_stability_m5_tt
 		add_stability = -0.05
-		add_autonomy_ratio = { value = 0.02 localization = can_dnc_e.14.a }
+		add_autonomy_ratio = {
+			value = 0.02
+			localization = can_dnc_e.14.a
+		}
 		custom_effect_tooltip = CAN_e_ninety_days_tt
 		hidden_effect = {
 			country_event = { id = can_dnc_e.15 days = 90 }
@@ -933,7 +945,10 @@ country_event = {
 	desc = can_dnc_e.49.d
 	picture = GFX_report_event_journalists_speech
 	is_triggered_only = yes
-	option = { name = can_dnc_e.49.a add_stability = -0.01 }
+	option = {
+		name = can_dnc_e.49.a
+		add_stability = -0.01
+	}
 }
 
 country_event = {
@@ -1036,7 +1051,10 @@ country_event = {
 				468 = { is_controlled_by = CAN }
 				842 = { is_controlled_by = CAN }
 			}
-			annex_country = { target = QUE transfer_troops = no }
+			annex_country = {
+				target = QUE
+				transfer_troops = no
+			}
 			country_event = { id = can_dnc_e.54 days = 1 }
 		}
 		else_if = {
@@ -1161,7 +1179,10 @@ country_event = {
 					ruling_party = democratic
 					elections_allowed = no
 				}
-				set_popularities = { democratic = 85 neutrality = 15 }
+				set_popularities = {
+					democratic = 85
+					neutrality = 15
+				}
 				set_stability = 0.60
 				set_war_support = 0.70
 				add_manpower = 20000

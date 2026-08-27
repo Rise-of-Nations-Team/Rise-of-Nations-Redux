@@ -17,7 +17,10 @@ country_event = {
 		ai_chance = { base = 30 }
 		add_political_power = 10
 		add_stability = -0.03
-		add_popularity = { ideology = communism popularity = 0.03 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
 		army_experience = 10
 	}
 
@@ -56,7 +59,10 @@ country_event = {
 		ai_chance = { base = 40 }
 		add_political_power = 25
 		add_stability = -0.05
-		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
 		add_to_variable = { CAN_dnc_loyalist_anger = 1 }
 		clamp_variable = {
 			var = CAN_dnc_loyalist_anger
@@ -108,7 +114,10 @@ country_event = {
 			max = 10
 		}
 		custom_effect_tooltip = CAN_r_loyalist_anger_plus_one_tt
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 	}
 }
 
@@ -122,7 +131,10 @@ country_event = {
 		ai_chance = { base = 50 }
 		add_political_power = 25
 		add_stability = 0.03
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 	}
 
 	option = {
@@ -462,7 +474,10 @@ country_event = {
 		ai_chance = { base = 45 }
 		add_war_support = 0.05
 		add_political_power = 25
-		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
 	}
 
 	option = {
@@ -499,7 +514,10 @@ country_event = {
 		ai_chance = { base = 30 }
 		add_stability = -0.05
 		add_war_support = 0.03
-		add_popularity = { ideology = neutrality popularity = -0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.03
+		}
 		add_to_variable = { CAN_dnc_fracture = 1 }
 		clamp_variable = {
 			var = CAN_dnc_fracture
@@ -542,8 +560,14 @@ country_event = {
 		name = can_dnc_r.204.a
 		ai_chance = { base = 60 }
 		add_political_power = 25
-		add_popularity = { ideology = neutrality popularity = 0.05 }
-		add_popularity = { ideology = democratic popularity = -0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 	}
 
 	option = {
@@ -657,7 +681,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.208.a
 		ai_chance = { base = 60 }
-		CAN = { navy_experience = 50 add_stability = 0.05 }
+		CAN = {
+			navy_experience = 50
+			add_stability = 0.05
+		}
 	}
 
 	option = {
@@ -717,7 +744,10 @@ country_event = {
 		name = can_dnc_r.302.a
 		add_stability = -0.03
 		add_political_power = 25
-		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
 	}
 
 	option = {
@@ -903,7 +933,10 @@ country_event = {
 		name = can_dnc_r.308.a
 		add_political_power = 15
 		add_stability = -0.03
-		add_popularity = { ideology = neutrality popularity = 0.02 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
 	}
 
 	option = {
@@ -1008,7 +1041,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.312.a
 		add_stability = 0.03
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 	}
 
 	option = {
@@ -1099,7 +1135,10 @@ country_event = {
 		if = {
 			limit = {
 				331 = {
-					OR = { is_owned_by = ENG is_owned_by = NFL }
+					OR = {
+						is_owned_by = ENG
+						is_owned_by = NFL
+					}
 				}
 			}
 			FROM = { transfer_state = 331 }
@@ -1107,7 +1146,10 @@ country_event = {
 		if = {
 			limit = {
 				332 = {
-					OR = { is_owned_by = ENG is_owned_by = NFL }
+					OR = {
+						is_owned_by = ENG
+						is_owned_by = NFL
+					}
 				}
 			}
 			FROM = { transfer_state = 332 }
@@ -1123,7 +1165,10 @@ country_event = {
 		name = can_dnc_r.352.b
 		ai_chance = { base = 45 }
 		add_opinion_modifier = { target = FROM modifier = medium_decrease }
-		FROM = { add_stability = -0.03 add_war_support = 0.03 }
+		FROM = {
+			add_stability = -0.03
+			add_war_support = 0.03
+		}
 	}
 }
 
@@ -1148,7 +1193,10 @@ country_event = {
 		add_stability = -0.05
 		add_war_support = 0.05
 		add_political_power = 25
-		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
 		set_country_flag = CAN_dnc_r_league_dispersed
 	}
 
@@ -1157,7 +1205,10 @@ country_event = {
 		ai_chance = { base = 25 }
 		add_political_power = -25
 		add_war_support = 0.05
-		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
 		set_country_flag = CAN_dnc_r_league_conceded
 	}
 }
@@ -1172,7 +1223,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.354.a
 		ai_chance = { base = 45 }
-		add_timed_idea = { idea = CAN_r_the_debt_retired days = 730 }
+		add_timed_idea = {
+			idea = CAN_r_the_debt_retired
+			days = 730
+		}
 		add_stability = 0.03
 	}
 
@@ -1483,7 +1537,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.404.c
 		ai_chance = { base = 20 }
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 		add_stability = -0.05
 		add_to_variable = { CAN_dnc_loyalist_anger = 2 }
 		clamp_variable = {
@@ -1687,7 +1744,10 @@ country_event = {
 		name = can_dnc_r.451.a
 		ai_chance = { base = 45 }
 		add_stability = 0.05
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 	}
 
 	option = {
@@ -1734,7 +1794,10 @@ country_event = {
 		name = can_dnc_r.452.c
 		ai_chance = { base = 25 }
 		add_political_power = 75
-		add_popularity = { ideology = democratic popularity = -0.02 }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.02
+		}
 	}
 }
 
@@ -1776,7 +1839,10 @@ country_event = {
 			id = CAN
 			value = 20
 		}
-		CAN = { add_war_support = 0.05 add_stability = -0.03 }
+		CAN = {
+			add_war_support = 0.05
+			add_stability = -0.03
+		}
 	}
 }
 
@@ -1816,7 +1882,10 @@ country_event = {
 			id = CAN
 			value = 20
 		}
-		CAN = { add_war_support = 0.05 add_stability = -0.03 }
+		CAN = {
+			add_war_support = 0.05
+			add_stability = -0.03
+		}
 	}
 }
 
@@ -1830,7 +1899,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.455.a
 		ai_chance = { base = 40 }
-		add_timed_idea = { idea = CAN_r_the_price_of_pride days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_price_of_pride
+			days = 365
+		}
 		add_political_power = 50
 	}
 
@@ -1860,7 +1932,10 @@ country_event = {
 		name = can_dnc_r.456.a
 		ai_chance = { base = 40 }
 		add_political_power = 50
-		add_timed_idea = { idea = CAN_r_the_silver_rush days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_silver_rush
+			days = 365
+		}
 	}
 
 	option = {
@@ -1896,7 +1971,10 @@ country_event = {
 		ai_chance = { base = 30 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		CAN = {
-			add_timed_idea = { idea = CAN_r_the_cables_cut days = 365 }
+			add_timed_idea = {
+				idea = CAN_r_the_cables_cut
+				days = 365
+			}
 		}
 	}
 
@@ -1923,7 +2001,10 @@ country_event = {
 				type = bunker
 				level = 2
 				instant_build = yes
-				province = { all_provinces = yes limit_to_border = yes }
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
 			}
 		}
 	}
@@ -1936,7 +2017,10 @@ country_event = {
 				type = bunker
 				level = 2
 				instant_build = yes
-				province = { all_provinces = yes limit_to_border = yes }
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
 			}
 		}
 	}
@@ -2102,7 +2186,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.463.a
 		ai_chance = { base = 40 }
-		add_timed_idea = { idea = CAN_r_the_bare_shops days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_bare_shops
+			days = 365
+		}
 		add_war_support = 0.05
 	}
 
@@ -2120,7 +2207,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.463.c
 		ai_chance = { base = 30 }
-		add_timed_idea = { idea = CAN_r_the_railway_levy days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_railway_levy
+			days = 365
+		}
 		add_political_power = -50
 		add_stability = -0.03
 	}
@@ -2173,7 +2263,10 @@ country_event = {
 		ai_chance = { base = 40 }
 		add_political_power = 50
 		add_stability = -0.05
-		add_popularity = { ideology = democratic popularity = -0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 	}
 
 	option = {
@@ -2181,7 +2274,10 @@ country_event = {
 		ai_chance = { base = 30 }
 		add_political_power = 25
 		add_stability = -0.03
-		add_timed_idea = { idea = CAN_r_the_west_sulks days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_west_sulks
+			days = 365
+		}
 	}
 
 	option = {
@@ -2285,7 +2381,10 @@ country_event = {
 		ai_chance = { base = 20 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		CAN = {
-			add_timed_idea = { idea = CAN_r_the_tariff_answered days = 365 }
+			add_timed_idea = {
+				idea = CAN_r_the_tariff_answered
+				days = 365
+			}
 		}
 	}
 }
@@ -2400,7 +2499,10 @@ country_event = {
 
 	option = {
 		name = can_dnc_r.501.c
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
 		add_stability = 0.02
 		custom_effect_tooltip = CAN_e_anger_p2_tt
@@ -2508,7 +2610,10 @@ country_event = {
 		name = can_dnc_r.503.a
 		add_political_power = -25
 		add_stability = 0.03
-		add_popularity = { ideology = neutrality popularity = -0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.03
+		}
 		466 = { add_extra_state_shared_building_slots = 1 }
 	}
 
@@ -2516,7 +2621,10 @@ country_event = {
 		name = can_dnc_r.503.b
 		add_political_power = 50
 		add_stability = -0.02
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 	}
 }
 
@@ -2808,7 +2916,10 @@ country_event = {
 		add_political_power = 25
 		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
 		add_stability = -0.02
-		add_popularity = { ideology = neutrality popularity = -0.02 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.02
+		}
 	}
 }
 
@@ -2846,7 +2957,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.510.a
 		add_stability = 0.03
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 		custom_effect_tooltip = CAN_e_anger_p1_tt
 		hidden_effect = {
 			add_to_variable = { CAN_dnc_loyalist_anger = 1 }
@@ -2969,7 +3083,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.512.a
 		add_political_power = -25
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 		custom_effect_tooltip = CAN_e_quebec_stability_m2_tt
 		add_stability = -0.02
 	}
@@ -2979,7 +3096,10 @@ country_event = {
 		add_political_power = 25
 		custom_effect_tooltip = CAN_e_quebec_stability_p2_tt
 		add_stability = 0.02
-		add_popularity = { ideology = neutrality popularity = -0.02 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.02
+		}
 	}
 }
 
@@ -3039,7 +3159,10 @@ country_event = {
 		name = can_dnc_r.514.a
 		add_political_power = 25
 		add_stability = 0.03
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
 	}
 
 	option = {
@@ -3097,7 +3220,10 @@ country_event = {
 		name = can_dnc_r.802.b
 		ai_chance = { base = 40 }
 		add_political_power = -25
-		add_timed_idea = { idea = CAN_r_the_bumper_crop days = 180 }
+		add_timed_idea = {
+			idea = CAN_r_the_bumper_crop
+			days = 180
+		}
 		reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
 	}
 }
@@ -3111,7 +3237,10 @@ country_event = {
 		name = can_dnc_r.803.a
 		ai_chance = { base = 55 }
 		add_political_power = -25
-		add_timed_idea = { idea = CAN_r_the_bumper_crop days = 180 }
+		add_timed_idea = {
+			idea = CAN_r_the_bumper_crop
+			days = 180
+		}
 		reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
 	}
 
@@ -3140,7 +3269,10 @@ country_event = {
 		ai_chance = { base = 60 }
 		add_stability = -0.05
 		add_manpower = 10000
-		add_popularity = { ideology = democratic popularity = -0.03 }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 	}
 
 	option = {
@@ -3211,7 +3343,10 @@ country_event = {
 		name = can_dnc_r.807.a
 		ai_chance = { base = 55 }
 		add_political_power = -50
-		add_timed_idea = { idea = CAN_r_the_credit_boom days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_credit_boom
+			days = 365
+		}
 		471 = {
 			add_building_construction = {
 				type = infrastructure
@@ -3247,7 +3382,10 @@ country_event = {
 		ai_chance = { base = 40 }
 		add_political_power = 25
 		add_stability = -0.03
-		add_popularity = { ideology = democratic popularity = -0.02 }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.02
+		}
 	}
 }
 
@@ -3299,7 +3437,10 @@ country_event = {
 		ai_chance = { base = 45 }
 		add_stability = 0.03
 		add_political_power = -25
-		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
 	}
 }
 
@@ -3442,7 +3583,10 @@ country_event = {
 		ai_chance = { base = 10 }
 		add_stability = -0.05
 		add_political_power = -25
-		add_timed_idea = { idea = CAN_r_the_bumper_crop days = 180 }
+		add_timed_idea = {
+			idea = CAN_r_the_bumper_crop
+			days = 180
+		}
 	}
 }
 
@@ -3470,7 +3614,10 @@ country_event = {
 		ai_chance = { base = 45 }
 		add_political_power = -25
 		add_stability = 0.05
-		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
 	}
 }
 
@@ -3516,7 +3663,10 @@ country_event = {
 		ai_chance = { base = 40 }
 		add_political_power = 50
 		add_stability = -0.03
-		add_timed_idea = { idea = CAN_r_the_credit_boom days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_the_credit_boom
+			days = 365
+		}
 	}
 }
 
@@ -3530,7 +3680,10 @@ country_event = {
 		ai_chance = { base = 60 }
 		add_political_power = -25
 		air_experience = 15
-		add_timed_idea = { idea = CAN_r_bells_workshop days = 365 }
+		add_timed_idea = {
+			idea = CAN_r_bells_workshop
+			days = 365
+		}
 	}
 
 	option = {
@@ -3916,7 +4069,10 @@ country_event = {
 	option = {
 		name = can_dnc_r.605.b
 		ai_chance = { base = 40 }
-		add_timed_idea = { idea = CAN_r_a_literacy_test days = 540 }
+		add_timed_idea = {
+			idea = CAN_r_a_literacy_test
+			days = 540
+		}
 		JAP = {
 			add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		}
@@ -3984,7 +4140,10 @@ country_event = {
 		name = can_dnc_r.607.c
 		ai_chance = { base = 20 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
-		CAN = { add_stability = -0.02 add_war_support = 0.02 }
+		CAN = {
+			add_stability = -0.02
+			add_war_support = 0.02
+		}
 	}
 }
 
@@ -4118,7 +4277,10 @@ country_event = {
 		name = can_dnc_r.612.c
 		ai_chance = { base = 20 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
-		CAN = { add_stability = -0.05 add_war_support = 0.03 }
+		CAN = {
+			add_stability = -0.05
+			add_war_support = 0.03
+		}
 	}
 }
 
@@ -4177,7 +4339,10 @@ country_event = {
 		name = can_dnc_r.614.a
 		ai_chance = { base = 45 }
 		add_opinion_modifier = { target = CAN modifier = large_increase }
-		CAN = { navy_experience = 25 add_war_support = 0.03 }
+		CAN = {
+			navy_experience = 25
+			add_war_support = 0.03
+		}
 	}
 
 	option = {
@@ -4260,7 +4425,10 @@ country_event = {
 		ai_chance = { base = 35 }
 		add_opinion_modifier = { target = CAN modifier = medium_decrease }
 		CAN = {
-			add_timed_idea = { idea = CAN_r_the_tariff_bill days = 365 }
+			add_timed_idea = {
+				idea = CAN_r_the_tariff_bill
+				days = 365
+			}
 		}
 	}
 
