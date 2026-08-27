@@ -939,10 +939,16 @@ characters = {
 			idea_token = AUH_milan_hodza
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+				OR = {
+					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+					has_completed_focus = AUHDNC_b_the_slovak_at_the_back_stairs
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+				OR = {
+					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+					has_completed_focus = AUHDNC_b_the_slovak_at_the_back_stairs
+				}
 			}
 			cost = 100
 			traits = { social_reformer connected_citizen }
@@ -963,10 +969,16 @@ characters = {
 			idea_token = AUH_aurel_popovici
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+				OR = {
+					has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+					has_completed_focus = AUHDNC_b_fifteen_nations_on_paper
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+				OR = {
+					has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+					has_completed_focus = AUHDNC_b_fifteen_nations_on_paper
+				}
 			}
 			cost = 150
 			traits = { ideological_crusader federalist_dreamer }
@@ -1017,10 +1029,16 @@ characters = {
 			idea_token = AUH_josip_frank
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_m_the_frankist_wager
+				OR = {
+					has_completed_focus = AUHDNC_m_the_frankist_wager
+					has_completed_focus = AUHDNC_b_the_croat_of_the_partys_right
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_m_the_frankist_wager
+				OR = {
+					has_completed_focus = AUHDNC_m_the_frankist_wager
+					has_completed_focus = AUHDNC_b_the_croat_of_the_partys_right
+				}
 			}
 			cost = 150
 			traits = { ideological_crusader radicals_leading_figure }
