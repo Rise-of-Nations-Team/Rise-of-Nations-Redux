@@ -132,7 +132,10 @@ focus_tree = {
 		available = { has_country_flag = AUH_dnc_question_posed }
 		ai_will_do = {
 			factor = 10
-			modifier = { factor = 0 has_war = yes }
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			country_event = { id = auh_admin_crisis.1 days = 20 }
@@ -287,7 +290,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			if = {
 				limit = {
 					check_variable = {
@@ -425,7 +431,10 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = auh_admin_crisis.2 days = 30 }
 			add_political_power = 100
-			add_timed_idea = { idea = AUH_a_the_ordinance_budget days = 365 }
+			add_timed_idea = {
+				idea = AUH_a_the_ordinance_budget
+				days = 365
+			}
 			add_ideas = AUH_a_governs_by_ordinance
 			add_to_variable = { AUH_ordinances = 12 }
 			custom_effect_tooltip = AUH_a_ordinance_counter_tt
@@ -622,7 +631,10 @@ focus_tree = {
 			custom_effect_tooltip = AUH_a_public_works_loyalty_tt
 			add_to_variable = { AUH_gemeinsamkeit = 2 }
 			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
-			add_timed_idea = { idea = AUH_a_the_money_that_cools days = 730 }
+			add_timed_idea = {
+				idea = AUH_a_the_money_that_cools
+				days = 730
+			}
 			add_tech_bonus = {
 				name = AUH_a_public_works_bonus
 				bonus = 1.0
@@ -816,7 +828,10 @@ focus_tree = {
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = 50
-			add_timed_idea = { idea = AUH_a_the_session_spent days = 730 }
+			add_timed_idea = {
+				idea = AUH_a_the_session_spent
+				days = 730
+			}
 			add_to_variable = { var = AUS_support value = 5 }
 			clamp_variable = {
 				var = AUS_support
@@ -1595,7 +1610,10 @@ focus_tree = {
 				category = industry
 			}
 			add_political_power = 25
-			add_timed_idea = { idea = AUH_a_the_silent_season days = 365 }
+			add_timed_idea = {
+				idea = AUH_a_the_silent_season
+				days = 365
+			}
 			custom_effect_tooltip = AUH_a_khuen_falls_tt
 		}
 	}
@@ -1681,7 +1699,10 @@ focus_tree = {
 				id = SER
 				value = 50
 			}
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			set_country_flag = AUH_a_road_of_the_officials
 			custom_effect_tooltip = AUH_a_road_of_the_officials_tt
 		}
@@ -1768,7 +1789,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			hidden_effect = {
 				country_event = {
 					id = auh_dnc.105
@@ -2034,7 +2058,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_a_daily_use_loyalty_tt
 			add_stability = 0.05
-			add_timed_idea = { idea = AUH_a_the_enumerators days = 365 }
+			add_timed_idea = {
+				idea = AUH_a_the_enumerators
+				days = 365
+			}
 			add_tech_bonus = {
 				name = AUH_a_the_statistical_office_bonus
 				bonus = 1.0
@@ -2139,7 +2166,10 @@ focus_tree = {
 				target = RUS
 				modifier = RI_friendly_foreign_policy
 			}
-			diplomatic_relation = { country = RUS relation = non_aggression_pact }
+			diplomatic_relation = {
+				country = RUS
+				relation = non_aggression_pact
+			}
 			custom_effect_tooltip = AUH_a_status_quo_opinion_tt
 			add_stability = 0.10
 			add_political_power = 75
@@ -2256,7 +2286,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_a_strike_pressure_up_tt
 			add_political_power = 50
-			add_popularity = { ideology = communism popularity = 0.04 }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
 			add_command_power = 25
 		}
 	}
@@ -2303,7 +2336,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_a_strike_pressure_up_tt
-			add_popularity = { ideology = communism popularity = 0.03 }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
 			add_tech_bonus = {
 				name = AUH_a_the_tax_rolls_bonus
 				bonus = 1.0
@@ -2355,7 +2391,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_a_fifth_body_loyalty_tt
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			add_political_power = 25
 			add_manpower = 15000
 			add_tech_bonus = {
@@ -2406,7 +2445,10 @@ focus_tree = {
 			custom_effect_tooltip = AUH_a_strike_pressure_down_tt
 			add_ideas = AUH_a_the_creditor_in_the_street
 			custom_effect_tooltip = AUH_a_gautsch_tt
-			add_popularity = { ideology = democratic popularity = 0.06 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.06
+			}
 			add_to_variable = { var = CZE_support value = 4 }
 			clamp_variable = {
 				var = CZE_support
@@ -2522,7 +2564,10 @@ focus_tree = {
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 150
-			add_timed_idea = { idea = AUH_a_the_counties_refuse days = 730 }
+			add_timed_idea = {
+				idea = AUH_a_the_counties_refuse
+				days = 730
+			}
 			custom_effect_tooltip = AUH_a_fejervary_tt
 			set_country_flag = AUH_a_bodyguard_cabinet
 			add_to_variable = { var = HUN_support value = -20 }
@@ -2565,7 +2610,10 @@ focus_tree = {
 			set_variable = { AUH_a_ordinance_drift = AUH_ordinances }
 			divide_variable = { AUH_a_ordinance_drift = -300 }
 			custom_effect_tooltip = AUH_a_ordinance_counter_tt
-			add_popularity = { ideology = neutrality popularity = 0.04 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
 		}
 	}
 
@@ -2849,7 +2897,10 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = auh_admin_crisis.5 days = 25 }
 			add_ideas = AUH_a_the_exception_becomes_ordinary
-			add_timed_idea = { idea = AUH_a_the_garrison_answers days = 365 }
+			add_timed_idea = {
+				idea = AUH_a_the_garrison_answers
+				days = 365
+			}
 			add_to_variable = { var = AUH_a_exceptions value = 1 }
 			custom_effect_tooltip = AUH_a_exception_counter_tt
 			set_variable = {
@@ -2912,7 +2963,10 @@ focus_tree = {
 			country_event = { id = auh_admin_crisis.3 days = 45 }
 			add_stability = 0.15
 			add_ideas = AUH_a_the_chamber_of_all
-			add_popularity = { ideology = democratic popularity = 0.08 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.08
+			}
 			add_to_variable = { var = AUS_support value = -10 }
 			clamp_variable = {
 				var = AUS_support
@@ -3186,7 +3240,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_a_brandish_loyalty_tt
 			add_stability = -0.05
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			subtract_from_variable = { var = AUH_strike_pressure value = 15 }
 			clamp_variable = {
 				var = AUH_strike_pressure
@@ -3265,7 +3322,10 @@ focus_tree = {
 			set_variable = { AUH_a_ordinance_drift = AUH_ordinances }
 			divide_variable = { AUH_a_ordinance_drift = -300 }
 			custom_effect_tooltip = AUH_a_ordinance_counter_tt
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -3280,7 +3340,10 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 100
-			add_timed_idea = { idea = AUH_a_the_decree_book days = 730 }
+			add_timed_idea = {
+				idea = AUH_a_the_decree_book
+				days = 730
+			}
 			add_to_variable = { var = AUH_ordinances value = 10 }
 			custom_effect_tooltip = AUH_a_ordinance_counter_tt
 			set_variable = { AUH_a_ordinance_stability = AUH_ordinances }
@@ -3360,8 +3423,14 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = AUH_a_the_list_is_drawn days = 545 }
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_timed_idea = {
+				idea = AUH_a_the_list_is_drawn
+				days = 545
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			add_to_variable = { AUH_gemeinsamkeit = 1 }
 			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
 			4 = {
@@ -3672,7 +3741,10 @@ focus_tree = {
 				}
 			}
 			set_country_flag = AUH_a_districts_by_nation
-			add_popularity = { ideology = neutrality popularity = 0.04 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
 			custom_effect_tooltip = AUH_a_districts_by_nation_tt
 		}
 	}
@@ -4097,7 +4169,10 @@ focus_tree = {
 				modifier = RI_friendly_foreign_policy
 			}
 			custom_effect_tooltip = AUH_a_promise_kept_opinion_tt
-			add_popularity = { ideology = democratic popularity = 0.06 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.06
+			}
 			add_stability = -0.05
 			add_political_power = 50
 			add_manpower = 20000
@@ -4175,7 +4250,10 @@ focus_tree = {
 					}
 				}
 				add_stability = -0.05
-				add_popularity = { ideology = democratic popularity = 0.04 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
 				custom_effect_tooltip = AUH_a_report_grossly_tt
 			}
 			else = {
@@ -4248,7 +4326,10 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
-			add_popularity = { ideology = democratic popularity = 0.04 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
 			add_manpower = 15000
 			set_country_flag = AUH_a_ruthene_body
 			custom_effect_tooltip = AUH_a_ruthene_body_tt
@@ -4458,7 +4539,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_a_house_never_sits_loyalty_tt
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			add_stability = -0.05
 			add_tech_bonus = {
 				name = AUH_a_the_adjournment_bonus
@@ -4490,7 +4574,10 @@ focus_tree = {
 			add_ideas = AUH_a_the_budget_in_other_hands
 			custom_effect_tooltip = AUH_a_adler_tt
 			add_stability = 0.10
-			add_popularity = { ideology = democratic popularity = 0.06 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.06
+			}
 			subtract_from_variable = { var = AUH_strike_pressure value = 30 }
 			clamp_variable = {
 				var = AUH_strike_pressure
@@ -4838,7 +4925,10 @@ focus_tree = {
 				}
 			}
 			add_ideas = AUH_a_the_house_that_will_not_close
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			add_political_power = 120
 			add_stability = 0.10
 			custom_effect_tooltip = AUH_a_bienerth_tt
@@ -5157,7 +5247,10 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
-			add_timed_idea = { idea = AUH_a_the_file_is_closed days = 545 }
+			add_timed_idea = {
+				idea = AUH_a_the_file_is_closed
+				days = 545
+			}
 			add_political_power = 25
 			add_to_variable = { var = AUH_a_exceptions value = 1 }
 			set_variable = {
@@ -5216,7 +5309,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_a_open_loyalty_tt
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			add_to_variable = { AUH_gemeinsamkeit = 2 }
 			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
 			add_tech_bonus = {
@@ -5225,7 +5321,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = AUH_a_the_inquiry_sits days = 545 }
+			add_timed_idea = {
+				idea = AUH_a_the_inquiry_sits
+				days = 545
+			}
 			4 = {
 				add_building_construction = {
 					type = infrastructure
@@ -5474,7 +5573,10 @@ focus_tree = {
 			}
 			else = {
 				add_war_support = -0.10
-				add_popularity = { ideology = communism popularity = 0.05 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
 				custom_effect_tooltip = AUH_a_capstone_dirty_tt
 			}
 			if = {
@@ -8092,7 +8194,10 @@ focus_tree = {
 			army_experience = 25
 			add_political_power = 50
 			add_ideas = AUH_arm_the_mannlicher_standard
-			add_timed_idea = { idea = AUH_arm_the_retooling days = 365 }
+			add_timed_idea = {
+				idea = AUH_arm_the_retooling
+				days = 365
+			}
 			add_tech_bonus = {
 				name = AUH_tb_the_straight_pull_repeater
 				bonus = 1.0
@@ -8543,7 +8648,10 @@ focus_tree = {
 					type = bunker
 					level = 3
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -8556,7 +8664,10 @@ focus_tree = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 			867 = {
@@ -8564,7 +8675,10 @@ focus_tree = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 			if = {
@@ -8690,7 +8804,10 @@ focus_tree = {
 					type = bunker
 					level = 4
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -8850,7 +8967,10 @@ focus_tree = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -8863,7 +8983,10 @@ focus_tree = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -8888,7 +9011,10 @@ focus_tree = {
 						type = coastal_bunker
 						level = 2
 						instant_build = yes
-						province = { all_provinces = yes limit_to_coastal = yes }
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
 					}
 				}
 				add_equipment_to_stockpile = {
@@ -8904,7 +9030,10 @@ focus_tree = {
 						type = bunker
 						level = 2
 						instant_build = yes
-						province = { all_provinces = yes limit_to_border = yes }
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
 					}
 				}
 				custom_effect_tooltip = AUH_arm_the_bosnian_approaches_tt
@@ -9548,7 +9677,10 @@ focus_tree = {
 				RUS = {
 					add_opinion_modifier = { target = AUH modifier = large_increase }
 				}
-				diplomatic_relation = { country = RUS relation = non_aggression_pact }
+				diplomatic_relation = {
+					country = RUS
+					relation = non_aggression_pact
+				}
 			}
 			if = {
 				limit = { country_exists = OTT }
@@ -9787,7 +9919,10 @@ focus_tree = {
 			}
 			if = {
 				limit = { country_exists = RUS }
-				diplomatic_relation = { country = RUS relation = non_aggression_pact }
+				diplomatic_relation = {
+					country = RUS
+					relation = non_aggression_pact
+				}
 				add_opinion_modifier = { target = RUS modifier = large_increase }
 				RUS = {
 					add_opinion_modifier = { target = AUH modifier = large_increase }
@@ -9796,7 +9931,10 @@ focus_tree = {
 			if = {
 				limit = {
 					RUS = {
-						OR = { has_war = yes has_civil_war = yes }
+						OR = {
+							has_war = yes
+							has_civil_war = yes
+						}
 					}
 				}
 				custom_effect_tooltip = AUH_bp_the_window_is_open_tt
@@ -10327,13 +10465,19 @@ focus_tree = {
 				add_opinion_modifier = { target = SER modifier = large_decrease }
 			}
 			if = {
-				limit = { country_exists = SER country_exists = FRA }
+				limit = {
+					country_exists = SER
+					country_exists = FRA
+				}
 				SER = {
 					add_opinion_modifier = { target = FRA modifier = large_increase }
 				}
 			}
 			if = {
-				limit = { country_exists = SER country_exists = BUL }
+				limit = {
+					country_exists = SER
+					country_exists = BUL
+				}
 				SER = {
 					add_opinion_modifier = { target = BUL modifier = medium_increase }
 				}
@@ -10399,7 +10543,10 @@ focus_tree = {
 				SER = {
 					add_opinion_modifier = { target = AUH modifier = large_increase }
 				}
-				diplomatic_relation = { country = SER relation = non_aggression_pact }
+				diplomatic_relation = {
+					country = SER
+					relation = non_aggression_pact
+				}
 			}
 			if = {
 				limit = { country_exists = SER }
@@ -10595,7 +10742,10 @@ focus_tree = {
 					country_exists = BOS
 					BOS = { is_subject_of = AUH }
 				}
-				annex_country = { target = BOS transfer_troops = yes }
+				annex_country = {
+					target = BOS
+					transfer_troops = yes
+				}
 			}
 			else = {
 				custom_effect_tooltip = AUH_bp_no_subject_to_annex_tt
@@ -10767,7 +10917,10 @@ focus_tree = {
 				BUL = {
 					add_opinion_modifier = { target = AUH modifier = large_increase }
 				}
-				diplomatic_relation = { country = BUL relation = non_aggression_pact }
+				diplomatic_relation = {
+					country = BUL
+					relation = non_aggression_pact
+				}
 			}
 			custom_effect_tooltip = AUH_bp_ferdinand_tt
 			if = {
@@ -12038,7 +12191,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 75
-			add_timed_idea = { idea = AUH_eco_the_gold_defence days = 1095 }
+			add_timed_idea = {
+				idea = AUH_eco_the_gold_defence
+				days = 1095
+			}
 			4 = { add_extra_state_shared_building_slots = 1 }
 			43 = { add_extra_state_shared_building_slots = 1 }
 			add_to_variable = { var = AUS_support value = 5 }
@@ -12455,7 +12611,10 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = AUHDNC_eco_the_southern_company }
 		allow_branch = {
-			OR = { owns_state = 993 owns_state = 1066 }
+			OR = {
+				owns_state = 993
+				owns_state = 1066
+			}
 		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -13551,7 +13710,10 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			every_owned_state = {
-				limit = { is_core_of = AUH has_state_category = city }
+				limit = {
+					is_core_of = AUH
+					has_state_category = city
+				}
 				add_extra_state_shared_building_slots = 1
 			}
 			add_to_variable = { var = AUS_support value = 4 }
@@ -14014,7 +14176,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_war_support = 0.05
-			add_timed_idea = { idea = AUH_h_the_house_ungoverned days = 730 }
+			add_timed_idea = {
+				idea = AUH_h_the_house_ungoverned
+				days = 730
+			}
 			add_to_variable = { AUH_h_the_price_paid = 4 }
 			clamp_variable = {
 				var = AUH_h_the_price_paid
@@ -16185,7 +16350,10 @@ focus_tree = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 			82 = {
@@ -16193,7 +16361,10 @@ focus_tree = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 			add_manpower = 15000
@@ -16263,7 +16434,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_h_nat_SER_up_tt
 			add_stability = 0.05
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			add_ideas = AUH_h_the_widened_franchise
 			add_to_variable = { HUN_support = -6 }
 			clamp_variable = {
@@ -16417,7 +16591,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_h_nat_HUN_down_tt
 			add_political_power = -50
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			every_state = {
 				limit = {
 					is_owned_by = AUH
@@ -16586,7 +16763,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.08
 			add_political_power = 100
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			add_ideas = AUH_h_the_party_of_work
 			add_to_variable = { SLO_support = -4 }
 			clamp_variable = {
@@ -17038,7 +17218,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_h_nat_BOS_up_tt
 			add_stability = 0.05
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			add_to_variable = { HUN_support = -5 }
 			clamp_variable = {
 				var = HUN_support
@@ -18237,7 +18420,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_m_tt_aus_up
-			add_timed_idea = { idea = AUH_m_the_obstruction days = 365 }
+			add_timed_idea = {
+				idea = AUH_m_the_obstruction
+				days = 365
+			}
 			custom_effect_tooltip = AUH_m_war_minister_covered_tt
 			add_tech_bonus = {
 				name = AUH_m_the_army_bills_bonus
@@ -20992,7 +21178,10 @@ focus_tree = {
 			custom_effect_tooltip = AUH_m_tt_cro_down
 			every_state = {
 				limit = {
-					OR = { state = 109 state = 937 }
+					OR = {
+						state = 109
+						state = 937
+					}
 				}
 				add_dynamic_modifier = { modifier = AUH_m_the_county_under_commission }
 			}
@@ -22119,7 +22308,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { country_exists = BOS }
-				annex_country = { target = BOS transfer_troops = no }
+				annex_country = {
+					target = BOS
+					transfer_troops = no
+				}
 				OTT = {
 					country_event = { id = ron_diplomatic.102 }
 				}
@@ -22228,7 +22420,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { country_exists = BOS }
-				annex_country = { target = BOS transfer_troops = no }
+				annex_country = {
+					target = BOS
+					transfer_troops = no
+				}
 				OTT = {
 					country_event = { id = ron_diplomatic.102 }
 				}
@@ -22530,7 +22725,10 @@ focus_tree = {
 			add_political_power = 75
 			every_state = {
 				limit = {
-					OR = { state = 104 state = 1048 }
+					OR = {
+						state = 104
+						state = 1048
+					}
 				}
 			}
 			add_to_variable = { var = BOS_support value = 10 }
@@ -22940,7 +23138,10 @@ focus_tree = {
 			set_country_flag = AUH_m_wedge_kept
 			every_state = {
 				limit = {
-					OR = { state = 1046 state = 1047 }
+					OR = {
+						state = 1046
+						state = 1047
+					}
 				}
 			}
 			SER = {
@@ -23111,13 +23312,19 @@ focus_tree = {
 			add_ideas = AUH_m_the_alpine_barrier
 			every_state = {
 				limit = {
-					OR = { state = 39 state = 153 }
+					OR = {
+						state = 39
+						state = 153
+					}
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_border = yes }
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
 				}
 			}
 			add_tech_bonus = {
@@ -23399,7 +23606,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_m_tt_bos_up
-			add_timed_idea = { idea = AUH_m_the_indemnity_paid days = 365 }
+			add_timed_idea = {
+				idea = AUH_m_the_indemnity_paid
+				days = 365
+			}
 			add_stability = 0.05
 			custom_effect_tooltip = AUH_m_sum_not_published_tt
 			custom_effect_tooltip = AUH_m_crisis_closed_tt
@@ -23448,7 +23658,10 @@ focus_tree = {
 			custom_effect_tooltip = AUH_m_tt_hun_down
 			every_state = {
 				limit = {
-					OR = { state = 70 state = 71 }
+					OR = {
+						state = 70
+						state = 71
+					}
 				}
 			}
 			add_stability = 0.05
@@ -23622,7 +23835,10 @@ focus_tree = {
 			custom_effect_tooltip = AUH_m_tt_aus_up
 			add_political_power = 50
 			add_stability = -0.03
-			add_timed_idea = { idea = AUH_m_the_loan_repriced days = 365 }
+			add_timed_idea = {
+				idea = AUH_m_the_loan_repriced
+				days = 365
+			}
 			add_tech_bonus = {
 				name = AUH_m_one_treasury_bonus
 				bonus = 1.0
@@ -24196,13 +24412,19 @@ focus_tree = {
 					type = coastal_bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_coastal = yes }
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
 				}
 				add_building_construction = {
 					type = naval_base
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_coastal = yes }
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
 				}
 			}
 			custom_effect_tooltip = AUH_m_the_bay_is_ours_tt
@@ -25777,7 +25999,10 @@ focus_tree = {
 				}
 			}
 			add_ideas = AUH_nav_the_submarine_station
-			add_timed_idea = { idea = AUH_nav_the_losing_designs days = 730 }
+			add_timed_idea = {
+				idea = AUH_nav_the_losing_designs
+				days = 730
+			}
 			add_tech_bonus = {
 				name = AUH_tb_six_boats_three_designs
 				bonus = 1.0
@@ -26199,7 +26424,10 @@ focus_tree = {
 		available = { has_country_flag = AUH_dnc_question_posed }
 		ai_will_do = {
 			factor = 5
-			modifier = { factor = 2 has_government = neutrality }
+			modifier = {
+				factor = 2
+				has_government = neutrality
+			}
 		}
 		completion_reward = {
 			set_country_flag = AUH_dnc_path_iron_ring
@@ -26576,7 +26804,10 @@ focus_tree = {
 					type = coastal_bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_coastal = yes }
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
 				}
 			}
 			1066 = {
@@ -26584,7 +26815,10 @@ focus_tree = {
 					type = coastal_bunker
 					level = 2
 					instant_build = yes
-					province = { all_provinces = yes limit_to_coastal = yes }
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
 				}
 			}
 			subtract_from_variable = { AUS_support = 4 }
@@ -26649,7 +26883,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			custom_effect_tooltip = AUH_r_the_court_goes_north_tt
 			add_to_variable = { SLV_support = 3 }
 			clamp_variable = {
@@ -26716,7 +26953,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = AUH_r_the_lobby_is_open days = 540 }
+			add_timed_idea = {
+				idea = AUH_r_the_lobby_is_open
+				days = 540
+			}
 			hidden_effect = { set_country_flag = AUH_r_segment_b_open }
 		}
 	}
@@ -26758,7 +26998,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = AUH_r_the_notables_go_over days = 720 }
+			add_timed_idea = {
+				idea = AUH_r_the_notables_go_over
+				days = 720
+			}
 			country_event = { id = auh_dnc.209 days = 60 }
 			add_to_variable = { SLV_support = 3 }
 			clamp_variable = {
@@ -26930,7 +27173,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_AUS_up_tt
-			add_popularity = { ideology = neutrality popularity = 0.02 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
 			153 = {
 				add_building_construction = {
 					type = infrastructure
@@ -26983,7 +27229,10 @@ focus_tree = {
 			}
 			add_ideas = AUH_r_the_word_given_to_the_workers
 			set_country_flag = AUH_r_word_given_to_the_workers
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			add_to_variable = { AUS_support = 3 }
 			clamp_variable = {
 				var = AUS_support
@@ -27029,7 +27278,10 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 50
 			add_ideas = AUH_r_the_historic_estates
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			add_to_variable = { CZE_support = 3 }
 			clamp_variable = {
 				var = CZE_support
@@ -27171,7 +27423,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			custom_effect_tooltip = AUH_r_defection_roll_tt
 			hidden_effect = { set_country_flag = AUH_r_mayor_in_majority }
 		}
@@ -27407,7 +27662,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = AUH_r_the_house_on_notice days = 720 }
+			add_timed_idea = {
+				idea = AUH_r_the_house_on_notice
+				days = 720
+			}
 			add_to_variable = { AUH_r_strike = 1 }
 			clamp_variable = {
 				var = AUH_r_strike
@@ -27461,7 +27719,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_CZE_down_tt
-			add_popularity = { ideology = democratic popularity = -0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
 			if = {
 				limit = {
 					has_country_flag = AUH_r_word_given_to_the_workers
@@ -27626,8 +27887,14 @@ focus_tree = {
 				idea = AUH_r_the_house_told_afterwards
 				days = 1080
 			}
-			add_popularity = { ideology = neutrality popularity = 0.05 }
-			add_popularity = { ideology = democratic popularity = -0.05 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
 			add_command_power = 25
 		}
 	}
@@ -27656,7 +27923,10 @@ focus_tree = {
 				add_idea = AUH_r_the_franchise_from_the_crown
 			}
 			add_political_power = 50
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			subtract_from_variable = { AUH_ring_seats = 84 }
 			clamp_variable = {
 				var = AUH_ring_seats
@@ -27738,7 +28008,10 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_r_sup_CZE_up_tt
 			add_command_power = 25
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			add_tech_bonus = {
 				name = AUH_r_the_belvedere_bonus
 				bonus = 1.0
@@ -27790,14 +28063,20 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_CZE_up_tt
-			add_popularity = { ideology = democratic popularity = -0.02 }
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.02
+			}
 			add_tech_bonus = {
 				name = AUH_r_a_further_body_bonus
 				bonus = 1.0
 				uses = 1
 				category = industry
 			}
-			add_timed_idea = { idea = AUH_r_the_street_is_quiet days = 730 }
+			add_timed_idea = {
+				idea = AUH_r_the_street_is_quiet
+				days = 730
+			}
 		}
 	}
 
@@ -28059,7 +28338,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_AUS_up_tt
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			add_tech_bonus = {
 				name = AUH_r_the_land_bank_bonus
 				bonus = 1.0
@@ -28319,7 +28601,10 @@ focus_tree = {
 			custom_effect_tooltip = AUH_r_mayor_locked_tt
 			add_political_power = 50
 			add_stability = 0.05
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			4 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -28652,8 +28937,14 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			country_event = { id = auh_nat_crisis.6 days = 20 }
-			89 = { remove_core_of = POL remove_core_of = GAL }
-			91 = { remove_core_of = POL remove_core_of = GAL }
+			89 = {
+				remove_core_of = POL
+				remove_core_of = GAL
+			}
+			91 = {
+				remove_core_of = POL
+				remove_core_of = GAL
+			}
 			custom_effect_tooltip = AUH_r_the_register_is_changed_tt
 			89 = {
 				add_dynamic_modifier = { modifier = AUH_r_the_ruthenian_land }
@@ -28920,7 +29211,10 @@ focus_tree = {
 				add_stability = -0.05
 				custom_effect_tooltip = AUH_r_claim_is_hollow_tt
 			}
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -28967,7 +29261,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_SLV_up_tt
-			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
 			custom_effect_tooltip = AUH_r_segment_d_opened_tt
 			set_country_flag = AUH_r_road_completed
 			add_tech_bonus = {
@@ -29159,7 +29456,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_timed_idea = { idea = AUH_r_every_land_asks days = 720 }
+			add_timed_idea = {
+				idea = AUH_r_every_land_asks
+				days = 720
+			}
 			set_country_flag = AUH_r_minister_for_bohemia
 			add_to_variable = { SLV_support = 4 }
 			clamp_variable = {
@@ -29336,7 +29636,10 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			custom_effect_tooltip = AUH_r_secession_last_stage_tt
 		}
 	}
@@ -29651,7 +29954,10 @@ focus_tree = {
 					custom_effect_tooltip = AUH_r_moravian_guarantee_wobbles_tt
 					every_state = {
 						limit = {
-							OR = { state = 75 state = 888 }
+							OR = {
+								state = 75
+								state = 888
+							}
 							has_dynamic_modifier = { modifier = AUH_r_the_moravian_model }
 						}
 						remove_dynamic_modifier = { modifier = AUH_r_the_moravian_model }
@@ -30212,7 +30518,10 @@ focus_tree = {
 				category = industry
 			}
 			custom_effect_tooltip = AUH_r_parity_board_tt
-			add_timed_idea = { idea = AUH_r_the_parity_board days = 900 }
+			add_timed_idea = {
+				idea = AUH_r_the_parity_board
+				days = 900
+			}
 		}
 	}
 
@@ -30951,7 +31260,10 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 75
 			add_ideas = AUH_r_the_word_of_the_king
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			add_war_support = 0.05
 			set_country_flag = AUH_r_rescript_renewed
 			add_tech_bonus = {
@@ -31048,7 +31360,10 @@ focus_tree = {
 					modifier = RI_reapprochment_talks
 				}
 			}
-			add_timed_idea = { idea = AUH_r_the_crisis_drags days = 365 }
+			add_timed_idea = {
+				idea = AUH_r_the_crisis_drags
+				days = 365
+			}
 			if = {
 				limit = {
 					NOT = { has_country_flag = AUH_r_crisis_never_opens }
@@ -31057,7 +31372,10 @@ focus_tree = {
 				add_war_support = -0.05
 				custom_effect_tooltip = AUH_r_neighbour_does_not_sign_tt
 			}
-			else = { add_stability = 0.05 add_war_support = 0.05 }
+			else = {
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
 			add_to_variable = { AUS_support = 4 }
 			clamp_variable = {
 				var = AUS_support
@@ -31117,7 +31435,10 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_ideas = AUH_r_the_regalia_in_the_cathedral
-			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
 			add_political_power = 50
 			9 = {
 				add_building_construction = {
@@ -31168,8 +31489,14 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_r_sup_CZE_up_tt
 			add_ideas = AUH_r_the_ancient_order
-			add_popularity = { ideology = democratic popularity = -0.05 }
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			add_war_support = -0.05
 			if = {
 				limit = {
@@ -31228,7 +31555,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_AUS_down_tt
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			add_ideas = AUH_r_the_deputation_elected
 			add_stability = 0.05
 			add_political_power = 50
@@ -31310,7 +31640,10 @@ focus_tree = {
 				max = 100
 			}
 			custom_effect_tooltip = AUH_r_sup_ROM_up_tt
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			if = {
 				limit = {
 					check_variable = {
