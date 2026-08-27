@@ -2751,6 +2751,23 @@ ideas = {
 				NOT = { controls_province = 11506 }
 			}
 		}
+		GER_schlieffen_ost_variante = {
+			picture = soviet_german_friendship
+			allowed = {
+				always = no
+			}
+			available = {
+				has_war_with = RUS
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.2
+			}
+			modifier = {
+				army_attack_factor = -0.1
+			}
+		}
 	}
 	naval_manufacturer = {
 		designer = yes
