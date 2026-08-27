@@ -1,8 +1,4 @@
 characters = {
-
-	### Political advisors, theorists and chiefs of the DNC era
-
-	# Finance minister of the balanced estimate
 	AUH_eugen_bohm_bawerk = {
 		name = AUH_eugen_bohm_bawerk
 		portraits = {
@@ -15,18 +11,27 @@ characters = {
 			slot = theorist
 			idea_token = AUH_eugen_bohm_bawerk
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_a_carry_the_estimates_by_the_crown has_completed_focus = AUHDNC_a_buy_the_estimates_from_budapest has_completed_focus = AUHDNC_eco_the_estimate_that_balances } }
-			available = { OR = { has_completed_focus = AUHDNC_a_carry_the_estimates_by_the_crown has_completed_focus = AUHDNC_a_buy_the_estimates_from_budapest has_completed_focus = AUHDNC_eco_the_estimate_that_balances } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_a_carry_the_estimates_by_the_crown
+					has_completed_focus = AUHDNC_a_buy_the_estimates_from_budapest
+					has_completed_focus = AUHDNC_eco_the_estimate_that_balances
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_a_carry_the_estimates_by_the_crown
+					has_completed_focus = AUHDNC_a_buy_the_estimates_from_budapest
+					has_completed_focus = AUHDNC_eco_the_estimate_that_balances
+				}
+			}
 			cost = 100
 			traits = { economist }
-			research_bonus = {
-				industry = 0.05
-			}
+			research_bonus = { industry = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Mayor of Vienna
 	AUH_karl_lueger = {
 		name = AUH_karl_lueger
 		portraits = {
@@ -39,15 +44,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_karl_lueger
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_a_the_party_of_all_the_tongues has_completed_focus = AUHDNC_r_the_mayor_names_his_price } }
-			available = { OR = { has_completed_focus = AUHDNC_a_the_party_of_all_the_tongues has_completed_focus = AUHDNC_r_the_mayor_names_his_price } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_a_the_party_of_all_the_tongues
+					has_completed_focus = AUHDNC_r_the_mayor_names_his_price
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_a_the_party_of_all_the_tongues
+					has_completed_focus = AUHDNC_r_the_mayor_names_his_price
+				}
+			}
 			cost = 150
 			traits = { captain_of_industry linchpin_of_infrastructure }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Minister of public works
 	AUH_albert_gessmann = {
 		name = AUH_albert_gessmann
 		portraits = {
@@ -60,15 +74,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_albert_gessmann
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_buy_peace_with_public_works }
-			available = { has_completed_focus = AUHDNC_a_buy_peace_with_public_works }
+			visible = {
+				has_completed_focus = AUHDNC_a_buy_peace_with_public_works
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_buy_peace_with_public_works
+			}
 			cost = 100
 			traits = { compassionate_gentleman public_works_expert }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Section chief of the ministry
 	AUH_rudolf_sieghart = {
 		name = AUH_rudolf_sieghart
 		portraits = {
@@ -81,15 +98,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_rudolf_sieghart
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_a_cabinet_of_civil_servants }
-			available = { has_completed_focus = AUHDNC_a_a_cabinet_of_civil_servants }
+			visible = {
+				has_completed_focus = AUHDNC_a_a_cabinet_of_civil_servants
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_a_cabinet_of_civil_servants
+			}
 			cost = 100
 			traits = { backroom_backstabber excellent_banker }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Jurist of the administrative reform
 	AUH_josef_redlich = {
 		name = AUH_josef_redlich
 		portraits = {
@@ -102,15 +122,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_josef_redlich
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_a_a_bureaucracy_that_works has_completed_focus = AUHDNC_r_the_cadastre_of_moravia } }
-			available = { OR = { has_completed_focus = AUHDNC_a_a_bureaucracy_that_works has_completed_focus = AUHDNC_r_the_cadastre_of_moravia } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_a_a_bureaucracy_that_works
+					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_a_a_bureaucracy_that_works
+					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+				}
+			}
 			cost = 100
 			traits = { silent_lawyer constitutional_philosopher }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the German liberals
 	AUH_ernst_von_plener = {
 		name = AUH_ernst_von_plener
 		portraits = {
@@ -123,15 +152,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_ernst_von_plener
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_the_two_parliaments }
-			available = { has_completed_focus = AUHDNC_a_the_two_parliaments }
+			visible = {
+				has_completed_focus = AUHDNC_a_the_two_parliaments
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_the_two_parliaments
+			}
 			cost = 100
 			traits = { silent_workhorse financial_expert }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Keeper of the court protocol
 	AUH_alfred_montenuovo = {
 		name = AUH_alfred_montenuovo
 		portraits = {
@@ -144,15 +176,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_alfred_montenuovo
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_dnc_path_dualist has_country_flag = AUH_dnc_path_sword } }
-			available = { OR = { has_country_flag = AUH_dnc_path_dualist has_country_flag = AUH_dnc_path_sword } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_dnc_path_dualist
+					has_country_flag = AUH_dnc_path_sword
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_dnc_path_dualist
+					has_country_flag = AUH_dnc_path_sword
+				}
+			}
 			cost = 100
 			traits = { staunch_monarchist chamberlain_appeaser }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Minister of railways
 	AUH_julius_derschatta = {
 		name = AUH_julius_derschatta
 		portraits = {
@@ -166,15 +207,18 @@ characters = {
 			idea_token = AUH_julius_derschatta
 			ledger = army
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_eco_the_second_road_to_the_sea }
-			available = { has_completed_focus = AUHDNC_eco_the_second_road_to_the_sea }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_second_road_to_the_sea
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_second_road_to_the_sea
+			}
 			cost = 100
 			traits = { army_logistics_1 minister_of_railways }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Joint finance minister and administrator of the occupied provinces
 	AUH_beni_kallay = {
 		name = AUH_beni_kallay
 		portraits = {
@@ -187,15 +231,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_beni_kallay
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_the_land_that_belongs_to_neither }
-			available = { has_completed_focus = AUHDNC_a_the_land_that_belongs_to_neither }
+			visible = {
+				has_completed_focus = AUHDNC_a_the_land_that_belongs_to_neither
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_the_land_that_belongs_to_neither
+			}
 			cost = 100
 			traits = { ideological_crusader efficient_colonial_administrator }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Joint war minister
 	AUH_edmund_von_krieghammer = {
 		name = AUH_edmund_von_krieghammer
 		portraits = {
@@ -208,15 +255,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_edmund_von_krieghammer
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_arm_the_general_staff }
-			available = { has_completed_focus = AUHDNC_arm_the_general_staff }
+			visible = {
+				has_completed_focus = AUHDNC_arm_the_general_staff
+			}
+			available = {
+				has_completed_focus = AUHDNC_arm_the_general_staff
+			}
 			cost = 100
 			traits = { quartermaster_general military_modernizer }
 			ai_will_do = { factor = 1 }
 		}
 	}
 
-	# Joint war minister
 	AUH_heinrich_von_pitreich = {
 		name = AUH_heinrich_von_pitreich
 		portraits = {
@@ -229,15 +279,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_heinrich_von_pitreich
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_arm_the_recruit_contingent }
-			available = { has_completed_focus = AUHDNC_arm_the_recruit_contingent }
+			visible = {
+				has_completed_focus = AUHDNC_arm_the_recruit_contingent
+			}
+			available = {
+				has_completed_focus = AUHDNC_arm_the_recruit_contingent
+			}
 			cost = 100
 			traits = { quartermaster_general mobilization_specialist }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Minister at Belgrade
 	AUH_janos_forgach = {
 		name = AUH_janos_forgach
 		portraits = {
@@ -250,15 +303,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_janos_forgach
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened has_completed_focus = AUHDNC_a_the_political_police } }
-			available = { OR = { has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened has_completed_focus = AUHDNC_a_the_political_police } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened
+					has_completed_focus = AUHDNC_a_the_political_police
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened
+					has_completed_focus = AUHDNC_a_the_political_police
+				}
+			}
 			cost = 150
 			traits = { head_of_intelligence propaganda_bungler }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Ambassador in Berlin
 	AUH_ladislaus_szogyeny = {
 		name = AUH_ladislaus_szogyeny
 		portraits = {
@@ -271,15 +333,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_ladislaus_szogyeny
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_a_renew_the_alliance_of_three has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed } }
-			available = { OR = { has_completed_focus = AUHDNC_a_renew_the_alliance_of_three has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_a_renew_the_alliance_of_three
+					has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_a_renew_the_alliance_of_three
+					has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
+				}
+			}
 			cost = 100
 			traits = { smooth_talking_charmer diplomat }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Chief of the intelligence bureau
 	AUH_arthur_giesl = {
 		name = AUH_arthur_giesl
 		portraits = {
@@ -292,15 +363,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_arthur_giesl
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_dnc_path_sword has_completed_focus = AUHDNC_m_the_counter_espionage_group } }
-			available = { OR = { has_country_flag = AUH_dnc_path_sword has_completed_focus = AUHDNC_m_the_counter_espionage_group } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_dnc_path_sword
+					has_completed_focus = AUHDNC_m_the_counter_espionage_group
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_dnc_path_sword
+					has_completed_focus = AUHDNC_m_the_counter_espionage_group
+				}
+			}
 			cost = 100
 			traits = { head_of_intelligence connected_citizen }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Hungarian prime minister of the customs formula
 	AUH_kalman_szell = {
 		name = AUH_kalman_szell
 		portraits = {
@@ -313,15 +393,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_kalman_szell
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_szell_available has_country_flag = AUH_h_advisor_szell } }
-			available = { OR = { has_country_flag = AUH_a_szell_available has_country_flag = AUH_h_advisor_szell } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_szell_available
+					has_country_flag = AUH_h_advisor_szell
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_szell_available
+					has_country_flag = AUH_h_advisor_szell
+				}
+			}
 			cost = 100
 			traits = { smooth_talking_charmer brilliant_negotiator }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Ban of Croatia-Slavonia, then Hungarian prime minister
 	AUH_khuen_hedervary = {
 		name = AUH_khuen_hedervary
 		portraits = {
@@ -334,15 +423,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_khuen_hedervary
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_banners_given has_country_flag = AUH_h_advisor_khuen } }
-			available = { OR = { has_country_flag = AUH_a_banners_given has_country_flag = AUH_h_advisor_khuen } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_banners_given
+					has_country_flag = AUH_h_advisor_khuen
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_banners_given
+					has_country_flag = AUH_h_advisor_khuen
+				}
+			}
 			cost = 100
 			traits = { backroom_backstabber ban_of_croatia_slavonia }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Captain of the royal bodyguard and head of the cabinet without a chamber
 	AUH_geza_fejervary = {
 		name = AUH_geza_fejervary
 		portraits = {
@@ -355,15 +453,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_geza_fejervary
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_bodyguard_cabinet has_completed_focus = AUHDNC_m_a_cabinet_of_generals } }
-			available = { OR = { has_country_flag = AUH_a_bodyguard_cabinet has_completed_focus = AUHDNC_m_a_cabinet_of_generals } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_bodyguard_cabinet
+					has_completed_focus = AUHDNC_m_a_cabinet_of_generals
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_bodyguard_cabinet
+					has_completed_focus = AUHDNC_m_a_cabinet_of_generals
+				}
+			}
 			cost = 150
 			traits = { prince_of_terror staunch_loyalist }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Hungarian minister of the interior
 	AUH_jozsef_kristoffy = {
 		name = AUH_jozsef_kristoffy
 		portraits = {
@@ -376,15 +483,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_jozsef_kristoffy
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_franchise_brandished has_country_flag = AUH_m_franchise_by_patent } }
-			available = { OR = { has_country_flag = AUH_a_franchise_brandished has_country_flag = AUH_m_franchise_by_patent } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_franchise_brandished
+					has_country_flag = AUH_m_franchise_by_patent
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_franchise_brandished
+					has_country_flag = AUH_m_franchise_by_patent
+				}
+			}
 			cost = 100
 			traits = { social_reformer democratic_reformer }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Honved minister and royal commissioner
 	AUH_sandor_nyiri = {
 		name = AUH_sandor_nyiri
 		portraits = {
@@ -398,15 +514,24 @@ characters = {
 			idea_token = AUH_sandor_nyiri
 			ledger = army
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_chamber_cleared has_completed_focus = AUHDNC_m_the_royal_commissioners } }
-			available = { OR = { has_country_flag = AUH_a_chamber_cleared has_completed_focus = AUHDNC_m_the_royal_commissioners } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_chamber_cleared
+					has_completed_focus = AUHDNC_m_the_royal_commissioners
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_chamber_cleared
+					has_completed_focus = AUHDNC_m_the_royal_commissioners
+				}
+			}
 			cost = 100
 			traits = { army_regrouping_1 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Hungarian prime minister and author of the currency reform
 	AUH_sandor_wekerle = {
 		name = AUH_sandor_wekerle
 		portraits = {
@@ -419,15 +544,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_sandor_wekerle
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_coalition_in_office has_country_flag = AUH_h_advisor_wekerle } }
-			available = { OR = { has_country_flag = AUH_a_coalition_in_office has_country_flag = AUH_h_advisor_wekerle } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_coalition_in_office
+					has_country_flag = AUH_h_advisor_wekerle
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_coalition_in_office
+					has_country_flag = AUH_h_advisor_wekerle
+				}
+			}
 			cost = 150
 			traits = { financial_expert minister_president }
 			ai_will_do = { factor = 3 }
 		}
 	}
 
-	# Leader of the independence party and minister of commerce
 	AUH_ferenc_kossuth = {
 		name = AUH_ferenc_kossuth
 		portraits = {
@@ -440,15 +574,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_ferenc_kossuth
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_h_advisor_kossuth has_completed_focus = AUHDNC_eco_the_promotion_of_home_industry } }
-			available = { OR = { has_country_flag = AUH_h_advisor_kossuth has_completed_focus = AUHDNC_eco_the_promotion_of_home_industry } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_h_advisor_kossuth
+					has_completed_focus = AUHDNC_eco_the_promotion_of_home_industry
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_h_advisor_kossuth
+					has_completed_focus = AUHDNC_eco_the_promotion_of_home_industry
+				}
+			}
 			cost = 100
 			traits = { captain_of_industry secretary_of_commerce }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Minister of cults and education
 	AUH_albert_apponyi = {
 		name = AUH_albert_apponyi
 		portraits = {
@@ -461,15 +604,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_albert_apponyi
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_school_act has_country_flag = AUH_h_advisor_apponyi } }
-			available = { OR = { has_country_flag = AUH_a_school_act has_country_flag = AUH_h_advisor_apponyi } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_school_act
+					has_country_flag = AUH_h_advisor_apponyi
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_school_act
+					has_country_flag = AUH_h_advisor_apponyi
+				}
+			}
 			cost = 150
 			traits = { ideological_crusader education_reformer }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Hungarian minister of agriculture
 	AUH_ignac_daranyi = {
 		name = AUH_ignac_daranyi
 		portraits = {
@@ -482,15 +634,26 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_ignac_daranyi
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_h_advisor_daranyi has_completed_focus = AUHDNC_eco_the_league_of_the_landowners has_completed_focus = AUHDNC_eco_the_men_are_kept_at_home } }
-			available = { OR = { has_country_flag = AUH_h_advisor_daranyi has_completed_focus = AUHDNC_eco_the_league_of_the_landowners has_completed_focus = AUHDNC_eco_the_men_are_kept_at_home } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_h_advisor_daranyi
+					has_completed_focus = AUHDNC_eco_the_league_of_the_landowners
+					has_completed_focus = AUHDNC_eco_the_men_are_kept_at_home
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_h_advisor_daranyi
+					has_completed_focus = AUHDNC_eco_the_league_of_the_landowners
+					has_completed_focus = AUHDNC_eco_the_men_are_kept_at_home
+				}
+			}
 			cost = 100
 			traits = { compassionate_gentleman agrarian_minister }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the independence left
 	AUH_gyula_justh = {
 		name = AUH_gyula_justh
 		portraits = {
@@ -511,7 +674,6 @@ characters = {
 		}
 	}
 
-	# Champion of the hard Magyar state programme
 	AUH_dezso_banffy = {
 		name = AUH_dezso_banffy
 		portraits = {
@@ -532,7 +694,6 @@ characters = {
 		}
 	}
 
-	# Governor of the common bank
 	AUH_sandor_popovics = {
 		name = AUH_sandor_popovics
 		portraits = {
@@ -545,15 +706,28 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_sandor_popovics
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_a_bank_kept_common has_country_flag = AUH_h_advisor_popovics_common has_country_flag = AUH_h_advisor_popovics_kingdom has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals } }
-			available = { OR = { has_country_flag = AUH_a_bank_kept_common has_country_flag = AUH_h_advisor_popovics_common has_country_flag = AUH_h_advisor_popovics_kingdom has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_a_bank_kept_common
+					has_country_flag = AUH_h_advisor_popovics_common
+					has_country_flag = AUH_h_advisor_popovics_kingdom
+					has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_a_bank_kept_common
+					has_country_flag = AUH_h_advisor_popovics_common
+					has_country_flag = AUH_h_advisor_popovics_kingdom
+					has_completed_focus = AUHDNC_eco_the_bank_of_two_capitals
+				}
+			}
 			cost = 100
 			traits = { financial_expert central_bank }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Head of the commercial bank of Pest
 	AUH_leo_lanczy = {
 		name = AUH_leo_lanczy
 		portraits = {
@@ -566,15 +740,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_leo_lanczy
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring }
-			available = { has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_great_houses_of_the_ring
+			}
 			cost = 100
 			traits = { captain_of_industry the_banker }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Master of the works at Csepel
 	AUH_manfred_weiss = {
 		name = AUH_manfred_weiss
 		portraits = {
@@ -587,15 +764,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_manfred_weiss
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_weiss_manfred_unlocked has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm } }
-			available = { OR = { has_country_flag = AUH_weiss_manfred_unlocked has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_weiss_manfred_unlocked
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_weiss_manfred_unlocked
+					has_completed_focus = AUHDNC_eco_the_ordnance_of_the_realm
+				}
+			}
 			cost = 100
 			traits = { war_industrialist industrial_magnate }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the Young Czechs
 	AUH_karel_kramar = {
 		name = AUH_karel_kramar
 		portraits = {
@@ -608,15 +794,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_karel_kramar
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_clubs_of_bohemia }
-			available = { has_completed_focus = AUHDNC_r_the_clubs_of_bohemia }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_clubs_of_bohemia
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_clubs_of_bohemia
+			}
 			cost = 150
 			traits = { smooth_talking_charmer minister_president }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the Czech agrarians
 	AUH_antonin_svehla = {
 		name = AUH_antonin_svehla
 		portraits = {
@@ -629,15 +818,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_antonin_svehla
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_agrarians_and_the_workers }
-			available = { has_completed_focus = AUHDNC_r_the_agrarians_and_the_workers }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_agrarians_and_the_workers
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_agrarians_and_the_workers
+			}
 			cost = 100
 			traits = { compassionate_gentleman cooperative_leader }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Realist deputy and professor
 	AUH_tomas_masaryk = {
 		name = AUH_tomas_masaryk
 		portraits = {
@@ -650,15 +842,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_tomas_masaryk
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_realists_and_the_forgeries }
-			available = { has_completed_focus = AUHDNC_r_the_realists_and_the_forgeries }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_realists_and_the_forgeries
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_realists_and_the_forgeries
+			}
 			cost = 150
 			traits = { liberal_professor }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Statthalter of Bohemia
 	AUH_frantisek_thun = {
 		name = AUH_frantisek_thun
 		portraits = {
@@ -671,15 +866,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_frantisek_thun
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_estates_are_summoned }
-			available = { has_completed_focus = AUHDNC_r_the_estates_are_summoned }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_estates_are_summoned
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_estates_are_summoned
+			}
 			cost = 100
 			traits = { staunch_monarchist minister_president }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Spokesman of the feudal great landowners
 	AUH_heinrich_clam_martinic = {
 		name = AUH_heinrich_clam_martinic
 		portraits = {
@@ -692,15 +890,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_heinrich_clam_martinic
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_estates_of_the_kingdom }
-			available = { has_completed_focus = AUHDNC_r_the_estates_of_the_kingdom }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_estates_of_the_kingdom
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_estates_of_the_kingdom
+			}
 			cost = 100
 			traits = { noble_beurocrat landowner }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the Slovene popular party
 	AUH_ivan_sustersic = {
 		name = AUH_ivan_sustersic
 		portraits = {
@@ -713,15 +914,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_ivan_sustersic
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_diet_of_carniola }
-			available = { has_completed_focus = AUHDNC_r_the_diet_of_carniola }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_diet_of_carniola
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_diet_of_carniola
+			}
 			cost = 100
 			traits = { smooth_talking_charmer corrupt_kleptocrat }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Priest of the peasant cooperatives
 	AUH_janez_krek = {
 		name = AUH_janez_krek
 		portraits = {
@@ -734,15 +938,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_janez_krek
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_r_the_diet_of_carniola has_completed_focus = AUHDNC_eco_the_savings_of_the_provinces } }
-			available = { OR = { has_completed_focus = AUHDNC_r_the_diet_of_carniola has_completed_focus = AUHDNC_eco_the_savings_of_the_provinces } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_r_the_diet_of_carniola
+					has_completed_focus = AUHDNC_eco_the_savings_of_the_provinces
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_r_the_diet_of_carniola
+					has_completed_focus = AUHDNC_eco_the_savings_of_the_provinces
+				}
+			}
 			cost = 100
 			traits = { social_reformer cooperative_leader }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Slovak deputy of the Belvedere circle
 	AUH_milan_hodza = {
 		name = AUH_milan_hodza
 		portraits = {
@@ -755,15 +968,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_milan_hodza
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities has_completed_focus = AUHDNC_r_the_nationality_deputies_are_received } }
-			available = { OR = { has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities has_completed_focus = AUHDNC_r_the_nationality_deputies_are_received } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+					has_completed_focus = AUHDNC_r_the_nationality_deputies_are_received
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+					has_completed_focus = AUHDNC_r_the_nationality_deputies_are_received
+				}
+			}
 			cost = 100
 			traits = { social_reformer connected_citizen }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Publicist of the federal programme
 	AUH_aurel_popovici = {
 		name = AUH_aurel_popovici
 		portraits = {
@@ -776,15 +998,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_aurel_popovici
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_the_register_of_the_peoples }
-			available = { has_completed_focus = AUHDNC_a_the_register_of_the_peoples }
+			visible = {
+				has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+			}
 			cost = 150
 			traits = { ideological_crusader federalist_dreamer }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Romanian deputy of the Belvedere circle
 	AUH_vaida_voevod = {
 		name = AUH_vaida_voevod
 		portraits = {
@@ -797,15 +1022,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_vaida_voevod
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities has_completed_focus = AUHDNC_h_receive_the_romanians } }
-			available = { OR = { has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities has_completed_focus = AUHDNC_h_receive_the_romanians } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+					has_completed_focus = AUHDNC_h_receive_the_romanians
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
+					has_completed_focus = AUHDNC_h_receive_the_romanians
+				}
+			}
 			cost = 100
 			traits = { smooth_talking_charmer connected_citizen }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the party of rights that looks to Vienna
 	AUH_josip_frank = {
 		name = AUH_josip_frank
 		portraits = {
@@ -818,15 +1052,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_josip_frank
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_m_the_frankist_wager }
-			available = { has_completed_focus = AUHDNC_m_the_frankist_wager }
+			visible = {
+				has_completed_focus = AUHDNC_m_the_frankist_wager
+			}
+			available = {
+				has_completed_focus = AUHDNC_m_the_frankist_wager
+			}
 			cost = 150
 			traits = { ideological_crusader radicals_leading_figure }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Architect of the coastal resolutions
 	AUH_frano_supilo = {
 		name = AUH_frano_supilo
 		portraits = {
@@ -839,15 +1076,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_frano_supilo
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume }
-			available = { has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume }
+			visible = {
+				has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume
+			}
+			available = {
+				has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume
+			}
 			cost = 150
 			traits = { smooth_talking_charmer democratic_journalist }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the independent Serb party
 	AUH_svetozar_pribicevic = {
 		name = AUH_svetozar_pribicevic
 		portraits = {
@@ -860,15 +1100,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_svetozar_pribicevic
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume }
-			available = { has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume }
+			visible = {
+				has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume
+			}
+			available = {
+				has_completed_focus = AUHDNC_m_outbid_the_resolution_of_fiume
+			}
 			cost = 100
 			traits = { social_reformer backed_by_political_coalition }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Ban who governs against the coalition
 	AUH_pavao_rauch = {
 		name = AUH_pavao_rauch
 		portraits = {
@@ -881,15 +1124,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_pavao_rauch
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_m_dissolve_the_coalition_of_zagreb has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown } }
-			available = { OR = { has_completed_focus = AUHDNC_m_dissolve_the_coalition_of_zagreb has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_m_dissolve_the_coalition_of_zagreb
+					has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_m_dissolve_the_coalition_of_zagreb
+					has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown
+				}
+			}
 			cost = 150
 			traits = { prince_of_terror ban_of_croatia_slavonia }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Ban of Croatia-Slavonia
 	AUH_teodor_pejacevic = {
 		name = AUH_teodor_pejacevic
 		portraits = {
@@ -902,15 +1154,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_teodor_pejacevic
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_h_refactions_for_the_kingdoms_port }
-			available = { has_completed_focus = AUHDNC_h_refactions_for_the_kingdoms_port }
+			visible = {
+				has_completed_focus = AUHDNC_h_refactions_for_the_kingdoms_port
+			}
+			available = {
+				has_completed_focus = AUHDNC_h_refactions_for_the_kingdoms_port
+			}
 			cost = 100
 			traits = { noble_beurocrat ban_of_croatia_slavonia }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Greek Catholic metropolitan of Halych
 	AUH_andrey_sheptytsky = {
 		name = AUH_andrey_sheptytsky
 		portraits = {
@@ -923,15 +1178,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_andrey_sheptytsky
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_ruthenian_benches }
-			available = { has_completed_focus = AUHDNC_r_the_ruthenian_benches }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_ruthenian_benches
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_ruthenian_benches
+			}
 			cost = 100
 			traits = { ideological_crusader gre_metropolitan_bishop }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Statthalter of Galicia
 	AUH_michal_bobrzynski = {
 		name = AUH_michal_bobrzynski
 		portraits = {
@@ -944,15 +1202,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_michal_bobrzynski
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_r_the_bargain_of_lemberg }
-			available = { has_completed_focus = AUHDNC_r_the_bargain_of_lemberg }
+			visible = {
+				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+			}
+			available = {
+				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+			}
 			cost = 100
 			traits = { silent_lawyer accomplished_professor }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Leader of the Jewish nationals of the Bukovina
 	AUH_benno_straucher = {
 		name = AUH_benno_straucher
 		portraits = {
@@ -965,15 +1226,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_benno_straucher
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_the_mother_tongue_registered }
-			available = { has_completed_focus = AUHDNC_a_the_mother_tongue_registered }
+			visible = {
+				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+			}
 			cost = 100
 			traits = { silent_workhorse minority_leader }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Negotiator of the Bukovina register
 	AUH_aurel_von_onciul = {
 		name = AUH_aurel_von_onciul
 		portraits = {
@@ -986,15 +1250,18 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_aurel_von_onciul
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_a_the_mother_tongue_registered }
-			available = { has_completed_focus = AUHDNC_a_the_mother_tongue_registered }
+			visible = {
+				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+			}
+			available = {
+				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+			}
 			cost = 100
 			traits = { silent_lawyer conciliator }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Architect of the Moravian compromise
 	AUH_johann_chlumecky = {
 		name = AUH_johann_chlumecky
 		portraits = {
@@ -1007,15 +1274,24 @@ characters = {
 			slot = political_advisor
 			idea_token = AUH_johann_chlumecky
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_a_the_language_of_daily_use has_completed_focus = AUHDNC_r_the_cadastre_of_moravia } }
-			available = { OR = { has_completed_focus = AUHDNC_a_the_language_of_daily_use has_completed_focus = AUHDNC_r_the_cadastre_of_moravia } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_a_the_language_of_daily_use
+					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_a_the_language_of_daily_use
+					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+				}
+			}
 			cost = 100
 			traits = { silent_lawyer great_compromiser }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Instructor of the staff school
 	AUH_alfred_krauss = {
 		name = AUH_alfred_krauss
 		portraits = {
@@ -1029,18 +1305,25 @@ characters = {
 			idea_token = AUH_alfred_krauss
 			ledger = army
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_arm_the_two_academies has_completed_focus = AUHDNC_arm_the_kriegsschule } }
-			available = { OR = { has_completed_focus = AUHDNC_arm_the_two_academies has_completed_focus = AUHDNC_arm_the_kriegsschule } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_arm_the_two_academies
+					has_completed_focus = AUHDNC_arm_the_kriegsschule
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_arm_the_two_academies
+					has_completed_focus = AUHDNC_arm_the_kriegsschule
+				}
+			}
 			cost = 100
 			traits = { military_theorist inspired_instructor }
-			research_bonus = {
-				land_doctrine = 0.05
-			}
+			research_bonus = { land_doctrine = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Chief constructor of the fleet
 	AUH_siegfried_popper = {
 		name = AUH_siegfried_popper
 		portraits = {
@@ -1054,18 +1337,19 @@ characters = {
 			idea_token = AUH_siegfried_popper
 			ledger = navy
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office }
-			available = { has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
+			}
+			available = {
+				has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
+			}
 			cost = 100
 			traits = { naval_theorist naval_architect }
-			research_bonus = {
-				naval_equipment = 0.08
-			}
+			research_bonus = { naval_equipment = 0.08 }
 			ai_will_do = { factor = 3 }
 		}
 	}
 
-	# Foreign designer of submarine boats
 	AUH_simon_lake = {
 		name = AUH_simon_lake
 		portraits = {
@@ -1079,18 +1363,19 @@ characters = {
 			idea_token = AUH_simon_lake
 			ledger = navy
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_nav_the_first_submarines }
-			available = { has_completed_focus = AUHDNC_nav_the_first_submarines }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_first_submarines
+			}
+			available = {
+				has_completed_focus = AUHDNC_nav_the_first_submarines
+			}
 			cost = 100
 			traits = { naval_theorist submarine_manufacturer }
-			research_bonus = {
-				naval_equipment = 0.05
-			}
+			research_bonus = { naval_equipment = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Builder of the seaplane of the lake
 	AUH_wilhelm_kress = {
 		name = AUH_wilhelm_kress
 		portraits = {
@@ -1108,14 +1393,11 @@ characters = {
 			available = { has_country_flag = AUH_air_kress_available }
 			cost = 100
 			traits = { air_warfare_theorist naval_aviation_pioneer }
-			research_bonus = {
-				air_equipment = 0.08
-			}
+			research_bonus = { air_equipment = 0.08 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Glider man of the Zanonia wing
 	AUH_franz_xaver_wels = {
 		name = AUH_franz_xaver_wels
 		portraits = {
@@ -1133,14 +1415,11 @@ characters = {
 			available = { has_country_flag = AUH_air_wels_available }
 			cost = 100
 			traits = { air_warfare_theorist famous_aviator }
-			research_bonus = {
-				air_equipment = 0.05
-			}
+			research_bonus = { air_equipment = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Builder of the Zanonia wing
 	AUH_igo_etrich = {
 		name = AUH_igo_etrich
 		portraits = {
@@ -1158,14 +1437,11 @@ characters = {
 			available = { has_country_flag = AUH_air_etrich_available }
 			cost = 100
 			traits = { air_warfare_theorist genius_aircraft_designer_th }
-			research_bonus = {
-				air_equipment = 0.06
-			}
+			research_bonus = { air_equipment = 0.06 }
 			ai_will_do = { factor = 3 }
 		}
 	}
 
-	# Engineer of the three phase traction
 	AUH_kalman_kando = {
 		name = AUH_kalman_kando
 		portraits = {
@@ -1178,18 +1454,19 @@ characters = {
 			slot = theorist
 			idea_token = AUH_kalman_kando
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_eco_the_current_of_the_mountains }
-			available = { has_completed_focus = AUHDNC_eco_the_current_of_the_mountains }
+			visible = {
+				has_completed_focus = AUHDNC_eco_the_current_of_the_mountains
+			}
+			available = {
+				has_completed_focus = AUHDNC_eco_the_current_of_the_mountains
+			}
 			cost = 100
 			traits = { talented_engineer electronics_developer }
-			research_bonus = {
-				electronics = 0.06
-			}
+			research_bonus = { electronics = 0.06 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Marinekommandant of the coast defence school
 	AUH_hermann_von_spaun = {
 		name = AUH_hermann_von_spaun
 		portraits = {
@@ -1206,8 +1483,16 @@ characters = {
 			idea_token = AUH_hermann_von_spaun
 			ledger = navy
 			allowed = { original_tag = AUH }
-			visible = { NOT = { has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm } }
-			available = { NOT = { has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm } }
+			visible = {
+				NOT = {
+					has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm
+				}
+			}
+			available = {
+				NOT = {
+					has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm
+				}
+			}
 			cost = 100
 			traits = { navy_chief_maneuver_1 }
 			ai_will_do = { factor = 2 }
@@ -1219,11 +1504,14 @@ characters = {
 			defense_skill = 3
 			maneuvering_skill = 3
 			coordination_skill = 2
-			visible = { NOT = { has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm } }
+			visible = {
+				NOT = {
+					has_completed_focus = AUHDNC_nav_montecuccoli_takes_the_helm
+				}
+			}
 		}
 	}
 
-	# Commander of the aeronautical establishment
 	AUH_franz_hinterstoisser = {
 		name = AUH_franz_hinterstoisser
 		portraits = {
@@ -1237,15 +1525,18 @@ characters = {
 			idea_token = AUH_franz_hinterstoisser
 			ledger = air
 			allowed = { original_tag = AUH }
-			visible = { has_country_flag = AUH_air_hinterstoisser_available }
-			available = { has_country_flag = AUH_air_hinterstoisser_available }
+			visible = {
+				has_country_flag = AUH_air_hinterstoisser_available
+			}
+			available = {
+				has_country_flag = AUH_air_hinterstoisser_available
+			}
 			cost = 100
 			traits = { air_chief_safety_1 }
 			ai_will_do = { factor = 3 }
 		}
 	}
 
-	# Aeronaut, publisher and founder of the aero club
 	AUH_viktor_silberer = {
 		name = AUH_viktor_silberer
 		portraits = {
@@ -1259,15 +1550,18 @@ characters = {
 			idea_token = AUH_viktor_silberer
 			ledger = air
 			allowed = { original_tag = AUH }
-			visible = { has_country_flag = AUH_air_silberer_available }
-			available = { has_country_flag = AUH_air_silberer_available }
+			visible = {
+				has_country_flag = AUH_air_silberer_available
+			}
+			available = {
+				has_country_flag = AUH_air_silberer_available
+			}
 			cost = 100
 			traits = { air_chief_reform_1 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# First certificated pilot of the monarchy
 	AUH_karl_illner = {
 		name = AUH_karl_illner
 		portraits = {
@@ -1289,7 +1583,6 @@ characters = {
 		}
 	}
 
-	# Pathologist of the endowed chairs
 	AUH_karl_landsteiner = {
 		name = AUH_karl_landsteiner
 		portraits = {
@@ -1302,19 +1595,19 @@ characters = {
 			slot = theorist
 			idea_token = AUH_karl_landsteiner
 			allowed = { original_tag = AUH }
-			visible = { has_country_flag = AUH_a_the_laboratory_that_stayed }
-			available = { has_country_flag = AUH_a_the_laboratory_that_stayed }
+			visible = {
+				has_country_flag = AUH_a_the_laboratory_that_stayed
+			}
+			available = {
+				has_country_flag = AUH_a_the_laboratory_that_stayed
+			}
 			cost = 150
 			traits = { accomplished_professor }
-			research_bonus = {
-				hospital_tech = 0.10
-				infantry_weapons = 0.05
-			}
+			research_bonus = { hospital_tech = 0.10 infantry_weapons = 0.05 }
 			ai_will_do = { factor = 4 }
 		}
 	}
 
-	# Electrician of the kingdom
 	AUH_frantisek_krizik = {
 		name = AUH_frantisek_krizik
 		portraits = {
@@ -1331,15 +1624,11 @@ characters = {
 			available = { has_country_flag = AUH_r_electrical_works }
 			cost = 150
 			traits = { talented_engineer linchpin_of_infrastructure }
-			research_bonus = {
-				electronics = 0.10
-				construction_tech = 0.05
-			}
+			research_bonus = { electronics = 0.10 construction_tech = 0.05 }
 			ai_will_do = { factor = 4 }
 		}
 	}
 
-	# Designer of the gun works of the capital
 	AUH_rudolf_frommer = {
 		name = AUH_rudolf_frommer
 		portraits = {
@@ -1356,15 +1645,11 @@ characters = {
 			available = { has_country_flag = AUH_h_advisor_frommer }
 			cost = 150
 			traits = { talented_engineer firearms_designer }
-			research_bonus = {
-				infantry_weapons = 0.10
-				industry = 0.05
-			}
+			research_bonus = { infantry_weapons = 0.10 industry = 0.05 }
 			ai_will_do = { factor = 4 }
 		}
 	}
 
-	# Engineer of the motor works at Wiener Neustadt
 	AUH_paul_daimler = {
 		name = AUH_paul_daimler
 		portraits = {
@@ -1377,20 +1662,25 @@ characters = {
 			slot = theorist
 			idea_token = AUH_paul_daimler
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_country_flag = AUH_m_traction_ordered has_completed_focus = AUHDNC_m_the_technical_military_committee } }
-			available = { OR = { has_country_flag = AUH_m_traction_ordered has_completed_focus = AUHDNC_m_the_technical_military_committee } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_m_traction_ordered
+					has_completed_focus = AUHDNC_m_the_technical_military_committee
+				}
+			}
+			available = {
+				OR = {
+					has_country_flag = AUH_m_traction_ordered
+					has_completed_focus = AUHDNC_m_the_technical_military_committee
+				}
+			}
 			cost = 150
 			traits = { talented_engineer motor_tycoon }
-			research_bonus = {
-				motorized_equipment = 0.10
-				industry = 0.05
-			}
+			research_bonus = { motorized_equipment = 0.10 industry = 0.05 }
 			ai_will_do = { factor = 4 }
 		}
 	}
 
-
-	# Director of the war archive
 	AUH_emil_von_woinovich = {
 		name = AUH_emil_von_woinovich
 		portraits = {
@@ -1404,18 +1694,19 @@ characters = {
 			idea_token = AUH_emil_von_woinovich
 			ledger = army
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
-			available = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			visible = {
+				has_completed_focus = AUHDNC_arm_the_kriegsschule
+			}
+			available = {
+				has_completed_focus = AUHDNC_arm_the_kriegsschule
+			}
 			cost = 100
 			traits = { military_theorist museum_curator }
-			research_bonus = {
-				land_doctrine = 0.05
-			}
+			research_bonus = { land_doctrine = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Motor man of the army airship
 	AUH_ferdinand_porsche = {
 		name = AUH_ferdinand_porsche
 		portraits = {
@@ -1429,8 +1720,18 @@ characters = {
 			idea_token = AUH_ferdinand_porsche
 			ledger = air
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_air_the_dirigible_question has_completed_focus = AUHDNC_air_the_airship_of_the_army } }
-			available = { OR = { has_completed_focus = AUHDNC_air_the_dirigible_question has_completed_focus = AUHDNC_air_the_airship_of_the_army } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_air_the_dirigible_question
+					has_completed_focus = AUHDNC_air_the_airship_of_the_army
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_air_the_dirigible_question
+					has_completed_focus = AUHDNC_air_the_airship_of_the_army
+				}
+			}
 			cost = 150
 			traits = { talented_engineer industrious_innovator }
 			research_bonus = {
@@ -1441,7 +1742,6 @@ characters = {
 		}
 	}
 
-	# Austrian builder of the Paris school
 	AUH_alfred_von_pischof = {
 		name = AUH_alfred_von_pischof
 		portraits = {
@@ -1455,18 +1755,19 @@ characters = {
 			idea_token = AUH_alfred_von_pischof
 			ledger = air
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt }
-			available = { has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt }
+			visible = {
+				has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt
+			}
+			available = {
+				has_completed_focus = AUHDNC_air_the_field_at_wiener_neustadt
+			}
 			cost = 100
 			traits = { air_warfare_theorist aircraft_manufacturer }
-			research_bonus = {
-				air_equipment = 0.05
-			}
+			research_bonus = { air_equipment = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	# Publicist of the aeronautical question
 	AUH_hermann_hoernes = {
 		name = AUH_hermann_hoernes
 		portraits = {
@@ -1480,20 +1781,19 @@ characters = {
 			idea_token = AUH_hermann_hoernes
 			ledger = air
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_air_the_aero_club }
-			available = { has_completed_focus = AUHDNC_air_the_aero_club }
+			visible = {
+				has_completed_focus = AUHDNC_air_the_aero_club
+			}
+			available = {
+				has_completed_focus = AUHDNC_air_the_aero_club
+			}
 			cost = 100
 			traits = { air_warfare_theorist political_publicist }
-			research_bonus = {
-				air_doctrine = 0.05
-			}
+			research_bonus = { air_doctrine = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 	}
 
-	### Commanders of the DNC era
-
-	# Commander in chief of the Honved
 	AUH_joseph_karl_von_osterreich = {
 		name = AUH_joseph_karl_von_osterreich
 		portraits = {
@@ -1524,7 +1824,6 @@ characters = {
 		}
 	}
 
-	# General of the Honved
 	AUH_vilmos_klobucar = {
 		name = AUH_vilmos_klobucar
 		portraits = {
@@ -1540,11 +1839,15 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 2
-			visible = { OR = { has_country_flag = AUH_dnc_path_magyar has_completed_focus = AUHDNC_h_the_honved_as_an_army } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_dnc_path_magyar
+					has_completed_focus = AUHDNC_h_the_honved_as_an_army
+				}
+			}
 		}
 	}
 
-	# Staff officer of the Honved
 	AUH_samu_hazai = {
 		name = AUH_samu_hazai
 		portraits = {
@@ -1560,11 +1863,15 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
-			visible = { OR = { has_country_flag = AUH_dnc_path_magyar has_completed_focus = AUHDNC_h_a_staff_college_for_the_honved } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_dnc_path_magyar
+					has_completed_focus = AUHDNC_h_a_staff_college_for_the_honved
+				}
+			}
 		}
 	}
 
-	# Cavalry general of the kingdom
 	AUH_karl_tersztyanszky = {
 		name = AUH_karl_tersztyanszky
 		portraits = {
@@ -1580,11 +1887,15 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
-			visible = { OR = { has_country_flag = AUH_dnc_path_magyar has_completed_focus = AUHDNC_h_the_hussars_of_the_honved } }
+			visible = {
+				OR = {
+					has_country_flag = AUH_dnc_path_magyar
+					has_completed_focus = AUHDNC_h_the_hussars_of_the_honved
+				}
+			}
 		}
 	}
 
-	# Director of the war archive
 	AUH_gustav_ratzenhofer = {
 		name = AUH_gustav_ratzenhofer
 		portraits = {
@@ -1598,13 +1909,15 @@ characters = {
 			idea_token = AUH_gustav_ratzenhofer
 			ledger = army
 			allowed = { original_tag = AUH }
-			visible = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
-			available = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			visible = {
+				has_completed_focus = AUHDNC_arm_the_kriegsschule
+			}
+			available = {
+				has_completed_focus = AUHDNC_arm_the_kriegsschule
+			}
 			cost = 100
 			traits = { military_theorist accomplished_professor }
-			research_bonus = {
-				land_doctrine = 0.04
-			}
+			research_bonus = { land_doctrine = 0.04 }
 			ai_will_do = { factor = 2 }
 		}
 		corps_commander = {
@@ -1614,13 +1927,12 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 2
-			visible = { has_completed_focus = AUHDNC_arm_the_kriegsschule }
+			visible = {
+				has_completed_focus = AUHDNC_arm_the_kriegsschule
+			}
 		}
 	}
 
-	### Sea officers of the DNC era
-
-	# Officer of the first submarine boats
 	AUH_georg_von_trapp = {
 		name = AUH_georg_von_trapp
 		portraits = {
@@ -1639,11 +1951,12 @@ characters = {
 			defense_skill = 3
 			maneuvering_skill = 3
 			coordination_skill = 2
-			visible = { has_completed_focus = AUHDNC_nav_the_first_submarines }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_first_submarines
+			}
 		}
 	}
 
-	# Captain of the armoured cruiser on the distant station
 	AUH_julius_ripper = {
 		name = AUH_julius_ripper
 		portraits = {
@@ -1662,11 +1975,15 @@ characters = {
 			defense_skill = 3
 			maneuvering_skill = 2
 			coordination_skill = 3
-			visible = { OR = { has_completed_focus = AUHDNC_nav_the_station_in_china has_completed_focus = AUHDNC_nav_the_armoured_cruiser_at_pola } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_nav_the_station_in_china
+					has_completed_focus = AUHDNC_nav_the_armoured_cruiser_at_pola
+				}
+			}
 		}
 	}
 
-	# Writer on the fleet question
 	AUH_alfred_von_koudelka = {
 		name = AUH_alfred_von_koudelka
 		portraits = {
@@ -1683,13 +2000,21 @@ characters = {
 			idea_token = AUH_alfred_von_koudelka
 			ledger = navy
 			allowed = { original_tag = AUH }
-			visible = { OR = { has_completed_focus = AUHDNC_nav_the_flottenverein has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office } }
-			available = { OR = { has_completed_focus = AUHDNC_nav_the_flottenverein has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office } }
+			visible = {
+				OR = {
+					has_completed_focus = AUHDNC_nav_the_flottenverein
+					has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = AUHDNC_nav_the_flottenverein
+					has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
+				}
+			}
 			cost = 100
 			traits = { naval_theorist political_publicist }
-			research_bonus = {
-				naval_doctrine = 0.05
-			}
+			research_bonus = { naval_doctrine = 0.05 }
 			ai_will_do = { factor = 2 }
 		}
 		navy_leader = {
@@ -1699,7 +2024,9 @@ characters = {
 			defense_skill = 2
 			maneuvering_skill = 3
 			coordination_skill = 2
-			visible = { has_completed_focus = AUHDNC_nav_the_flottenverein }
+			visible = {
+				has_completed_focus = AUHDNC_nav_the_flottenverein
+			}
 		}
 	}
 }

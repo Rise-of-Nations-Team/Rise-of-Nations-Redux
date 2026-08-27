@@ -1,29 +1,14 @@
-###########################
-# AUSTRIA-HUNGARY - THE AUSGLEICH
-###########################
-# 1 the term falls due, 2 carried, 3 failed
-# 4 the union in question, 5 the counties on strike
-
 add_namespace = auh_ausgleich
-
-# The term falls due
 country_event = {
 	id = auh_ausgleich.1
 	title = auh_ausgleich.1.t
 	desc = auh_ausgleich.1.d
 	picture = GFX_report_event_hungary_parliament
-
 	is_triggered_only = yes
-
-	# Lay the bill before both Delegations
 	option = {
 		name = auh_ausgleich.1.a
-		ai_chance = {
-			factor = 55
-		}
-		trigger = {
-			has_political_power > 150
-		}
+		ai_chance = { factor = 55 }
+		trigger = { has_political_power > 150 }
 		custom_effect_tooltip = auh_ausgleich_bill_tt
 		hidden_effect = {
 			set_temp_variable = { AUH_bill = AUH_renewal_cost }
@@ -36,7 +21,13 @@ country_event = {
 				set_variable = { AUH_bill_carried = 1 }
 			}
 			if = {
-				limit = { check_variable = { var = AUH_bill_carried value = 1 compare = equals } }
+				limit = {
+					check_variable = {
+						var = AUH_bill_carried
+						value = 1
+						compare = equals
+					}
+				}
 				country_event = { id = auh_ausgleich.2 hours = 4 }
 			}
 			else = {
@@ -45,18 +36,21 @@ country_event = {
 		}
 	}
 
-	# Buy the kingdom's vote before it is cast
 	option = {
 		name = auh_ausgleich.1.b
-		ai_chance = {
-			factor = 25
-		}
-		trigger = {
-			has_political_power > 200
-		}
+		ai_chance = { factor = 25 }
+		trigger = { has_political_power > 200 }
 		add_political_power = -200
 		if = {
-			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			limit = {
+				NOT = {
+					check_variable = {
+						var = AUH_quote_frozen
+						value = 1
+						compare = equals
+					}
+				}
+			}
 			subtract_from_variable = { AUH_quote = 1 }
 		}
 		add_to_variable = { HUN_support = 8 }
@@ -70,16 +64,21 @@ country_event = {
 		}
 	}
 
-	# Set the figures by royal ordinance
 	option = {
 		name = auh_ausgleich.1.c
-		ai_chance = {
-			factor = 12
-		}
+		ai_chance = { factor = 12 }
 		add_stability = -0.10
 		add_war_support = 0.05
 		if = {
-			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			limit = {
+				NOT = {
+					check_variable = {
+						var = AUH_quote_frozen
+						value = 1
+						compare = equals
+					}
+				}
+			}
 			add_to_variable = { AUH_quote = 2 }
 		}
 		subtract_from_variable = { AUH_gemeinsamkeit = 6 }
@@ -94,12 +93,9 @@ country_event = {
 		}
 	}
 
-	# Let the term run out
 	option = {
 		name = auh_ausgleich.1.e
-		ai_chance = {
-			factor = 8
-		}
+		ai_chance = { factor = 8 }
 		custom_effect_tooltip = auh_ausgleich_run_out_tt
 		hidden_effect = {
 			country_event = { id = auh_ausgleich.3 hours = 4 }
@@ -107,22 +103,27 @@ country_event = {
 	}
 }
 
-# The settlement is carried
 country_event = {
 	id = auh_ausgleich.2
 	title = auh_ausgleich.2.t
 	desc = auh_ausgleich.2.d
 	picture = GFX_report_event_generic_sign_treaty1
-
 	is_triggered_only = yes
-
 	option = {
 		name = auh_ausgleich.2.a
 		add_political_power = 50
 		add_stability = 0.05
 		add_to_variable = { AUH_gemeinsamkeit = 4 }
 		if = {
-			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			limit = {
+				NOT = {
+					check_variable = {
+						var = AUH_quote_frozen
+						value = 1
+						compare = equals
+					}
+				}
+			}
 			add_to_variable = { AUH_quote = 1 }
 		}
 		add_to_variable = { AUS_support = 3 }
@@ -136,21 +137,15 @@ country_event = {
 	}
 }
 
-# The settlement fails
 country_event = {
 	id = auh_ausgleich.3
 	title = auh_ausgleich.3.t
 	desc = auh_ausgleich.3.d
 	picture = GFX_report_event_hungary_refused
-
 	is_triggered_only = yes
-
-	# Govern by the provisional twelfths
 	option = {
 		name = auh_ausgleich.3.a
-		ai_chance = {
-			factor = 55
-		}
+		ai_chance = { factor = 55 }
 		add_stability = -0.08
 		add_political_power = -60
 		subtract_from_variable = { AUH_gemeinsamkeit = 10 }
@@ -159,7 +154,9 @@ country_event = {
 		custom_effect_tooltip = auh_ausgleich_provisorium_tt
 		hidden_effect = {
 			if = {
-				limit = { NOT = { has_idea = AUH_dnc_the_provisorium } }
+				limit = {
+					NOT = { has_idea = AUH_dnc_the_provisorium }
+				}
 				add_ideas = AUH_dnc_the_provisorium
 			}
 			set_variable = { AUH_next_term = 24 }
@@ -168,12 +165,9 @@ country_event = {
 		}
 	}
 
-	# Let the customs union go with it
 	option = {
 		name = auh_ausgleich.3.b
-		ai_chance = {
-			factor = 20
-		}
+		ai_chance = { factor = 20 }
 		trigger = {
 			NOT = { has_idea = AUH_dnc_two_customs_territories }
 		}
@@ -193,15 +187,10 @@ country_event = {
 		}
 	}
 
-	# Send the ministry away and put the bill again
 	option = {
 		name = auh_ausgleich.3.c
-		ai_chance = {
-			factor = 25
-		}
-		trigger = {
-			has_political_power > 100
-		}
+		ai_chance = { factor = 25 }
+		trigger = { has_political_power > 100 }
 		add_political_power = -100
 		add_stability = -0.05
 		subtract_from_variable = { AUH_gemeinsamkeit = 4 }
@@ -215,27 +204,23 @@ country_event = {
 	}
 }
 
-# The union itself in question
 country_event = {
 	id = auh_ausgleich.4
 	title = auh_ausgleich.4.t
 	desc = auh_ausgleich.4.d
 	picture = GFX_report_event_generic_parliament
-
 	is_triggered_only = yes
-
-	# Let the kingdom go
 	option = {
 		name = auh_ausgleich.4.a
-		ai_chance = {
-			factor = 25
-		}
+		ai_chance = { factor = 25 }
 		add_stability = 0.05
 		set_country_flag = AUH_dnc_union_dissolved
 		custom_effect_tooltip = auh_ausgleich_dissolved_tt
 		hidden_effect = {
 			if = {
-				limit = { NOT = { country_exists = HUN } }
+				limit = {
+					NOT = { country_exists = HUN }
+				}
 				release_puppet = HUN
 			}
 			set_variable = { HUN_support = 70 }
@@ -246,18 +231,18 @@ country_event = {
 			set_variable = { AUH_renewal_window = 0 }
 			set_variable = { AUH_renewal_armed = 0 }
 			set_variable = { AUH_missed_renewals = 0 }
-			if = { limit = { has_idea = AUH_dnc_the_provisorium } remove_ideas = AUH_dnc_the_provisorium }
+			if = {
+				limit = { has_idea = AUH_dnc_the_provisorium }
+				remove_ideas = AUH_dnc_the_provisorium
+			}
 			AUH_dnc_refresh_the_settlement = yes
 			AUH_dnc_ausgleich_clamp = yes
 		}
 	}
 
-	# Hold the kingdom with the army
 	option = {
 		name = auh_ausgleich.4.b
-		ai_chance = {
-			factor = 30
-		}
+		ai_chance = { factor = 30 }
 		add_war_support = 0.10
 		add_stability = -0.05
 		add_political_power = -50
@@ -266,7 +251,11 @@ country_event = {
 		custom_effect_tooltip = auh_ausgleich_held_tt
 		hidden_effect = {
 			if = {
-				limit = { NOT = { has_idea = AUH_dnc_hungarian_national_resistance } }
+				limit = {
+					NOT = {
+						has_idea = AUH_dnc_hungarian_national_resistance
+					}
+				}
 				add_timed_idea = {
 					idea = AUH_dnc_hungarian_national_resistance
 					days = 730
@@ -278,18 +267,21 @@ country_event = {
 		}
 	}
 
-	# Pay whatever the kingdom asks
 	option = {
 		name = auh_ausgleich.4.c
-		ai_chance = {
-			factor = 45
-		}
-		trigger = {
-			has_political_power > 200
-		}
+		ai_chance = { factor = 45 }
+		trigger = { has_political_power > 200 }
 		add_political_power = -200
 		if = {
-			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			limit = {
+				NOT = {
+					check_variable = {
+						var = AUH_quote_frozen
+						value = 1
+						compare = equals
+					}
+				}
+			}
 			set_variable = { AUH_quote = 30 }
 		}
 		add_to_variable = { AUH_gemeinsamkeit = 18 }
@@ -307,21 +299,15 @@ country_event = {
 	}
 }
 
-# The counties on strike
 country_event = {
 	id = auh_ausgleich.5
 	title = auh_ausgleich.5.t
 	desc = auh_ausgleich.5.d
 	picture = GFX_report_event_generic_strike
-
 	is_triggered_only = yes
-
-	# Send royal commissioners into the counties
 	option = {
 		name = auh_ausgleich.5.a
-		ai_chance = {
-			factor = 60
-		}
+		ai_chance = { factor = 60 }
 		add_political_power = -75
 		add_timed_idea = {
 			idea = AUH_dnc_hungarian_national_resistance
@@ -338,16 +324,21 @@ country_event = {
 		}
 	}
 
-	# Give way and send the Diet home
 	option = {
 		name = auh_ausgleich.5.b
-		ai_chance = {
-			factor = 40
-		}
+		ai_chance = { factor = 40 }
 		add_stability = -0.06
 		subtract_from_variable = { AUH_gemeinsamkeit = 12 }
 		if = {
-			limit = { NOT = { check_variable = { var = AUH_quote_frozen value = 1 compare = equals } } }
+			limit = {
+				NOT = {
+					check_variable = {
+						var = AUH_quote_frozen
+						value = 1
+						compare = equals
+					}
+				}
+			}
 			subtract_from_variable = { AUH_quote = 2 }
 		}
 		subtract_from_variable = { HUN_support = 5 }
