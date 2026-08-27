@@ -1,0 +1,364 @@
+AUH_clock_check = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_house }
+			OR = {
+				has_country_flag = AUH_dnc_path_dualist
+				has_country_flag = AUH_dnc_path_iron_ring
+				has_country_flag = AUH_dnc_path_magyar
+				has_country_flag = AUH_dnc_path_sword
+				has_country_flag = AUH_dnc_path_belvedere
+			}
+			check_variable = {
+				var = AUH_clock_months
+				value = 6
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 10
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = AUH_clock_bell_house
+			country_event = { id = auh_clock.1 days = 2 }
+		}
+		else = {
+			random_list = {
+				70 = { }
+				30 = {
+					set_country_flag = AUH_clock_bell_house
+					country_event = { id = auh_clock.1 days = 2 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_word }
+			OR = {
+				has_country_flag = AUH_dnc_path_dualist
+				has_country_flag = AUH_dnc_path_iron_ring
+				has_country_flag = AUH_dnc_path_magyar
+				has_country_flag = AUH_dnc_path_sword
+				has_country_flag = AUH_dnc_path_belvedere
+			}
+			OR = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 28
+					compare = greater_than_or_equals
+				}
+				AND = {
+					check_variable = {
+						var = AUH_clock_months
+						value = 24
+						compare = greater_than_or_equals
+					}
+					check_variable = {
+						var = AUH_county_resistance
+						value = 10
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 36
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = AUH_clock_bell_word
+			country_event = { id = auh_clock.2 days = 2 }
+		}
+		else = {
+			random_list = {
+				75 = { }
+				25 = {
+					set_country_flag = AUH_clock_bell_word
+					country_event = { id = auh_clock.2 days = 2 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_konak }
+			check_variable = {
+				var = AUH_clock_months
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_clock_bell_konak
+		country_event = { id = auh_clock.3 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_kingdom }
+			check_variable = {
+				var = AUH_clock_months
+				value = 58
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 64
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = AUH_clock_bell_kingdom
+			country_event = { id = auh_clock.4 days = 2 }
+		}
+		else = {
+			random_list = {
+				75 = { }
+				25 = {
+					set_country_flag = AUH_clock_bell_kingdom
+					country_event = { id = auh_clock.4 days = 2 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_street }
+			OR = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 66
+					compare = greater_than_or_equals
+				}
+				AND = {
+					check_variable = {
+						var = AUH_clock_months
+						value = 60
+						compare = greater_than_or_equals
+					}
+					check_variable = {
+						var = AUH_strike_pressure
+						value = 40
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 72
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = AUH_clock_bell_street
+			country_event = { id = auh_clock.5 days = 2 }
+		}
+		else = {
+			random_list = {
+				75 = { }
+				25 = {
+					set_country_flag = AUH_clock_bell_street
+					country_event = { id = auh_clock.5 days = 2 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_settlement }
+			check_variable = {
+				var = AUH_renewal_window
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_clock_bell_settlement
+		country_event = { id = auh_clock.6 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_east }
+			check_variable = {
+				var = AUH_clock_months
+				value = 98
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_clock_months
+					value = 104
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = AUH_clock_bell_east
+			set_global_flag = AUH_the_constitution_restored_in_the_east
+			country_event = { id = auh_clock.7 days = 2 }
+		}
+		else = {
+			random_list = {
+				75 = { }
+				25 = {
+					set_country_flag = AUH_clock_bell_east
+					set_global_flag = AUH_the_constitution_restored_in_the_east
+					country_event = { id = auh_clock.7 days = 2 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_bell_lemberg }
+			NOT = {
+				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+			}
+			check_variable = {
+				var = AUH_clock_months
+				value = 98
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_clock_bell_lemberg
+		country_event = { id = auh_clock.9 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_scare_60 }
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 60
+				compare = less_than
+			}
+		}
+		set_country_flag = AUH_clock_scare_60
+		country_event = { id = auh_clock.20 days = 1 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_scare_40 }
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 40
+				compare = less_than
+			}
+		}
+		set_country_flag = AUH_clock_scare_40
+		country_event = { id = auh_clock.21 days = 1 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_clock_scare_20 }
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 20
+				compare = less_than
+			}
+		}
+		set_country_flag = AUH_clock_scare_20
+		country_event = { id = auh_clock.22 days = 1 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 80
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = AUH_old_man_health
+				value = 60
+				compare = greater_than
+			}
+		}
+		random_list = {
+			499 = { }
+			1 = { AUH_clock_the_old_man_dies = yes }
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 60
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = AUH_old_man_health
+				value = 40
+				compare = greater_than
+			}
+		}
+		random_list = {
+			149 = { }
+			1 = { AUH_clock_the_old_man_dies = yes }
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 40
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = AUH_old_man_health
+				value = 20
+				compare = greater_than
+			}
+		}
+		random_list = {
+			49 = { }
+			1 = { AUH_clock_the_old_man_dies = yes }
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_old_man_dead }
+			check_variable = {
+				var = AUH_old_man_health
+				value = 20
+				compare = less_than_or_equals
+			}
+		}
+		random_list = {
+			14 = { }
+			1 = { AUH_clock_the_old_man_dies = yes }
+		}
+	}
+}
+
+AUH_clock_the_old_man_dies = {
+	set_country_flag = AUH_old_man_dead
+	country_event = { id = auh_clock.8 hours = 6 }
+}

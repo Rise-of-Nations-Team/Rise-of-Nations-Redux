@@ -51,7 +51,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_the_dual_monarchy
 		icon = GFX_focus_generic_monarchy_1
-		x = 20
+		x = 26
 		y = 0
 		cost = 2.5
 		ai_will_do = { factor = 1 }
@@ -72,6 +72,12 @@ focus_tree = {
 			set_variable = { AUH_gemeinsamkeit = 0 }
 			set_variable = { AUH_ausgleich_months = 0 }
 			set_variable = { AUH_quote = 34 }
+			set_variable = { AUH_clock_months = 0 }
+			set_variable = { AUH_old_man_health = 100 }
+			set_variable = { AUH_redl_ledger = 0 }
+			set_variable = { AUH_county_resistance = 0 }
+			set_variable = { AUH_forgery_ledger = 0 }
+			set_variable = { AUH_belvedere_dossier = 0 }
 			if = {
 				limit = {
 					check_variable = {
@@ -121,9 +127,15 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_a_the_compromise_is_the_constitution
-		x = 2
+		x = 3
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		mutually_exclusive = {
+			focus = AUHDNC_b_the_chancellery_at_the_belvedere
+		}
+		mutually_exclusive = { focus = AUHDNC_h_buy_the_vote_with_banners }
+		mutually_exclusive = { focus = AUHDNC_m_the_sword_settles_it }
+		mutually_exclusive = { focus = AUHDNC_r_the_iron_ring_reforged }
 		icon = GFX_goal_constitutional_guarantees
 		cost = 3.5
 		available = { has_country_flag = AUH_dnc_question_posed }
@@ -1852,7 +1864,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_air_the_militar_aeronautische_anstalt
-		x = 127
+		x = 165
 		y = 0
 		icon = GFX_goal_generic_build_airforce
 		cost = 4
@@ -2926,7 +2938,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_three_armies
-		x = 102
+		x = 133
 		y = 0
 		icon = GFX_focus_HABSBURG_reform_gemeinsame_armee
 		cost = 4
@@ -4555,7 +4567,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_bp_the_ballhausplatz
-		x = 67
+		x = 87
 		y = 0
 		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
@@ -5679,7 +5691,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_common_market
-		x = 89
+		x = 116
 		y = 0
 		icon = GFX_focus_GER_customs_union
 		cost = 4
@@ -7477,9 +7489,17 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_h_buy_the_vote_with_banners
-		x = 33
+		x = 43
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		mutually_exclusive = {
+			focus = AUHDNC_a_the_compromise_is_the_constitution
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_b_the_chancellery_at_the_belvedere
+		}
+		mutually_exclusive = { focus = AUHDNC_m_the_sword_settles_it }
+		mutually_exclusive = { focus = AUHDNC_r_the_iron_ring_reforged }
 		icon = GFX_focus_HUN_the_lands_of_the_crown_of_saint_stephen
 		cost = 5
 		available = { has_country_flag = AUH_dnc_question_posed }
@@ -8737,9 +8757,17 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_m_the_sword_settles_it
-		x = 46
+		x = 60
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		mutually_exclusive = {
+			focus = AUHDNC_a_the_compromise_is_the_constitution
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_b_the_chancellery_at_the_belvedere
+		}
+		mutually_exclusive = { focus = AUHDNC_h_buy_the_vote_with_banners }
+		mutually_exclusive = { focus = AUHDNC_r_the_iron_ring_reforged }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
 		available = { has_country_flag = AUH_dnc_question_posed }
@@ -9157,7 +9185,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_the_frankist_wager
 		relative_position_id = AUHDNC_m_the_sword_settles_it
-		x = 1
+		x = 4
 		y = 1
 		prerequisite = { focus = AUHDNC_m_the_sword_settles_it }
 		mutually_exclusive = {
@@ -9227,7 +9255,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_outbid_the_resolution_of_fiume
 		relative_position_id = AUHDNC_m_the_sword_settles_it
-		x = 2
+		x = 5
 		y = 1
 		prerequisite = { focus = AUHDNC_m_the_sword_settles_it }
 		mutually_exclusive = { focus = AUHDNC_m_the_frankist_wager }
@@ -9716,7 +9744,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_end_the_condominium
 		relative_position_id = AUHDNC_m_a_ban_named_by_the_crown
-		x = -1
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_m_a_ban_named_by_the_crown
@@ -10520,7 +10548,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_nav_the_kuk_kriegsmarine
-		x = 113
+		x = 147
 		y = 0
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 4
@@ -11833,9 +11861,17 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_iron_ring_reforged
-		x = 17
+		x = 22
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		mutually_exclusive = {
+			focus = AUHDNC_a_the_compromise_is_the_constitution
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_b_the_chancellery_at_the_belvedere
+		}
+		mutually_exclusive = { focus = AUHDNC_h_buy_the_vote_with_banners }
+		mutually_exclusive = { focus = AUHDNC_m_the_sword_settles_it }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
 		available = { has_country_flag = AUH_dnc_question_posed }
@@ -13725,6 +13761,1331 @@ focus_tree = {
 				id = RUS
 				value = 30
 			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_b_the_chancellery_at_the_belvedere
+		x = 46
+		y = 1
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		mutually_exclusive = {
+			focus = AUHDNC_a_the_compromise_is_the_constitution
+		}
+		mutually_exclusive = { focus = AUHDNC_h_buy_the_vote_with_banners }
+		mutually_exclusive = { focus = AUHDNC_m_the_sword_settles_it }
+		mutually_exclusive = { focus = AUHDNC_r_the_iron_ring_reforged }
+		icon = GFX_focus_generic_monarchist_sentiment
+		cost = 5
+		available = { has_country_flag = AUH_dnc_question_posed }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			set_country_flag = AUH_dnc_path_belvedere
+			add_political_power = 100
+			army_experience = 25
+			add_command_power = 25
+			add_stability = -0.05
+			add_to_variable = { var = HUN_support value = -3 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_b_sup_HUN_down_tt
+			add_to_variable = { var = CRO_support value = 4 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_b_sup_CRO_up_tt
+			add_to_variable = { var = ROM_support value = 3 }
+			clamp_variable = {
+				var = ROM_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_b_sup_ROM_up_tt
+			add_tech_bonus = {
+				name = AUH_b_the_chancellery_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			custom_effect_tooltip = AUH_b_the_waiting_court_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_b_the_card_index_of_the_heir
+		relative_position_id = AUHDNC_b_the_chancellery_at_the_belvedere
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_b_the_chancellery_at_the_belvedere
+		}
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 3.5
+		allow_branch = { has_country_flag = AUH_dnc_path_belvedere }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { var = AUH_belvedere_dossier value = 10 }
+			clamp_variable = {
+				var = AUH_belvedere_dossier
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_b_dossier_up_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_b_the_long_wait
+		relative_position_id = AUHDNC_b_the_card_index_of_the_heir
+		x = 0
+		y = 7
+		prerequisite = { focus = AUHDNC_b_the_card_index_of_the_heir }
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		allow_branch = { has_country_flag = AUH_dnc_path_belvedere }
+		available = {
+			check_variable = {
+				var = AUH_clock_months
+				value = 100
+				compare = greater_than_or_equals
+			}
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_country_flag = AUH_dnc_era_end
+			add_political_power = 150
+			add_stability = 0.10
+			army_experience = 50
+			add_command_power = 50
+			if = {
+				limit = {
+					check_variable = {
+						var = AUH_belvedere_dossier
+						value = 25
+						compare = greater_than_or_equals
+					}
+				}
+				add_tech_bonus = {
+					name = AUH_b_the_long_wait_bonus
+					bonus = 1.0
+					uses = 2
+					category = industry
+				}
+				custom_effect_tooltip = AUH_b_dossier_banked_tt
+			}
+			else = { add_political_power = 50 }
+			custom_effect_tooltip = AUH_b_the_wait_goes_on_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_first_lord_of_the_household
+		x = 62
+		y = 0
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_court
+		cost = 2
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			set_country_flag = AUH_court_protocol_machine
+			custom_effect_tooltip = AUH_c_protocol_machine_tt
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_household_loyalty_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_oath_of_renunciation
+		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_first_lord_of_the_household
+		}
+		icon = GFX_focus_generic_treaty
+		cost = 2
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			set_country_flag = AUH_court_oath_sworn
+			custom_effect_tooltip = AUH_c_oath_sworn_tt
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_to_variable = { var = AUH_belvedere_dossier value = 1 }
+				custom_effect_tooltip = AUH_c_dossier_grows_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_spanish_ceremonial
+		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_first_lord_of_the_household
+		}
+		icon = GFX_focus_generic_monarchist_sentiment
+		cost = 3
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+			set_country_flag = AUH_court_ceremonial_enforced
+			custom_effect_tooltip = AUH_c_ceremonial_tt
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_household_loyalty_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_house_laws_reread
+		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_first_lord_of_the_household
+		}
+		icon = GFX_focus_generic_sympathetic_judges
+		cost = 3
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			set_country_flag = AUH_court_house_laws_reread
+			custom_effect_tooltip = AUH_c_house_laws_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_seat_below_the_archduchesses
+		relative_position_id = AUHDNC_c_the_oath_of_renunciation
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_oath_of_renunciation }
+		icon = GFX_goal_generic_political_pressure
+		cost = 2
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = AUH_court_slights_priced
+			custom_effect_tooltip = AUH_c_slights_priced_tt
+			add_to_variable = { var = AUS_support value = 1 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_household_loyalty_tt
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_to_variable = { var = AUH_belvedere_dossier value = 1 }
+				custom_effect_tooltip = AUH_c_dossier_grows_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_jubilee_of_the_reign
+		relative_position_id = AUHDNC_c_the_seat_below_the_archduchesses
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_seat_below_the_archduchesses
+		}
+		prerequisite = { focus = AUHDNC_c_the_spanish_ceremonial }
+		icon = GFX_focus_generic_public_meetings
+		cost = 4
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = AUH_court_jubilee_held
+			add_to_variable = { var = AUH_gemeinsamkeit value = 4 }
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_jubilee_loyalty_tt
+			custom_effect_tooltip = AUH_c_jubilee_streets_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							var = CZE_support
+							value = 45
+							compare = less_than
+						}
+					}
+					country_event = { id = auh_clock.60 days = 7 }
+				}
+				else = {
+					country_event = { id = auh_clock.61 days = 7 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_physicians_of_the_hofburg
+		relative_position_id = AUHDNC_c_the_spanish_ceremonial
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_spanish_ceremonial }
+		icon = GFX_focus_generic_university_2
+		cost = 2
+		available = {
+			has_country_flag = AUH_dnc_question_posed
+			NOT = { has_country_flag = AUH_old_man_dead }
+			custom_trigger_tooltip = {
+				tooltip = AUH_c_avail_first_cough
+				check_variable = {
+					var = AUH_old_man_health
+					value = 60
+					compare = less_than_or_equals
+				}
+			}
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_stability = 0.02
+			set_country_flag = AUH_court_physicians_watch
+			add_to_variable = { var = AUH_old_man_health value = 5 }
+			clamp_variable = {
+				var = AUH_old_man_health
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_health_recovers_tt
+			subtract_from_variable = { var = AUH_old_man_decay_bonus value = 0.1 }
+			clamp_variable = {
+				var = AUH_old_man_decay_bonus
+				min = 0
+				max = 5
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_question_of_the_succession
+		relative_position_id = AUHDNC_c_the_house_laws_reread
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_house_laws_reread }
+		icon = GFX_goal_generic_plotting
+		cost = 3
+		available = { has_country_flag = AUH_dnc_question_posed }
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_belvedere
+			}
+		}
+		select_effect = {
+			country_event = { id = auh_clock.62 days = 4 }
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.02
+			set_country_flag = AUH_succession_question_posed
+			add_to_variable = { var = AUH_old_man_decay_bonus value = 0.25 }
+			custom_effect_tooltip = AUH_c_succession_question_tt
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_to_variable = { var = AUH_belvedere_dossier value = 2 }
+				custom_effect_tooltip = AUH_c_dossier_grows_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_regency_act_in_the_drawer
+		relative_position_id = AUHDNC_c_the_question_of_the_succession
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_question_of_the_succession
+		}
+		icon = GFX_goal_KOR_constitution
+		cost = 3
+		available = {
+			has_country_flag = AUH_dnc_question_posed
+			NOT = { has_country_flag = AUH_old_man_dead }
+			custom_trigger_tooltip = {
+				tooltip = AUH_c_avail_failing_fast
+				check_variable = {
+					var = AUH_old_man_health
+					value = 40
+					compare = less_than_or_equals
+				}
+			}
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = AUH_regency_act_ready
+			custom_effect_tooltip = AUH_c_regency_ready_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_vigil_at_schoenbrunn
+		relative_position_id = AUHDNC_c_the_physicians_of_the_hofburg
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_physicians_of_the_hofburg
+		}
+		icon = GFX_focus_generic_catholic_dominion
+		cost = 2
+		available = {
+			has_country_flag = AUH_dnc_question_posed
+			NOT = { has_country_flag = AUH_old_man_dead }
+			custom_trigger_tooltip = {
+				tooltip = AUH_c_avail_last_days
+				check_variable = {
+					var = AUH_old_man_health
+					value = 20
+					compare = less_than_or_equals
+				}
+			}
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = AUH_court_vigil_kept
+			custom_effect_tooltip = AUH_c_vigil_tt
+			add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_crypt_of_the_capuchins
+		relative_position_id = AUHDNC_c_the_regency_act_in_the_drawer
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_question_of_the_succession
+			focus = AUHDNC_c_the_vigil_at_schoenbrunn
+		}
+		icon = GFX_focus_HUN_the_old_habsburg_king
+		cost = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_c_avail_old_man_dead
+				has_country_flag = AUH_old_man_dead
+			}
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			set_country_flag = AUH_court_old_court_buried
+			add_to_variable = { var = AUH_gemeinsamkeit value = 4 }
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_funeral_loyalty_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_court_of_the_new_reign
+		relative_position_id = AUHDNC_c_the_crypt_of_the_capuchins
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_crypt_of_the_capuchins }
+		icon = GFX_focus_generic_monarchy_2
+		cost = 4
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.03
+			add_command_power = 25
+			set_country_flag = AUH_court_new_reign
+			custom_effect_tooltip = AUH_c_new_reign_tt
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_political_power = 50
+				custom_effect_tooltip = AUH_c_new_reign_belvedere_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_house_that_cannot_vote
+		x = 125
+		y = 3
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_goal_generic_parliament
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_house }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = AUH_bell_house_resolved
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_dualist }
+				add_political_power = 50
+				add_to_variable = { var = AUH_ordinances value = 2 }
+				custom_effect_tooltip = AUH_x_house_paragraph_tt
+			}
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_iron_ring }
+				add_stability = 0.05
+				add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_x_house_majority_tt
+			}
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_magyar }
+				add_to_variable = { var = HUN_support value = 2 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_x_house_kingdom_tt
+			}
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_sword }
+				add_war_support = 0.05
+				add_command_power = 25
+				custom_effect_tooltip = AUH_x_house_sword_tt
+			}
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_political_power = 25
+				add_to_variable = { var = AUH_belvedere_dossier value = 1 }
+				custom_effect_tooltip = AUH_x_dossier_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_government_of_officials
+		relative_position_id = AUHDNC_x_the_house_that_cannot_vote
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_x_the_house_that_cannot_vote }
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_bell_house }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_country_flag = AUH_dnc_path_dualist
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_to_variable = { var = AUH_ordinances value = 3 }
+			custom_effect_tooltip = AUH_x_ordinances_tt
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 1 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+			set_country_flag = AUH_x_officials_governing
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_sixty_eight_words
+		x = 129
+		y = 4
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_HABSBURG_reform_gemeinsame_armee
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_word }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			army_experience = 15
+			add_war_support = 0.05
+			set_country_flag = AUH_bell_word_resolved
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_magyar }
+				add_to_variable = { var = HUN_support value = 2 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				subtract_from_variable = { var = AUH_gemeinsamkeit value = 3 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_x_word_pressed_tt
+			}
+			else = {
+				add_to_variable = { var = HUN_support value = -2 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				subtract_from_variable = { var = AUH_gemeinsamkeit value = 2 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+				hidden_effect = {
+					add_to_variable = { var = AUH_county_resistance value = 4 }
+					clamp_variable = {
+						var = AUH_county_resistance
+						min = 0
+						max = 100
+					}
+				}
+				custom_effect_tooltip = AUH_x_counties_stir_tt
+				custom_effect_tooltip = AUH_x_word_refused_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_county_assemblies_speak
+		relative_position_id = AUHDNC_x_the_sixty_eight_words
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_x_the_sixty_eight_words }
+		icon = GFX_focus_HUN_the_lands_of_the_crown_of_saint_stephen
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_bell_word }
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = AUH_x_county_ledger_tt
+			if = {
+				limit = {
+					check_variable = {
+						var = AUH_county_resistance
+						value = 25
+						compare = greater_than
+					}
+				}
+				add_political_power = 25
+				custom_effect_tooltip = AUH_x_county_refusal_tt
+			}
+			set_country_flag = AUH_x_county_instruments_drafted
+			custom_effect_tooltip = AUH_x_county_instruments_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_blood_in_the_konak
+		x = 133
+		y = 5
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_goal_generic_plotting
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_konak }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = AUH_bell_konak_resolved
+			set_country_flag = AUH_x_serbia_ladder_open
+			custom_effect_tooltip = AUH_x_serbia_ladder_tt
+			add_ai_strategy = {
+				type = antagonize
+				id = SER
+				value = 50
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_punitive_expedition
+		relative_position_id = AUHDNC_x_blood_in_the_konak
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_x_blood_in_the_konak
+			focus = AUHDNC_x_the_east_in_motion
+		}
+		icon = GFX_goal_generic_major_war
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_bell_konak }
+		available = {
+			has_completed_focus = AUHDNC_arm_the_army_bill
+			OR = {
+				has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
+				has_completed_focus = AUHDNC_bp_the_frontier_shut_to_the_kingdom
+			}
+			country_exists = SER
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 25
+			add_command_power = 25
+			add_named_threat = { threat = 3 name = AUH_x_punitive_threat }
+			create_wargoal = { type = puppet_wargoal_focus target = SER }
+			set_country_flag = AUH_x_punitive_expedition
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_hofburg_receives_the_coalition
+		relative_position_id = AUHDNC_x_blood_in_the_konak
+		x = 1
+		y = 1
+		prerequisite = { focus = AUHDNC_x_blood_in_the_konak }
+		icon = GFX_focus_generic_court
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_bell_konak }
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_war_support = -0.05
+			add_to_variable = { var = AUH_gemeinsamkeit value = 6 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			add_to_variable = { var = CRO_support value = 3 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SER_support value = 3 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_coalition_received_tt
+			set_country_flag = AUH_x_coalition_received
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_a_cabinet_without_a_chamber
+		x = 138
+		y = 6
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_goal_KOR_ministers_change
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_kingdom }
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+			add_to_variable = { var = HUN_support value = -2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_counties_stir_tt
+			set_country_flag = AUH_x_bodyguard_cabinet
+			custom_effect_tooltip = AUH_x_bodyguard_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_capitulation_in_secret
+		relative_position_id = AUHDNC_x_a_cabinet_without_a_chamber
+		x = -1
+		y = 1
+		prerequisite = { focus = AUHDNC_x_a_cabinet_without_a_chamber }
+		mutually_exclusive = { focus = AUHDNC_x_the_law_of_the_millions }
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_bell_kingdom }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_to_variable = { var = HUN_support value = 3 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			set_country_flag = AUH_bell_kingdom_resolved
+			set_country_flag = AUH_x_coalition_took_office
+			hidden_effect = { set_country_flag = AUH_x_capitulation_poison }
+			custom_effect_tooltip = AUH_x_capitulation_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_law_of_the_millions
+		relative_position_id = AUHDNC_x_a_cabinet_without_a_chamber
+		x = 1
+		y = 1
+		prerequisite = { focus = AUHDNC_x_a_cabinet_without_a_chamber }
+		mutually_exclusive = { focus = AUHDNC_x_the_capitulation_in_secret }
+		icon = GFX_focus_generic_universal_suffrage
+		cost = 3.5
+		allow_branch = { has_country_flag = AUH_clock_bell_kingdom }
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 8 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 2
+				has_country_flag = AUH_dnc_path_dualist
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = AUH_dnc_path_belvedere
+			}
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_to_variable = { var = HUN_support value = -4 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = ROM_support value = 3 }
+			clamp_variable = {
+				var = ROM_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SLO_support value = 3 }
+			clamp_variable = {
+				var = SLO_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SER_support value = 3 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			set_country_flag = AUH_bell_kingdom_resolved
+			set_country_flag = AUH_x_law_of_the_millions
+			custom_effect_tooltip = AUH_x_millions_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_chamber_of_the_nations
+		relative_position_id = AUHDNC_x_the_law_of_the_millions
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_x_the_law_of_the_millions }
+		icon = GFX_focus_generic_vote
+		cost = 5
+		allow_branch = { has_country_flag = AUH_clock_bell_kingdom }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.10
+			add_to_variable = { var = ROM_support value = 2 }
+			clamp_variable = {
+				var = ROM_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SLO_support value = 2 }
+			clamp_variable = {
+				var = SLO_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = CRO_support value = 2 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = HUN_support value = -2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			set_country_flag = AUH_x_chamber_of_nations
+			set_country_flag = AUH_dnc_era_end
+			custom_effect_tooltip = AUH_x_era_end_chamber_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_street_asks_for_the_ballot
+		x = 143
+		y = 7
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_street }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			subtract_from_variable = { var = AUH_strike_pressure value = 15 }
+			clamp_variable = {
+				var = AUH_strike_pressure
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			set_country_flag = AUH_bell_street_resolved
+			custom_effect_tooltip = AUH_x_ballot_conceded_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_ballot_and_the_register
+		relative_position_id = AUHDNC_x_the_street_asks_for_the_ballot
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_x_the_street_asks_for_the_ballot
+		}
+		icon = GFX_goal_generic_elections
+		cost = 3
+		allow_branch = {
+			has_country_flag = AUH_clock_bell_street
+			has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+			add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			add_to_variable = { var = CZE_support value = 2 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = POL_support value = 2 }
+			clamp_variable = {
+				var = POL_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = UKR_support value = 2 }
+			clamp_variable = {
+				var = UKR_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SLV_support value = 2 }
+			clamp_variable = {
+				var = SLV_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = ITA_support value = 2 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			subtract_from_variable = { var = AUH_strike_pressure value = 10 }
+			clamp_variable = {
+				var = AUH_strike_pressure
+				min = 0
+				max = 100
+			}
+			set_country_flag = AUH_bell_street_resolved
+			set_country_flag = AUH_x_curial_franchise
+			custom_effect_tooltip = AUH_x_curial_franchise_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_settlement_falls_due
+		x = 147
+		y = 8
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_treaty
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_settlement }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			if = {
+				limit = {
+					has_completed_focus = AUHDNC_eco_the_estimate_that_balances
+				}
+				add_political_power = 25
+				custom_effect_tooltip = AUH_x_delegations_ready_tt
+			}
+			set_country_flag = AUH_bell_settlement_resolved
+			custom_effect_tooltip = AUH_x_settlement_due_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_east_in_motion
+		x = 151
+		y = 9
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_balkan_diplomacy
+		cost = 2
+		allow_branch = { has_country_flag = AUH_clock_bell_east }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.05
+			army_experience = 10
+			navy_experience = 10
+			set_country_flag = AUH_x_east_window_open
+			custom_effect_tooltip = AUH_x_east_window_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_disposal_of_the_provinces
+		relative_position_id = AUHDNC_x_the_east_in_motion
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_x_the_east_in_motion }
+		icon = GFX_focus_generic_conference
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_bell_east }
+		available = {
+			has_country_flag = AUH_dnc_provinces_declared
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = AUH_bell_east_resolved
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = AUH_dnc_path_belvedere
+						has_completed_focus = AUHDNC_m_the_frankist_wager
+					}
+				}
+				add_to_variable = { var = CRO_support value = 4 }
+				clamp_variable = {
+					var = CRO_support
+					min = 0
+					max = 100
+				}
+				add_to_variable = { var = BOS_support value = 2 }
+				clamp_variable = {
+					var = BOS_support
+					min = 0
+					max = 100
+				}
+				set_country_flag = AUH_x_disposal_croatia
+				custom_effect_tooltip = AUH_x_disposal_croatia_tt
+			}
+			else_if = {
+				limit = { has_country_flag = AUH_dnc_path_magyar }
+				add_to_variable = { var = HUN_support value = 3 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				add_to_variable = { var = BOS_support value = -2 }
+				clamp_variable = {
+					var = BOS_support
+					min = 0
+					max = 100
+				}
+				set_country_flag = AUH_x_disposal_hungary
+				custom_effect_tooltip = AUH_x_disposal_hungary_tt
+			}
+			else = {
+				add_stability = 0.05
+				add_to_variable = { var = BOS_support value = 2 }
+				clamp_variable = {
+					var = BOS_support
+					min = 0
+					max = 100
+				}
+				set_country_flag = AUH_x_disposal_condominium
+				custom_effect_tooltip = AUH_x_disposal_condominium_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_a_crown_for_the_vistula
+		x = 155
+		y = 9
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_monarchy_2
+		cost = 4
+		allow_branch = { has_country_flag = AUH_clock_bell_lemberg }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_to_variable = { var = POL_support value = 4 }
+			clamp_variable = {
+				var = POL_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = UKR_support value = -2 }
+			clamp_variable = {
+				var = UKR_support
+				min = 0
+				max = 100
+			}
+			add_named_threat = { threat = 2 name = AUH_x_vistula_threat }
+			set_country_flag = AUH_bell_lemberg_resolved
+			set_country_flag = AUH_x_vistula_crown_claimed
+			custom_effect_tooltip = AUH_x_vistula_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_regency_question
+		x = 159
+		y = 10
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_monarchist_sentiment
+		cost = 3
+		allow_branch = {
+			OR = {
+				has_country_flag = AUH_old_man_dead
+				has_completed_focus = AUHDNC_c_the_question_of_the_succession
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 4
+				has_country_flag = AUH_old_man_dead
+			}
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+			set_country_flag = AUH_x_regency_prepared
+			if = {
+				limit = { has_country_flag = AUH_old_man_dead }
+				add_political_power = 50
+				add_stability = 0.05
+				custom_effect_tooltip = AUH_x_regency_now_tt
+			}
+			else = {
+				custom_effect_tooltip = AUH_x_regency_prepared_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_regiments_in_the_streets
+		relative_position_id = AUHDNC_x_a_cabinet_without_a_chamber
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = AUHDNC_x_a_cabinet_without_a_chamber
+			focus = AUHDNC_x_the_sixty_eight_words
+		}
+		icon = GFX_focus_generic_oppression
+		cost = 3
+		allow_branch = {
+			OR = {
+				has_country_flag = AUH_clock_bell_kingdom
+				has_country_flag = AUH_clock_bell_street
+			}
+		}
+		select_effect = {
+			hidden_effect = {
+				add_to_variable = { var = AUH_county_resistance value = 5 }
+				clamp_variable = {
+					var = AUH_county_resistance
+					min = 0
+					max = 100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.05
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 3 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+			subtract_from_variable = { var = AUH_strike_pressure value = 15 }
+			clamp_variable = {
+				var = AUH_strike_pressure
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_counties_stir_tt
+			set_country_flag = AUH_x_regiments_deployed
+			custom_effect_tooltip = AUH_x_regiments_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_peace_of_the_king
+		x = 162
+		y = 11
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		allow_branch = { has_country_flag = AUH_x_the_kingdom_beaten }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.10
+			add_war_support = 0.05
+			add_to_variable = { var = HUN_support value = -4 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 4 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+			set_country_flag = AUH_x_peace_of_the_king
+			set_country_flag = AUH_dnc_era_end
+			custom_effect_tooltip = AUH_x_era_end_peace_tt
 		}
 	}
 }
