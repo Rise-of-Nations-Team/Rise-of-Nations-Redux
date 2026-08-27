@@ -2768,6 +2768,137 @@ ideas = {
 				army_attack_factor = -0.1
 			}
 		}
+		GER_battleship_production_focus = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+			}
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		GER_submarine_production_focus = {
+			picture = generic_naval_manufacturer_1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		GER_fith_fleet_act = {
+			picture = AUS_naval_efficiency_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_subject = no
+				has_capitulated = no
+				NOT = { has_global_flag = great_war_ends }
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+				industrial_capacity_dockyard = 0.1
+				production_speed_dockyard_factor = 0.1
+				naval_doctrine_cost_factor = -0.1
+				#ai_focus_naval_factor = 2
+			}
+		}
+		GER_fith_fleet_act_extended = {
+			picture = AUS_naval_efficiency_idea
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_subject = no
+				has_capitulated = no
+				NOT = { has_global_flag = great_war_ends }
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.1
+				industrial_capacity_dockyard = 0.15
+				production_speed_dockyard_factor = 0.15
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				naval_doctrine_cost_factor = -0.2
+				#ai_focus_naval_factor = 2
+			}
+		}
+		GER_idea_high_seas_fleet = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_subject = no
+				has_capitulated = no
+				NOT = { 
+					has_global_flag = great_war_ends
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.10
+				navy_capital_ship_defence_factor = 0.10				
+			}
+		}
+		GER_mass_produce_v_30 = {
+			picture = generic_naval_manufacturer_2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = great_war_loser
+				}
+			}
+			equipment_bonus = {
+				ship_hull_light = { 
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
 	}
 	naval_manufacturer = {
 		designer = yes
