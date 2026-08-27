@@ -7557,6 +7557,42 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1500 }
 
 	focus = {
+		id = ENG_room_40
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5
+		x = 16
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = ENG_room_40_tt
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				add_tech_bonus = {
+					name = ENG_room_40
+					bonus = 1
+					uses = 1
+					category = encryption_tech
+					category = decryption_tech
+				}
+			}
+			else = {
+				hidden_effect = {
+					set_technology = {
+						decryption_machine = 1
+					}
+				}
+				custom_effect_tooltip = lar_decryption_bonus_tt
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
 		id = ENG_control_under_egypt
 		icon = GFX_goal_generic_defence
 		cost = 5
