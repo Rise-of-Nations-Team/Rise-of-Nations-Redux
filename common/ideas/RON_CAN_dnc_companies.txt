@@ -7,7 +7,6 @@ ideas = {
 			removal_cost = 10
 			modifier = { fuel_gain_factor = 0.1 }
 			traits = { mining_company }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_algoma_steel = {
@@ -16,9 +15,10 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { industry = 0.1 }
-			modifier = { production_speed_industrial_complex_factor = 0.08 }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.08
+			}
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_t_eaton_co = {
@@ -28,7 +28,6 @@ ideas = {
 			removal_cost = 10
 			modifier = { consumer_goods_factor = -0.05 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_bank_of_montreal = {
@@ -38,7 +37,6 @@ ideas = {
 			removal_cost = 10
 			modifier = { political_power_factor = 0.05 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_canadian_general_electric = {
@@ -49,7 +47,6 @@ ideas = {
 			research_bonus = { electronics = 0.1 }
 			modifier = { industrial_capacity_factory = 0.05 }
 			traits = { electronics_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_laurentide_paper = {
@@ -60,7 +57,6 @@ ideas = {
 			research_bonus = { construction_tech = 0.08 }
 			modifier = { min_export = 0.1 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_bell_telephone = {
@@ -73,7 +69,6 @@ ideas = {
 				support_equipment = { build_cost_ic = -0.05 }
 			}
 			traits = { electronics_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_dominion_textile = {
@@ -81,9 +76,11 @@ ideas = {
 			allowed = { original_tag = CAN }
 			cost = 150
 			removal_cost = 10
-			modifier = { war_support_factor = 0.03 stability_factor = 0.02 }
+			modifier = {
+				war_support_factor = 0.03
+				stability_factor = 0.02
+			}
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_canadian_pacific_railway = {
@@ -92,12 +89,13 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { train_tech = 0.15 }
-			modifier = { production_speed_infrastructure_factor = 0.15 }
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+			}
 			equipment_bonus = {
 				train_equipment = { build_cost_ic = -0.05 }
 			}
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 2 }
 		}
 		CAN_grand_trunk_pacific = {
@@ -108,7 +106,6 @@ ideas = {
 			research_bonus = { logistics_tech = 0.1 }
 			modifier = { mobilization_speed = 0.05 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_mackenzie_and_mann = {
@@ -119,7 +116,6 @@ ideas = {
 			research_bonus = { engineers_tech = 0.1 }
 			modifier = { production_speed_buildings_factor = 0.08 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_dominion_iron_and_steel = {
@@ -130,7 +126,6 @@ ideas = {
 			research_bonus = { armor = 0.1 }
 			modifier = { industrial_capacity_dockyard = 0.05 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_imperial_oil = {
@@ -139,9 +134,10 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { excavation_tech = 0.15 }
-			modifier = { production_speed_synthetic_refinery_factor = 0.12 }
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.12
+			}
 			traits = { refinery_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_massey_harris = {
@@ -150,9 +146,10 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { cat_mechanized_equipment = 0.08 }
-			modifier = { production_factory_efficiency_gain_factor = 0.05 }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_marconi_wireless_canada = {
@@ -162,70 +159,87 @@ ideas = {
 			removal_cost = 10
 			research_bonus = { encryption_tech = 0.15 }
 			traits = { electronics_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_yokohama_specie_bank = {
 			picture = CAN_yokohama_specie_bank
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_p_the_yokohama_specie_bank }
-			available = { has_completed_focus = CANDNC_p_the_yokohama_specie_bank }
+			visible = {
+				has_completed_focus = CANDNC_p_the_yokohama_specie_bank
+			}
+			available = {
+				has_completed_focus = CANDNC_p_the_yokohama_specie_bank
+			}
 			cost = 150
 			removal_cost = 10
 			modifier = { trade_opinion_factor = 0.1 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_hill_and_morgan_lines = {
 			picture = CAN_hill_and_morgan_lines
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_c_the_railways_pass_to_wall_street }
-			available = { has_completed_focus = CANDNC_c_the_railways_pass_to_wall_street }
+			visible = {
+				has_completed_focus = CANDNC_c_the_railways_pass_to_wall_street
+			}
+			available = {
+				has_completed_focus = CANDNC_c_the_railways_pass_to_wall_street
+			}
 			cost = 150
 			removal_cost = 10
 			modifier = { conversion_cost_civ_to_mil_factor = -0.08 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_national_city_bank = {
 			picture = CAN_national_city_bank
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_c_the_banks_take_national_charters }
-			available = { has_completed_focus = CANDNC_c_the_banks_take_national_charters }
+			visible = {
+				has_completed_focus = CANDNC_c_the_banks_take_national_charters
+			}
+			available = {
+				has_completed_focus = CANDNC_c_the_banks_take_national_charters
+			}
 			cost = 150
 			removal_cost = 10
 			modifier = { production_speed_dockyard_factor = 0.08 }
 			traits = { industrial_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_cobalt_crown_mines = {
 			picture = CAN_cobalt_crown_mines
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_d_the_cobalt_reserve }
-			available = { has_completed_focus = CANDNC_d_the_cobalt_reserve }
+			visible = {
+				has_completed_focus = CANDNC_d_the_cobalt_reserve
+			}
+			available = {
+				has_completed_focus = CANDNC_d_the_cobalt_reserve
+			}
 			cost = 150
 			removal_cost = 10
-			modifier = { production_factory_max_efficiency_factor = 0.05 }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
 			traits = { mining_company }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_fessenden_wireless = {
 			picture = CAN_fessenden_wireless
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_d_a_telegraph_of_the_air }
-			available = { has_completed_focus = CANDNC_d_a_telegraph_of_the_air }
+			visible = {
+				has_completed_focus = CANDNC_d_a_telegraph_of_the_air
+			}
+			available = {
+				has_completed_focus = CANDNC_d_a_telegraph_of_the_air
+			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { decryption_tech = 0.2 }
 			traits = { electronics_concern }
-		
 			ai_will_do = { factor = 1 }
 		}
 	}
+
 	materiel_manufacturer = {
 		designer = yes
 		CAN_ross_rifle_company = {
@@ -239,7 +253,6 @@ ideas = {
 				infantry_equipment = { build_cost_ic = -0.05 reliability = 0.05 }
 			}
 			traits = { infantry_equipment_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_dominion_arsenal = {
@@ -252,7 +265,6 @@ ideas = {
 				artillery_equipment = { build_cost_ic = -0.05 }
 			}
 			traits = { artillery_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_canada_cycle_and_motor = {
@@ -261,15 +273,17 @@ ideas = {
 			cost = 150
 			removal_cost = 10
 			research_bonus = { motorized_equipment = 0.15 }
-			modifier = { production_factory_start_efficiency_factor = 0.05 }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+			}
 			equipment_bonus = {
 				motorized_equipment = { build_cost_ic = -0.05 }
 			}
 			traits = { motorized_equipment_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 	}
+
 	naval_manufacturer = {
 		designer = yes
 		CAN_polson_iron_works = {
@@ -283,7 +297,6 @@ ideas = {
 				screen_ship = { build_cost_ic = -0.05 }
 			}
 			traits = { naval_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_collingwood_shipbuilding = {
@@ -297,14 +310,17 @@ ideas = {
 				ship_hull_light = { build_cost_ic = -0.05 }
 			}
 			traits = { naval_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_kure_naval_mission = {
 			picture = CAN_kure_naval_mission
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_p_keels_from_kure }
-			available = { has_completed_focus = CANDNC_p_keels_from_kure }
+			visible = {
+				has_completed_focus = CANDNC_p_keels_from_kure
+			}
+			available = {
+				has_completed_focus = CANDNC_p_keels_from_kure
+			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { ca_tech = 0.2 }
@@ -312,17 +328,21 @@ ideas = {
 				ship_hull_cruiser = { build_cost_ic = -0.08 }
 			}
 			traits = { naval_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 	}
+
 	aircraft_manufacturer = {
 		designer = yes
 		CAN_aerial_experiment_association = {
 			picture = CAN_aerial_experiment_association
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_air_the_silver_dart }
-			available = { has_completed_focus = CANDNC_air_the_silver_dart }
+			visible = {
+				has_completed_focus = CANDNC_air_the_silver_dart
+			}
+			available = {
+				has_completed_focus = CANDNC_air_the_silver_dart
+			}
 			cost = 150
 			removal_cost = 10
 			research_bonus = { air_equipment = 0.2 }
@@ -330,19 +350,21 @@ ideas = {
 				small_plane_airframe = { build_cost_ic = -0.05 }
 			}
 			traits = { light_aircraft_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 		CAN_canadian_aerodrome_company = {
 			picture = CAN_canadian_aerodrome_company
 			allowed = { original_tag = CAN }
-			visible = { has_completed_focus = CANDNC_air_the_canadian_aerodrome_company }
-			available = { has_completed_focus = CANDNC_air_the_canadian_aerodrome_company }
+			visible = {
+				has_completed_focus = CANDNC_air_the_canadian_aerodrome_company
+			}
+			available = {
+				has_completed_focus = CANDNC_air_the_canadian_aerodrome_company
+			}
 			cost = 150
 			removal_cost = 10
 			modifier = { production_speed_air_base_factor = 0.1 }
 			traits = { light_aircraft_manufacturer }
-		
 			ai_will_do = { factor = 1 }
 		}
 	}
