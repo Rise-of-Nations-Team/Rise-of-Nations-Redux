@@ -127,7 +127,6 @@ if = {
 		has_start_date > 1909.01.01
 	}
 	add_ideas = {
-		JAP_zaibatsus
 		DNC_naval_arms_race
 	}
 	activate_advisor = JAP_yamagata_aritomo
@@ -143,10 +142,18 @@ if = {
 
 if = {
 	limit = {
-		has_start_date < 1910.01.01
+		has_start_date < 1913.01.01
 	}
 	add_ideas = {
 		JAP_meiji_restoration
+	}
+}
+
+if = {
+	limit = {
+		has_start_date < 1910.01.01
+	}
+	add_ideas = {
 		JAP_developed_rail_network
 		JAP_wooden_constructions
 		DNC_eight_nation_alliance
@@ -159,6 +166,15 @@ if = {
 	}
 	add_ideas = {
 		JAP_bushido_code
+	}
+}
+
+if = {
+	limit = {
+		has_start_date < 2030.01.01
+	}
+	add_ideas = {
+		JAP_zaibatsus
 	}
 }
 
