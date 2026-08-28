@@ -117,10 +117,16 @@ characters = {
 			idea_token = AUH_josef_redlich
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+				OR = {
+					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+					has_completed_focus = AUHDNC_x_the_moravian_lesson
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+				OR = {
+					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
+					has_completed_focus = AUHDNC_x_the_moravian_lesson
+				}
 			}
 			cost = 100
 			traits = { silent_lawyer constitutional_philosopher }
@@ -1209,10 +1215,16 @@ characters = {
 			idea_token = AUH_benno_straucher
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+				OR = {
+					has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+					has_completed_focus = AUHDNC_x_the_bukovina_lesson
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+				OR = {
+					has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+					has_completed_focus = AUHDNC_x_the_bukovina_lesson
+				}
 			}
 			cost = 100
 			traits = { silent_workhorse minority_leader }
@@ -1233,10 +1245,16 @@ characters = {
 			idea_token = AUH_aurel_von_onciul
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+				OR = {
+					has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+					has_completed_focus = AUHDNC_x_the_bukovina_lesson
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+				OR = {
+					has_completed_focus = AUHDNC_a_the_mother_tongue_registered
+					has_completed_focus = AUHDNC_x_the_bukovina_lesson
+				}
 			}
 			cost = 100
 			traits = { silent_lawyer conciliator }
