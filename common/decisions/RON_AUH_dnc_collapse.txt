@@ -1,0 +1,129 @@
+AUH_dnc_collapse_cat = {
+	AUH_z_declare_the_moratorium = {
+		icon = GFX_decision_generic_decision
+		cost = 75
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 365
+		visible = {
+			has_country_flag = AUH_dnc_collapse_running
+			NOT = { has_country_flag = AUH_z_bankrupt }
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		remove_effect = {
+			AUH_z_bankruptcy_begins = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				check_variable = {
+					var = AUH_treasury_strain
+					value = 85
+					compare = greater_than_or_equals
+				}
+			}
+		}
+	}
+
+	AUH_z_pay_the_service_in_paper = {
+		icon = GFX_decision_gre_investment_decisions
+		cost = 60
+		days_remove = 30
+		fire_only_once = no
+		visible = {
+			has_idea = AUH_z_the_service_is_unpaid
+		}
+		remove_effect = {
+			AUH_z_officials_paid = yes
+			add_to_variable = { var = AUH_treasury_strain value = 8 }
+			AUH_eco_strain_recompute = yes
+			add_stability = -0.03
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	AUH_z_buy_back_the_regiments = {
+		icon = GFX_decision_generic_military
+		cost = 80
+		days_remove = 60
+		fire_only_once = no
+		visible = {
+			has_idea = AUH_z_the_army_is_split
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_z_regiments_need_a_treasury_tt
+				check_variable = {
+					var = AUH_treasury_strain
+					value = 90
+					compare = less_than
+				}
+			}
+		}
+		remove_effect = {
+			AUH_z_army_reassembled = yes
+			add_to_variable = { var = AUH_treasury_strain value = 10 }
+			AUH_eco_strain_recompute = yes
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+	}
+
+	AUH_z_the_price_of_the_kingdom = {
+		icon = GFX_decision_eng_install_government
+		cost = 100
+		days_remove = 45
+		fire_only_once = no
+		days_re_enable = 180
+		visible = {
+			has_country_flag = AUH_dnc_collapse_running
+			check_variable = {
+				var = AUH_z_vultures_armed
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		remove_effect = {
+			country_event = { id = auh_clock.338 days = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				check_variable = {
+					var = AUH_z_vultures_armed
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+		}
+	}
+
+	AUH_z_read_the_ledger_of_the_ruin = {
+		icon = GFX_decision_category_generic_political_actions
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 30
+		visible = {
+			has_country_flag = AUH_dnc_collapse_running
+		}
+		complete_effect = {
+			country_event = { id = auh_clock.344 hours = 6 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

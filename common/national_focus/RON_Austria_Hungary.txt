@@ -16801,9 +16801,11 @@ focus_tree = {
 			custom_effect_tooltip = AUH_nav_tt_the_ship_is_named
 			if = {
 				limit = {
-					has_resources_amount = {
-						resource = oil
-						amount > 4
+					any_owned_state = {
+						has_resources_amount = {
+							resource = oil
+							amount > 4
+						}
 					}
 				}
 				add_tech_bonus = {
@@ -17182,7 +17184,7 @@ focus_tree = {
 				country_event = { id = auh_clock.225 days = 120 }
 				add_ai_strategy = {
 					type = equipment_production_factor
-					id = motorized_equipment
+					id = artillery
 					value = 15
 				}
 			}

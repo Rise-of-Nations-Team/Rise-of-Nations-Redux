@@ -1,0 +1,99 @@
+defined_text = {
+	name = GetAUH_collapseStageColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_collapse_stage
+				value = 1
+				compare = less_than
+			}
+		}
+		localization_key = G
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_collapse_stage
+				value = 2
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = R }
+}
+
+defined_text = {
+	name = GetAUH_collapseStageName
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_collapse_stage
+				value = 1
+				compare = less_than
+			}
+		}
+		localization_key = AUH_z_stage_name_none
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_collapse_stage
+				value = 1
+				compare = equals
+			}
+		}
+		localization_key = AUH_z_stage_name_one
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_collapse_stage
+				value = 2
+				compare = equals
+			}
+		}
+		localization_key = AUH_z_stage_name_two
+	}
+	text = { localization_key = AUH_z_stage_name_three }
+}
+
+defined_text = {
+	name = GetAUH_floorState
+	text = {
+		trigger = {
+			has_country_flag = AUH_z_the_floor
+		}
+		localization_key = AUH_z_floor_laid
+	}
+	text = { localization_key = AUH_z_floor_not_laid }
+}
+
+defined_text = {
+	name = GetAUH_vulturesColor
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_z_vultures_armed
+				value = 1
+				compare = less_than
+			}
+		}
+		localization_key = G
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				var = AUH_z_vultures_armed
+				value = 2
+				compare = less_than
+			}
+		}
+		localization_key = Y
+	}
+	text = { localization_key = R }
+}
