@@ -308,6 +308,53 @@ country_event = {
 }
 
 country_event = {
+	id = auh_admin_crisis.7
+	title = auh_admin_crisis.7.t
+	desc = auh_admin_crisis.7.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_admin_crisis.7.a
+		ai_chance = { factor = 30 }
+		add_political_power = -25
+		add_war_support = 0.05
+		add_to_variable = { var = SER_support value = -3 }
+		clamp_variable = {
+			var = SER_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_ac_7a_tt
+	}
+
+	option = {
+		name = auh_admin_crisis.7.b
+		ai_chance = { factor = 35 }
+		add_political_power = 25
+		add_war_support = -0.03
+		add_stability = 0.02
+	}
+
+	option = {
+		name = auh_admin_crisis.7.c
+		ai_chance = { factor = 35 }
+		add_political_power = -25
+		add_to_variable = { var = ITA_support value = 2 }
+		clamp_variable = {
+			var = ITA_support
+			min = 0
+			max = 100
+		}
+		if = {
+			limit = { country_exists = ITA }
+			add_opinion_modifier = { target = ITA modifier = small_increase }
+		}
+		custom_effect_tooltip = AUH_ac_7c_tt
+	}
+}
+
+country_event = {
 	id = auh_admin_crisis.8
 	title = auh_admin_crisis.8.t
 	desc = auh_admin_crisis.8.d
