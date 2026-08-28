@@ -516,4 +516,39 @@ AUH_dnc_nationalities_cat = {
 		complete_effect = { AUH_nat_rising_let_go = yes }
 		ai_will_do = { factor = 0 }
 	}
+
+	AUH_g_the_paragraph_fourteen_sitting = {
+		icon = GFX_decision_generic_nationalism
+		is_good = no
+		cost = 50
+		days_remove = 90
+		days_re_enable = 120
+		fire_only_once = no
+		visible = {
+			has_country_flag = AUH_g_paragraph_fourteen_open
+			NOT = { has_country_flag = AUH_dnc_era_end }
+		}
+		available = { always = yes }
+		remove_effect = {
+			add_stability = 0.04
+			add_political_power = 50
+			AUH_coercion_act = yes
+			custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+			set_temp_variable = { AUH_g_step = 2 }
+			AUH_g_the_slav_columns_fall = yes
+			custom_effect_tooltip = AUH_g_the_sitting_is_held_tt
+			AUH_g_the_register_hands_off = yes
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				check_variable = {
+					var = AUH_nat_rising_count
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+	}
 }

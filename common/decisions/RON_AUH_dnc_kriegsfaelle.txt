@@ -1032,4 +1032,48 @@ AUH_dnc_kriegsfaelle_cat = {
 		}
 		ai_will_do = { factor = 3 }
 	}
+
+	AUH_g_file_the_case_in_the_north = {
+		icon = GFX_decision_generic_operation
+		cost = 75
+		days_remove = 60
+		fire_only_once = yes
+		visible = {
+			has_country_flag = AUH_g_the_northern_case_open
+			NOT = { has_country_flag = AUH_kf_case_n_filed }
+		}
+		available = {
+			country_exists = GER
+			NOT = { has_war_with = GER }
+		}
+		remove_effect = {
+			set_country_flag = AUH_kf_case_n_filed
+			add_to_variable = { var = AUH_kf_plans value = 1 }
+			custom_effect_tooltip = AUH_g_case_n_filed_tt
+			army_experience = 20
+			add_command_power = 25
+			add_tech_bonus = {
+				name = AUH_tb_g_the_case_in_the_north
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = AUH_g_the_case_in_the_north
+			hidden_effect = {
+				add_to_variable = { var = AUH_redl_ledger value = 3 }
+				clamp_variable = {
+					var = AUH_redl_ledger
+					min = 0
+					max = 100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+	}
 }

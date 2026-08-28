@@ -8490,3 +8490,1120 @@ country_event = {
 		army_experience = 15
 	}
 }
+
+country_event = {
+	id = auh_clock.440
+	title = auh_clock.440.t
+	desc = auh_clock.440.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = AUH }
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 1.4
+						has_country_flag = AUH_eco_lueger_at_the_town_hall
+					}
+					modifier = {
+						factor = 1.4
+						has_country_flag = AUH_eco_the_city_is_finished
+					}
+					set_country_flag = AUH_academy_admitted
+					set_global_flag = AUH_the_painter_was_admitted
+				}
+				50 = { set_country_flag = AUH_academy_refused }
+			}
+		}
+	}
+
+	option = {
+		name = auh_clock.440.a
+		trigger = { has_country_flag = AUH_academy_refused }
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = AUH_academy_refused_tt
+		hidden_effect = {
+			news_event = { id = auh_clock.441 days = 3 }
+		}
+	}
+
+	option = {
+		name = auh_clock.440.b
+		trigger = { has_country_flag = AUH_academy_admitted }
+		ai_chance = { base = 100 }
+		add_stability = 0.01
+		custom_effect_tooltip = AUH_academy_admitted_tt
+		hidden_effect = {
+			news_event = { id = auh_clock.441 days = 3 }
+		}
+	}
+}
+
+news_event = {
+	id = auh_clock.441
+	title = auh_clock.441.t
+	desc = {
+		text = auh_clock.441.d_admitted
+		trigger = {
+			has_global_flag = AUH_the_painter_was_admitted
+		}
+	}
+
+	desc = {
+		text = auh_clock.441.d_refused
+		trigger = {
+			NOT = {
+				has_global_flag = AUH_the_painter_was_admitted
+			}
+		}
+	}
+	picture = GFX_news_event_009
+	is_triggered_only = yes
+	major = no
+	option = {
+		name = auh_clock.441.a
+		trigger = {
+			has_global_flag = AUH_the_painter_was_admitted
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = auh_clock.441.b
+		trigger = {
+			NOT = {
+				has_global_flag = AUH_the_painter_was_admitted
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = auh_clock.400
+	title = auh_clock.400.t
+	desc = auh_clock.400.d
+	picture = GFX_report_event_german_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.400.a
+		ai_chance = { base = 60 }
+		add_political_power = -30
+		add_stability = -0.02
+		add_to_variable = { var = AUH_g_pangerman_strength value = 10 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_pangermans_louder_tt
+		add_to_variable = { var = AUS_support value = 2 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_up_tt
+	}
+
+	option = {
+		name = auh_clock.400.b
+		ai_chance = { base = 40 }
+		add_political_power = -60
+		subtract_from_variable = { var = AUH_g_pangerman_strength value = 10 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_pangermans_quieter_tt
+		hidden_effect = { AUH_coercion_act = yes }
+		custom_effect_tooltip = AUH_nat_coercion_up_tt
+		subtract_from_variable = { var = AUS_support value = 3 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_down_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.401
+	title = auh_clock.401.t
+	desc = auh_clock.401.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.401.a
+		ai_chance = { base = 60 }
+		add_political_power = -50
+		add_stability = 0.03
+		subtract_from_variable = { var = AUH_g_pangerman_strength value = 15 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_pangermans_quieter_tt
+		add_to_variable = { var = AUH_house_prestige value = 3 }
+		clamp_variable = {
+			var = AUH_house_prestige
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_prestige_up_tt
+		add_to_variable = { var = SLO_support value = 2 }
+		clamp_variable = {
+			var = SLO_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_SLO_up_tt
+	}
+
+	option = {
+		name = auh_clock.401.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_stability = -0.03
+		add_to_variable = { var = AUH_g_pangerman_strength value = 5 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_pangermans_louder_tt
+		hidden_effect = { AUH_coercion_act = yes }
+		custom_effect_tooltip = AUH_nat_coercion_up_tt
+		add_to_variable = { var = AUH_scar_SLV value = 2 }
+		custom_effect_tooltip = AUH_g_the_scar_of_the_crown_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.402
+	title = auh_clock.402.t
+	desc = auh_clock.402.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.402.a
+		ai_chance = { base = 65 }
+		add_political_power = -40
+		add_stability = 0.04
+		add_to_variable = { var = AUS_support value = 3 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_up_tt
+		add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+		clamp_variable = {
+			var = AUH_gemeinsamkeit
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		add_timed_idea = {
+			idea = AUH_g_the_christian_social_machine
+			days = 730
+		}
+	}
+
+	option = {
+		name = auh_clock.402.b
+		ai_chance = { base = 35 }
+		add_political_power = 50
+		add_to_variable = { var = AUH_g_pangerman_strength value = 10 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_pangermans_louder_tt
+		subtract_from_variable = { var = AUS_support value = 2 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_down_tt
+		GER = {
+			add_opinion_modifier = { target = AUH modifier = medium_decrease }
+		}
+	}
+}
+
+country_event = {
+	id = auh_clock.403
+	title = auh_clock.403.t
+	desc = auh_clock.403.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.403.a
+		ai_chance = { base = 55 }
+		add_political_power = -60
+		add_to_variable = { var = AUS_support value = 3 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_up_tt
+		add_timed_idea = {
+			idea = AUH_g_the_offices_are_german
+			days = 730
+		}
+		subtract_from_variable = { var = AUH_gemeinsamkeit value = 3 }
+		clamp_variable = {
+			var = AUH_gemeinsamkeit
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_eco_gemein_down_tt
+	}
+
+	option = {
+		name = auh_clock.403.b
+		ai_chance = { base = 45 }
+		add_political_power = -30
+		69 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = AUHFX_the_german_schools_bonus
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+		hidden_effect = { AUH_coercion_act = yes }
+		custom_effect_tooltip = AUH_nat_coercion_up_tt
+		subtract_from_variable = { var = CZE_support value = 3 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_down_tt
+		add_to_variable = { var = AUH_scar_CZE value = 3 }
+		custom_effect_tooltip = AUH_g_the_scar_of_the_crown_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.404
+	title = auh_clock.404.t
+	desc = auh_clock.404.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.404.a
+		ai_chance = { base = 60 }
+		add_political_power = -50
+		add_stability = 0.04
+		add_to_variable = { var = AUH_g_german_question value = 10 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_question_dial_tt
+		add_to_variable = { var = AUH_house_prestige value = 3 }
+		clamp_variable = {
+			var = AUH_house_prestige
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_prestige_up_tt
+		add_ideas = AUH_g_the_concordat_guarantee
+	}
+
+	option = {
+		name = auh_clock.404.b
+		ai_chance = { base = 40 }
+		add_political_power = -20
+		add_to_variable = { var = AUH_treasury_strain value = 4 }
+		custom_effect_tooltip = AUH_eco_strain_up_4_tt
+		add_to_variable = { var = AUH_g_german_question value = 5 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_question_dial_tt
+		if = {
+			limit = { country_exists = BAY }
+			BAY = {
+				add_opinion_modifier = { target = AUH modifier = medium_increase }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = auh_clock.405
+	title = auh_clock.405.t
+	desc = auh_clock.405.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.405.a
+		ai_chance = { base = 60 }
+		add_political_power = -40
+		add_war_support = 0.04
+		add_to_variable = { var = AUH_g_german_question value = 10 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_question_dial_tt
+		add_named_threat = { threat = 2 name = AUH_g_threat_the_old_right }
+		add_opinion_modifier = { target = GER modifier = large_decrease }
+	}
+
+	option = {
+		name = auh_clock.405.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_stability = 0.02
+		subtract_from_variable = { var = AUH_g_german_question value = 5 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_question_dial_tt
+		add_to_variable = { var = AUH_house_prestige value = 2 }
+		clamp_variable = {
+			var = AUH_house_prestige
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_prestige_up_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.406
+	title = auh_clock.406.t
+	desc = auh_clock.406.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.406.a
+		ai_chance = { base = 60 }
+		add_political_power = -40
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_to_variable = { var = AUH_house_prestige value = 4 }
+		clamp_variable = {
+			var = AUH_house_prestige
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_prestige_up_tt
+		add_ideas = AUH_g_crowned_at_frankfurt
+		add_to_variable = { var = AUS_support value = 3 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_up_tt
+	}
+
+	option = {
+		name = auh_clock.406.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_ideas = AUH_g_crowned_at_vienna
+		add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+		clamp_variable = {
+			var = AUH_gemeinsamkeit
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+		add_to_variable = { var = HUN_support value = 3 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_HUN_up_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.407
+	title = auh_clock.407.t
+	desc = auh_clock.407.d
+	picture = GFX_report_event_crowd_in_prague
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.407.a
+		ai_chance = { base = 40 }
+		add_political_power = -75
+		add_to_variable = { var = CZE_support value = 3 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_up_tt
+		add_to_variable = { var = CRO_support value = 3 }
+		clamp_variable = {
+			var = CRO_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CRO_up_tt
+		add_to_variable = { var = SLV_support value = 3 }
+		clamp_variable = {
+			var = SLV_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_SLV_up_tt
+		subtract_from_variable = { var = AUS_support value = 3 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_AUS_down_tt
+		add_ideas = AUH_g_the_promise_to_the_slavs
+		hidden_effect = { AUH_nat_reckoning = yes }
+	}
+
+	option = {
+		name = auh_clock.407.b
+		ai_chance = { base = 60 }
+		add_political_power = 50
+		add_war_support = 0.04
+		hidden_effect = { AUH_coercion_act = yes }
+		custom_effect_tooltip = AUH_nat_coercion_up_tt
+		add_to_variable = { var = AUH_scar_CZE value = 3 }
+		add_to_variable = { var = AUH_scar_CRO value = 3 }
+		add_to_variable = { var = AUH_scar_SER value = 3 }
+		custom_effect_tooltip = AUH_g_the_slavs_are_abandoned_tt
+		add_equipment_to_stockpile = {
+			type = early_infantry_equipment_1908
+			amount = 2000
+			producer = AUH
+		}
+		army_experience = 15
+		hidden_effect = { AUH_nat_reckoning = yes }
+	}
+}
+
+country_event = {
+	id = auh_clock.410
+	title = auh_clock.410.t
+	desc = auh_clock.410.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.410.a
+		ai_chance = { base = 55 }
+		add_political_power = -40
+		add_to_variable = { var = AUH_treasury_strain value = 4 }
+		custom_effect_tooltip = AUH_eco_strain_up_4_tt
+		add_ideas = AUH_g_the_schedule_is_ours
+		add_to_variable = { var = AUH_g_german_question value = 10 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_question_dial_tt
+	}
+
+	option = {
+		name = auh_clock.410.b
+		ai_chance = { base = 45 }
+		add_political_power = 30
+		subtract_from_variable = { var = AUH_treasury_strain value = 3 }
+		clamp_variable = {
+			var = AUH_treasury_strain
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_eco_strain_down_3_tt
+		add_ideas = AUH_g_the_schedule_is_theirs
+		subtract_from_variable = { var = AUH_g_german_question value = 5 }
+		AUH_g_question_dial = yes
+		custom_effect_tooltip = AUH_g_question_dial_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.411
+	title = auh_clock.411.t
+	desc = auh_clock.411.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.411.a
+		ai_chance = { base = 55 }
+		add_political_power = -50
+		add_stability = 0.03
+		add_to_variable = { var = AUH_quote value = 1 }
+		clamp_variable = {
+			var = AUH_quote
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_eco_quote_up_tt
+		4 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = auh_clock.411.b
+		ai_chance = { base = 45 }
+		add_political_power = 20
+		subtract_from_variable = { var = AUH_treasury_strain value = 4 }
+		clamp_variable = {
+			var = AUH_treasury_strain
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_eco_strain_down_4_tt
+		subtract_from_variable = { var = HUN_support value = 2 }
+		clamp_variable = {
+			var = HUN_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_HUN_down_tt
+		GER = {
+			add_opinion_modifier = { target = AUH modifier = medium_increase }
+		}
+	}
+}
+
+country_event = {
+	id = auh_clock.412
+	title = auh_clock.412.t
+	desc = auh_clock.412.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.412.a
+		trigger = { has_idea = AUH_g_vienna_holds_the_chair }
+		ai_chance = { base = 100 }
+		add_political_power = 60
+		add_war_support = 0.05
+		add_to_variable = { var = AUH_house_prestige value = 4 }
+		clamp_variable = {
+			var = AUH_house_prestige
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_prestige_up_tt
+		add_tech_bonus = {
+			name = AUHFX_the_union_chair_bonus
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
+		add_equipment_to_stockpile = {
+			type = early_infantry_equipment_1908
+			amount = 3000
+			producer = AUH
+		}
+	}
+
+	option = {
+		name = auh_clock.412.b
+		trigger = {
+			NOT = { has_idea = AUH_g_vienna_holds_the_chair }
+		}
+		ai_chance = { base = 100 }
+		add_political_power = -50
+		add_stability = -0.04
+		AUH_house_prestige_loss = yes
+		custom_effect_tooltip = AUH_g_prestige_down_tt
+		add_to_variable = { var = AUH_treasury_strain value = 4 }
+		custom_effect_tooltip = AUH_eco_strain_up_4_tt
+		GER = {
+			add_opinion_modifier = { target = AUH modifier = large_increase }
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 200
+			producer = AUH
+		}
+	}
+}
+
+country_event = {
+	id = auh_clock.415
+	title = auh_clock.415.t
+	desc = auh_clock.415.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = {
+		has_country_flag = AUH_g_partner_sought
+		NOT = { has_country_flag = AUH_g_partner_secured }
+		NOT = { has_country_flag = AUH_dnc_era_end }
+	}
+
+	option = {
+		name = auh_clock.415.a
+		trigger = { country_exists = RUS }
+		ai_chance = { base = 55 }
+		set_country_flag = AUH_g_partner_secured
+		set_country_flag = AUH_g_partner_petersburg
+		add_ideas = AUH_g_the_understanding_with_petersburg
+		add_opinion_modifier = { target = RUS modifier = large_increase }
+		RUS = {
+			add_opinion_modifier = { target = AUH modifier = large_increase }
+		}
+		diplomatic_relation = {
+			country = RUS
+			relation = non_aggression_pact
+		}
+		subtract_from_variable = { var = AUH_russia_anger value = 4 }
+		clamp_variable = {
+			var = AUH_russia_anger
+			min = 0
+			max = 20
+		}
+		custom_effect_tooltip = AUH_g_petersburg_is_quieted_tt
+		subtract_from_variable = { var = SER_support value = 3 }
+		clamp_variable = {
+			var = SER_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_SER_down_tt
+		add_political_power = -50
+		if = {
+			limit = { country_exists = GER }
+			add_opinion_modifier = { target = GER modifier = medium_decrease }
+		}
+		add_named_threat = {
+			threat = 2
+			name = AUH_g_threat_the_partner_at_berlins_back
+		}
+	}
+
+	option = {
+		name = auh_clock.415.b
+		trigger = { country_exists = FRA }
+		ai_chance = { base = 35 }
+		set_country_flag = AUH_g_partner_secured
+		set_country_flag = AUH_g_partner_paris
+		add_ideas = AUH_g_the_understanding_with_paris
+		add_opinion_modifier = { target = FRA modifier = large_increase }
+		FRA = {
+			add_opinion_modifier = { target = AUH modifier = large_increase }
+		}
+		diplomatic_relation = {
+			country = FRA
+			relation = non_aggression_pact
+		}
+		subtract_from_variable = { var = AUH_treasury_strain value = 4 }
+		clamp_variable = {
+			var = AUH_treasury_strain
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_the_paris_bourse_opens_tt
+		subtract_from_variable = { var = ITA_support value = 3 }
+		clamp_variable = {
+			var = ITA_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_ITA_down_tt
+		add_political_power = -50
+		if = {
+			limit = { country_exists = GER }
+			add_opinion_modifier = { target = GER modifier = large_decrease }
+		}
+		add_named_threat = {
+			threat = 2
+			name = AUH_g_threat_the_partner_at_berlins_back
+		}
+	}
+
+	option = {
+		name = auh_clock.415.c
+		ai_chance = { base = 10 }
+		add_political_power = 50
+		custom_effect_tooltip = AUH_g_the_staff_waits_tt
+		country_event = { id = auh_clock.415 days = 400 }
+	}
+}
+
+country_event = {
+	id = auh_clock.416
+	title = auh_clock.416.t
+	desc = auh_clock.416.d
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = auh_clock.416.a
+		ai_chance = { base = 65 }
+		army_experience = 25
+		add_command_power = 50
+		add_war_support = 0.05
+		add_to_variable = { var = AUH_conrad_memoranda value = 1 }
+		clamp_variable = {
+			var = AUH_conrad_memoranda
+			min = 0
+			max = 20
+		}
+		custom_effect_tooltip = AUH_kf_memorandum_filed_tt
+	}
+
+	option = {
+		name = auh_clock.416.b
+		ai_chance = { base = 35 }
+		add_political_power = -50
+		set_country_flag = {
+			flag = AUH_window_berlin_open
+			days = 270
+			value = 1
+		}
+		custom_effect_tooltip = AUH_g_the_window_at_berlin_tt
+		add_to_variable = { var = AUH_treasury_strain value = 2 }
+		clamp_variable = {
+			var = AUH_treasury_strain
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_the_estimates_are_doubled_tt
+	}
+}
+
+country_event = {
+	id = auh_clock.417
+	title = auh_clock.417.t
+	desc = auh_clock.417.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = AUH_dnc_era_end }
+	}
+
+	option = {
+		name = auh_clock.417.a
+		ai_chance = { base = 45 }
+		add_political_power = -100
+		set_country_flag = AUH_g_los_von_rom_broken
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+		if = {
+			limit = { has_country_flag = AUH_dnc_path_belvedere }
+			subtract_from_variable = { var = AUS_support value = 4 }
+			custom_effect_tooltip = AUH_g_the_belvedere_is_heavy_handed_tt
+		}
+		else = {
+			subtract_from_variable = { var = AUS_support value = 3 }
+		}
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_m_tt_aus_down
+		add_stability = -0.03
+		custom_effect_tooltip = AUH_g_schoenerer_is_prosecuted_tt
+	}
+
+	option = {
+		name = auh_clock.417.b
+		ai_chance = { base = 35 }
+		add_political_power = -75
+		set_country_flag = AUH_g_los_von_rom_bought
+		add_to_variable = { var = AUS_support value = 3 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_m_tt_aus_up
+		subtract_from_variable = { var = CZE_support value = 2 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_down_tt
+		add_to_variable = { var = AUH_treasury_strain value = 2 }
+		clamp_variable = {
+			var = AUH_treasury_strain
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_g_the_estimates_are_doubled_tt
+		custom_effect_tooltip = AUH_g_schoenerer_is_outbid_tt
+	}
+
+	option = {
+		name = auh_clock.417.c
+		ai_chance = { base = 20 }
+		add_political_power = 25
+		AUH_g_the_los_von_rom_answers = yes
+	}
+}
+
+country_event = {
+	id = auh_clock.418
+	title = auh_clock.418.t
+	desc = auh_clock.418.d
+	picture = GFX_report_event_crowd_in_prague
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.418.a
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		AUH_g_the_slav_reckoning_deepens = yes
+	}
+
+	option = {
+		name = auh_clock.418.b
+		ai_chance = { base = 35 }
+		AUH_g_the_slavs_are_bought_a_year = yes
+		country_event = { id = auh_clock.419 days = 365 }
+	}
+
+	option = {
+		name = auh_clock.418.c
+		ai_chance = { base = 20 }
+		add_manpower = -10000
+		add_stability = 0.03
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+		subtract_from_variable = { var = CZE_support value = 2 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_down_tt
+		subtract_from_variable = { var = CRO_support value = 2 }
+		clamp_variable = {
+			var = CRO_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CRO_down_tt
+		custom_effect_tooltip = AUH_g_the_garrisons_are_doubled_tt
+		AUH_g_the_register_hands_off = yes
+	}
+}
+
+country_event = {
+	id = auh_clock.419
+	title = auh_clock.419.t
+	desc = auh_clock.419.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.419.a
+		ai_chance = { base = 100 }
+		AUH_g_the_slav_reckoning_deepens = yes
+	}
+}
+
+country_event = {
+	id = auh_clock.420
+	title = auh_clock.420.t
+	desc = auh_clock.420.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.420.a
+		ai_chance = { base = 35 }
+		set_country_flag = AUH_g_bohemia_is_prorogued
+		subtract_from_variable = { var = CZE_support value = 4 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_down_tt
+		add_to_variable = { var = AUH_scar_CZE value = 3 }
+		custom_effect_tooltip = AUH_g_the_scars_of_the_crown_tt
+		AUH_nat_concede_POL_3 = yes
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+		add_political_power = 50
+		AUH_g_the_register_hands_off = yes
+	}
+
+	option = {
+		name = auh_clock.420.b
+		ai_chance = { base = 35 }
+		set_country_flag = AUH_g_galicia_is_prorogued
+		subtract_from_variable = { var = POL_support value = 4 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_POL_down_tt
+		subtract_from_variable = { var = UKR_support value = 3 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_UKR_down_tt
+		add_to_variable = { var = AUH_scar_POL value = 3 }
+		custom_effect_tooltip = AUH_g_the_scars_of_the_crown_tt
+		AUH_nat_concede_CZE_3 = yes
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+		add_political_power = 50
+		AUH_g_the_register_hands_off = yes
+	}
+
+	option = {
+		name = auh_clock.420.c
+		ai_chance = { base = 30 }
+		set_country_flag = AUH_g_both_diets_dissolved
+		subtract_from_variable = { var = CZE_support value = 4 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_down_tt
+		subtract_from_variable = { var = POL_support value = 4 }
+		clamp_variable = {
+			var = POL_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_POL_down_tt
+		subtract_from_variable = { var = UKR_support value = 3 }
+		clamp_variable = {
+			var = UKR_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_UKR_down_tt
+		set_temp_variable = { AUH_g_scar_step = 3 }
+		AUH_g_the_slav_scars_deepen = yes
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+		add_political_power = 75
+		add_stability = -0.05
+		AUH_g_the_register_hands_off = yes
+	}
+}
+
+country_event = {
+	id = auh_clock.421
+	title = auh_clock.421.t
+	desc = auh_clock.421.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.421.a
+		ai_chance = { base = 60 }
+		add_manpower = -15000
+		9 = {
+			create_unit = {
+				division = "name = \"k.u.k. Sicherheitsdivision Boehmen\" division_template = \"Sicherheitsdivision\" start_experience_factor = 0.3"
+				owner = AUH
+			}
+		}
+		45 = {
+			create_unit = {
+				division = "name = \"k.u.k. Sicherheitsdivision Agram\" division_template = \"Sicherheitsdivision\" start_experience_factor = 0.3"
+				owner = AUH
+			}
+		}
+		43 = {
+			create_unit = {
+				division = "name = \"k.u.k. Sicherheitsdivision Ofen\" division_template = \"Sicherheitsdivision\" start_experience_factor = 0.3"
+				owner = AUH
+			}
+		}
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+		custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+		custom_effect_tooltip = AUH_g_the_garrisons_are_doubled_tt
+	}
+
+	option = {
+		name = auh_clock.421.b
+		ai_chance = { base = 40 }
+		add_manpower = 30000
+		army_experience = 25
+		add_command_power = 25
+		subtract_from_variable = { var = CZE_support value = 3 }
+		clamp_variable = {
+			var = CZE_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CZE_down_tt
+		subtract_from_variable = { var = CRO_support value = 3 }
+		clamp_variable = {
+			var = CRO_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CRO_down_tt
+		subtract_from_variable = { var = SLO_support value = 3 }
+		clamp_variable = {
+			var = SLO_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_SLO_down_tt
+		custom_effect_tooltip = AUH_g_the_provinces_are_left_alone_tt
+		AUH_g_the_register_hands_off = yes
+	}
+}
+
+country_event = {
+	id = auh_clock.422
+	title = auh_clock.422.t
+	desc = auh_clock.422.d
+	picture = GFX_report_event_german_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = auh_clock.422.a
+		ai_chance = { base = 60 }
+		add_political_power = 50
+		add_to_variable = { var = AUS_support value = 4 }
+		clamp_variable = {
+			var = AUS_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_m_tt_aus_up
+		set_country_flag = AUH_g_styled_emperor_of_the_germans
+	}
+
+	option = {
+		name = auh_clock.422.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_to_variable = { var = AUH_house_prestige value = 4 }
+		clamp_variable = {
+			var = AUH_house_prestige
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_kf_prestige_up_tt
+		add_to_variable = { var = CRO_support value = 2 }
+		clamp_variable = {
+			var = CRO_support
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = AUH_nat_CRO_up_tt
+		set_country_flag = AUH_g_styled_roman_emperor
+	}
+}
