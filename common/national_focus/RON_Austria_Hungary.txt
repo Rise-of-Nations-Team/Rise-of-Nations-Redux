@@ -78,6 +78,48 @@ focus_tree = {
 			set_variable = { AUH_county_resistance = 0 }
 			set_variable = { AUH_forgery_ledger = 0 }
 			set_variable = { AUH_belvedere_dossier = 0 }
+			set_variable = { AUH_cadastre_charges = 0 }
+			set_variable = { AUH_house_prestige = 60 }
+			set_variable = { AUH_register_heat = 0 }
+			set_variable = { AUH_register_erosion = 1 }
+			set_variable = { AUH_coercion_ledger = 0 }
+			set_variable = { AUH_coercion_clean_months = 0 }
+			set_variable = { AUH_scar_AUS = 0 }
+			set_variable = { AUH_scar_HUN = 0 }
+			set_variable = { AUH_scar_CZE = 0 }
+			set_variable = { AUH_scar_POL = 0 }
+			set_variable = { AUH_scar_UKR = 0 }
+			set_variable = { AUH_scar_ROM = 0 }
+			set_variable = { AUH_scar_CRO = 0 }
+			set_variable = { AUH_scar_SER = 0 }
+			set_variable = { AUH_scar_BOS = 0 }
+			set_variable = { AUH_scar_SLV = 0 }
+			set_variable = { AUH_scar_ITA = 0 }
+			set_variable = { AUH_scar_SLO = 0 }
+			set_variable = { AUH_concede_uses_AUS = 0 }
+			set_variable = { AUH_concede_uses_HUN = 0 }
+			set_variable = { AUH_concede_uses_CZE = 0 }
+			set_variable = { AUH_concede_uses_POL = 0 }
+			set_variable = { AUH_concede_uses_UKR = 0 }
+			set_variable = { AUH_concede_uses_ROM = 0 }
+			set_variable = { AUH_concede_uses_CRO = 0 }
+			set_variable = { AUH_concede_uses_SER = 0 }
+			set_variable = { AUH_concede_uses_BOS = 0 }
+			set_variable = { AUH_concede_uses_SLV = 0 }
+			set_variable = { AUH_concede_uses_ITA = 0 }
+			set_variable = { AUH_concede_uses_SLO = 0 }
+			set_variable = { AUH_concede_cost_AUS = 75 }
+			set_variable = { AUH_concede_cost_HUN = 75 }
+			set_variable = { AUH_concede_cost_CZE = 70 }
+			set_variable = { AUH_concede_cost_POL = 55 }
+			set_variable = { AUH_concede_cost_UKR = 45 }
+			set_variable = { AUH_concede_cost_ROM = 55 }
+			set_variable = { AUH_concede_cost_CRO = 55 }
+			set_variable = { AUH_concede_cost_SER = 45 }
+			set_variable = { AUH_concede_cost_BOS = 45 }
+			set_variable = { AUH_concede_cost_SLV = 45 }
+			set_variable = { AUH_concede_cost_ITA = 45 }
+			set_variable = { AUH_concede_cost_SLO = 45 }
 			if = {
 				limit = {
 					check_variable = {
@@ -359,6 +401,7 @@ focus_tree = {
 			add_war_support = -0.05
 			add_stability = -0.05
 			custom_effect_tooltip = AUH_a_issue_an_ordinance_tt
+			hidden_effect = { AUH_coercion_act = yes }
 		}
 	}
 
@@ -415,6 +458,22 @@ focus_tree = {
 				idea = AUH_a_the_money_that_cools
 				days = 730
 			}
+			72 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = AUH_a_the_waterways_act_carried
+			custom_effect_tooltip = AUH_a_the_four_waterways_tt
 			add_tech_bonus = {
 				name = AUH_a_public_works_bonus
 				bonus = 0.75
@@ -1236,6 +1295,7 @@ focus_tree = {
 				category = military_police_tech
 			}
 			custom_effect_tooltip = AUH_a_proclaim_the_exception_tt
+			hidden_effect = { AUH_coercion_act = yes }
 		}
 	}
 
@@ -2277,6 +2337,9 @@ focus_tree = {
 				category = air_equipment
 			}
 			set_country_flag = AUH_air_the_credits_voted
+			set_country_flag = AUH_air_lohner_available
+			set_country_flag = AUH_air_the_motor_airship_society
+			custom_effect_tooltip = AUH_air_the_motor_airship_society_tt
 			add_to_variable = { HUN_support = -10 }
 			clamp_variable = {
 				var = HUN_support
@@ -3281,6 +3344,22 @@ focus_tree = {
 			army_experience = 25
 			add_ideas = AUH_arm_the_staff_of_the_administrator
 			if = {
+				limit = {
+					has_character = AUH_franz_xaver_von_schonaich
+				}
+				add_advisor_role = {
+					character = AUH_franz_xaver_von_schonaich
+					advisor = {
+						slot = political_advisor
+						cost = 100
+						idea_token = AUH_arm_schonaich_at_the_ministry
+						traits = { armaments_organizer silent_mule }
+					}
+					activate = no
+				}
+				custom_effect_tooltip = AUH_arm_schonaich_at_the_ministry_tt
+			}
+			if = {
 				limit = { has_character = AUH_oskar_potiorek }
 				custom_effect_tooltip = AUH_arm_potiorek_tt
 				add_advisor_role = {
@@ -3529,6 +3608,9 @@ focus_tree = {
 				producer = AUH
 			}
 			set_country_flag = AUH_arm_artilleriearsenal_wien_unlocked
+			set_country_flag = AUH_arm_the_steel_bronze_retained
+			4 = { add_extra_state_shared_building_slots = 1 }
+			custom_effect_tooltip = AUH_arm_the_arsenal_pours_tt
 			add_to_variable = { var = AUS_support value = 3 }
 			clamp_variable = {
 				var = AUS_support
@@ -3592,6 +3674,7 @@ focus_tree = {
 				add_resource = { type = steel amount = 4 }
 			}
 			set_country_flag = AUH_arm_skoda_unlocked
+			custom_effect_tooltip = AUH_arm_karl_skoda_tt
 			set_country_flag = AUH_arm_witkowitz_unlocked
 			add_to_variable = { var = CZE_support value = 5 }
 			clamp_variable = {
@@ -3910,6 +3993,27 @@ focus_tree = {
 					NOT = { has_country_flag = AUH_dnc_path_sword }
 				}
 				add_ideas = AUH_arm_the_alpine_barrier
+				867 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = AUH_arm_the_seven_communes_tt
+				if = {
+					limit = {
+						has_completed_focus = AUHDNC_arm_the_heirs_candidate
+					}
+					add_command_power = 25
+					add_war_support = 0.03
+					custom_effect_tooltip = AUH_arm_conrad_approves_the_works_tt
+				}
+				else = { add_political_power = 25 }
 				add_tech_bonus = {
 					name = AUH_tb_the_works_of_the_passes
 					bonus = 1.0
@@ -4076,6 +4180,19 @@ focus_tree = {
 				uses = 1
 				category = cat_fortification
 			}
+			89 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			add_victory_points = { province = 3434 value = 5 }
+			custom_effect_tooltip = AUH_arm_the_ring_of_przemysl_tt
 			if = {
 				limit = {
 					has_character = AUH_hermann_kusmanek_von_burgneustadten
@@ -6314,6 +6431,16 @@ focus_tree = {
 			add_ideas = AUH_eco_the_capital_offensive
 			add_political_power = 50
 			set_country_flag = AUH_dnc_eco_southern_credit
+			869 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_opinion_modifier = { target = OTT modifier = medium_increase }
+			set_country_flag = AUH_eco_the_orient_line_financed
+			custom_effect_tooltip = AUH_eco_the_laenderbank_tt
 			if = {
 				limit = { owns_state = 104 }
 				104 = { add_extra_state_shared_building_slots = 1 }
@@ -6401,6 +6528,15 @@ focus_tree = {
 				category = excavation_tech
 			}
 			add_ideas = AUH_eco_the_field_of_the_carpathians
+			4 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = AUH_eco_the_consortium_partner
+			custom_effect_tooltip = AUH_eco_the_creditanstalt_tt
 			add_political_power = 50
 			add_stability = 0.05
 			91 = {
@@ -6521,6 +6657,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_eco_quote_down_tt
 			custom_effect_tooltip = AUH_eco_derschatta_unlocked_tt
+			set_country_flag = AUH_eco_wurmb_directorate
+			custom_effect_tooltip = AUH_eco_wurmb_directorate_tt
 			country_event = { id = auh_dnc.701 days = 120 }
 			country_event = { id = auh_dnc.702 days = 500 }
 			add_ai_strategy = {
@@ -6658,6 +6796,24 @@ focus_tree = {
 				category = construction_tech
 			}
 			add_ideas = AUH_eco_the_white_coal
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_dynamic_modifier = { modifier = AUH_eco_the_industrial_estate }
+			}
+			set_country_flag = AUH_r_electrical_works
+			custom_effect_tooltip = AUH_eco_the_works_at_simmering_tt
+			add_to_variable = { var = AUS_support value = 1 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nat_AUS_up_tt
 			add_political_power = 50
 			1107 = {
 				add_dynamic_modifier = { modifier = AUH_eco_the_industrial_estate }
@@ -6911,6 +7067,11 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			43 = {
+				add_dynamic_modifier = { modifier = AUH_eco_the_industrial_estate }
+			}
+			set_country_flag = AUH_weiss_manfred_unlocked
+			custom_effect_tooltip = AUH_eco_kossuth_industry_act_tt
 			if = {
 				limit = { has_country_flag = AUH_dnc_path_magyar }
 				154 = {
@@ -7083,6 +7244,21 @@ focus_tree = {
 			custom_effect_tooltip = AUH_eco_AUS_down_tt
 			add_ideas = AUH_eco_the_single_sick_fund
 			custom_effect_tooltip = AUH_eco_the_workshop_clause_tt
+			subtract_from_variable = { var = AUH_strike_pressure value = 10 }
+			clamp_variable = {
+				var = AUH_strike_pressure
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_strike_pressure_down_tt
+			72 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = AUH_eco_the_eight_hours_carried
 			if = {
 				limit = { has_idea = AUH_eco_the_pit_stays_open }
 				swap_ideas = {
@@ -7136,6 +7312,16 @@ focus_tree = {
 			add_war_support = 0.05
 			add_political_power = 50
 			add_ideas = AUH_eco_the_pit_stays_open
+			74 = {
+				add_dynamic_modifier = { modifier = AUH_eco_the_industrial_estate }
+			}
+			add_tech_bonus = {
+				name = AUH_eco_the_ostrau_karwin_bonus
+				bonus = 1.0
+				uses = 1
+				category = excavation_tech
+			}
+			custom_effect_tooltip = AUH_eco_the_black_country_tt
 			add_stability = -0.05
 			subtract_from_variable = { var = CZE_support value = 8 }
 			clamp_variable = {
@@ -7217,6 +7403,18 @@ focus_tree = {
 				add_dynamic_modifier = { modifier = AUH_eco_the_quay_is_finished }
 			}
 			add_ideas = AUH_eco_the_emigrant_traffic
+			1066 = {
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = { modifier = AUH_eco_the_quay_is_finished }
+			}
+			custom_effect_tooltip = AUH_eco_the_carpathia_at_the_molo_tt
+			add_to_variable = { var = HUN_support value = 1 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nat_HUN_up_tt
 			add_opinion_modifier = { target = ENG modifier = medium_increase }
 			add_opinion_modifier = { target = OTT modifier = medium_increase }
 			if = {
@@ -7360,6 +7558,14 @@ focus_tree = {
 				add_political_power = -25
 			}
 			custom_effect_tooltip = AUH_eco_daranyi_unlocked_tt
+			808 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = AUH_eco_the_passage_is_not_sold
 			add_ai_strategy = {
 				type = build_building
 				id = industrial_complex
@@ -7390,6 +7596,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_eco_the_estimate_that_balances
+			custom_effect_tooltip = AUH_eco_boehm_bawerk_at_the_treasury_tt
 			if = {
 				limit = {
 					check_variable = {
@@ -7978,6 +8185,8 @@ focus_tree = {
 			}
 			set_country_flag = AUH_h_company_fegyver_es_gepgyar
 			custom_effect_tooltip = AUH_h_company_fegyver_es_gepgyar_tt
+			set_country_flag = AUH_h_advisor_frommer
+			custom_effect_tooltip = AUH_h_frommer_at_the_works_tt
 			if = {
 				limit = {
 					NOT = {
@@ -9003,6 +9212,7 @@ focus_tree = {
 					value = 30
 				}
 			}
+			hidden_effect = { AUH_coercion_act = yes }
 			country_event = { id = auh_dnc.400 days = 3 }
 			country_event = { id = auh_dnc.401 days = 365 }
 		}
@@ -9084,6 +9294,7 @@ focus_tree = {
 			}
 			multiply_variable = { AUH_m_exception_opinion = -0.05 }
 			custom_effect_tooltip = AUH_m_exception_counter_tt
+			hidden_effect = { AUH_coercion_act = yes }
 			country_event = { id = auh_dnc.408 days = 20 }
 		}
 	}
@@ -9206,6 +9417,7 @@ focus_tree = {
 			multiply_variable = { AUH_m_exception_opinion = -0.05 }
 			custom_effect_tooltip = AUH_m_exception_counter_tt
 			custom_effect_tooltip = AUH_m_countdown_tt
+			hidden_effect = { AUH_coercion_act = yes }
 			country_event = { id = auh_dnc.413 days = 730 }
 		}
 	}
@@ -10533,6 +10745,7 @@ focus_tree = {
 				add_idea = AUH_m_the_army_that_had_its_war
 			}
 			set_country_flag = AUH_m_the_campaign_opened
+			hidden_effect = { AUH_coercion_act = yes }
 			create_wargoal = { type = annex_everything target = SER }
 			if = {
 				limit = { country_exists = MNT }
@@ -14732,6 +14945,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				country_event = { id = auh_dnc.417 days = 5 }
+				AUH_coercion_act = yes
 			}
 		}
 	}
@@ -15839,6 +16053,8 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			set_country_flag = AUH_b_este_millions
+			custom_effect_tooltip = AUH_b_the_este_millions_tt
 			add_to_variable = { var = AUH_belvedere_dossier value = 4 }
 			clamp_variable = {
 				var = AUH_belvedere_dossier
@@ -16211,6 +16427,136 @@ focus_tree = {
 				custom_effect_tooltip = AUH_clock_franks_charter_tt
 			}
 			else = { add_stability = 0.03 }
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_moravian_lesson
+		x = 157
+		y = 7
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_goal_constitutional_guarantees
+		cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_the_rolls_exist_tt
+				OR = {
+					has_country_flag = AUH_cadastre_precedent_set
+					has_country_flag = AUH_a_census_taken
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				check_variable = {
+					var = AUH_nat_restless_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			add_to_variable = { var = AUH_cadastre_charges value = 1 }
+			clamp_variable = {
+				var = AUH_cadastre_charges
+				min = 0
+				max = 4
+			}
+			custom_effect_tooltip = AUH_x_cadastre_charge_tt
+			add_to_variable = { var = AUH_scar_CZE value = 5 }
+			custom_effect_tooltip = AUH_x_scar_CZE_tt
+			add_to_variable = { var = CZE_support value = 3 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nat_CZE_up_tt
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nat_AUS_up_tt
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			set_country_flag = AUH_x_moravian_lesson_learned
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_bukovina_lesson
+		x = 155
+		y = 9
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_vote
+		cost = 3.5
+		available = {
+			date > 1909.1.1
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_the_rolls_exist_tt
+				OR = {
+					has_country_flag = AUH_cadastre_precedent_set
+					has_country_flag = AUH_a_census_taken
+					has_country_flag = AUH_x_moravian_lesson_learned
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				check_variable = {
+					var = AUH_nat_restless_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.02
+			add_to_variable = { var = AUH_cadastre_charges value = 1 }
+			clamp_variable = {
+				var = AUH_cadastre_charges
+				min = 0
+				max = 4
+			}
+			custom_effect_tooltip = AUH_x_cadastre_charge_tt
+			add_to_variable = { var = AUH_scar_UKR value = 5 }
+			custom_effect_tooltip = AUH_x_scar_UKR_tt
+			add_to_variable = { var = UKR_support value = 3 }
+			clamp_variable = {
+				var = UKR_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nat_UKR_up_tt
+			add_to_variable = { var = ROM_support value = 2 }
+			clamp_variable = {
+				var = ROM_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nat_ROM_up_tt
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			set_country_flag = AUH_x_bukovina_lesson_learned
 		}
 	}
 }

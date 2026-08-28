@@ -372,6 +372,7 @@ AUH_dnc_serbia_ladder_cat = {
 			NOT = { has_war_with = SER }
 		}
 		remove_effect = {
+			hidden_effect = { AUH_coercion_act = yes }
 			army_experience = 5
 			add_war_support = 0.01
 			add_stability = -0.01
@@ -444,7 +445,10 @@ AUH_dnc_county_instruments_cat = {
 		days_re_enable = 120
 		fire_only_once = no
 		remove_effect = {
-			hidden_effect = { set_country_flag = AUH_cty_instruments_used }
+			hidden_effect = {
+				set_country_flag = AUH_cty_instruments_used
+				AUH_coercion_act = yes
+			}
 			add_stability = 0.02
 			subtract_from_variable = { var = HUN_support value = 1 }
 			clamp_variable = {
@@ -488,7 +492,10 @@ AUH_dnc_county_instruments_cat = {
 		days_re_enable = 90
 		fire_only_once = no
 		remove_effect = {
-			hidden_effect = { set_country_flag = AUH_cty_instruments_used }
+			hidden_effect = {
+				set_country_flag = AUH_cty_instruments_used
+				AUH_coercion_act = yes
+			}
 			add_war_support = 0.01
 			subtract_from_variable = { var = AUH_strike_pressure value = 5 }
 			clamp_variable = {
@@ -543,7 +550,10 @@ AUH_dnc_county_instruments_cat = {
 		days_re_enable = 90
 		fire_only_once = no
 		remove_effect = {
-			hidden_effect = { set_country_flag = AUH_cty_instruments_used }
+			hidden_effect = {
+				set_country_flag = AUH_cty_instruments_used
+				AUH_coercion_act = yes
+			}
 			add_political_power = 50
 			army_experience = 5
 			add_to_variable = { var = AUH_county_resistance value = 5 }
@@ -642,7 +652,13 @@ AUH_dnc_heirs_chancellery_cat = {
 		days_re_enable = 60
 		fire_only_once = no
 		remove_effect = {
-			add_to_variable = { var = AUH_belvedere_dossier value = 2 }
+			if = {
+				limit = { has_country_flag = AUH_b_este_millions }
+				add_to_variable = { var = AUH_belvedere_dossier value = 3 }
+			}
+			else = {
+				add_to_variable = { var = AUH_belvedere_dossier value = 2 }
+			}
 			clamp_variable = {
 				var = AUH_belvedere_dossier
 				min = 0
