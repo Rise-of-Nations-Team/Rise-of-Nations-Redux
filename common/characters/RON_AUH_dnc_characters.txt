@@ -45,16 +45,10 @@ characters = {
 			idea_token = AUH_karl_lueger
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_a_the_party_of_all_the_tongues
-					has_completed_focus = AUHDNC_r_the_mayor_names_his_price
-				}
+				has_completed_focus = AUHDNC_r_the_mayor_names_his_price
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_a_the_party_of_all_the_tongues
-					has_completed_focus = AUHDNC_r_the_mayor_names_his_price
-				}
+				has_completed_focus = AUHDNC_r_the_mayor_names_his_price
 			}
 			cost = 150
 			traits = { captain_of_industry linchpin_of_infrastructure }
@@ -123,16 +117,10 @@ characters = {
 			idea_token = AUH_josef_redlich
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_a_a_bureaucracy_that_works
-					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
-				}
+				has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_a_a_bureaucracy_that_works
-					has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
-				}
+				has_completed_focus = AUHDNC_r_the_cadastre_of_moravia
 			}
 			cost = 100
 			traits = { silent_lawyer constitutional_philosopher }
@@ -304,16 +292,10 @@ characters = {
 			idea_token = AUH_janos_forgach
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened
-					has_completed_focus = AUHDNC_a_the_political_police
-				}
+				has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened
-					has_completed_focus = AUHDNC_a_the_political_police
-				}
+				has_completed_focus = AUHDNC_m_the_case_of_the_kingdom_opened
 			}
 			cost = 150
 			traits = { head_of_intelligence propaganda_bungler }
@@ -334,16 +316,10 @@ characters = {
 			idea_token = AUH_ladislaus_szogyeny
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_a_renew_the_alliance_of_three
-					has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
-				}
+				has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_a_renew_the_alliance_of_three
-					has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
-				}
+				has_completed_focus = AUHDNC_bp_the_alliance_of_three_renewed
 			}
 			cost = 100
 			traits = { smooth_talking_charmer diplomat }
@@ -487,12 +463,14 @@ characters = {
 				OR = {
 					has_country_flag = AUH_a_franchise_brandished
 					has_country_flag = AUH_m_franchise_by_patent
+					has_country_flag = AUH_x_decree_carried
 				}
 			}
 			available = {
 				OR = {
 					has_country_flag = AUH_a_franchise_brandished
 					has_country_flag = AUH_m_franchise_by_patent
+					has_country_flag = AUH_x_decree_carried
 				}
 			}
 			cost = 100
@@ -637,14 +615,12 @@ characters = {
 			visible = {
 				OR = {
 					has_country_flag = AUH_h_advisor_daranyi
-					has_completed_focus = AUHDNC_eco_the_league_of_the_landowners
 					has_completed_focus = AUHDNC_eco_the_men_are_kept_at_home
 				}
 			}
 			available = {
 				OR = {
 					has_country_flag = AUH_h_advisor_daranyi
-					has_completed_focus = AUHDNC_eco_the_league_of_the_landowners
 					has_completed_focus = AUHDNC_eco_the_men_are_kept_at_home
 				}
 			}
@@ -939,16 +915,10 @@ characters = {
 			idea_token = AUH_janez_krek
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_r_the_diet_of_carniola
-					has_completed_focus = AUHDNC_eco_the_savings_of_the_provinces
-				}
+				has_completed_focus = AUHDNC_r_the_diet_of_carniola
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_r_the_diet_of_carniola
-					has_completed_focus = AUHDNC_eco_the_savings_of_the_provinces
-				}
+				has_completed_focus = AUHDNC_r_the_diet_of_carniola
 			}
 			cost = 100
 			traits = { social_reformer cooperative_leader }
@@ -971,13 +941,13 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
-					has_completed_focus = AUHDNC_r_the_nationality_deputies_are_received
+					has_completed_focus = AUHDNC_b_the_slovak_at_the_back_stairs
 				}
 			}
 			available = {
 				OR = {
 					has_completed_focus = AUHDNC_m_the_deputies_of_the_nationalities
-					has_completed_focus = AUHDNC_r_the_nationality_deputies_are_received
+					has_completed_focus = AUHDNC_b_the_slovak_at_the_back_stairs
 				}
 			}
 			cost = 100
@@ -999,10 +969,16 @@ characters = {
 			idea_token = AUH_aurel_popovici
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+				OR = {
+					has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+					has_completed_focus = AUHDNC_b_fifteen_nations_on_paper
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+				OR = {
+					has_completed_focus = AUHDNC_a_the_register_of_the_peoples
+					has_completed_focus = AUHDNC_b_fifteen_nations_on_paper
+				}
 			}
 			cost = 150
 			traits = { ideological_crusader federalist_dreamer }
@@ -1053,10 +1029,16 @@ characters = {
 			idea_token = AUH_josip_frank
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_m_the_frankist_wager
+				OR = {
+					has_completed_focus = AUHDNC_m_the_frankist_wager
+					has_completed_focus = AUHDNC_b_the_croat_of_the_partys_right
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_m_the_frankist_wager
+				OR = {
+					has_completed_focus = AUHDNC_m_the_frankist_wager
+					has_completed_focus = AUHDNC_b_the_croat_of_the_partys_right
+				}
 			}
 			cost = 150
 			traits = { ideological_crusader radicals_leading_figure }
@@ -1125,16 +1107,10 @@ characters = {
 			idea_token = AUH_pavao_rauch
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_m_dissolve_the_coalition_of_zagreb
-					has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown
-				}
+				has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_m_dissolve_the_coalition_of_zagreb
-					has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown
-				}
+				has_completed_focus = AUHDNC_m_a_ban_named_by_the_crown
 			}
 			cost = 150
 			traits = { prince_of_terror ban_of_croatia_slavonia }
@@ -1203,10 +1179,16 @@ characters = {
 			idea_token = AUH_michal_bobrzynski
 			allowed = { original_tag = AUH }
 			visible = {
-				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+				OR = {
+					has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+					has_country_flag = AUH_clock_bobrzynski_installed
+				}
 			}
 			available = {
-				has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+				OR = {
+					has_completed_focus = AUHDNC_r_the_bargain_of_lemberg
+					has_country_flag = AUH_clock_bobrzynski_installed
+				}
 			}
 			cost = 100
 			traits = { silent_lawyer accomplished_professor }
@@ -2013,16 +1995,10 @@ characters = {
 			ledger = navy
 			allowed = { original_tag = AUH }
 			visible = {
-				OR = {
-					has_completed_focus = AUHDNC_nav_the_flottenverein
-					has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
-				}
+				has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
 			}
 			available = {
-				OR = {
-					has_completed_focus = AUHDNC_nav_the_flottenverein
-					has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
-				}
+				has_completed_focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
 			}
 			cost = 100
 			traits = { naval_theorist political_publicist }
