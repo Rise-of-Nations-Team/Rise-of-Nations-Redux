@@ -2035,4 +2035,260 @@ characters = {
 			}
 		}
 	}
+
+	AUH_anton_josef_gruscha = {
+		name = AUH_anton_josef_gruscha
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_13.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Alexander_von_Brosch_Aarenau.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_anton_josef_gruscha
+			allowed = { original_tag = AUH }
+			visible = {
+				has_country_flag = AUH_g_advisor_gruscha_named
+			}
+			available = {
+				has_country_flag = AUH_g_advisor_gruscha_named
+			}
+			cost = 125
+			traits = { ideological_crusader conciliator }
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	AUH_karl_hermann_wolf = {
+		name = AUH_karl_hermann_wolf
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_14.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Josef_Ferdinand_von_Hapsburg.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_karl_hermann_wolf
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_g_advisor_wolf_named }
+			available = { has_country_flag = AUH_g_advisor_wolf_named }
+			cost = 125
+			traits = { ideological_crusader editor }
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	AUH_alois_von_liechtenstein = {
+		name = AUH_alois_von_liechtenstein
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_15.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Miklos_Horthy.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_alois_von_liechtenstein
+			allowed = { original_tag = AUH }
+			visible = {
+				has_country_flag = AUH_g_advisor_liechtenstein_named
+			}
+			available = {
+				has_country_flag = AUH_g_advisor_liechtenstein_named
+			}
+			cost = 150
+			traits = { staunch_monarchist smooth_talking_charmer }
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	AUH_karl_skoda = {
+		name = AUH_karl_skoda
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				small = GFX_idea_generic_political_advisor_europe_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_karl_skoda
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_arm_skoda_unlocked }
+			available = { has_country_flag = AUH_arm_skoda_unlocked }
+			cost = 150
+			traits = { war_industrialist armaments_organizer }
+			ai_will_do = { factor = 3 }
+		}
+	}
+
+	AUH_karl_wurmb = {
+		name = AUH_karl_wurmb
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Ernest_von_Koerber.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_karl_wurmb
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_wurmb_unlocked }
+			available = { has_country_flag = AUH_wurmb_unlocked }
+			cost = 150
+			traits = { captain_of_industry }
+			ai_will_do = { factor = 3 }
+		}
+	}
+
+	AUH_istvan_barczy = {
+		name = AUH_istvan_barczy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_12.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Hermann_Kovess_von_Kovesshaza.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_istvan_barczy
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_barczy_unlocked }
+			available = { has_country_flag = AUH_barczy_unlocked }
+			cost = 150
+			traits = { silent_workhorse }
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	AUH_leopold_salvator = {
+		name = AUH_leopold_salvator
+		portraits = {
+			army = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				small = "gfx/interface/ideas/generic_ministers/early/europe/6.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = AUH_leopold_salvator
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_air_leopold_salvator }
+			available = { has_country_flag = AUH_air_leopold_salvator }
+			cost = 100
+			traits = { air_chief_ground_support_1 }
+			ai_will_do = { factor = 3 }
+		}
+		corps_commander = {
+			traits = { politically_connected artillery_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			visible = { has_country_flag = AUH_air_leopold_salvator }
+		}
+	}
+
+	AUH_otto_franz_josef = {
+		name = AUH_otto_franz_josef
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Arthur_von_Bolfras.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_otto_franz_josef
+			allowed = { original_tag = AUH }
+			visible = {
+				has_country_flag = AUH_c_otto_franz_josef_known
+				NOT = { has_country_flag = AUH_c_otto_retired }
+			}
+			available = {
+				has_country_flag = AUH_c_otto_franz_josef_known
+				NOT = { has_country_flag = AUH_c_otto_retired }
+			}
+			cost = 100
+			traits = { smooth_talking_charmer corrupt_kleptocrat dismal_enigma }
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	AUH_ludwig_viktor = {
+		name = AUH_ludwig_viktor
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Archduke_Friedrich.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_ludwig_viktor
+			allowed = { original_tag = AUH }
+			visible = {
+				has_country_flag = AUH_c_ludwig_viktor_known
+				NOT = { has_country_flag = AUH_c_luziwuzi_exiled }
+			}
+			available = {
+				has_country_flag = AUH_c_ludwig_viktor_known
+				NOT = { has_country_flag = AUH_c_luziwuzi_exiled }
+			}
+			cost = 75
+			traits = { popular_figurehead backroom_backstabber }
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	AUH_sophie_chotek = {
+		name = AUH_sophie_chotek
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Eugen_von_Osterreich_Teschen.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_sophie_chotek
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_c_sophie_ladder_open }
+			available = {
+				has_country_flag = AUH_c_sophie_ladder_open
+				check_variable = {
+					var = AUH_sophie_rank
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			cost = 100
+			traits = { social_reformer connected_citizen compassionate_gentleman }
+			ai_will_do = { factor = 2 }
+		}
+	}
+
+	AUH_lajos_thalloczy = {
+		name = AUH_lajos_thalloczy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_11.dds"
+				small = GFX_idea_YUG_prince_paul
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_bp_thalloczy_at_the_ballhausplatz
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_kf_albania_open }
+			available = { has_country_flag = AUH_kf_albania_open }
+			cost = 100
+			traits = { diplomat }
+			ai_will_do = { factor = 2 }
+		}
+	}
 }

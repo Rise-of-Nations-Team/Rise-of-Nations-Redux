@@ -3,6 +3,18 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					has_country_flag = AUH_dnc_ausgleich_open
+					NOT = { has_country_flag = AUH_dnc_union_dissolved }
+				}
+				AUH_dnc_ausgleich_monthly = yes
+			}
+		}
+	}
+
+	on_monthly_AUH = {
+		effect = {
+			if = {
+				limit = {
 					tag = AUH
 					has_variable = AUH_register_erosion
 				}
