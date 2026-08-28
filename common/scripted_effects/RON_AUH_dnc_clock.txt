@@ -460,6 +460,18 @@ AUH_clock_check = {
 	}
 	AUH_clock_counties_check = yes
 	AUH_z_collapse_watch = yes
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_academy_sat }
+			check_variable = {
+				var = AUH_clock_months
+				value = 93
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_academy_sat
+		country_event = { id = auh_clock.440 days = 4 }
+	}
 }
 
 AUH_clock_the_old_man_dies = {

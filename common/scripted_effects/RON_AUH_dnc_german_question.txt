@@ -1,0 +1,400 @@
+AUH_g_question_dial = {
+	clamp_variable = {
+		var = AUH_g_german_question
+		min = 0
+		max = 100
+	}
+
+	clamp_variable = {
+		var = AUH_g_pangerman_strength
+		min = 0
+		max = 100
+	}
+}
+
+AUH_g_the_slav_price_light = {
+	custom_effect_tooltip = AUH_g_the_slav_price_light_tt
+	hidden_effect = { AUH_coercion_act = yes }
+	custom_effect_tooltip = AUH_nat_coercion_up_tt
+	subtract_from_variable = { var = CZE_support value = 2 }
+	clamp_variable = {
+		var = CZE_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_CZE_down_tt
+	subtract_from_variable = { var = POL_support value = 2 }
+	clamp_variable = {
+		var = POL_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_POL_down_tt
+	subtract_from_variable = { var = UKR_support value = 2 }
+	clamp_variable = {
+		var = UKR_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_UKR_down_tt
+	subtract_from_variable = { var = CRO_support value = 2 }
+	clamp_variable = {
+		var = CRO_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_CRO_down_tt
+	subtract_from_variable = { var = SER_support value = 2 }
+	clamp_variable = {
+		var = SER_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SER_down_tt
+	subtract_from_variable = { var = SLV_support value = 2 }
+	clamp_variable = {
+		var = SLV_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SLV_down_tt
+	subtract_from_variable = { var = SLO_support value = 2 }
+	clamp_variable = {
+		var = SLO_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SLO_down_tt
+	add_to_variable = { var = AUH_scar_CZE value = 2 }
+	add_to_variable = { var = AUH_scar_SLV value = 2 }
+	add_to_variable = { var = AUH_scar_SLO value = 2 }
+	custom_effect_tooltip = AUH_g_the_scar_of_the_crown_tt
+	add_to_variable = { var = AUS_support value = 2 }
+	clamp_variable = {
+		var = AUS_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_AUS_up_tt
+	subtract_from_variable = { var = AUH_gemeinsamkeit value = 2 }
+	clamp_variable = {
+		var = AUH_gemeinsamkeit
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_eco_gemein_down_tt
+}
+
+AUH_g_the_slav_price_full = {
+	hidden_effect = {
+		AUH_coercion_act = yes
+		AUH_coercion_act = yes
+	}
+	custom_effect_tooltip = AUH_nat_coercion_up_tt
+	subtract_from_variable = { var = CZE_support value = 4 }
+	clamp_variable = {
+		var = CZE_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_CZE_down_tt
+	subtract_from_variable = { var = POL_support value = 4 }
+	clamp_variable = {
+		var = POL_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_POL_down_tt
+	subtract_from_variable = { var = UKR_support value = 4 }
+	clamp_variable = {
+		var = UKR_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_UKR_down_tt
+	subtract_from_variable = { var = CRO_support value = 4 }
+	clamp_variable = {
+		var = CRO_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_CRO_down_tt
+	subtract_from_variable = { var = SER_support value = 4 }
+	clamp_variable = {
+		var = SER_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SER_down_tt
+	subtract_from_variable = { var = SLV_support value = 4 }
+	clamp_variable = {
+		var = SLV_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SLV_down_tt
+	subtract_from_variable = { var = SLO_support value = 4 }
+	clamp_variable = {
+		var = SLO_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SLO_down_tt
+	add_to_variable = { var = AUH_scar_CZE value = 4 }
+	add_to_variable = { var = AUH_scar_POL value = 4 }
+	add_to_variable = { var = AUH_scar_UKR value = 4 }
+	add_to_variable = { var = AUH_scar_CRO value = 4 }
+	add_to_variable = { var = AUH_scar_SER value = 4 }
+	add_to_variable = { var = AUH_scar_SLV value = 4 }
+	add_to_variable = { var = AUH_scar_SLO value = 4 }
+	custom_effect_tooltip = AUH_g_the_slavs_are_abandoned_tt
+	add_to_variable = { var = AUS_support value = 4 }
+	clamp_variable = {
+		var = AUS_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_AUS_up_tt
+	subtract_from_variable = { var = HUN_support value = 4 }
+	clamp_variable = {
+		var = HUN_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_HUN_down_tt
+	subtract_from_variable = { var = AUH_gemeinsamkeit value = 4 }
+	clamp_variable = {
+		var = AUH_gemeinsamkeit
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_eco_gemein_down_tt
+	add_stability = -0.05
+	hidden_effect = {
+		AUH_nat_reckoning = yes
+		country_event = { id = auh_clock.407 days = 3 }
+	}
+	custom_effect_tooltip = AUH_g_the_register_is_read_tt
+}
+
+AUH_g_the_slav_columns_fall = {
+	subtract_from_variable = { var = CZE_support value = AUH_g_step }
+	clamp_variable = {
+		var = CZE_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_CZE_down_tt
+	subtract_from_variable = { var = POL_support value = AUH_g_step }
+	clamp_variable = {
+		var = POL_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_POL_down_tt
+	subtract_from_variable = { var = UKR_support value = AUH_g_step }
+	clamp_variable = {
+		var = UKR_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_UKR_down_tt
+	subtract_from_variable = { var = CRO_support value = AUH_g_step }
+	clamp_variable = {
+		var = CRO_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_CRO_down_tt
+	subtract_from_variable = { var = SER_support value = AUH_g_step }
+	clamp_variable = {
+		var = SER_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SER_down_tt
+	subtract_from_variable = { var = BOS_support value = AUH_g_step }
+	clamp_variable = {
+		var = BOS_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_BOS_down_tt
+	subtract_from_variable = { var = SLV_support value = AUH_g_step }
+	clamp_variable = {
+		var = SLV_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SLV_down_tt
+	subtract_from_variable = { var = SLO_support value = AUH_g_step }
+	clamp_variable = {
+		var = SLO_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_nat_SLO_down_tt
+}
+
+AUH_g_the_slav_scars_deepen = {
+	add_to_variable = { var = AUH_scar_CZE value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_POL value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_UKR value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_CRO value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_SER value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_BOS value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_SLV value = AUH_g_scar_step }
+	add_to_variable = { var = AUH_scar_SLO value = AUH_g_scar_step }
+	custom_effect_tooltip = AUH_g_the_scars_of_the_crown_tt
+}
+
+AUH_g_the_slavs_are_bought_a_year = {
+	AUH_nat_concede_CZE_3 = yes
+	AUH_nat_concede_POL_3 = yes
+	AUH_nat_concede_UKR_3 = yes
+	AUH_nat_concede_CRO_3 = yes
+	AUH_nat_concede_SER_3 = yes
+	AUH_nat_concede_BOS_3 = yes
+	AUH_nat_concede_SLV_3 = yes
+	AUH_nat_concede_SLO_3 = yes
+	add_political_power = -100
+	add_to_variable = { var = AUH_treasury_strain value = 4 }
+	clamp_variable = {
+		var = AUH_treasury_strain
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_g_the_year_is_bought_tt
+}
+
+AUH_g_the_ledger_takes_the_crown = {
+	AUH_coercion_act = yes
+	AUH_coercion_act = yes
+	AUH_coercion_act = yes
+	custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+}
+
+AUH_g_the_register_hands_off = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_z_collapse_armed }
+		}
+		AUH_z_collapse_init = yes
+	}
+	AUH_nat_reckoning = yes
+	AUH_z_stage_one_check = yes
+}
+
+AUH_g_the_crown_is_claimed = {
+	set_country_flag = AUH_dnc_german_crown_claimed
+	custom_effect_tooltip = AUH_g_the_crown_is_claimed_tt
+	custom_effect_tooltip = AUH_g_the_road_from_berlin_is_closed_tt
+	set_temp_variable = { AUH_g_step = 4 }
+	AUH_g_the_slav_columns_fall = yes
+	set_temp_variable = { AUH_g_scar_step = 3 }
+	AUH_g_the_slav_scars_deepen = yes
+	AUH_g_the_ledger_takes_the_crown = yes
+	add_to_variable = { var = AUS_support value = 4 }
+	clamp_variable = {
+		var = AUS_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_m_tt_aus_up
+	AUH_nat_seesaw_AUS = yes
+	subtract_from_variable = { var = AUH_gemeinsamkeit value = 4 }
+	clamp_variable = {
+		var = AUH_gemeinsamkeit
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+	add_to_variable = { var = AUH_house_prestige value = 4 }
+	clamp_variable = {
+		var = AUH_house_prestige
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_kf_prestige_up_tt
+	add_stability = -0.05
+	add_named_threat = {
+		threat = 4
+		name = AUH_g_threat_the_crown_is_claimed
+	}
+	AUH_g_the_register_hands_off = yes
+	country_event = { id = auh_clock.418 days = 5 }
+}
+
+AUH_g_the_slav_reckoning_deepens = {
+	set_temp_variable = { AUH_g_step = 4 }
+	AUH_g_the_slav_columns_fall = yes
+	set_temp_variable = { AUH_g_scar_step = 2 }
+	AUH_g_the_slav_scars_deepen = yes
+	AUH_coercion_act = yes
+	AUH_coercion_act = yes
+	custom_effect_tooltip = AUH_g_the_ledger_takes_the_crown_tt
+	add_stability = -0.05
+	add_war_support = -0.03
+	AUH_g_the_register_hands_off = yes
+}
+
+AUH_g_the_los_von_rom_answers = {
+	set_country_flag = AUH_g_los_von_rom_running
+	subtract_from_variable = { var = AUS_support value = 4 }
+	clamp_variable = {
+		var = AUS_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_m_tt_aus_down
+	add_timed_idea = {
+		idea = AUH_g_the_los_von_rom_agitation
+		days = 730
+	}
+	add_stability = -0.03
+	custom_effect_tooltip = AUH_g_schoenerer_turns_his_coat_tt
+}
+
+AUH_g_war_conduct_north = {
+	AUH_war_conduct_common = yes
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_kf_case_n_filed }
+		}
+		custom_effect_tooltip = AUH_g_conduct_no_case_n_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_g_partner_secured }
+		}
+		custom_effect_tooltip = AUH_g_conduct_no_partner_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_g_los_von_rom_running }
+		custom_effect_tooltip = AUH_g_conduct_los_von_rom_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+	hidden_effect = { AUH_redl_poison = yes }
+	AUH_war_opening_route = yes
+}
+
+AUH_g_the_german_lands_are_cored = {
+	every_owned_state = {
+		limit = {
+			is_core_of = GER
+			NOT = { is_core_of = AUH }
+		}
+		add_core_of = AUH
+	}
+	custom_effect_tooltip = AUH_g_the_german_lands_are_cored_tt
+}
