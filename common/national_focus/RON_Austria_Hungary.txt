@@ -51,7 +51,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_the_dual_monarchy
 		icon = GFX_focus_generic_monarchy_1
-		x = 38
+		x = 56
 		y = 0
 		cost = 2.5
 		ai_will_do = { factor = 1 }
@@ -81,7 +81,8 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_a_the_compromise_is_the_constitution
-		x = 4
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = -52
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		mutually_exclusive = {
@@ -155,7 +156,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_the_two_parliaments
 		relative_position_id = AUHDNC_a_the_compromise_is_the_constitution
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_a_the_compromise_is_the_constitution
@@ -276,7 +277,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_govern_by_the_fourteenth_paragraph
 		relative_position_id = AUHDNC_a_a_cabinet_of_civil_servants
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_a_a_cabinet_of_civil_servants }
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
@@ -320,7 +321,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_buy_peace_with_public_works
 		relative_position_id = AUHDNC_a_govern_by_the_fourteenth_paragraph
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_a_govern_by_the_fourteenth_paragraph
@@ -409,7 +410,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_carry_the_estimates_by_the_crown
 		relative_position_id = AUHDNC_a_the_two_parliaments
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = AUHDNC_a_the_two_parliaments }
 		mutually_exclusive = {
@@ -583,10 +584,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_a_the_land_that_belongs_to_neither
-		relative_position_id = AUHDNC_a_the_two_parliaments
-		x = -2
+		relative_position_id = AUHDNC_a_buy_the_estimates_from_budapest
+		x = 2
 		y = 1
-		prerequisite = { focus = AUHDNC_a_the_two_parliaments }
+		prerequisite = {
+			focus = AUHDNC_a_buy_the_estimates_from_budapest
+		}
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 3
 		ai_will_do = { factor = 7 }
@@ -688,10 +691,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_a_the_state_of_the_officials
-		relative_position_id = AUHDNC_a_a_cabinet_of_civil_servants
-		x = 2
+		relative_position_id = AUHDNC_a_govern_by_the_fourteenth_paragraph
+		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_a_a_cabinet_of_civil_servants }
+		prerequisite = {
+			focus = AUHDNC_a_govern_by_the_fourteenth_paragraph
+		}
 		mutually_exclusive = { focus = AUHDNC_a_the_register_of_the_peoples }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 3
@@ -776,10 +781,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_a_the_register_of_the_peoples
-		relative_position_id = AUHDNC_a_a_cabinet_of_civil_servants
-		x = 4
+		relative_position_id = AUHDNC_a_govern_by_the_fourteenth_paragraph
+		x = 2
 		y = 1
-		prerequisite = { focus = AUHDNC_a_a_cabinet_of_civil_servants }
+		prerequisite = {
+			focus = AUHDNC_a_govern_by_the_fourteenth_paragraph
+		}
 		mutually_exclusive = { focus = AUHDNC_a_the_state_of_the_officials }
 		icon = GFX_focus_generic_population_growth
 		cost = 3
@@ -872,7 +879,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_autonomy_for_the_altar
 		relative_position_id = AUHDNC_a_the_land_that_belongs_to_neither
-		x = 4
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_a_the_land_that_belongs_to_neither
@@ -1148,7 +1155,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_the_state_of_exception
 		relative_position_id = AUHDNC_a_govern_by_the_fourteenth_paragraph
-		x = 6
+		x = 4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_a_govern_by_the_fourteenth_paragraph
@@ -1520,8 +1527,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_a_the_settlement_renewed
 		relative_position_id = AUHDNC_a_buy_the_estimates_from_budapest
-		x = -4
-		y = 2
+		x = 0
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_a_buy_the_estimates_from_budapest
 			focus = AUHDNC_a_carry_the_estimates_by_the_crown
@@ -1602,7 +1609,7 @@ focus_tree = {
 		id = AUHDNC_a_what_both_halves_will_sign
 		relative_position_id = AUHDNC_a_the_settlement_renewed
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_a_the_settlement_renewed }
 		prerequisite = {
 			focus = AUHDNC_a_a_vote_for_every_man
@@ -1678,7 +1685,7 @@ focus_tree = {
 		id = AUHDNC_a_the_settlement_holds
 		relative_position_id = AUHDNC_a_what_both_halves_will_sign
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_a_what_both_halves_will_sign }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 6
@@ -1879,7 +1886,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_air_the_militar_aeronautische_anstalt
-		x = 199
+		x = 191
 		y = 0
 		icon = GFX_goal_generic_build_airforce
 		cost = 4
@@ -2508,10 +2515,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_air_the_airship_of_the_army
-		relative_position_id = AUHDNC_air_the_dirigible_question
+		relative_position_id = AUHDNC_air_the_hall_at_fischamend
 		x = 0
-		y = 2
-		prerequisite = { focus = AUHDNC_air_the_dirigible_question }
+		y = 1
+		prerequisite = { focus = AUHDNC_air_the_hall_at_fischamend }
 		icon = GFX_goal_generic_air_bomber
 		cost = 7.5
 		ai_will_do = { factor = 1 }
@@ -2785,7 +2792,7 @@ focus_tree = {
 		id = AUHDNC_air_a_flying_troop
 		relative_position_id = AUHDNC_air_the_first_military_pilots
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_air_the_first_military_pilots }
 		prerequisite = {
 			focus = AUHDNC_air_the_airship_of_the_army
@@ -2956,7 +2963,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_three_armies
-		x = 130
+		x = 157
 		y = 0
 		icon = GFX_focus_HABSBURG_reform_gemeinsame_armee
 		cost = 4
@@ -3019,7 +3026,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_general_staff
 		relative_position_id = AUHDNC_arm_the_three_armies
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_three_armies }
 		icon = GFX_focus_AUS_the_evidenzburo
@@ -3081,7 +3088,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_recruit_contingent
 		relative_position_id = AUHDNC_arm_the_three_armies
-		x = 4
+		x = 6
 		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_three_armies }
 		icon = GFX_focus_generic_manpower
@@ -3552,7 +3559,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_gun_steel_programme
 		relative_position_id = AUHDNC_arm_the_three_armies
-		x = -4
+		x = -6
 		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_three_armies }
 		mutually_exclusive = { focus = AUHDNC_arm_the_bronze_barrel }
@@ -3622,7 +3629,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_skoda_siege_train
 		relative_position_id = AUHDNC_arm_the_gun_steel_programme
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_gun_steel_programme }
 		icon = GFX_goal_trench_artillery
@@ -3684,7 +3691,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_two_academies
 		relative_position_id = AUHDNC_arm_the_language_of_command
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_arm_the_language_of_command
@@ -3742,7 +3749,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_mountain_troops
 		relative_position_id = AUHDNC_arm_the_skoda_siege_train
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_arm_the_skoda_siege_train
@@ -3842,14 +3849,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_alpine_barrier
-		relative_position_id = AUHDNC_arm_keep_the_old_chief
+		relative_position_id = AUHDNC_arm_the_cases_in_the_drawer
 		x = 0
 		y = 1
-		prerequisite = {
-			focus = AUHDNC_arm_keep_the_old_chief
-			focus = AUHDNC_arm_the_administrator
-			focus = AUHDNC_arm_the_heirs_candidate
-		}
+		prerequisite = { focus = AUHDNC_arm_the_cases_in_the_drawer }
 		mutually_exclusive = { focus = AUHDNC_arm_the_galician_bastion }
 		mutually_exclusive = { focus = AUHDNC_arm_the_bocche_and_the_save }
 		icon = GFX_focus_generic_mountain_fortification
@@ -4028,14 +4031,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_galician_bastion
-		relative_position_id = AUHDNC_arm_keep_the_old_chief
+		relative_position_id = AUHDNC_arm_the_cases_in_the_drawer
 		x = 2
 		y = 1
-		prerequisite = {
-			focus = AUHDNC_arm_keep_the_old_chief
-			focus = AUHDNC_arm_the_administrator
-			focus = AUHDNC_arm_the_heirs_candidate
-		}
+		prerequisite = { focus = AUHDNC_arm_the_cases_in_the_drawer }
 		mutually_exclusive = { focus = AUHDNC_arm_the_alpine_barrier }
 		mutually_exclusive = { focus = AUHDNC_arm_the_bocche_and_the_save }
 		icon = GFX_goal_nested_fortifications
@@ -4211,14 +4210,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_bocche_and_the_save
-		relative_position_id = AUHDNC_arm_keep_the_old_chief
+		relative_position_id = AUHDNC_arm_the_cases_in_the_drawer
 		x = -2
 		y = 1
-		prerequisite = {
-			focus = AUHDNC_arm_keep_the_old_chief
-			focus = AUHDNC_arm_the_administrator
-			focus = AUHDNC_arm_the_heirs_candidate
-		}
+		prerequisite = { focus = AUHDNC_arm_the_cases_in_the_drawer }
 		mutually_exclusive = { focus = AUHDNC_arm_the_alpine_barrier }
 		mutually_exclusive = { focus = AUHDNC_arm_the_galician_bastion }
 		icon = GFX_focus_generic_coastal_fort
@@ -4439,13 +4434,14 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_arm_the_kriegsschule
 		relative_position_id = AUHDNC_arm_the_administrator
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_arm_the_administrator
 			focus = AUHDNC_arm_keep_the_old_chief
 			focus = AUHDNC_arm_the_heirs_candidate
 		}
+		prerequisite = { focus = AUHDNC_arm_the_two_academies }
 		icon = GFX_focus_generic_advanced_military_studies
 		cost = 7.5
 		ai_will_do = { factor = 1 }
@@ -4498,7 +4494,7 @@ focus_tree = {
 		id = AUHDNC_arm_the_army_bill
 		relative_position_id = AUHDNC_arm_the_kriegsschule
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_kriegsschule }
 		prerequisite = { focus = AUHDNC_arm_the_two_academies }
 		prerequisite = {
@@ -4681,7 +4677,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_bp_the_ballhausplatz
-		x = 94
+		x = 123
 		y = 0
 		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
@@ -4750,7 +4746,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_bp_the_alliance_of_three_renewed
 		relative_position_id = AUHDNC_bp_the_ballhausplatz
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = AUHDNC_bp_the_ballhausplatz }
 		icon = GFX_goal_three_emperors_league
@@ -4823,7 +4819,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_bp_the_understanding_at_murzsteg
 		relative_position_id = AUHDNC_bp_the_ballhausplatz
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = { focus = AUHDNC_bp_the_ballhausplatz }
 		icon = GFX_goal_befriend_imperial_russia
@@ -5536,8 +5532,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_bp_the_provinces_are_declared
 		relative_position_id = AUHDNC_bp_the_meeting_at_buchlovice
-		x = 0
-		y = 2
+		x = -2
+		y = 1
 		prerequisite = { focus = AUHDNC_bp_the_meeting_at_buchlovice }
 		icon = GFX_focus_AUS_proclaim_austrian_empire
 		cost = 10
@@ -5808,7 +5804,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_common_market
-		x = 109
+		x = 138
 		y = 0
 		icon = GFX_focus_GER_customs_union
 		cost = 4
@@ -5878,7 +5874,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_autonomous_tariff
 		relative_position_id = AUHDNC_eco_the_common_market
-		x = -2
+		x = 4
 		y = 1
 		prerequisite = { focus = AUHDNC_eco_the_common_market }
 		mutually_exclusive = { focus = AUHDNC_eco_the_commercial_treaties }
@@ -5955,7 +5951,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_commercial_treaties
 		relative_position_id = AUHDNC_eco_the_common_market
-		x = 0
+		x = 6
 		y = 1
 		prerequisite = { focus = AUHDNC_eco_the_common_market }
 		mutually_exclusive = { focus = AUHDNC_eco_the_autonomous_tariff }
@@ -6101,7 +6097,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_great_houses_of_the_ring
 		relative_position_id = AUHDNC_eco_the_bank_of_two_capitals
-		x = 0
+		x = 6
 		y = 1
 		prerequisite = { focus = AUHDNC_eco_the_bank_of_two_capitals }
 		icon = GFX_focus_RAJ_issue_bonds_on_the_stock_market
@@ -6159,10 +6155,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_state_buys_the_network
-		relative_position_id = AUHDNC_eco_the_common_market
+		relative_position_id = AUHDNC_eco_the_great_houses_of_the_ring
 		x = 2
 		y = 1
-		prerequisite = { focus = AUHDNC_eco_the_common_market }
+		prerequisite = {
+			focus = AUHDNC_eco_the_great_houses_of_the_ring
+		}
 		mutually_exclusive = {
 			focus = AUHDNC_eco_the_line_that_is_built_instead
 		}
@@ -6229,10 +6227,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_line_that_is_built_instead
-		relative_position_id = AUHDNC_eco_the_common_market
-		x = 4
+		relative_position_id = AUHDNC_eco_the_great_houses_of_the_ring
+		x = 6
 		y = 1
-		prerequisite = { focus = AUHDNC_eco_the_common_market }
+		prerequisite = {
+			focus = AUHDNC_eco_the_great_houses_of_the_ring
+		}
 		mutually_exclusive = {
 			focus = AUHDNC_eco_the_state_buys_the_network
 		}
@@ -6313,7 +6313,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_capital_goes_south
 		relative_position_id = AUHDNC_eco_the_great_houses_of_the_ring
-		x = 0
+		x = -6
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_great_houses_of_the_ring
@@ -6412,7 +6412,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_capital_stays_at_home
 		relative_position_id = AUHDNC_eco_the_great_houses_of_the_ring
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_great_houses_of_the_ring
@@ -6587,7 +6587,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_ordnance_of_the_realm
 		relative_position_id = AUHDNC_eco_the_capital_goes_south
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_capital_goes_south
@@ -6672,11 +6672,11 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_current_of_the_mountains
-		relative_position_id = AUHDNC_eco_the_second_road_to_the_sea
-		x = -2
+		relative_position_id = AUHDNC_eco_the_tunnels_through_the_tauern
+		x = 0
 		y = 1
 		prerequisite = {
-			focus = AUHDNC_eco_the_second_road_to_the_sea
+			focus = AUHDNC_eco_the_tunnels_through_the_tauern
 		}
 		icon = GFX_focus_generic_hydroelectric_energy
 		cost = 5
@@ -7405,7 +7405,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_men_are_kept_at_home
 		relative_position_id = AUHDNC_eco_the_schedule_favours_the_imperial_port
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_schedule_favours_the_imperial_port
@@ -7696,7 +7696,8 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_h_buy_the_vote_with_banners
-		x = 42
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = -32
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		mutually_exclusive = {
@@ -7752,7 +7753,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_treat_with_the_dissidents
 		relative_position_id = AUHDNC_h_buy_the_vote_with_banners
-		x = 0
+		x = -4
 		y = 1
 		prerequisite = { focus = AUHDNC_h_buy_the_vote_with_banners }
 		mutually_exclusive = {
@@ -7794,7 +7795,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_treat_with_the_independence_party
 		relative_position_id = AUHDNC_h_buy_the_vote_with_banners
-		x = 2
+		x = 6
 		y = 1
 		prerequisite = { focus = AUHDNC_h_buy_the_vote_with_banners }
 		mutually_exclusive = { focus = AUHDNC_h_treat_with_the_dissidents }
@@ -7847,12 +7848,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_h_the_hussars_of_the_honved
-		relative_position_id = AUHDNC_h_the_word_of_command_in_magyar
-		x = -2
+		relative_position_id = AUHDNC_h_guns_for_the_honved
+		x = 0
 		y = 1
-		prerequisite = {
-			focus = AUHDNC_h_the_word_of_command_in_magyar
-		}
+		prerequisite = { focus = AUHDNC_h_guns_for_the_honved }
 		icon = GFX_focus_HUN_kadars_hussars
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -7986,7 +7985,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_guns_for_the_honved
 		relative_position_id = AUHDNC_h_the_word_of_command_in_magyar
-		x = -4
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_h_the_word_of_command_in_magyar
@@ -8039,9 +8038,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_h_the_word_of_command_in_magyar
-		relative_position_id = AUHDNC_h_buy_the_vote_with_banners
-		x = 0
-		y = 2
+		relative_position_id = AUHDNC_h_treat_with_the_dissidents
+		x = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_h_treat_with_the_dissidents
 			focus = AUHDNC_h_treat_with_the_independence_party
@@ -8085,7 +8084,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_the_gun_works_of_the_capital
 		relative_position_id = AUHDNC_h_guns_for_the_honved
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_h_guns_for_the_honved }
 		icon = GFX_goal_national_arsenal
@@ -8135,7 +8134,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_a_staff_college_for_the_honved
 		relative_position_id = AUHDNC_h_the_word_of_command_in_magyar
-		x = 0
+		x = 4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_h_the_word_of_command_in_magyar
@@ -8258,7 +8257,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_the_union_renewed_by_treaty
 		relative_position_id = AUHDNC_h_a_staff_college_for_the_honved
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_h_a_staff_college_for_the_honved
@@ -8301,7 +8300,7 @@ focus_tree = {
 		id = AUHDNC_h_let_the_treaty_lapse
 		relative_position_id = AUHDNC_h_a_staff_college_for_the_honved
 		x = 2
-		y = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_h_a_staff_college_for_the_honved
 		}
@@ -8421,7 +8420,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_h_the_plural_ballot
 		relative_position_id = AUHDNC_h_the_union_renewed_by_treaty
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_h_the_union_renewed_by_treaty }
 		mutually_exclusive = {
@@ -9028,7 +9027,8 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_m_the_sword_settles_it
-		x = 70
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = -6
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		mutually_exclusive = {
@@ -9266,7 +9266,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_the_royal_commissioners
 		relative_position_id = AUHDNC_m_a_cabinet_of_generals
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_m_a_cabinet_of_generals }
 		icon = GFX_focus_generic_improve_the_administration
@@ -9340,7 +9340,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_conrad_by_the_heirs_hand
 		relative_position_id = AUHDNC_m_the_technical_military_committee
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_m_the_technical_military_committee
@@ -9424,7 +9424,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_beck_kept_at_the_staff
 		relative_position_id = AUHDNC_m_the_technical_military_committee
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_m_the_technical_military_committee
@@ -9487,7 +9487,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_the_frankist_wager
 		relative_position_id = AUHDNC_m_the_sword_settles_it
-		x = 8
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_m_the_sword_settles_it }
 		mutually_exclusive = {
@@ -9565,7 +9565,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_outbid_the_resolution_of_fiume
 		relative_position_id = AUHDNC_m_the_sword_settles_it
-		x = 10
+		x = 4
 		y = 1
 		prerequisite = { focus = AUHDNC_m_the_sword_settles_it }
 		mutually_exclusive = { focus = AUHDNC_m_the_frankist_wager }
@@ -9648,6 +9648,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_m_the_royal_commissioners }
+		prerequisite = { focus = AUHDNC_arm_the_cases_in_the_drawer }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 7.5
 		available = {
@@ -9783,10 +9784,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_m_the_evidenzbureau
-		relative_position_id = AUHDNC_m_the_sword_settles_it
+		relative_position_id = AUHDNC_m_beck_kept_at_the_staff
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_m_the_sword_settles_it }
+		prerequisite = { focus = AUHDNC_m_beck_kept_at_the_staff }
 		icon = GFX_focus_generic_secret_service_agency
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -9973,7 +9974,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_take_the_title_while_petersburg_looks_east
 		relative_position_id = AUHDNC_m_a_ban_named_by_the_crown
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_m_a_ban_named_by_the_crown
@@ -10091,7 +10092,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_m_end_the_condominium
 		relative_position_id = AUHDNC_m_a_ban_named_by_the_crown
-		x = -4
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_m_a_ban_named_by_the_crown
@@ -10911,7 +10912,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_nav_the_kuk_kriegsmarine
-		x = 164
+		x = 176
 		y = 0
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 4
@@ -10987,7 +10988,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_coast_defence_school
 		relative_position_id = AUHDNC_nav_the_kuk_kriegsmarine
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_nav_the_kuk_kriegsmarine }
 		mutually_exclusive = { focus = AUHDNC_nav_the_high_seas_school }
@@ -11268,10 +11269,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_nav_the_academy_and_the_hydrographic_office
-		relative_position_id = AUHDNC_nav_the_marinesektion
+		relative_position_id = AUHDNC_nav_the_vote_of_the_two_delegations
 		x = 4
 		y = 1
-		prerequisite = { focus = AUHDNC_nav_the_marinesektion }
+		prerequisite = {
+			focus = AUHDNC_nav_the_vote_of_the_two_delegations
+		}
 		icon = GFX_focus_generic_atlantic_coast
 		cost = 7.5
 		ai_will_do = { factor = 2 }
@@ -11319,10 +11322,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_nav_the_vote_of_the_two_delegations
-		relative_position_id = AUHDNC_nav_the_marinesektion
+		relative_position_id = AUHDNC_nav_montecuccoli_takes_the_helm
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_nav_the_marinesektion }
+		prerequisite = {
+			focus = AUHDNC_nav_montecuccoli_takes_the_helm
+		}
 		icon = GFX_goal_naval_spending_bill
 		cost = 7.5
 		ai_will_do = { factor = 5 }
@@ -11392,7 +11397,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_keels_of_both_crowns
 		relative_position_id = AUHDNC_nav_the_vote_of_the_two_delegations
-		x = 0
+		x = -4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_nav_the_vote_of_the_two_delegations
@@ -11658,7 +11663,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_erzherzog_karl_class
 		relative_position_id = AUHDNC_nav_montecuccoli_takes_the_helm
-		x = 0
+		x = 6
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_nav_montecuccoli_takes_the_helm
@@ -11719,7 +11724,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_bay_of_cattaro
 		relative_position_id = AUHDNC_nav_the_keels_of_both_crowns
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_nav_the_keels_of_both_crowns
@@ -12056,7 +12061,7 @@ focus_tree = {
 		id = AUHDNC_nav_the_fleet_and_the_two_states
 		relative_position_id = AUHDNC_nav_the_bay_of_cattaro
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_nav_the_bay_of_cattaro }
 		prerequisite = { focus = AUHDNC_nav_the_first_submarines }
 		prerequisite = {
@@ -12224,7 +12229,8 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_iron_ring_reforged
-		x = 23
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = -40
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		mutually_exclusive = {
@@ -12373,7 +12379,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_polish_club_in_office
 		relative_position_id = AUHDNC_r_the_arithmetic_of_the_house
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_r_the_arithmetic_of_the_house }
 		icon = GFX_goal_generic_government_deals
@@ -12437,10 +12443,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_clubs_of_bohemia
-		relative_position_id = AUHDNC_r_the_arithmetic_of_the_house
-		x = 2
+		relative_position_id = AUHDNC_r_the_polish_club_in_office
+		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_r_the_arithmetic_of_the_house }
+		prerequisite = { focus = AUHDNC_r_the_polish_club_in_office }
 		icon = GFX_focus_generic_befriend_bohemia
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -12495,10 +12501,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_club_of_the_centre
-		relative_position_id = AUHDNC_r_the_arithmetic_of_the_house
-		x = -4
+		relative_position_id = AUHDNC_r_the_clubs_of_bohemia
+		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_r_the_arithmetic_of_the_house }
+		prerequisite = { focus = AUHDNC_r_the_clubs_of_bohemia }
 		icon = GFX_focus_generic_catholic_dominion
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -12558,10 +12564,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_bench_of_the_workers
-		relative_position_id = AUHDNC_r_the_arithmetic_of_the_house
-		x = 4
+		relative_position_id = AUHDNC_r_the_club_of_the_centre
+		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_r_the_arithmetic_of_the_house }
+		prerequisite = { focus = AUHDNC_r_the_club_of_the_centre }
 		icon = GFX_focus_generic_workers
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -12616,7 +12622,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_estates_of_the_kingdom
 		relative_position_id = AUHDNC_r_the_clubs_of_bohemia
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_r_the_clubs_of_bohemia }
 		icon = GFX_focus_generic_monarchist_sentiment
@@ -12671,10 +12677,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_mayor_names_his_price
-		relative_position_id = AUHDNC_r_the_arithmetic_of_the_house
+		relative_position_id = AUHDNC_r_the_bench_of_the_workers
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_r_the_arithmetic_of_the_house }
+		prerequisite = { focus = AUHDNC_r_the_bench_of_the_workers }
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -12727,10 +12733,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_majority_is_declared
-		relative_position_id = AUHDNC_r_the_estates_of_the_kingdom
+		relative_position_id = AUHDNC_r_the_mayor_names_his_price
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_r_the_estates_of_the_kingdom }
+		prerequisite = { focus = AUHDNC_r_the_mayor_names_his_price }
 		prerequisite = { focus = AUHDNC_r_the_polish_club_in_office }
 		prerequisite = { focus = AUHDNC_r_the_club_of_the_centre }
 		prerequisite = { focus = AUHDNC_r_the_bench_of_the_workers }
@@ -12804,7 +12810,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_obstruction_must_end
 		relative_position_id = AUHDNC_r_the_majority_is_declared
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_r_the_majority_is_declared }
 		icon = GFX_goal_generic_political_pressure
@@ -12853,7 +12859,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_road_of_historic_right
 		relative_position_id = AUHDNC_r_the_obstruction_must_end
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_r_the_obstruction_must_end }
 		mutually_exclusive = { focus = AUHDNC_r_the_road_of_the_ballot }
@@ -13075,7 +13081,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_road_of_the_ballot
 		relative_position_id = AUHDNC_r_the_obstruction_must_end
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = AUHDNC_r_the_obstruction_must_end }
 		mutually_exclusive = { focus = AUHDNC_r_the_road_of_historic_right }
@@ -13287,13 +13293,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_ruthenian_benches
-		relative_position_id = AUHDNC_r_the_road_of_historic_right
+		relative_position_id = AUHDNC_r_the_cadastre_of_moravia
 		x = 4
 		y = 1
-		prerequisite = {
-			focus = AUHDNC_r_the_road_of_historic_right
-			focus = AUHDNC_r_the_road_of_the_ballot
-		}
+		prerequisite = { focus = AUHDNC_r_the_cadastre_of_moravia }
 		icon = GFX_focus_AUS_work_with_ukraine1
 		cost = 5
 		allow_branch = {
@@ -13573,7 +13576,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_cadastre_of_moravia
 		relative_position_id = AUHDNC_r_the_road_of_historic_right
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_r_the_road_of_historic_right
@@ -13625,7 +13628,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_r_the_bohemian_germans_get_their_price
 		relative_position_id = AUHDNC_r_the_cadastre_of_moravia
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = AUHDNC_r_the_cadastre_of_moravia }
 		mutually_exclusive = { focus = AUHDNC_r_the_frontier_is_not_drawn }
@@ -13726,10 +13729,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_r_the_diet_of_carniola
-		relative_position_id = AUHDNC_r_the_mayor_names_his_price
+		relative_position_id = AUHDNC_r_the_cadastre_of_moravia
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_r_the_mayor_names_his_price }
+		prerequisite = { focus = AUHDNC_r_the_cadastre_of_moravia }
 		icon = GFX_goal_generic_improve_relations
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -13921,7 +13924,7 @@ focus_tree = {
 		id = AUHDNC_r_the_oath_at_the_hradschin
 		relative_position_id = AUHDNC_r_the_estates_are_summoned
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_r_the_estates_are_summoned
 			focus = AUHDNC_r_the_diet_elects_the_deputation
@@ -14129,7 +14132,8 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_b_the_chancellery_at_the_belvedere
-		x = 53
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = -18
 		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		mutually_exclusive = {
@@ -14188,7 +14192,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_b_the_card_index_of_the_heir
 		relative_position_id = AUHDNC_b_the_chancellery_at_the_belvedere
-		x = 0
+		x = -4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_b_the_chancellery_at_the_belvedere
@@ -14213,7 +14217,7 @@ focus_tree = {
 		id = AUHDNC_b_the_long_wait
 		relative_position_id = AUHDNC_b_the_card_index_of_the_heir
 		x = 0
-		y = 7
+		y = 1
 		prerequisite = { focus = AUHDNC_b_the_card_index_of_the_heir }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 10
@@ -14255,8 +14259,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_first_lord_of_the_household
-		x = 87
-		y = 0
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 4
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_court
 		cost = 2
@@ -14278,11 +14283,11 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_oath_of_renunciation
-		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
+		relative_position_id = AUHDNC_c_the_question_of_the_succession
 		x = -2
 		y = 1
 		prerequisite = {
-			focus = AUHDNC_c_the_first_lord_of_the_household
+			focus = AUHDNC_c_the_question_of_the_succession
 		}
 		icon = GFX_focus_generic_treaty
 		cost = 2
@@ -14303,7 +14308,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_spanish_ceremonial
 		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_c_the_first_lord_of_the_household
@@ -14329,7 +14334,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_house_laws_reread
 		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
-		x = 2
+		x = 6
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_c_the_first_lord_of_the_household
@@ -14425,10 +14430,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_physicians_of_the_hofburg
-		relative_position_id = AUHDNC_c_the_spanish_ceremonial
+		relative_position_id = AUHDNC_c_the_masters_of_the_rituals
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_c_the_spanish_ceremonial }
+		prerequisite = { focus = AUHDNC_c_the_masters_of_the_rituals }
 		icon = GFX_focus_generic_university_2
 		cost = 2
 		available = {
@@ -14466,7 +14471,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_question_of_the_succession
 		relative_position_id = AUHDNC_c_the_house_laws_reread
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_c_the_house_laws_reread }
 		icon = GFX_goal_generic_plotting
@@ -14561,8 +14566,8 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_crypt_of_the_capuchins
-		relative_position_id = AUHDNC_c_the_regency_act_in_the_drawer
-		x = 0
+		relative_position_id = AUHDNC_c_the_question_of_the_succession
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_c_the_question_of_the_succession
@@ -14624,8 +14629,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_house_that_cannot_vote
-		x = 118
-		y = 3
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 12
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_goal_generic_parliament
 		cost = 2
@@ -14710,8 +14716,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_sixty_eight_words
-		x = 122
-		y = 4
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 14
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_HABSBURG_reform_gemeinsame_armee
 		cost = 2
@@ -14796,8 +14803,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_blood_in_the_konak
-		x = 143
-		y = 5
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 16
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_goal_generic_plotting
 		cost = 2
@@ -14819,12 +14827,13 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_x_the_punitive_expedition
 		relative_position_id = AUHDNC_x_blood_in_the_konak
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_x_blood_in_the_konak
 			focus = AUHDNC_x_the_east_in_motion
 		}
+		prerequisite = { focus = AUHDNC_arm_the_army_bill }
 		icon = GFX_goal_generic_major_war
 		cost = 3
 		allow_branch = { has_country_flag = AUH_clock_bell_konak }
@@ -14923,8 +14932,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_a_cabinet_without_a_chamber
-		x = 153
-		y = 6
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 22
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_goal_KOR_ministers_change
 		cost = 2
@@ -14958,7 +14968,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_x_the_capitulation_in_secret
 		relative_position_id = AUHDNC_x_a_cabinet_without_a_chamber
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_x_a_cabinet_without_a_chamber }
 		mutually_exclusive = { focus = AUHDNC_x_the_law_of_the_millions }
@@ -15120,8 +15130,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_street_asks_for_the_ballot
-		x = 160
-		y = 7
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 28
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 2
@@ -15157,6 +15168,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AUHDNC_x_the_street_asks_for_the_ballot
 		}
+		prerequisite = { focus = AUHDNC_a_the_register_of_the_peoples }
 		icon = GFX_goal_generic_elections
 		cost = 3
 		allow_branch = {
@@ -15219,8 +15231,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_settlement_falls_due
-		x = 177
-		y = 8
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 30
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_treaty
 		cost = 2
@@ -15249,8 +15262,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_east_in_motion
-		x = 181
-		y = 9
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 32
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_balkan_diplomacy
 		cost = 2
@@ -15352,8 +15366,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_a_crown_for_the_vistula
-		x = 185
-		y = 9
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 34
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 4
@@ -15399,8 +15414,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_regency_question
-		x = 189
-		y = 10
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 36
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_monarchist_sentiment
 		cost = 3
@@ -15436,8 +15452,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_x_the_regiments_in_the_streets
 		relative_position_id = AUHDNC_x_a_cabinet_without_a_chamber
-		x = -4
-		y = 2
+		x = -2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_x_a_cabinet_without_a_chamber
 			focus = AUHDNC_x_the_sixty_eight_words
@@ -15491,8 +15507,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_peace_of_the_king
-		x = 193
-		y = 11
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 38
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 5
@@ -15580,7 +15597,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_b_the_slovak_at_the_back_stairs
 		relative_position_id = AUHDNC_b_the_card_index_of_the_heir
-		x = 0
+		x = 4
 		y = 1
 		prerequisite = { focus = AUHDNC_b_the_card_index_of_the_heir }
 		icon = GFX_goal_generic_improve_relations
@@ -15620,10 +15637,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_b_fifteen_nations_on_paper
-		relative_position_id = AUHDNC_b_the_card_index_of_the_heir
+		relative_position_id = AUHDNC_b_the_slovak_at_the_back_stairs
 		x = 2
 		y = 1
-		prerequisite = { focus = AUHDNC_b_the_card_index_of_the_heir }
+		prerequisite = {
+			focus = AUHDNC_b_the_slovak_at_the_back_stairs
+		}
 		icon = GFX_focus_generic_university_2
 		cost = 3.5
 		allow_branch = { has_country_flag = AUH_dnc_path_belvedere }
@@ -15911,7 +15930,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_b_a_newspaper_for_the_day_after
-		relative_position_id = AUHDNC_b_the_croat_of_the_partys_right
+		relative_position_id = AUHDNC_b_fifteen_nations_on_paper
 		x = 0
 		y = 1
 		prerequisite = {
@@ -15982,7 +16001,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_b_the_case_for_the_programme
-		relative_position_id = AUHDNC_b_the_croat_of_the_partys_right
+		relative_position_id = AUHDNC_b_the_slovak_at_the_back_stairs
 		x = -2
 		y = 1
 		prerequisite = {
@@ -16044,7 +16063,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_b_two_drafts_in_one_drawer
 		relative_position_id = AUHDNC_b_a_newspaper_for_the_day_after
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_b_a_newspaper_for_the_day_after
@@ -16070,7 +16089,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_b_the_oath_first
 		relative_position_id = AUHDNC_b_two_drafts_in_one_drawer
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_b_two_drafts_in_one_drawer }
 		mutually_exclusive = { focus = AUHDNC_b_the_programme_in_the_safe }
@@ -16164,7 +16183,7 @@ focus_tree = {
 		id = AUHDNC_b_the_patent_of_the_peoples
 		relative_position_id = AUHDNC_b_the_programme_in_the_safe
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_b_the_programme_in_the_safe
 			focus = AUHDNC_b_the_oath_first
@@ -16272,9 +16291,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_b_the_third_crown
-		relative_position_id = AUHDNC_b_the_oath_first
+		relative_position_id = AUHDNC_b_the_programme_in_the_safe
 		x = 2
-		y = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_b_the_programme_in_the_safe
 			focus = AUHDNC_b_the_oath_first
@@ -16347,8 +16366,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_moravian_lesson
-		x = 157
-		y = 7
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 26
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_goal_constitutional_guarantees
 		cost = 5
@@ -16411,9 +16431,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_bukovina_lesson
-		x = 155
-		y = 9
-		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		relative_position_id = AUHDNC_x_the_moravian_lesson
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_x_the_moravian_lesson }
 		icon = GFX_focus_generic_vote
 		cost = 3.5
 		available = {
@@ -16759,7 +16780,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_yards_of_fiume
 		relative_position_id = AUHDNC_nav_the_answer_to_the_dante
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_nav_the_answer_to_the_dante }
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -16822,7 +16843,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_torpedoes_of_whitehead
 		relative_position_id = AUHDNC_nav_the_first_submarines
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_nav_the_first_submarines }
 		icon = GFX_focus_generic_mine_warfare
@@ -16874,9 +16895,12 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_monitors_of_the_danube
 		relative_position_id = AUHDNC_nav_the_bay_of_cattaro
-		x = -4
+		x = -2
 		y = 1
 		prerequisite = { focus = AUHDNC_nav_the_bay_of_cattaro }
+		prerequisite = {
+			focus = AUHDNC_nav_the_academy_and_the_hydrographic_office
+		}
 		icon = GFX_goal_generic_naval_cruiser2
 		cost = 5
 		ai_will_do = {
@@ -16960,7 +16984,7 @@ focus_tree = {
 		id = AUHDNC_arm_the_mortar_in_the_shed
 		relative_position_id = AUHDNC_arm_the_skoda_siege_train
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_skoda_siege_train }
 		icon = GFX_goal_generic_army_artillery2
 		cost = 7.5
@@ -17025,9 +17049,11 @@ focus_tree = {
 		id = AUHDNC_arm_the_motor_of_herr_porsche
 		relative_position_id = AUHDNC_arm_the_skoda_siege_train
 		x = 2
-		y = 2
-		prerequisite = { focus = AUHDNC_arm_the_skoda_siege_train }
-		prerequisite = { focus = AUHDNC_arm_the_bronze_barrel }
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_arm_the_skoda_siege_train
+			focus = AUHDNC_arm_the_bronze_barrel
+		}
 		icon = GFX_focus_generic_military_industry
 		cost = 7.5
 		ai_will_do = { factor = 2 }
@@ -17298,10 +17324,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_air_the_hall_at_fischamend
-		relative_position_id = AUHDNC_air_the_airship_of_the_army
+		relative_position_id = AUHDNC_air_the_dirigible_question
 		x = 0
 		y = 1
-		prerequisite = { focus = AUHDNC_air_the_airship_of_the_army }
+		prerequisite = { focus = AUHDNC_air_the_dirigible_question }
 		icon = GFX_focus_generic_air_bases
 		cost = 7.5
 		ai_will_do = { factor = 2 }
@@ -17356,7 +17382,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_air_the_archdukes_squadron
 		relative_position_id = AUHDNC_air_a_flying_troop
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_air_a_flying_troop }
 		icon = GFX_focus_AUS_osterreichische_luftstreitkrafte
@@ -17431,12 +17457,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_scandals_of_the_archdukes
-		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
+		relative_position_id = AUHDNC_c_the_house_laws_reread
 		x = -4
 		y = 1
-		prerequisite = {
-			focus = AUHDNC_c_the_first_lord_of_the_household
-		}
+		prerequisite = { focus = AUHDNC_c_the_house_laws_reread }
 		icon = GFX_goal_generic_plotting
 		cost = 3
 		ai_will_do = { factor = 5 }
@@ -17467,8 +17491,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_house_law_has_teeth
 		relative_position_id = AUHDNC_c_the_scandals_of_the_archdukes
-		x = -2
-		y = 2
+		x = 0
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_c_the_scandals_of_the_archdukes
 		}
@@ -17515,8 +17539,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_blind_eye_of_the_emperor
 		relative_position_id = AUHDNC_c_the_scandals_of_the_archdukes
-		x = 0
-		y = 2
+		x = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_c_the_scandals_of_the_archdukes
 		}
@@ -17551,9 +17575,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_death_of_the_handsome_archduke
-		relative_position_id = AUHDNC_c_the_scandals_of_the_archdukes
+		relative_position_id = AUHDNC_c_the_house_law_has_teeth
 		x = 0
-		y = 3
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_c_the_house_law_has_teeth
 			focus = AUHDNC_c_the_blind_eye_of_the_emperor
@@ -17903,8 +17927,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_masters_of_the_rituals
 		relative_position_id = AUHDNC_c_the_spanish_ceremonial
-		x = 4
-		y = 2
+		x = 0
+		y = 1
 		prerequisite = { focus = AUHDNC_c_the_spanish_ceremonial }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 4
@@ -17936,10 +17960,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_c_the_friend_at_the_villa
-		relative_position_id = AUHDNC_c_the_masters_of_the_rituals
-		x = 0
+		relative_position_id = AUHDNC_c_the_physicians_of_the_hofburg
+		x = 2
 		y = 1
-		prerequisite = { focus = AUHDNC_c_the_masters_of_the_rituals }
+		prerequisite = {
+			focus = AUHDNC_c_the_physicians_of_the_hofburg
+		}
 		icon = GFX_goal_generic_improve_relations
 		cost = 3
 		ai_will_do = { factor = 4 }
@@ -17972,7 +17998,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_c_the_crown_of_saint_stephen
 		relative_position_id = AUHDNC_c_the_house_laws_reread
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = { focus = AUHDNC_c_the_house_laws_reread }
 		icon = GFX_focus_HUN_the_old_habsburg_king
@@ -18034,7 +18060,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_bp_the_case_against_belgrade
 		relative_position_id = AUHDNC_bp_the_frontier_shut_to_the_kingdom
-		x = 2
+		x = 4
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_bp_the_frontier_shut_to_the_kingdom
@@ -18436,7 +18462,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_bp_the_guns_on_credit_for_belgrade
 		relative_position_id = AUHDNC_bp_the_treaty_the_kingdom_wanted
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
@@ -18501,7 +18527,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_bp_the_ships_that_pass_the_straits
 		relative_position_id = AUHDNC_bp_the_meeting_at_buchlovice
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_bp_the_meeting_at_buchlovice }
 		icon = GFX_focus_generic_adriatic_sea_focus
@@ -18830,7 +18856,7 @@ focus_tree = {
 		id = AUHDNC_bp_the_compensation_of_the_seventh_article
 		relative_position_id = AUHDNC_bp_the_faculty_at_the_allys_port
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_bp_the_faculty_at_the_allys_port
 		}
@@ -18877,14 +18903,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_cases_in_the_drawer
-		relative_position_id = AUHDNC_arm_the_administrator
-		x = 0
-		y = 2
-		prerequisite = {
-			focus = AUHDNC_arm_the_administrator
-			focus = AUHDNC_arm_keep_the_old_chief
-			focus = AUHDNC_arm_the_heirs_candidate
-		}
+		relative_position_id = AUHDNC_arm_the_kriegsschule
+		x = 4
+		y = 1
+		prerequisite = { focus = AUHDNC_arm_the_kriegsschule }
 		icon = GFX_goal_generic_position_armies
 		cost = 7.5
 		ai_will_do = {
@@ -18937,14 +18959,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_arm_the_memoranda_of_the_chief
-		relative_position_id = AUHDNC_arm_the_heirs_candidate
-		x = 2
-		y = 2
-		prerequisite = {
-			focus = AUHDNC_arm_the_administrator
-			focus = AUHDNC_arm_keep_the_old_chief
-			focus = AUHDNC_arm_the_heirs_candidate
-		}
+		relative_position_id = AUHDNC_arm_the_cases_in_the_drawer
+		x = 4
+		y = 1
+		prerequisite = { focus = AUHDNC_arm_the_cases_in_the_drawer }
 		icon = GFX_focus_generic_advanced_military_studies
 		cost = 5
 		ai_will_do = {
@@ -19023,7 +19041,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_nav_the_battery_on_the_mountain
 		relative_position_id = AUHDNC_nav_the_bay_of_cattaro
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_nav_the_bay_of_cattaro }
 		icon = GFX_focus_generic_mountain_fortification
@@ -19104,8 +19122,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_window_at_messina
-		x = 197
-		y = 9
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 40
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_goal_generic_major_war
 		cost = 3
@@ -19222,9 +19241,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_corridor_to_salonika
-		x = 199
-		y = 10
-		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		relative_position_id = AUHDNC_bp_the_railway_to_the_east
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_railway_to_the_east }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 3
 		allow_branch = { has_country_flag = AUH_sanjak_line_built }
@@ -19346,9 +19366,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_x_the_reckoning_with_russia
-		x = 201
-		y = 9
-		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		relative_position_id = AUHDNC_bp_the_note_from_berlin
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_note_from_berlin }
 		icon = GFX_focus_generic_polish_deal
 		cost = 4
 		allow_branch = {
@@ -19477,8 +19498,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_twilight
-		x = 211
-		y = 3
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 46
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 3
@@ -19512,7 +19534,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_z_the_loyal_crownlands
 		relative_position_id = AUHDNC_z_the_twilight
-		x = -2
+		x = -4
 		y = 1
 		prerequisite = { focus = AUHDNC_z_the_twilight }
 		icon = GFX_focus_generic_monarchist_sentiment
@@ -19933,7 +19955,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_army_from_the_floor
-		relative_position_id = AUHDNC_z_the_capital_holds
+		relative_position_id = AUHDNC_z_the_generals_who_stayed
 		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_z_the_generals_who_stayed }
@@ -19998,10 +20020,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_columns_are_called
-		relative_position_id = AUHDNC_z_the_twilight
-		x = 0
-		y = 4
-		prerequisite = { focus = AUHDNC_z_the_twilight }
+		relative_position_id = AUHDNC_z_the_loyal_crownlands
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_z_the_loyal_crownlands }
 		icon = GFX_goal_generic_position_armies
 		cost = 3
 		allow_branch = {
@@ -20055,9 +20077,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_road_to_prague
-		relative_position_id = AUHDNC_z_the_twilight
-		x = -2
-		y = 5
+		relative_position_id = AUHDNC_z_the_columns_are_called
+		x = 0
+		y = 1
 		prerequisite = { focus = AUHDNC_z_the_columns_are_called }
 		icon = GFX_focus_CZE_our_royal_claims
 		cost = 4
@@ -20102,9 +20124,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_column_into_galicia
-		relative_position_id = AUHDNC_z_the_twilight
+		relative_position_id = AUHDNC_z_the_columns_are_called
 		x = 2
-		y = 5
+		y = 1
 		prerequisite = { focus = AUHDNC_z_the_columns_are_called }
 		icon = GFX_focus_generic_polish_deal
 		cost = 4
@@ -20149,9 +20171,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_column_into_the_south
-		relative_position_id = AUHDNC_z_the_twilight
-		x = -2
-		y = 6
+		relative_position_id = AUHDNC_z_the_road_to_prague
+		x = 0
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_z_the_road_to_prague
 			focus = AUHDNC_z_the_column_into_galicia
@@ -20218,9 +20240,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_crown_of_saint_stephen
-		relative_position_id = AUHDNC_z_the_twilight
+		relative_position_id = AUHDNC_z_the_road_to_prague
 		x = 2
-		y = 6
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_z_the_road_to_prague
 			focus = AUHDNC_z_the_column_into_galicia
@@ -20264,10 +20286,12 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_danubian_federation
-		relative_position_id = AUHDNC_z_the_twilight
-		x = -4
-		y = 7
-		prerequisite = { focus = AUHDNC_z_the_twilight }
+		relative_position_id = AUHDNC_z_the_column_that_kept_its_oath
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_z_the_column_that_kept_its_oath
+		}
 		mutually_exclusive = { focus = AUHDNC_z_the_reconquest }
 		mutually_exclusive = { focus = AUHDNC_z_the_rump_endures }
 		icon = GFX_focus_generic_conference
@@ -20331,9 +20355,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_z_the_reconquest
-		relative_position_id = AUHDNC_z_the_twilight
+		relative_position_id = AUHDNC_z_the_column_into_the_south
 		x = 0
-		y = 7
+		y = 1
 		prerequisite = {
 			focus = AUHDNC_z_the_column_into_the_south
 			focus = AUHDNC_z_the_crown_of_saint_stephen
@@ -20404,8 +20428,8 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_z_the_rump_endures
 		relative_position_id = AUHDNC_z_the_twilight
-		x = 4
-		y = 7
+		x = 6
+		y = 1
 		prerequisite = { focus = AUHDNC_z_the_twilight }
 		mutually_exclusive = { focus = AUHDNC_z_the_danubian_federation }
 		mutually_exclusive = { focus = AUHDNC_z_the_reconquest }
@@ -20463,11 +20487,12 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_waterways_act
 		relative_position_id = AUHDNC_eco_the_estimate_that_balances
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_estimate_that_balances
 		}
+		prerequisite = { focus = AUHDNC_a_buy_peace_with_public_works }
 		icon = GFX_focus_generic_public_works
 		cost = 5
 		available = {
@@ -20546,7 +20571,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_canal_to_the_oder
 		relative_position_id = AUHDNC_eco_the_waterways_act
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_eco_the_waterways_act }
 		icon = GFX_goal_generic_construct_infrastructure
@@ -20629,10 +20654,10 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_canal_to_the_moldau
-		relative_position_id = AUHDNC_eco_the_waterways_act
+		relative_position_id = AUHDNC_eco_the_canal_to_the_oder
 		x = 2
 		y = 1
-		prerequisite = { focus = AUHDNC_eco_the_waterways_act }
+		prerequisite = { focus = AUHDNC_eco_the_canal_to_the_oder }
 		icon = GFX_focus_generic_hydroelectric_energy
 		cost = 7.5
 		available = {
@@ -20714,9 +20739,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_eco_the_spine_of_the_monarchy
-		relative_position_id = AUHDNC_eco_the_waterways_act
+		relative_position_id = AUHDNC_eco_the_canal_to_the_oder
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = AUHDNC_eco_the_canal_to_the_oder }
 		prerequisite = { focus = AUHDNC_eco_the_canal_to_the_moldau }
 		icon = GFX_focus_generic_merchant_fleet
@@ -20824,7 +20849,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_consortium_of_the_ring
 		relative_position_id = AUHDNC_eco_the_estimate_that_balances
-		x = -4
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_estimate_that_balances
@@ -20891,7 +20916,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_tunnels_through_the_tauern
 		relative_position_id = AUHDNC_eco_the_men_are_kept_at_home
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_men_are_kept_at_home
@@ -20968,7 +20993,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_karawanken_and_the_wocheiner
 		relative_position_id = AUHDNC_eco_the_tunnels_through_the_tauern
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_tunnels_through_the_tauern
@@ -21050,7 +21075,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_the_sudbahn_in_the_states_hands
 		relative_position_id = AUHDNC_eco_the_men_are_kept_at_home
-		x = 4
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_men_are_kept_at_home
@@ -21213,7 +21238,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_eco_gods_own_city_hall
 		relative_position_id = AUHDNC_eco_the_consortium_of_the_ring
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_consortium_of_the_ring
@@ -21347,6 +21372,9 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_eco_the_sudbahn_in_the_states_hands
+		}
+		prerequisite = {
+			focus = AUHDNC_eco_the_current_of_the_mountains
 		}
 		icon = GFX_focus_generic_electrification
 		cost = 5
@@ -21557,8 +21585,9 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_g_the_german_question
-		x = 221
-		y = 0
+		relative_position_id = AUHDNC_the_dual_monarchy
+		x = 56
+		y = 1
 		prerequisite = { focus = AUHDNC_the_dual_monarchy }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 5
@@ -21662,7 +21691,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_los_von_rom
 		relative_position_id = AUHDNC_g_the_german_question
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = AUHDNC_g_the_german_question }
 		icon = GFX_focus_generic_public_meetings
@@ -21718,7 +21747,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_break_the_schoenerians
 		relative_position_id = AUHDNC_g_los_von_rom
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_g_los_von_rom }
 		mutually_exclusive = { focus = AUHDNC_g_the_vienna_appeal }
@@ -21900,7 +21929,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_the_catholic_south
 		relative_position_id = AUHDNC_g_break_the_schoenerians
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_g_break_the_schoenerians
@@ -22192,7 +22221,7 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_g_the_customs_union
-		relative_position_id = AUHDNC_g_the_vienna_appeal
+		relative_position_id = AUHDNC_g_break_the_schoenerians
 		x = 2
 		y = 1
 		prerequisite = {
@@ -22553,9 +22582,11 @@ focus_tree = {
 
 	focus = {
 		id = AUHDNC_g_the_army_for_one_war
-		x = 248
+		relative_position_id = AUHDNC_g_the_german_question
+		x = 2
 		y = 1
 		prerequisite = { focus = AUHDNC_g_the_german_question }
+		prerequisite = { focus = AUHDNC_arm_the_army_bill }
 		icon = GFX_focus_HABSBURG_reform_gemeinsame_armee
 		cost = 10
 		available = {
@@ -22738,7 +22769,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_a_partner_at_berlins_back
 		relative_position_id = AUHDNC_g_the_army_for_one_war
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_g_the_army_for_one_war }
 		icon = GFX_goal_three_emperors_league
@@ -22864,7 +22895,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_the_reckoning_of_sixtysix
 		relative_position_id = AUHDNC_g_a_partner_at_berlins_back
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = AUHDNC_g_a_partner_at_berlins_back }
 		prerequisite = {
@@ -22976,7 +23007,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_the_reckoning_with_the_slavs
 		relative_position_id = AUHDNC_g_the_reckoning_of_sixtysix
-		x = -4
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_g_the_reckoning_of_sixtysix
@@ -23019,7 +23050,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_the_army_of_the_interior
 		relative_position_id = AUHDNC_g_the_reckoning_of_sixtysix
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_g_the_reckoning_of_sixtysix
@@ -23108,7 +23139,7 @@ focus_tree = {
 	focus = {
 		id = AUHDNC_g_the_forge_of_the_german_lands
 		relative_position_id = AUHDNC_g_the_reckoning_with_the_slavs
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = AUHDNC_g_the_reckoning_with_the_slavs
