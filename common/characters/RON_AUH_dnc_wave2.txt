@@ -1,0 +1,41 @@
+characters = {
+	AUH_karl_wurmb = {
+		name = AUH_karl_wurmb
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Ernest_von_Koerber.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_karl_wurmb
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_wurmb_unlocked }
+			available = { has_country_flag = AUH_wurmb_unlocked }
+			cost = 150
+			traits = { captain_of_industry }
+			ai_will_do = { factor = 3 }
+		}
+	}
+
+	AUH_istvan_barczy = {
+		name = AUH_istvan_barczy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_12.dds"
+				small = "gfx/interface/ideas/auh/advisors/idea_AUH_Hermann_Kovess_von_Kovesshaza.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AUH_istvan_barczy
+			allowed = { original_tag = AUH }
+			visible = { has_country_flag = AUH_barczy_unlocked }
+			available = { has_country_flag = AUH_barczy_unlocked }
+			cost = 150
+			traits = { silent_workhorse }
+			ai_will_do = { factor = 2 }
+		}
+	}
+}

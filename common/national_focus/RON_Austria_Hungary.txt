@@ -80,6 +80,15 @@ focus_tree = {
 			set_variable = { AUH_belvedere_dossier = 0 }
 			set_variable = { AUH_cadastre_charges = 0 }
 			set_variable = { AUH_house_prestige = 60 }
+			set_variable = { AUH_house_prestige_stability = 0.02 }
+			set_variable = { AUH_house_prestige_pp = 0.04 }
+			set_variable = { AUH_house_prestige_drift = 0.025 }
+			set_variable = { AUH_heir_grievance = 0 }
+			set_variable = { AUH_ritual_uses = 0 }
+			set_variable = { AUH_scandal_ledger = 0 }
+			set_variable = { AUH_sophie_rank = 0 }
+			set_variable = { AUH_procession_low = 0 }
+			set_variable = { AUH_mortar_progress = 0 }
 			set_variable = { AUH_register_heat = 0 }
 			set_variable = { AUH_register_erosion = 1 }
 			set_variable = { AUH_coercion_ledger = 0 }
@@ -474,6 +483,9 @@ focus_tree = {
 			}
 			set_country_flag = AUH_a_the_waterways_act_carried
 			custom_effect_tooltip = AUH_a_the_four_waterways_tt
+			AUH_eco_treasury_init = yes
+			set_country_flag = AUH_dnc_public_works_open
+			custom_effect_tooltip = AUH_eco_the_public_works_open_tt
 			add_tech_bonus = {
 				name = AUH_a_public_works_bonus
 				bonus = 0.75
@@ -16557,6 +16569,3004 @@ focus_tree = {
 			}
 			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
 			set_country_flag = AUH_x_bukovina_lesson_learned
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_the_hulls_before_the_vote
+		relative_position_id = AUHDNC_nav_the_credit_outside_the_estimates
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_nav_the_credit_outside_the_estimates
+		}
+		icon = GFX_goal_generic_shipyard
+		cost = 7.5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nav_tt_avail_no_cap
+				NOT = { has_country_flag = AUH_r_fleet_capped }
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				add = 40
+				has_country_flag = AUH_dnc_path_belvedere
+			}
+		}
+		select_effect = {
+			set_country_flag = AUH_nav_keels_are_laid
+			993 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = AUH_nav_tt_the_keels_go_down_first
+			country_event = { id = auh_clock.220 days = 20 }
+		}
+		completion_reward = {
+			993 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = AUH_nav_the_hulls_before_the_vote
+			add_tech_bonus = {
+				name = AUH_tb_the_hulls_before_the_vote
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			navy_experience = 25
+			add_political_power = -50
+			set_country_flag = AUH_nav_hulls_before_the_vote
+			set_country_flag = AUH_dnc_services_estimates
+			custom_effect_tooltip = AUH_nav_tt_services_estimates
+			add_to_variable = { var = HUN_support value = -3 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_hun_down_3
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_aus_up_2
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+			add_ai_strategy = {
+				type = build_building
+				id = dockyard
+				value = 50
+			}
+			hidden_effect = {
+				country_event = {
+					id = auh_clock.221
+					days = 220
+					random_days = 200
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_the_answer_to_the_dante
+		relative_position_id = AUHDNC_nav_wait_for_the_all_big_gun_ship
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_nav_wait_for_the_all_big_gun_ship
+		}
+		icon = GFX_focus_generic_battleship_guns
+		cost = 7.5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nav_tt_avail_no_cap
+				NOT = { has_country_flag = AUH_r_fleet_capped }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 40
+				has_country_flag = AUH_nav_hulls_before_the_vote
+			}
+		}
+		completion_reward = {
+			set_technology = { ww1_battleship2 = 1 }
+			add_tech_bonus = {
+				name = AUH_tb_the_answer_to_the_dante
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+			993 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 50
+			add_command_power = 25
+			set_country_flag = AUH_nav_the_tegetthoff_designed
+			custom_effect_tooltip = AUH_nav_tt_popper_draws_the_triple_turret
+			add_named_threat = {
+				threat = 2
+				name = AUH_nav_the_dreadnought_answer_threat
+			}
+			if = {
+				limit = { country_exists = ITA }
+				ITA = {
+					add_opinion_modifier = { target = AUH modifier = medium_decrease }
+				}
+				custom_effect_tooltip = AUH_nav_tt_rome_reads_the_slipways
+			}
+			subtract_from_variable = { var = ITA_support value = 3 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_ita_down_3
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_capital_bb
+				value = 60
+			}
+			hidden_effect = {
+				country_event = {
+					id = auh_clock.222
+					days = 30
+					random_days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_viribus_unitis
+		relative_position_id = AUHDNC_nav_the_answer_to_the_dante
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_nav_the_answer_to_the_dante }
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_nav_tt_avail_no_cap
+				NOT = { has_country_flag = AUH_r_fleet_capped }
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUH_nav_tt_avail_a_yard_that_answers
+				OR = {
+					has_country_flag = AUH_nav_hulls_before_the_vote
+					has_country_flag = AUH_danubius_keel
+				}
+			}
+		}
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			set_technology = { ww1_battleship3 = 1 }
+			add_tech_bonus = {
+				name = AUH_tb_viribus_unitis
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+			add_ideas = AUH_nav_the_tegetthoff_programme
+			993 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			736 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 11735
+					instant_build = yes
+				}
+			}
+			navy_experience = 75
+			add_war_support = 0.05
+			add_to_variable = { var = AUH_house_prestige value = 5 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			set_country_flag = AUH_nav_viribus_unitis_launched
+			custom_effect_tooltip = AUH_nav_tt_the_ship_is_named
+			if = {
+				limit = {
+					has_resources_amount = {
+						resource = oil
+						amount > 4
+					}
+				}
+				add_tech_bonus = {
+					name = AUH_tb_the_fleet_burns_oil
+					bonus = 1.0
+					uses = 1
+					category = naval_equipment
+				}
+				custom_effect_tooltip = AUH_nav_tt_the_galician_oil_reaches_pola
+				add_ai_strategy = {
+					type = role_ratio
+					id = naval_capital
+					value = 40
+				}
+			}
+			else = {
+				custom_effect_tooltip = AUH_nav_tt_the_bunkers_hold_coal
+				add_political_power = -25
+			}
+			add_named_threat = {
+				threat = 3
+				name = AUH_nav_the_dreadnought_threat
+			}
+			add_to_variable = { var = AUS_support value = 3 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			subtract_from_variable = { var = ITA_support value = 4 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_ita_down_4
+			add_ai_strategy = {
+				type = build_building
+				id = dockyard
+				value = 60
+			}
+			hidden_effect = {
+				country_event = { id = auh_clock.223 days = 45 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_the_yards_of_fiume
+		relative_position_id = AUHDNC_nav_the_answer_to_the_dante
+		x = 4
+		y = 1
+		prerequisite = { focus = AUHDNC_nav_the_answer_to_the_dante }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 7.5
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				add = 60
+				has_country_flag = AUH_dnc_path_magyar
+			}
+		}
+		completion_reward = {
+			1066 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = AUH_danubius_unlocked
+			set_country_flag = AUH_danubius_keel
+			custom_effect_tooltip = AUH_nav_tt_danubius_takes_a_share
+			add_tech_bonus = {
+				name = AUH_tb_the_yards_of_fiume
+				bonus = 1.0
+				uses = 1
+				category = ship_modules_tech
+			}
+			navy_experience = 25
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_hun_up_2
+			add_to_variable = { var = CRO_support value = 1 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_cro_up_1
+			subtract_from_variable = { var = AUH_quote value = 1 }
+			custom_effect_tooltip = AUH_nav_tt_quote_down_1
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			hidden_effect = {
+				country_event = { id = auh_clock.228 days = 60 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_the_torpedoes_of_whitehead
+		relative_position_id = AUHDNC_nav_the_first_submarines
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_nav_the_first_submarines }
+		icon = GFX_focus_generic_mine_warfare
+		cost = 5
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = AUH_tb_the_torpedoes_of_whitehead
+				bonus = 1.0
+				uses = 2
+				category = cat_torpedoes
+			}
+			add_tech_bonus = {
+				name = AUH_tb_the_boats_that_carry_them
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			1066 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = AUH_nav_the_whitehead_works
+			navy_experience = 25
+			set_country_flag = AUH_nav_whitehead_licence
+			custom_effect_tooltip = AUH_nav_tt_the_licence_is_on_the_table
+			add_to_variable = { var = HUN_support value = 1 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_hun_up_1
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_screen
+				value = 30
+			}
+			hidden_effect = {
+				country_event = { id = auh_clock.227 days = 90 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_the_monitors_of_the_danube
+		relative_position_id = AUHDNC_nav_the_bay_of_cattaro
+		x = -4
+		y = 1
+		prerequisite = { focus = AUHDNC_nav_the_bay_of_cattaro }
+		icon = GFX_goal_generic_naval_cruiser2
+		cost = 5
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 40
+				has_country_flag = AUH_clock_bell_konak
+			}
+		}
+		completion_reward = {
+			43 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = AUH_nav_the_danube_flotilla
+			if = {
+				limit = {
+					NOT = { has_template = "Donauflottillen Abteilung" }
+				}
+				division_template = {
+					name = "Donauflottillen Abteilung"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						artillery_brigade = { x = 1 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+					priority = 1
+				}
+			}
+			custom_effect_tooltip = AUH_nav_tt_the_temes_and_the_bodrog
+			add_tech_bonus = {
+				name = AUH_tb_the_river_flotilla
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+			navy_experience = 25
+			army_experience = 25
+			add_manpower = 5000
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_hun_up_2
+			subtract_from_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_nav_tt_ser_down_2
+			set_country_flag = AUH_nav_the_danube_flotilla
+			if = {
+				limit = { country_exists = SER }
+				SER = {
+					add_opinion_modifier = { target = AUH modifier = medium_decrease }
+				}
+			}
+			hidden_effect = {
+				country_event = { id = auh_clock.224 days = 30 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_arm_the_mortar_in_the_shed
+		relative_position_id = AUHDNC_arm_the_skoda_siege_train
+		x = 0
+		y = 2
+		prerequisite = { focus = AUHDNC_arm_the_skoda_siege_train }
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7.5
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				add = 40
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			army_experience = 25
+			add_command_power = 25
+			set_variable = { AUH_mortar_progress = 25 }
+			custom_effect_tooltip = AUH_arm_tt_the_shed_at_pilsen
+			set_country_flag = AUH_arm_the_mortar_programme
+			set_country_flag = AUH_dnc_services_estimates
+			custom_effect_tooltip = AUH_arm_tt_the_mortar_credit_opens
+			add_tech_bonus = {
+				name = AUH_tb_the_mortar_in_the_shed
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			9 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_field_gun_equipment_1903
+				amount = 60
+				producer = AUH
+			}
+			add_to_variable = { var = CZE_support value = 2 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_arm_the_bohemian_order_tt
+			if = {
+				limit = { has_country_flag = AUH_arm_the_motor_works }
+				add_to_variable = { var = AUH_mortar_progress value = 25 }
+				custom_effect_tooltip = AUH_arm_tt_the_tractor_is_already_ordered
+			}
+			hidden_effect = {
+				add_ai_strategy = {
+					type = equipment_production_factor
+					id = artillery
+					value = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_arm_the_motor_of_herr_porsche
+		relative_position_id = AUHDNC_arm_the_skoda_siege_train
+		x = 2
+		y = 2
+		prerequisite = { focus = AUHDNC_arm_the_skoda_siege_train }
+		prerequisite = { focus = AUHDNC_arm_the_bronze_barrel }
+		icon = GFX_focus_generic_military_industry
+		cost = 7.5
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_political_power = -25
+			army_experience = 25
+			add_ideas = AUH_arm_the_motor_column
+			add_tech_bonus = {
+				name = AUH_tb_the_motor_of_herr_porsche
+				bonus = 1.0
+				uses = 2
+				category = motorized_equipment
+			}
+			set_country_flag = AUH_m_traction_ordered
+			set_country_flag = AUH_arm_the_motor_works
+			custom_effect_tooltip = AUH_arm_tt_daimler_enters_the_service
+			show_ideas_tooltip = AUH_paul_daimler
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = AUH_arm_the_mortar_programme
+				}
+				add_to_variable = { var = AUH_mortar_progress value = 25 }
+				clamp_variable = {
+					var = AUH_mortar_progress
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_arm_tt_the_piece_can_now_be_moved
+			}
+			if = {
+				limit = { has_country_flag = AUH_air_kress_available }
+				set_country_flag = AUH_air_kress_has_a_motor
+				custom_effect_tooltip = AUH_air_tt_kress_has_a_motor
+			}
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = CZE_support value = 1 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_arm_tt_the_works_are_shared
+			hidden_effect = {
+				country_event = { id = auh_clock.225 days = 120 }
+				add_ai_strategy = {
+					type = equipment_production_factor
+					id = motorized_equipment
+					value = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_arm_the_contingent_unfrozen
+		relative_position_id = AUHDNC_arm_the_recruit_contingent
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_arm_the_recruit_contingent }
+		icon = GFX_focus_generic_soldier_salute
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_arm_tt_avail_a_route_exists
+				OR = {
+					check_variable = { HUN_support > 45 }
+					has_country_flag = AUH_dnc_path_sword
+					has_country_flag = AUH_dnc_path_magyar
+					has_completed_focus = AUHDNC_h_the_word_of_command_in_magyar
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				add = 40
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		select_effect = {
+			country_event = { id = auh_clock.229 days = 10 }
+		}
+		completion_reward = {
+			add_manpower = 30000
+			army_experience = 25
+			add_war_support = 0.05
+			add_command_power = 25
+			if = {
+				limit = { has_idea = AUH_the_frozen_contingent_1 }
+				remove_ideas = AUH_the_frozen_contingent_1
+			}
+			if = {
+				limit = { has_idea = AUH_the_frozen_contingent_2 }
+				remove_ideas = AUH_the_frozen_contingent_2
+			}
+			if = {
+				limit = { has_idea = AUH_the_frozen_contingent_3 }
+				remove_ideas = AUH_the_frozen_contingent_3
+			}
+			clr_country_flag = AUH_the_contingent_locked
+			add_ideas = AUH_arm_the_contingent_unfrozen
+			custom_effect_tooltip = AUH_arm_the_contingent_cleared_tt
+			if = {
+				limit = { has_idea = volunteer_only }
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = limited_conscription
+				}
+			}
+			else_if = {
+				limit = { has_idea = limited_conscription }
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = extensive_conscription
+				}
+			}
+			custom_effect_tooltip = AUH_arm_tt_the_classes_are_called
+			if = {
+				limit = {
+					NOT = { has_template = "Ersatzreserve Brigade" }
+				}
+				division_template = {
+					name = "Ersatzreserve Brigade"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					priority = 0
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1908
+				amount = 3000
+				producer = AUH
+			}
+			set_country_flag = AUH_arm_the_contingent_unfrozen
+			if = {
+				limit = {
+					has_country_flag = AUH_arm_the_scoundrel_route
+				}
+				subtract_from_variable = { var = HUN_support value = 3 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				subtract_from_variable = { var = CZE_support value = 3 }
+				clamp_variable = {
+					var = CZE_support
+					min = 0
+					max = 100
+				}
+				subtract_from_variable = { var = POL_support value = 3 }
+				clamp_variable = {
+					var = POL_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_arm_tt_the_three_columns_read_the_octroi
+				AUH_coercion_act = yes
+				AUH_coercion_act = yes
+				custom_effect_tooltip = AUH_arm_tt_the_ledger_records_the_paragraph
+				add_stability = -0.05
+				add_timed_idea = {
+					idea = AUH_arm_the_law_taken_by_ordinance
+					days = 730
+				}
+			}
+			else = {
+				add_political_power = -75
+				add_to_variable = { var = AUH_gemeinsamkeit value = 3 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+				add_to_variable = { var = HUN_support value = 2 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_arm_tt_the_kingdom_voted_it
+			}
+			hidden_effect = {
+				add_ai_strategy = {
+					type = equipment_production_factor
+					id = infantry
+					value = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_air_the_subsidy_for_herr_kress
+		relative_position_id = AUHDNC_air_the_kress_committee
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_air_the_kress_committee }
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+		ai_will_do = { factor = 2 }
+		select_effect = {
+			country_event = { id = auh_clock.230 days = 30 }
+		}
+		completion_reward = {
+			add_political_power = -25
+			air_experience = 15
+			add_tech_bonus = {
+				name = AUH_tb_the_subsidy_for_herr_kress
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+			set_country_flag = AUH_air_kress_subsidised
+			custom_effect_tooltip = AUH_air_tt_the_subsidy_is_paid
+			if = {
+				limit = {
+					has_country_flag = AUH_air_the_drachenflieger_flew
+				}
+				add_tech_bonus = {
+					name = AUH_tb_the_machine_that_flew
+					bonus = 1.0
+					uses = 1
+					category = light_air
+				}
+				air_experience = 25
+				add_to_variable = { var = AUS_support value = 2 }
+				clamp_variable = {
+					var = AUS_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_air_tt_the_machine_that_flew
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = AUH_air_tt_the_honest_failure
+			}
+			custom_effect_tooltip = AUH_air_modify_aviation_tt
+			add_to_variable = {
+				AUH_dnc_air_experience_gain_air_factor = 0.05
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				AUH_dnc_air_air_accidents_factor = -0.05
+				tooltip = air_accidents_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_air_the_hall_at_fischamend
+		relative_position_id = AUHDNC_air_the_airship_of_the_army
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_air_the_airship_of_the_army }
+		icon = GFX_focus_generic_air_bases
+		cost = 7.5
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = AUH_air_the_hall_at_fischamend
+			air_experience = 25
+			army_experience = 15
+			add_command_power = 25
+			add_tech_bonus = {
+				name = AUH_tb_the_hall_at_fischamend
+				bonus = 1.0
+				uses = 1
+				category = heavy_air
+			}
+			set_country_flag = AUH_air_fischamend_park
+			set_country_flag = AUH_dnc_services_estimates
+			custom_effect_tooltip = AUH_air_tt_the_procurement_opens
+			custom_effect_tooltip = AUH_air_modify_aviation_tt
+			add_to_variable = {
+				AUH_dnc_air_air_range_factor = 0.10
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = {
+				AUH_dnc_air_recon_factor = 0.05
+				tooltip = recon_factor_tt
+			}
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_air_tt_the_park_is_a_garrison
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = air_base
+					value = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_air_the_archdukes_squadron
+		relative_position_id = AUHDNC_air_a_flying_troop
+		x = -2
+		y = 1
+		prerequisite = { focus = AUHDNC_air_a_flying_troop }
+		icon = GFX_focus_AUS_osterreichische_luftstreitkrafte
+		cost = 10
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_ideas = AUH_air_the_archdukes_squadron
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = early_fighter_equipment_1908
+				amount = 40
+				producer = AUH
+			}
+			custom_effect_tooltip = AUH_air_tt_fliegerkompanie_one
+			air_experience = 50
+			add_command_power = 25
+			add_tech_bonus = {
+				name = AUH_tb_the_archdukes_squadron
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+			set_country_flag = AUH_air_leopold_salvator
+			custom_effect_tooltip = AUH_air_tt_leopold_salvator
+			show_ideas_tooltip = AUH_leopold_salvator
+			add_to_variable = { var = AUH_house_prestige value = 3 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			custom_effect_tooltip = AUH_air_modify_aviation_tt
+			add_to_variable = {
+				AUH_dnc_air_experience_gain_air_factor = 0.10
+				tooltip = experience_gain_air_factor_tt
+			}
+			add_to_variable = {
+				AUH_dnc_air_recon_factor = 0.10
+				tooltip = recon_factor_tt
+			}
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			hidden_effect = {
+				country_event = { id = auh_clock.231 days = 60 }
+				add_ai_strategy = {
+					type = build_building
+					id = air_base
+					value = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_scandals_of_the_archdukes
+		relative_position_id = AUHDNC_c_the_first_lord_of_the_household
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_first_lord_of_the_household
+		}
+		icon = GFX_goal_generic_plotting
+		cost = 3
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = AUH_c_scandals_open
+			add_dynamic_modifier = { modifier = AUH_c_the_credit_of_the_dynasty }
+			AUH_house_prestige_dial = yes
+			custom_effect_tooltip = AUH_c_tt_the_dial_of_the_dynasty
+			set_variable = { AUH_heir_grievance = 0 }
+			set_variable = { AUH_scandal_ledger = 0 }
+			custom_effect_tooltip = AUH_c_tt_the_chancellery_watches
+			set_country_flag = AUH_c_otto_franz_josef_known
+			set_country_flag = AUH_c_ludwig_viktor_known
+			custom_effect_tooltip = AUH_c_tt_two_archdukes_named
+			show_ideas_tooltip = AUH_otto_franz_josef
+			show_ideas_tooltip = AUH_ludwig_viktor
+			hidden_effect = {
+				country_event = {
+					id = auh_clock.240
+					days = 40
+					random_days = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_house_law_has_teeth
+		relative_position_id = AUHDNC_c_the_scandals_of_the_archdukes
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = AUHDNC_c_the_scandals_of_the_archdukes
+		}
+		mutually_exclusive = {
+			focus = AUHDNC_c_the_blind_eye_of_the_emperor
+		}
+		icon = GFX_focus_generic_sympathetic_judges
+		cost = 4
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = AUH_c_house_law_teeth
+			custom_effect_tooltip = AUH_c_tt_the_law_is_applied
+			add_ideas = AUH_c_the_house_law_has_teeth
+			add_to_variable = { var = AUH_house_prestige value = 4 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			add_to_variable = { var = AUH_heir_grievance value = 2 }
+			clamp_variable = {
+				var = AUH_heir_grievance
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_c_tt_the_heir_writes_it_down
+			AUH_house_prestige_dial = yes
+			add_to_variable = { var = AUS_support value = 1 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_household_loyalty_tt
+			hidden_effect = {
+				country_event = { id = auh_clock.251 days = 90 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_blind_eye_of_the_emperor
+		relative_position_id = AUHDNC_c_the_scandals_of_the_archdukes
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = AUHDNC_c_the_scandals_of_the_archdukes
+		}
+		mutually_exclusive = { focus = AUHDNC_c_the_house_law_has_teeth }
+		icon = GFX_focus_generic_monarchist_sentiment
+		cost = 3
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = AUH_c_blind_eye
+			custom_effect_tooltip = AUH_c_tt_the_emperor_looks_away
+			add_ideas = AUH_c_the_blind_eye
+			subtract_from_variable = { var = AUH_heir_grievance value = 2 }
+			clamp_variable = {
+				var = AUH_heir_grievance
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_c_tt_the_belvedere_is_quiet
+			AUH_house_prestige_dial = yes
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_to_variable = { var = AUH_belvedere_dossier value = 1 }
+				custom_effect_tooltip = AUH_c_dossier_grows_tt
+				add_political_power = 25
+			}
+			hidden_effect = {
+				country_event = { id = auh_clock.252 days = 120 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_death_of_the_handsome_archduke
+		relative_position_id = AUHDNC_c_the_scandals_of_the_archdukes
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = AUHDNC_c_the_house_law_has_teeth
+			focus = AUHDNC_c_the_blind_eye_of_the_emperor
+		}
+		icon = GFX_focus_generic_monarchy_2
+		cost = 4
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AUH_c_tt_avail_otto_is_dead
+				has_country_flag = AUH_c_otto_is_dead
+			}
+		}
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.02
+			set_country_flag = AUH_c_succession_reshuffled
+			custom_effect_tooltip = AUH_c_tt_the_line_is_read_again
+			set_country_flag = AUH_c_otto_retired
+			custom_effect_tooltip = AUH_c_tt_the_handsome_archduke_retired
+			subtract_from_variable = { var = AUH_house_prestige value = 3 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_down_tt
+			set_country_flag = AUH_c_karl_is_the_boy
+			custom_effect_tooltip = AUH_c_tt_the_boy_is_next_but_one
+			add_to_variable = { var = AUH_old_man_decay_bonus value = 0.25 }
+			custom_effect_tooltip = AUH_c_tt_the_old_man_reads_the_obituary
+			AUH_house_prestige_dial = yes
+			hidden_effect = {
+				country_event = { id = auh_clock.253 days = 30 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_student_at_the_hradcany
+		relative_position_id = AUHDNC_c_the_death_of_the_handsome_archduke
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_c_the_death_of_the_handsome_archduke
+		}
+		icon = GFX_focus_CZE_our_royal_claims
+		cost = 5
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				add = 40
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = AUH_karl_czech_formed
+			custom_effect_tooltip = AUH_c_tt_the_boy_learns_czech
+			add_to_variable = { var = CZE_support value = 2 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_tt_cze_up_2
+			add_to_variable = { var = AUH_house_prestige value = 2 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_dragoon_at_brandeis
+		relative_position_id = AUHDNC_c_the_student_at_the_hradcany
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_student_at_the_hradcany }
+		mutually_exclusive = { focus = AUHDNC_c_the_jesuits_have_him }
+		icon = GFX_focus_GER_army_officer
+		cost = 5
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 40
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_command_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			set_country_flag = AUH_c_karl_the_dragoon
+			custom_effect_tooltip = AUH_c_tt_the_seventh_dragoons
+			if = {
+				limit = {
+					has_character = AUH_karl_i
+					NOT = {
+						any_army_leader = { is_character = AUH_karl_i }
+					}
+				}
+				add_corps_commander_role = {
+					character = AUH_karl_i
+					traits = { politically_connected cavalry_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}
+			else = {
+				hidden_effect = {
+					every_unit_leader = {
+						limit = { is_character = AUH_karl_i }
+						add_skill_level = 1
+						add_attack = 1
+					}
+				}
+			}
+			custom_effect_tooltip = AUH_c_tt_the_boy_wears_the_tunic
+			add_to_variable = { var = AUH_house_prestige value = 2 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			add_tech_bonus = {
+				name = AUH_tb_the_dragoon_at_brandeis
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_jesuits_have_him
+		relative_position_id = AUHDNC_c_the_student_at_the_hradcany
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_student_at_the_hradcany }
+		mutually_exclusive = { focus = AUHDNC_c_the_dragoon_at_brandeis }
+		icon = GFX_focus_generic_catholic_dominion
+		cost = 5
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			set_country_flag = AUH_c_karl_the_devout
+			custom_effect_tooltip = AUH_c_tt_the_fathers_have_him
+			add_ideas = AUH_c_the_clerical_affinity
+			add_to_variable = { var = AUH_house_prestige value = 3 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			add_to_variable = { var = CRO_support value = 2 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			add_to_variable = { var = SLV_support value = 2 }
+			clamp_variable = {
+				var = SLV_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_tt_the_catholic_south_reads_it
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_procession_of_the_sixty_years
+		relative_position_id = AUHDNC_c_the_jubilee_of_the_reign
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_jubilee_of_the_reign }
+		icon = GFX_focus_generic_public_meetings
+		cost = 5
+		ai_will_do = { factor = 5 }
+		select_effect = {
+			country_event = { id = auh_clock.250 days = 15 }
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = AUH_c_the_procession_held
+			add_to_variable = { var = AUH_house_prestige value = 6 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			add_to_variable = { var = AUH_gemeinsamkeit value = 4 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			custom_effect_tooltip = AUH_c_tt_twelve_deputations_march
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_mausoleum_of_the_rebel
+		relative_position_id = AUHDNC_c_the_jubilee_of_the_reign
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_jubilee_of_the_reign }
+		icon = GFX_focus_HUN_the_lands_of_the_crown_of_saint_stephen
+		cost = 4
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 40
+				has_country_flag = AUH_dnc_path_magyar
+			}
+		}
+		select_effect = {
+			country_event = { id = auh_clock.249 days = 12 }
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = AUH_c_the_mausoleum_answered
+			custom_effect_tooltip = AUH_c_tt_the_rebel_is_buried_at_home
+			if = {
+				limit = { has_country_flag = AUH_c_the_crown_attends }
+				add_to_variable = { var = HUN_support value = 5 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_tt_hun_up_5
+				subtract_from_variable = { var = AUH_house_prestige value = 4 }
+				clamp_variable = {
+					var = AUH_house_prestige
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_prestige_down_tt
+				add_to_variable = { var = AUH_heir_grievance value = 1 }
+				clamp_variable = {
+					var = AUH_heir_grievance
+					min = 0
+					max = 20
+				}
+				custom_effect_tooltip = AUH_c_tt_the_heir_writes_it_down
+			}
+			else = {
+				add_to_variable = { var = AUH_house_prestige value = 3 }
+				clamp_variable = {
+					var = AUH_house_prestige
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_prestige_up_tt
+				subtract_from_variable = { var = HUN_support value = 4 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_tt_hun_down_4
+				add_to_variable = { var = AUS_support value = 2 }
+				clamp_variable = {
+					var = AUS_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_household_loyalty_tt
+			}
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_a_duchess_by_degrees
+		relative_position_id = AUHDNC_c_the_mausoleum_of_the_rebel
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_mausoleum_of_the_rebel }
+		prerequisite = {
+			focus = AUHDNC_c_the_seat_below_the_archduchesses
+		}
+		icon = GFX_focus_generic_concessions
+		cost = 4
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 60
+				has_country_flag = AUH_dnc_path_belvedere
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = AUH_c_sophie_ladder_open
+			set_variable = { AUH_sophie_rank = 0 }
+			custom_effect_tooltip = AUH_c_tt_the_ladder_is_opened
+			custom_effect_tooltip = AUH_c_tt_the_hungry_heir
+			subtract_from_variable = { var = AUH_heir_grievance value = 3 }
+			clamp_variable = {
+				var = AUH_heir_grievance
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_c_tt_the_belvedere_is_quiet
+			subtract_from_variable = { var = AUH_house_prestige value = 2 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_down_tt
+			if = {
+				limit = { has_country_flag = AUH_dnc_path_belvedere }
+				add_to_variable = { var = AUH_belvedere_dossier value = 2 }
+				custom_effect_tooltip = AUH_c_dossier_grows_tt
+			}
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_masters_of_the_rituals
+		relative_position_id = AUHDNC_c_the_spanish_ceremonial
+		x = 4
+		y = 2
+		prerequisite = { focus = AUHDNC_c_the_spanish_ceremonial }
+		icon = GFX_focus_generic_monarchy_1
+		cost = 4
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = AUH_c_court_calendar_open
+			set_variable = { AUH_ritual_uses = 0 }
+			custom_effect_tooltip = AUH_c_tt_the_calendar_opens
+			add_ideas = AUH_c_the_court_calendar
+			add_to_variable = { var = AUH_house_prestige value = 3 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			add_to_variable = { var = AUS_support value = 1 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_household_loyalty_tt
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_friend_at_the_villa
+		relative_position_id = AUHDNC_c_the_masters_of_the_rituals
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_masters_of_the_rituals }
+		icon = GFX_goal_generic_improve_relations
+		cost = 3
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+			set_country_flag = AUH_c_the_friend_at_the_villa
+			custom_effect_tooltip = AUH_c_tt_the_walk_at_ischl
+			add_to_variable = { var = AUH_old_man_health value = 5 }
+			clamp_variable = {
+				var = AUH_old_man_health
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_tt_the_old_man_sleeps
+			add_to_variable = { var = AUH_house_prestige value = 2 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_c_prestige_up_tt
+			hidden_effect = {
+				country_event = { id = auh_clock.255 days = 45 }
+			}
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_c_the_crown_of_saint_stephen
+		relative_position_id = AUHDNC_c_the_house_laws_reread
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_c_the_house_laws_reread }
+		icon = GFX_focus_HUN_the_old_habsburg_king
+		cost = 5
+		ai_will_do = { factor = 5 }
+		select_effect = {
+			country_event = { id = auh_clock.254 days = 10 }
+		}
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = AUH_c_tt_the_oath_is_decided
+			if = {
+				limit = { has_country_flag = AUH_crown_oath_promised }
+				add_to_variable = { var = HUN_support value = 4 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_tt_hun_up_4
+				add_to_variable = { var = AUH_gemeinsamkeit value = 2 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+				add_to_variable = { var = AUH_heir_grievance value = 2 }
+				clamp_variable = {
+					var = AUH_heir_grievance
+					min = 0
+					max = 20
+				}
+				custom_effect_tooltip = AUH_c_tt_the_heir_writes_it_down
+			}
+			else = {
+				set_country_flag = AUH_crown_oath_deferred
+				custom_effect_tooltip = AUH_c_tt_the_oath_is_deferred
+				subtract_from_variable = { var = HUN_support value = 3 }
+				clamp_variable = {
+					var = HUN_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_tt_hun_down_3
+				add_to_variable = { var = AUH_house_prestige value = 3 }
+				clamp_variable = {
+					var = AUH_house_prestige
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_c_prestige_up_tt
+			}
+			add_stability = 0.02
+			AUH_house_prestige_dial = yes
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_case_against_belgrade
+		relative_position_id = AUHDNC_bp_the_frontier_shut_to_the_kingdom
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_bp_the_frontier_shut_to_the_kingdom
+			focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
+		}
+		icon = GFX_focus_generic_sympathetic_judges
+		cost = 5
+		available = { country_exists = SER }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_circular_open
+			set_country_flag = AUH_forgery_case_opened
+			custom_effect_tooltip = AUH_kf_circular_opens_the_ladder_tt
+			add_ideas = AUH_bp_the_circular_to_the_chancelleries
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_circular
+				bonus = 1.0
+				uses = 1
+				category = decryption_tech
+			}
+			add_to_variable = { var = AUH_forgery_ledger value = 2 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_up_tt
+			subtract_from_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+			add_named_threat = { threat = 1 name = AUH_kf_threat_the_circular }
+			if = {
+				limit = { country_exists = SER }
+				SER = {
+					add_opinion_modifier = { target = AUH modifier = large_decrease }
+				}
+			}
+			if = {
+				limit = { country_exists = RUS }
+				add_opinion_modifier = { target = RUS modifier = small_decrease }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = AUH_forgery_case_honest }
+						NOT = { has_country_flag = AUH_forgery_case_forged }
+					}
+					country_event = { id = auh_clock.140 days = 5 }
+				}
+				add_ai_strategy = {
+					type = contain
+					id = SER
+					value = 30
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_documents_from_the_legation
+		relative_position_id = AUHDNC_bp_the_case_against_belgrade
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_case_against_belgrade }
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 7.5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+			modifier = {
+				factor = 0.2
+				has_country_flag = AUH_dnc_path_iron_ring
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = AUH_kf_legation_papers
+			set_country_flag = AUH_kf_dossier_upgraded
+			custom_effect_tooltip = AUH_kf_legation_papers_tt
+			add_ideas = AUH_bp_the_papers_from_belgrade
+			add_to_variable = { var = AUH_forgery_ledger value = 4 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_up_tt
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_legation_papers
+				bonus = 1.0
+				uses = 1
+				category = encryption_tech
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = AUH_kf_courtroom_dice_tt
+			}
+			subtract_from_variable = { var = CRO_support value = 2 }
+			clamp_variable = {
+				var = CRO_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_cro_down
+			hidden_effect = {
+				AUH_coercion_act = yes
+				random_list = {
+					55 = {
+						modifier = {
+							factor = 2
+							check_variable = {
+								var = AUH_forgery_ledger
+								value = 12
+								compare = greater_than_or_equals
+							}
+						}
+						country_event = { id = auh_clock.284 days = 25 }
+					}
+					45 = {
+						modifier = {
+							factor = 0.5
+							check_variable = {
+								var = AUH_forgery_ledger
+								value = 12
+								compare = greater_than_or_equals
+							}
+						}
+						country_event = { id = auh_clock.285 days = 25 }
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_scandal_reaches_london
+		relative_position_id = AUHDNC_bp_the_documents_from_the_legation
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_bp_the_documents_from_the_legation
+		}
+		icon = GFX_goal_generic_propaganda
+		cost = 7.5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = -25
+			set_country_flag = AUH_kf_press_office_open
+			custom_effect_tooltip = AUH_kf_press_office_tt
+			add_ideas = AUH_bp_the_press_of_the_powers
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = medium_decrease }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = { target = FRA modifier = medium_decrease }
+			}
+			if = {
+				limit = { has_country_flag = AUH_forgery_exposed }
+				add_stability = -0.05
+				subtract_from_variable = { var = AUH_gemeinsamkeit value = 3 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+				subtract_from_variable = { var = SER_support value = 1 }
+				clamp_variable = {
+					var = SER_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_kf_london_reads_the_forgery_tt
+			}
+			else = {
+				add_political_power = 50
+				add_to_variable = { var = AUH_gemeinsamkeit value = 1 }
+				clamp_variable = {
+					var = AUH_gemeinsamkeit
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+				custom_effect_tooltip = AUH_kf_london_reads_the_case_tt
+			}
+			add_named_threat = { threat = 1 name = AUH_kf_threat_the_scandal }
+			country_event = { id = auh_clock.286 days = 12 }
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_peace_the_ballhausplatz_writes
+		relative_position_id = AUHDNC_bp_the_provinces_are_declared
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_provinces_are_declared }
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		available = {
+			OR = {
+				has_country_flag = AUH_kf_war_run
+				has_country_flag = AUH_clock_serbia_settled
+				has_country_flag = AUH_clock_lovcen_settled
+				check_variable = {
+					var = AUH_clock_months
+					value = 96
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = AUH_bp_the_peace_of_the_ballhausplatz
+			4 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			43 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = AUH_kf_the_peace_dividend_tt
+			add_named_threat = {
+				threat = -3
+				name = AUH_kf_threat_the_peace_is_written
+			}
+			add_to_variable = { var = AUH_house_prestige value = 5 }
+			clamp_variable = {
+				var = AUH_house_prestige
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_prestige_up_tt
+			add_to_variable = { var = AUH_gemeinsamkeit value = 4 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_tt
+			if = {
+				limit = { has_country_flag = AUH_kf_corridor_held }
+				add_to_variable = { var = AUH_kf_corridor_drain value = 0.10 }
+				add_to_variable = { var = AUH_kf_corridor_manpower value = 0.10 }
+				clamp_variable = {
+					var = AUH_kf_corridor_drain
+					min = -0.30
+					max = 0
+				}
+				clamp_variable = {
+					var = AUH_kf_corridor_manpower
+					min = -0.30
+					max = 0
+				}
+				custom_effect_tooltip = AUH_kf_corridor_relieved_tt
+			}
+			if = {
+				limit = { has_country_flag = AUH_x_irredenta_paid }
+				custom_effect_tooltip = AUH_kf_the_irredenta_is_not_written_away_tt
+				add_stability = -0.03
+			}
+			else = {
+				add_to_variable = { var = ITA_support value = 2 }
+				clamp_variable = {
+					var = ITA_support
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_m_tt_ita_up
+			}
+			add_to_variable = { var = BOS_support value = 3 }
+			clamp_variable = {
+				var = BOS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_bos_up
+			set_country_flag = AUH_dnc_era_end
+			set_country_flag = AUH_bp_the_peace_is_written
+			custom_effect_tooltip = AUH_kf_ballhausplatz_era_end_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_railway_to_the_east
+		relative_position_id = AUHDNC_bp_the_line_toward_the_south
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_line_toward_the_south }
+		icon = GFX_focus_railway_contracts
+		cost = 7.5
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_political_power = -25
+			set_country_flag = AUH_sanjak_line_built
+			custom_effect_tooltip = AUH_kf_sanjak_line_tt
+			add_ideas = AUH_bp_the_line_to_mitrovica
+			1047 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			104 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			45 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1046 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1047 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_line_east
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
+			AUH_kf_the_corridor_column = yes
+			custom_effect_tooltip = AUH_kf_etappen_raised_tt
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_hun_up
+			subtract_from_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+			add_to_variable = { var = AUH_russia_anger value = 2 }
+			clamp_variable = {
+				var = AUH_russia_anger
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_kf_petersburg_notices_tt
+			if = {
+				limit = { country_exists = OTT }
+				add_opinion_modifier = { target = OTT modifier = medium_increase }
+			}
+			add_named_threat = {
+				threat = 2
+				name = AUH_kf_threat_the_line_east
+			}
+			country_event = { id = auh_clock.301 days = 20 }
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_guns_on_credit_for_belgrade
+		relative_position_id = AUHDNC_bp_the_treaty_the_kingdom_wanted
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_bp_the_treaty_the_kingdom_wanted
+		}
+		icon = GFX_goal_national_arsenal
+		cost = 5
+		available = {
+			country_exists = SER
+			NOT = { has_war_with = SER }
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = AUH_kf_export_credit_open
+			custom_effect_tooltip = AUH_kf_export_credit_tt
+			add_ideas = AUH_bp_the_guns_on_credit
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_export_orders
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = AUH
+			}
+			add_to_variable = { var = SER_support value = 3 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_up
+			add_to_variable = { var = CZE_support value = 2 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_pilsen_has_the_order_tt
+			if = {
+				limit = { country_exists = SER }
+				SER = {
+					add_opinion_modifier = { target = AUH modifier = large_increase }
+				}
+			}
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = { target = FRA modifier = medium_decrease }
+			}
+			country_event = { id = auh_clock.297 days = 30 }
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_ships_that_pass_the_straits
+		relative_position_id = AUHDNC_bp_the_meeting_at_buchlovice
+		x = 4
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_meeting_at_buchlovice }
+		icon = GFX_focus_generic_adriatic_sea_focus
+		cost = 7.5
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_political_power = 50
+			navy_experience = 20
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_straits_office_open
+			custom_effect_tooltip = AUH_kf_straits_office_tt
+			add_ideas = AUH_bp_the_bargain_at_the_straits
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_straits
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+			if = {
+				limit = { has_country_flag = AUH_bp_minutes_taken }
+				set_country_flag = AUH_bp_straits_honest
+				custom_effect_tooltip = AUH_kf_straits_honest_tt
+				add_stability = 0.03
+				if = {
+					limit = { country_exists = RUS }
+					add_opinion_modifier = { target = RUS modifier = medium_increase }
+					RUS = {
+						add_opinion_modifier = { target = AUH modifier = medium_increase }
+					}
+				}
+			}
+			else = {
+				set_country_flag = AUH_bp_straits_deceived
+				custom_effect_tooltip = AUH_kf_straits_deceived_tt
+				add_to_variable = { var = AUH_russia_anger value = 4 }
+				clamp_variable = {
+					var = AUH_russia_anger
+					min = 0
+					max = 20
+				}
+				custom_effect_tooltip = AUH_kf_petersburg_notices_tt
+				if = {
+					limit = { country_exists = RUS }
+					RUS = {
+						add_opinion_modifier = { target = AUH modifier = large_decrease }
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = medium_decrease }
+			}
+			if = {
+				limit = { country_exists = OTT }
+				add_opinion_modifier = { target = OTT modifier = medium_decrease }
+			}
+			add_to_variable = { AUH_bp_credit = 1 }
+			add_to_variable = { AUH_bp_credit_opinion = 0.05 }
+			add_to_variable = { AUH_bp_credit_trade = 0.05 }
+			custom_effect_tooltip = AUH_bp_credit_up2_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_note_from_berlin
+		relative_position_id = AUHDNC_bp_the_ships_that_pass_the_straits
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUHDNC_bp_the_ships_that_pass_the_straits
+		}
+		icon = GFX_goal_three_emperors_league
+		cost = 10
+		available = {
+			country_exists = GER
+			NOT = { has_war_with = GER }
+		}
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			set_country_flag = AUH_bp_berlin_cover
+			custom_effect_tooltip = AUH_kf_berlin_cover_tt
+			add_ideas = AUH_bp_the_note_from_berlin
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 400
+				producer = GER
+			}
+			add_command_power = 50
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = AUH_tb_kf_the_note
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = { target = GER modifier = large_increase }
+				GER = {
+					add_opinion_modifier = { target = AUH modifier = large_increase }
+				}
+			}
+			if = {
+				limit = { country_exists = RUS }
+				RUS = {
+					add_opinion_modifier = { target = AUH modifier = large_decrease }
+				}
+			}
+			add_to_variable = { var = AUH_russia_anger value = 3 }
+			clamp_variable = {
+				var = AUH_russia_anger
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_kf_petersburg_notices_tt
+			add_to_variable = { var = AUS_support value = 2 }
+			clamp_variable = {
+				var = AUS_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_the_germans_are_pleased_tt
+			subtract_from_variable = { var = CZE_support value = 2 }
+			clamp_variable = {
+				var = CZE_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_prague_reads_berlin_tt
+			hidden_effect = {
+				add_ai_strategy = {
+					type = alliance
+					id = GER
+					value = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_ally_who_plans_to_defect
+		relative_position_id = AUHDNC_bp_the_note_from_berlin
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_note_from_berlin }
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 7.5
+		available = { country_exists = ITA }
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_political_power = 25
+			add_command_power = 25
+			set_country_flag = AUH_bp_the_ally_is_read
+			custom_effect_tooltip = AUH_kf_ally_is_read_tt
+			add_ideas = AUH_bp_the_ally_who_plans_to_defect
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_ally_is_read
+				bonus = 1.0
+				uses = 1
+				category = decryption_tech
+			}
+			navy_experience = 15
+			army_experience = 15
+			subtract_from_variable = { var = ITA_support value = 1 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ita_down
+			if = {
+				limit = { country_exists = ITA }
+				add_opinion_modifier = { target = ITA modifier = medium_decrease }
+			}
+			hidden_effect = {
+				add_ai_strategy = {
+					type = contain
+					id = ITA
+					value = 30
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_alphabet_of_monastir
+		relative_position_id = AUHDNC_bp_the_line_toward_the_south
+		x = 2
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_line_toward_the_south }
+		icon = GFX_focus_generic_self_management
+		cost = 7.5
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_political_power = 25
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_albania_open
+			custom_effect_tooltip = AUH_kf_albania_office_tt
+			add_ideas = AUH_bp_the_office_for_albania
+			if = {
+				limit = { has_character = AUH_lajos_thalloczy }
+				add_advisor_role = {
+					character = AUH_lajos_thalloczy
+					advisor = {
+						slot = political_advisor
+						cost = 100
+						idea_token = AUH_bp_thalloczy_at_the_ballhausplatz
+						traits = { diplomat }
+					}
+					activate = no
+				}
+				custom_effect_tooltip = AUH_kf_thalloczy_tt
+			}
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_alphabet
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			if = {
+				limit = { country_exists = OTT }
+				add_opinion_modifier = { target = OTT modifier = medium_decrease }
+			}
+			if = {
+				limit = { country_exists = SER }
+				SER = {
+					add_opinion_modifier = { target = AUH modifier = medium_decrease }
+				}
+			}
+			if = {
+				limit = { country_exists = ITA }
+				add_opinion_modifier = { target = ITA modifier = medium_decrease }
+			}
+			add_named_threat = { threat = 1 name = AUH_alb_threat_the_office }
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_faculty_at_the_allys_port
+		relative_position_id = AUHDNC_bp_the_alphabet_of_monastir
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_bp_the_alphabet_of_monastir }
+		icon = GFX_focus_generic_university_2
+		cost = 7.5
+		available = {
+			country_exists = ITA
+			NOT = { has_war_with = ITA }
+			NOT = { has_country_flag = AUH_clock_messina_war }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03
+			set_country_flag = AUH_bp_the_faculty_granted
+			set_country_flag = AUH_clock_messina_reconciled
+			custom_effect_tooltip = AUH_kf_faculty_reconciles_tt
+			add_ideas = AUH_bp_the_faculty_at_the_port
+			993 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_faculty
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_faculty
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			993 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { var = ITA_support value = 4 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ita_up
+			subtract_from_variable = { var = SLV_support value = 2 }
+			clamp_variable = {
+				var = SLV_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_the_slovenes_of_the_port_tt
+			if = {
+				limit = { country_exists = ITA }
+				add_opinion_modifier = { target = ITA modifier = large_increase }
+				ITA = {
+					add_opinion_modifier = { target = AUH modifier = large_increase }
+				}
+			}
+			add_named_threat = { threat = -2 name = AUH_kf_threat_the_faculty }
+			hidden_effect = {
+				add_ai_strategy = {
+					type = befriend
+					id = ITA
+					value = 60
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_bp_the_compensation_of_the_seventh_article
+		relative_position_id = AUHDNC_bp_the_faculty_at_the_allys_port
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = AUHDNC_bp_the_faculty_at_the_allys_port
+		}
+		icon = GFX_focus_generic_conference
+		cost = 7.5
+		available = {
+			country_exists = ITA
+			NOT = { has_war_with = ITA }
+		}
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = AUH_bp_the_seventh_article_paid
+			custom_effect_tooltip = AUH_kf_seventh_article_tt
+			add_ideas = AUH_bp_the_seventh_article
+			add_to_variable = { var = ITA_support value = 2 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ita_up
+			if = {
+				limit = { country_exists = ITA }
+				diplomatic_relation = {
+					country = ITA
+					relation = non_aggression_pact
+				}
+			}
+			if = {
+				limit = { country_exists = OTT }
+				add_opinion_modifier = { target = OTT modifier = large_decrease }
+			}
+			add_named_threat = {
+				threat = 1
+				name = AUH_kf_threat_the_seventh_article
+			}
+			add_to_variable = { AUH_bp_credit = 1 }
+			add_to_variable = { AUH_bp_credit_opinion = 0.05 }
+			add_to_variable = { AUH_bp_credit_trade = 0.05 }
+			custom_effect_tooltip = AUH_bp_credit_up2_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_arm_the_cases_in_the_drawer
+		relative_position_id = AUHDNC_arm_the_administrator
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = AUHDNC_arm_the_administrator
+			focus = AUHDNC_arm_keep_the_old_chief
+			focus = AUHDNC_arm_the_heirs_candidate
+		}
+		icon = GFX_goal_generic_position_armies
+		cost = 7.5
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 2
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_command_power = 50
+			army_experience = 25
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_drawer_open
+			custom_effect_tooltip = AUH_kf_drawer_open_tt
+			add_ideas = AUH_arm_the_cases_in_the_drawer
+			add_doctrine_cost_reduction = {
+				name = AUH_tb_kf_the_drawer
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_drawer
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_war_support = 0.03
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1900
+				amount = 1500
+				producer = AUH
+			}
+			custom_effect_tooltip = AUH_kf_the_depots_are_stocked_tt
+			if = {
+				limit = { has_variable = AUH_mortar_progress }
+				add_to_variable = { var = AUH_mortar_progress value = 25 }
+				clamp_variable = {
+					var = AUH_mortar_progress
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = AUH_kf_the_shed_is_funded_tt
+			}
+			country_event = { id = auh_clock.290 days = 20 }
+		}
+	}
+
+	focus = {
+		id = AUHDNC_arm_the_memoranda_of_the_chief
+		relative_position_id = AUHDNC_arm_the_heirs_candidate
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = AUHDNC_arm_the_administrator
+			focus = AUHDNC_arm_keep_the_old_chief
+			focus = AUHDNC_arm_the_heirs_candidate
+		}
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 5
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_command_power = 25
+			army_experience = 15
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_memoranda_open
+			custom_effect_tooltip = AUH_kf_memoranda_open_tt
+			add_ideas = AUH_arm_the_memoranda_of_the_chief
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_memoranda
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			if = {
+				limit = {
+					has_country_flag = AUH_arm_the_offensive_school
+				}
+				add_war_support = 0.03
+				custom_effect_tooltip = AUH_kf_the_chief_is_conrad_tt
+			}
+			else = {
+				add_stability = 0.02
+				custom_effect_tooltip = AUH_kf_the_chief_is_not_conrad_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_m_the_hunt_for_the_traitor
+		relative_position_id = AUHDNC_m_the_counter_espionage_group
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_m_the_counter_espionage_group }
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 7.5
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 25
+			add_command_power = 25
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_hunt_open
+			custom_effect_tooltip = AUH_kf_hunt_open_tt
+			add_ideas = AUH_m_the_hunt_for_the_traitor
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_hunt
+				bonus = 1.0
+				uses = 1
+				category = decryption_tech
+			}
+			add_to_variable = { var = AUH_forgery_ledger value = 2 }
+			clamp_variable = {
+				var = AUH_forgery_ledger
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_mem_ledger_up_tt
+			subtract_from_variable = { var = UKR_support value = 1 }
+			clamp_variable = {
+				var = UKR_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_the_ruthenes_are_watched_tt
+		}
+	}
+
+	focus = {
+		id = AUHDNC_nav_the_battery_on_the_mountain
+		relative_position_id = AUHDNC_nav_the_bay_of_cattaro
+		x = 0
+		y = 1
+		prerequisite = { focus = AUHDNC_nav_the_bay_of_cattaro }
+		icon = GFX_focus_generic_mountain_fortification
+		cost = 5
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_war_support = 0.03
+			army_experience = 15
+			navy_experience = 10
+			AUH_war_vars_init = yes
+			set_country_flag = AUH_kf_lovcen_open
+			custom_effect_tooltip = AUH_kf_lovcen_open_tt
+			add_ideas = AUH_nav_the_battery_on_the_mountain
+			940 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 9821
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9821
+					instant_build = yes
+				}
+			}
+			AUH_kf_the_siege_battery = yes
+			custom_effect_tooltip = AUH_kf_siege_battery_tt
+			add_tech_bonus = {
+				name = AUH_tb_kf_the_heights
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = AUH
+			}
+			subtract_from_variable = { var = SER_support value = 2 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+			add_named_threat = {
+				threat = 1
+				name = AUH_clock_threat_the_mountain
+			}
+			if = {
+				limit = { country_exists = MNT }
+				MNT = {
+					add_opinion_modifier = { target = AUH modifier = large_decrease }
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						country_exists = MNT
+						NOT = { has_war_with = MNT }
+						NOT = { has_country_flag = AUH_clock_lovcen_posted }
+					}
+					set_country_flag = AUH_clock_lovcen_posted
+					country_event = { id = auh_clock.180 days = 10 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_window_at_messina
+		x = 197
+		y = 9
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_goal_generic_major_war
+		cost = 3
+		allow_branch = { has_country_flag = AUH_clock_messina_fired }
+		available = {
+			country_exists = ITA
+			NOT = { has_war_with = ITA }
+			NOT = {
+				has_country_flag = AUH_clock_messina_reconciled
+			}
+			NOT = {
+				has_country_flag = AUH_bp_the_faculty_granted
+			}
+			NOT = { has_country_flag = AUH_clock_messina_war }
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_messina_conrad_tt
+				OR = {
+					has_country_flag = AUH_m_conrad_at_the_staff
+					has_country_flag = AUH_arm_the_offensive_school
+					has_country_flag = AUH_kf_case_i_filed
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_messina_cover_tt
+				OR = {
+					has_completed_focus = AUHDNC_bp_the_note_from_berlin
+					has_country_flag = AUH_clock_alliance_priced
+					has_country_flag = AUH_bp_the_ally_is_read
+					check_variable = {
+						var = ITA_support
+						value = 20
+						compare = less_than
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 6
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_command_power = 50
+			army_experience = 25
+			set_country_flag = {
+				flag = AUH_window_messina_open
+				days = 150
+				value = 1
+			}
+			add_manpower = 30000
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1908
+				amount = 3000
+				producer = AUH
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = AUH
+			}
+			custom_effect_tooltip = AUH_kf_the_classes_are_called_tt
+			custom_effect_tooltip = AUH_x_messina_window_tt
+			AUH_war_conduct_west = yes
+			create_wargoal = {
+				type = take_state_focus
+				target = ITA
+				generator = { 160 986 }
+			}
+			set_country_flag = AUH_clock_messina_war
+			add_named_threat = { threat = 5 name = AUH_clock_messina_threat }
+			add_ideas = AUH_x_the_irredenta_is_permanent
+			set_country_flag = AUH_x_irredenta_paid
+			set_country_flag = AUH_irredenta_ITA
+			custom_effect_tooltip = AUH_x_messina_irredenta_cost_tt
+			subtract_from_variable = { var = ITA_support value = 4 }
+			clamp_variable = {
+				var = ITA_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ita_down
+			subtract_from_variable = { var = SLV_support value = 1 }
+			clamp_variable = {
+				var = SLV_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_messina_littoral_tt
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = { target = GER modifier = medium_decrease }
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = large_decrease }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = { target = FRA modifier = large_decrease }
+			}
+			hidden_effect = {
+				AUH_coercion_act = yes
+				add_ai_strategy = {
+					type = antagonize
+					id = ITA
+					value = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_corridor_to_salonika
+		x = 199
+		y = 10
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 3
+		allow_branch = { has_country_flag = AUH_sanjak_line_built }
+		available = {
+			country_exists = OTT
+			NOT = { has_war_with = OTT }
+			has_country_flag = AUH_sanjak_line_built
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_salonika_convulsion_tt
+				OR = {
+					has_country_flag = AUH_clock_bell_east
+					has_global_flag = AUH_the_constitution_restored_in_the_east
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_salonika_ready_tt
+				OR = {
+					has_country_flag = AUH_m_wedge_kept
+					has_country_flag = AUH_dnc_provinces_declared
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_salonika_cover_tt
+				OR = {
+					has_country_flag = AUH_bp_the_seventh_article_paid
+					has_completed_focus = AUHDNC_bp_the_note_from_berlin
+					check_variable = {
+						var = ITA_support
+						value = 45
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_command_power = 50
+			army_experience = 25
+			set_country_flag = {
+				flag = AUH_window_salonika_open
+				days = 180
+				value = 1
+			}
+			add_manpower = 30000
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1908
+				amount = 3000
+				producer = AUH
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = AUH
+			}
+			custom_effect_tooltip = AUH_kf_the_classes_are_called_tt
+			custom_effect_tooltip = AUH_x_salonika_window_tt
+			AUH_war_conduct_south = yes
+			create_wargoal = {
+				type = take_state_focus
+				target = OTT
+				generator = { 1155 941 802 1156 1158 106 970 731 }
+			}
+			set_country_flag = AUH_kf_salonika_named
+			add_named_threat = { threat = 4 name = AUH_kf_threat_the_corridor }
+			AUH_kf_the_corridor_column = yes
+			custom_effect_tooltip = AUH_kf_etappen_raised_tt
+			add_to_variable = { var = AUH_russia_anger value = 4 }
+			clamp_variable = {
+				var = AUH_russia_anger
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_kf_petersburg_notices_tt
+			subtract_from_variable = { var = SER_support value = 3 }
+			clamp_variable = {
+				var = SER_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_m_tt_ser_down
+			add_to_variable = { var = HUN_support value = 2 }
+			clamp_variable = {
+				var = HUN_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_kf_the_exporters_want_the_aegean_tt
+			if = {
+				limit = { country_exists = SER }
+				SER = {
+					add_opinion_modifier = { target = AUH modifier = large_decrease }
+				}
+			}
+			if = {
+				limit = { country_exists = BUL }
+				add_opinion_modifier = { target = BUL modifier = medium_decrease }
+			}
+			if = {
+				limit = { country_exists = GRE }
+				add_opinion_modifier = { target = GRE modifier = large_decrease }
+			}
+			hidden_effect = {
+				AUH_coercion_act = yes
+				add_ai_strategy = {
+					type = antagonize
+					id = OTT
+					value = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUHDNC_x_the_reckoning_with_russia
+		x = 201
+		y = 9
+		prerequisite = { focus = AUHDNC_the_dual_monarchy }
+		icon = GFX_focus_generic_polish_deal
+		cost = 4
+		allow_branch = {
+			OR = {
+				has_country_flag = AUH_clock_bell_east
+				has_country_flag = AUH_x_vistula_war_hook
+			}
+		}
+		available = {
+			country_exists = RUS
+			NOT = { has_war_with = RUS }
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_russia_cover_tt
+				has_completed_focus = AUHDNC_bp_the_note_from_berlin
+			}
+			custom_trigger_tooltip = {
+				tooltip = AUH_x_russia_moment_tt
+				OR = {
+					AND = {
+						has_country_flag = AUH_clock_bell_east
+						RUS = {
+							OR = {
+								has_war = yes
+								has_stability < 0.4
+							}
+						}
+					}
+					has_country_flag = AUH_x_vistula_war_hook
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				has_country_flag = AUH_dnc_path_sword
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_command_power = 50
+			army_experience = 25
+			set_country_flag = {
+				flag = AUH_window_russia_open
+				days = 120
+				value = 1
+			}
+			add_manpower = 30000
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1908
+				amount = 3000
+				producer = AUH
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+				producer = AUH
+			}
+			custom_effect_tooltip = AUH_kf_the_classes_are_called_tt
+			custom_effect_tooltip = AUH_x_russia_window_tt
+			AUH_war_conduct_east = yes
+			create_wargoal = {
+				type = take_state_focus
+				target = RUS
+				generator = { 10 87 92 97 }
+			}
+			set_country_flag = AUH_kf_russia_named
+			add_named_threat = {
+				threat = 6
+				name = AUH_kf_threat_the_reckoning
+			}
+			add_ideas = AUH_x_the_price_of_the_note
+			subtract_from_variable = { var = AUH_gemeinsamkeit value = 5 }
+			clamp_variable = {
+				var = AUH_gemeinsamkeit
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_a_gemeinsamkeit_down_tt
+			subtract_from_variable = { var = UKR_support value = 2 }
+			clamp_variable = {
+				var = UKR_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_russia_ruthenes_tt
+			add_to_variable = { var = POL_support value = 3 }
+			clamp_variable = {
+				var = POL_support
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = AUH_x_russia_poles_tt
+			add_to_variable = { var = AUH_russia_anger value = 6 }
+			clamp_variable = {
+				var = AUH_russia_anger
+				min = 0
+				max = 20
+			}
+			custom_effect_tooltip = AUH_kf_petersburg_notices_tt
+			if = {
+				limit = { country_exists = GER }
+				GER = {
+					add_opinion_modifier = { target = AUH modifier = medium_decrease }
+				}
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = large_decrease }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = { target = FRA modifier = large_decrease }
+			}
+			hidden_effect = {
+				AUH_coercion_act = yes
+				add_ai_strategy = {
+					type = antagonize
+					id = RUS
+					value = 100
+				}
+				country_event = { id = auh_clock.307 days = 6 }
+			}
 		}
 	}
 }

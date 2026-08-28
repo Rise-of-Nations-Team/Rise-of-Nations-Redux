@@ -1,0 +1,504 @@
+AUH_war_vars_init = {
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_kf_plans }
+		}
+		set_variable = { AUH_kf_plans = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_war_conduct }
+		}
+		set_variable = { AUH_war_conduct = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_conrad_memoranda }
+		}
+		set_variable = { AUH_conrad_memoranda = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_albania_years }
+		}
+		set_variable = { AUH_albania_years = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_redl_smoke }
+		}
+		set_variable = { AUH_redl_smoke = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_russia_anger }
+		}
+		set_variable = { AUH_russia_anger = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_kf_corridor_drain }
+		}
+		set_variable = { AUH_kf_corridor_drain = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_kf_corridor_manpower }
+		}
+		set_variable = { AUH_kf_corridor_manpower = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_kf_berlin_talks }
+		}
+		set_variable = { AUH_kf_berlin_talks = 0 }
+	}
+}
+
+AUH_war_conduct_common = {
+	hidden_effect = {
+		set_variable = { AUH_war_conduct = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_arm_the_new_military_law_passed
+			}
+		}
+		custom_effect_tooltip = AUH_kf_conduct_no_army_bill_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_idea = AUH_the_frozen_contingent_1
+				has_idea = AUH_the_frozen_contingent_2
+				has_idea = AUH_the_frozen_contingent_3
+				NOT = {
+					has_completed_focus = AUHDNC_arm_the_recruit_contingent
+				}
+			}
+		}
+		custom_effect_tooltip = AUH_kf_conduct_frozen_contingent_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+}
+
+AUH_redl_poison = {
+	if = {
+		limit = { has_country_flag = AUH_redl_unmasked }
+		subtract_from_variable = { var = AUH_war_conduct value = 1 }
+		country_event = { id = auh_clock.319 days = 4 }
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				var = AUH_redl_ledger
+				value = 16
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = AUH_war_conduct value = 2 }
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				var = AUH_redl_ledger
+				value = 8
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = AUH_war_conduct value = 1 }
+	}
+}
+
+AUH_war_opening_route = {
+	hidden_effect = {
+		set_country_flag = AUH_kf_war_run
+		clamp_variable = {
+			var = AUH_war_conduct
+			min = 0
+			max = 4
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_war_conduct
+					value = 0
+					compare = equals
+				}
+			}
+			country_event = { id = auh_clock.315 days = 9 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AUH_war_conduct
+					value = 1
+					compare = equals
+				}
+			}
+			country_event = { id = auh_clock.316 days = 9 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AUH_war_conduct
+					value = 2
+					compare = equals
+				}
+			}
+			country_event = { id = auh_clock.317 days = 9 }
+		}
+		else = {
+			country_event = { id = auh_clock.318 days = 9 }
+		}
+	}
+}
+
+AUH_war_conduct_west = {
+	AUH_war_conduct_common = yes
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_kf_case_i_filed }
+		}
+		custom_effect_tooltip = AUH_kf_conduct_no_case_i_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = AUHDNC_arm_the_alpine_barrier
+			}
+			NOT = {
+				has_completed_focus = AUHDNC_arm_the_mountain_troops
+			}
+		}
+		custom_effect_tooltip = AUH_kf_conduct_open_alps_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	hidden_effect = {
+		if = {
+			limit = { has_country_flag = AUH_kf_italy_forewarned }
+			subtract_from_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+	AUH_war_opening_route = yes
+}
+
+AUH_war_conduct_south = {
+	AUH_war_conduct_common = yes
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_kf_case_b_filed }
+		}
+		custom_effect_tooltip = AUH_kf_conduct_no_case_b_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+	hidden_effect = { AUH_redl_poison = yes }
+	AUH_war_opening_route = yes
+}
+
+AUH_war_conduct_east = {
+	AUH_war_conduct_common = yes
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_kf_case_r_filed }
+		}
+		custom_effect_tooltip = AUH_kf_conduct_no_case_r_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = AUHDNC_arm_the_galician_bastion
+			}
+		}
+		custom_effect_tooltip = AUH_kf_conduct_no_bastion_tt
+		hidden_effect = {
+			add_to_variable = { var = AUH_war_conduct value = 1 }
+		}
+	}
+
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_kf_berlin_talks
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			subtract_from_variable = { var = AUH_war_conduct value = 1 }
+		}
+		AUH_redl_poison = yes
+	}
+	AUH_war_opening_route = yes
+}
+
+AUH_kf_the_siege_battery = {
+	if = {
+		limit = {
+			NOT = { has_template = "Belagerungsbatterie" }
+		}
+		division_template = {
+			name = "Belagerungsbatterie"
+			regiments = {
+				artillery_brigade = { x = 0 y = 0 }
+				artillery_brigade = { x = 0 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+	}
+
+	940 = {
+		create_unit = {
+			division = "name = \"k.u.k. Belagerungsbatterie Cattaro\" division_template = \"Belagerungsbatterie\" start_experience_factor = 0.4"
+			owner = AUH
+		}
+	}
+}
+
+AUH_kf_the_corridor_column = {
+	if = {
+		limit = {
+			NOT = { has_template = "Etappenbrigade" }
+		}
+		division_template = {
+			name = "Etappenbrigade"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				cavalry = { x = 1 y = 0 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 0
+		}
+	}
+
+	1047 = {
+		create_unit = {
+			division = "name = \"Etappenbrigade Uvac\" division_template = \"Etappenbrigade\" start_experience_factor = 0.3"
+			owner = AUH
+		}
+		create_unit = {
+			division = "name = \"Etappenbrigade Plevlje\" division_template = \"Etappenbrigade\" start_experience_factor = 0.3"
+			owner = AUH
+		}
+	}
+}
+
+AUH_kf_corridor_take = {
+	transfer_state = 1155
+	transfer_state = 941
+	transfer_state = 1156
+	transfer_state = 1158
+	set_country_flag = AUH_kf_corridor_held
+	add_dynamic_modifier = {
+		modifier = AUH_kf_the_garrisons_of_the_corridor
+	}
+	set_variable = { AUH_kf_corridor_drain = -0.05 }
+	set_variable = { AUH_kf_corridor_manpower = -0.05 }
+	1155 = {
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	941 = {
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+AUH_war_clock_check = {
+	if = {
+		limit = { has_country_flag = AUH_kf_corridor_held }
+		add_to_variable = { var = AUH_kf_corridor_drain value = -0.005 }
+		add_to_variable = {
+			var = AUH_kf_corridor_manpower
+			value = -0.005
+		}
+		clamp_variable = {
+			var = AUH_kf_corridor_drain
+			min = -0.30
+			max = 0
+		}
+		clamp_variable = {
+			var = AUH_kf_corridor_manpower
+			min = -0.30
+			max = 0
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_kf_peace_italy_offered
+			}
+			country_exists = ITA
+			has_war_with = ITA
+			ITA = {
+				OR = {
+					has_capitulated = yes
+					surrender_progress > 0.4
+				}
+			}
+		}
+		set_country_flag = AUH_kf_peace_italy_offered
+		country_event = { id = auh_clock.292 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_kf_peace_corridor_offered
+			}
+			country_exists = OTT
+			has_war_with = OTT
+			OR = {
+				controls_state = 731
+				OTT = {
+					OR = {
+						has_capitulated = yes
+						surrender_progress > 0.35
+					}
+				}
+			}
+		}
+		set_country_flag = AUH_kf_peace_corridor_offered
+		country_event = { id = auh_clock.302 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_kf_peace_russia_offered
+			}
+			country_exists = RUS
+			has_war_with = RUS
+			RUS = {
+				OR = {
+					has_capitulated = yes
+					surrender_progress > 0.5
+				}
+			}
+		}
+		set_country_flag = AUH_kf_peace_russia_offered
+		country_event = { id = auh_clock.308 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_kf_east_lost }
+			country_exists = RUS
+			has_war_with = RUS
+			surrender_progress > 0.4
+		}
+		set_country_flag = AUH_kf_east_lost
+		country_event = { id = auh_clock.309 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_kf_league_formed }
+			has_country_flag = AUH_kf_corridor_held
+			country_exists = SER
+			check_variable = {
+				var = AUH_clock_months
+				value = 96
+				compare = greater_than_or_equals
+			}
+		}
+		random_list = {
+			80 = { }
+			20 = {
+				set_country_flag = AUH_kf_league_formed
+				country_event = { id = auh_clock.300 days = 5 }
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = AUH_kf_petersburg_answered
+			}
+			check_variable = {
+				var = AUH_russia_anger
+				value = 8
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = AUH_kf_petersburg_answered
+		country_event = { id = auh_clock.299 days = 6 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = AUH_redl_unmasked }
+			check_variable = {
+				var = AUH_redl_ledger
+				value = 10
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = AUH_redl_smoke
+				value = 2
+				compare = less_than
+			}
+		}
+		random_list = {
+			92 = { }
+			8 = {
+				country_event = { id = auh_clock.287 days = 4 }
+			}
+		}
+	}
+}
+
+AUH_redl_smoke_seen = {
+	add_to_variable = { var = AUH_redl_smoke value = 1 }
+	clamp_variable = {
+		var = AUH_redl_smoke
+		min = 0
+		max = 4
+	}
+}

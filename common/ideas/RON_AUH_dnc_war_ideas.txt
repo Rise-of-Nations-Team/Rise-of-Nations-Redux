@@ -1,0 +1,386 @@
+ideas = {
+	country = {
+		AUH_arm_the_cases_in_the_drawer = {
+			picture = generic_war_preparation
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.10
+				max_planning = 0.05
+				army_leader_start_planning_level = 1
+				political_power_factor = -0.03
+			}
+		}
+		AUH_arm_the_memoranda_of_the_chief = {
+			picture = generic_army_war_college
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.05
+				army_attack_factor = 0.03
+				stability_factor = -0.03
+				justify_war_goal_time = -0.10
+			}
+		}
+		AUH_m_the_hunt_for_the_traitor = {
+			picture = generic_secret_police
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				encryption_factor = 0.10
+				decryption_factor = 0.05
+				enemy_operative_detection_chance_factor = 0.15
+				political_power_factor = -0.02
+			}
+		}
+		AUH_kf_the_case_against_italy = {
+			picture = generic_mountain_warfare
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.05
+				max_dig_in = 2
+				acclimatization_cold_climate_gain_factor = 0.10
+			}
+		}
+		AUH_kf_the_case_in_the_balkans = {
+			picture = generic_war_preparation
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				mobilization_speed = 0.10
+				supply_consumption_factor = -0.05
+			}
+		}
+		AUH_kf_the_case_in_the_east = {
+			picture = generic_fortify_the_borders
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				production_speed_bunker_factor = 0.15
+				land_reinforce_rate = 0.02
+			}
+		}
+		AUH_kf_the_case_at_home = {
+			picture = generic_oppression
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				resistance_growth = -0.10
+				stability_factor = 0.03
+				political_power_factor = 0.05
+				drift_defence_factor = -0.05
+			}
+		}
+		AUH_kf_the_bought_witnesses = {
+			picture = generic_purge
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.25
+				stability_factor = -0.05
+				drift_defence_factor = -0.05
+			}
+		}
+		AUH_kf_the_rifle_clubs_of_galicia = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.005
+				special_forces_cap = 0.05
+				experience_gain_army_factor = 0.03
+			}
+		}
+		AUH_alb_the_albanian_office = {
+			picture = generic_local_self_management
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				compliance_growth = 0.05
+				political_power_factor = -0.02
+			}
+		}
+		AUH_bp_the_circular_to_the_chancelleries = {
+			picture = generic_spy_political
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.10
+				opinion_gain_monthly_factor = -0.05
+				political_power_factor = 0.03
+			}
+		}
+		AUH_bp_the_papers_from_belgrade = {
+			picture = generic_spy_intel
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.10
+				enemy_operative_detection_chance_factor = 0.10
+				stability_factor = -0.03
+			}
+		}
+		AUH_bp_the_press_of_the_powers = {
+			picture = generic_democratic_opposition
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				opinion_gain_monthly_factor = 0.10
+				join_faction_tension = -0.05
+			}
+		}
+		AUH_bp_the_line_to_mitrovica = {
+			picture = generic_train_tracks
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				supply_node_range = 0.10
+				supply_consumption_factor = -0.05
+			}
+		}
+		AUH_bp_the_guns_on_credit = {
+			picture = generic_license_production
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				trade_opinion_factor = 0.10
+				industrial_capacity_factory = 0.02
+			}
+		}
+		AUH_bp_the_bargain_at_the_straits = {
+			picture = generic_flexible_foreign_policy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.10
+				experience_gain_navy_factor = 0.05
+				opinion_gain_monthly_factor = 0.05
+			}
+		}
+		AUH_bp_the_note_from_berlin = {
+			picture = generic_deal_with_the_devil
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.20
+				join_faction_tension = -0.20
+				ai_call_ally_desire_factor = 20
+				political_power_factor = -0.05
+			}
+		}
+		AUH_bp_the_ally_who_plans_to_defect = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.10
+				naval_detection = 0.10
+				army_leader_cost_factor = -0.10
+			}
+		}
+		AUH_bp_the_office_for_albania = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.05
+				political_power_gain = 0.10
+				trade_opinion_factor = 0.05
+			}
+		}
+		AUH_bp_the_faculty_at_the_port = {
+			picture = generic_literacy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = 0.03
+				opinion_gain_monthly_factor = 0.05
+			}
+		}
+		AUH_bp_the_seventh_article = {
+			picture = generic_conference
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				join_faction_tension = -0.10
+				justify_war_goal_time = -0.10
+				trade_opinion_factor = 0.10
+			}
+		}
+		AUH_bp_the_peace_of_the_ballhausplatz = {
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.08
+				war_support_factor = 0.05
+				compliance_growth_on_our_occupied_states = 0.10
+				opinion_gain_monthly_factor = 0.10
+			}
+		}
+		AUH_nav_the_battery_on_the_mountain = {
+			picture = generic_coastal_defense_ships
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				coastal_bunker_effectiveness_factor = 0.15
+				army_artillery_attack_factor = 0.05
+				naval_defense_factor = 0.05
+			}
+		}
+		AUH_x_the_irredenta_is_permanent = {
+			picture = generic_monarchist_uprising
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				drift_defence_factor = -0.10
+				resistance_growth = 0.10
+				join_faction_tension = 0.10
+			}
+		}
+		AUH_x_the_corridor_to_salonika = {
+			picture = generic_sea_focused_navy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.15
+				industrial_capacity_factory = 0.03
+				supply_consumption_factor = 0.05
+			}
+		}
+		AUH_x_the_price_of_the_note = {
+			picture = generic_deal_with_the_devil2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.08
+				economy_cost_factor = 0.05
+				ai_call_ally_desire_factor = 30
+			}
+		}
+		AUH_kf_the_kingdom_of_venetia = {
+			picture = generic_king_handled
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.03
+				opinion_gain_monthly_factor = 0.05
+			}
+		}
+		AUH_kf_the_indemnity_of_udine = {
+			picture = generic_foreign_capital
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		AUH_kf_the_road_to_salonika = {
+			picture = generic_train_tracks
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.20
+				industrial_capacity_factory = 0.05
+				naval_invasion_capacity = 10
+			}
+		}
+		AUH_kf_the_principality_of_albania = {
+			picture = generic_local_self_management
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				political_power_gain = 0.15
+				compliance_growth_on_our_occupied_states = 0.10
+			}
+		}
+		AUH_kf_the_crown_of_the_vistula = {
+			picture = generic_monarchist_uprising
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				recruitable_population_factor = 0.05
+				political_power_gain = 0.20
+				stability_factor = -0.05
+			}
+		}
+		AUH_kf_the_army_that_lost_the_east = {
+			picture = generic_army_problems
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.10
+				war_support_factor = -0.10
+				stability_factor = -0.08
+				political_power_factor = -0.10
+			}
+		}
+		AUH_kf_the_opening_clean = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.08
+				army_attack_factor = 0.05
+				experience_gain_army_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		AUH_kf_the_opening_ragged = {
+			picture = generic_reserve_divisions
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.03
+				land_reinforce_rate = -0.01
+				experience_gain_army_factor = 0.05
+			}
+		}
+		AUH_kf_the_opening_bad = {
+			picture = generic_neglected_military
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.08
+				army_morale_factor = -0.05
+				war_support_factor = -0.05
+				training_time_factor = 0.10
+			}
+		}
+		AUH_kf_the_opening_disaster = {
+			picture = generic_army_problems
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.10
+				army_attack_factor = -0.10
+				war_support_factor = -0.10
+				stability_factor = -0.05
+			}
+		}
+		AUH_kf_the_false_files = {
+			picture = generic_spy_intel
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.08
+				planning_speed = 0.15
+				decryption_factor = 0.10
+			}
+		}
+	}
+}

@@ -1,0 +1,420 @@
+AUH_eco_treasury_init = {
+	set_variable = { AUH_treasury_strain = 0 }
+	set_variable = { AUH_canal_years = 0 }
+	set_variable = { AUH_eco_projects_live = 0 }
+	set_variable = { AUH_eco_derricks = 0 }
+	set_variable = { AUH_lueger_uses = 0 }
+	set_variable = { AUH_eco_bells_seen = 0 }
+	set_variable = { AUH_eco_quarter = 0 }
+	set_variable = { AUH_eco_report_year = 0 }
+	set_variable = { AUH_eco_suspend_until = 0 }
+	set_variable = { AUH_eco_project_days = 180 }
+	set_variable = { AUH_eco_strain_consumer = 0 }
+	set_variable = { AUH_eco_strain_build = 0 }
+	set_variable = { AUH_eco_strain_pp = 0 }
+	set_country_flag = AUH_eco_treasury_open
+	add_dynamic_modifier = { modifier = AUH_eco_the_treasury_strain }
+	custom_effect_tooltip = AUH_eco_the_strain_is_counted_tt
+}
+
+AUH_eco_strain_recompute = {
+	clamp_variable = {
+		var = AUH_treasury_strain
+		min = 0
+		max = 100
+	}
+
+	set_variable = {
+		AUH_eco_strain_consumer = AUH_treasury_strain
+	}
+	divide_variable = { AUH_eco_strain_consumer = 500 }
+	set_variable = { AUH_eco_strain_build = AUH_treasury_strain }
+	divide_variable = { AUH_eco_strain_build = 500 }
+	multiply_variable = { AUH_eco_strain_build = -1 }
+	set_variable = { AUH_eco_strain_pp = AUH_treasury_strain }
+	divide_variable = { AUH_eco_strain_pp = 1000 }
+	multiply_variable = { AUH_eco_strain_pp = -1 }
+	set_variable = { AUH_eco_project_days = 180 }
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { AUH_eco_project_days = 207 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 70
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { AUH_eco_project_days = 240 }
+	}
+	AUH_eco_strain_bands = yes
+}
+
+AUH_eco_strain_bands = {
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = { has_idea = AUH_eco_the_bond_spread }
+		}
+		add_ideas = AUH_eco_the_bond_spread
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 30
+				compare = less_than
+			}
+			has_idea = AUH_eco_the_bond_spread
+		}
+		remove_ideas = AUH_eco_the_bond_spread
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 50
+				compare = greater_than_or_equals
+			}
+			NOT = { has_idea = AUH_eco_the_delegations_balk }
+		}
+		add_ideas = AUH_eco_the_delegations_balk
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 50
+				compare = less_than
+			}
+			has_idea = AUH_eco_the_delegations_balk
+		}
+		remove_ideas = AUH_eco_the_delegations_balk
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 70
+				compare = greater_than_or_equals
+			}
+			NOT = { has_idea = AUH_eco_the_pre_panic }
+		}
+		add_ideas = AUH_eco_the_pre_panic
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 70
+				compare = less_than
+			}
+			has_idea = AUH_eco_the_pre_panic
+		}
+		remove_ideas = AUH_eco_the_pre_panic
+	}
+}
+
+AUH_eco_projects_count = {
+	set_variable = { AUH_eco_projects_live = 0 }
+	if = {
+		limit = { has_country_flag = AUH_eco_project_canal }
+		add_to_variable = { var = AUH_eco_projects_live value = 1 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_eco_lueger_at_the_town_hall
+			NOT = {
+				has_country_flag = AUH_eco_the_city_is_finished
+			}
+		}
+		add_to_variable = { var = AUH_eco_projects_live value = 1 }
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_eco_the_field_is_open }
+		add_to_variable = { var = AUH_eco_projects_live value = 1 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_eco_the_radium_institute_stands
+		}
+		add_to_variable = { var = AUH_eco_projects_live value = 1 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_eco_the_lloyd_is_subsidised
+		}
+		add_to_variable = { var = AUH_eco_projects_live value = 1 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_eco_the_works_are_stopped
+		}
+		subtract_from_variable = { var = AUH_eco_projects_live value = 1 }
+	}
+
+	clamp_variable = {
+		var = AUH_eco_projects_live
+		min = 0
+		max = 5
+	}
+}
+
+AUH_eco_quarter_tick = {
+	set_temp_variable = { AUH_t_due = AUH_eco_quarter }
+	multiply_temp_variable = { AUH_t_due = 3 }
+	add_to_temp_variable = { AUH_t_due = 3 }
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_clock_months
+				value = AUH_t_due
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = AUH_eco_quarter value = 1 }
+		add_to_variable = {
+			var = AUH_treasury_strain
+			value = AUH_eco_projects_live
+		}
+		if = {
+			limit = {
+				has_war = no
+				check_variable = {
+					var = AUH_eco_projects_live
+					value = 1
+					compare = less_than
+				}
+			}
+			subtract_from_variable = { var = AUH_treasury_strain value = 2 }
+		}
+		AUH_eco_strain_recompute = yes
+	}
+}
+
+AUH_eco_threshold_watch = {
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 30
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = AUH_eco_spread_seen }
+		}
+		set_country_flag = AUH_eco_spread_seen
+		country_event = { id = auh_clock.232 days = 2 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 25
+				compare = less_than
+			}
+			has_country_flag = AUH_eco_spread_seen
+		}
+		clr_country_flag = AUH_eco_spread_seen
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 70
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = AUH_eco_panic_seen }
+		}
+		set_country_flag = AUH_eco_panic_seen
+		country_event = { id = auh_clock.234 days = 2 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_treasury_strain
+				value = 60
+				compare = less_than
+			}
+			has_country_flag = AUH_eco_panic_seen
+		}
+		clr_country_flag = AUH_eco_panic_seen
+	}
+}
+
+AUH_eco_bells_budget = {
+	set_temp_variable = { AUH_t_bells = 0 }
+	if = {
+		limit = { has_country_flag = AUH_bell_word_resolved }
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_bell_konak_resolved }
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_bell_kingdom_resolved }
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_bell_street_resolved }
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_bell_settlement_resolved
+		}
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_bell_east_resolved }
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_bell_lemberg_resolved }
+		add_to_temp_variable = { AUH_t_bells = 1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_t_bells
+				value = AUH_eco_bells_seen
+				compare = greater_than
+			}
+		}
+		set_variable = { AUH_eco_bells_seen = AUH_t_bells }
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_eco_projects_live
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			country_event = { id = auh_clock.235 days = 5 }
+		}
+	}
+}
+
+AUH_eco_annual_report = {
+	set_temp_variable = { AUH_t_due = AUH_eco_report_year }
+	multiply_temp_variable = { AUH_t_due = 12 }
+	add_to_temp_variable = { AUH_t_due = 12 }
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_clock_months
+				value = AUH_t_due
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = AUH_eco_report_year value = 1 }
+		country_event = { id = auh_clock.219 days = 3 }
+		if = {
+			limit = {
+				check_variable = {
+					var = AUH_treasury_strain
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+			country_event = { id = auh_clock.233 days = 10 }
+		}
+	}
+}
+
+AUH_eco_suspend_works = {
+	set_country_flag = AUH_eco_the_works_are_stopped
+	add_ideas = AUH_eco_the_works_are_stopped
+	set_variable = { AUH_eco_suspend_until = AUH_clock_months }
+	add_to_variable = { var = AUH_eco_suspend_until value = 6 }
+	custom_effect_tooltip = AUH_eco_the_works_are_stopped_tt
+}
+
+AUH_eco_suspension_watch = {
+	if = {
+		limit = {
+			has_country_flag = AUH_eco_the_works_are_stopped
+			check_variable = {
+				var = AUH_clock_months
+				value = AUH_eco_suspend_until
+				compare = greater_than_or_equals
+			}
+		}
+		clr_country_flag = AUH_eco_the_works_are_stopped
+		remove_ideas = AUH_eco_the_works_are_stopped
+		country_event = { id = auh_clock.204 days = 2 }
+	}
+}
+
+AUH_eco_lueger_charge = {
+	add_to_variable = { var = AUH_lueger_uses value = 1 }
+	add_to_variable = { var = AUS_support value = 1 }
+	clamp_variable = {
+		var = AUS_support
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = AUH_eco_AUS_up_tt
+	add_to_variable = { var = AUH_treasury_strain value = 2 }
+	AUH_eco_strain_recompute = yes
+	custom_effect_tooltip = AUH_eco_strain_up_2_tt
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_lueger_uses
+				value = 3
+				compare = greater_than_or_equals
+			}
+			NOT = {
+				has_country_flag = AUH_eco_the_city_is_finished
+			}
+		}
+		set_country_flag = AUH_eco_the_city_is_finished
+		custom_effect_tooltip = AUH_eco_the_city_is_finished_tt
+	}
+}
+
+AUH_eco_treasury_month = {
+	if = {
+		limit = { has_country_flag = AUH_eco_treasury_open }
+		AUH_eco_projects_count = yes
+		AUH_eco_quarter_tick = yes
+		AUH_eco_threshold_watch = yes
+		AUH_eco_bells_budget = yes
+		AUH_eco_suspension_watch = yes
+		AUH_eco_annual_report = yes
+	}
+}
