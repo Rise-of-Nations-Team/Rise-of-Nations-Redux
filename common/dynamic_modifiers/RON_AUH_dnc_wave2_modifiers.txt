@@ -1,0 +1,51 @@
+AUH_eco_the_treasury_strain = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	consumer_goods_factor = AUH_eco_strain_consumer
+	production_speed_buildings_factor = AUH_eco_strain_build
+	political_power_factor = AUH_eco_strain_pp
+}
+
+AUH_eco_the_water_road = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_construction
+	local_building_slots = 2
+	local_resources_factor = 0.15
+	production_speed_industrial_complex_factor = 0.15
+	local_supplies = 0.10
+}
+
+AUH_eco_the_mountain_line = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_railways
+	production_speed_infrastructure_factor = 0.20
+	production_speed_rail_way_factor = 0.20
+	local_supplies = 0.15
+	local_building_slots = 1
+}
+
+AUH_eco_the_free_port = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_industry
+	local_building_slots = 2
+	production_speed_dockyard_factor = 0.20
+	production_speed_naval_base_factor = 0.20
+	local_supplies = 0.10
+}
+
+AUH_eco_the_carpathian_field = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_industry
+	local_resources_factor = 0.25
+	local_building_slots = 1
+	production_speed_industrial_complex_factor = 0.10
+}
+
+AUH_eco_the_schedule_is_lost = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_railways
+	local_supplies = -0.15
+	production_speed_infrastructure_factor = -0.15
+	local_building_slots = -1
+}
