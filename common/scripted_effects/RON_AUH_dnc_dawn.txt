@@ -1,0 +1,755 @@
+AUH_z_write_AUS = {
+	add_to_variable = { var = AUS_support value = AUH_z_step }
+	clamp_variable = {
+		var = AUS_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_HUN = {
+	add_to_variable = { var = HUN_support value = AUH_z_step }
+	clamp_variable = {
+		var = HUN_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_CZE = {
+	add_to_variable = { var = CZE_support value = AUH_z_step }
+	clamp_variable = {
+		var = CZE_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_POL = {
+	add_to_variable = { var = POL_support value = AUH_z_step }
+	clamp_variable = {
+		var = POL_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_UKR = {
+	add_to_variable = { var = UKR_support value = AUH_z_step }
+	clamp_variable = {
+		var = UKR_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_ROM = {
+	add_to_variable = { var = ROM_support value = AUH_z_step }
+	clamp_variable = {
+		var = ROM_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_CRO = {
+	add_to_variable = { var = CRO_support value = AUH_z_step }
+	clamp_variable = {
+		var = CRO_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_SER = {
+	add_to_variable = { var = SER_support value = AUH_z_step }
+	clamp_variable = {
+		var = SER_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_BOS = {
+	add_to_variable = { var = BOS_support value = AUH_z_step }
+	clamp_variable = {
+		var = BOS_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_SLV = {
+	add_to_variable = { var = SLV_support value = AUH_z_step }
+	clamp_variable = {
+		var = SLV_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_ITA = {
+	add_to_variable = { var = ITA_support value = AUH_z_step }
+	clamp_variable = {
+		var = ITA_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_write_SLO = {
+	add_to_variable = { var = SLO_support value = AUH_z_step }
+	clamp_variable = {
+		var = SLO_support
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_strain_add = {
+	add_to_variable = { var = AUH_treasury_strain value = AUH_z_step }
+	clamp_variable = {
+		var = AUH_treasury_strain
+		min = 0
+		max = 100
+	}
+	AUH_eco_strain_recompute = yes
+}
+
+AUH_z_prestige_add = {
+	add_to_variable = { var = AUH_house_prestige value = AUH_z_step }
+	clamp_variable = {
+		var = AUH_house_prestige
+		min = 0
+		max = 100
+	}
+}
+
+AUH_z_gemeinsamkeit_add = {
+	add_to_variable = { var = AUH_gemeinsamkeit value = AUH_z_step }
+	if = {
+		limit = { has_country_flag = AUH_bank_secession }
+		clamp_variable = {
+			var = AUH_gemeinsamkeit
+			min = 0
+			max = 30
+		}
+		custom_effect_tooltip = AUH_z_gemeinsamkeit_capped_tt
+	}
+
+	else = {
+		clamp_variable = {
+			var = AUH_gemeinsamkeit
+			min = 0
+			max = 100
+		}
+	}
+}
+
+AUH_z_count_the_secessions = {
+	set_variable = { AUH_z_secessions = 0 }
+	if = {
+		limit = { country_exists = CZE }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = GAL }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = UKR }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = CRO }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = BOS }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = SLV }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = SLO }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+
+	if = {
+		limit = { country_exists = HUN }
+		add_to_variable = { var = AUH_z_secessions value = 1 }
+	}
+	clamp_variable = {
+		var = AUH_z_secessions
+		min = 0
+		max = 8
+	}
+}
+
+AUH_z_scar_all_up = {
+	add_to_variable = { var = AUH_scar_AUS value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_HUN value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_CZE value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_POL value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_UKR value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_ROM value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_CRO value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_SER value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_BOS value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_SLV value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_ITA value = AUH_z_scar_step }
+	add_to_variable = { var = AUH_scar_SLO value = AUH_z_scar_step }
+	custom_effect_tooltip = AUH_z_scar_all_tt
+}
+
+AUH_z_army_over_the_floor = {
+	set_variable = { AUH_z_corps = AUS_support }
+	add_to_variable = { var = AUH_z_corps value = HUN_support }
+	add_to_variable = { var = AUH_z_corps value = CZE_support }
+	add_to_variable = { var = AUH_z_corps value = POL_support }
+	add_to_variable = { var = AUH_z_corps value = UKR_support }
+	add_to_variable = { var = AUH_z_corps value = ROM_support }
+	add_to_variable = { var = AUH_z_corps value = CRO_support }
+	add_to_variable = { var = AUH_z_corps value = SER_support }
+	add_to_variable = { var = AUH_z_corps value = BOS_support }
+	add_to_variable = { var = AUH_z_corps value = SLV_support }
+	add_to_variable = { var = AUH_z_corps value = ITA_support }
+	add_to_variable = { var = AUH_z_corps value = SLO_support }
+	divide_variable = { AUH_z_corps = 60 }
+	round_variable = AUH_z_corps
+	if = {
+		limit = {
+			has_country_flag = AUH_alpine_corps_loyal
+			check_variable = {
+				var = AUH_z_corps
+				value = 4
+				compare = less_than
+			}
+		}
+		set_variable = { AUH_z_corps = 4 }
+	}
+	clamp_variable = {
+		var = AUH_z_corps
+		min = 0
+		max = 20
+	}
+}
+
+AUH_z_the_landsturm_template = {
+	division_template = {
+		name = "Landsturm"
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 1 y = 0 }
+		}
+		support = {
+			engineer = { x = 0 y = 0 }
+		}
+		priority = 0
+	}
+}
+
+AUH_z_raise_one_landsturm = {
+	if = {
+		limit = { controls_state = 4 }
+		4 = {
+			create_unit = {
+				division = "name = \"Landsturmregiment\" division_template = \"Landsturm\" start_experience_factor = 0.10"
+				owner = AUH
+			}
+		}
+	}
+
+	else = {
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Landsturmregiment\" division_template = \"Landsturm\" start_experience_factor = 0.10"
+				owner = AUH
+			}
+		}
+	}
+}
+
+AUH_z_the_loyal_levy = {
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 4
+				state = 152
+				state = 153
+				state = 806
+				state = 865
+				state = 1107
+			}
+		}
+		add_manpower = 6000
+	}
+	custom_effect_tooltip = AUH_z_the_loyal_levy_tt
+}
+
+AUH_z_clear_march_target = {
+	clr_country_flag = AUH_z_target_CZE
+	clr_country_flag = AUH_z_target_GAL
+	clr_country_flag = AUH_z_target_UKR
+	clr_country_flag = AUH_z_target_CRO
+	clr_country_flag = AUH_z_target_BOS
+	clr_country_flag = AUH_z_target_SLV
+	clr_country_flag = AUH_z_target_SLO
+	clr_country_flag = AUH_z_target_HUN
+}
+
+AUH_z_reconquest_common = {
+	AUH_coercion_act = yes
+	custom_effect_tooltip = AUH_nat_coercion_up_tt
+	add_to_variable = { var = AUH_z_marches value = 1 }
+	clamp_variable = {
+		var = AUH_z_marches
+		min = 0
+		max = 12
+	}
+	set_temp_variable = { AUH_z_step = 6 }
+	AUH_z_strain_add = yes
+	custom_effect_tooltip = AUH_z_the_march_is_paid_for_tt
+	add_war_support = 0.03
+	add_stability = -0.02
+	add_named_threat = {
+		threat = 1
+		name = AUH_z_threat_the_column_marches
+	}
+	add_equipment_to_stockpile = {
+		type = early_infantry_equipment_1908
+		amount = 1200
+		producer = AUH
+	}
+	hidden_effect = {
+		country_event = { id = auh_clock.360 days = 8 }
+	}
+}
+
+AUH_z_march_resolves = {
+	if = {
+		limit = {
+			check_variable = {
+				var = AUH_z_march_support
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		country_event = { id = auh_clock.358 days = 4 }
+	}
+
+	else = {
+		country_event = { id = auh_clock.359 days = 4 }
+	}
+}
+
+AUH_z_march_on_CZE = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_CZE
+	set_variable = { AUH_z_march_support = CZE_support }
+	if = {
+		limit = { NOT = { has_war_with = CZE } }
+		declare_war_on = {
+			target = CZE
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_CZE = yes
+	custom_effect_tooltip = AUH_m_tt_cze_down
+	subtract_from_variable = { var = AUH_scar_CZE value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_GAL = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_GAL
+	set_variable = { AUH_z_march_support = POL_support }
+	if = {
+		limit = { NOT = { has_war_with = GAL } }
+		declare_war_on = {
+			target = GAL
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_POL = yes
+	custom_effect_tooltip = AUH_m_tt_pol_down
+	subtract_from_variable = { var = AUH_scar_POL value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_UKR = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_UKR
+	set_variable = { AUH_z_march_support = UKR_support }
+	if = {
+		limit = { NOT = { has_war_with = UKR } }
+		declare_war_on = {
+			target = UKR
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_UKR = yes
+	custom_effect_tooltip = AUH_m_tt_ukr_down
+	subtract_from_variable = { var = AUH_scar_UKR value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_CRO = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_CRO
+	set_variable = { AUH_z_march_support = CRO_support }
+	if = {
+		limit = { has_country_flag = AUH_z_trialism_promised }
+		add_to_variable = { var = AUH_z_march_support value = 15 }
+	}
+
+	if = {
+		limit = { NOT = { has_war_with = CRO } }
+		declare_war_on = {
+			target = CRO
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_CRO = yes
+	custom_effect_tooltip = AUH_m_tt_cro_down
+	subtract_from_variable = { var = AUH_scar_CRO value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_BOS = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_BOS
+	set_variable = { AUH_z_march_support = BOS_support }
+	if = {
+		limit = { NOT = { has_war_with = BOS } }
+		declare_war_on = {
+			target = BOS
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_BOS = yes
+	custom_effect_tooltip = AUH_m_tt_bos_down
+	subtract_from_variable = { var = AUH_scar_BOS value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_SLV = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_SLV
+	set_variable = { AUH_z_march_support = SLV_support }
+	if = {
+		limit = { NOT = { has_war_with = SLV } }
+		declare_war_on = {
+			target = SLV
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_SLV = yes
+	custom_effect_tooltip = AUH_m_tt_slv_down
+	subtract_from_variable = { var = AUH_scar_SLV value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_SLO = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_SLO
+	set_variable = { AUH_z_march_support = SLO_support }
+	if = {
+		limit = { NOT = { has_war_with = SLO } }
+		declare_war_on = {
+			target = SLO
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -3 }
+	AUH_z_write_SLO = yes
+	custom_effect_tooltip = AUH_m_tt_slo_down
+	subtract_from_variable = { var = AUH_scar_SLO value = 3 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_march_on_HUN = {
+	AUH_z_clear_march_target = yes
+	set_country_flag = AUH_z_target_HUN
+	set_variable = { AUH_z_march_support = HUN_support }
+	if = {
+		limit = { NOT = { has_war_with = HUN } }
+		declare_war_on = {
+			target = HUN
+			type = annex_everything
+		}
+	}
+	set_temp_variable = { AUH_z_step = -4 }
+	AUH_z_write_HUN = yes
+	custom_effect_tooltip = AUH_m_tt_hun_down
+	subtract_from_variable = { var = AUH_scar_HUN value = 4 }
+	AUH_z_reconquest_common = yes
+	AUH_z_march_resolves = yes
+}
+
+AUH_z_the_crownland_settles = {
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_CZE
+			country_exists = CZE
+		}
+		white_peace = CZE
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = CZE
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = CZE
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_CZE
+		AUH_z_write_CZE = yes
+		custom_effect_tooltip = AUH_m_tt_cze_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_GAL
+			country_exists = GAL
+		}
+		white_peace = GAL
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = GAL
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = GAL
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_POL
+		AUH_z_write_POL = yes
+		custom_effect_tooltip = AUH_m_tt_pol_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_UKR
+			country_exists = UKR
+		}
+		white_peace = UKR
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = UKR
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = UKR
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_UKR
+		AUH_z_write_UKR = yes
+		custom_effect_tooltip = AUH_m_tt_ukr_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_CRO
+			country_exists = CRO
+		}
+		white_peace = CRO
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = CRO
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = CRO
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_CRO
+		AUH_z_write_CRO = yes
+		custom_effect_tooltip = AUH_m_tt_cro_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_BOS
+			country_exists = BOS
+		}
+		white_peace = BOS
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = BOS
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = BOS
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_BOS
+		AUH_z_write_BOS = yes
+		custom_effect_tooltip = AUH_m_tt_bos_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_SLV
+			country_exists = SLV
+		}
+		white_peace = SLV
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = SLV
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = SLV
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_SLV
+		AUH_z_write_SLV = yes
+		custom_effect_tooltip = AUH_m_tt_slv_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_SLO
+			country_exists = SLO
+		}
+		white_peace = SLO
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = SLO
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = SLO
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_SLO
+		AUH_z_write_SLO = yes
+		custom_effect_tooltip = AUH_m_tt_slo_up
+	}
+
+	if = {
+		limit = {
+			has_country_flag = AUH_z_target_HUN
+			country_exists = HUN
+		}
+		white_peace = HUN
+		if = {
+			limit = { has_country_flag = AUH_z_terms_offered }
+			puppet = HUN
+			set_temp_variable = { AUH_z_step = 4 }
+		}
+
+		else = {
+			annex_country = {
+				target = HUN
+				transfer_troops = no
+			}
+			set_temp_variable = { AUH_z_step = 2 }
+		}
+		clr_country_flag = AUH_nat_risen_HUN
+		AUH_z_write_HUN = yes
+		custom_effect_tooltip = AUH_m_tt_hun_up
+	}
+
+	if = {
+		limit = { has_country_flag = AUH_z_terms_offered }
+		set_country_flag = AUH_z_a_crown_was_bargained
+		add_to_variable = { var = AUH_z_bargained value = 1 }
+		clamp_variable = {
+			var = AUH_z_bargained
+			min = 0
+			max = 12
+		}
+	}
+
+	else = {
+		add_to_variable = { var = AUH_z_retaken value = 1 }
+		clamp_variable = {
+			var = AUH_z_retaken
+			min = 0
+			max = 12
+		}
+	}
+	AUH_z_count_the_secessions = yes
+	AUH_z_clear_march_target = yes
+	clr_country_flag = AUH_z_terms_offered
+	clr_country_flag = AUH_z_march_running
+}
+
+AUH_z_the_settlement_of_the_columns = {
+	set_temp_variable = { AUH_z_step = 4 }
+	AUH_z_write_AUS = yes
+	AUH_z_write_HUN = yes
+	AUH_z_write_CZE = yes
+	AUH_z_write_POL = yes
+	AUH_z_write_UKR = yes
+	AUH_z_write_ROM = yes
+	AUH_z_write_CRO = yes
+	AUH_z_write_SER = yes
+	AUH_z_write_BOS = yes
+	AUH_z_write_SLV = yes
+	AUH_z_write_ITA = yes
+	AUH_z_write_SLO = yes
+	custom_effect_tooltip = AUH_z_settlement_of_the_columns_tt
+	set_temp_variable = { AUH_z_scar_step = 5 }
+	AUH_z_scar_all_up = yes
+}
+
+AUH_z_the_era_closes = {
+	set_country_flag = AUH_dnc_era_end
+	clr_country_flag = AUH_dnc_reconquest_open
+	clr_country_flag = AUH_dnc_twilight_open
+	AUH_z_clear_march_target = yes
+	clr_country_flag = AUH_z_march_running
+}
