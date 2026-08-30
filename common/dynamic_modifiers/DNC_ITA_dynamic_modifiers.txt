@@ -1,0 +1,47 @@
+ITA_p_the_piazza = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = ITA_p_stab
+	political_power_factor = ITA_p_pp
+	production_speed_buildings_factor = ITA_p_prod
+	war_support_factor = ITA_p_ws
+}
+
+ITA_c_the_chamber = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = ITA_c_pp
+	stability_factor = ITA_c_stab
+}
+
+ITA_p_the_army_in_the_streets = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = ITA_p_bayonet_stab
+	political_power_factor = ITA_p_bayonet_pp
+	communism_drift = ITA_p_bayonet_drift
+}
+
+ITA_p_the_province_ungoverned = {
+	icon = GFX_idea_generic_army_war_college
+	enable = { always = yes }
+	production_speed_buildings_factor = -0.75
+	local_building_slots_factor = -0.50
+	local_manpower = -0.60
+	local_resources_factor = -0.40
+	local_supplies = -0.20
+	recruitable_population_factor = -0.25
+	local_building_slots = -2
+}
+
+ITA_end_the_brittle_kingdom = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	remove_trigger = { has_country_flag = ITA_end_chamber_back }
+	stability_factor = ITA_end_brittle_stab
+	political_power_factor = ITA_end_brittle_pp
+	war_support_factor = ITA_end_brittle_ws
+}

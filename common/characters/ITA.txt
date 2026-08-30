@@ -399,7 +399,7 @@ characters = {
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = ITA_sidney_sonnino
+			idea_token = ITA_antonio_salandra
 			allowed  = {
 				original_tag = ITA	
 			}
@@ -5606,6 +5606,141 @@ characters = {
 			traits = {  }
 			expire = "2012.1.29.1"
 			id = -1
+		}
+	}
+
+	ITA_vittorio_cuniberti = {
+		name = ITA_vittorio_cuniberti
+		portraits = {
+			army = {
+				large = GFX_portrait_europe_generic_land_12
+				small = GFX_idea_generic_army_europe_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = ITA_vittorio_cuniberti
+			ledger = navy
+			allowed = {
+				original_tag = ITA
+			}
+			visible = {
+				date > 1902.1.1
+				has_country_flag = ITA_n_cuniberti_school
+			}
+			available = {
+				date > 1902.1.1
+				has_country_flag = ITA_n_cuniberti_school
+				NOT = {
+					has_country_flag = ITA_n_cuniberti_gone
+				}
+			}
+			traits = {
+				naval_theorist
+			}
+			research_bonus = {
+				bb_tech = 0.10
+			}
+		}
+	}
+
+	ITA_edoardo_masdea = {
+		name = ITA_edoardo_masdea
+		portraits = {
+			army = {
+				large = GFX_portrait_europe_generic_land_12
+				small = GFX_idea_generic_army_europe_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = ITA_edoardo_masdea
+			ledger = navy
+			allowed = {
+				original_tag = ITA
+			}
+			visible = {
+				date > 1908.1.1
+				has_country_flag = ITA_n_dante_launched
+			}
+			available = {
+				date > 1908.1.1
+				has_country_flag = ITA_n_dante_launched
+			}
+			traits = {
+				naval_theorist
+			}
+			research_bonus = {
+				naval_equipment = 0.08
+			}
+		}
+	}
+
+	ITA_giacinto_pullino = {
+		name = ITA_giacinto_pullino
+		portraits = {
+			army = {
+				large = GFX_portrait_europe_generic_land_12
+				small = GFX_idea_generic_army_europe_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = ITA_giacinto_pullino
+			ledger = navy
+			allowed = {
+				original_tag = ITA
+			}
+			visible = {
+				date > 1905.1.1
+				has_country_flag = ITA_n_glauco_boats
+			}
+			available = {
+				date > 1905.1.1
+				has_country_flag = ITA_n_glauco_boats
+			}
+			traits = {
+				naval_theorist
+			}
+			research_bonus = {
+				ss_tech = 0.08
+			}
+		}
+	}
+
+	ITA_cesare_laurenti = {
+		name = ITA_cesare_laurenti
+		portraits = {
+			army = {
+				large = GFX_portrait_europe_generic_land_12
+				small = GFX_idea_generic_army_europe_2
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = ITA_cesare_laurenti
+			ledger = navy
+			allowed = {
+				original_tag = ITA
+			}
+			visible = {
+				date > 1908.1.1
+				has_country_flag = ITA_n_glauco_boats
+			}
+			available = {
+				date > 1908.1.1
+				has_country_flag = ITA_n_glauco_boats
+			}
+			traits = {
+				naval_theorist
+			}
+			research_bonus = {
+				ss_tech = 0.10
+			}
 		}
 	}
 }
