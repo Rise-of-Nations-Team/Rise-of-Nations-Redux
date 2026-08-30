@@ -1,0 +1,353 @@
+AUH_z_the_suspension_of_payment = {
+	icon = GFX_idea_generic_economic_crisis
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	industrial_capacity_factory = -0.50
+	industrial_capacity_dockyard = -0.50
+	production_speed_buildings_factor = -0.90
+	consumer_goods_factor = 0.15
+	political_power_factor = -0.25
+	research_speed_factor = -0.15
+	trade_opinion_factor = -0.30
+}
+
+AUH_a_the_ordinance_regime = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = AUH_a_ordinance_stability
+	drift_defence_factor = AUH_a_ordinance_drift
+}
+
+AUH_a_the_exception_ledger = {
+	icon = GFX_idea_generic_purge
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	resistance_growth = AUH_a_exception_resistance
+	stability_factor = AUH_a_exception_stability
+}
+
+AUH_dnc_aviation = {
+	icon = GFX_idea_generic_air_bonus
+	enable = { always = yes }
+	experience_gain_air_factor = AUH_dnc_air_experience_gain_air_factor
+	air_accidents_factor = AUH_dnc_air_air_accidents_factor
+	recon_factor = AUH_dnc_air_recon_factor
+	air_range_factor = AUH_dnc_air_air_range_factor
+	production_speed_air_base_factor = AUH_dnc_air_production_speed_air_base_factor
+	planning_speed = AUH_dnc_air_planning_speed
+}
+
+AUH_arm_the_staffs_frustration = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_military_junta
+	political_power_factor = AUH_arm_frustration_pp
+	war_support_factor = AUH_arm_frustration_ws
+}
+
+AUH_bp_the_credit_of_the_house = {
+	icon = GFX_idea_generic_flexible_foreign_policy
+	enable = { always = yes }
+	opinion_gain_monthly_factor = AUH_bp_credit_opinion
+	trade_opinion_factor = AUH_bp_credit_trade
+}
+
+AUH_eco_the_protected_market = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_industry
+	local_resources_factor = 0.10
+	production_speed_industrial_complex_factor = 0.10
+	local_building_slots = 1
+}
+
+AUH_eco_the_line_is_worked = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_railways
+	production_speed_infrastructure_factor = 0.15
+	production_speed_rail_way_factor = 0.15
+	local_supplies = 0.10
+	local_building_slots = 1
+}
+
+AUH_eco_the_quay_is_finished = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_construction
+	production_speed_dockyard_factor = 0.15
+	production_speed_naval_base_factor = 0.15
+	local_supplies = 0.05
+	local_building_slots = 1
+}
+
+AUH_eco_the_industrial_estate = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_industry
+	production_speed_arms_factory_factor = 0.15
+	production_speed_industrial_complex_factor = 0.10
+	local_resources_factor = 0.05
+}
+
+AUH_h_the_kingdom_consents = {
+	icon = GFX_idea_generic_manpower_bonus
+	enable = { has_country_flag = AUH_dnc_path_magyar }
+	conscription_factor = AUH_h_mod_conscription
+	recruitable_population_factor = AUH_h_mod_recpop
+	army_org_factor = AUH_h_mod_org
+}
+
+AUH_m_the_price_of_the_exception = {
+	icon = GFX_idea_generic_oppression
+	enable = { has_idea = AUH_m_the_state_of_exception }
+	remove_trigger = { has_country_flag = AUH_m_exception_lifted }
+	stability_factor = AUH_m_exception_stability
+	trade_opinion_factor = AUH_m_exception_opinion
+}
+
+AUH_m_the_regimental_tongue = {
+	icon = GFX_idea_generic_manpower_bonus
+	enable = { always = yes }
+	local_manpower = 0.05
+	compliance_growth = 0.05
+}
+
+AUH_m_the_watched_coast = {
+	icon = GFX_idea_generic_intel_bonus
+	enable = { always = yes }
+	resistance_target = -0.10
+	compliance_growth = 0.05
+}
+
+AUH_m_the_armed_province = {
+	icon = GFX_idea_generic_manpower_bonus
+	enable = { always = yes }
+	local_manpower = 0.10
+	army_speed_factor_for_controller = 0.05
+}
+
+AUH_m_the_garrison_town = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	local_building_slots_factor = 0.05
+	compliance_growth = 0.05
+}
+
+AUH_m_the_gentry_dispossessed = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	resistance_target = 0.05
+	recruitable_population_factor = -0.05
+}
+
+AUH_m_the_county_in_resistance = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	resistance_target = 0.10
+	local_manpower = -0.10
+}
+
+AUH_m_the_county_under_commission = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	compliance_growth = 0.10
+	resistance_target = -0.10
+}
+
+AUH_m_the_seated_nation = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	compliance_growth = 0.10
+	local_manpower = 0.05
+}
+
+AUH_m_the_colourless_service = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	compliance_growth = 0.10
+	resistance_target = 0.05
+}
+
+AUH_m_the_frontier_district = {
+	icon = GFX_idea_generic_fortify_the_borders
+	enable = { always = yes }
+	resistance_target = -0.05
+	local_supplies = 0.10
+}
+
+AUH_nav_the_delegations_credit = {
+	icon = GFX_idea_generic_the_london_naval_treaty
+	enable = { always = yes }
+	industrial_capacity_dockyard = AUH_nav_yard_penalty
+	production_speed_dockyard_factor = AUH_nav_speed_penalty
+}
+
+AUH_r_the_ordinance_ledger = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	stability_factor = AUH_r_ord_stab
+	political_power_factor = AUH_r_ord_pp
+}
+
+AUH_r_the_kingdom_ungoverned_state = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	production_speed_buildings_factor = -0.10
+	recruitable_population_factor = -0.05
+}
+
+AUH_r_the_kingdom_settled = {
+	icon = GFX_idea_generic_constitutional_guarantees
+	enable = { always = yes }
+	production_speed_buildings_factor = 0.10
+	recruitable_population_factor = 0.05
+	local_building_slots = 1
+}
+
+AUH_r_the_moravian_model = {
+	icon = GFX_idea_generic_local_self_management
+	enable = { always = yes }
+	production_speed_buildings_factor = 0.05
+}
+
+AUH_r_the_third_land = {
+	icon = GFX_idea_generic_local_self_management
+	enable = { always = yes }
+	production_speed_buildings_factor = 0.10
+	local_building_slots = 1
+}
+
+AUH_r_the_province_holds_itself_down = {
+	icon = GFX_idea_generic_secret_police
+	enable = { always = yes }
+	production_speed_buildings_factor = -0.20
+	local_building_slots = -1
+	recruitable_population_factor = -0.15
+}
+
+AUH_r_the_province_obstructs = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	production_speed_buildings_factor = -0.15
+	local_resources_factor = -0.10
+	recruitable_population_factor = -0.10
+}
+
+AUH_r_the_ruthenian_land = {
+	icon = GFX_idea_generic_agrarian_reform
+	enable = { always = yes }
+	local_building_slots = 1
+	production_speed_buildings_factor = 0.15
+	recruitable_population_factor = 0.10
+}
+
+AUH_r_the_city_is_contested = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	production_speed_buildings_factor = -0.15
+	recruitable_population_factor = -0.10
+}
+
+AUH_r_the_land_pays_for_itself_state = {
+	icon = GFX_idea_generic_build_infrastructure
+	enable = { always = yes }
+	production_speed_buildings_factor = 0.05
+	local_resources_factor = 0.05
+}
+
+AUH_nat_restless = {
+	icon = GFX_idea_generic_disjointed_gov
+	local_manpower = -0.15
+	local_building_slots_factor = -0.10
+	compliance_growth = -0.10
+}
+
+AUH_nat_refuses_the_levy = {
+	icon = GFX_idea_generic_disjointed_gov
+	local_manpower = -0.40
+	local_building_slots_factor = -0.20
+	local_resources_factor = -0.15
+	compliance_growth = -0.25
+}
+
+AUH_nat_in_revolt = {
+	icon = GFX_idea_generic_oppression
+	local_manpower = -0.75
+	local_building_slots_factor = -0.35
+	local_resources_factor = -0.30
+	resistance_growth = 0.25
+	compliance_growth = -0.50
+}
+
+AUH_nat_the_register_strained = {
+	icon = GFX_idea_generic_disjointed_gov
+	political_power_factor = AUH_nat_strain_pp
+	stability_factor = AUH_nat_strain_stability
+	conscription_factor = AUH_nat_strain_conscription
+}
+
+AUH_kf_the_garrisons_of_the_corridor = {
+	icon = GFX_idea_generic_manpower_bonus
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = AUH_kf_corridor_drain
+	conscription_factor = AUH_kf_corridor_manpower
+}
+
+AUH_eco_the_treasury_strain = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	consumer_goods_factor = AUH_eco_strain_consumer
+	production_speed_buildings_factor = AUH_eco_strain_build
+	political_power_factor = AUH_eco_strain_pp
+}
+
+AUH_eco_the_water_road = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_construction
+	local_building_slots = 2
+	local_resources_factor = 0.15
+	production_speed_industrial_complex_factor = 0.15
+	local_supplies = 0.10
+}
+
+AUH_eco_the_mountain_line = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_railways
+	production_speed_infrastructure_factor = 0.20
+	production_speed_rail_way_factor = 0.20
+	local_supplies = 0.15
+	local_building_slots = 1
+}
+
+AUH_eco_the_free_port = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_industry
+	local_building_slots = 2
+	production_speed_dockyard_factor = 0.20
+	production_speed_naval_base_factor = 0.20
+	local_supplies = 0.10
+}
+
+AUH_eco_the_carpathian_field = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_industry
+	local_resources_factor = 0.25
+	local_building_slots = 1
+	production_speed_industrial_complex_factor = 0.10
+}
+
+AUH_eco_the_schedule_is_lost = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_railways
+	local_supplies = -0.15
+	production_speed_infrastructure_factor = -0.15
+	local_building_slots = -1
+}
+
+AUH_c_the_credit_of_the_dynasty = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = AUH_house_prestige_stability
+	political_power_factor = AUH_house_prestige_pp
+	drift_defence_factor = AUH_house_prestige_drift
+}
