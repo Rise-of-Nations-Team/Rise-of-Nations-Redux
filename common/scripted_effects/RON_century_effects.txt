@@ -153,3 +153,12 @@ RON_century_enter_cold_war = {
 	clr_global_flag = INT_RON_ERA_gflg
 	set_global_flag = CLD_RON_ERA_gflg
 }
+
+RON_century_enter_peace = {
+	set_variable = { global.RON_era = 1 }
+	set_variable = { global.RON_era_since = global.RON_mc }
+	clr_global_flag = WW1_RON_ERA_gflg
+	clr_global_flag = INT_RON_ERA_gflg
+	clr_global_flag = CLD_RON_ERA_gflg
+	set_global_flag = DNC_RON_ERA_gflg
+}

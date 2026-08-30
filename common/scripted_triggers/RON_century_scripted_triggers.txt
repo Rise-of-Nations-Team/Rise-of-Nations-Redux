@@ -1,0 +1,60 @@
+is_wrong_era = {
+	OR = {
+		AND = {
+			check_variable = { global.RON_era = 1 }
+			check_variable = {
+				var = global.RON_mc
+				value = 239
+				compare = greater_than
+			}
+		}
+		AND = {
+			check_variable = { global.RON_era = 2 }
+			check_variable = {
+				var = global.RON_mc
+				value = 299
+				compare = greater_than
+			}
+		}
+		AND = {
+			check_variable = { global.RON_era = 3 }
+			check_variable = {
+				var = global.RON_mc
+				value = 587
+				compare = greater_than
+			}
+		}
+		AND = {
+			check_variable = { global.RON_era = 1 }
+			NOT = {
+				has_global_flag = DNC_RON_ERA_gflg
+			}
+		}
+		AND = {
+			check_variable = { global.RON_era = 2 }
+			NOT = {
+				has_global_flag = WW1_RON_ERA_gflg
+			}
+		}
+		AND = {
+			check_variable = { global.RON_era = 3 }
+			NOT = {
+				has_global_flag = INT_RON_ERA_gflg
+			}
+		}
+		AND = {
+			check_variable = { global.RON_era = 4 }
+			NOT = {
+				has_global_flag = CLD_RON_ERA_gflg
+			}
+		}
+	}
+}
+
+RON_century_clock_is_running = {
+	check_variable = {
+		var = global.RON_mc
+		value = 0
+		compare = greater_than
+	}
+}

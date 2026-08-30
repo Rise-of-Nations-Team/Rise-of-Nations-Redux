@@ -1,0 +1,70 @@
+add_namespace = change_era
+
+country_event = {
+	id = change_era.1
+	title = change_era.1.t
+	desc = change_era.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = change_era.1.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				check_variable = { global.RON_era = 1 }
+			}
+		}
+		RON_century_enter_peace = yes
+	}
+
+	option = {
+		name = change_era.1.b
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				check_variable = { global.RON_era = 2 }
+			}
+		}
+		RON_century_enter_great_war = yes
+	}
+
+	option = {
+		name = change_era.1.c
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				check_variable = { global.RON_era = 3 }
+			}
+		}
+		RON_century_enter_interwar = yes
+	}
+
+	option = {
+		name = change_era.1.e
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				check_variable = { global.RON_era = 4 }
+			}
+		}
+		RON_century_enter_cold_war = yes
+	}
+
+	option = {
+		name = change_era.1.f
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
