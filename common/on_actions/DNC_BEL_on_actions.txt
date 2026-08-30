@@ -1,0 +1,102 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			BEL = {
+				if = {
+					limit = {
+						has_start_date < 1914.1.1
+						NOT = { has_country_flag = BEL_dnc_systems_open }
+					}
+					BEL_dnc_init = yes
+				}
+			}
+		}
+	}
+
+	on_monthly_BEL = {
+		effect = {
+			if = {
+				limit = {
+					tag = BEL
+					has_country_flag = BEL_dnc_systems_open
+					date < 1920.1.1
+				}
+				BEL_dnc_monthly = yes
+			}
+		}
+	}
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_start_date < 1910.1.1
+					BEL = { exists = yes }
+				}
+				BEL = {
+					BEL_chronicle_init = yes
+				}
+			}
+		}
+	}
+
+	on_monthly_BEL = {
+		effect = {
+			if = {
+				limit = {
+					tag = BEL
+					has_country_flag = BEL_chronicle_open
+					has_variable = BEL_dnc_months
+				}
+				BEL_chronicle_month = yes
+			}
+		}
+	}
+
+	on_monthly_BEL = {
+		effect = {
+			if = {
+				limit = {
+					tag = BEL
+					has_country_flag = BEL_a_branch_open
+					has_variable = BEL_dnc_months
+					date < 1920.1.1
+				}
+				BEL_a_month = yes
+			}
+		}
+	}
+
+	on_monthly_BEL = {
+		effect = {
+			if = {
+				limit = {
+					tag = BEL
+					has_variable = BEL_dnc_months
+					has_country_flag = BEL_f_branch_open
+					NOT = { has_country_flag = BEL_f_verdict_done }
+					check_variable = {
+						var = BEL_dnc_months
+						value = 174
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = BEL_f_verdict_done
+				country_event = { id = bel_dnc.407 days = 4 }
+			}
+		}
+	}
+
+	on_monthly_BEL = {
+		effect = {
+			if = {
+				limit = {
+					tag = BEL
+					has_variable = BEL_dnc_months
+					NOT = { has_country_flag = BEL_u_book_closed }
+				}
+				BEL_u_month = yes
+			}
+		}
+	}
+}
