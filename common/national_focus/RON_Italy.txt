@@ -1,0 +1,3843 @@
+#!gfx:interface/RON_goals.gfx
+focus_tree = {
+	id = Italy_DNC
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+			date < 1910.1.1
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 50 y = 2600 }
+
+	shortcut = {
+		name = ITA_dnc_trunk_sc
+		target = ITADNC_the_kingdom
+		scroll_wheel_factor = 0.6
+	}
+
+	shortcut = {
+		name = ITA_dnc_crown_sc
+		target = ITADNC_t_the_question_of_order
+		scroll_wheel_factor = 0.6
+	}
+
+	shortcut = {
+		name = ITA_dnc_society_sc
+		target = ITADNC_t_the_coal_that_is_not_ours
+		scroll_wheel_factor = 0.6
+	}
+
+	shortcut = {
+		name = ITA_dnc_war_sc
+		target = ITADNC_t_the_road_from_adwa
+		scroll_wheel_factor = 0.6
+	}
+
+	focus = {
+		id = ITADNC_the_kingdom
+		icon = GFX_focus_generic_monarchy_2
+		x = 6
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+			set_country_flag = ITA_t_the_kingdom
+			set_variable = {
+				var = ITA_t_prefects
+				value = 40
+			}
+			add_ideas = {
+				ITA_t_a_great_power_on_paper
+				ITA_the_british_leash
+				ITA_the_non_expedit
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_kingdom
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			custom_effect_tooltip = ITA_t_prefects_tt
+		}
+	}
+
+	focus = {
+		id = ITADNC_t_monza
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ITADNC_the_kingdom
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = ITADNC_the_kingdom
+		}
+		available = {
+			has_country_flag = ITA_t_regicide
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_ideas = ITA_t_the_oath_of_the_new_reign
+			if = {
+				limit = {
+					has_idea = ITA_t_the_black_year
+				}
+				remove_ideas = ITA_t_the_black_year
+			}
+			if = {
+				limit = {
+					has_country_flag = ITA_t_bresci_law
+				}
+				add_stability = 0.03
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+			else = {
+				add_war_support = 0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+			}
+			set_country_flag = ITA_t_reign_founded
+		}
+	}
+
+	focus = {
+		id = ITADNC_t_the_question_of_order
+		icon = GFX_focus_generic_strike_at_democracy1
+		relative_position_id = ITADNC_t_monza
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = ITADNC_t_monza
+		}
+		available = {
+			has_country_flag = ITA_t_genoa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -25
+			country_event = {
+				id = ita_dnc.3
+				days = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_t_the_coal_that_is_not_ours
+		icon = GFX_focus_generic_industry_3
+		relative_position_id = ITADNC_t_the_question_of_order
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ITADNC_t_the_question_of_order
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_british_leash
+				add_idea = ITA_t_the_current_from_the_alps
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_alpine_current
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_alpine_current
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+			set_country_flag = ITA_t_alpine_current
+			ENG = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = RI_trade_agreement_declined
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_t_the_road_from_adwa
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = ITADNC_t_the_coal_that_is_not_ours
+		x = 22
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ITADNC_t_the_coal_that_is_not_ours
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.05
+			set_country_flag = ITA_t_adwa_answered
+			country_event = {
+				id = ita_dnc.7
+				days = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_chamber_and_the_crown
+		icon = GFX_focus_generic_monarchy_1
+		relative_position_id = ITADNC_t_the_road_from_adwa
+		x = -22
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
+		ai_will_do = { factor = 12 }
+		completion_reward = {
+			add_political_power = 80
+			add_stability = 0.05
+			set_country_flag = ITA_a_the_question_before_the_chamber
+			set_variable = { ITA_t_prefects = 0 }
+			custom_effect_tooltip = ITA_a_three_answers_tt
+			add_timed_idea = {
+				idea = ITA_a_the_kings_first_ministry
+				days = 365
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_new_reign
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			country_event = { id = ita_dnc.100 days = 5 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_neutral_state
+		icon = GFX_goal_generic_parliament
+		relative_position_id = ITADNC_a_the_chamber_and_the_crown
+		x = -4
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_chamber_and_the_crown }
+		mutually_exclusive = {
+			focus = ITADNC_a_return_to_the_statuto
+			focus = ITADNC_a_the_hand_offered_to_turati
+		}
+		ai_will_do = {
+			factor = 12
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			set_country_flag = ITA_a_path_giolitti
+			promote_character = ITA_giovanni_giolitti
+			set_party_name = {
+				ideology = democratic
+				long_name = ITA_liberal_left_long
+				name = ITA_liberal_left
+			}
+			add_ideas = ITA_a_the_neutral_state
+			add_political_power = 60
+			add_stability = 0.08
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_neutral_state
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			country_event = { id = ita_dnc.101 days = 25 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_return_to_the_statuto
+		icon = GFX_goal_constitutional_guarantees
+		relative_position_id = ITADNC_a_the_chamber_and_the_crown
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_chamber_and_the_crown }
+		mutually_exclusive = {
+			focus = ITADNC_a_the_neutral_state
+			focus = ITADNC_a_the_hand_offered_to_turati
+		}
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			set_country_flag = ITA_a_path_sonnino
+			promote_character = ITA_sidney_sonnino
+			set_party_name = {
+				ideology = democratic
+				long_name = ITA_constitutional_right_long
+				name = ITA_constitutional_right
+			}
+			add_ideas = ITA_a_torniamo_allo_statuto
+			add_political_power = 90
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			country_event = { id = ita_dnc.102 days = 25 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_hand_offered_to_turati
+		icon = GFX_goal_trade_union_deal
+		relative_position_id = ITADNC_a_the_chamber_and_the_crown
+		x = 6
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_chamber_and_the_crown }
+		mutually_exclusive = {
+			focus = ITADNC_a_the_neutral_state
+			focus = ITADNC_a_return_to_the_statuto
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			set_country_flag = ITA_a_path_reformist
+			promote_character = ITA_giovanni_giolitti
+			set_party_name = {
+				ideology = democratic
+				long_name = ITA_popular_bloc_long
+				name = ITA_popular_bloc
+			}
+			add_ideas = ITA_a_the_reformist_understanding
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = -0.08
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
+			country_event = { id = ita_dnc.103 days = 25 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_prefects_instructed
+		icon = GFX_focus_generic_self_management
+		relative_position_id = ITADNC_a_the_neutral_state
+		x = -2
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_a_the_neutral_state }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.05
+			add_to_variable = { var = ITA_t_prefects value = 34 }
+			clamp_variable = {
+				var = ITA_t_prefects
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_a_prefects_counted_tt
+			add_ideas = ITA_a_the_prefects_circular
+			add_advisor_role = {
+				character = ITA_tommaso_tittoni
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = ITA_a_tittoni_at_the_interior
+					ledger = civilian
+					traits = { backroom_backstabber }
+				}
+				activate = no
+			}
+			country_event = { id = ita_dnc.104 days = 40 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_state_takes_no_side
+		icon = GFX_goal_generic_union_agreement
+		relative_position_id = ITADNC_a_the_neutral_state
+		x = 4
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_a_the_neutral_state }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 40
+			add_war_support = -0.05
+			add_ideas = ITA_a_the_state_takes_no_side
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_arbitration_boards
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			country_event = { id = ita_dnc.105 days = 60 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_decrees_revived
+		icon = GFX_focus_generic_oppression
+		relative_position_id = ITADNC_a_return_to_the_statuto
+		x = 0
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_a_return_to_the_statuto }
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.08
+			add_war_support = 0.05
+			add_ideas = ITA_a_the_decrees_of_public_safety
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			country_event = { id = ita_dnc.106 days = 30 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_crown_names_the_cabinet
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ITADNC_a_return_to_the_statuto
+		x = 2
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_a_return_to_the_statuto }
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 80
+			add_stability = 0.03
+			add_ideas = ITA_a_the_kings_prerogative
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.06
+			}
+			add_advisor_role = {
+				character = ITA_paolo_carcano
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = ITA_a_carcano_at_the_treasury
+					ledger = civilian
+					traits = { financial_expert }
+				}
+				activate = no
+			}
+			country_event = { id = ita_dnc.107 days = 45 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_a_vote_for_every_man
+		icon = GFX_focus_generic_election
+		relative_position_id = ITADNC_a_the_hand_offered_to_turati
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_hand_offered_to_turati }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			set_country_flag = ITA_a_franchise_widened
+			add_political_power = -25
+			add_stability = 0.08
+			add_ideas = ITA_a_the_widened_franchise
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_manpower = 8000
+			country_event = { id = ita_dnc.108 days = 50 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_reformists_at_the_door
+		icon = GFX_goal_social_reforms
+		relative_position_id = ITADNC_a_the_hand_offered_to_turati
+		x = 2
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_a_the_hand_offered_to_turati }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 55
+			add_stability = 0.06
+			add_ideas = ITA_a_the_reformists_at_the_door
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			country_event = { id = ita_dnc.109 days = 70 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_special_laws_for_the_south
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = ITADNC_a_the_prefects_instructed
+		x = 0
+		y = 1
+		cost = 11
+		prerequisite = { focus = ITADNC_a_the_prefects_instructed }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.05
+			add_ideas = ITA_a_the_special_laws_of_the_south
+			add_to_variable = { var = ITA_t_prefects value = 21 }
+			clamp_variable = {
+				var = ITA_t_prefects
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_a_prefects_counted_tt
+			117 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			115 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_basilicata_law
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_labour_office
+		icon = GFX_goal_generic_solidarity
+		relative_position_id = ITADNC_a_the_state_takes_no_side
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_state_takes_no_side }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.05
+			add_ideas = ITA_a_the_labour_office
+			add_tech_bonus = {
+				name = ITA_tb_the_labour_office
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			159 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_chamber_governed_past
+		icon = GFX_goal_generic_plotting
+		relative_position_id = ITADNC_a_the_decrees_revived
+		x = 0
+		y = 1
+		cost = 11
+		prerequisite = { focus = ITADNC_a_the_decrees_revived }
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 120
+			add_stability = -0.10
+			add_war_support = 0.05
+			add_ideas = ITA_a_government_by_decree
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
+			country_event = { id = ita_dnc.110 days = 30 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_army_at_the_prefects_call
+		icon = GFX_focus_generic_court
+		relative_position_id = ITADNC_a_the_crown_names_the_cabinet
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_crown_names_the_cabinet }
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = -0.05
+			army_experience = 25
+			add_ideas = ITA_a_the_state_of_siege
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1900
+				amount = 1200
+				producer = ITA
+			}
+			add_advisor_role = {
+				character = ITA_luigi_pelloux
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = ITA_a_pelloux_at_the_interior
+					ledger = civilian
+					traits = { crime_fighter }
+				}
+				activate = no
+			}
+			country_event = { id = ita_dnc.111 days = 60 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_duty_on_bread
+		icon = GFX_focus_generic_agriculture
+		relative_position_id = ITADNC_a_a_vote_for_every_man
+		x = 0
+		y = 1
+		cost = 11
+		prerequisite = { focus = ITADNC_a_a_vote_for_every_man }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = -30
+			add_stability = 0.10
+			add_ideas = ITA_a_the_duty_lifted
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_grain_duty
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_a_socialist_in_the_ministry
+		icon = GFX_goal_syndicalist_workers
+		relative_position_id = ITADNC_a_the_reformists_at_the_door
+		x = 0
+		y = 1
+		cost = 11
+		prerequisite = { focus = ITADNC_a_the_reformists_at_the_door }
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = 40
+			add_ideas = ITA_a_a_socialist_in_the_ministry
+			add_advisor_role = {
+				character = ITA_ivanoe_bonomi
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = ITA_a_bonomi_in_the_ministry
+					ledger = civilian
+					traits = { democratic_reformer }
+				}
+				activate = no
+			}
+			if = {
+				limit = {
+					has_country_flag = ITA_a_franchise_widened
+					communism > 0.15
+				}
+				custom_effect_tooltip = ITA_a_the_maximalists_win_tt
+				promote_character = ITA_constantino_lazzari
+				add_stability = -0.05
+				add_war_support = -0.05
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_a_the_reformists_hold_tt
+				add_stability = 0.08
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.04
+				}
+			}
+			country_event = { id = ita_dnc.112 days = 30 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_non_expedit_weighed
+		icon = GFX_focus_por_concordat
+		relative_position_id = ITADNC_a_the_neutral_state
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ITADNC_a_the_neutral_state
+			focus = ITADNC_a_return_to_the_statuto
+			focus = ITADNC_a_the_hand_offered_to_turati
+		}
+		available = { date > 1903.8.4 }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = ITA_a_the_ban_is_in_question
+			custom_effect_tooltip = ITA_a_two_answers_from_rome_tt
+			country_event = { id = ita_dnc.113 days = 20 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_sacristies_are_opened
+		icon = GFX_goal_generic_elections
+		relative_position_id = ITADNC_a_the_non_expedit_weighed
+		x = 0
+		y = 1
+		cost = 11
+		prerequisite = { focus = ITADNC_a_the_non_expedit_weighed }
+		mutually_exclusive = { focus = ITADNC_a_the_ban_holds }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.08
+			add_ideas = ITA_a_the_catholic_vote
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			if = {
+				limit = { has_country_flag = ITA_a_path_reformist }
+				custom_effect_tooltip = ITA_a_two_blocs_one_ballot_tt
+				add_stability = -0.05
+				add_political_power = 30
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_a_path_sonnino }
+				custom_effect_tooltip = ITA_a_the_right_finds_a_reserve_tt
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.04
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_a_the_prefect_finds_a_curate_tt
+				add_to_variable = { var = ITA_t_prefects value = 15 }
+				clamp_variable = {
+					var = ITA_t_prefects
+					min = 0
+					max = 100
+				}
+			}
+			country_event = { id = ita_dnc.114 days = 40 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_ban_holds
+		icon = GFX_focus_generic_catholic_dominion
+		relative_position_id = ITADNC_a_the_non_expedit_weighed
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_a_the_non_expedit_weighed }
+		mutually_exclusive = { focus = ITADNC_a_the_sacristies_are_opened }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_ideas = ITA_a_the_ban_holds
+			add_tech_bonus = {
+				name = ITA_tb_the_rural_banks
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			country_event = { id = ita_dnc.115 days = 40 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_southern_question
+		icon = GFX_focus_generic_railroad
+		relative_position_id = ITADNC_a_the_sacristies_are_opened
+		x = 0
+		y = 1
+		cost = 12
+		prerequisite = {
+			focus = ITADNC_a_the_sacristies_are_opened
+			focus = ITADNC_a_the_ban_holds
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 40
+			add_manpower = 12000
+			114 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			157 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_a_path_giolitti }
+				add_ideas = ITA_a_the_south_bought
+				117 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_a_path_sonnino }
+				add_ideas = ITA_a_the_south_policed
+				add_war_support = 0.05
+				army_experience = 20
+			}
+			else = {
+				add_ideas = ITA_a_the_south_schooled
+				add_stability = 0.05
+				add_research_slot = 1
+			}
+			country_event = { id = ita_dnc.116 days = 45 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_a_the_majority_that_governs
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = ITADNC_a_the_southern_question
+		x = 0
+		y = 1
+		cost = 14
+		prerequisite = { focus = ITADNC_a_the_southern_question }
+		available = { date > 1907.1.1 }
+		ai_will_do = { factor = 12 }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			set_country_flag = ITA_a_the_chamber_is_settled
+			add_ideas = ITA_a_the_majority_that_governs
+			if = {
+				limit = { has_country_flag = ITA_a_path_giolitti }
+				swap_ideas = {
+					remove_idea = ITA_a_the_neutral_state
+					add_idea = ITA_a_the_giolittian_system
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_a_path_sonnino }
+				swap_ideas = {
+					remove_idea = ITA_a_torniamo_allo_statuto
+					add_idea = ITA_a_the_statuto_restored
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ITA_a_the_reformist_understanding
+					add_idea = ITA_a_the_popular_bloc
+				}
+			}
+			country_event = { id = ita_dnc.117 days = 15 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_country_beneath_the_state
+		icon = GFX_focus_generic_population_growth
+		relative_position_id = ITADNC_t_the_road_from_adwa
+		x = -6
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = ITADNC_t_the_road_from_adwa
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			add_ideas = ITA_dnc_the_two_italies
+			custom_effect_tooltip = ITA_dnc_e_the_real_country_tt
+			set_country_flag = ITA_dnc_e_society_opened
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_census_bonus
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			hidden_effect = {
+				country_event = {
+					id = ita_dnc.200
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_white_coal
+		icon = GFX_focus_generic_hydroelectric_energy
+		relative_position_id = ITADNC_e_the_country_beneath_the_state
+		x = -6
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_country_beneath_the_state
+		}
+		available = {
+			has_completed_focus = ITADNC_t_the_coal_that_is_not_ours
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ITA_dnc_white_coal
+			custom_effect_tooltip = ITA_dnc_e_white_coal_tt
+			set_country_flag = ITA_dnc_e_white_coal_chosen
+			158 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_white_coal_bonus
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_wires_between_three_cities
+		icon = GFX_focus_generic_electrification
+		relative_position_id = ITADNC_e_white_coal
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_white_coal
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 15
+			add_ideas = ITA_dnc_the_grid_of_the_triangle
+			158 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			159 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_wires_bonus
+				bonus = 0.75
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_state_orders_from_terni
+		icon = GFX_focus_generic_steel_mill
+		relative_position_id = ITADNC_e_white_coal
+		x = 2
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_white_coal
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_dnc_the_state_orders_from_terni
+			2 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_terni_bonus
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_workshops_of_turin
+		icon = GFX_focus_generic_industry_investment
+		relative_position_id = ITADNC_e_the_wires_between_three_cities
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_wires_between_three_cities
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 15
+			add_ideas = ITA_dnc_the_workshops_of_turin
+			158 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_workshops_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_reservoirs_in_the_alps
+		icon = GFX_focus_SMB_a_land_of_mountains
+		relative_position_id = ITADNC_e_the_state_orders_from_terni
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_state_orders_from_terni
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = -15
+			add_ideas = ITA_dnc_the_alpine_reservoirs
+			159 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_reservoirs_bonus
+				bonus = 0.75
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_a_current_for_every_wheel
+		icon = GFX_focus_generic_modernize_industry
+		relative_position_id = ITADNC_e_the_workshops_of_turin
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = ITADNC_e_the_workshops_of_turin
+		}
+		prerequisite = {
+			focus = ITADNC_e_reservoirs_in_the_alps
+		}
+		available = {
+			date > 1905.1.1
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = ITA_dnc_white_coal
+				add_idea = ITA_dnc_a_current_for_every_wheel
+			}
+			159 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_current_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			hidden_effect = {
+				country_event = {
+					id = ita_dnc.204
+					days = 5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_special_laws_for_the_south
+		icon = GFX_goal_social_reforms
+		relative_position_id = ITADNC_e_the_country_beneath_the_state
+		x = -2
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_country_beneath_the_state
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03
+			add_ideas = ITA_dnc_the_special_laws
+			set_country_flag = ITA_dnc_e_special_laws_passed
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_special_laws_bonus
+				bonus = 0.75
+				uses = 1
+				category = construction_tech
+			}
+			hidden_effect = {
+				country_event = {
+					id = ita_dnc.201
+					days = 7
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_quinine_at_the_states_price
+		icon = GFX_focus_generic_land_reclamation
+		relative_position_id = ITADNC_e_special_laws_for_the_south
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = ITADNC_e_special_laws_for_the_south
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -15
+			add_manpower = 15000
+			add_ideas = ITA_dnc_the_quinine_of_the_state
+			117 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_water_before_anything_else
+		icon = GFX_focus_generic_agriculture
+		relative_position_id = ITADNC_e_special_laws_for_the_south
+		x = 2
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_special_laws_for_the_south
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_dnc_the_water_and_the_land
+			117 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_aqueduct_bonus
+				bonus = 0.75
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_land_that_holds_its_people
+		icon = GFX_focus_generic_farmland
+		relative_position_id = ITADNC_e_quinine_at_the_states_price
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = ITADNC_e_quinine_at_the_states_price
+		}
+		prerequisite = {
+			focus = ITADNC_e_water_before_anything_else
+		}
+		available = {
+			date > 1906.1.1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = ITA_dnc_the_special_laws
+				add_idea = ITA_dnc_the_land_that_holds
+			}
+			115 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = ITA_dnc_e_the_south_answered
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_six_hundred_thousand_a_year
+		icon = GFX_focus_generic_immigration
+		relative_position_id = ITADNC_e_the_country_beneath_the_state
+		x = 2
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = ITADNC_e_the_country_beneath_the_state
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ITA_dnc_six_hundred_thousand_a_year
+			custom_effect_tooltip = ITA_dnc_e_the_ships_tt
+			hidden_effect = {
+				country_event = {
+					id = ita_dnc.202
+					days = 5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_commissariat_of_emigration
+		icon = GFX_focus_ARG_immigration_wave
+		relative_position_id = ITADNC_e_six_hundred_thousand_a_year
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_six_hundred_thousand_a_year
+		}
+		mutually_exclusive = {
+			focus = ITADNC_e_the_land_before_the_ship
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.2
+				has_country_flag = ITA_dnc_e_the_south_answered
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = ITA_dnc_six_hundred_thousand_a_year
+				add_idea = ITA_dnc_the_commissariat_of_emigration
+			}
+			set_country_flag = ITA_dnc_e_emigration_governed
+			add_tech_bonus = {
+				name = ITA_dnc_e_the_commissariat_bonus
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_land_before_the_ship
+		icon = GFX_focus_generic_agricultural_subsidies
+		relative_position_id = ITADNC_e_six_hundred_thousand_a_year
+		x = 2
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_six_hundred_thousand_a_year
+		}
+		mutually_exclusive = {
+			focus = ITADNC_e_the_commissariat_of_emigration
+		}
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_e_the_south_answered
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03
+			swap_ideas = {
+				remove_idea = ITA_dnc_six_hundred_thousand_a_year
+				add_idea = ITA_dnc_the_land_before_the_ship
+			}
+			set_country_flag = ITA_dnc_e_emigration_refused
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_italians_beyond_the_sea
+		icon = GFX_focus_BRA_north_and_south_america
+		relative_position_id = ITADNC_e_the_commissariat_of_emigration
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_commissariat_of_emigration
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ITA_dnc_the_italians_beyond_the_sea
+			add_tech_bonus = {
+				name = ITA_dnc_e_beyond_the_sea_bonus
+				bonus = 0.75
+				uses = 1
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_bread_that_stays
+		icon = GFX_focus_generic_agriculture
+		relative_position_id = ITADNC_e_the_land_before_the_ship
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_land_before_the_ship
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -15
+			add_manpower = 20000
+			add_ideas = ITA_dnc_the_bread_that_stays
+			157 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_state_is_neutral_in_the_strike
+		icon = GFX_focus_generic_strike_at_democracy1
+		relative_position_id = ITADNC_e_the_country_beneath_the_state
+		x = 8
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_country_beneath_the_state
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			add_ideas = ITA_dnc_the_state_is_neutral
+			set_country_flag = ITA_dnc_e_neutrality_in_labour
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_chambers_of_labour
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		relative_position_id = ITADNC_e_the_state_is_neutral_in_the_strike
+		x = -2
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_state_is_neutral_in_the_strike
+		}
+		mutually_exclusive = {
+			focus = ITADNC_e_the_prefect_settles_it
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.05
+			add_ideas = ITA_dnc_the_chambers_of_labour
+			set_country_flag = ITA_dnc_e_labour_recognised
+			159 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_prefect_settles_it
+		icon = GFX_focus_generic_improve_the_administration
+		relative_position_id = ITADNC_e_the_state_is_neutral_in_the_strike
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_state_is_neutral_in_the_strike
+		}
+		mutually_exclusive = {
+			focus = ITADNC_e_the_chambers_of_labour
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = -0.03
+			add_war_support = 0.03
+			add_ideas = ITA_dnc_the_prefect_settles_it
+			set_country_flag = ITA_dnc_e_prefects_instructed
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_schools_of_the_kingdom
+		icon = GFX_focus_generic_university_2
+		relative_position_id = ITADNC_e_the_chambers_of_labour
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = ITADNC_e_the_chambers_of_labour
+			focus = ITADNC_e_the_prefect_settles_it
+		}
+		available = {
+			date > 1907.1.1
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03
+			add_ideas = ITA_dnc_the_schools_of_the_kingdom
+			add_research_slot = 1
+			if = {
+				limit = {
+					has_country_flag = ITA_dnc_e_the_figures_are_public
+				}
+				add_political_power = 25
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_the_pew_and_the_ballot
+		icon = GFX_focus_por_concordat
+		relative_position_id = ITADNC_e_the_state_is_neutral_in_the_strike
+		x = 2
+		y = 1
+		cost = 4
+		prerequisite = {
+			focus = ITADNC_e_the_state_is_neutral_in_the_strike
+		}
+		available = {
+			date > 1904.1.1
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = ITA_dnc_the_pew_and_the_ballot
+			hidden_effect = {
+				country_event = {
+					id = ita_dnc.203
+					days = 10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_e_two_italies_one_kingdom
+		icon = GFX_focus_generic_improve_the_administration_2
+		relative_position_id = ITADNC_e_a_current_for_every_wheel
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = ITADNC_e_a_current_for_every_wheel
+			focus = ITADNC_e_the_land_that_holds_its_people
+		}
+		prerequisite = {
+			focus = ITADNC_e_the_italians_beyond_the_sea
+			focus = ITADNC_e_the_bread_that_stays
+			focus = ITADNC_e_the_schools_of_the_kingdom
+		}
+		available = {
+			date > 1909.1.1
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = ITA_dnc_the_two_italies
+				add_idea = ITA_dnc_the_kingdom_made_whole
+			}
+			if = {
+				limit = {
+					has_country_flag = ITA_dnc_e_the_figures_are_public
+				}
+				add_stability = 0.03
+			}
+			add_tech_bonus = {
+				name = ITA_dnc_e_one_kingdom_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			set_country_flag = ITA_dnc_e_the_kingdom_made_whole
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_army_after_adwa
+		icon = GFX_focus_ITA_capo_supremo
+		relative_position_id = ITADNC_t_the_road_from_adwa
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_political_power = 50
+			add_ideas = ITA_arm_the_verdict_of_adwa
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_adwa_report
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			set_country_flag = ITA_arm_branch_opened
+			country_event = {
+				id = ita_dnc.400
+				days = 10
+			}
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = arms_factory
+					value = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_promotion_lists
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = ITADNC_arm_the_army_after_adwa
+		x = -4
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_political_power = 25
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_staff_college
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			country_event = {
+				id = ita_dnc.401
+				days = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_annual_class
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = ITADNC_arm_the_army_after_adwa
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 10000
+			add_political_power = 25
+			add_ideas = ITA_arm_the_class_of_the_year
+			country_event = {
+				id = ita_dnc.402
+				days = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_field_gun_question
+		icon = GFX_goal_generic_army_artillery
+		relative_position_id = ITADNC_arm_the_army_after_adwa
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_ideas = ITA_arm_the_quick_firing_batteries
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_recoil_carriage
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = light_field_gun_equipment_1890
+				amount = 120
+				producer = ITA
+			}
+			country_event = {
+				id = ita_dnc.403
+				days = 20
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_alpine_frontier
+		icon = GFX_goal_generic_fortify_city
+		relative_position_id = ITADNC_arm_the_army_after_adwa
+		x = 4
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_ideas = ITA_arm_the_alpine_frontier
+			160 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			158 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = ITA_arm_the_frontier_surveyed
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_never_again_milan
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ITADNC_arm_the_promotion_lists
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_arm_the_promotion_lists }
+		prerequisite = { focus = ITADNC_arm_the_annual_class }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_command_power = 25
+			country_event = {
+				id = ita_dnc.404
+				days = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_school_of_the_regiment
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = ITADNC_arm_the_annual_class
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_arm_the_annual_class }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 25
+			add_ideas = ITA_arm_the_school_of_the_regiment
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_drill_book
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_arsenals
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = ITADNC_arm_the_field_gun_question
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_arm_the_field_gun_question }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_equipment_to_stockpile = {
+				type = early_infantry_equipment_1900
+				amount = 2000
+				producer = ITA
+			}
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_carcano_line
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			set_country_flag = ITA_arm_the_arsenals_kept
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_alpini
+		icon = GFX_focus_ITA_alpine_division
+		relative_position_id = ITADNC_arm_the_alpine_frontier
+		x = 0
+		y = 1
+		cost = 7.5
+		prerequisite = { focus = ITADNC_arm_the_alpine_frontier }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			set_technology = { mountaineers = 1 }
+			add_ideas = ITA_arm_the_alpini_corps
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_mountain_establishment
+				bonus = 1.0
+				uses = 1
+				category = mountaineers_tech
+			}
+			country_event = {
+				id = ita_dnc.405
+				days = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_army_estimates
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = ITADNC_arm_never_again_milan
+		x = 2
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = ITADNC_arm_never_again_milan
+			focus = ITADNC_arm_the_school_of_the_regiment
+		}
+		prerequisite = {
+			focus = ITADNC_arm_the_arsenals
+			focus = ITADNC_arm_the_alpini
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 75
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_estimates
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = ITA_arm_the_three_answers_tt
+			set_country_flag = ITA_arm_estimates_before_the_chamber
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_army_of_the_alps
+		icon = GFX_focus_AFG_mountain_training
+		relative_position_id = ITADNC_arm_the_army_estimates
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_arm_the_army_estimates }
+		mutually_exclusive = {
+			focus = ITADNC_arm_the_army_of_africa
+			focus = ITADNC_arm_a_smaller_army
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 50
+			add_command_power = 25
+			add_ideas = ITA_arm_the_army_of_the_alps
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_northeastern_deployment
+				bonus = 1.0
+				uses = 1
+				category = mountaineers_tech
+			}
+			reverse_add_opinion_modifier = {
+				target = AUH
+				modifier = RI_hostile_foreign_policy
+			}
+			set_country_flag = ITA_arm_the_alps_chosen
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_works_in_the_cadore
+		icon = GFX_goal_generic_defence
+		relative_position_id = ITADNC_arm_the_army_of_the_alps
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_arm_the_army_of_the_alps }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ITA_arm_the_frontier_works
+			160 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			159 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_mountain_batteries
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = ITADNC_arm_the_army_of_the_alps
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_arm_the_army_of_the_alps }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_ideas = ITA_arm_the_mountain_batteries
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_mule_gun
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_equipment_to_stockpile = {
+				type = light_field_gun_equipment_1903
+				amount = 80
+				producer = ITA
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_plan_against_the_ally
+		icon = GFX_goal_generic_territory_or_war
+		relative_position_id = ITADNC_arm_the_works_in_the_cadore
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_arm_the_works_in_the_cadore }
+		prerequisite = { focus = ITADNC_arm_the_mountain_batteries }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 50
+			add_command_power = 50
+			add_war_support = 0.05
+			add_ideas = ITA_arm_the_plan_against_the_ally
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_isonzo_study
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			set_country_flag = ITA_arm_the_plan_is_filed
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_army_of_africa
+		icon = GFX_focus_ITA_a_colonial_empire
+		relative_position_id = ITADNC_arm_the_army_estimates
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_arm_the_army_estimates }
+		mutually_exclusive = {
+			focus = ITADNC_arm_the_army_of_the_alps
+			focus = ITADNC_arm_a_smaller_army
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 50
+			add_war_support = 0.05
+			add_ideas = ITA_arm_the_army_of_africa
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_colonial_establishment
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			set_country_flag = ITA_arm_africa_chosen
+			country_event = {
+				id = ita_dnc.406
+				days = 15
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_ascari_regiments
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		relative_position_id = ITADNC_arm_the_army_of_africa
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_arm_the_army_of_africa }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 25
+			add_ideas = ITA_arm_the_ascari_regiments
+			if = {
+				limit = {
+					NOT = { has_template = "Battaglioni Eritrei" }
+				}
+				division_template = {
+					name = "Battaglioni Eritrei"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+					priority = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_expedition_to_tripoli
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = ITADNC_arm_the_ascari_regiments
+		x = 0
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_arm_the_ascari_regiments }
+		available = {
+			date > 1909.1.1
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 50
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_landing_study
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			country_event = {
+				id = ita_dnc.407
+				days = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_a_smaller_army
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = ITADNC_arm_the_army_estimates
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_arm_the_army_estimates }
+		mutually_exclusive = {
+			focus = ITADNC_arm_the_army_of_the_alps
+			focus = ITADNC_arm_the_army_of_africa
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			add_ideas = ITA_arm_a_smaller_army
+			set_country_flag = ITA_arm_the_fleet_gets_it
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = dockyard
+					value = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_cadre_establishment
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ITADNC_arm_a_smaller_army
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_arm_a_smaller_army }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_ideas = ITA_arm_the_cadre_establishment
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_reserve_index
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_army_gives_way
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = ITADNC_arm_the_cadre_establishment
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_arm_the_cadre_establishment }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			country_event = {
+				id = ita_dnc.408
+				days = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_the_army_of_the_new_century
+		icon = GFX_focus_ITA_king_vittorio
+		relative_position_id = ITADNC_arm_the_plan_against_the_ally
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ITADNC_arm_the_plan_against_the_ally
+			focus = ITADNC_arm_the_expedition_to_tripoli
+			focus = ITADNC_arm_the_army_gives_way
+		}
+		available = {
+			date > 1908.1.1
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 100
+			add_command_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = {
+					has_idea = ITA_arm_the_verdict_of_adwa
+				}
+				swap_ideas = {
+					remove_idea = ITA_arm_the_verdict_of_adwa
+					add_idea = ITA_arm_the_army_of_the_new_century
+				}
+			}
+			else = {
+				add_ideas = ITA_arm_the_army_of_the_new_century
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_new_regulations
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			set_country_flag = ITA_arm_the_verdict_answered
+			country_event = {
+				id = ita_dnc.409
+				days = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_naval_estimates
+		icon = GFX_goal_naval_spending_bill
+		relative_position_id = ITADNC_t_the_road_from_adwa
+		x = 20
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
+		available = {
+			any_owned_state = { is_coastal = yes }
+		}
+		bypass = {
+			NOT = {
+				any_owned_state = { is_coastal = yes }
+			}
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			navy_experience = 25
+			add_political_power = 25
+			add_ideas = ITA_n_the_estimates_of_1900
+			add_tech_bonus = {
+				name = ITA_tb_the_estimate
+				bonus = 0.75
+				uses = 1
+				category = naval_equipment
+			}
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = ITA_n_branch_open
+			if = {
+				limit = {
+					NOT = { has_variable = ITA_vienna_trust }
+				}
+				set_variable = { ITA_vienna_trust = 50 }
+			}
+			custom_effect_tooltip = ITA_n_tt_vienna_confidence_set
+			add_ai_strategy = {
+				type = build_building
+				id = dockyard
+				value = 25
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.300 days = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_design_office
+		icon = GFX_focus_generic_navy_research_bonus
+		relative_position_id = ITADNC_n_the_naval_estimates
+		x = -4
+		y = 1
+		cost = 4
+		prerequisite = { focus = ITADNC_n_the_naval_estimates }
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			set_country_flag = ITA_n_path_cuniberti
+			add_ideas = ITA_n_the_drawing_office
+			add_tech_bonus = {
+				name = ITA_tb_the_design_office
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			navy_experience = 25
+			add_political_power = -25
+			custom_effect_tooltip = ITA_n_tt_cuniberti_hired
+			hidden_effect = {
+				country_event = { id = ita_dnc.301 days = 30 random_days = 60 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_building_ways
+		icon = GFX_goal_generic_construct_naval_dockyard
+		relative_position_id = ITADNC_n_the_naval_estimates
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_n_the_naval_estimates }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			117 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_building_ways
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			navy_experience = 15
+			add_ai_strategy = {
+				type = build_building
+				id = dockyard
+				value = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_whitehead_licence
+		icon = GFX_focus_generic_mine_warfare
+		relative_position_id = ITADNC_n_the_naval_estimates
+		x = 4
+		y = 1
+		cost = 4
+		prerequisite = { focus = ITADNC_n_the_naval_estimates }
+		ai_will_do = { factor = 7 }
+		completion_reward = {
+			add_political_power = -25
+			add_tech_bonus = {
+				name = ITA_tb_the_whitehead_licence
+				bonus = 1.0
+				uses = 1
+				category = cat_torpedoes
+			}
+			add_tech_bonus = {
+				name = ITA_tb_torpedo_craft
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			117 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = ITA_n_whitehead_licence
+			subtract_from_variable = { var = ITA_vienna_trust value = 3 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_n_tt_vienna_down_3
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_all_big_gun_ship
+		icon = GFX_focus_generic_battleship_guns
+		relative_position_id = ITADNC_n_the_design_office
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_n_the_design_office }
+		mutually_exclusive = { focus = ITADNC_n_the_article_in_janes }
+		available = {
+			date > 1902.1.1
+			has_country_flag = ITA_n_path_cuniberti
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				add = 20
+				num_of_naval_factories > 6
+			}
+		}
+		completion_reward = {
+			set_country_flag = ITA_n_all_big_gun
+			add_ideas = ITA_n_the_ship_of_the_future
+			add_tech_bonus = {
+				name = ITA_tb_all_big_gun
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+			navy_experience = 40
+			add_political_power = -50
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_capital_bb
+				value = 50
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.302 days = 20 random_days = 40 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_article_in_janes
+		icon = GFX_goal_cut_naval_budget
+		relative_position_id = ITADNC_n_the_design_office
+		x = 2
+		y = 1
+		cost = 4
+		prerequisite = { focus = ITADNC_n_the_design_office }
+		mutually_exclusive = { focus = ITADNC_n_the_all_big_gun_ship }
+		available = {
+			date > 1902.1.1
+		}
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				add = 15
+				num_of_naval_factories < 5
+			}
+		}
+		completion_reward = {
+			set_country_flag = ITA_n_the_refusal
+			add_ideas = ITA_n_the_refusal_of_1903
+			add_political_power = 75
+			add_stability = 0.03
+			navy_experience = 10
+			add_tech_bonus = {
+				name = ITA_tb_naval_estimates
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.303 days = 40 random_days = 80 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_fleet_base_at_taranto
+		icon = GFX_goal_generic_occupy_states_coastal
+		relative_position_id = ITADNC_n_the_building_ways
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_n_the_building_ways }
+		available = {
+			owns_state = 992
+		}
+		ai_will_do = { factor = 9 }
+		completion_reward = {
+			992 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 11837
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ITA_n_the_base_at_taranto
+			add_tech_bonus = {
+				name = ITA_tb_the_fleet_base
+				bonus = 0.75
+				uses = 1
+				category = naval_doctrine
+			}
+			set_country_flag = ITA_n_taranto_base
+			navy_experience = 25
+			subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_n_tt_vienna_down_5
+			if = {
+				limit = { country_exists = AUH }
+				AUH = {
+					add_opinion_modifier = { target = ITA modifier = small_decrease }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_glauco_boats
+		icon = GFX_goal_generic_navy_submarine
+		relative_position_id = ITADNC_n_the_whitehead_licence
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_n_the_whitehead_licence }
+		available = {
+			date > 1904.1.1
+		}
+		ai_will_do = { factor = 7 }
+		completion_reward = {
+			set_country_flag = ITA_n_glauco_boats
+			custom_effect_tooltip = ITA_n_tt_pullino_hired
+			add_tech_bonus = {
+				name = ITA_tb_the_venice_boats
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+			160 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 25
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_submarine
+				value = 25
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_triple_turret
+		icon = GFX_focus_generic_navy_battleship2
+		relative_position_id = ITADNC_n_the_all_big_gun_ship
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_n_the_all_big_gun_ship }
+		available = {
+			date > 1905.1.1
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			set_country_flag = ITA_n_triple_turret
+			add_tech_bonus = {
+				name = ITA_tb_the_ring_holds
+				bonus = 1.0
+				uses = 2
+				category = naval_artillery
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_proof_firing
+				bonus = 0.5
+				uses = 1
+				category = ship_modules_tech
+			}
+			navy_experience = 30
+			add_political_power = -25
+			custom_effect_tooltip = ITA_n_tt_masdea_draws_the_ring
+			hidden_effect = {
+				country_event = { id = ita_dnc.304 days = 30 random_days = 60 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_petersburg_drawings
+		icon = GFX_focus_ron_generic_export_focus
+		relative_position_id = ITADNC_n_the_article_in_janes
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = { focus = ITADNC_n_the_article_in_janes }
+		available = {
+			date > 1905.1.1
+		}
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			set_country_flag = ITA_n_cuniberti_gone
+			custom_effect_tooltip = ITA_n_tt_cuniberti_gone
+			add_political_power = 100
+			add_tech_bonus = {
+				name = ITA_tb_petersburg_drawings
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = -10
+			if = {
+				limit = { country_exists = RUS }
+				RUS = {
+					add_opinion_modifier = { target = ITA modifier = small_increase }
+				}
+			}
+			if = {
+				limit = { country_exists = ENG }
+				ENG = {
+					add_opinion_modifier = { target = ITA modifier = small_increase }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_naval_academy_study
+		icon = GFX_focus_AUS_promote_admirals
+		relative_position_id = ITADNC_n_the_fleet_base_at_taranto
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = ITA_tb_the_academy_study
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_tb_the_academy_study
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			add_political_power = 25
+			set_country_flag = ITA_n_livorno_study
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_adriatic_is_a_closed_sea
+		icon = GFX_focus_generic_adriatic_sea_focus
+		relative_position_id = ITADNC_n_the_fleet_base_at_taranto
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto }
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_ideas = ITA_n_a_sea_that_closes_behind_us
+			add_tech_bonus = {
+				name = ITA_tb_coast_defence
+				bonus = 0.75
+				uses = 1
+				category = cat_fortification
+			}
+			set_country_flag = ITA_n_adriatic_read
+			navy_experience = 25
+			add_war_support = 0.03
+			subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_n_tt_vienna_down_5
+			hidden_effect = {
+				country_event = { id = ita_dnc.305 days = 25 random_days = 50 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_laurenti_hull
+		icon = GFX_focus_generic_cruiser_submarines
+		relative_position_id = ITADNC_n_the_glauco_boats
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_n_the_glauco_boats }
+		available = {
+			date > 1907.1.1
+			has_country_flag = ITA_n_glauco_boats
+		}
+		ai_will_do = { factor = 7 }
+		completion_reward = {
+			add_ideas = ITA_n_the_double_hull
+			add_tech_bonus = {
+				name = ITA_tb_the_export_hulls
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+			set_country_flag = ITA_n_laurenti_hull
+			custom_effect_tooltip = ITA_n_tt_laurenti_hired
+			navy_experience = 25
+			hidden_effect = {
+				country_event = { id = ita_dnc.309 days = 40 random_days = 90 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_dante_alighieri
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = ITADNC_n_the_triple_turret
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_n_the_triple_turret }
+		available = {
+			date > 1908.1.1
+			has_country_flag = ITA_n_all_big_gun
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			set_country_flag = ITA_n_dante_launched
+			custom_effect_tooltip = ITA_n_tt_masdea_hired
+			set_technology = { ww1_battleship2 = 1 }
+			add_tech_bonus = {
+				name = ITA_tb_the_dante
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+			add_ideas = ITA_n_the_dante_programme
+			117 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			navy_experience = 50
+			add_war_support = 0.05
+			add_named_threat = {
+				threat = 2
+				name = ITA_n_the_dante_threat
+			}
+			subtract_from_variable = { var = ITA_vienna_trust value = 8 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_n_tt_vienna_down_8
+			if = {
+				limit = { country_exists = AUH }
+				AUH = {
+					add_opinion_modifier = { target = ITA modifier = medium_decrease }
+				}
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.306 days = 15 random_days = 30 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_armoured_cruiser_answer
+		icon = GFX_goal_generic_naval_cruiser2
+		relative_position_id = ITADNC_n_the_petersburg_drawings
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_n_the_petersburg_drawings }
+		available = {
+			date > 1906.1.1
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			set_country_flag = ITA_n_cruiser_answer
+			add_ideas = ITA_n_the_cruiser_answer
+			add_tech_bonus = {
+				name = ITA_tb_the_armoured_cruiser
+				bonus = 1.0
+				uses = 2
+				category = ca_tech
+			}
+			add_tech_bonus = {
+				name = ITA_tb_the_cruiser_yard
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 30
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_cruiser_heavy
+				value = 40
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.304 days = 30 random_days = 60 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_night_attack
+		icon = GFX_focus_generic_naval_discipline
+		relative_position_id = ITADNC_n_the_laurenti_hull
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_n_the_laurenti_hull }
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_tb_the_night_attack
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_tb_rizzos_flotilla
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 40
+			set_country_flag = ITA_n_night_attack
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_screen
+				value = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_race_with_pola
+		icon = GFX_focus_generic_large_navy
+		relative_position_id = ITADNC_n_the_adriatic_is_a_closed_sea
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_n_the_adriatic_is_a_closed_sea }
+		prerequisite = {
+			focus = ITADNC_n_the_dante_alighieri
+			focus = ITADNC_n_the_armoured_cruiser_answer
+		}
+		available = {
+			date > 1909.1.1
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_n_the_estimates_of_1900
+				add_idea = ITA_n_the_estimates_of_1909
+			}
+			add_ideas = ITA_n_the_race_with_pola
+			add_tech_bonus = {
+				name = ITA_tb_the_adriatic_race
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}
+			992 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 50
+			add_war_support = 0.05
+			add_named_threat = {
+				threat = 3
+				name = ITA_n_the_adriatic_race_threat
+			}
+			subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_n_tt_vienna_down_10
+			set_country_flag = ITA_n_adriatic_race
+			hidden_effect = {
+				country_event = { id = ita_dnc.307 days = 30 random_days = 90 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_cavour_class
+		icon = GFX_goal_generic_multiple_ships
+		relative_position_id = ITADNC_n_the_dante_alighieri
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = ITADNC_n_the_dante_alighieri }
+		available = {
+			date > 1910.1.1
+		}
+		ai_will_do = { factor = 9 }
+		completion_reward = {
+			set_technology = { ww1_battleship3 = 1 }
+			add_tech_bonus = {
+				name = ITA_tb_the_new_programme
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+			add_ideas = ITA_n_the_cavour_programme
+			989 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			navy_experience = 50
+			add_named_threat = {
+				threat = 2
+				name = ITA_n_the_cavour_threat
+			}
+			set_country_flag = ITA_n_cavour_class
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_export_yard
+		icon = GFX_goal_generic_shipyard
+		relative_position_id = ITADNC_n_the_armoured_cruiser_answer
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_n_the_armoured_cruiser_answer }
+		ai_will_do = { factor = 7 }
+		completion_reward = {
+			add_ideas = ITA_n_the_export_yard
+			add_tech_bonus = {
+				name = ITA_tb_the_yards_answer
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			117 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = ITA_n_export_yard
+			hidden_effect = {
+				country_event = { id = ita_dnc.308 days = 45 random_days = 120 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_high_seas_fleet
+		icon = GFX_goal_generic_build_navy
+		relative_position_id = ITADNC_n_the_race_with_pola
+		x = 0
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_n_the_race_with_pola }
+		mutually_exclusive = { focus = ITADNC_n_the_narrow_sea_doctrine }
+		available = {
+			date > 1911.1.1
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_country_flag = ITA_n_dante_launched
+			}
+		}
+		completion_reward = {
+			add_ideas = ITA_n_the_high_seas_school
+			add_tech_bonus = {
+				name = ITA_tb_the_high_seas
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = ITA_tb_landing_parties
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_tb_the_high_seas
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 75
+			add_war_support = 0.05
+			set_country_flag = ITA_n_school_high_seas
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_capital_bb
+				value = 60
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_n_the_narrow_sea_doctrine
+		icon = GFX_focus_generic_coastal_fort
+		relative_position_id = ITADNC_n_the_race_with_pola
+		x = 2
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_n_the_race_with_pola }
+		mutually_exclusive = { focus = ITADNC_n_the_high_seas_fleet }
+		available = {
+			date > 1911.1.1
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_country_flag = ITA_n_glauco_boats
+			}
+		}
+		completion_reward = {
+			add_ideas = ITA_n_the_narrow_sea_school
+			add_tech_bonus = {
+				name = ITA_tb_the_narrow_sea_doctrine
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = ITA_tb_rizzos_flotilla
+				bonus = 0.75
+				uses = 1
+				category = dd_tech
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_tb_the_narrow_sea_doctrine
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 50
+			add_stability = 0.03
+			set_country_flag = ITA_n_school_narrow_sea
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_screen
+				value = 50
+			}
+			add_ai_strategy = {
+				type = role_ratio
+				id = naval_submarine
+				value = 40
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_consulta
+		icon = GFX_focus_generic_diplomatic_treaty
+		relative_position_id = ITADNC_t_the_road_from_adwa
+		x = 28
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+			set_country_flag = ITA_w_chapter_opened
+			set_variable = { ITA_vienna_trust = 40 }
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+			add_ideas = ITA_w_the_consulta
+			add_tech_bonus = {
+				name = ITA_w_the_cipher_room
+				bonus = 1.0
+				uses = 1
+				category = encryption_tech
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.500 days = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_renewal_of_the_alliance
+		icon = GFX_focus_generic_treaty
+		relative_position_id = ITADNC_w_the_consulta
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_w_the_consulta }
+		available = {
+			has_country_flag = ITA_w_chapter_opened
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.03
+			set_country_flag = ITA_w_alliance_renewed
+			add_opinion_modifier = { target = GER modifier = improve_relation }
+			add_opinion_modifier = { target = AUH modifier = improve_relation }
+			add_to_variable = { var = ITA_vienna_trust value = 10 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+			add_tech_bonus = {
+				name = ITA_w_the_military_convention_bonus
+				bonus = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_loyal_third
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = ITADNC_w_the_renewal_of_the_alliance
+		x = -2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_w_the_renewal_of_the_alliance }
+		mutually_exclusive = { focus = ITADNC_w_prinettis_note_to_paris }
+		mutually_exclusive = { focus = ITADNC_w_the_notice_of_denunciation }
+		available = {
+			has_country_flag = ITA_w_alliance_renewed
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.03
+			set_country_flag = ITA_w_path_loyal
+			add_ideas = ITA_w_the_third_partner
+			add_to_variable = { var = ITA_vienna_trust value = 25 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+			add_opinion_modifier = { target = AUH modifier = improve_relation }
+			add_opinion_modifier = { target = GER modifier = improve_relation }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_prinettis_note_to_paris
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = ITADNC_w_the_renewal_of_the_alliance
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_w_the_renewal_of_the_alliance }
+		mutually_exclusive = { focus = ITADNC_w_the_loyal_third }
+		mutually_exclusive = { focus = ITADNC_w_the_notice_of_denunciation }
+		available = {
+			has_country_flag = ITA_w_alliance_renewed
+			date > 1902.6.1
+		}
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 0
+				has_war_with = FRA
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = ITA_w_path_note
+			add_ideas = ITA_w_the_note_of_1902
+			add_opinion_modifier = { target = FRA modifier = improve_relation }
+			hidden_effect = {
+				country_event = { id = ita_dnc.501 days = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_notice_of_denunciation
+		icon = GFX_goal_generic_attack_allies
+		relative_position_id = ITADNC_w_the_renewal_of_the_alliance
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_w_the_renewal_of_the_alliance }
+		mutually_exclusive = { focus = ITADNC_w_the_loyal_third }
+		mutually_exclusive = { focus = ITADNC_w_prinettis_note_to_paris }
+		available = {
+			has_country_flag = ITA_w_alliance_renewed
+			date > 1907.1.1
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_war_support = 0.05
+			add_stability = -0.05
+			set_country_flag = ITA_w_path_free_hand
+			add_ideas = ITA_w_free_hands
+			subtract_from_variable = { var = ITA_vienna_trust value = 30 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+			hidden_effect = {
+				country_event = { id = ita_dnc.503 days = 4 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_staff_talks_at_berlin
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = ITADNC_w_the_loyal_third
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_the_loyal_third }
+		available = {
+			has_country_flag = ITA_w_path_loyal
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 25
+			add_doctrine_cost_reduction = {
+				name = ITA_w_the_third_army_rides
+				cost_reduction = 0.4
+				uses = 1
+				category = land_doctrine
+			}
+			add_to_variable = { var = ITA_vienna_trust value = 15 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+			add_tech_bonus = {
+				name = ITA_w_the_rhine_timetable
+				bonus = 0.75
+				uses = 1
+				category = train_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_double_book
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = ITADNC_w_prinettis_note_to_paris
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_prinettis_note_to_paris }
+		available = {
+			has_country_flag = ITA_w_path_note
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 60
+			set_country_flag = ITA_w_double_book
+			add_ideas = ITA_w_the_double_book
+			add_tech_bonus = {
+				name = ITA_w_the_black_cabinet
+				bonus = 1.0
+				uses = 1
+				category = decryption_tech
+			}
+			hidden_effect = {
+				country_event = { id = ita_dnc.502 days = 420 random_days = 540 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_trento_and_trieste
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = ITADNC_w_the_notice_of_denunciation
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_w_the_notice_of_denunciation }
+		available = {
+			has_country_flag = ITA_w_path_free_hand
+		}
+		ai_will_do = { factor = 4 }
+		completion_reward = {
+			add_war_support = 0.10
+			add_political_power = 25
+			add_state_claim = 867
+			add_state_claim = 993
+			add_state_claim = 736
+			create_wargoal = {
+				type = take_state_focus
+				target = AUH
+				generator = { 867 993 736 39 }
+			}
+			add_named_threat = { threat = 4 name = ITA_w_threat_the_irredenta }
+			set_variable = { ITA_vienna_trust = 0 }
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_bargain_at_racconigi
+		icon = GFX_focus_generic_balkan_diplomacy
+		relative_position_id = ITADNC_w_the_staff_talks_at_berlin
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = {
+			focus = ITADNC_w_the_staff_talks_at_berlin
+			focus = ITADNC_w_the_double_book
+			focus = ITADNC_w_trento_and_trieste
+		}
+		available = {
+			date > 1909.1.1
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 40
+			add_opinion_modifier = { target = RUS modifier = improve_relation }
+			set_country_flag = ITA_w_racconigi
+			subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+			add_tech_bonus = {
+				name = ITA_w_the_balkan_desks
+				bonus = 0.75
+				uses = 1
+				category = decryption_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_albanian_shore
+		icon = GFX_focus_generic_adriatic_sea_focus
+		relative_position_id = ITADNC_w_the_bargain_at_racconigi
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_w_the_bargain_at_racconigi }
+		available = {
+			date > 1910.1.1
+		}
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			add_political_power = 30
+			set_country_flag = ITA_w_valona_watched
+			add_ideas = ITA_w_the_albanian_stake
+			add_tech_bonus = {
+				name = ITA_w_the_otranto_survey
+				bonus = 0.75
+				uses = 1
+				category = naval_doctrine
+			}
+			country_event = { id = ita_dnc.509 days = 10 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_two_colonies
+		icon = GFX_focus_generic_africa_infrastructure
+		relative_position_id = ITADNC_w_the_consulta
+		x = 6
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_w_the_consulta }
+		available = {
+			has_country_flag = ITA_w_chapter_opened
+		}
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = ITA_w_colonies_reviewed
+			550 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_w_the_colonial_office_bonus
+				bonus = 0.75
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_buying_out_the_benadir_company
+		icon = GFX_focus_generic_concessions
+		relative_position_id = ITADNC_w_the_two_colonies
+		x = -2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_the_two_colonies }
+		available = {
+			date > 1904.1.1
+		}
+		ai_will_do = { factor = 7 }
+		completion_reward = {
+			add_political_power = -40
+			add_stability = 0.03
+			set_country_flag = ITA_w_benadir_state_rule
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_w_the_benadir_survey
+				bonus = 0.75
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_ascari_battalions
+		icon = GFX_focus_generic_diverse_army
+		relative_position_id = ITADNC_w_the_two_colonies
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_the_two_colonies }
+		available = {
+			controls_state = 550
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 20
+			add_ideas = ITA_w_the_ascari
+			set_country_flag = ITA_w_ascari_raised
+			add_tech_bonus = {
+				name = ITA_w_the_colonial_battalions
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_treaty_with_menelik
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = ITADNC_w_buying_out_the_benadir_company
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = {
+			focus = ITADNC_w_buying_out_the_benadir_company
+			focus = ITADNC_w_the_ascari_battalions
+		}
+		mutually_exclusive = { focus = ITADNC_w_the_march_back_to_adwa }
+		available = {
+			date > 1905.1.1
+			ETH = { exists = yes }
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.05
+			set_country_flag = ITA_w_adwa_closed
+			add_ideas = ITA_w_the_tripartite_understanding
+			add_opinion_modifier = { target = ETH modifier = improve_relation }
+			add_opinion_modifier = { target = ENG modifier = improve_relation }
+			country_event = { id = ita_dnc.504 days = 12 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_march_back_to_adwa
+		icon = GFX_goal_generic_major_war
+		relative_position_id = ITADNC_w_buying_out_the_benadir_company
+		x = 2
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = ITADNC_w_buying_out_the_benadir_company
+			focus = ITADNC_w_the_ascari_battalions
+		}
+		mutually_exclusive = { focus = ITADNC_w_the_treaty_with_menelik }
+		available = {
+			date > 1906.1.1
+			ETH = { exists = yes }
+			NOT = { has_war_with = OTT }
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = -0.05
+			army_experience = 25
+			set_country_flag = ITA_w_second_expedition
+			add_ideas = ITA_w_the_second_expedition
+			create_wargoal = {
+				type = annex_everything
+				target = ETH
+			}
+			add_named_threat = { threat = 3 name = ITA_w_threat_the_second_expedition }
+			country_event = { id = ita_dnc.508 days = 30 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_tripoli_question
+		icon = GFX_goal_generic_territory_or_war
+		relative_position_id = ITADNC_w_the_two_colonies
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_the_two_colonies }
+		available = {
+			date > 1910.1.1
+			OTT = { exists = yes }
+		}
+		ai_will_do = { factor = 9 }
+		completion_reward = {
+			add_political_power = 40
+			set_country_flag = ITA_w_tripoli_opened
+			custom_effect_tooltip = ITA_w_tripoli_opened_tt
+			add_tech_bonus = {
+				name = ITA_w_the_libyan_survey
+				bonus = 0.75
+				uses = 1
+				category = naval_equipment
+			}
+			add_opinion_modifier = { target = ENG modifier = improve_relation }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_ultimatum_to_the_porte
+		icon = GFX_goal_generic_occupy_start_war
+		relative_position_id = ITADNC_w_the_tripoli_question
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_w_the_tripoli_question }
+		mutually_exclusive = { focus = ITADNC_w_the_banco_di_roma_instead }
+		available = {
+			has_country_flag = ITA_w_tripoli_opened
+			date > 1911.1.1
+			OTT = { exists = yes }
+			NOT = { has_war_with = OTT }
+		}
+		ai_will_do = { factor = 8 }
+		completion_reward = {
+			add_war_support = 0.10
+			set_country_flag = ITA_w_ultimatum_sent
+			create_wargoal = {
+				type = take_state_focus
+				target = OTT
+				generator = { 448 449 661 662 663 }
+			}
+			add_named_threat = { threat = 5 name = ITA_w_threat_the_ultimatum }
+			country_event = { id = ita_dnc.505 days = 7 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_banco_di_roma_instead
+		icon = GFX_goal_generic_positive_trade_relations
+		relative_position_id = ITADNC_w_the_tripoli_question
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_the_tripoli_question }
+		mutually_exclusive = { focus = ITADNC_w_the_ultimatum_to_the_porte }
+		available = {
+			has_country_flag = ITA_w_tripoli_opened
+			NOT = { has_war_with = OTT }
+		}
+		ai_will_do = { factor = 3 }
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.03
+			set_country_flag = ITA_w_peaceful_penetration
+			add_ideas = ITA_w_the_banco_di_roma
+			add_opinion_modifier = { target = OTT modifier = improve_relation }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_islands_as_a_pledge
+		icon = GFX_goal_generic_amphibious_assault
+		relative_position_id = ITADNC_w_the_ultimatum_to_the_porte
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte }
+		available = {
+			has_war_with = OTT
+		}
+		ai_will_do = { factor = 7 }
+		completion_reward = {
+			add_war_support = 0.03
+			navy_experience = 20
+			set_country_flag = ITA_w_islands_held
+			if = {
+				limit = {
+					controls_state = 164
+				}
+				transfer_state = 164
+			}
+			else = {
+				create_wargoal = {
+					type = take_state_focus
+					target = OTT
+					generator = { 164 }
+				}
+			}
+			country_event = { id = ita_dnc.506 days = 5 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_peace_of_ouchy
+		icon = GFX_focus_generic_treaty
+		relative_position_id = ITADNC_w_the_ultimatum_to_the_porte
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte }
+		available = {
+			has_war_with = OTT
+			controls_state = 448
+		}
+		ai_will_do = { factor = 9 }
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+			set_country_flag = ITA_w_libya_held
+			transfer_state = 448
+			transfer_state = 449
+			transfer_state = 661
+			transfer_state = 662
+			transfer_state = 663
+			white_peace = OTT
+			custom_effect_tooltip = ITA_w_ouchy_tt
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_war_that_does_not_end
+		icon = GFX_focus_generic_hill_training
+		relative_position_id = ITADNC_w_the_peace_of_ouchy
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_w_the_peace_of_ouchy }
+		available = {
+			has_country_flag = ITA_w_libya_held
+		}
+		ai_will_do = { factor = 6 }
+		completion_reward = {
+			army_experience = 30
+			add_war_support = -0.03
+			add_ideas = ITA_w_the_desert_that_does_not_end
+			set_country_flag = ITA_w_senussi_war
+			add_tech_bonus = {
+				name = ITA_w_the_column_and_the_well
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			country_event = { id = ita_dnc.507 days = 20 }
+		}
+	}
+
+	focus = {
+		id = ITADNC_w_the_fourth_shore
+		icon = GFX_focus_generic_immigration
+		relative_position_id = ITADNC_w_the_war_that_does_not_end
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_w_the_war_that_does_not_end }
+		available = {
+			has_country_flag = ITA_w_senussi_war
+			date > 1913.1.1
+		}
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03
+			swap_ideas = {
+				remove_idea = ITA_w_the_desert_that_does_not_end
+				add_idea = ITA_w_the_fourth_shore
+			}
+			448 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			661 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
