@@ -177,7 +177,7 @@ NDefines.NAI.OPERATION_EQUIPMENT_NEED_PRODUCTION_MULT = 1.0  -- vanilla 1.0 | eq
 
 NDefines.NProduction.BASE_FACTORY_SPEED = 2 -- vanilla 5 | The factor for how much production civilian factories produce 
 NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 1.75 -- vanilla 4.25 | The factor for how much production military factories produce
-NDefines.NProduction.BASE_FACTORY_SPEED_NAC = 0.5 -- vanilla 2.5 | The factor for how much production naval dockyards produce
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 0.5 -- vanilla 2.5 | The factor for how much production naval dockyards produce
 NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 3 -- vanilla 10 | The base factor that factory production starts at
 NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 15 -- vanilla 15 | The base factor for production efficiency cap
 NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN = 0.35 -- vanilla 1 | The base factor for production efficiency growth
