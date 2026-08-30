@@ -45,11 +45,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_kingdom_of_nine_provinces
-		icon = GFX_focus_generic_industry_3
-		relative_position_id = BELDNC_the_guarantee
-		x = -8
+		relative_position_id = BELDNC_the_kingdom_and_its_king
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_the_guarantee }
+		prerequisite = { focus = BELDNC_the_kingdom_and_its_king }
+		icon = GFX_focus_generic_industry_3
 		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -67,11 +67,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_two_tongues
-		icon = GFX_focus_BEL_multi_language_courses
-		relative_position_id = BELDNC_the_kingdom_of_nine_provinces
-		x = -4
+		relative_position_id = BELDNC_the_kings_second_crown
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_the_kingdom_of_nine_provinces }
+		prerequisite = { focus = BELDNC_the_kings_second_crown }
+		icon = GFX_focus_BEL_multi_language_courses
 		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -84,11 +84,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_kings_second_crown
-		icon = GFX_focus_generic_monarchy_1
-		relative_position_id = BELDNC_the_kingdom_of_nine_provinces
-		x = -2
+		relative_position_id = BELDNC_the_crown_in_two_places
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_the_kingdom_of_nine_provinces }
+		prerequisite = { focus = BELDNC_the_crown_in_two_places }
+		icon = GFX_focus_generic_monarchy_1
 		cost = 3
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -102,12 +102,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_decade_opens
-		icon = GFX_focus_generic_conference
-		relative_position_id = BELDNC_the_two_tongues
-		x = 0
+		relative_position_id = BELDNC_the_guarantee
+		x = -39
 		y = 1
-		prerequisite = { focus = BELDNC_the_two_tongues }
-		prerequisite = { focus = BELDNC_the_kings_second_crown }
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_generic_conference
 		cost = 3.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -121,11 +120,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_kings_prerogative
-		icon = GFX_focus_eng_the_kings_party
 		relative_position_id = BELDNC_a_the_plural_vote
-		x = -6
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_plural_vote }
+		mutually_exclusive = { focus = BELDNC_a_the_partys_weapon }
+		icon = GFX_focus_eng_the_kings_party
 		cost = 3
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -162,11 +162,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_partys_weapon
-		icon = GFX_focus_generic_strike_at_democracy1
 		relative_position_id = BELDNC_a_the_plural_vote
-		x = 8
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_plural_vote }
+		mutually_exclusive = { focus = BELDNC_a_the_kings_prerogative }
+		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 3
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -209,470 +210,21 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BELDNC_a_the_bloc_of_the_left
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_a_the_kings_prerogative
-		x = -2
-		y = 1
-		prerequisite = { focus = BELDNC_a_the_kings_prerogative }
-		prerequisite = { focus = BELDNC_a_the_partys_weapon }
-		mutually_exclusive = { focus = BELDNC_a_govern_past_the_chamber }
-		cost = 4
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			add_political_power = -40
-			add_stability = -0.05
-			set_country_flag = BEL_a_cartel
-			clr_country_flag = catholic_block_win
-			set_country_flag = parti_liberal_win
-			add_idea = BEL_a_the_cartel_of_the_left
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.02
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.03
-			}
-			add_country_leader_trait = parti_liberal
-			set_country_flag = parti_ouvrier_win
-			set_country_flag = BEL_a_cartel_named
-			recruit_character = BEL_Emile_Vandervelde
-			recruit_character = BEL_Paul_hymans
-			add_to_variable = { var = BEL_a_strikes value = 1 }
-			add_to_variable = { var = BEL_scandal value = 5 }
-			subtract_from_variable = { var = BEL_a_plural value = 15 }
-			add_to_variable = { var = BEL_chamber_congo value = 8 }
-			add_to_variable = { var = BEL_flemish value = 4 }
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-		}
-	}
 
-	focus = {
-		id = BELDNC_a_govern_past_the_chamber
-		icon = GFX_focus_generic_monarchist_sentiment
-		relative_position_id = BELDNC_a_the_kings_prerogative
-		x = 2
-		y = 1
-		prerequisite = { focus = BELDNC_a_the_kings_prerogative }
-		prerequisite = { focus = BELDNC_a_the_partys_weapon }
-		mutually_exclusive = { focus = BELDNC_a_the_bloc_of_the_left }
-		cost = 4
-		ai_will_do = { factor = 2 }
-		completion_reward = {
-			add_political_power = 80
-			add_stability = -0.08
-			set_country_flag = BEL_a_crown_governs
-			add_idea = BEL_a_the_crown_governs
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.06
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.05
-			}
-			BEL_estate_deny = yes
-			set_country_flag = BEL_u_crown_governs
-			recruit_character = BEL_Julien_Liebaert
-			if = {
-				limit = { country_exists = ENG }
-				add_opinion_modifier = {
-					target = ENG
-					modifier = medium_decrease
-				}
-			}
 
-			if = {
-				limit = { country_exists = FRA }
-				add_opinion_modifier = {
-					target = FRA
-					modifier = medium_decrease
-				}
-			}
 
-			add_ai_strategy = {
-				type = befriend
-				id = GER
-				value = 30
-			}
-			add_named_threat = {
-				threat = 1
-				name = BEL_a_the_crown_governs_alone
-			}
-			add_to_variable = { var = BEL_a_prerogative value = 25 }
-			add_to_variable = { var = BEL_a_plural value = 10 }
-			subtract_from_variable = { var = BEL_chamber_congo value = 6 }
-			add_to_variable = { var = BEL_scandal value = 4 }
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-		}
-	}
 
-	focus = {
-		id = BELDNC_a_one_man_one_vote
-		icon = GFX_focus_generic_election
-		relative_position_id = BELDNC_a_the_bloc_of_the_left
-		x = 0
-		y = 1
-		prerequisite = { focus = BELDNC_a_the_bloc_of_the_left }
-		cost = 4
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			add_political_power = -60
-			add_stability = -0.05
-			add_war_support = 0.05
-			subtract_from_variable = { var = BEL_a_plural value = 35 }
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_stability = 0.03
-				subtract_from_variable = { var = BEL_flemish value = 6 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_the_count_is_taken_by_community_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_stability = -0.04
-				add_to_variable = { var = BEL_flemish value = 8 }
-				add_to_variable = { var = BEL_walloon value = 6 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_one_kingdom_one_majority_tt
-			}
-			set_country_flag = BEL_u_franchise_won
-			recruit_character = BEL_Paul_janson
-			add_popularity = {
-				ideology = communism
-				popularity = 0.04
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.03
-			}
-			add_to_variable = { var = BEL_a_strikes value = 1 }
-			add_to_variable = { var = BEL_chamber_congo value = 6 }
-			if = {
-				limit = { has_country_flag = BEL_c_leopold_dead }
-				add_political_power = 40
-				add_stability = 0.03
-				custom_effect_tooltip = BEL_a_single_vote_new_reign_tt
-			}
 
-			else = {
-				add_political_power = -40
-				add_to_variable = { var = BEL_a_prerogative value = 8 }
-				custom_effect_tooltip = BEL_a_single_vote_old_king_tt
-			}
 
-			BEL_dnc_dials = yes
-			BEL_a_dials = yes
-			country_event = { id = bel_dnc.104 days = 5 }
-		}
-	}
 
-	focus = {
-		id = BELDNC_a_the_second_general_strike
-		icon = GFX_focus_generic_strike_at_democracy2
-		relative_position_id = BELDNC_a_the_bloc_of_the_left
-		x = 2
-		y = 1
-		prerequisite = { focus = BELDNC_a_the_bloc_of_the_left }
-		cost = 3
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			add_stability = -0.08
-			add_war_support = -0.05
-			add_to_variable = { var = BEL_a_strikes value = 1 }
-			subtract_from_variable = { var = BEL_a_plural value = 20 }
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_to_variable = { var = BEL_walloon value = 6 }
-				subtract_from_variable = { var = BEL_flemish value = 4 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_a_walloon_strike_stays_walloon_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_stability = -0.04
-				add_to_variable = { var = BEL_a_strikes value = 1 }
-				BEL_a_dials = yes
-				custom_effect_tooltip = BEL_a_a_national_strike_tt
-			}
-			add_to_variable = { var = BEL_a_strikes value = 2 }
-			BEL_c_strike_begins = yes
-			set_country_flag = parti_ouvrier_win
-			recruit_character = BEL_Emile_Vandervelde
-			recruit_character = BEL_Camille_huysmans
-			add_popularity = {
-				ideology = communism
-				popularity = 0.06
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.04
-			}
-			subtract_from_variable = { var = BEL_walloon value = 8 }
-			add_to_variable = { var = BEL_flemish value = 4 }
-			add_to_variable = { var = BEL_chamber_congo value = 8 }
-			if = {
-				limit = {
-					check_variable = {
-						var = BEL_a_plural
-						value = 40
-						compare = less_than_or_equals
-					}
-				}
-				add_stability = -0.06
-				add_to_variable = { var = BEL_a_strikes value = 2 }
-				add_to_variable = { var = BEL_scandal value = 6 }
-				custom_effect_tooltip = BEL_a_strike_without_a_grievance_tt
-			}
-
-			else = {
-				add_political_power = 25
-				subtract_from_variable = { var = BEL_a_plural value = 12 }
-				add_to_variable = { var = BEL_chamber_congo value = 6 }
-				custom_effect_tooltip = BEL_a_strike_against_the_register_tt
-			}
-
-			BEL_dnc_dials = yes
-			country_event = { id = bel_dnc.805 days = 90 }
-			add_timed_idea = {
-				idea = BEL_a_the_general_strike
-				days = 180
-			}
-			BEL_a_dials = yes
-			country_event = { id = bel_dnc.103 days = 5 }
-		}
-	}
-
-	focus = {
-		id = BELDNC_a_the_royal_message
-		icon = GFX_focus_generic_monarchy_2
-		relative_position_id = BELDNC_a_govern_past_the_chamber
-		x = 0
-		y = 1
-		prerequisite = { focus = BELDNC_a_govern_past_the_chamber }
-		cost = 3
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.04
-			add_to_variable = { var = BEL_a_prerogative value = 15 }
-			subtract_from_variable = { var = BEL_chamber_congo value = 5 }
-			set_country_flag = BEL_a_message_read
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_political_power = 25
-				subtract_from_variable = { var = BEL_flemish value = 3 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_the_message_is_read_twice_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_stability = -0.02
-				add_to_variable = { var = BEL_flemish value = 4 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_the_message_is_read_in_french_tt
-			}
-			recruit_character = BEL_Jules_Davignon
-			if = {
-				limit = { has_country_flag = BEL_c_leopold_dead }
-				promote_character = BEL_Albert_i
-				add_stability = 0.03
-				add_political_power = 25
-				subtract_from_variable = { var = BEL_a_prerogative value = 5 }
-				custom_effect_tooltip = BEL_a_message_from_a_new_king_tt
-			}
-
-			else = {
-				add_to_variable = { var = BEL_a_prerogative value = 10 }
-				add_to_variable = { var = BEL_scandal value = 5 }
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.03
-				}
-				custom_effect_tooltip = BEL_a_message_from_leopold_tt
-			}
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-			country_event = { id = bel_dnc.105 days = 5 }
-		}
-	}
-
-	focus = {
-		id = BELDNC_a_the_congo_is_the_kings
-		icon = GFX_focus_generic_annex_country
-		relative_position_id = BELDNC_a_govern_past_the_chamber
-		x = 2
-		y = 1
-		prerequisite = { focus = BELDNC_a_govern_past_the_chamber }
-		cost = 3
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			add_political_power = 30
-			set_variable = { BEL_congo_regime = 3 }
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_political_power = -25
-				subtract_from_variable = { var = BEL_flemish value = 3 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_the_colonial_service_recruits_both_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_political_power = 25
-				add_to_variable = { var = BEL_flemish value = 4 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_the_colony_is_administered_in_french_tt
-			}
-			BEL_estate_deny = yes
-			add_to_variable = { var = BEL_a_prerogative value = 10 }
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-			country_event = { id = bel_dnc.112 days = 5 }
-		}
-	}
-
-	focus = {
-		id = BELDNC_a_the_cartel_takes_the_chamber
-		icon = GFX_focus_generic_full_social_mobilization
-		relative_position_id = BELDNC_a_one_man_one_vote
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = BELDNC_a_one_man_one_vote
-			focus = BELDNC_a_the_second_general_strike
-		}
-		cost = 4
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			add_political_power = -50
-			add_stability = 0.03
-			subtract_from_variable = { var = BEL_a_plural value = 25 }
-			add_to_variable = { var = BEL_chamber_congo value = 10 }
-			add_to_variable = { var = BEL_flemish value = 3 }
-			set_country_flag = BEL_u_franchise_won
-			set_country_flag = BEL_a_cartel_governs
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_political_power = -40
-				add_to_variable = { var = BEL_walloon value = 4 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_the_cartel_governs_two_communities_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_stability = -0.03
-				add_to_variable = { var = BEL_flemish value = 6 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_a_walloon_core_governs_one_kingdom_tt
-			}
-			recruit_character = BEL_Paul_hymans
-			recruit_character = BEL_Emile_Vandervelde
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.03
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.04
-			}
-			if = {
-				limit = { NOT = { has_idea = BEL_a_the_single_vote } }
-				add_ideas = BEL_a_the_single_vote
-			}
-
-			subtract_from_variable = { var = BEL_scandal value = 5 }
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-			country_event = { id = bel_dnc.108 days = 5 }
-		}
-	}
-
-	focus = {
-		id = BELDNC_a_the_crown_rules
-		icon = GFX_focus_generic_monarchy_2
-		relative_position_id = BELDNC_a_the_royal_message
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = BELDNC_a_the_royal_message
-			focus = BELDNC_a_the_congo_is_the_kings
-		}
-		cost = 4
-		ai_will_do = { factor = 2 }
-		completion_reward = {
-			add_political_power = 60
-			add_stability = -0.06
-			add_to_variable = { var = BEL_a_prerogative value = 25 }
-			add_to_variable = { var = BEL_scandal value = 5 }
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.04
-			}
-			if = {
-				limit = { NOT = { has_idea = BEL_a_the_silent_house } }
-				add_ideas = BEL_a_the_silent_house
-			}
-
-			set_country_flag = BEL_a_palace_bureau
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_political_power = -50
-				add_stability = -0.03
-				add_to_variable = { var = BEL_walloon value = 4 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_a_crown_over_two_statutes_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_political_power = 50
-				add_to_variable = { var = BEL_a_prerogative value = 8 }
-				BEL_a_dials = yes
-				custom_effect_tooltip = BEL_a_one_crown_one_kingdom_tt
-			}
-			recruit_character = BEL_Julien_Liebaert
-			if = {
-				limit = { country_exists = ENG }
-				add_opinion_modifier = {
-					target = ENG
-					modifier = medium_decrease
-				}
-			}
-
-			add_ai_strategy = {
-				type = befriend
-				id = GER
-				value = 25
-			}
-			subtract_from_variable = { var = BEL_chamber_congo value = 8 }
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-			country_event = { id = bel_dnc.109 days = 5 }
-		}
-	}
 
 	focus = {
 		id = BELDNC_a_the_house_votes_the_estate
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_a_the_cartel_takes_the_chamber
+		relative_position_id = BELDNC_a_the_estate_is_valued
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_cartel_takes_the_chamber }
+		prerequisite = { focus = BELDNC_a_the_estate_is_valued }
+		icon = GFX_focus_generic_court
 		available = { country_exists = COG }
 		cost = 4
 		ai_will_do = { factor = 10 }
@@ -700,121 +252,15 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BELDNC_a_the_chamber_prorogued
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		relative_position_id = BELDNC_a_the_crown_rules
-		x = 0
-		y = 1
-		prerequisite = { focus = BELDNC_a_the_crown_rules }
-		cost = 5
-		ai_will_do = { factor = 2 }
-		completion_reward = {
-			add_political_power = 100
-			add_stability = -0.10
-			set_country_flag = BEL_a_house_prorogued
-			if = {
-				limit = { has_country_flag = BEL_v_two_peoples_in_law }
-				add_stability = -0.06
-				add_to_variable = { var = BEL_walloon value = 6 }
-				add_to_variable = { var = BEL_flemish value = 6 }
-				BEL_dnc_dials = yes
-				custom_effect_tooltip = BEL_a_two_chambers_prorogued_at_once_tt
-			}
-			else_if = {
-				limit = { has_country_flag = BEL_v_unitary_law }
-				add_political_power = 50
-				add_to_variable = { var = BEL_a_prerogative value = 10 }
-				BEL_a_dials = yes
-				custom_effect_tooltip = BEL_a_one_chamber_one_prorogation_tt
-			}
-			add_idea = BEL_a_the_chamber_prorogued
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.08
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.07
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.03
-			}
-			BEL_estate_deny = yes
-			BEL_c_strike_begins = yes
-			add_to_variable = { var = BEL_a_strikes value = 3 }
-			set_country_flag = BEL_u_crown_governs
-			set_country_flag = BEL_a_decree_government
-			if = {
-				limit = { has_country_flag = BEL_c_leopold_dead }
-				promote_character = BEL_Albert_i
-				add_stability = 0.04
-				subtract_from_variable = { var = BEL_a_prerogative value = 10 }
-				custom_effect_tooltip = BEL_a_prorogued_by_a_new_king_tt
-			}
-
-			else = {
-				add_to_variable = { var = BEL_scandal value = 10 }
-				add_to_variable = { var = BEL_a_prerogative value = 10 }
-				custom_effect_tooltip = BEL_a_prorogued_by_leopold_tt
-			}
-
-			if = {
-				limit = { country_exists = ENG }
-				add_opinion_modifier = {
-					target = ENG
-					modifier = large_decrease
-				}
-			}
-
-			if = {
-				limit = { country_exists = FRA }
-				add_opinion_modifier = {
-					target = FRA
-					modifier = large_decrease
-				}
-			}
-
-			if = {
-				limit = { country_exists = GER }
-				add_opinion_modifier = {
-					target = GER
-					modifier = medium_increase
-				}
-			}
-
-			add_ai_strategy = {
-				type = befriend
-				id = GER
-				value = 50
-			}
-			add_ai_strategy = {
-				type = ignore
-				id = ENG
-				value = 30
-			}
-			add_named_threat = {
-				threat = 2
-				name = BEL_a_the_chamber_does_not_sit
-			}
-			country_event = { id = bel_dnc.806 days = 45 }
-			add_to_variable = { var = BEL_a_prerogative value = 30 }
-			subtract_from_variable = { var = BEL_chamber_congo value = 15 }
-			BEL_a_dials = yes
-			BEL_dnc_dials = yes
-			country_event = { id = bel_dnc.106 days = 5 }
-		}
-	}
 
 	focus = {
 		id = BELDNC_c_the_estate_of_the_king
-		icon = GFX_focus_eng_the_kings_party
-		relative_position_id = BELDNC_the_belgian_question
-		x = 8
+		relative_position_id = BELDNC_the_guarantee
+		x = -32
 		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_eng_the_kings_party
 		cost = 3.5
-		prerequisite = { focus = BELDNC_the_belgian_question }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -885,12 +331,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_kings_answer
-		icon = GFX_focus_rom_handle_king
 		relative_position_id = BELDNC_c_the_estate_of_the_king
-		x = -2
+		x = -1
 		y = 1
-		cost = 4.5
 		prerequisite = { focus = BELDNC_c_the_estate_of_the_king }
+		mutually_exclusive = { focus = BELDNC_c_the_interpellation }
+		icon = GFX_focus_rom_handle_king
+		cost = 4.5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = 60
@@ -954,12 +401,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_interpellation
-		icon = GFX_focus_generic_public_meetings
 		relative_position_id = BELDNC_c_the_estate_of_the_king
-		x = 4
+		x = 1
 		y = 1
-		cost = 4.5
 		prerequisite = { focus = BELDNC_c_the_estate_of_the_king }
+		mutually_exclusive = { focus = BELDNC_c_the_kings_answer }
+		icon = GFX_focus_generic_public_meetings
+		cost = 4.5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -50
@@ -1029,12 +477,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_quota_at_full_tally
-		icon = GFX_focus_generic_oppression
 		relative_position_id = BELDNC_c_the_kings_answer
 		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_kings_answer }
+		prerequisite = { focus = BELDNC_c_the_kings_answer focus = BELDNC_c_the_interpellation }
+		mutually_exclusive = { focus = BELDNC_c_the_west_african_bureau }
+		icon = GFX_focus_generic_oppression
+		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			BEL_c_regime_full = yes
@@ -1104,12 +553,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_west_african_bureau
-		icon = GFX_Goal_generic_propaganda_britain
 		relative_position_id = BELDNC_c_the_kings_answer
 		x = 2
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_kings_answer }
+		prerequisite = { focus = BELDNC_c_the_kings_answer focus = BELDNC_c_the_interpellation }
+		mutually_exclusive = { focus = BELDNC_c_the_quota_at_full_tally }
+		icon = GFX_Goal_generic_propaganda_britain
+		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 40
@@ -1174,12 +624,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_donation_royale
-		icon = GFX_focus_generic_diplomatic_treaty
-		relative_position_id = BELDNC_c_the_interpellation
-		x = 0
+		relative_position_id = BELDNC_c_the_quota_at_full_tally
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_interpellation }
+		prerequisite = { focus = BELDNC_c_the_quota_at_full_tally focus = BELDNC_c_the_west_african_bureau }
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = 40
@@ -1235,15 +685,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_kings_own_commission
-		icon = GFX_focus_generic_conference
-		relative_position_id = BELDNC_c_the_west_african_bureau
-		x = 0
+		relative_position_id = BELDNC_c_the_motion_of_the_left
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = {
-			focus = BELDNC_c_the_west_african_bureau
-			focus = BELDNC_c_the_quota_at_full_tally
-		}
+		prerequisite = { focus = BELDNC_c_the_motion_of_the_left focus = BELDNC_c_the_colonial_charter_drafted }
+		icon = GFX_focus_generic_conference
+		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 25
@@ -1311,12 +758,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_motion_of_the_left
-		icon = GFX_focus_generic_support_the_left_right
 		relative_position_id = BELDNC_c_the_donation_royale
-		x = 0
+		x = -1
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_donation_royale }
+		mutually_exclusive = { focus = BELDNC_c_the_colonial_charter_drafted }
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -75
@@ -1376,12 +824,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_colonial_charter_drafted
-		icon = GFX_focus_bo_constitution
 		relative_position_id = BELDNC_c_the_donation_royale
-		x = 2
+		x = 1
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_donation_royale }
+		mutually_exclusive = { focus = BELDNC_c_the_motion_of_the_left }
+		icon = GFX_focus_bo_constitution
+		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -50
@@ -1423,12 +872,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_estate_secured
-		icon = GFX_focus_rom_royal_dictatorship
 		relative_position_id = BELDNC_c_the_kings_own_commission
 		x = 0
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_kings_own_commission }
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_congo_regime
@@ -1516,12 +965,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_commission_for_the_natives
-		icon = GFX_focus_generic_improve_the_administration
-		relative_position_id = BELDNC_c_the_kings_own_commission
-		x = 2
+		relative_position_id = BELDNC_c_the_estate_secured
+		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_kings_own_commission }
+		prerequisite = { focus = BELDNC_c_the_estate_secured }
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -75
@@ -1586,13 +1035,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_terms_of_cession
-		icon = GFX_generic_focus_treaty_sign
-		relative_position_id = BELDNC_c_the_motion_of_the_left
-		x = 0
+		relative_position_id = BELDNC_c_belgium_declines
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_motion_of_the_left }
-		prerequisite = { focus = BELDNC_c_the_colonial_charter_drafted }
+		prerequisite = { focus = BELDNC_c_belgium_declines focus = BELDNC_c_the_note_of_the_powers }
+		icon = GFX_generic_focus_treaty_sign
+		cost = 5
 		available = {
 			country_exists = COG
 			NOT = { has_country_flag = BEL_congo_lost }
@@ -1650,15 +1098,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_belgium_declines
-		icon = GFX_focus_SWI_neutrality_on_the_move
-		relative_position_id = BELDNC_c_the_estate_secured
-		x = 2
+		relative_position_id = BELDNC_c_the_commission_for_the_natives
+		x = -1
 		y = 1
-		cost = 7
-		prerequisite = {
-			focus = BELDNC_c_the_estate_secured
-			focus = BELDNC_c_the_commission_for_the_natives
-		}
+		prerequisite = { focus = BELDNC_c_the_commission_for_the_natives }
+		mutually_exclusive = { focus = BELDNC_c_the_note_of_the_powers }
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		cost = 5
 		available = {
 			NOT = { has_country_flag = BEL_congo_annexed }
 			NOT = { has_country_flag = BEL_congo_lost }
@@ -1749,15 +1195,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_note_of_the_powers
-		icon = GFX_focus_AUS_diplomatic_effort
-		relative_position_id = BELDNC_c_the_estate_secured
-		x = 0
+		relative_position_id = BELDNC_c_the_commission_for_the_natives
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = {
-			focus = BELDNC_c_the_estate_secured
-			focus = BELDNC_c_the_commission_for_the_natives
-		}
+		prerequisite = { focus = BELDNC_c_the_commission_for_the_natives }
+		mutually_exclusive = { focus = BELDNC_c_belgium_declines }
+		icon = GFX_focus_AUS_diplomatic_effort
+		cost = 5
 		available = {
 			country_exists = COG
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -1840,12 +1284,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_vote_on_the_cession
-		icon = GFX_focus_generic_election
 		relative_position_id = BELDNC_c_the_terms_of_cession
 		x = 0
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_terms_of_cession }
+		icon = GFX_focus_generic_election
+		cost = 5
 		available = {
 			country_exists = COG
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -1927,15 +1371,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_colonial_charter
-		icon = GFX_focus_generic_improve_the_administration_2
 		relative_position_id = BELDNC_c_the_vote_on_the_cession
-		x = 6
+		x = 0
 		y = 1
-		cost = 7
-		prerequisite = {
-			focus = BELDNC_c_the_vote_on_the_cession
-			focus = BELDNC_c_the_note_of_the_powers
-		}
+		prerequisite = { focus = BELDNC_c_the_vote_on_the_cession }
+		icon = GFX_focus_generic_improve_the_administration_2
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -2025,12 +1466,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_end_of_the_concessions
-		icon = GFX_focus_generic_self_management
 		relative_position_id = BELDNC_c_the_colonial_charter
-		x = -6
+		x = 0
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_colonial_charter }
+		icon = GFX_focus_generic_self_management
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -2093,12 +1534,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_force_publique
-		icon = GFX_focus_generic_manpower
-		relative_position_id = BELDNC_c_the_colonial_charter
-		x = -4
+		relative_position_id = BELDNC_c_the_end_of_the_concessions
+		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_colonial_charter }
+		prerequisite = { focus = BELDNC_c_the_end_of_the_concessions }
+		icon = GFX_focus_generic_manpower
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -2188,12 +1629,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_katanga_line
-		icon = GFX_focus_generic_africa_infrastructure
-		relative_position_id = BELDNC_c_the_colonial_charter
-		x = 2
+		relative_position_id = BELDNC_c_the_colonial_council
+		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_colonial_charter }
+		prerequisite = { focus = BELDNC_c_the_colonial_council }
+		icon = GFX_focus_generic_africa_infrastructure
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -2255,12 +1696,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_sleeping_sickness_service
-		icon = GFX_focus_generic_population_growth
-		relative_position_id = BELDNC_c_the_end_of_the_concessions
+		relative_position_id = BELDNC_c_the_katanga_line
 		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_c_the_end_of_the_concessions }
+		prerequisite = { focus = BELDNC_c_the_katanga_line }
+		icon = GFX_focus_generic_population_growth
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -2299,12 +1740,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_colonial_council
-		icon = GFX_focus_generic_worker_administration
 		relative_position_id = BELDNC_c_the_force_publique
 		x = 0
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_force_publique }
+		icon = GFX_focus_generic_worker_administration
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -2362,13 +1803,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_c_the_question_closed
-		icon = GFX_focus_ITA_a_colonial_empire
 		relative_position_id = BELDNC_c_the_sleeping_sickness_service
 		x = 0
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_c_the_sleeping_sickness_service }
-		prerequisite = { focus = BELDNC_c_the_colonial_council }
+		icon = GFX_focus_ITA_a_colonial_empire
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -2471,11 +1911,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_equality_law
+		relative_position_id = BELDNC_the_guarantee
+		x = -24
+		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_parliament
-		x = 136
-		y = 0
 		cost = 3
-		prerequisite = { focus = BELDNC_the_kings_two_crowns }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 12 }
 		completion_reward = {
@@ -2550,12 +1991,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_flemish_petitions
-		icon = GFX_focus_generic_public_meetings
 		relative_position_id = BELDNC_v_the_equality_law
-		x = -2
+		x = 0
 		y = 1
-		cost = 3
 		prerequisite = { focus = BELDNC_v_the_equality_law }
+		icon = GFX_focus_generic_public_meetings
+		cost = 3
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -25
@@ -2612,12 +2053,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_french_state
-		icon = GFX_goal_generic_national_unity
-		relative_position_id = BELDNC_v_the_equality_law
-		x = 2
+		relative_position_id = BELDNC_v_the_flemish_petitions
+		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_flemish_petitions }
+		icon = GFX_goal_generic_national_unity
 		cost = 3
-		prerequisite = { focus = BELDNC_v_the_equality_law }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 60
@@ -2689,12 +2130,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_dutch_in_the_courts
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_v_the_flemish_petitions
-		x = 0
+		relative_position_id = BELDNC_v_the_french_state
+		x = -1
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_french_state }
+		mutually_exclusive = { focus = BELDNC_v_the_ministry_speaks_french }
+		icon = GFX_focus_generic_court
 		cost = 4
-		prerequisite = { focus = BELDNC_v_the_flemish_petitions }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -50
@@ -2746,12 +2188,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_flemish_schools
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_flemish_petitions
-		x = 2
+		relative_position_id = BELDNC_v_dutch_in_the_courts
+		x = 1
 		y = 1
+		prerequisite = { focus = BELDNC_v_dutch_in_the_courts focus = BELDNC_v_the_ministry_speaks_french }
+		icon = GFX_goal_generic_political_pressure
 		cost = 4
-		prerequisite = { focus = BELDNC_v_the_flemish_petitions }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -50
@@ -2809,12 +2251,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_catholic_flemish_vote
-		icon = GFX_focus_generic_catholic_dominion
-		relative_position_id = BELDNC_v_the_french_state
+		relative_position_id = BELDNC_v_the_flemish_schools
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_flemish_schools }
+		icon = GFX_focus_generic_catholic_dominion
 		cost = 4
-		prerequisite = { focus = BELDNC_v_the_french_state }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = 80
@@ -2872,13 +2314,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_word_of_command_stays
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_french_state
-		x = 2
+		relative_position_id = BELDNC_v_the_catholic_flemish_vote
+		x = 1
 		y = 1
-		cost = 4
-		prerequisite = { focus = BELDNC_v_the_french_state }
+		prerequisite = { focus = BELDNC_v_the_catholic_flemish_vote }
 		mutually_exclusive = { focus = BELDNC_v_the_language_of_command }
+		icon = GFX_goal_generic_political_pressure
+		cost = 4
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_war_support = 0.03
@@ -2937,13 +2379,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_language_of_command
-		icon = GFX_goal_generic_officers
-		relative_position_id = BELDNC_v_dutch_in_the_courts
-		x = 0
+		relative_position_id = BELDNC_v_the_catholic_flemish_vote
+		x = -1
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_v_dutch_in_the_courts }
+		prerequisite = { focus = BELDNC_v_the_catholic_flemish_vote }
 		mutually_exclusive = { focus = BELDNC_v_the_word_of_command_stays }
+		icon = GFX_goal_generic_officers
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -60
@@ -3010,12 +2452,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_university_at_ghent
-		icon = GFX_focus_generic_university_2
-		relative_position_id = BELDNC_v_the_flemish_schools
-		x = 0
+		relative_position_id = BELDNC_v_the_language_of_command
+		x = 1
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_language_of_command focus = BELDNC_v_the_word_of_command_stays }
+		icon = GFX_focus_generic_university_2
 		cost = 5
-		prerequisite = { focus = BELDNC_v_the_flemish_schools }
 		available = { NOT = { has_country_flag = BEL_ghent_flemish } }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -3083,12 +2525,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_flamingant_press
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_catholic_flemish_vote
+		relative_position_id = BELDNC_v_the_university_at_ghent
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_university_at_ghent }
+		icon = GFX_goal_generic_political_pressure
 		cost = 4
-		prerequisite = { focus = BELDNC_v_the_catholic_flemish_vote }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 60
@@ -3144,15 +2586,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_ministry_speaks_french
-		icon = GFX_focus_generic_improve_the_administration
-		relative_position_id = BELDNC_v_the_catholic_flemish_vote
-		x = 2
+		relative_position_id = BELDNC_v_the_french_state
+		x = 1
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_french_state }
+		mutually_exclusive = { focus = BELDNC_v_dutch_in_the_courts }
+		icon = GFX_focus_generic_improve_the_administration
 		cost = 4
-		prerequisite = {
-			focus = BELDNC_v_the_catholic_flemish_vote
-			focus = BELDNC_v_the_word_of_command_stays
-		}
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 50
@@ -3218,15 +2658,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_walloon_leagues
-		icon = GFX_goal_generic_solidarity
-		relative_position_id = BELDNC_v_the_language_of_command
+		relative_position_id = BELDNC_v_the_flamingant_press
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_flamingant_press }
+		icon = GFX_goal_generic_solidarity
 		cost = 4
-		prerequisite = {
-			focus = BELDNC_v_the_language_of_command
-			focus = BELDNC_v_the_university_at_ghent
-		}
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -30
@@ -3290,12 +2727,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_two_sections
-		icon = GFX_focus_generic_improve_the_administration_2
-		relative_position_id = BELDNC_v_the_university_at_ghent
+		relative_position_id = BELDNC_v_the_language_frontier
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_language_frontier }
+		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
-		prerequisite = { focus = BELDNC_v_the_university_at_ghent }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -3346,15 +2783,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_movement_turns_political
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_flamingant_press
+		relative_position_id = BELDNC_v_the_congress_of_wallonia
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_congress_of_wallonia }
+		icon = GFX_goal_generic_political_pressure
 		cost = 4
-		prerequisite = {
-			focus = BELDNC_v_the_flamingant_press
-			focus = BELDNC_v_the_ministry_speaks_french
-		}
 		available = {
 			check_variable = {
 				var = BEL_flemish
@@ -3425,12 +2859,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_congress_of_wallonia
-		icon = GFX_focus_generic_conference
 		relative_position_id = BELDNC_v_the_walloon_leagues
 		x = 0
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_v_the_walloon_leagues }
+		icon = GFX_focus_generic_conference
+		cost = 5
 		available = {
 			OR = {
 				check_variable = {
@@ -3492,12 +2926,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_language_frontier
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_two_sections
+		relative_position_id = BELDNC_v_the_movement_turns_political
 		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_v_the_two_sections }
+		prerequisite = { focus = BELDNC_v_the_movement_turns_political }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -80
@@ -3557,12 +2991,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_hour_is_late
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_movement_turns_political
+		relative_position_id = BELDNC_v_the_two_sections
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_v_the_two_sections }
+		icon = GFX_goal_generic_political_pressure
 		cost = 5
-		prerequisite = { focus = BELDNC_v_the_movement_turns_political }
 		available = {
 			check_variable = {
 				var = BEL_flemish
@@ -3632,16 +3066,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_belgium_of_two_peoples
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_v_the_language_frontier
-		x = 0
+		relative_position_id = BELDNC_v_the_hour_is_late
+		x = -1
 		y = 1
-		cost = 7
-		prerequisite = {
-			focus = BELDNC_v_the_language_frontier
-			focus = BELDNC_v_the_congress_of_wallonia
-		}
+		prerequisite = { focus = BELDNC_v_the_hour_is_late }
 		mutually_exclusive = { focus = BELDNC_v_the_unitary_kingdom }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_flemish
@@ -3706,16 +3137,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_v_the_unitary_kingdom
-		icon = GFX_focus_generic_monarchy_2
 		relative_position_id = BELDNC_v_the_hour_is_late
-		x = 0
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = {
-			focus = BELDNC_v_the_hour_is_late
-			focus = BELDNC_v_the_movement_turns_political
-		}
+		prerequisite = { focus = BELDNC_v_the_hour_is_late }
 		mutually_exclusive = { focus = BELDNC_v_the_belgium_of_two_peoples }
+		icon = GFX_focus_generic_monarchy_2
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_walloon
@@ -3764,9 +3192,9 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_guarantee
-		icon = GFX_focus_generic_treaty
-		x = 12
+		x = 72
 		y = 0
+		icon = GFX_focus_generic_treaty
 		cost = 3.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -3785,11 +3213,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_kingdom_and_its_king
-		icon = GFX_focus_generic_monarchy_1
-		relative_position_id = BELDNC_the_guarantee
-		x = 34
+		relative_position_id = BELDNC_the_decade_opens
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_the_guarantee }
+		prerequisite = { focus = BELDNC_the_decade_opens }
+		icon = GFX_focus_generic_monarchy_1
 		cost = 3.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -3802,11 +3230,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_crown_in_two_places
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_the_kingdom_and_its_king
-		x = -20
+		relative_position_id = BELDNC_the_kingdom_of_nine_provinces
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_the_kingdom_and_its_king }
+		prerequisite = { focus = BELDNC_the_kingdom_of_nine_provinces }
+		icon = GFX_focus_generic_court
 		cost = 3.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -3823,11 +3251,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_one_country_two_tongues
-		icon = GFX_focus_BEL_multi_language_courses
-		relative_position_id = BELDNC_the_kingdom_and_its_king
-		x = 22
+		relative_position_id = BELDNC_v_the_hour_is_late
+		x = 71
 		y = 1
-		prerequisite = { focus = BELDNC_the_kingdom_and_its_king }
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_BEL_multi_language_courses
 		cost = 3.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -3839,12 +3267,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_the_belgian_question
-		icon = GFX_goal_generic_neutrality_focus
-		relative_position_id = BELDNC_the_crown_in_two_places
-		x = 40
+		relative_position_id = BELDNC_the_two_tongues
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_the_crown_in_two_places }
-		prerequisite = { focus = BELDNC_one_country_two_tongues }
+		prerequisite = { focus = BELDNC_the_two_tongues }
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 4.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -3858,11 +3285,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_powers_who_signed
-		icon = GFX_goal_generic_neutrality_focus
-		relative_position_id = BELDNC_the_belgian_question
-		x = 24
+		relative_position_id = BELDNC_the_guarantee
+		x = 17
 		y = 1
-		prerequisite = { focus = BELDNC_the_belgian_question }
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 4.5
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 2 }
@@ -3950,11 +3377,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_lottery_and_the_substitute
-		icon = GFX_goal_generic_small_arms
 		relative_position_id = BELDNC_arm_the_powers_who_signed
-		x = -8
+		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_arm_the_powers_who_signed }
+		icon = GFX_goal_generic_small_arms
 		cost = 4.5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -4010,13 +3437,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_one_son_from_every_house
-		icon = GFX_focus_generic_full_social_mobilization
 		relative_position_id = BELDNC_arm_the_lottery_and_the_substitute
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_arm_the_lottery_and_the_substitute }
 		mutually_exclusive = { focus = BELDNC_arm_the_lottery_stands }
-		cost = 8
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -4090,12 +3517,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_lottery_stands
-		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BELDNC_arm_the_lottery_and_the_substitute
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_arm_the_lottery_and_the_substitute }
 		mutually_exclusive = { focus = BELDNC_arm_one_son_from_every_house }
+		icon = GFX_goal_generic_political_pressure
 		cost = 3.5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -4151,15 +3578,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_language_of_command
-		icon = GFX_focus_BEL_multi_language_courses
-		relative_position_id = BELDNC_arm_one_son_from_every_house
+		relative_position_id = BELDNC_arm_the_whole_class_to_the_colours
 		x = 0
 		y = 1
-		prerequisite = {
-			focus = BELDNC_arm_one_son_from_every_house
-			focus = BELDNC_arm_the_lottery_stands
-		}
-		cost = 7
+		prerequisite = { focus = BELDNC_arm_the_whole_class_to_the_colours }
+		icon = GFX_focus_BEL_multi_language_courses
+		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -120
@@ -4227,12 +3651,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_whole_class_to_the_colours
-		icon = GFX_focus_generic_manpower
 		relative_position_id = BELDNC_arm_one_son_from_every_house
-		x = 2
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_arm_one_son_from_every_house }
-		cost = 8
+		prerequisite = { focus = BELDNC_arm_one_son_from_every_house focus = BELDNC_arm_the_lottery_stands }
+		icon = GFX_focus_generic_manpower
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -4354,11 +3778,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_brialmonts_estimates
-		icon = GFX_goal_nested_fortifications
-		relative_position_id = BELDNC_arm_the_powers_who_signed
-		x = -4
+		relative_position_id = BELDNC_arm_the_field_army_of_the_line
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_arm_the_powers_who_signed }
+		prerequisite = { focus = BELDNC_arm_the_field_army_of_the_line }
+		icon = GFX_goal_nested_fortifications
 		cost = 4.5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -4427,12 +3851,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_forts_of_the_meuse
-		icon = GFX_focus_generic_mountain_fortification
 		relative_position_id = BELDNC_arm_brialmonts_estimates
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_arm_brialmonts_estimates }
-		cost = 7
+		mutually_exclusive = { focus = BELDNC_arm_the_national_redoubt }
+		icon = GFX_focus_generic_mountain_fortification
+		cost = 5
 		available = {
 			OR = {
 				NOT = { has_country_flag = BEL_f_works_deferred }
@@ -4533,12 +3958,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_national_redoubt
-		icon = GFX_focus_generic_coastal_fort
 		relative_position_id = BELDNC_arm_brialmonts_estimates
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_arm_brialmonts_estimates }
-		cost = 7
+		mutually_exclusive = { focus = BELDNC_arm_the_forts_of_the_meuse }
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
 		available = {
 			OR = {
 				NOT = { has_country_flag = BEL_f_works_deferred }
@@ -4634,12 +4060,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_kings_money_for_the_kings_forts
-		icon = GFX_goal_generic_dangerous_deal
-		relative_position_id = BELDNC_arm_the_national_redoubt
-		x = 0
+		relative_position_id = BELDNC_arm_the_fortress_troops
+		x = -1
 		y = 1
-		prerequisite = { focus = BELDNC_arm_the_national_redoubt }
+		prerequisite = { focus = BELDNC_arm_the_fortress_troops }
 		mutually_exclusive = { focus = BELDNC_arm_not_one_franc_from_the_basin }
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -4726,12 +4152,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_not_one_franc_from_the_basin
-		icon = GFX_goal_generic_parliament
-		relative_position_id = BELDNC_arm_the_national_redoubt
-		x = 2
+		relative_position_id = BELDNC_arm_the_fortress_troops
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_arm_the_national_redoubt }
+		prerequisite = { focus = BELDNC_arm_the_fortress_troops }
 		mutually_exclusive = { focus = BELDNC_arm_the_kings_money_for_the_kings_forts }
+		icon = GFX_goal_generic_parliament
 		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -4810,16 +4236,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_cupolas_and_guns
-		icon = GFX_goal_trench_artillery
 		relative_position_id = BELDNC_arm_the_forts_of_the_meuse
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_arm_the_forts_of_the_meuse }
-		prerequisite = {
-			focus = BELDNC_arm_the_kings_money_for_the_kings_forts
-			focus = BELDNC_arm_not_one_franc_from_the_basin
-		}
-		cost = 7
+		prerequisite = { focus = BELDNC_arm_the_forts_of_the_meuse focus = BELDNC_arm_the_national_redoubt }
+		icon = GFX_goal_trench_artillery
+		cost = 5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -50
@@ -4879,12 +4301,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_fortress_troops
-		icon = GFX_focus_generic_home_defense
 		relative_position_id = BELDNC_arm_cupolas_and_guns
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_arm_cupolas_and_guns }
-		cost = 6
+		icon = GFX_focus_generic_home_defense
+		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -50
@@ -4986,11 +4408,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_which_guarantor_is_the_threat
-		icon = GFX_goal_generic_forceful_treaty
-		relative_position_id = BELDNC_arm_the_powers_who_signed
-		x = 4
+		relative_position_id = BELDNC_arm_the_kings_money_for_the_kings_forts
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_arm_the_powers_who_signed }
+		prerequisite = { focus = BELDNC_arm_the_kings_money_for_the_kings_forts focus = BELDNC_arm_not_one_franc_from_the_basin }
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 4.5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -5043,14 +4465,14 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_neighbour_to_the_east
-		icon = GFX_goal_generic_position_armies
 		relative_position_id = BELDNC_arm_which_guarantor_is_the_threat
 		x = -2
 		y = 1
 		prerequisite = { focus = BELDNC_arm_which_guarantor_is_the_threat }
 		mutually_exclusive = { focus = BELDNC_arm_the_neighbour_to_the_south }
 		mutually_exclusive = { focus = BELDNC_arm_name_no_enemy }
-		cost = 6
+		icon = GFX_goal_generic_position_armies
+		cost = 5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_war_support = 0.05
@@ -5145,14 +4567,14 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_neighbour_to_the_south
-		icon = GFX_goal_generic_territory_or_war
 		relative_position_id = BELDNC_arm_which_guarantor_is_the_threat
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_arm_which_guarantor_is_the_threat }
 		mutually_exclusive = { focus = BELDNC_arm_the_neighbour_to_the_east }
 		mutually_exclusive = { focus = BELDNC_arm_name_no_enemy }
-		cost = 6
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.04
@@ -5238,13 +4660,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_name_no_enemy
-		icon = GFX_focus_generic_treaty
 		relative_position_id = BELDNC_arm_which_guarantor_is_the_threat
 		x = 2
 		y = 1
 		prerequisite = { focus = BELDNC_arm_which_guarantor_is_the_threat }
 		mutually_exclusive = { focus = BELDNC_arm_the_neighbour_to_the_east }
 		mutually_exclusive = { focus = BELDNC_arm_the_neighbour_to_the_south }
+		icon = GFX_focus_generic_treaty
 		cost = 5
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -5329,16 +4751,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_field_army_of_the_line
-		icon = GFX_goal_generic_allies_build_infantry
-		relative_position_id = BELDNC_arm_the_neighbour_to_the_east
+		relative_position_id = BELDNC_arm_the_language_of_command
 		x = 0
 		y = 1
-		prerequisite = {
-			focus = BELDNC_arm_the_neighbour_to_the_east
-			focus = BELDNC_arm_the_neighbour_to_the_south
-			focus = BELDNC_arm_name_no_enemy
-		}
-		cost = 7
+		prerequisite = { focus = BELDNC_arm_the_language_of_command }
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -75
@@ -5422,15 +4840,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_arm_the_guarantee_called_in
-		icon = GFX_goal_generic_major_war
-		relative_position_id = BELDNC_arm_the_fortress_troops
-		x = 0
+		relative_position_id = BELDNC_arm_the_neighbour_to_the_east
+		x = 2
 		y = 1
-		prerequisite = {
-			focus = BELDNC_arm_the_fortress_troops
-			focus = BELDNC_arm_the_field_army_of_the_line
-			focus = BELDNC_arm_the_whole_class_to_the_colours
-		}
+		prerequisite = { focus = BELDNC_arm_the_neighbour_to_the_east focus = BELDNC_arm_the_neighbour_to_the_south focus = BELDNC_arm_name_no_enemy }
+		icon = GFX_goal_generic_major_war
 		cost = 5
 		available = {
 			check_variable = {
@@ -5532,9 +4946,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_country_we_became
+		relative_position_id = BELDNC_the_belgian_question
+		x = 80
+		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_CANDNC_goal_generic_parliament
-		x = 127
-		y = 0
 		cost = 5
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
@@ -5643,13 +5059,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_congo_of_the_chamber
-		icon = GFX_focus_generic_improve_the_administration
-		relative_position_id = BELDNC_u_the_country_we_became
-		x = -2
+		relative_position_id = BELDNC_u_the_army_of_the_nation
+		x = 0
 		y = 1
-		cost = 8
+		prerequisite = { focus = BELDNC_u_the_army_of_the_nation }
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
-		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		available = {
 			OR = {
 				has_country_flag = BEL_u_colony_charter
@@ -5749,13 +5165,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_guarantee_in_concrete
-		icon = GFX_focus_generic_mountain_fortification
-		relative_position_id = BELDNC_u_the_country_we_became
-		x = 2
+		relative_position_id = BELDNC_u_the_word_of_a_signature
+		x = 0
 		y = 1
-		cost = 8
+		prerequisite = { focus = BELDNC_u_the_word_of_a_signature }
+		icon = GFX_focus_generic_mountain_fortification
+		cost = 5
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
-		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		available = {
 			has_country_flag = BEL_u_army_strong
 		}
@@ -5874,13 +5290,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_two_kingdoms
-		icon = GFX_focus_YUG_devolved_croatia
-		relative_position_id = BELDNC_u_the_country_we_became
-		x = 4
+		relative_position_id = BELDNC_u_the_statute_of_the_two_communities
+		x = 0
 		y = 1
-		cost = 8
+		prerequisite = { focus = BELDNC_u_the_statute_of_the_two_communities }
+		icon = GFX_focus_YUG_devolved_croatia
+		cost = 5
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
-		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		available = {
 			OR = {
 				has_country_flag = BEL_u_federal
@@ -5975,13 +5391,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_congo_reformed
-		icon = GFX_focus_generic_concessions
 		relative_position_id = BELDNC_u_the_congo_of_the_chamber
 		x = 0
 		y = 1
-		cost = 10
-		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		prerequisite = { focus = BELDNC_u_the_congo_of_the_chamber }
+		icon = GFX_focus_generic_concessions
+		cost = 5
+		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			has_idea = BEL_u_the_congo_under_review
 		}
@@ -6071,13 +5487,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_word_of_a_signature
-		icon = GFX_focus_generic_diplomatic_treaty
 		relative_position_id = BELDNC_u_the_country_we_became
 		x = 0
 		y = 1
-		cost = 8
-		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		prerequisite = { focus = BELDNC_u_the_country_we_became }
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
+		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = 50
@@ -6183,13 +5599,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_army_of_the_nation
-		icon = GFX_focus_generic_full_social_mobilization
 		relative_position_id = BELDNC_u_the_guarantee_in_concrete
 		x = 0
 		y = 1
-		cost = 10
-		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		prerequisite = { focus = BELDNC_u_the_guarantee_in_concrete }
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
+		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			NOT = { has_idea = BEL_u_the_unitary_kingdom_strained }
 			NOT = { has_country_flag = BEL_army_french }
@@ -6261,13 +5677,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_u_the_statute_of_the_two_communities
-		icon = GFX_focus_YUG_banovina_of_croatia
-		relative_position_id = BELDNC_u_the_two_kingdoms
+		relative_position_id = BELDNC_u_the_congo_reformed
 		x = 0
 		y = 1
-		cost = 10
+		prerequisite = { focus = BELDNC_u_the_congo_reformed }
+		icon = GFX_focus_YUG_banovina_of_croatia
+		cost = 5
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
-		prerequisite = { focus = BELDNC_u_the_two_kingdoms }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -100
@@ -6352,12 +5768,12 @@ focus_tree = {
 	}
 	focus = {
 		id = BELDNC_k_the_charter_is_a_leash
-		icon = GFX_focus_bo_constitution
-		relative_position_id = BELDNC_c_the_colonial_charter
-		x = 6
+		relative_position_id = BELDNC_k_the_levy_in_kind_ends
+		x = 116
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_c_the_colonial_charter }
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_bo_constitution
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -6433,12 +5849,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_governor_general_at_boma
-		icon = GFX_focus_generic_worker_administration
 		relative_position_id = BELDNC_k_the_charter_is_a_leash
-		x = 0
+		x = -1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_k_the_charter_is_a_leash }
+		mutually_exclusive = { focus = BELDNC_k_the_four_provinces }
+		icon = GFX_focus_generic_worker_administration
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6502,12 +5919,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_four_provinces
-		icon = GFX_focus_generic_improve_the_administration
 		relative_position_id = BELDNC_k_the_charter_is_a_leash
-		x = 2
+		x = 1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_k_the_charter_is_a_leash }
+		mutually_exclusive = { focus = BELDNC_k_the_governor_general_at_boma }
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6587,12 +6005,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_annual_report_to_the_chamber
-		icon = GFX_goal_generic_parliament
 		relative_position_id = BELDNC_k_the_governor_general_at_boma
-		x = 0
+		x = 1
 		y = 1
+		prerequisite = { focus = BELDNC_k_the_governor_general_at_boma focus = BELDNC_k_the_four_provinces }
+		icon = GFX_goal_generic_parliament
 		cost = 5
-		prerequisite = { focus = BELDNC_k_the_governor_general_at_boma }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6668,12 +6086,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_tribunal_at_boma
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_k_the_four_provinces
+		relative_position_id = BELDNC_k_the_annual_report_to_the_chamber
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_k_the_annual_report_to_the_chamber }
+		icon = GFX_focus_generic_court
 		cost = 5
-		prerequisite = { focus = BELDNC_k_the_four_provinces }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6740,13 +6158,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_colony_keeps_its_own_law
-		icon = GFX_focus_generic_improve_the_administration_2
-		relative_position_id = BELDNC_k_the_annual_report_to_the_chamber
+		relative_position_id = BELDNC_k_the_tribunal_at_boma
 		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_k_the_annual_report_to_the_chamber }
 		prerequisite = { focus = BELDNC_k_the_tribunal_at_boma }
+		icon = GFX_focus_generic_improve_the_administration_2
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6811,13 +6228,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_no_congolese_for_europe
-		icon = GFX_focus_SWI_neutrality_on_the_move
 		relative_position_id = BELDNC_k_the_colony_keeps_its_own_law
 		x = 0
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_k_the_colony_keeps_its_own_law }
-		mutually_exclusive = { focus = BELDNC_k_a_colonial_army_for_the_kingdom }
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6881,13 +6297,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_a_colonial_army_for_the_kingdom
-		icon = GFX_focus_generic_manpower
-		relative_position_id = BELDNC_k_the_colony_keeps_its_own_law
-		x = 2
+		relative_position_id = BELDNC_k_the_sergeants_who_are_not_white
+		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_k_the_colony_keeps_its_own_law }
-		mutually_exclusive = { focus = BELDNC_k_no_congolese_for_europe }
+		prerequisite = { focus = BELDNC_k_the_sergeants_who_are_not_white }
+		icon = GFX_focus_generic_manpower
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -6991,12 +6406,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_force_of_africans
-		icon = GFX_focus_generic_africa_infrastructure
-		relative_position_id = BELDNC_c_the_force_publique
-		x = 2
+		relative_position_id = BELDNC_k_the_levy_in_kind_ends
+		x = 124
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_c_the_force_publique }
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_generic_africa_infrastructure
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7067,12 +6482,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_school_at_boma
-		icon = GFX_focus_generic_university_2
 		relative_position_id = BELDNC_k_the_force_of_africans
-		x = 0
+		x = -1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_k_the_force_of_africans }
+		mutually_exclusive = { focus = BELDNC_k_the_chefferies_in_law }
+		icon = GFX_focus_generic_university_2
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7142,12 +6558,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_chefferies_in_law
-		icon = GFX_focus_generic_self_management
 		relative_position_id = BELDNC_k_the_force_of_africans
-		x = 2
+		x = 1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_k_the_force_of_africans }
+		mutually_exclusive = { focus = BELDNC_k_the_school_at_boma }
+		icon = GFX_focus_generic_self_management
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7214,12 +6631,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_sergeants_who_are_not_white
-		icon = GFX_goal_generic_officers
 		relative_position_id = BELDNC_k_the_school_at_boma
-		x = 0
+		x = 1
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_k_the_school_at_boma }
+		prerequisite = { focus = BELDNC_k_the_school_at_boma focus = BELDNC_k_the_chefferies_in_law }
+		icon = GFX_goal_generic_officers
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -7284,12 +6701,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_committee_of_katanga
-		icon = GFX_focus_generic_mining_industry
-		relative_position_id = BELDNC_c_the_katanga_line
-		x = 0
+		relative_position_id = BELDNC_k_the_levy_in_kind_ends
+		x = 132
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_c_the_katanga_line }
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_generic_mining_industry
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7358,12 +6775,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_copper_at_elisabethville
-		icon = GFX_focus_generic_industry_investment
 		relative_position_id = BELDNC_k_the_committee_of_katanga
-		x = 0
+		x = -1
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_k_the_committee_of_katanga }
+		mutually_exclusive = { focus = BELDNC_k_the_line_that_leaves_the_kingdom }
+		icon = GFX_focus_generic_industry_investment
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7438,12 +6856,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_line_that_leaves_the_kingdom
-		icon = GFX_focus_generic_railroad
 		relative_position_id = BELDNC_k_the_committee_of_katanga
-		x = 2
+		x = 1
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_k_the_committee_of_katanga }
+		mutually_exclusive = { focus = BELDNC_k_the_copper_at_elisabethville }
+		icon = GFX_focus_generic_railroad
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -7516,13 +6935,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_river_and_the_rail
-		icon = GFX_focus_generic_develop_rail_network
 		relative_position_id = BELDNC_k_the_copper_at_elisabethville
-		x = 0
+		x = 1
 		y = 1
-		cost = 8
-		prerequisite = { focus = BELDNC_k_the_copper_at_elisabethville }
-		prerequisite = { focus = BELDNC_k_the_line_that_leaves_the_kingdom }
+		prerequisite = { focus = BELDNC_k_the_copper_at_elisabethville focus = BELDNC_k_the_line_that_leaves_the_kingdom }
+		icon = GFX_focus_generic_develop_rail_network
+		cost = 5
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7609,12 +7027,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_mouth_that_is_not_ours
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_the_kingdom_of_nine_provinces
-		x = 8
+		relative_position_id = BELDNC_the_guarantee
+		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_goal_generic_political_pressure
 		cost = 4
-		prerequisite = { focus = BELDNC_the_kingdom_of_nine_provinces }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -7698,12 +7116,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_works_at_antwerp
-		icon = GFX_goal_generic_construct_infrastructure
-		relative_position_id = BELDNC_eco_the_mouth_that_is_not_ours
-		x = -4
+		relative_position_id = BELDNC_eco_the_note_to_the_hague
+		x = 1
 		y = 1
+		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
-		prerequisite = { focus = BELDNC_eco_the_mouth_that_is_not_ours }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -40
@@ -7781,12 +7199,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_note_to_the_hague
-		icon = GFX_focus_AUS_diplomatic_effort
-		relative_position_id = BELDNC_eco_the_mouth_that_is_not_ours
-		x = 0
+		relative_position_id = BELDNC_eco_the_pilots_of_flushing
+		x = -1
 		y = 1
+		prerequisite = { focus = BELDNC_eco_the_pilots_of_flushing }
+		mutually_exclusive = { focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
+		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
-		prerequisite = { focus = BELDNC_eco_the_mouth_that_is_not_ours }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -30
@@ -7888,12 +7307,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_ostend_and_the_packet
-		icon = GFX_focus_ron_trade_navy
-		relative_position_id = BELDNC_eco_the_mouth_that_is_not_ours
-		x = 4
+		relative_position_id = BELDNC_eco_the_fortress_and_the_port
+		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_eco_the_fortress_and_the_port }
+		icon = GFX_focus_ron_trade_navy
 		cost = 5
-		prerequisite = { focus = BELDNC_eco_the_mouth_that_is_not_ours }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -7960,12 +7379,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_docks_of_the_left_bank
-		icon = GFX_focus_generic_industry_3
 		relative_position_id = BELDNC_eco_the_works_at_antwerp
 		x = 0
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_eco_the_works_at_antwerp }
+		icon = GFX_focus_generic_industry_3
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -8030,13 +7449,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_pilots_of_flushing
-		icon = GFX_focus_generic_naval_discipline
-		relative_position_id = BELDNC_eco_the_note_to_the_hague
+		relative_position_id = BELDNC_eco_the_mouth_that_is_not_ours
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_eco_the_mouth_that_is_not_ours }
+		icon = GFX_focus_generic_naval_discipline
 		cost = 5
-		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague }
-		mutually_exclusive = { focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 50
@@ -8089,13 +7507,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_canal_that_avoids_the_dutch
-		icon = GFX_focus_generic_africa_naval
-		relative_position_id = BELDNC_eco_the_note_to_the_hague
-		x = 2
+		relative_position_id = BELDNC_eco_the_pilots_of_flushing
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague }
-		mutually_exclusive = { focus = BELDNC_eco_the_pilots_of_flushing }
+		prerequisite = { focus = BELDNC_eco_the_pilots_of_flushing }
+		mutually_exclusive = { focus = BELDNC_eco_the_note_to_the_hague }
+		icon = GFX_focus_generic_africa_naval
+		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -80
@@ -8164,12 +7582,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_fisheries_of_the_coast
-		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BELDNC_eco_ostend_and_the_packet
 		x = 0
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_eco_ostend_and_the_packet }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -25
@@ -8231,12 +7649,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_zeebrugge_and_the_mole
-		icon = GFX_focus_generic_coastal_fort
-		relative_position_id = BELDNC_eco_ostend_and_the_packet
-		x = 2
+		relative_position_id = BELDNC_eco_the_fisheries_of_the_coast
+		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_eco_ostend_and_the_packet }
+		prerequisite = { focus = BELDNC_eco_the_fisheries_of_the_coast }
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -50
@@ -8306,13 +7724,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_fortress_and_the_port
-		icon = GFX_goal_generic_fortify_city
-		relative_position_id = BELDNC_eco_the_works_at_antwerp
-		x = 2
+		relative_position_id = BELDNC_eco_the_docks_of_the_left_bank
+		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_eco_the_works_at_antwerp }
 		prerequisite = { focus = BELDNC_eco_the_docks_of_the_left_bank }
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -8383,13 +7800,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_coast_is_a_flank
-		icon = GFX_goal_generic_occupy_states_coastal
-		relative_position_id = BELDNC_eco_the_fisheries_of_the_coast
-		x = 0
+		relative_position_id = BELDNC_eco_zeebrugge_and_the_mole
+		x = -1
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_eco_the_fisheries_of_the_coast }
 		prerequisite = { focus = BELDNC_eco_zeebrugge_and_the_mole }
+		mutually_exclusive = { focus = BELDNC_eco_the_state_marine }
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -8480,12 +7897,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_state_marine
-		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BELDNC_eco_zeebrugge_and_the_mole
-		x = 0
+		x = 1
 		y = 1
-		cost = 7
 		prerequisite = { focus = BELDNC_eco_zeebrugge_and_the_mole }
+		mutually_exclusive = { focus = BELDNC_eco_the_coast_is_a_flank }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -60
@@ -8589,14 +8007,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_eco_the_kingdom_faces_the_sea
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_eco_the_fortress_and_the_port
-		x = 0
+		relative_position_id = BELDNC_eco_the_coast_is_a_flank
+		x = 1
 		y = 1
-		cost = 8
-		prerequisite = { focus = BELDNC_eco_the_fortress_and_the_port }
-		prerequisite = { focus = BELDNC_eco_the_coast_is_a_flank }
-		prerequisite = { focus = BELDNC_eco_the_state_marine }
+		prerequisite = { focus = BELDNC_eco_the_coast_is_a_flank focus = BELDNC_eco_the_state_marine }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 75
@@ -8691,12 +8107,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_school_war_reopened
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_the_two_tongues
-		x = 4
+		relative_position_id = BELDNC_the_guarantee
+		x = -16
 		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_goal_generic_political_pressure
 		cost = 4
-		prerequisite = { focus = BELDNC_the_two_tongues }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -8756,12 +8172,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_communal_schools
-		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BELDNC_s_the_school_war_reopened
-		x = -2
+		x = -1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_s_the_school_war_reopened }
+		mutually_exclusive = { focus = BELDNC_s_the_grant_to_the_free_schools }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -50
@@ -8842,12 +8259,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_grant_to_the_free_schools
-		icon = GFX_focus_generic_catholic_dominion
 		relative_position_id = BELDNC_s_the_school_war_reopened
-		x = 2
+		x = 1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_s_the_school_war_reopened }
+		mutually_exclusive = { focus = BELDNC_s_the_communal_schools }
+		icon = GFX_focus_generic_catholic_dominion
+		cost = 5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 40
@@ -8904,12 +8322,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_teachers_certificate
-		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BELDNC_s_the_communal_schools
-		x = 0
+		x = 1
 		y = 1
+		prerequisite = { focus = BELDNC_s_the_communal_schools focus = BELDNC_s_the_grant_to_the_free_schools }
+		icon = GFX_goal_generic_political_pressure
 		cost = 5
-		prerequisite = { focus = BELDNC_s_the_communal_schools }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -40
@@ -8973,13 +8391,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_child_must_attend
-		icon = GFX_focus_generic_population_growth
-		relative_position_id = BELDNC_s_the_communal_schools
-		x = 2
+		relative_position_id = BELDNC_s_the_bishops_answer
+		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_s_the_communal_schools }
-		prerequisite = { focus = BELDNC_s_the_grant_to_the_free_schools }
+		prerequisite = { focus = BELDNC_s_the_bishops_answer }
+		icon = GFX_focus_generic_population_growth
+		cost = 5
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -80
@@ -9048,12 +8465,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_school_and_the_pithead
-		icon = GFX_focus_generic_workers
 		relative_position_id = BELDNC_s_the_child_must_attend
-		x = 0
+		x = -1
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_s_the_child_must_attend }
+		mutually_exclusive = { focus = BELDNC_s_the_school_question_closed }
+		icon = GFX_focus_generic_workers
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -9122,12 +8540,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_bishops_answer
-		icon = GFX_focus_generic_public_meetings
-		relative_position_id = BELDNC_s_the_grant_to_the_free_schools
+		relative_position_id = BELDNC_s_the_teachers_certificate
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_s_the_teachers_certificate }
+		icon = GFX_focus_generic_public_meetings
 		cost = 5
-		prerequisite = { focus = BELDNC_s_the_grant_to_the_free_schools }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -9186,12 +8604,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_one_law_for_two_tongues
-		icon = GFX_focus_BEL_multi_language_courses
-		relative_position_id = BELDNC_s_the_teachers_certificate
-		x = 0
+		relative_position_id = BELDNC_s_the_school_and_the_pithead
+		x = 1
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_s_the_teachers_certificate }
+		prerequisite = { focus = BELDNC_s_the_school_and_the_pithead focus = BELDNC_s_the_school_question_closed }
+		icon = GFX_focus_BEL_multi_language_courses
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -9253,14 +8671,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_s_the_school_question_closed
-		icon = GFX_focus_generic_university_2
 		relative_position_id = BELDNC_s_the_child_must_attend
-		x = 2
+		x = 1
 		y = 1
-		cost = 8
 		prerequisite = { focus = BELDNC_s_the_child_must_attend }
-		prerequisite = { focus = BELDNC_s_the_bishops_answer }
-		prerequisite = { focus = BELDNC_s_one_law_for_two_tongues }
+		mutually_exclusive = { focus = BELDNC_s_the_school_and_the_pithead }
+		icon = GFX_focus_generic_university_2
+		cost = 5
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = 80
@@ -9346,12 +8763,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_pits_of_the_borinage
-		icon = GFX_focus_generic_mining_industry
-		relative_position_id = BELDNC_a_the_partys_weapon
-		x = 0
+		relative_position_id = BELDNC_the_guarantee
+		x = -8
 		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_generic_mining_industry
 		cost = 5
-		prerequisite = { focus = BELDNC_a_the_partys_weapon }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -25
@@ -9410,12 +8827,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_inspectorate_of_mines
-		icon = GFX_goal_generic_political_pressure
 		relative_position_id = BELDNC_b_the_pits_of_the_borinage
-		x = 0
+		x = -1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_b_the_pits_of_the_borinage }
+		mutually_exclusive = { focus = BELDNC_b_the_gendarmes_at_the_pithead }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -50
@@ -9487,12 +8905,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_gendarmes_at_the_pithead
-		icon = GFX_focus_generic_strike_at_democracy3
 		relative_position_id = BELDNC_b_the_pits_of_the_borinage
-		x = 2
+		x = 1
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_b_the_pits_of_the_borinage }
+		mutually_exclusive = { focus = BELDNC_b_the_inspectorate_of_mines }
+		icon = GFX_focus_generic_strike_at_democracy3
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 40
@@ -9565,12 +8984,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_women_and_children_underground
-		icon = GFX_focus_generic_workers_and_farmers_rise
 		relative_position_id = BELDNC_b_the_inspectorate_of_mines
-		x = 0
+		x = 1
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines }
+		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines focus = BELDNC_b_the_gendarmes_at_the_pithead }
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -9631,12 +9050,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_sunday_of_rest
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_b_the_inspectorate_of_mines
-		x = 2
+		relative_position_id = BELDNC_b_the_women_and_children_underground
+		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines }
+		prerequisite = { focus = BELDNC_b_the_women_and_children_underground }
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -9701,13 +9120,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_bourse_du_travail
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		relative_position_id = BELDNC_b_the_women_and_children_underground
+		relative_position_id = BELDNC_b_the_sunday_of_rest
 		x = 0
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_b_the_women_and_children_underground }
 		prerequisite = { focus = BELDNC_b_the_sunday_of_rest }
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -75
@@ -9781,13 +9199,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_b_the_basin_that_carries_the_kingdom
-		icon = GFX_focus_generic_industry_3
 		relative_position_id = BELDNC_b_the_bourse_du_travail
 		x = 0
 		y = 1
-		cost = 8
 		prerequisite = { focus = BELDNC_b_the_bourse_du_travail }
-		prerequisite = { focus = BELDNC_b_the_gendarmes_at_the_pithead }
+		icon = GFX_focus_generic_industry_3
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 60
@@ -9877,12 +9294,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_g_who_guarantees_the_guarantee
-		icon = GFX_focus_generic_treaty
-		relative_position_id = BELDNC_arm_the_powers_who_signed
+		relative_position_id = BELDNC_the_guarantee
 		x = 8
 		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_focus_generic_treaty
 		cost = 5
-		prerequisite = { focus = BELDNC_arm_the_powers_who_signed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -9967,12 +9384,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_g_the_five_signatures_read_again
-		icon = GFX_generic_focus_treaty_sign
 		relative_position_id = BELDNC_g_who_guarantees_the_guarantee
 		x = 0
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_g_who_guarantees_the_guarantee }
+		icon = GFX_generic_focus_treaty_sign
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -40
@@ -10067,13 +9484,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_g_the_letter_from_london
-		icon = GFX_Goal_generic_propaganda_britain
 		relative_position_id = BELDNC_g_the_five_signatures_read_again
-		x = 0
+		x = -1
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_g_the_five_signatures_read_again }
 		mutually_exclusive = { focus = BELDNC_g_the_letter_from_berlin }
+		icon = GFX_Goal_generic_propaganda_britain
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -10157,13 +9574,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_g_the_letter_from_berlin
-		icon = GFX_goal_generic_dangerous_deal
 		relative_position_id = BELDNC_g_the_five_signatures_read_again
-		x = 2
+		x = 1
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_g_the_five_signatures_read_again }
 		mutually_exclusive = { focus = BELDNC_g_the_letter_from_london }
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = 60
@@ -10246,15 +9663,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_g_a_neutrality_that_arms_itself
-		icon = GFX_goal_generic_neutrality_focus
 		relative_position_id = BELDNC_g_the_letter_from_london
-		x = 0
+		x = 1
 		y = 1
-		cost = 8
-		prerequisite = {
-			focus = BELDNC_g_the_letter_from_london
-			focus = BELDNC_g_the_letter_from_berlin
-		}
+		prerequisite = { focus = BELDNC_g_the_letter_from_london focus = BELDNC_g_the_letter_from_berlin }
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 50
@@ -10397,14 +9811,14 @@ focus_tree = {
 	}
 	focus = {
 		id = BELDNC_a_the_catholic_settlement
-		icon = GFX_focus_generic_catholic_dominion
-		relative_position_id = BELDNC_the_belgian_question
-		x = -6
+		relative_position_id = BELDNC_the_guarantee
+		x = -70
 		y = 1
-		prerequisite = { focus = BELDNC_the_belgian_question }
+		prerequisite = { focus = BELDNC_the_guarantee }
 		mutually_exclusive = { focus = BELDNC_k_the_bloc_of_the_left }
 		mutually_exclusive = { focus = BELDNC_r_govern_past_the_chamber }
 		mutually_exclusive = { focus = BELDNC_n_no_empire_for_a_small_state }
+		icon = GFX_focus_generic_catholic_dominion
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		cost = 4
 		ai_will_do = { factor = 40 }
@@ -10450,11 +9864,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_plural_vote
-		icon = GFX_focus_generic_election
 		relative_position_id = BELDNC_a_the_catholic_settlement
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_catholic_settlement }
+		icon = GFX_focus_generic_election
 		cost = 3
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -10494,11 +9908,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_woestes_right
-		icon = GFX_focus_generic_oppression
-		relative_position_id = BELDNC_a_the_catholic_settlement
-		x = 8
+		relative_position_id = BELDNC_a_the_register_of_three_ballots
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_catholic_settlement }
+		prerequisite = { focus = BELDNC_a_the_register_of_three_ballots }
+		icon = GFX_focus_generic_oppression
 		cost = 3
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -10544,11 +9958,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_bargain_with_the_basin
-		icon = GFX_focus_generic_industry_investment
-		relative_position_id = BELDNC_a_the_catholic_settlement
-		x = 10
+		relative_position_id = BELDNC_a_the_ministry_that_does_not_fall
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_catholic_settlement }
+		prerequisite = { focus = BELDNC_a_the_ministry_that_does_not_fall }
+		icon = GFX_focus_generic_industry_investment
 		cost = 3
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -10591,11 +10005,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_register_of_three_ballots
-		icon = GFX_goal_generic_parliament
-		relative_position_id = BELDNC_a_the_plural_vote
-		x = 0
+		relative_position_id = BELDNC_a_the_kings_prerogative
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_plural_vote }
+		prerequisite = { focus = BELDNC_a_the_kings_prerogative focus = BELDNC_a_the_partys_weapon }
+		icon = GFX_goal_generic_parliament
 		cost = 3.5
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -10643,12 +10057,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_school_and_the_ballot
-		icon = GFX_focus_BEL_multi_language_courses
-		relative_position_id = BELDNC_a_the_plural_vote
-		x = 4
+		relative_position_id = BELDNC_a_woestes_right
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_plural_vote }
 		prerequisite = { focus = BELDNC_a_woestes_right }
+		icon = GFX_focus_BEL_multi_language_courses
 		cost = 3
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -10685,12 +10098,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_countryside_votes_with_us
-		icon = GFX_focus_generic_workers_and_farmers_rise
-		relative_position_id = BELDNC_a_woestes_right
+		relative_position_id = BELDNC_a_the_bargain_with_the_basin
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_woestes_right }
 		prerequisite = { focus = BELDNC_a_the_bargain_with_the_basin }
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 3.5
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -10736,11 +10148,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_left_kept_apart
-		icon = GFX_focus_generic_support_the_left_right
-		relative_position_id = BELDNC_a_the_bargain_with_the_basin
-		x = 0
+		relative_position_id = BELDNC_a_the_countryside_votes_with_us
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_bargain_with_the_basin }
+		prerequisite = { focus = BELDNC_a_the_countryside_votes_with_us }
+		mutually_exclusive = { focus = BELDNC_a_the_language_laws_conceded }
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 3.5
 		ai_will_do = { factor = 12 }
 		completion_reward = {
@@ -10783,12 +10196,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_ministry_that_does_not_fall
-		icon = GFX_focus_generic_improve_the_administration
-		relative_position_id = BELDNC_a_the_register_of_three_ballots
+		relative_position_id = BELDNC_a_the_school_and_the_ballot
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_register_of_three_ballots }
 		prerequisite = { focus = BELDNC_a_the_school_and_the_ballot }
+		icon = GFX_focus_generic_improve_the_administration
 		cost = 4
 		ai_will_do = { factor = 18 }
 		completion_reward = {
@@ -10829,12 +10241,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_language_laws_conceded
-		icon = GFX_focus_YUG_devolved_croatia
-		relative_position_id = BELDNC_a_the_school_and_the_ballot
-		x = 0
+		relative_position_id = BELDNC_a_the_countryside_votes_with_us
+		x = -1
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_school_and_the_ballot }
 		prerequisite = { focus = BELDNC_a_the_countryside_votes_with_us }
+		mutually_exclusive = { focus = BELDNC_a_the_left_kept_apart }
+		icon = GFX_focus_YUG_devolved_croatia
 		cost = 4
 		ai_will_do = { factor = 18 }
 		completion_reward = {
@@ -10876,12 +10288,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_strike_that_does_not_come
-		icon = GFX_focus_generic_strike_at_democracy3
-		relative_position_id = BELDNC_a_the_countryside_votes_with_us
-		x = 0
+		relative_position_id = BELDNC_a_the_language_laws_conceded
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_countryside_votes_with_us }
-		prerequisite = { focus = BELDNC_a_the_left_kept_apart }
+		prerequisite = { focus = BELDNC_a_the_language_laws_conceded focus = BELDNC_a_the_left_kept_apart }
+		icon = GFX_focus_generic_strike_at_democracy3
 		cost = 4
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -10929,13 +10340,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_settlement_holds
-		icon = GFX_CANDNC_goal_generic_parliament
-		relative_position_id = BELDNC_a_the_ministry_that_does_not_fall
-		x = 2
+		relative_position_id = BELDNC_a_the_strike_that_does_not_come
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_ministry_that_does_not_fall }
-		prerequisite = { focus = BELDNC_a_the_language_laws_conceded }
 		prerequisite = { focus = BELDNC_a_the_strike_that_does_not_come }
+		icon = GFX_CANDNC_goal_generic_parliament
 		cost = 4.5
 		ai_will_do = { factor = 25 }
 		completion_reward = {
@@ -10985,11 +10394,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_bishops_are_content
-		icon = GFX_focus_generic_university_2
 		relative_position_id = BELDNC_a_the_settlement_holds
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_settlement_holds }
+		icon = GFX_focus_generic_university_2
 		cost = 3.5
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -11032,11 +10441,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_commission_of_inquiry
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_a_the_settlement_holds
+		relative_position_id = BELDNC_a_the_bishops_are_content
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_settlement_holds }
+		prerequisite = { focus = BELDNC_a_the_bishops_are_content }
+		icon = GFX_focus_generic_court
 		cost = 4
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -11078,11 +10487,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_note_from_the_powers
-		icon = GFX_focus_generic_diplomatic_treaty
-		relative_position_id = BELDNC_a_the_settlement_holds
-		x = 2
+		relative_position_id = BELDNC_a_the_commission_of_inquiry
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_settlement_holds }
+		prerequisite = { focus = BELDNC_a_the_commission_of_inquiry }
+		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 4
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -11135,11 +10544,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_estate_is_valued
-		icon = GFX_focus_generic_improve_the_administration_2
-		relative_position_id = BELDNC_a_the_settlement_holds
-		x = 4
+		relative_position_id = BELDNC_a_the_terms_of_cession
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_settlement_holds }
+		prerequisite = { focus = BELDNC_a_the_terms_of_cession focus = BELDNC_a_the_kings_price }
+		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 4
 		ai_will_do = { factor = 18 }
 		completion_reward = {
@@ -11183,12 +10592,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_terms_of_cession
-		icon = GFX_generic_focus_treaty_sign
-		relative_position_id = BELDNC_a_the_commission_of_inquiry
-		x = 0
+		relative_position_id = BELDNC_a_the_note_from_the_powers
+		x = -1
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_commission_of_inquiry }
 		prerequisite = { focus = BELDNC_a_the_note_from_the_powers }
+		mutually_exclusive = { focus = BELDNC_a_the_kings_price }
+		icon = GFX_generic_focus_treaty_sign
 		cost = 4
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -11223,12 +10632,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_kings_price
-		icon = GFX_focus_rom_handle_king
 		relative_position_id = BELDNC_a_the_note_from_the_powers
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_note_from_the_powers }
-		prerequisite = { focus = BELDNC_a_the_estate_is_valued }
+		mutually_exclusive = { focus = BELDNC_a_the_terms_of_cession }
+		icon = GFX_focus_rom_handle_king
 		cost = 4
 		ai_will_do = { factor = 18 }
 		completion_reward = {
@@ -11267,12 +10676,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_right_votes_the_colony
-		icon = GFX_focus_generic_annex_country
-		relative_position_id = BELDNC_a_the_terms_of_cession
+		relative_position_id = BELDNC_a_the_house_votes_the_estate
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_terms_of_cession }
-		prerequisite = { focus = BELDNC_a_the_kings_price }
+		prerequisite = { focus = BELDNC_a_the_house_votes_the_estate }
+		icon = GFX_focus_generic_annex_country
 		available = { country_exists = COG }
 		cost = 5
 		ai_will_do = { factor = 30 }
@@ -11314,11 +10722,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_colonial_charter_of_the_right
-		icon = GFX_focus_ITA_a_colonial_empire
 		relative_position_id = BELDNC_a_the_right_votes_the_colony
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_right_votes_the_colony }
+		icon = GFX_focus_ITA_a_colonial_empire
 		cost = 4.5
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -11353,11 +10761,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_reign_that_follows
-		icon = GFX_focus_generic_monarchy_2
-		relative_position_id = BELDNC_a_the_right_votes_the_colony
-		x = 2
+		relative_position_id = BELDNC_a_the_colonial_charter_of_the_right
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_right_votes_the_colony }
+		prerequisite = { focus = BELDNC_a_the_colonial_charter_of_the_right }
+		icon = GFX_focus_generic_monarchy_2
 		cost = 4.5
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -11395,12 +10803,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_a_the_catholic_decade
-		icon = GFX_goal_generic_national_unity
-		relative_position_id = BELDNC_a_the_colonial_charter_of_the_right
+		relative_position_id = BELDNC_a_the_reign_that_follows
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_a_the_colonial_charter_of_the_right }
 		prerequisite = { focus = BELDNC_a_the_reign_that_follows }
+		icon = GFX_goal_generic_national_unity
 		cost = 5
 		ai_will_do = { factor = 25 }
 		completion_reward = {
@@ -11449,14 +10856,14 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_bloc_of_the_left
-		icon = GFX_goal_generic_political_pressure
-		relative_position_id = BELDNC_the_belgian_question
-		x = -26
+		relative_position_id = BELDNC_the_guarantee
+		x = -62
 		y = 1
-		prerequisite = { focus = BELDNC_the_belgian_question }
+		prerequisite = { focus = BELDNC_the_guarantee }
 		mutually_exclusive = { focus = BELDNC_a_the_catholic_settlement }
 		mutually_exclusive = { focus = BELDNC_r_govern_past_the_chamber }
 		mutually_exclusive = { focus = BELDNC_n_no_empire_for_a_small_state }
+		icon = GFX_goal_generic_political_pressure
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		cost = 4
 		ai_will_do = { factor = 5 }
@@ -11514,11 +10921,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_one_man_one_vote
-		icon = GFX_focus_generic_election
-		relative_position_id = BELDNC_k_the_bloc_of_the_left
-		x = -4
+		relative_position_id = BELDNC_k_one_school_for_two_tongues
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_bloc_of_the_left }
+		prerequisite = { focus = BELDNC_k_one_school_for_two_tongues }
+		icon = GFX_focus_generic_election
 		cost = 4
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -11560,11 +10967,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_liberal_half_of_the_bargain
-		icon = GFX_focus_generic_support_the_left_right
 		relative_position_id = BELDNC_k_the_bloc_of_the_left
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_bloc_of_the_left }
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 3
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -11618,11 +11025,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_colony_before_the_king
-		icon = GFX_focus_generic_annex_country
-		relative_position_id = BELDNC_k_the_bloc_of_the_left
-		x = 4
+		relative_position_id = BELDNC_k_the_vote_is_taken_early
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_bloc_of_the_left }
+		prerequisite = { focus = BELDNC_k_the_vote_is_taken_early }
+		icon = GFX_focus_generic_annex_country
 		available = { country_exists = COG }
 		cost = 4
 		ai_will_do = { factor = 10 }
@@ -11662,11 +11069,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_second_general_strike
-		icon = GFX_focus_generic_strike_at_democracy2
 		relative_position_id = BELDNC_k_one_man_one_vote
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_k_one_man_one_vote }
+		mutually_exclusive = { focus = BELDNC_k_the_senate_holds_out }
+		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 3
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -11715,11 +11123,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_senate_holds_out
-		icon = GFX_focus_bo_constitution
 		relative_position_id = BELDNC_k_one_man_one_vote
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_k_one_man_one_vote }
+		mutually_exclusive = { focus = BELDNC_k_the_second_general_strike }
+		icon = GFX_focus_bo_constitution
 		cost = 4
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -11766,11 +11175,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_schools_of_the_commune
-		icon = GFX_focus_generic_university_2
 		relative_position_id = BELDNC_k_the_liberal_half_of_the_bargain
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_liberal_half_of_the_bargain }
+		mutually_exclusive = { focus = BELDNC_k_the_grant_is_withdrawn }
+		icon = GFX_focus_generic_university_2
 		cost = 3.5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -11812,11 +11222,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_grant_is_withdrawn
-		icon = GFX_focus_generic_oppression
 		relative_position_id = BELDNC_k_the_liberal_half_of_the_bargain
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_liberal_half_of_the_bargain }
+		mutually_exclusive = { focus = BELDNC_k_the_schools_of_the_commune }
+		icon = GFX_focus_generic_oppression
 		cost = 4
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -11864,11 +11275,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_commission_the_chamber_names
-		icon = GFX_CANDNC_goal_generic_parliament
 		relative_position_id = BELDNC_k_the_colony_before_the_king
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_colony_before_the_king }
+		icon = GFX_CANDNC_goal_generic_parliament
 		available = { country_exists = COG }
 		cost = 4
 		ai_will_do = { factor = 10 }
@@ -11910,11 +11321,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_terms_are_ours_to_write
-		icon = GFX_focus_generic_diplomatic_treaty
-		relative_position_id = BELDNC_k_the_colony_before_the_king
-		x = 2
+		relative_position_id = BELDNC_k_the_commission_the_chamber_names
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_colony_before_the_king }
+		prerequisite = { focus = BELDNC_k_the_commission_the_chamber_names }
+		icon = GFX_focus_generic_diplomatic_treaty
 		available = { country_exists = COG }
 		cost = 4
 		ai_will_do = { factor = 10 }
@@ -11955,12 +11366,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_cartel_takes_the_chamber
-		icon = GFX_focus_generic_full_social_mobilization
 		relative_position_id = BELDNC_k_the_second_general_strike
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_second_general_strike }
-		prerequisite = { focus = BELDNC_k_the_senate_holds_out }
+		prerequisite = { focus = BELDNC_k_the_second_general_strike focus = BELDNC_k_the_senate_holds_out }
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 4.5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -12007,11 +11417,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_teacher_is_a_civil_servant
-		icon = GFX_focus_generic_worker_administration
 		relative_position_id = BELDNC_k_the_schools_of_the_commune
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_schools_of_the_commune }
+		prerequisite = { focus = BELDNC_k_the_schools_of_the_commune focus = BELDNC_k_the_grant_is_withdrawn }
+		icon = GFX_focus_generic_worker_administration
 		cost = 3.5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -12051,11 +11461,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_bishops_answer_the_cartel
-		icon = GFX_focus_generic_catholic_dominion
-		relative_position_id = BELDNC_k_the_grant_is_withdrawn
+		relative_position_id = BELDNC_k_the_teacher_is_a_civil_servant
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_grant_is_withdrawn }
+		prerequisite = { focus = BELDNC_k_the_teacher_is_a_civil_servant }
+		icon = GFX_focus_generic_catholic_dominion
 		cost = 3
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -12096,12 +11506,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_vote_is_taken_early
-		icon = GFX_goal_generic_parliament
-		relative_position_id = BELDNC_k_the_terms_are_ours_to_write
-		x = 0
+		relative_position_id = BELDNC_k_the_register_rewritten
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_terms_are_ours_to_write }
-		prerequisite = { focus = BELDNC_k_the_commission_the_chamber_names }
+		prerequisite = { focus = BELDNC_k_the_register_rewritten focus = BELDNC_k_the_vote_the_party_fears }
+		icon = GFX_goal_generic_parliament
 		available = {
 			country_exists = COG
 			check_variable = {
@@ -12147,11 +11556,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_estate_is_valued
-		icon = GFX_focus_generic_court
 		relative_position_id = BELDNC_k_the_terms_are_ours_to_write
-		x = 2
+		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_terms_are_ours_to_write }
+		icon = GFX_focus_generic_court
 		cost = 3.5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -12188,11 +11597,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_register_rewritten
-		icon = GFX_focus_generic_public_meetings
 		relative_position_id = BELDNC_k_the_cartel_takes_the_chamber
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_cartel_takes_the_chamber }
+		mutually_exclusive = { focus = BELDNC_k_the_vote_the_party_fears }
+		icon = GFX_focus_generic_public_meetings
 		cost = 4
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -12238,11 +11648,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_vote_the_party_fears
-		icon = GFX_focus_generic_population_growth
 		relative_position_id = BELDNC_k_the_cartel_takes_the_chamber
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_cartel_takes_the_chamber }
+		mutually_exclusive = { focus = BELDNC_k_the_register_rewritten }
+		icon = GFX_focus_generic_population_growth
 		cost = 4
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -12284,12 +11695,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_one_school_for_two_tongues
-		icon = GFX_focus_BEL_multi_language_courses
-		relative_position_id = BELDNC_k_the_teacher_is_a_civil_servant
+		relative_position_id = BELDNC_k_the_bishops_answer_the_cartel
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_teacher_is_a_civil_servant }
 		prerequisite = { focus = BELDNC_k_the_bishops_answer_the_cartel }
+		icon = GFX_focus_BEL_multi_language_courses
 		cost = 4
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -12330,11 +11740,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_colony_of_a_parliament
-		icon = GFX_focus_ITA_a_colonial_empire
-		relative_position_id = BELDNC_k_the_vote_is_taken_early
+		relative_position_id = BELDNC_k_no_congolese_for_europe
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_vote_is_taken_early }
+		prerequisite = { focus = BELDNC_k_no_congolese_for_europe }
+		icon = GFX_focus_ITA_a_colonial_empire
 		cost = 4.5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -12372,11 +11782,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_levy_in_kind_ends
-		icon = GFX_focus_generic_concessions
-		relative_position_id = BELDNC_k_the_estate_is_valued
+		relative_position_id = BELDNC_k_the_atrocity_is_ours_now
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_estate_is_valued }
+		prerequisite = { focus = BELDNC_k_the_atrocity_is_ours_now }
+		icon = GFX_focus_generic_concessions
 		available = { has_country_flag = BEL_congo_annexed }
 		cost = 4
 		ai_will_do = { factor = 10 }
@@ -12422,12 +11832,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_atrocity_is_ours_now
-		icon = GFX_goal_generic_dangerous_deal
-		relative_position_id = BELDNC_k_the_colony_of_a_parliament
+		relative_position_id = BELDNC_k_the_estate_is_valued
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_the_colony_of_a_parliament }
-		prerequisite = { focus = BELDNC_k_the_levy_in_kind_ends }
+		prerequisite = { focus = BELDNC_k_the_estate_is_valued }
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -12478,13 +11887,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_k_the_kingdom_of_the_cartel
-		icon = GFX_goal_generic_national_unity
-		relative_position_id = BELDNC_k_one_school_for_two_tongues
+		relative_position_id = BELDNC_k_the_colony_of_a_parliament
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_k_one_school_for_two_tongues }
-		prerequisite = { focus = BELDNC_k_the_register_rewritten }
-		prerequisite = { focus = BELDNC_k_the_atrocity_is_ours_now }
+		prerequisite = { focus = BELDNC_k_the_colony_of_a_parliament }
+		icon = GFX_goal_generic_national_unity
 		cost = 5
 		ai_will_do = { factor = 15 }
 		completion_reward = {
@@ -12529,14 +11936,14 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_govern_past_the_chamber
-		icon = GFX_focus_generic_monarchist_sentiment
-		relative_position_id = BELDNC_the_belgian_question
-		x = 50
+		relative_position_id = BELDNC_the_guarantee
+		x = -54
 		y = 1
-		prerequisite = { focus = BELDNC_the_belgian_question }
+		prerequisite = { focus = BELDNC_the_guarantee }
 		mutually_exclusive = { focus = BELDNC_a_the_catholic_settlement }
 		mutually_exclusive = { focus = BELDNC_k_the_bloc_of_the_left }
 		mutually_exclusive = { focus = BELDNC_n_no_empire_for_a_small_state }
+		icon = GFX_focus_generic_monarchist_sentiment
 		available = { has_country_flag = BEL_dnc_systems_open }
 		cost = 4
 		ai_will_do = {
@@ -12627,11 +12034,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_royal_message
-		icon = GFX_focus_generic_monarchy_2
 		relative_position_id = BELDNC_r_govern_past_the_chamber
-		x = -4
+		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
+		icon = GFX_focus_generic_monarchy_2
 		cost = 3
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -12683,11 +12090,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_ministers_of_the_king
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_r_govern_past_the_chamber
-		x = 2
+		relative_position_id = BELDNC_r_the_press_bureau
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
+		prerequisite = { focus = BELDNC_r_the_press_bureau }
+		icon = GFX_focus_generic_court
 		cost = 3
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -12745,11 +12152,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_congo_is_the_kings
-		icon = GFX_focus_generic_annex_country
-		relative_position_id = BELDNC_r_govern_past_the_chamber
-		x = 4
+		relative_position_id = BELDNC_r_the_deputies_go_home
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
+		prerequisite = { focus = BELDNC_r_the_deputies_go_home focus = BELDNC_r_the_officer_corps_swears_to_him }
+		icon = GFX_focus_generic_annex_country
 		cost = 3
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -12794,11 +12201,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_press_bureau
-		icon = GFX_focus_generic_oppression
 		relative_position_id = BELDNC_r_the_royal_message
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_r_the_royal_message }
+		icon = GFX_focus_generic_oppression
 		cost = 3
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -12844,12 +12251,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_crown_rules
-		icon = GFX_focus_generic_monarchy_2
-		relative_position_id = BELDNC_r_the_royal_message
-		x = 2
+		relative_position_id = BELDNC_r_the_ministers_of_the_king
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_royal_message }
 		prerequisite = { focus = BELDNC_r_the_ministers_of_the_king }
+		icon = GFX_focus_generic_monarchy_2
 		cost = 4
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -12911,11 +12317,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_estimates_by_decree
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		relative_position_id = BELDNC_r_the_ministers_of_the_king
+		relative_position_id = BELDNC_r_the_crown_rules
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_ministers_of_the_king }
+		prerequisite = { focus = BELDNC_r_the_crown_rules }
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		cost = 3.5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -12967,11 +12373,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_domaine_de_la_couronne
-		icon = GFX_focus_generic_concessions
 		relative_position_id = BELDNC_r_the_congo_is_the_kings
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_r_the_congo_is_the_kings }
+		icon = GFX_focus_generic_concessions
 		cost = 3.5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -13015,11 +12421,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_kings_works
-		icon = GFX_goal_generic_construct_infrastructure
-		relative_position_id = BELDNC_r_the_congo_is_the_kings
-		x = 2
+		relative_position_id = BELDNC_r_the_domaine_de_la_couronne
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_congo_is_the_kings }
+		prerequisite = { focus = BELDNC_r_the_domaine_de_la_couronne }
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 3.5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -13077,12 +12483,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_gendarmerie_of_the_kingdom
-		icon = GFX_goal_generic_position_armies
-		relative_position_id = BELDNC_r_the_press_bureau
+		relative_position_id = BELDNC_r_the_estimates_by_decree
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_press_bureau }
-		prerequisite = { focus = BELDNC_r_the_crown_rules }
+		prerequisite = { focus = BELDNC_r_the_estimates_by_decree }
+		icon = GFX_goal_generic_position_armies
 		cost = 3.5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -13132,11 +12537,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_chamber_prorogued
-		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		relative_position_id = BELDNC_r_the_crown_rules
+		relative_position_id = BELDNC_r_the_gendarmerie_of_the_kingdom
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_crown_rules }
+		prerequisite = { focus = BELDNC_r_the_gendarmerie_of_the_kingdom }
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13231,11 +12636,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_civil_list_untouched
-		icon = GFX_focus_generic_court
-		relative_position_id = BELDNC_r_the_estimates_by_decree
+		relative_position_id = BELDNC_r_the_kings_works
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_estimates_by_decree }
+		prerequisite = { focus = BELDNC_r_the_kings_works }
+		icon = GFX_focus_generic_court
 		cost = 3
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -13276,12 +12681,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_congo_pays_for_the_forts
-		icon = GFX_goal_generic_fortify_city
-		relative_position_id = BELDNC_r_the_domaine_de_la_couronne
+		relative_position_id = BELDNC_r_the_civil_list_untouched
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_domaine_de_la_couronne }
-		prerequisite = { focus = BELDNC_r_the_kings_works }
+		prerequisite = { focus = BELDNC_r_the_civil_list_untouched }
+		icon = GFX_goal_generic_fortify_city
 		cost = 4
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -13324,11 +12728,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_deputies_go_home
-		icon = GFX_CANDNC_goal_generic_parliament
 		relative_position_id = BELDNC_r_the_chamber_prorogued
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_r_the_chamber_prorogued }
+		mutually_exclusive = { focus = BELDNC_r_the_officer_corps_swears_to_him }
+		icon = GFX_CANDNC_goal_generic_parliament
 		cost = 4
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13378,11 +12783,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_officer_corps_swears_to_him
-		icon = GFX_goal_generic_officers
 		relative_position_id = BELDNC_r_the_chamber_prorogued
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_r_the_chamber_prorogued }
+		mutually_exclusive = { focus = BELDNC_r_the_deputies_go_home }
+		icon = GFX_goal_generic_officers
 		cost = 4
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -13430,12 +12836,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_colony_of_one_man
-		icon = GFX_focus_ITA_a_colonial_empire
-		relative_position_id = BELDNC_r_the_civil_list_untouched
-		x = 0
+		relative_position_id = BELDNC_r_the_congo_pays_for_the_forts
+		x = -1
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_civil_list_untouched }
 		prerequisite = { focus = BELDNC_r_the_congo_pays_for_the_forts }
+		mutually_exclusive = { focus = BELDNC_r_the_understanding_with_berlin }
+		icon = GFX_focus_ITA_a_colonial_empire
 		available = { country_exists = COG }
 		cost = 4.5
 		ai_will_do = { factor = 5 }
@@ -13482,11 +12888,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_understanding_with_berlin
-		icon = GFX_goal_generic_dangerous_deal
 		relative_position_id = BELDNC_r_the_congo_pays_for_the_forts
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_r_the_congo_pays_for_the_forts }
+		mutually_exclusive = { focus = BELDNC_r_the_colony_of_one_man }
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 4
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13551,12 +12958,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_king_is_old
-		icon = GFX_focus_rom_handle_king
-		relative_position_id = BELDNC_r_the_deputies_go_home
-		x = 0
+		relative_position_id = BELDNC_r_the_colony_of_one_man
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_deputies_go_home }
-		prerequisite = { focus = BELDNC_r_the_officer_corps_swears_to_him }
+		prerequisite = { focus = BELDNC_r_the_colony_of_one_man focus = BELDNC_r_the_understanding_with_berlin }
+		icon = GFX_focus_rom_handle_king
 		cost = 4
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -13594,11 +13000,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_quiet_kingdom
-		icon = GFX_focus_generic_self_management
-		relative_position_id = BELDNC_r_the_colony_of_one_man
+		relative_position_id = BELDNC_r_alberts_inheritance
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_colony_of_one_man }
+		prerequisite = { focus = BELDNC_r_alberts_inheritance }
+		icon = GFX_focus_generic_self_management
 		cost = 4
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -13649,11 +13055,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_guarantee_of_a_strong_hand
-		icon = GFX_goal_generic_forceful_treaty
-		relative_position_id = BELDNC_r_the_understanding_with_berlin
+		relative_position_id = BELDNC_r_the_king_is_old
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_understanding_with_berlin }
+		prerequisite = { focus = BELDNC_r_the_king_is_old }
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 4
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13700,12 +13106,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_alberts_inheritance
-		icon = GFX_focus_generic_monarchy_1
-		relative_position_id = BELDNC_r_the_king_is_old
+		relative_position_id = BELDNC_r_the_guarantee_of_a_strong_hand
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_the_king_is_old }
-		prerequisite = { focus = BELDNC_r_the_quiet_kingdom }
+		prerequisite = { focus = BELDNC_r_the_guarantee_of_a_strong_hand }
+		icon = GFX_focus_generic_monarchy_1
 		cost = 4.5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -13755,12 +13160,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_r_the_crown_that_governs
-		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = BELDNC_r_alberts_inheritance
+		relative_position_id = BELDNC_r_the_quiet_kingdom
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_r_alberts_inheritance }
-		prerequisite = { focus = BELDNC_r_the_guarantee_of_a_strong_hand }
+		prerequisite = { focus = BELDNC_r_the_quiet_kingdom }
+		icon = GFX_focus_rom_royal_dictatorship
 		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -13812,14 +13216,14 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_no_empire_for_a_small_state
-		icon = GFX_goal_generic_neutrality_focus
-		relative_position_id = BELDNC_the_belgian_question
-		x = -40
+		relative_position_id = BELDNC_the_guarantee
+		x = -46
 		y = 1
-		prerequisite = { focus = BELDNC_the_belgian_question }
+		prerequisite = { focus = BELDNC_the_guarantee }
 		mutually_exclusive = { focus = BELDNC_a_the_catholic_settlement }
 		mutually_exclusive = { focus = BELDNC_k_the_bloc_of_the_left }
 		mutually_exclusive = { focus = BELDNC_r_govern_past_the_chamber }
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 4
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		ai_will_do = { factor = 3 }
@@ -13882,11 +13286,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_estate_is_not_the_kingdoms
-		icon = GFX_goal_generic_parliament
 		relative_position_id = BELDNC_n_no_empire_for_a_small_state
-		x = -6
+		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
+		icon = GFX_goal_generic_parliament
 		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13928,11 +13332,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_right_of_preference_surrendered
-		icon = GFX_generic_focus_treaty_sign
 		relative_position_id = BELDNC_n_the_estate_is_not_the_kingdoms
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_estate_is_not_the_kingdoms }
+		icon = GFX_generic_focus_treaty_sign
 		cost = 5
 		available = { has_country_flag = BEL_n_estate_disowned }
 		ai_will_do = { factor = 4 }
@@ -13986,12 +13390,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_let_the_powers_divide_it
-		icon = GFX_focus_AUS_diplomatic_effort
 		relative_position_id = BELDNC_n_the_right_of_preference_surrendered
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_right_of_preference_surrendered }
-		cost = 6
+		icon = GFX_focus_AUS_diplomatic_effort
+		cost = 5
 		available = {
 			has_country_flag = BEL_n_preference_surrendered
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -14041,12 +13445,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_basin_passes_to_others
-		icon = GFX_focus_generic_annex_country
 		relative_position_id = BELDNC_n_let_the_powers_divide_it
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_let_the_powers_divide_it }
-		cost = 7
+		icon = GFX_focus_generic_annex_country
+		cost = 5
 		available = {
 			has_country_flag = BEL_n_conference_invited
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -14096,11 +13500,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_nothing_left_to_deny
-		icon = GFX_focus_generic_public_meetings
 		relative_position_id = BELDNC_n_the_basin_passes_to_others
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_basin_passes_to_others }
+		mutually_exclusive = { focus = BELDNC_n_a_kingdom_of_nine_provinces_only }
+		icon = GFX_focus_generic_public_meetings
 		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -14146,12 +13551,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_a_kingdom_of_nine_provinces_only
-		icon = GFX_focus_generic_self_management
 		relative_position_id = BELDNC_n_the_basin_passes_to_others
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_basin_passes_to_others }
-		cost = 6
+		mutually_exclusive = { focus = BELDNC_n_nothing_left_to_deny }
+		icon = GFX_focus_generic_self_management
+		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 40
@@ -14192,11 +13598,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_engineers_full_estimate
-		icon = GFX_goal_nested_fortifications
-		relative_position_id = BELDNC_n_no_empire_for_a_small_state
-		x = -2
+		relative_position_id = BELDNC_n_the_garde_civique_in_the_provinces
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
+		prerequisite = { focus = BELDNC_n_the_garde_civique_in_the_provinces focus = BELDNC_n_officers_who_came_from_the_ranks }
+		icon = GFX_goal_nested_fortifications
 		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -14253,13 +13659,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_frontier_is_the_meuse
-		icon = GFX_focus_generic_mountain_fortification
 		relative_position_id = BELDNC_n_the_engineers_full_estimate
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_engineers_full_estimate }
 		mutually_exclusive = { focus = BELDNC_n_the_redoubt_is_the_country }
-		cost = 7
+		icon = GFX_focus_generic_mountain_fortification
+		cost = 5
 		available = { has_country_flag = BEL_n_full_estimate_voted }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -14319,13 +13725,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_redoubt_is_the_country
-		icon = GFX_focus_generic_coastal_fort
 		relative_position_id = BELDNC_n_the_engineers_full_estimate
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_engineers_full_estimate }
 		mutually_exclusive = { focus = BELDNC_n_the_frontier_is_the_meuse }
-		cost = 7
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
 		available = { has_country_flag = BEL_n_full_estimate_voted }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -14390,15 +13796,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_steel_where_the_chamber_voted_sand
-		icon = GFX_goal_trench_artillery
 		relative_position_id = BELDNC_n_the_frontier_is_the_meuse
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = {
-			focus = BELDNC_n_the_frontier_is_the_meuse
-			focus = BELDNC_n_the_redoubt_is_the_country
-		}
-		cost = 6
+		prerequisite = { focus = BELDNC_n_the_frontier_is_the_meuse focus = BELDNC_n_the_redoubt_is_the_country }
+		icon = GFX_goal_trench_artillery
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -14459,12 +13862,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_works_are_never_finished
-		icon = GFX_goal_generic_fortify_city
 		relative_position_id = BELDNC_n_steel_where_the_chamber_voted_sand
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_steel_where_the_chamber_voted_sand }
-		cost = 8
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -14540,11 +13943,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_lottery_is_a_tax_on_the_poor
-		icon = GFX_goal_generic_small_arms
-		relative_position_id = BELDNC_n_no_empire_for_a_small_state
-		x = 2
+		relative_position_id = BELDNC_n_nothing_left_to_deny
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
+		prerequisite = { focus = BELDNC_n_nothing_left_to_deny focus = BELDNC_n_a_kingdom_of_nine_provinces_only }
+		icon = GFX_goal_generic_small_arms
 		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -14584,12 +13987,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_classes_are_called_early
-		icon = GFX_focus_generic_full_social_mobilization
 		relative_position_id = BELDNC_n_the_lottery_is_a_tax_on_the_poor
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_lottery_is_a_tax_on_the_poor }
-		cost = 8
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
 		available = { has_country_flag = BEL_n_lottery_condemned }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -14648,12 +14051,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_garde_civique_in_the_provinces
-		icon = GFX_focus_generic_home_defense
 		relative_position_id = BELDNC_n_the_classes_are_called_early
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_classes_are_called_early }
-		cost = 6
+		mutually_exclusive = { focus = BELDNC_n_officers_who_came_from_the_ranks }
+		icon = GFX_focus_generic_home_defense
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -14706,12 +14110,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_officers_who_came_from_the_ranks
-		icon = GFX_goal_generic_officers
 		relative_position_id = BELDNC_n_the_classes_are_called_early
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_classes_are_called_early }
-		cost = 6
+		mutually_exclusive = { focus = BELDNC_n_the_garde_civique_in_the_provinces }
+		icon = GFX_goal_generic_officers
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -50
@@ -14760,11 +14165,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_staff_names_the_danger
-		icon = GFX_goal_generic_forceful_treaty
-		relative_position_id = BELDNC_n_no_empire_for_a_small_state
-		x = 6
+		relative_position_id = BELDNC_n_the_works_are_never_finished
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
+		prerequisite = { focus = BELDNC_n_the_works_are_never_finished }
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -14814,13 +14219,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_appreciation_is_read_in_the_chamber
-		icon = GFX_focus_generic_public_meetings
 		relative_position_id = BELDNC_n_the_staff_names_the_danger
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_staff_names_the_danger }
 		mutually_exclusive = { focus = BELDNC_n_the_appreciation_goes_to_the_five }
-		cost = 7
+		icon = GFX_focus_generic_public_meetings
+		cost = 5
 		available = { has_country_flag = BEL_n_danger_named }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -14868,13 +14273,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_appreciation_goes_to_the_five
-		icon = GFX_generic_focus_treaty_sign
 		relative_position_id = BELDNC_n_the_staff_names_the_danger
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_staff_names_the_danger }
 		mutually_exclusive = { focus = BELDNC_n_the_appreciation_is_read_in_the_chamber }
-		cost = 7
+		icon = GFX_generic_focus_treaty_sign
+		cost = 5
 		available = { has_country_flag = BEL_n_danger_named }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -14925,15 +14330,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_no_conversations_with_anybody
-		icon = GFX_focus_generic_treaty
 		relative_position_id = BELDNC_n_the_appreciation_is_read_in_the_chamber
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = {
-			focus = BELDNC_n_the_appreciation_is_read_in_the_chamber
-			focus = BELDNC_n_the_appreciation_goes_to_the_five
-		}
-		cost = 6
+		prerequisite = { focus = BELDNC_n_the_appreciation_is_read_in_the_chamber focus = BELDNC_n_the_appreciation_goes_to_the_five }
+		icon = GFX_focus_generic_treaty
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 50
@@ -14986,14 +14388,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_the_school_of_the_small_state
-		icon = GFX_goal_generic_position_armies
-		relative_position_id = BELDNC_n_the_works_are_never_finished
+		relative_position_id = BELDNC_n_no_conversations_with_anybody
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_n_the_works_are_never_finished }
-		prerequisite = { focus = BELDNC_n_officers_who_came_from_the_ranks }
 		prerequisite = { focus = BELDNC_n_no_conversations_with_anybody }
-		cost = 8
+		icon = GFX_goal_generic_position_armies
+		cost = 5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 50
@@ -15064,16 +14464,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_n_impossible_to_walk_through
-		icon = GFX_goal_generic_national_unity
 		relative_position_id = BELDNC_n_the_school_of_the_small_state
 		x = 0
 		y = 1
 		prerequisite = { focus = BELDNC_n_the_school_of_the_small_state }
-		prerequisite = {
-			focus = BELDNC_n_nothing_left_to_deny
-			focus = BELDNC_n_a_kingdom_of_nine_provinces_only
-		}
-		cost = 8
+		icon = GFX_goal_generic_national_unity
+		cost = 5
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -15136,9 +14532,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_company_of_aerostiers
+		relative_position_id = BELDNC_the_guarantee
+		x = 34
+		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_build_airforce
-		x = 145
-		y = 0
 		cost = 4
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		ai_will_do = {
@@ -15195,11 +14593,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_antwerp_devil
-		icon = GFX_goal_generic_propaganda
-		relative_position_id = BELDNC_air_the_company_of_aerostiers
-		x = -2
+		relative_position_id = BELDNC_air_the_meeting_at_kiewit
+		x = -1
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_company_of_aerostiers }
+		prerequisite = { focus = BELDNC_air_the_meeting_at_kiewit }
+		mutually_exclusive = { focus = BELDNC_air_the_machines_come_from_france }
+		icon = GFX_goal_generic_propaganda
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -15248,11 +14647,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_a_neutral_and_its_sky
-		icon = GFX_goal_generic_neutrality_focus
-		relative_position_id = BELDNC_air_the_company_of_aerostiers
-		x = 2
+		relative_position_id = BELDNC_air_the_licence_to_build
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_company_of_aerostiers }
+		prerequisite = { focus = BELDNC_air_the_licence_to_build }
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -15302,11 +14701,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_machines_come_from_france
-		icon = GFX_goal_generic_air_fighter
-		relative_position_id = BELDNC_air_the_company_of_aerostiers
-		x = 4
+		relative_position_id = BELDNC_air_the_meeting_at_kiewit
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_company_of_aerostiers }
+		prerequisite = { focus = BELDNC_air_the_meeting_at_kiewit }
+		mutually_exclusive = { focus = BELDNC_air_the_antwerp_devil }
+		icon = GFX_goal_generic_air_fighter
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -15358,11 +14758,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_meeting_at_kiewit
-		icon = GFX_focus_generic_air_research_boost
-		relative_position_id = BELDNC_air_the_antwerp_devil
+		relative_position_id = BELDNC_air_the_company_of_aerostiers
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_antwerp_devil }
+		prerequisite = { focus = BELDNC_air_the_company_of_aerostiers }
+		icon = GFX_focus_generic_air_research_boost
 		cost = 4
 		ai_will_do = {
 			factor = 1
@@ -15415,12 +14815,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_school_at_brasschaat
-		icon = GFX_focus_generic_pilot_training
-		relative_position_id = BELDNC_air_the_antwerp_devil
-		x = 2
+		relative_position_id = BELDNC_air_a_neutral_and_its_sky
+		x = -1
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_antwerp_devil }
 		prerequisite = { focus = BELDNC_air_a_neutral_and_its_sky }
+		mutually_exclusive = { focus = BELDNC_air_the_note_to_the_guarantors }
+		icon = GFX_focus_generic_pilot_training
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -15497,11 +14897,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_note_to_the_guarantors
-		icon = GFX_focus_generic_conference
 		relative_position_id = BELDNC_air_a_neutral_and_its_sky
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = BELDNC_air_a_neutral_and_its_sky }
+		mutually_exclusive = { focus = BELDNC_air_the_school_at_brasschaat }
+		icon = GFX_focus_generic_conference
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -15552,11 +14953,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_licence_to_build
-		icon = GFX_goal_generic_air_production
-		relative_position_id = BELDNC_air_the_machines_come_from_france
-		x = 0
+		relative_position_id = BELDNC_air_the_antwerp_devil
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_machines_come_from_france }
+		prerequisite = { focus = BELDNC_air_the_antwerp_devil focus = BELDNC_air_the_machines_come_from_france }
+		icon = GFX_goal_generic_air_production
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -15612,11 +15013,11 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_pilots_brevet
-		icon = GFX_goal_generic_scientific_exchange
-		relative_position_id = BELDNC_air_the_meeting_at_kiewit
-		x = 0
+		relative_position_id = BELDNC_air_the_school_at_brasschaat
+		x = 1
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_meeting_at_kiewit }
+		prerequisite = { focus = BELDNC_air_the_school_at_brasschaat focus = BELDNC_air_the_note_to_the_guarantors }
+		icon = GFX_goal_generic_scientific_exchange
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -15676,13 +15077,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_compagnie_des_aviateurs
-		icon = GFX_goal_CAN_coa_air_force
-		relative_position_id = BELDNC_air_the_school_at_brasschaat
+		relative_position_id = BELDNC_air_the_pilots_brevet
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_school_at_brasschaat }
-		prerequisite = { focus = BELDNC_air_the_note_to_the_guarantors }
-		cost = 6
+		prerequisite = { focus = BELDNC_air_the_pilots_brevet }
+		icon = GFX_goal_CAN_coa_air_force
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15753,13 +15153,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_machine_that_sees
-		icon = GFX_focus_generic_air_research_boost
-		relative_position_id = BELDNC_air_the_licence_to_build
+		relative_position_id = BELDNC_air_the_compagnie_des_aviateurs
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_licence_to_build }
-		prerequisite = { focus = BELDNC_air_the_note_to_the_guarantors }
-		cost = 6
+		prerequisite = { focus = BELDNC_air_the_compagnie_des_aviateurs }
+		icon = GFX_focus_generic_air_research_boost
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15822,13 +15221,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_river_from_above
-		icon = GFX_goal_generic_air_bomber
-		relative_position_id = BELDNC_air_the_compagnie_des_aviateurs
+		relative_position_id = BELDNC_air_the_machine_that_sees
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_compagnie_des_aviateurs }
-		prerequisite = { focus = BELDNC_air_the_pilots_brevet }
-		cost = 6
+		prerequisite = { focus = BELDNC_air_the_machine_that_sees }
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15893,12 +15291,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_the_sheds_behind_the_redoubt
-		icon = GFX_focus_generic_air_bases
-		relative_position_id = BELDNC_air_the_compagnie_des_aviateurs
-		x = 2
+		relative_position_id = BELDNC_air_the_river_from_above
+		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_compagnie_des_aviateurs }
-		cost = 6
+		prerequisite = { focus = BELDNC_air_the_river_from_above }
+		icon = GFX_focus_generic_air_bases
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15964,13 +15362,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_air_an_arm_of_our_own
-		icon = GFX_goal_generic_air_fighter
-		relative_position_id = BELDNC_air_the_machine_that_sees
+		relative_position_id = BELDNC_air_the_sheds_behind_the_redoubt
 		x = 0
 		y = 1
-		prerequisite = { focus = BELDNC_air_the_machine_that_sees }
-		prerequisite = { focus = BELDNC_air_the_compagnie_des_aviateurs }
-		cost = 7
+		prerequisite = { focus = BELDNC_air_the_sheds_behind_the_redoubt }
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -16054,12 +15451,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_question_of_a_fleet
-		icon = GFX_goal_navy_decision
-		relative_position_id = BELDNC_the_belgian_question
-		x = 40
+		relative_position_id = BELDNC_the_guarantee
+		x = 26
 		y = 1
+		prerequisite = { focus = BELDNC_the_guarantee }
+		icon = GFX_goal_navy_decision
 		cost = 4
-		prerequisite = { focus = BELDNC_the_belgian_question }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = {
 			factor = 5
@@ -16134,12 +15531,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_packets_are_the_navy
-		icon = GFX_focus_ron_trade_navy
 		relative_position_id = BELDNC_m_the_question_of_a_fleet
-		x = -4
+		x = 0
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
+		icon = GFX_focus_ron_trade_navy
+		cost = 5
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -20
@@ -16213,12 +15610,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_flotilla_on_the_river
-		icon = GFX_goal_generic_build_navy
-		relative_position_id = BELDNC_m_the_question_of_a_fleet
+		relative_position_id = BELDNC_m_the_naval_brigade
 		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_m_the_naval_brigade }
+		icon = GFX_goal_generic_build_navy
 		cost = 5
-		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -20
@@ -16295,12 +15692,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_school_ship
-		icon = GFX_goal_generic_navy_cruiser
-		relative_position_id = BELDNC_m_the_question_of_a_fleet
-		x = 4
+		relative_position_id = BELDNC_m_liable_at_sea
+		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_m_liable_at_sea }
+		icon = GFX_goal_generic_navy_cruiser
 		cost = 4
-		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
 		ai_will_do = { factor = 9 }
 		completion_reward = {
 			add_political_power = -15
@@ -16372,12 +15769,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_liable_at_sea
-		icon = GFX_focus_generic_manpower
 		relative_position_id = BELDNC_m_the_packets_are_the_navy
 		x = 0
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_m_the_packets_are_the_navy }
+		icon = GFX_focus_generic_manpower
+		cost = 5
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -25
@@ -16449,12 +15846,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_mouth_can_be_closed
-		icon = GFX_goal_generic_occupy_states_coastal
-		relative_position_id = BELDNC_m_the_packets_are_the_navy
-		x = 2
+		relative_position_id = BELDNC_m_the_officers_of_the_kingdom
+		x = 0
 		y = 1
+		prerequisite = { focus = BELDNC_m_the_officers_of_the_kingdom }
+		icon = GFX_goal_generic_occupy_states_coastal
 		cost = 5
-		prerequisite = { focus = BELDNC_m_the_packets_are_the_navy }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -16531,12 +15928,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_gunboats_for_the_river
-		icon = GFX_focus_ron_patrol_boats
 		relative_position_id = BELDNC_m_the_flotilla_on_the_river
-		x = 0
+		x = -1
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_m_the_flotilla_on_the_river }
+		mutually_exclusive = { focus = BELDNC_m_the_lake_and_the_frontier }
+		icon = GFX_focus_ron_patrol_boats
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -30
@@ -16619,12 +16017,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_lake_and_the_frontier
-		icon = GFX_focus_generic_africa_infrastructure
 		relative_position_id = BELDNC_m_the_flotilla_on_the_river
-		x = 2
+		x = 1
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_m_the_flotilla_on_the_river }
+		mutually_exclusive = { focus = BELDNC_m_the_gunboats_for_the_river }
+		icon = GFX_focus_generic_africa_infrastructure
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -25
@@ -16717,12 +16116,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_officers_of_the_kingdom
-		icon = GFX_focus_AUS_promote_admirals
 		relative_position_id = BELDNC_m_the_school_ship
 		x = 0
 		y = 1
-		cost = 5
 		prerequisite = { focus = BELDNC_m_the_school_ship }
+		icon = GFX_focus_AUS_promote_admirals
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -16786,13 +16185,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_estimates_are_read_out
-		icon = GFX_goal_naval_spending_bill
-		relative_position_id = BELDNC_m_liable_at_sea
-		x = 0
+		relative_position_id = BELDNC_m_the_mouth_can_be_closed
+		x = -1
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_m_liable_at_sea }
 		prerequisite = { focus = BELDNC_m_the_mouth_can_be_closed }
+		mutually_exclusive = { focus = BELDNC_m_the_torpedo_boats }
+		icon = GFX_goal_naval_spending_bill
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -16867,12 +16266,13 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_torpedo_boats
-		icon = GFX_goal_generic_multiple_ships
 		relative_position_id = BELDNC_m_the_mouth_can_be_closed
-		x = 0
+		x = 1
 		y = 1
-		cost = 6
 		prerequisite = { focus = BELDNC_m_the_mouth_can_be_closed }
+		mutually_exclusive = { focus = BELDNC_m_the_estimates_are_read_out }
+		icon = GFX_goal_generic_multiple_ships
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -35
@@ -16975,12 +16375,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_naval_brigade
-		icon = GFX_focus_generic_coastal_fort
-		relative_position_id = BELDNC_m_the_officers_of_the_kingdom
+		relative_position_id = BELDNC_m_the_mines_of_the_estuary
 		x = 0
 		y = 1
-		cost = 6
-		prerequisite = { focus = BELDNC_m_the_officers_of_the_kingdom }
+		prerequisite = { focus = BELDNC_m_the_mines_of_the_estuary }
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -17047,13 +16447,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_mines_of_the_estuary
-		icon = GFX_focus_generic_mine_warfare
-		relative_position_id = BELDNC_m_the_torpedo_boats
-		x = 0
+		relative_position_id = BELDNC_m_the_estimates_are_read_out
+		x = 1
 		y = 1
-		cost = 7
-		prerequisite = { focus = BELDNC_m_the_torpedo_boats }
-		prerequisite = { focus = BELDNC_m_the_estimates_are_read_out }
+		prerequisite = { focus = BELDNC_m_the_estimates_are_read_out focus = BELDNC_m_the_torpedo_boats }
+		icon = GFX_focus_generic_mine_warfare
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -17135,14 +16534,12 @@ focus_tree = {
 
 	focus = {
 		id = BELDNC_m_the_squadron_and_its_price
-		icon = GFX_focus_bo_big_navy
-		relative_position_id = BELDNC_m_the_mines_of_the_estuary
-		x = 0
+		relative_position_id = BELDNC_m_the_gunboats_for_the_river
+		x = 1
 		y = 1
-		cost = 8
-		prerequisite = { focus = BELDNC_m_the_mines_of_the_estuary }
-		prerequisite = { focus = BELDNC_m_the_naval_brigade }
-		prerequisite = { focus = BELDNC_m_the_gunboats_for_the_river }
+		prerequisite = { focus = BELDNC_m_the_gunboats_for_the_river focus = BELDNC_m_the_lake_and_the_frontier }
+		icon = GFX_focus_bo_big_navy
+		cost = 5
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -60
