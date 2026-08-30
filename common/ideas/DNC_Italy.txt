@@ -2450,5 +2450,403 @@ ideas = {
 		join_faction_tension = 0.05
 		}
 		}
+
+		ITA_victor_emmanuel_iii_int = {
+			picture = ITA_victor_emmanuel_ww1
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				army_morale_factor = 0.03
+			}
+		}
+
+		ITA_o_the_board_of_promotion = {
+			picture = generic_army_war_college
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.08
+				army_org_factor = 0.04
+				political_power_factor = -0.05
+				stability_factor = -0.03
+			}
+		}
+		ITA_o_the_calendar_of_ranks = {
+			picture = generic_neglected_military
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = -0.05
+				army_org_factor = -0.03
+				political_power_factor = 0.08
+				stability_factor = 0.04
+			}
+		}
+		ITA_o_the_school_of_war = {
+			picture = generic_military_academy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.08
+				planning_speed = 0.10
+				max_planning = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_o_the_staff_answers = {
+			picture = generic_war_preparation
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		ITA_o_the_minister_answers = {
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.06
+				political_power_factor = 0.05
+				army_org_factor = -0.03
+				war_support_factor = -0.03
+			}
+		}
+		ITA_o_the_pay_of_the_officer = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.06
+				experience_gain_army_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		ITA_o_the_list_that_is_printed = {
+			picture = generic_army_war_college
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.10
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				training_time_army_factor = -0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_g_the_batteries_rearmed = {
+			picture = generic_artillery_regiments
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.08
+				army_artillery_defence_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		ITA_g_ansaldo_of_genoa = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				industrial_capacity_factory = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_g_the_works_retooling = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_factory_efficiency_gain_factor = -0.10
+				consumer_goods_factor = 0.03
+			}
+		}
+		ITA_g_the_gun_shop_at_terni = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.08
+				army_artillery_attack_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_g_the_heavy_batteries = {
+			picture = generic_artillery_regiments
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.10
+				army_breakthrough_factor = 0.03
+				army_speed_factor = -0.03
+				consumer_goods_factor = 0.03
+			}
+		}
+		ITA_g_the_shell_that_bursts = {
+			picture = generic_infantry_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.06
+				army_core_attack_factor = 0.04
+				equipment_capture_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_c_the_arma_reinforced = {
+			picture = generic_secret_police
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.06
+				political_power_factor = 0.05
+				conscription_factor = -0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_c_the_recruiting_of_the_arma = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				training_time_army_factor = 0.05
+			}
+		}
+		ITA_c_the_guards_of_public_safety = {
+			picture = generic_oppression
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				resistance_target = -0.10
+				political_power_factor = 0.04
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_c_the_mobile_squadrons = {
+			picture = generic_mountain_defensive_training
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.04
+				experience_gain_army_factor = 0.04
+				army_speed_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_c_the_troops_in_barracks = {
+			picture = generic_pp_unity_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				army_morale_factor = 0.05
+				training_time_army_factor = -0.05
+				war_support_factor = -0.04
+			}
+		}
+		ITA_c_the_oath_not_asked = {
+			picture = generic_local_self_management
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				army_morale_factor = 0.06
+				experience_gain_army_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		ITA_c_the_questore_decides = {
+			picture = generic_secret_police
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.04
+				political_power_factor = 0.06
+				army_morale_factor = 0.03
+			}
+		}
+		ITA_s_the_recruit_who_cannot_read = {
+			picture = generic_agrarian_society
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = 0.05
+				experience_gain_army_factor = -0.03
+				political_power_factor = 0.03
+			}
+		}
+		ITA_s_the_regimental_primer = {
+			picture = generic_literacy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.06
+				experience_gain_army_factor = 0.06
+				army_org_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_s_the_state_pays_the_teacher = {
+			picture = generic_literacy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.04
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		ITA_s_the_normal_schools = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.04
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_s_a_kingdom_that_reads = {
+			picture = generic_literacy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.07
+				experience_gain_army_factor = 0.08
+				training_time_army_factor = -0.08
+				stability_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_s_the_evening_classes = {
+			picture = generic_literacy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.03
+				stability_factor = 0.03
+				research_speed_factor = 0.02
+			}
+		}
+		ITA_m_the_map_of_the_fever = {
+			picture = generic_agrarian_reform
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.04
+				stability_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_m_the_ground_drained = {
+			picture = generic_agrarian_reform
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				conscription_factor = 0.04
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		ITA_m_the_sulphur_consortium = {
+			picture = generic_exploit_mines
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.08
+				industrial_capacity_factory = 0.03
+				trade_opinion_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_m_the_children_out_of_the_mines = {
+			picture = generic_agrarian_reform
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				conscription_factor = 0.03
+				local_resources_factor = -0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_m_the_third_class_deck = {
+			picture = generic_immigration
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				convoy_escort_efficiency = 0.10
+				naval_speed_factor = 0.03
+				trade_opinion_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_air_the_brigade_of_specialists = {
+			picture = generic_air_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air_factor = 0.15
+				air_accidents_factor = -0.10
+				consumer_goods_factor = 0.01
+			}
+		}
+		ITA_air_the_airship_park = {
+			picture = generic_air_interception
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_range_factor = 0.15
+				recon_factor = 0.10
+				air_accidents_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_air_the_field_at_centocelle = {
+			picture = generic_air_fighter
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air_factor = 0.12
+				air_agility_factor = 0.05
+				air_accidents_factor = -0.08
+				consumer_goods_factor = 0.01
+			}
+		}
+		ITA_air_the_battalion_of_aviators = {
+			picture = generic_air_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air_factor = 0.15
+				air_mission_efficiency = 0.05
+				air_accidents_factor = -0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+		ITA_air_the_first_bomb = {
+			picture = generic_air_interception
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_bombing_targetting = 0.10
+				experience_gain_air_factor = 0.10
+				war_support_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
 }
 }

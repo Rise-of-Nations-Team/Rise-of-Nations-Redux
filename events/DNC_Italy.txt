@@ -5946,3 +5946,262 @@ country_event = {
 		ITA_machine_reckon = yes
 	}
 }
+
+country_event = {
+	id = ita_dnc.900
+	title = ita_dnc.900.t
+	desc = ita_dnc.900.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.900.a
+		ai_chance = {
+			base = 45
+			modifier = {
+				add = 35
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+		add_political_power = -40
+		army_experience = 25
+		set_country_flag = ITA_o_the_board_is_published
+		add_to_variable = { var = ITA_majority value = 3 }
+		subtract_from_variable = { var = ITA_prefects value = 5 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.900.b
+		ai_chance = {
+			base = 45
+			modifier = {
+				add = 35
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+		add_political_power = 40
+		add_stability = 0.03
+		set_country_flag = ITA_o_the_board_sits_in_private
+		add_to_variable = { var = ITA_prefects value = 8 }
+		add_to_variable = { var = ITA_majority_bought value = 2 }
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.902
+	title = ita_dnc.902.t
+	desc = ita_dnc.902.d
+	picture = GFX_report_event_british_artillery
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.902.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				has_country_flag = ITA_arm_the_gun_is_ours
+			}
+		}
+		add_political_power = -25
+		set_country_flag = ITA_g_the_batteries_are_counted
+		add_equipment_to_stockpile = {
+			type = light_field_gun_equipment_1906
+			amount = 90
+			producer = ITA
+		}
+		add_tech_bonus = {
+			name = ITA_g_tb_the_uniform_battery
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+		add_to_variable = { var = ITA_majority value = 2 }
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.902.b
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 40
+		set_country_flag = ITA_g_the_old_guns_are_kept
+		army_experience = 25
+		add_equipment_to_stockpile = {
+			type = light_field_gun_equipment_1890
+			amount = 150
+			producer = ITA
+		}
+		add_to_variable = { var = ITA_piazza value = 2 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.910
+	title = ita_dnc.910.t
+	desc = ita_dnc.910.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.910.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+		add_ideas = ITA_c_the_questore_decides
+		add_political_power = 25
+		set_country_flag = ITA_c_the_questore_holds_the_order
+		add_to_variable = { var = ITA_prefects value = 8 }
+		subtract_from_variable = { var = ITA_piazza value = 4 }
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.910.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+		add_political_power = -25
+		add_war_support = 0.03
+		set_country_flag = ITA_c_the_colonel_holds_the_order
+		add_to_variable = { var = ITA_bayonets value = 1 }
+		add_to_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.920
+	title = ita_dnc.920.t
+	desc = ita_dnc.920.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.920.a
+		ai_chance = {
+			base = 55
+			modifier = {
+				add = 30
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+		add_ideas = ITA_s_the_evening_classes
+		add_political_power = -25
+		set_country_flag = ITA_s_the_evening_classes_open
+		add_manpower = 5000
+		add_to_variable = { var = ITA_majority value = 3 }
+		subtract_from_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.920.b
+		ai_chance = {
+			base = 45
+		}
+		add_political_power = 25
+		army_experience = 25
+		set_country_flag = ITA_s_the_illiterate_are_sorted_out
+		add_manpower = -4000
+		add_to_variable = { var = ITA_piazza value = 2 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.931
+	title = ita_dnc.931.t
+	desc = ita_dnc.931.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.931.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+		add_political_power = -40
+		set_country_flag = ITA_m_the_miners_are_heard
+		subtract_from_variable = { var = ITA_piazza value = 6 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		115 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.931.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 30
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+		add_political_power = 25
+		set_country_flag = ITA_m_the_pits_are_cleared
+		ITA_piazza_repress = yes
+		add_to_variable = { var = ITA_prefects value = 6 }
+		ITA_machine_reckon = yes
+	}
+}
+
+news_event = {
+	id = ita_dnc.942
+	title = ita_dnc.942.t
+	desc = ita_dnc.942.d
+	picture = GFX_news_event_generic_read_write
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.942.a
+		trigger = { tag = ITA }
+		add_war_support = 0.02
+	}
+	option = {
+		name = ita_dnc.942.b
+		trigger = {
+			NOT = { tag = ITA }
+			NOT = { tag = OTT }
+		}
+		add_political_power = 10
+	}
+	option = {
+		name = ita_dnc.942.c
+		trigger = { tag = OTT }
+		add_war_support = 0.03
+	}
+}

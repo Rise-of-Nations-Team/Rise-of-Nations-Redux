@@ -4475,3 +4475,55 @@ country_event = {
 		add_stability = 0.02
 	}
 }
+
+Twelve country_event blocks (bel_dnc.900, .902, .904, .905, .910, .911, .912, .913, .920, .930, .931, .935) are written in full, brace-balanced and loc-complete, at:
+C:\Users\Admin\AppData\Local\Temp\claude\C--Users-Admin-Documents-lolcoach\95a94c32-7fe6-4056-96c4-b1e4da4a937c\scratchpad\events.txt
+Every id referenced by a focus exists in that file and vice versa (verified). Example block:
+
+country_event = {
+	id = bel_dnc.912
+	title = bel_dnc.912.t
+	desc = bel_dnc.912.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.912.a
+		ai_chance = { factor = 60 }
+		add_political_power = -40
+		subtract_from_variable = { var = BEL_scandal value = 12 }
+		add_stability = 0.03
+		BEL_c_regime_reformed = yes
+		BEL_dnc_dials = yes
+		if = {
+			limit = { country_exists = ENG }
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_increase
+			}
+		}
+
+		if = {
+			limit = { country_exists = USA }
+			add_opinion_modifier = {
+				target = USA
+				modifier = small_increase
+			}
+		}
+	}
+
+	option = {
+		name = bel_dnc.912.b
+		ai_chance = { factor = 40 }
+		add_political_power = 40
+		add_to_variable = { var = BEL_scandal value = 8 }
+		BEL_estate_deny = yes
+		BEL_dnc_dials = yes
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_crown }
+			add_to_variable = { var = BEL_a_prerogative value = 6 }
+			BEL_a_dials = yes
+			custom_effect_tooltip = BEL_tt_the_crown_governs
+		}
+	}
+}

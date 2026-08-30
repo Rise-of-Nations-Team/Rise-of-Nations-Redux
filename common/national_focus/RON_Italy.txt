@@ -316,7 +316,7 @@ focus_tree = {
 		id = ITADNC_t_the_road_from_adwa
 		icon = GFX_goal_generic_army_doctrines
 		relative_position_id = ITADNC_t_the_coal_that_is_not_ours
-		x = 22
+		x = 32
 		y = 1
 		cost = 10
 		prerequisite = {
@@ -380,7 +380,7 @@ focus_tree = {
 		id = ITADNC_a_the_chamber_and_the_crown
 		icon = GFX_focus_generic_monarchy_1
 		relative_position_id = ITADNC_t_the_road_from_adwa
-		x = -22
+		x = -32
 		y = 1
 		cost = 10
 		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
@@ -794,6 +794,27 @@ focus_tree = {
 			add_war_support = 0.05
 			add_ideas = ITA_a_the_decrees_of_public_safety
 			set_country_flag = ITA_a_the_decrees_stand
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_the_decrees_are_read_abroad
+				add_named_threat = {
+					threat = 1
+					name = ITA_a_the_public_safety_threat
+				}
+				add_war_support = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_vienna_recognises_the_instrument
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = 25
+			}
 			add_to_variable = { var = ITA_bayonets value = 1 }
 			custom_effect_tooltip = ITA_a_a_bayonet_is_spent_tt
 			if = {
@@ -910,6 +931,24 @@ focus_tree = {
 			set_variable = { ITA_pledges = 0 }
 			set_variable = { ITA_pledge_clock = 0 }
 			set_country_flag = ITA_a_the_register_is_reprinted
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_the_new_voters_hear_about_trieste
+				add_war_support = 0.04
+				add_to_variable = { var = ITA_piazza value = 4 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.04
+				}
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_the_alliance_is_not_a_platform
+				add_political_power = -25
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				ITA_chamber_bands = yes
+			}
 			add_ideas = ITA_a_the_register_reprinted
 			ITA_machine_reckon = yes
 			if = {
@@ -1137,6 +1176,27 @@ focus_tree = {
 			add_war_support = 0.05
 			add_ideas = ITA_a_government_by_decree
 			set_country_flag = ITA_a_the_estimates_go_by_decree
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_berlin_prefers_a_government_that_lasts
+				add_political_power = 30
+				add_to_variable = { var = ITA_vienna_trust value = 6 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_a_free_hand_wielded_by_decree
+				add_war_support = 0.05
+				add_named_threat = {
+					threat = 1
+					name = ITA_a_the_decree_threat
+				}
+			}
 			add_to_variable = { var = ITA_bayonets value = 1 }
 			custom_effect_tooltip = ITA_a_a_bayonet_is_spent_tt
 			set_variable = { ITA_pledges = 0 }
@@ -1190,6 +1250,25 @@ focus_tree = {
 			army_experience = 25
 			add_ideas = ITA_a_the_state_of_siege
 			set_country_flag = ITA_a_the_state_of_siege_stands
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_the_ally_counts_the_garrisons_at_home
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_command_power = -25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_a_free_hand_and_a_garrison_in_milan
+				add_political_power = -30
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			promote_character = ITA_luigi_pelloux
 			if = {
 				limit = {
@@ -1258,6 +1337,29 @@ focus_tree = {
 			add_stability = 0.10
 			add_ideas = ITA_a_the_duty_lifted
 			set_country_flag = ITA_a_the_duty_is_lifted
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_hungarian_grain_comes_in_free
+				add_to_variable = { var = ITA_vienna_trust value = 8 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_stability = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_the_grain_is_bought_where_we_like
+				add_political_power = 25
+				if = {
+					limit = { country_exists = RUS }
+					RUS = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
 			add_manpower = 10000
 			subtract_from_variable = { var = ITA_prefects value = 8 }
 			custom_effect_tooltip = ITA_a_the_po_landowners_withdraw_tt
@@ -1310,6 +1412,25 @@ focus_tree = {
 			add_political_power = 40
 			add_ideas = ITA_a_a_socialist_in_the_ministry
 			set_country_flag = ITA_a_a_portfolio_for_the_left
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_the_convention_is_kept_from_the_new_minister
+				add_political_power = -30
+				subtract_from_variable = { var = ITA_vienna_trust value = 8 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_a_free_hand_that_the_left_can_live_with
+				add_stability = 0.04
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_pledges value = 2 }
 			custom_effect_tooltip = ITA_a_pledges_given_tt
 			if = {
@@ -1670,6 +1791,30 @@ focus_tree = {
 			add_political_power = 100
 			add_stability = 0.05
 			set_country_flag = ITA_a_the_chamber_is_settled
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_a_tt_the_settlement_has_no_ally_behind_it
+				add_war_support = 0.05
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.04
+				}
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_a_tt_the_alliance_underwrites_the_settlement
+				add_stability = 0.04
+				add_political_power = 40
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			add_to_variable = { var = ITA_pledges value = 4 }
 			custom_effect_tooltip = ITA_a_pledges_given_tt
 			if = {
@@ -1733,7 +1878,7 @@ focus_tree = {
 		id = ITADNC_e_the_country_beneath_the_state
 		icon = GFX_focus_generic_population_growth
 		relative_position_id = ITADNC_t_the_road_from_adwa
-		x = -6
+		x = -14
 		y = 1
 		cost = 3
 		prerequisite = {
@@ -1748,6 +1893,32 @@ focus_tree = {
 			add_ideas = ITA_dnc_the_two_italies
 			custom_effect_tooltip = ITA_dnc_e_the_real_country_tt
 			set_country_flag = ITA_dnc_e_society_opened
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_prefects_count_their_own_districts
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+				add_political_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_bloc_wants_the_figures_printed
+				add_tech_bonus = {
+					name = ITA_e_tb_the_printed_returns
+					bonus = 0.75
+					uses = 1
+					category = industry
+				}
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_stability = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_ministry_keeps_the_returns
+				add_political_power = 40
+				subtract_from_variable = { var = ITA_majority value = 2 }
+				ITA_chamber_bands = yes
+			}
 			add_to_variable = { var = ITA_majority value = 2 }
 			subtract_from_variable = { var = ITA_piazza value = 2 }
 			ITA_piazza_bands = yes
@@ -1799,7 +1970,7 @@ focus_tree = {
 		id = ITADNC_e_white_coal
 		icon = GFX_focus_generic_hydroelectric_energy
 		relative_position_id = ITADNC_e_the_country_beneath_the_state
-		x = -6
+		x = -8
 		y = 1
 		cost = 4
 		prerequisite = {
@@ -1816,6 +1987,29 @@ focus_tree = {
 			add_ideas = ITA_dnc_white_coal
 			custom_effect_tooltip = ITA_dnc_e_white_coal_tt
 			set_country_flag = ITA_dnc_e_white_coal_chosen
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_concessions_find_friends
+				add_to_variable = { var = ITA_majority_bought value = 4 }
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_concessions_are_granted_by_decree
+				add_political_power = 40
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_communes_are_paid_for_their_water
+				add_political_power = -30
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_stability = 0.03
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_piazza value = 2 }
 			subtract_from_variable = { var = ITA_majority value = 2 }
 			ITA_piazza_bands = yes
@@ -1946,6 +2140,36 @@ focus_tree = {
 			add_political_power = -25
 			add_ideas = ITA_dnc_the_state_orders_from_terni
 			set_country_flag = ITA_e_terni_is_kept_alive
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_e_tt_the_plate_must_be_ours
+				add_political_power = -30
+				2 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = ITA_e_tb_the_terni_plate
+					bonus = 0.5
+					uses = 1
+					category = naval_equipment
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_e_tt_the_ally_will_roll_the_plate
+				add_political_power = 30
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			custom_effect_tooltip = ITA_e_the_plate_is_ours_tt
 			if = {
 				limit = { has_country_flag = ITA_n_branch_open }
@@ -2006,6 +2230,24 @@ focus_tree = {
 			add_political_power = 15
 			add_ideas = ITA_dnc_the_workshops_of_turin
 			set_country_flag = ITA_e_the_fitters_of_turin
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_turin_is_the_blocs_city
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_thirty_thousand_men_and_a_garrison
+				add_to_variable = { var = ITA_piazza value = 5 }
+				add_to_variable = { var = ITA_bayonets value = 1 }
+				add_stability = -0.03
+			}
 			add_manpower = 6000
 			if = {
 				limit = { has_country_flag = ITA_dnc_e_labour_recognised }
@@ -2130,6 +2372,30 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = ITA_e_the_current_is_national
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_e_tt_a_country_that_asks_nobody_for_coal
+				add_political_power = 40
+				add_war_support = 0.03
+				add_tech_bonus = {
+					name = ITA_e_tb_the_current_is_our_own
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_e_tt_silesian_coal_on_a_friendly_tariff
+				add_political_power = 25
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			add_to_variable = { var = ITA_majority value = 5 }
 			ITA_chamber_bands = yes
 			add_stability = 0.04
@@ -2208,6 +2474,32 @@ focus_tree = {
 			add_stability = 0.03
 			add_ideas = ITA_dnc_the_special_laws
 			set_country_flag = ITA_dnc_e_special_laws_passed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_south_is_a_constituency
+				add_to_variable = { var = ITA_majority_bought value = 5 }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_south_is_a_debt
+				add_political_power = -30
+				add_stability = 0.05
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_sonnino_wrote_this_book_himself
+				add_political_power = 50
+				add_manpower = 6000
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
 			add_to_variable = { var = ITA_pledges value = 2 }
 			custom_effect_tooltip = ITA_a_pledges_given_tt
 			if = {
@@ -2267,7 +2559,7 @@ focus_tree = {
 		id = ITADNC_e_quinine_at_the_states_price
 		icon = GFX_focus_generic_land_reclamation
 		relative_position_id = ITADNC_e_special_laws_for_the_south
-		x = 0
+		x = -2
 		y = 1
 		cost = 3
 		prerequisite = {
@@ -2281,6 +2573,20 @@ focus_tree = {
 			add_manpower = 15000
 			add_ideas = ITA_dnc_the_quinine_of_the_state
 			set_country_flag = ITA_e_the_fever_is_fought
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_leagues_hand_out_the_tablets
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_to_variable = { var = ITA_majority value = 3 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_tablets_are_handed_out_by_the_prefect
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_to_variable = { var = ITA_majority_bought value = 3 }
+				ITA_machine_reckon = yes
+			}
 			add_to_variable = { var = ITA_majority value = 3 }
 			ITA_chamber_bands = yes
 			add_stability = 0.04
@@ -2318,7 +2624,7 @@ focus_tree = {
 		id = ITADNC_e_water_before_anything_else
 		icon = GFX_focus_generic_agriculture
 		relative_position_id = ITADNC_e_special_laws_for_the_south
-		x = 2
+		x = 0
 		y = 1
 		cost = 4
 		prerequisite = {
@@ -2413,6 +2719,33 @@ focus_tree = {
 				}
 			}
 			set_country_flag = ITA_dnc_e_the_south_answered
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_south_is_answered_and_billed
+				add_to_variable = { var = ITA_majority_bought value = 5 }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_south_is_answered_and_enfranchised
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_south_is_answered_from_rome
+				add_political_power = 50
+				add_stability = 0.03
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
 			add_manpower = 15000
 			subtract_from_variable = { var = ITA_pledges value = 2 }
 			clamp_variable = {
@@ -2457,7 +2790,7 @@ focus_tree = {
 		id = ITADNC_e_six_hundred_thousand_a_year
 		icon = GFX_focus_generic_immigration
 		relative_position_id = ITADNC_e_the_country_beneath_the_state
-		x = 2
+		x = 4
 		y = 1
 		cost = 3
 		prerequisite = {
@@ -2470,6 +2803,24 @@ focus_tree = {
 			add_political_power = 25
 			add_ideas = ITA_dnc_six_hundred_thousand_a_year
 			set_country_flag = ITA_e_the_question_of_the_ships
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_bloc_calls_it_a_verdict
+				add_to_variable = { var = ITA_piazza value = 4 }
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_safety_valve
+				add_stability = 0.04
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			subtract_from_variable = { var = ITA_majority value = 3 }
 			ITA_chamber_bands = yes
 			if = {
@@ -2510,7 +2861,7 @@ focus_tree = {
 		id = ITADNC_e_the_commissariat_of_emigration
 		icon = GFX_focus_ARG_immigration_wave
 		relative_position_id = ITADNC_e_six_hundred_thousand_a_year
-		x = 0
+		x = -2
 		y = 1
 		cost = 4
 		prerequisite = {
@@ -2533,6 +2884,20 @@ focus_tree = {
 				add_idea = ITA_dnc_the_commissariat_of_emigration
 			}
 			set_country_flag = ITA_dnc_e_emigration_governed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_consulates_are_places_to_give
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_to_variable = { var = ITA_majority_bought value = 3 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_leagues_man_the_offices
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_manpower = 5000
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_majority value = 3 }
 			ITA_chamber_bands = yes
 			add_stability = 0.03
@@ -2571,7 +2936,7 @@ focus_tree = {
 		id = ITADNC_e_the_land_before_the_ship
 		icon = GFX_focus_generic_agricultural_subsidies
 		relative_position_id = ITADNC_e_six_hundred_thousand_a_year
-		x = 2
+		x = 0
 		y = 1
 		cost = 4
 		prerequisite = {
@@ -2595,6 +2960,22 @@ focus_tree = {
 				add_idea = ITA_dnc_the_land_before_the_ship
 			}
 			set_country_flag = ITA_dnc_e_emigration_refused
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_leagues_asked_for_this
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_stability = 0.03
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_valve_is_shut_by_hand
+				add_to_variable = { var = ITA_piazza value = 5 }
+				subtract_from_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_pledges value = 2 }
 			custom_effect_tooltip = ITA_a_pledges_given_tt
 			subtract_from_variable = { var = ITA_prefects value = 8 }
@@ -2649,6 +3030,29 @@ focus_tree = {
 			add_political_power = 25
 			add_ideas = ITA_dnc_the_italians_beyond_the_sea
 			set_country_flag = ITA_e_our_blood_abroad
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_e_tt_the_italians_of_trieste_are_counted_too
+				add_war_support = 0.05
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_named_threat = {
+					threat = 1
+					name = ITA_e_the_blood_abroad_threat
+				}
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_e_tt_the_lists_stop_at_the_border
+				add_political_power = 25
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			add_ideas = ITA_e_our_blood_beyond_the_sea
 			add_manpower = 12000
 			subtract_from_variable = { var = ITA_piazza value = 4 }
@@ -2749,7 +3153,7 @@ focus_tree = {
 		id = ITADNC_e_the_state_is_neutral_in_the_strike
 		icon = GFX_focus_generic_strike_at_democracy1
 		relative_position_id = ITADNC_e_the_country_beneath_the_state
-		x = 8
+		x = 10
 		y = 1
 		cost = 4
 		prerequisite = {
@@ -2827,6 +3231,28 @@ focus_tree = {
 			add_stability = 0.05
 			add_ideas = ITA_dnc_the_chambers_of_labour
 			set_country_flag = ITA_dnc_e_labour_recognised
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_recognising_our_own_benches
+				add_to_variable = { var = ITA_majority value = 5 }
+				add_stability = 0.04
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_right_recognises_what_it_would_dissolve
+				add_political_power = -50
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_stability = -0.03
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
 			subtract_from_variable = { var = ITA_prefects value = 10 }
 			custom_effect_tooltip = ITA_e_the_prefect_loses_a_lever_tt
 			ITA_machine_reckon = yes
@@ -2888,6 +3314,25 @@ focus_tree = {
 			add_war_support = 0.03
 			add_ideas = ITA_dnc_the_prefect_settles_it
 			set_country_flag = ITA_dnc_e_prefects_instructed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_decrees_and_the_prefect_agree
+				add_political_power = 40
+				add_war_support = 0.03
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_bloc_cannot_answer_for_this
+				ITA_c_lose_a_paid_spirit = yes
+				add_to_variable = { var = ITA_piazza value = 6 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.04
+				}
+				ITA_piazza_bands = yes
+			}
 			add_ideas = ITA_e_the_hall_that_is_unavailable
 			add_to_variable = { var = ITA_bayonets value = 1 }
 			custom_effect_tooltip = ITA_a_a_bayonet_is_spent_tt
@@ -2941,6 +3386,32 @@ focus_tree = {
 			add_stability = 0.03
 			add_ideas = ITA_dnc_the_schools_of_the_kingdom
 			set_country_flag = ITA_e_the_schools_are_the_states
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_bloc_wrote_this_bill
+				add_tech_bonus = {
+					name = ITA_e_tb_the_school_bill
+					bonus = 0.75
+					uses = 1
+					category = electronics
+				}
+				add_to_variable = { var = ITA_majority value = 4 }
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_teacher_is_a_prefects_appointment
+				add_to_variable = { var = ITA_prefects value = 10 }
+				ITA_machine_reckon = yes
+				add_political_power = 30
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_communes_are_told_what_to_teach
+				add_political_power = 40
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_majority value = 3 }
 			subtract_from_variable = { var = ITA_prefects value = 6 }
 			custom_effect_tooltip = ITA_e_the_teacher_is_appointed_from_rome_tt
@@ -3000,6 +3471,34 @@ focus_tree = {
 			add_political_power = 50
 			add_ideas = ITA_dnc_the_pew_and_the_ballot
 			set_country_flag = ITA_e_the_parish_pact
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_the_pact_is_the_ministrys_own_work
+				add_to_variable = { var = ITA_majority_bought value = 5 }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_the_bloc_cannot_sit_with_the_sacristy
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_stability = -0.03
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_the_right_and_the_curate_agree
+				add_political_power = 40
+				add_stability = 0.04
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
 			if = {
 				limit = { has_country_flag = ITA_a_the_ban_lifted }
 				custom_effect_tooltip = ITA_e_rome_already_conceded_it_tt
@@ -3075,6 +3574,31 @@ focus_tree = {
 				category = industry
 			}
 			set_country_flag = ITA_dnc_e_the_kingdom_made_whole
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_e_tt_one_kingdom_administered
+				add_to_variable = { var = ITA_prefects value = 10 }
+				ITA_machine_reckon = yes
+				add_political_power = 50
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_e_tt_one_kingdom_enfranchised
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 5 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_e_tt_one_kingdom_governed
+				add_war_support = 0.05
+				add_political_power = 60
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
 			add_research_slot = 1
 			add_manpower = 20000
 			subtract_from_variable = { var = ITA_pledges value = 3 }
@@ -3117,7 +3641,7 @@ focus_tree = {
 		id = ITADNC_arm_the_army_after_adwa
 		icon = GFX_focus_ITA_capo_supremo
 		relative_position_id = ITADNC_t_the_road_from_adwa
-		x = 10
+		x = 12
 		y = 1
 		cost = 5
 		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
@@ -3180,7 +3704,7 @@ focus_tree = {
 		id = ITADNC_arm_the_promotion_lists
 		icon = GFX_goal_generic_army_doctrines
 		relative_position_id = ITADNC_arm_the_army_after_adwa
-		x = -4
+		x = -8
 		y = 1
 		cost = 5
 		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
@@ -3190,6 +3714,31 @@ focus_tree = {
 			add_command_power = 25
 			add_political_power = 25
 			set_country_flag = ITA_arm_the_list_is_opened
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_left_reads_the_list
+				add_political_power = -25
+				army_experience = 25
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_list_is_the_crowns
+				add_command_power = 25
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_ministry_does_not_read_it
+				add_political_power = 25
+				subtract_from_variable = { var = ITA_piazza value = 2 }
+				ITA_piazza_bands = yes
+			}
 			subtract_from_variable = { var = ITA_majority value = 2 }
 			add_to_variable = { var = ITA_piazza value = 1 }
 			ITA_piazza_bands = yes
@@ -3230,7 +3779,7 @@ focus_tree = {
 		id = ITADNC_arm_the_annual_class
 		icon = GFX_goal_generic_allies_build_infantry
 		relative_position_id = ITADNC_arm_the_army_after_adwa
-		x = 0
+		x = 2
 		y = 1
 		cost = 5
 		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
@@ -3244,6 +3793,33 @@ focus_tree = {
 			add_to_variable = { var = ITA_pledges value = 1 }
 			ITA_chamber_bands = yes
 			set_country_flag = ITA_arm_the_class_is_counted
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_the_class_answers_the_denunciation
+				add_manpower = 10000
+				add_war_support = 0.04
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_convention_fixes_the_class
+				add_command_power = 25
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_shortens_the_class
+				add_manpower = -5000
+				add_stability = 0.04
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
 			if = {
 				limit = { has_country_flag = ITA_dnc_e_emigration_governed }
 				add_manpower = 8000
@@ -3276,7 +3852,7 @@ focus_tree = {
 		id = ITADNC_arm_the_field_gun_question
 		icon = GFX_goal_generic_army_artillery
 		relative_position_id = ITADNC_arm_the_army_after_adwa
-		x = 2
+		x = 4
 		y = 1
 		cost = 6
 		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
@@ -3284,6 +3860,46 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			add_ideas = ITA_arm_the_quick_firing_batteries
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_essen_offer
+				add_tech_bonus = {
+					name = ITA_arm_tb_the_essen_offer
+					bonus = 0.75
+					uses = 1
+					category = artillery
+				}
+				add_equipment_to_stockpile = {
+					type = light_field_gun_equipment_1890
+					amount = 80
+					producer = GER
+				}
+				add_to_variable = { var = ITA_vienna_trust value = 4 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_no_gun_from_essen
+				add_political_power = -25
+				2 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = ITA_arm_tb_the_ansaldo_answer
+					bonus = 0.5
+					uses = 1
+					category = artillery
+				}
+			}
 			add_tech_bonus = {
 				name = ITA_arm_tb_the_recoil_carriage
 				bonus = 1.0
@@ -3306,7 +3922,7 @@ focus_tree = {
 		id = ITADNC_arm_the_alpine_frontier
 		icon = GFX_goal_generic_fortify_city
 		relative_position_id = ITADNC_arm_the_army_after_adwa
-		x = 4
+		x = 8
 		y = 1
 		cost = 6
 		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
@@ -3330,6 +3946,27 @@ focus_tree = {
 				}
 			}
 			set_country_flag = ITA_arm_the_frontier_surveyed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_surveying_an_ally
+				add_political_power = -40
+				add_stability = -0.03
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_the_survey_is_expected
+				army_experience = 25
+				add_war_support = 0.03
+				add_to_variable = { var = ITA_majority value = 3 }
+				ITA_chamber_bands = yes
+			}
 			subtract_from_variable = { var = ITA_vienna_trust value = 5 }
 			clamp_variable = {
 				var = ITA_vienna_trust
@@ -3363,7 +4000,7 @@ focus_tree = {
 		id = ITADNC_arm_never_again_milan
 		icon = GFX_goal_generic_national_unity
 		relative_position_id = ITADNC_arm_the_promotion_lists
-		x = 0
+		x = -2
 		y = 1
 		cost = 6
 		prerequisite = { focus = ITADNC_arm_the_promotion_lists }
@@ -3373,6 +4010,24 @@ focus_tree = {
 			add_political_power = 25
 			add_command_power = 25
 			set_country_flag = ITA_arm_the_question_of_the_barracks
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_writes_it_down
+				add_stability = 0.04
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_ministry_says_nothing_in_writing
+				add_political_power = 30
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+			}
 			if = {
 				limit = {
 					OR = {
@@ -3424,6 +4079,27 @@ focus_tree = {
 			add_political_power = 25
 			add_ideas = ITA_arm_the_school_of_the_regiment
 			set_country_flag = ITA_arm_the_regiment_teaches
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_primer_before_the_rifle
+				add_tech_bonus = {
+					name = ITA_arm_tb_the_regimental_primer
+					bonus = 0.75
+					uses = 1
+					category = infantry_weapons
+				}
+				add_stability = 0.03
+				subtract_from_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_rifle_before_the_primer
+				add_war_support = 0.03
+				army_experience = 25
+				add_to_variable = { var = ITA_piazza value = 2 }
+				ITA_piazza_bands = yes
+			}
 			if = {
 				limit = { has_country_flag = ITA_arm_three_years }
 				army_experience = 25
@@ -3483,6 +4159,32 @@ focus_tree = {
 				category = infantry_weapons
 			}
 			set_country_flag = ITA_arm_the_arsenals_kept
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_orders_are_placed_where_they_vote
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_majority_bought value = 4 }
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_arsenals_are_the_states
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_manpower = 4000
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_estimates_are_not_laid_before_anyone
+				add_political_power = 40
+				add_equipment_to_stockpile = {
+					type = early_infantry_equipment_1900
+					amount = 700
+					producer = ITA
+				}
+			}
 		}
 	}
 
@@ -3500,6 +4202,22 @@ focus_tree = {
 			add_command_power = 25
 			set_technology = { mountaineers = 1 }
 			add_ideas = ITA_arm_the_alpini_corps
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_the_alpini_are_told_who_they_face
+				add_war_support = 0.04
+				army_experience = 25
+				add_named_threat = {
+					threat = 1
+					name = ITA_arm_the_alpini_threat
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_alpini_are_a_frontier_guard
+				add_political_power = 25
+				add_stability = 0.02
+			}
 			add_tech_bonus = {
 				name = ITA_arm_tb_the_mountain_establishment
 				bonus = 1.0
@@ -3517,7 +4235,7 @@ focus_tree = {
 		id = ITADNC_arm_the_army_estimates
 		icon = GFX_goal_generic_position_armies
 		relative_position_id = ITADNC_arm_never_again_milan
-		x = 2
+		x = -2
 		y = 1
 		cost = 8
 		prerequisite = {
@@ -3540,6 +4258,30 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ITA_arm_the_three_answers_tt
 			set_country_flag = ITA_arm_estimates_before_the_chamber
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_estimates_pass_by_decree
+				add_political_power = 40
+				add_to_variable = { var = ITA_majority value = 6 }
+				add_war_support = 0.03
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_estimates_are_bought
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_majority_bought value = 6 }
+				add_to_variable = { var = ITA_pledges value = 2 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_cuts_the_estimates
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_stability = 0.03
+				army_experience = -25
+			}
 			add_to_variable = { var = ITA_piazza value = 3 }
 			subtract_from_variable = { var = ITA_majority value = 5 }
 			ITA_piazza_bands = yes
@@ -3575,6 +4317,26 @@ focus_tree = {
 				modifier = RI_hostile_foreign_policy
 			}
 			set_country_flag = ITA_arm_the_alps_chosen
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_the_denunciation_has_an_army
+				army_experience = 25
+				add_war_support = 0.05
+				add_command_power = 25
+				add_doctrine_cost_reduction = {
+					name = ITA_arm_tb_the_northeastern_plan
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_will_not_pay_for_the_alps
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
 			subtract_from_variable = { var = ITA_vienna_trust value = 10 }
 			clamp_variable = {
 				var = ITA_vienna_trust
@@ -3641,6 +4403,35 @@ focus_tree = {
 				}
 			}
 			set_country_flag = ITA_arm_the_concrete_is_poured
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_ally_asks_about_the_concrete
+				add_political_power = -50
+				add_stability = -0.03
+				subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_nobody_needs_a_reason_now
+				add_war_support = 0.03
+				160 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
 			subtract_from_variable = { var = ITA_majority value = 4 }
 			add_to_variable = { var = ITA_piazza value = 2 }
 			ITA_piazza_bands = yes
@@ -3690,6 +4481,18 @@ focus_tree = {
 			army_experience = 25
 			add_ideas = ITA_arm_the_mountain_batteries
 			set_country_flag = ITA_arm_the_mule_gun_proved
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_the_batteries_have_a_map_to_match
+				army_experience = 25
+				add_war_support = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_mountain_guns_for_a_frontier_at_peace
+				add_political_power = 25
+				add_stability = 0.02
+			}
 			if = {
 				limit = { has_country_flag = ITA_arm_the_gun_is_ours }
 				add_equipment_to_stockpile = {
@@ -3762,6 +4565,36 @@ focus_tree = {
 				category = land_doctrine
 			}
 			set_country_flag = ITA_arm_the_plan_is_filed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_plan_is_filed_against_a_friend
+				add_political_power = -60
+				add_stability = -0.05
+				subtract_from_variable = { var = ITA_vienna_trust value = 15 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				if = {
+					limit = { country_exists = AUH }
+					AUH = {
+						add_opinion_modifier = { target = ITA modifier = medium_decrease }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_the_plan_is_the_policy
+				army_experience = 50
+				add_war_support = 0.05
+				add_command_power = 25
+				add_named_threat = {
+					threat = 2
+					name = ITA_arm_the_isonzo_threat
+				}
+			}
 		}
 	}
 
@@ -3789,6 +4622,33 @@ focus_tree = {
 				category = infantry_weapons
 			}
 			set_country_flag = ITA_arm_africa_chosen
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_calls_it_an_adventure
+				add_political_power = -50
+				add_to_variable = { var = ITA_piazza value = 5 }
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_south_is_told_it_gains
+				add_to_variable = { var = ITA_pledges value = 2 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_right_has_wanted_this_since_adwa
+				add_war_support = 0.05
+				army_experience = 25
+				add_political_power = 25
+			}
 			add_to_variable = { var = ITA_vienna_trust value = 6 }
 			clamp_variable = {
 				var = ITA_vienna_trust
@@ -3843,6 +4703,20 @@ focus_tree = {
 			army_experience = 25
 			add_ideas = ITA_arm_the_ascari_regiments
 			set_country_flag = ITA_arm_ascari_regiments_raised
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_no_italian_mothers_to_answer
+				add_stability = 0.03
+				add_to_variable = { var = ITA_majority value = 3 }
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_asks_what_they_are_paid
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
 			if = {
 				limit = { has_country_flag = ITA_w_ascari_raised }
 				add_manpower = -7500
@@ -3908,6 +4782,38 @@ focus_tree = {
 			add_war_support = 0.05
 			set_country_flag = ITA_w_libya_war_declared
 			set_country_flag = ITA_arm_the_landing_is_ordered
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_vienna_is_told_before_the_porte
+				subtract_from_variable = { var = ITA_vienna_trust value = 8 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = -30
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_there_is_nobody_to_tell
+				add_war_support = 0.05
+				add_named_threat = {
+					threat = 2
+					name = ITA_arm_the_free_hand_landing_threat
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_breaks_over_libya
+				ITA_c_lose_a_paid_spirit = yes
+				add_to_variable = { var = ITA_piazza value = 6 }
+				subtract_from_variable = { var = ITA_majority value = 6 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.04
+				}
+			}
 			if = {
 				limit = {
 					OTT = { exists = yes }
@@ -3981,6 +4887,39 @@ focus_tree = {
 			add_ideas = ITA_arm_a_smaller_army
 			set_country_flag = ITA_arm_the_fleet_gets_it
 			set_country_flag = ITA_end_the_army_gave_way
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_bloc_gets_what_it_asked_for
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 5 }
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_right_will_not_forgive_the_cut
+				add_political_power = -50
+				add_war_support = -0.05
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_convention_promised_three_corps
+				subtract_from_variable = { var = ITA_vienna_trust value = 12 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			navy_experience = 50
 			989 = {
 				add_extra_state_shared_building_slots = 1
@@ -4037,6 +4976,20 @@ focus_tree = {
 			add_command_power = 25
 			add_ideas = ITA_arm_the_cadre_establishment
 			set_country_flag = ITA_arm_the_reserve_is_indexed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_prefects_keep_the_index
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+				add_political_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_communes_keep_the_index
+				add_stability = 0.03
+				subtract_from_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_majority value = 4 }
 			subtract_from_variable = { var = ITA_piazza value = 4 }
 			ITA_piazza_bands = yes
@@ -4086,6 +5039,24 @@ focus_tree = {
 			add_stability = 0.03
 			navy_experience = 50
 			set_country_flag = ITA_arm_the_estimates_crossed_the_corridor
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_arm_tt_the_convention_expects_corps_not_hulls
+				subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = -30
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_arm_tt_a_free_hand_needs_a_fleet_first
+				navy_experience = 25
+				add_war_support = 0.03
+			}
 			if = {
 				limit = {
 					NOT = { has_country_flag = ITA_arm_the_fleet_gets_it }
@@ -4174,6 +5145,32 @@ focus_tree = {
 			}
 			set_country_flag = ITA_arm_the_verdict_answered
 			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_arm_tt_the_army_answers_to_the_crown
+				add_war_support = 0.05
+				add_command_power = 25
+				add_to_variable = { var = ITA_bayonets value = 1 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.04
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_arm_tt_the_army_answers_to_the_chamber
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_manpower = 8000
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_arm_tt_the_army_answers_to_the_ministry
+				add_political_power = 50
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+			}
+			if = {
 				limit = { has_country_flag = ITA_arm_promotion_by_merit }
 				if = {
 					limit = { has_character = ITA_luigi_nava }
@@ -4237,7 +5234,7 @@ focus_tree = {
 		id = ITADNC_n_the_naval_estimates
 		icon = GFX_goal_naval_spending_bill
 		relative_position_id = ITADNC_t_the_road_from_adwa
-		x = 20
+		x = 30
 		y = 1
 		cost = 5
 		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
@@ -4269,6 +5266,29 @@ focus_tree = {
 				}
 			}
 			set_country_flag = ITA_n_branch_open
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_n_tt_the_estimates_are_bought
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_majority_bought value = 5 }
+				add_to_variable = { var = ITA_pledges value = 2 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_n_tt_the_estimates_are_signed
+				add_political_power = 40
+				add_war_support = 0.03
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_estimates_are_contested
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_stability = 0.03
+			}
 			add_to_variable = { var = ITA_piazza value = 2 }
 			subtract_from_variable = { var = ITA_majority value = 4 }
 			ITA_piazza_bands = yes
@@ -4302,6 +5322,29 @@ focus_tree = {
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			set_country_flag = ITA_n_cuniberti_school
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_drawings_are_shown_to_pola
+				add_to_variable = { var = ITA_vienna_trust value = 6 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_office_keeps_its_own_counsel
+				navy_experience = 25
+				add_tech_bonus = {
+					name = ITA_n_tb_the_closed_drawing_office
+					bonus = 0.5
+					uses = 1
+					category = bb_tech
+				}
+			}
 			add_ideas = ITA_n_the_drawing_office
 			add_tech_bonus = {
 				name = ITA_tb_the_design_office
@@ -4352,6 +5395,21 @@ focus_tree = {
 			}
 			navy_experience = 15
 			set_country_flag = ITA_n_the_ways_are_lengthened
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_n_tt_the_ways_are_laid_where_they_vote
+				add_to_variable = { var = ITA_prefects value = 8 }
+				add_to_variable = { var = ITA_majority_bought value = 4 }
+				ITA_machine_reckon = yes
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_yards_are_the_blocs_own_men
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+				add_manpower = 4000
+				ITA_piazza_bands = yes
+			}
 			if = {
 				limit = { has_country_flag = ITA_arm_the_fleet_gets_it }
 				117 = {
@@ -4419,6 +5477,31 @@ focus_tree = {
 				}
 			}
 			set_country_flag = ITA_n_whitehead_licence
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_fiume_sells_to_an_ally
+				add_tech_bonus = {
+					name = ITA_n_tb_the_fiume_licence
+					bonus = 0.75
+					uses = 1
+					category = cat_torpedoes
+				}
+				add_political_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_fiume_will_not_sell
+				add_political_power = -40
+				navy_experience = -10
+				117 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			subtract_from_variable = { var = ITA_vienna_trust value = 3 }
 			clamp_variable = {
 				var = ITA_vienna_trust
@@ -4451,6 +5534,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_country_flag = ITA_n_all_big_gun
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_n_tt_the_ship_needs_no_vote
+				add_political_power = 40
+				add_war_support = 0.03
+				navy_experience = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_bloc_will_not_vote_a_battleship
+				add_political_power = -50
+				subtract_from_variable = { var = ITA_majority value = 6 }
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_n_tt_the_ship_is_paid_for_in_seats
+				add_to_variable = { var = ITA_pledges value = 3 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+				add_to_variable = { var = ITA_majority_bought value = 5 }
+				ITA_chamber_bands = yes
+			}
 			if = {
 				limit = { has_country_flag = ITA_arm_the_fleet_gets_it }
 				add_political_power = 50
@@ -4520,6 +5627,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_country_flag = ITA_n_the_refusal
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_refusal_is_the_blocs_victory
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_n_tt_the_refusal_is_read_as_weakness
+				add_war_support = -0.05
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
 			add_ideas = ITA_n_the_refusal_of_1903
 			subtract_from_variable = { var = ITA_piazza value = 3 }
 			add_to_variable = { var = ITA_majority value = 5 }
@@ -4580,6 +5705,44 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			set_country_flag = ITA_n_taranto_base
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_ally_asks_why_taranto
+				add_political_power = -30
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_base_faces_where_it_should
+				navy_experience = 25
+				add_war_support = 0.03
+				992 = {
+					add_building_construction = {
+						type = naval_base
+						province = 11837
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_n_tt_the_south_gets_a_yard_at_last
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_pledges value = 1 }
+				clamp_variable = {
+					var = ITA_pledges
+					min = 0
+					max = 12
+				}
+				ITA_chamber_bands = yes
+			}
 			subtract_from_variable = { var = ITA_piazza value = 4 }
 			add_to_variable = { var = ITA_majority value = 3 }
 			ITA_piazza_bands = yes
@@ -4615,6 +5778,19 @@ focus_tree = {
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			set_country_flag = ITA_n_glauco_boats
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_cheap_boat_passes
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_political_power = 25
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_n_tt_the_right_wants_hulls_not_boats
+				add_political_power = -25
+				navy_experience = 15
+			}
 			custom_effect_tooltip = ITA_n_tt_pullino_hired
 			add_tech_bonus = {
 				name = ITA_tb_the_venice_boats
@@ -4688,6 +5864,24 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			set_country_flag = ITA_n_cuniberti_gone
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_ally_reads_the_petersburg_papers
+				subtract_from_variable = { var = ITA_vienna_trust value = 6 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = -25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_petersburg_is_a_useful_friend
+				add_political_power = 25
+				navy_experience = 15
+			}
 			custom_effect_tooltip = ITA_n_tt_cuniberti_gone
 			add_political_power = 100
 			add_tech_bonus = {
@@ -4745,6 +5939,27 @@ focus_tree = {
 			}
 			add_political_power = 25
 			set_country_flag = ITA_n_livorno_study
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_study_names_no_enemy
+				add_tech_bonus = {
+					name = ITA_n_tb_the_open_sea_problem
+					bonus = 0.5
+					uses = 1
+					category = naval_doctrine
+				}
+				add_political_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_study_names_pola
+				navy_experience = 25
+				add_war_support = 0.03
+				add_named_threat = {
+					threat = 1
+					name = ITA_n_the_livorno_threat
+				}
+			}
 			subtract_from_variable = { var = ITA_majority value = 3 }
 			ITA_chamber_bands = yes
 			if = {
@@ -4799,6 +6014,27 @@ focus_tree = {
 				category = cat_fortification
 			}
 			set_country_flag = ITA_n_adriatic_read
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_a_closed_sea_with_a_friend_in_it
+				add_political_power = -40
+				add_stability = -0.03
+				subtract_from_variable = { var = ITA_vienna_trust value = 6 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_sea_has_one_other_owner
+				add_war_support = 0.05
+				navy_experience = 25
+				add_to_variable = { var = ITA_majority value = 3 }
+				ITA_chamber_bands = yes
+			}
 			navy_experience = 25
 			add_war_support = 0.03
 			subtract_from_variable = { var = ITA_vienna_trust value = 5 }
@@ -4877,6 +6113,35 @@ focus_tree = {
 				set_state_flag = ITA_n_the_venice_boats
 			}
 			set_country_flag = ITA_n_the_export_boats
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_boats_go_to_paris_and_petersburg
+				add_political_power = 25
+				if = {
+					limit = { country_exists = FRA }
+					FRA = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+				if = {
+					limit = { country_exists = RUS }
+					RUS = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_ally_reads_the_order_book
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = -25
+			}
 			add_political_power = 25
 			custom_effect_tooltip = ITA_n_tt_the_boats_go_abroad
 			custom_effect_tooltip = ITA_n_tt_laurenti_hired
@@ -4902,6 +6167,32 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			set_country_flag = ITA_n_dante_launched
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_bloc_divides_over_the_dante
+				add_political_power = -60
+				subtract_from_variable = { var = ITA_majority value = 6 }
+				add_to_variable = { var = ITA_piazza value = 5 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_n_tt_the_hull_is_ordered_by_decree
+				add_political_power = 30
+				add_war_support = 0.05
+				navy_experience = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_n_tt_the_hull_costs_three_pledges
+				add_to_variable = { var = ITA_pledges value = 3 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+				add_to_variable = { var = ITA_majority_bought value = 6 }
+				ITA_chamber_bands = yes
+			}
 			custom_effect_tooltip = ITA_n_tt_masdea_hired
 			set_technology = { ww1_battleship2 = 1 }
 			if = {
@@ -5149,6 +6440,29 @@ focus_tree = {
 			custom_effect_tooltip = ITA_n_tt_vienna_down_10
 			set_country_flag = ITA_n_adriatic_race
 			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_two_allies_building_against_each_other
+				add_political_power = -60
+				add_stability = -0.05
+				subtract_from_variable = { var = ITA_vienna_trust value = 15 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_race_has_a_name_now
+				add_war_support = 0.05
+				navy_experience = 25
+				add_named_threat = {
+					threat = 2
+					name = ITA_n_the_free_hand_race_threat
+				}
+			}
+			if = {
 				limit = {
 					check_variable = {
 						var = ITA_vienna_trust
@@ -5292,6 +6606,22 @@ focus_tree = {
 				name = ITA_n_the_cavour_threat
 			}
 			set_country_flag = ITA_n_cavour_class
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_n_tt_three_hulls_three_constituencies
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_majority_bought value = 5 }
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_bloc_asks_for_the_schools_instead
+				add_political_power = -50
+				subtract_from_variable = { var = ITA_majority value = 6 }
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_piazza value = 3 }
 			subtract_from_variable = { var = ITA_majority value = 4 }
 			ITA_piazza_bands = yes
@@ -5334,6 +6664,29 @@ focus_tree = {
 			}
 			add_political_power = 50
 			set_country_flag = ITA_n_export_yard
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_the_yard_sells_where_it_likes
+				add_political_power = 40
+				add_tech_bonus = {
+					name = ITA_n_tb_the_free_order_book
+					bonus = 0.5
+					uses = 1
+					category = ca_tech
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_order_book_is_shown_to_berlin
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = 20
+			}
 			subtract_from_variable = { var = ITA_piazza value = 3 }
 			ITA_piazza_bands = yes
 			hidden_effect = {
@@ -5384,6 +6737,36 @@ focus_tree = {
 			navy_experience = 75
 			add_war_support = 0.05
 			set_country_flag = ITA_n_school_high_seas
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_n_tt_a_fleet_for_a_country_with_no_ally
+				add_war_support = 0.05
+				navy_experience = 25
+				add_named_threat = {
+					threat = 2
+					name = ITA_n_the_high_seas_threat
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_ally_asks_what_it_is_for
+				add_political_power = -50
+				subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_bloc_pays_for_it_in_the_country
+				add_stability = -0.05
+				add_to_variable = { var = ITA_piazza value = 5 }
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				ITA_piazza_bands = yes
+			}
 			set_country_flag = ITA_end_the_fleet_can_leave_the_adriatic
 			if = {
 				limit = { has_country_flag = ITA_arm_the_fleet_gets_it }
@@ -5467,6 +6850,34 @@ focus_tree = {
 			navy_experience = 50
 			add_stability = 0.03
 			set_country_flag = ITA_n_school_narrow_sea
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_n_tt_the_cheap_school_suits_the_bloc
+				add_stability = 0.04
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_political_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_n_tt_a_great_power_does_not_hide_in_a_gulf
+				add_war_support = -0.05
+				add_political_power = -30
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_n_tt_the_ally_is_reassured_by_a_coast_fleet
+				add_to_variable = { var = ITA_vienna_trust value = 10 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			set_country_flag = ITA_end_the_sea_is_conceded
 			subtract_from_variable = { var = ITA_vienna_trust value = 10 }
 			clamp_variable = {
@@ -5534,7 +6945,7 @@ focus_tree = {
 		id = ITADNC_w_the_consulta
 		icon = GFX_focus_generic_diplomatic_treaty
 		relative_position_id = ITADNC_t_the_road_from_adwa
-		x = 28
+		x = 38
 		y = 1
 		cost = 5
 		prerequisite = { focus = ITADNC_t_the_road_from_adwa }
@@ -5549,6 +6960,27 @@ focus_tree = {
 			}
 			add_stability = 0.03
 			set_country_flag = ITA_w_chapter_opened
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_foreign_policy_is_the_crowns
+				add_political_power = 40
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_asks_to_read_the_treaties
+				add_political_power = -25
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_stability = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_consulta_is_left_to_itself
+				add_political_power = 25
+				add_to_variable = { var = ITA_prefects value = 4 }
+				ITA_machine_reckon = yes
+			}
 			set_variable = { ITA_vienna_trust = 40 }
 			if = {
 				limit = {
@@ -5603,6 +7035,26 @@ focus_tree = {
 			add_political_power = 40
 			add_stability = 0.03
 			set_country_flag = ITA_w_alliance_renewed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_renewal_needs_no_debate
+				add_political_power = 40
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_extreme_left_votes_against
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			if = {
 				limit = { has_country_flag = ITA_n_taranto_base }
 				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
@@ -5810,6 +7262,28 @@ focus_tree = {
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			army_experience = 25
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_convention_never_reaches_the_chamber
+				add_political_power = 30
+				add_command_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_chamber_is_told_a_smaller_number
+				add_to_variable = { var = ITA_prefects value = 5 }
+				ITA_machine_reckon = yes
+				subtract_from_variable = { var = ITA_majority value = 2 }
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_learns_of_the_third_army
+				add_political_power = -50
+				subtract_from_variable = { var = ITA_majority value = 6 }
+				add_to_variable = { var = ITA_piazza value = 5 }
+				ITA_piazza_bands = yes
+			}
 			add_political_power = 25
 			add_doctrine_cost_reduction = {
 				name = ITA_w_the_third_army_rides
@@ -5881,6 +7355,21 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			set_country_flag = ITA_w_double_book
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_two_books_and_no_chamber
+				add_political_power = 40
+				add_to_variable = { var = ITA_prefects value = 4 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_would_publish_both
+				add_political_power = -40
+				add_stability = -0.03
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
 			add_ideas = ITA_w_the_double_book
 			add_tech_bonus = {
 				name = ITA_w_the_black_cabinet
@@ -5947,6 +7436,33 @@ focus_tree = {
 				custom_effect_tooltip = ITA_w_tt_the_fleet_cannot_leave
 			}
 			set_country_flag = ITA_end_the_irredenta_is_a_claim
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_will_not_own_the_irredenta
+				ITA_c_lose_a_paid_spirit = yes
+				add_stability = -0.05
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_right_writes_the_claim
+				add_war_support = 0.05
+				add_political_power = 40
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.04
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_ministry_would_rather_not_have_said_it
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+			}
 			add_to_variable = { var = ITA_piazza value = 6 }
 			subtract_from_variable = { var = ITA_majority value = 5 }
 			ITA_piazza_bands = yes
@@ -5976,6 +7492,30 @@ focus_tree = {
 			add_political_power = 40
 			add_opinion_modifier = { target = RUS modifier = improve_relation }
 			set_country_flag = ITA_w_racconigi
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_w_tt_an_ally_bargaining_with_petersburg
+				add_political_power = -50
+				add_stability = -0.03
+				subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_w_tt_racconigi_is_the_new_policy
+				add_political_power = 40
+				if = {
+					limit = { country_exists = RUS }
+					RUS = {
+						add_opinion_modifier = { target = ITA modifier = medium_increase }
+					}
+				}
+			}
 			if = {
 				limit = {
 					check_variable = {
@@ -6040,6 +7580,28 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = ITA_w_valona_watched
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_w_tt_valona_is_watched_by_two_allies
+				add_political_power = -25
+				subtract_from_variable = { var = ITA_vienna_trust value = 6 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_w_tt_the_other_shore_has_one_claimant
+				add_war_support = 0.03
+				navy_experience = 20
+				add_named_threat = {
+					threat = 1
+					name = ITA_w_threat_the_albanian_shore
+				}
+			}
 			add_ideas = ITA_w_the_albanian_stake
 			add_to_variable = { var = ITA_piazza value = 2 }
 			ITA_piazza_bands = yes
@@ -6068,6 +7630,33 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = ITA_w_colonies_reviewed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_costs_the_colonies_out
+				add_political_power = -30
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_stability = 0.02
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_a_colony_is_a_place_to_send_a_client
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_to_variable = { var = ITA_majority_bought value = 3 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_right_wants_them_governed
+				add_political_power = 30
+				add_war_support = 0.03
+				550 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			add_to_variable = { var = ITA_pledges value = 1 }
 			custom_effect_tooltip = ITA_arm_tt_a_pledge_is_given
 			if = {
@@ -6135,6 +7724,31 @@ focus_tree = {
 			add_political_power = -40
 			add_stability = 0.03
 			set_country_flag = ITA_w_benadir_state_rule
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_extreme_left_forced_the_inquiry
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_inquiry_is_settled_quietly
+				add_political_power = 30
+				add_to_variable = { var = ITA_prefects value = 4 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_company_is_not_the_states_business
+				add_political_power = -30
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			add_to_variable = { var = ITA_piazza value = 2 }
 			subtract_from_variable = { var = ITA_majority value = 3 }
 			ITA_piazza_bands = yes
@@ -6172,6 +7786,20 @@ focus_tree = {
 			army_experience = 20
 			add_ideas = ITA_w_the_ascari
 			set_country_flag = ITA_w_ascari_raised
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_asks_about_the_recruiting
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_a_colonial_army_costs_no_italian_vote
+				add_war_support = 0.03
+				add_manpower = 5000
+				add_political_power = 25
+			}
 			if = {
 				limit = { has_country_flag = ITA_arm_ascari_regiments_raised }
 				add_manpower = -7500
@@ -6240,6 +7868,24 @@ focus_tree = {
 			add_political_power = 30
 			add_stability = 0.05
 			set_country_flag = ITA_w_adwa_closed
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_adwa_is_closed_by_the_men_who_opposed_it
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_right_signs_and_says_nothing
+				add_political_power = -30
+				add_war_support = -0.03
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
 			subtract_from_variable = { var = ITA_piazza value = 4 }
 			add_to_variable = { var = ITA_majority value = 3 }
 			ITA_piazza_bands = yes
@@ -6274,6 +7920,28 @@ focus_tree = {
 			add_stability = -0.05
 			army_experience = 25
 			set_country_flag = ITA_w_second_expedition
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_will_not_survive_a_second_adwa
+				ITA_c_lose_a_paid_spirit = yes
+				add_to_variable = { var = ITA_piazza value = 8 }
+				subtract_from_variable = { var = ITA_majority value = 8 }
+				add_stability = -0.05
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_right_has_waited_ten_years
+				add_war_support = 0.05
+				add_political_power = 30
+				army_experience = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_ministry_did_not_want_this
+				add_political_power = -50
+				subtract_from_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+			}
 			add_to_variable = { var = ITA_bayonets value = 1 }
 			custom_effect_tooltip = ITA_w_tt_the_strike_against_the_expedition
 			add_to_variable = { var = ITA_prefects value = 8 }
@@ -6327,6 +7995,31 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 40
 			set_country_flag = ITA_w_tripoli_opened
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_w_tt_the_ally_is_consulted_about_tripoli
+				add_political_power = -25
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_w_tt_nobody_is_consulted_about_tripoli
+				add_war_support = 0.05
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_ministry_counts_the_nationalist_seats
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_majority_bought value = 4 }
+				ITA_chamber_bands = yes
+			}
 			add_to_variable = { var = ITA_piazza value = 3 }
 			ITA_piazza_bands = yes
 			custom_effect_tooltip = ITA_w_tripoli_opened_tt
@@ -6359,6 +8052,40 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.10
 			set_country_flag = ITA_w_ultimatum_sent
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_w_tt_the_alliance_is_told_after_the_fact
+				subtract_from_variable = { var = ITA_vienna_trust value = 12 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = -40
+				add_stability = -0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_w_tt_a_free_hand_is_for_this
+				add_war_support = 0.05
+				add_political_power = 25
+				add_named_threat = {
+					threat = 1
+					name = ITA_w_threat_the_free_hand_ultimatum
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_will_not_hold_through_a_war
+				ITA_c_lose_a_paid_spirit = yes
+				add_to_variable = { var = ITA_piazza value = 8 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				ITA_piazza_bands = yes
+			}
 			set_country_flag = ITA_w_libya_war_declared
 			if = {
 				limit = {
@@ -6431,6 +8158,31 @@ focus_tree = {
 			add_political_power = 30
 			add_stability = 0.03
 			set_country_flag = ITA_w_peaceful_penetration
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_bank_is_cheaper_than_a_war
+				add_political_power = 40
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_stability = 0.03
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_a_great_power_does_not_send_a_banker
+				add_war_support = -0.05
+				add_political_power = -40
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.04
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_is_spared_a_war
+				add_stability = 0.05
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+				ITA_piazza_bands = yes
+			}
 			set_country_flag = ITA_end_the_war_was_not_fought
 			set_country_flag = ITA_ch_libya_closed
 			set_country_flag = ITA_end_libya_closed
@@ -6487,6 +8239,27 @@ focus_tree = {
 			add_war_support = 0.03
 			navy_experience = 20
 			set_country_flag = ITA_w_islands_held
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_w_tt_the_islands_are_kept_because_we_can
+				add_war_support = 0.03
+				add_political_power = 25
+				164 = {
+					set_state_flag = ITA_w_the_pledge_is_not_temporary
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_w_tt_vienna_asks_when_they_go_back
+				add_political_power = -25
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+			}
 			add_to_variable = { var = ITA_piazza value = 2 }
 			ITA_piazza_bands = yes
 			if = {
@@ -6523,6 +8296,31 @@ focus_tree = {
 			add_political_power = 25
 			add_war_support = 0.05
 			set_country_flag = ITA_w_libya_held
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_ministry_banks_the_victory
+				add_to_variable = { var = ITA_majority value = 5 }
+				add_to_variable = { var = ITA_majority_bought value = 4 }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				ITA_machine_reckon = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_right_asks_why_we_stopped
+				add_war_support = 0.05
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_w_tt_the_fourth_shore_owes_nothing_to_vienna
+				add_political_power = 25
+				add_named_threat = {
+					threat = 1
+					name = ITA_w_threat_ouchy_free_hand
+				}
+			}
 			subtract_from_variable = { var = ITA_piazza value = 6 }
 			add_to_variable = { var = ITA_majority value = 6 }
 			ITA_piazza_bands = yes
@@ -6608,6 +8406,21 @@ focus_tree = {
 			add_war_support = -0.03
 			add_ideas = ITA_w_the_desert_that_does_not_end
 			set_country_flag = ITA_w_senussi_war
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_counts_the_columns
+				add_political_power = -40
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_w_tt_the_right_calls_it_pacification
+				add_war_support = 0.03
+				add_political_power = 25
+				army_experience = 25
+			}
 			add_to_variable = { var = ITA_piazza value = 4 }
 			subtract_from_variable = { var = ITA_majority value = 4 }
 			ITA_piazza_bands = yes
@@ -6638,6 +8451,25 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -50
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_w_tt_the_emigrants_are_sent_to_libya_instead
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_pledges value = 2 }
+				clamp_variable = {
+					var = ITA_pledges
+					min = 0
+					max = 12
+				}
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_w_tt_the_bloc_calls_it_sand
+				add_political_power = -30
+				add_to_variable = { var = ITA_piazza value = 4 }
+				ITA_piazza_bands = yes
+			}
 			add_stability = 0.03
 			subtract_from_variable = { var = ITA_piazza value = 3 }
 			add_to_variable = { var = ITA_majority value = 3 }
@@ -6700,6 +8532,27 @@ focus_tree = {
 				ITA_end_init = yes
 			}
 			set_country_flag = ITA_end_by_decree
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_end_tt_the_ally_is_relieved_by_the_adjournment
+				add_to_variable = { var = ITA_vienna_trust value = 10 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = 30
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_end_tt_a_free_hand_and_a_closed_chamber
+				add_war_support = 0.05
+				add_named_threat = {
+					threat = 2
+					name = ITA_end_threat_the_closed_chamber
+				}
+			}
 			ITA_end_brittle_bands = yes
 			if = {
 				limit = {
@@ -6772,6 +8625,28 @@ focus_tree = {
 			add_political_power = -60
 			add_stability = 0.05
 			set_country_flag = ITA_end_left_in_government
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_end_tt_the_third_partner_under_a_left_ministry
+				subtract_from_variable = { var = ITA_vienna_trust value = 20 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = ITA_w_vienna_trust_tt
+				add_political_power = -40
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_end_tt_the_free_hand_is_folded
+				add_war_support = -0.05
+				add_stability = 0.04
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
 			ITA_p_restore_the_provinces = yes
 			set_variable = { ITA_piazza_lock = 12 }
 			custom_effect_tooltip = ITA_end_tt_the_street_waits_and_watches
@@ -6832,6 +8707,42 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			set_country_flag = ITA_end_reckoning_forced
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_end_tt_the_verdict_on_the_neutral_state
+				add_to_variable = { var = ITA_prefects value = 6 }
+				ITA_machine_reckon = yes
+				add_political_power = 40
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_end_tt_the_verdict_on_the_statuto
+				add_war_support = 0.04
+				add_to_variable = { var = ITA_piazza value = 3 }
+				ITA_piazza_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_end_tt_the_verdict_on_the_bloc
+				add_stability = 0.04
+				add_to_variable = { var = ITA_majority value = 4 }
+				ITA_chamber_bands = yes
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_end_tt_the_verdict_on_the_third_partner
+				add_political_power = 30
+				add_command_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_end_tt_the_verdict_on_the_free_hand
+				add_war_support = 0.05
+				add_named_threat = {
+					threat = 1
+					name = ITA_end_threat_the_free_hand
+				}
+			}
 			if = {
 				limit = { has_country_flag = ITA_arm_the_alps_chosen }
 				set_country_flag = ITA_end_the_army_looks_north
@@ -6935,6 +8846,24 @@ focus_tree = {
 			}
 			ITA_end_close_libya = yes
 			set_country_flag = ITA_end_the_columns_came_home
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_end_tt_the_bloc_gets_its_columns_back
+				add_stability = 0.05
+				add_to_variable = { var = ITA_majority value = 5 }
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+				ITA_chamber_bands = yes
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_end_tt_the_right_calls_it_a_surrender
+				add_political_power = -50
+				add_war_support = -0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.04
+				}
+			}
 			add_manpower = 15000
 			army_experience = 25
 			subtract_from_variable = { var = ITA_majority value = 6 }
@@ -6963,6 +8892,2436 @@ focus_tree = {
 				days = 15
 			}
 			ITA_piazza_bands = yes
+		}
+	}
+	focus = {
+		id = ITADNC_o_the_seniority_board
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = ITADNC_arm_the_promotion_lists
+		x = 6
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_arm_the_promotion_lists }
+		available = {
+			has_country_flag = ITA_arm_the_list_is_opened
+		}
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 2
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_political_power = -25
+			set_country_flag = ITA_o_the_board_sits
+			if = {
+				limit = { has_country_flag = ITA_arm_promotion_by_merit }
+				custom_effect_tooltip = ITA_o_tt_the_board_has_a_rule
+				add_ideas = ITA_o_the_board_of_promotion
+				add_doctrine_cost_reduction = {
+					name = ITA_o_tb_the_examination_board
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+				if = {
+					limit = { has_character = ITA_roberto_brusati }
+					custom_effect_tooltip = ITA_o_tt_brusati_is_struck_off
+					retire_character = ITA_roberto_brusati
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_o_tt_the_board_reads_the_calendar
+				add_ideas = ITA_o_the_calendar_of_ranks
+				add_political_power = 50
+				add_stability = 0.03
+				add_to_variable = { var = ITA_prefects value = 6 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_o_tt_the_crown_names_them
+				add_command_power = 25
+				add_war_support = 0.03
+				subtract_from_variable = { var = ITA_majority value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_o_tt_the_chamber_reads_the_list
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_prefects value = 5 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_o_tt_the_ministry_signs_quietly
+				add_political_power = 25
+				add_to_variable = { var = ITA_majority_bought value = 2 }
+			}
+			if = {
+				limit = { has_character = ITA_carlo_porro }
+				add_advisor_role = {
+					character = ITA_carlo_porro
+					advisor = {
+						slot = theorist
+						cost = 100
+						idea_token = ITA_o_porro_at_the_school
+						ledger = army
+						traits = { military_theorist }
+					}
+					activate = no
+				}
+				custom_effect_tooltip = ITA_o_tt_porro_teaches
+			}
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+			hidden_effect = {
+				country_event = { id = ita_dnc.900 days = 12 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_o_the_war_school_at_turin
+		icon = GFX_focus_generic_university_2
+		relative_position_id = ITADNC_o_the_seniority_board
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_o_the_seniority_board }
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			army_experience = 40
+			add_command_power = 25
+			add_political_power = -25
+			add_ideas = ITA_o_the_school_of_war
+			set_country_flag = ITA_o_the_school_is_reformed
+			add_doctrine_cost_reduction = {
+				name = ITA_o_tb_the_school_of_war
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = ITA_o_tb_the_staff_ride
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			if = {
+				limit = { has_idea = ITA_dnc_the_schools_of_the_kingdom }
+				add_research_slot = 1
+				army_experience = 25
+			}
+			else = {
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_tech_bonus = {
+					name = ITA_o_tb_the_german_syllabus
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}
+				if = {
+					limit = { country_exists = GER }
+					GER = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				add_tech_bonus = {
+					name = ITA_o_tb_the_french_syllabus
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}
+				if = {
+					limit = { country_exists = FRA }
+					FRA = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
+			else = {
+				army_experience = 25
+			}
+			159 = {
+				set_state_flag = ITA_o_the_school_town
+			}
+			subtract_from_variable = { var = ITA_majority value = 2 }
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_o_the_ministry_and_the_staff
+		icon = GFX_focus_generic_military_mission
+		relative_position_id = ITADNC_o_the_seniority_board
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_o_the_seniority_board }
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_command_power = 50
+			set_country_flag = ITA_o_the_two_desks_divided
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_o_tt_the_staff_answers_the_crown
+				add_ideas = ITA_o_the_staff_answers
+				add_war_support = 0.05
+				add_to_variable = { var = ITA_bayonets value = 1 }
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+			else = {
+				custom_effect_tooltip = ITA_o_tt_the_minister_answers_the_chamber
+				add_ideas = ITA_o_the_minister_answers
+				add_stability = 0.04
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_pledges value = 1 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+			}
+			if = {
+				limit = { has_character = ITA_paolo_spingardi }
+				custom_effect_tooltip = ITA_o_tt_spingardi_takes_the_ministry
+				add_corps_commander_role = {
+					character = ITA_paolo_spingardi
+					traits = { old_guard skilled_staffer artillery_officer }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 4
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_political_power = 40
+				subtract_from_variable = { var = ITA_prefects value = 4 }
+			}
+			else = {
+				add_to_variable = { var = ITA_prefects value = 4 }
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_o_tb_the_two_desks
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = arms_factory
+					value = 10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_o_the_pay_of_a_lieutenant
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = ITADNC_o_the_war_school_at_turin
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_o_the_war_school_at_turin }
+		prerequisite = { focus = ITADNC_o_the_ministry_and_the_staff }
+		available = {
+			date > 1904.1.1
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = ITA_o_the_pay_of_the_officer
+			set_country_flag = ITA_o_the_pay_is_voted
+			army_experience = 25
+			add_command_power = 25
+			add_to_variable = { var = ITA_pledges value = 1 }
+			custom_effect_tooltip = ITA_a_pledges_given_tt
+			if = {
+				limit = { has_country_flag = ITA_arm_estimates_before_the_chamber }
+				add_manpower = 6000
+				add_political_power = 25
+			}
+			else = {
+				subtract_from_variable = { var = ITA_majority value = 4 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_piazza value = 5 }
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_to_variable = { var = ITA_majority_bought value = 2 }
+				add_to_variable = { var = ITA_prefects value = 3 }
+			}
+			else = {
+				add_war_support = 0.03
+				add_stability = 0.02
+			}
+			if = {
+				limit = { has_idea = ITA_ch_the_officers_grievance }
+				remove_ideas = ITA_ch_the_officers_grievance
+				custom_effect_tooltip = ITA_o_tt_the_grievance_is_answered
+				ITA_chronicle_answered = yes
+			}
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_o_the_list_is_printed
+		icon = GFX_focus_ITA_capo_supremo
+		relative_position_id = ITADNC_o_the_pay_of_a_lieutenant
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = ITADNC_o_the_pay_of_a_lieutenant }
+		available = {
+			date > 1907.1.1
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			army_experience = 50
+			add_command_power = 50
+			add_political_power = 25
+			set_country_flag = ITA_o_the_corps_is_settled
+			if = {
+				limit = { has_idea = ITA_o_the_board_of_promotion }
+				swap_ideas = {
+					remove_idea = ITA_o_the_board_of_promotion
+					add_idea = ITA_o_the_list_that_is_printed
+				}
+				add_country_leader_trait = DNC_Well_Connected
+				custom_effect_tooltip = ITA_o_tt_the_list_is_public
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ITA_o_the_calendar_of_ranks
+					add_idea = ITA_o_the_list_that_is_printed
+				}
+				add_to_variable = { var = ITA_prefects value = 5 }
+				custom_effect_tooltip = ITA_o_tt_the_list_is_a_courtesy
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_o_tb_the_corps_settled
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+			if = {
+				limit = { has_character = ITA_luigi_cadorna }
+				custom_effect_tooltip = ITA_o_tt_cadorna_is_reached
+				ITA_luigi_cadorna = { add_unit_leader_trait = inflexible_strategist }
+			}
+			if = {
+				limit = { has_character = ITA_armando_diaz }
+				custom_effect_tooltip = ITA_o_tt_diaz_is_reached
+				ITA_armando_diaz = { add_unit_leader_trait = skilled_staffer }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				add_war_support = 0.05
+				subtract_from_variable = { var = ITA_vienna_trust value = 6 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_named_threat = {
+					threat = 1
+					name = ITA_o_the_corps_threat
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_to_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_command_power = 25
+			}
+			else = {
+				add_political_power = 40
+			}
+			add_manpower = 4000
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_g_the_batteries_rearmed
+		icon = GFX_goal_generic_army_artillery
+		relative_position_id = ITADNC_arm_the_field_gun_question
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_arm_the_field_gun_question }
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			army_experience = 25
+			add_political_power = -25
+			set_country_flag = ITA_g_the_rearmament_begun
+			add_ideas = ITA_g_the_batteries_rearmed
+			add_tech_bonus = {
+				name = ITA_g_tb_the_rearmament
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			if = {
+				limit = { has_country_flag = ITA_arm_the_gun_is_ours }
+				custom_effect_tooltip = ITA_g_tt_the_carriage_is_made_here
+				add_equipment_to_stockpile = {
+					type = light_field_gun_equipment_1903
+					amount = 180
+					producer = ITA
+				}
+				2 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_arm_the_gun_is_bought }
+				custom_effect_tooltip = ITA_g_tt_the_carriage_comes_by_rail
+				add_equipment_to_stockpile = {
+					type = light_field_gun_equipment_1903
+					amount = 260
+					producer = GER
+				}
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_piazza value = 2 }
+			}
+			else = {
+				add_political_power = 25
+				army_experience = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_war_support = 0.04
+				add_to_variable = { var = ITA_prefects value = 5 }
+				subtract_from_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				add_to_variable = { var = ITA_pledges value = 1 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+			}
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+			hidden_effect = {
+				add_ai_strategy = {
+					type = equipment_production_factor
+					id = artillery
+					value = 20
+				}
+				country_event = { id = ita_dnc.902 days = 15 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_g_ansaldo_at_sampierdarena
+		icon = GFX_focus_generic_industry_investment
+		relative_position_id = ITADNC_g_the_batteries_rearmed
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_g_the_batteries_rearmed }
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_g_ansaldo_of_genoa
+			set_country_flag = ITA_g_ansaldo_is_a_gunmaker
+			add_timed_idea = {
+				idea = ITA_g_the_works_retooling
+				days = 400
+			}
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_g_the_gun_shops
+			}
+			add_tech_bonus = {
+				name = ITA_g_tb_ansaldo
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_g_tt_the_licence_comes_from_le_creusot
+				add_tech_bonus = {
+					name = ITA_g_tb_the_schneider_licence
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+				if = {
+					limit = { country_exists = FRA }
+					FRA = {
+						add_opinion_modifier = { target = ITA modifier = RI_trade_agreement }
+					}
+				}
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_g_tt_the_licence_comes_from_essen
+				add_tech_bonus = {
+					name = ITA_g_tb_the_krupp_licence
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+				if = {
+					limit = { country_exists = GER }
+					GER = {
+						add_opinion_modifier = { target = ITA modifier = RI_trade_agreement }
+					}
+				}
+				add_to_variable = { var = ITA_vienna_trust value = 4 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+			}
+			else = {
+				add_political_power = 25
+				add_tech_bonus = {
+					name = ITA_g_tb_the_drawings_bought
+					bonus = 0.5
+					uses = 1
+					category = artillery
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_labour_recognised }
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+			}
+			else = {
+				add_to_variable = { var = ITA_piazza value = 4 }
+			}
+			add_manpower = 4000
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_g_the_gun_shop_at_terni
+		icon = GFX_focus_generic_steel_mill
+		relative_position_id = ITADNC_g_the_batteries_rearmed
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_g_the_batteries_rearmed }
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_g_the_gun_shop_at_terni
+			set_country_flag = ITA_g_terni_makes_guns
+			add_offsite_building = { type = arms_factory level = 1 }
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = ITA_g_the_state_works
+			}
+			add_tech_bonus = {
+				name = ITA_g_tb_terni_barrels
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_terni_is_kept_alive }
+				add_tech_bonus = {
+					name = ITA_g_tb_the_shared_furnace
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+				add_political_power = 25
+			}
+			else = {
+				add_political_power = -25
+				add_to_variable = { var = ITA_pledges value = 1 }
+				custom_effect_tooltip = ITA_a_pledges_given_tt
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_to_variable = { var = ITA_majority value = 3 }
+				subtract_from_variable = { var = ITA_prefects value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				subtract_from_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				add_to_variable = { var = ITA_majority_bought value = 3 }
+				add_to_variable = { var = ITA_prefects value = 4 }
+			}
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = arms_factory
+					value = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_g_the_heavy_batteries
+		icon = GFX_goal_generic_army_artillery2
+		relative_position_id = ITADNC_g_ansaldo_at_sampierdarena
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = ITADNC_g_ansaldo_at_sampierdarena
+			focus = ITADNC_g_the_gun_shop_at_terni
+		}
+		available = {
+			date > 1906.1.1
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_ideas = ITA_g_the_heavy_batteries
+			set_country_flag = ITA_g_the_heavy_park_exists
+			add_equipment_to_stockpile = {
+				type = heavy_field_gun_equipment_1906
+				amount = 90
+				producer = ITA
+			}
+			add_tech_bonus = {
+				name = ITA_g_tb_the_heavy_park
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			add_named_threat = {
+				threat = 1
+				name = ITA_g_the_heavy_park_threat
+			}
+			if = {
+				limit = { has_country_flag = ITA_arm_the_frontier_surveyed }
+				160 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				add_command_power = 25
+			}
+			else = {
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_g_tt_the_park_faces_north
+				add_war_support = 0.04
+				subtract_from_variable = { var = ITA_vienna_trust value = 8 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				if = {
+					limit = { country_exists = AUH }
+					AUH = {
+						add_opinion_modifier = { target = ITA modifier = small_decrease }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_g_tt_the_park_is_shown_to_the_ally
+				add_to_variable = { var = ITA_vienna_trust value = 3 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_command_power = 25
+			}
+			else = {
+				add_political_power = 25
+			}
+			subtract_from_variable = { var = ITA_majority value = 4 }
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_g_the_shell_and_the_fuse
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = ITADNC_g_the_heavy_batteries
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_g_the_heavy_batteries }
+		available = {
+			date > 1908.1.1
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			army_experience = 25
+			add_political_power = -25
+			add_ideas = ITA_g_the_shell_that_bursts
+			set_country_flag = ITA_g_the_filling_plant
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_tech_bonus = {
+				name = ITA_g_tb_the_fuse
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = ITA_g_tb_the_filling_plant
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_the_current_is_national }
+				161 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_political_power = 25
+			}
+			else = {
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 2 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_war_support = 0.05
+				add_command_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_political_power = 40
+				add_to_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				add_stability = 0.02
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_field_gun_equipment_1908
+				amount = 60
+				producer = ITA
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				add_command_power = 25
+				add_war_support = 0.03
+				add_named_threat = {
+					threat = 1
+					name = ITA_g_the_reserve_threat
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_to_variable = { var = ITA_vienna_trust value = 4 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_equipment_to_stockpile = {
+					type = heavy_field_gun_equipment_1906
+					amount = 40
+					producer = ITA
+				}
+			}
+			else = {
+				add_manpower = 4000
+			}
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_c_the_arm_that_is_not_the_army
+		icon = GFX_focus_generic_court
+		relative_position_id = ITADNC_arm_never_again_milan
+		x = 4
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_arm_never_again_milan }
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_c_the_arma_reinforced
+			set_country_flag = ITA_c_the_arma_is_enlarged
+			add_manpower = -6000
+			add_timed_idea = {
+				idea = ITA_c_the_recruiting_of_the_arma
+				days = 365
+			}
+			if = {
+				limit = { has_country_flag = ITA_arm_army_out_of_the_streets }
+				custom_effect_tooltip = ITA_c_tt_somebody_has_to_do_it
+				add_stability = 0.04
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = ITA_c_tt_the_regiments_keep_the_duty_too
+				add_to_variable = { var = ITA_bayonets value = 1 }
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_war_support = 0.03
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				add_stability = 0.02
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_to_variable = { var = ITA_prefects value = 12 }
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
+			else = {
+				add_political_power = 25
+				add_to_variable = { var = ITA_prefects value = 4 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				add_command_power = 25
+				add_manpower = 4000
+				add_war_support = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_to_variable = { var = ITA_vienna_trust value = 4 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_command_power = 25
+			}
+			else = {
+				army_experience = 25
+			}
+			117 = {
+				set_state_flag = ITA_c_the_new_stations
+			}
+			115 = {
+				set_state_flag = ITA_c_the_new_stations
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+			hidden_effect = {
+				country_event = { id = ita_dnc.910 days = 15 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_c_the_guards_of_public_safety
+		icon = GFX_focus_generic_oppression
+		relative_position_id = ITADNC_c_the_arm_that_is_not_the_army
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_c_the_arm_that_is_not_the_army }
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_c_the_guards_of_public_safety
+			set_country_flag = ITA_c_the_guards_are_raised
+			unlock_decision_tooltip = strikes_1
+			add_manpower = -4000
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_c_tt_the_guards_are_told_to_carry_no_rifle
+				subtract_from_variable = { var = ITA_piazza value = 6 }
+				add_stability = 0.03
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				subtract_from_variable = { var = ITA_prefects value = 4 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				custom_effect_tooltip = ITA_c_tt_the_guards_are_told_to_clear_the_square
+				add_to_variable = { var = ITA_piazza value = 4 }
+				add_to_variable = { var = ITA_prefects value = 10 }
+				add_war_support = 0.03
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+			else = {
+				subtract_from_variable = { var = ITA_piazza value = 2 }
+				add_to_variable = { var = ITA_prefects value = 5 }
+			}
+			if = {
+				limit = { has_idea = ITA_dnc_the_state_is_neutral }
+				add_stability = 0.03
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				add_political_power = 25
+			}
+			159 = {
+				set_state_flag = ITA_c_the_guards_quartered
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_c_the_mobile_squadrons
+		icon = GFX_focus_generic_hill_training
+		relative_position_id = ITADNC_c_the_arm_that_is_not_the_army
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_c_the_arm_that_is_not_the_army }
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_ideas = ITA_c_the_mobile_squadrons
+			set_country_flag = ITA_c_the_squadrons_ride
+			set_technology = { mountain_warfare = 1 }
+			add_tech_bonus = {
+				name = ITA_c_tb_the_squadrons
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			115 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_c_the_squadrons_quartered
+			}
+			156 = {
+				set_state_flag = ITA_c_the_squadrons_quartered
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_special_laws_passed }
+				add_stability = 0.04
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				add_to_variable = { var = ITA_piazza value = 4 }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_to_variable = { var = ITA_majority_bought value = 4 }
+				add_to_variable = { var = ITA_prefects value = 6 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				subtract_from_variable = { var = ITA_majority_bought value = 3 }
+				clamp_variable = {
+					var = ITA_majority_bought
+					min = 0
+					max = 60
+				}
+				add_political_power = -25
+				add_stability = 0.03
+			}
+			else = {
+				add_political_power = 25
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_c_the_troops_go_back_to_barracks
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ITADNC_c_the_guards_of_public_safety
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = ITADNC_c_the_guards_of_public_safety
+			focus = ITADNC_c_the_mobile_squadrons
+		}
+		available = {
+			date > 1906.1.1
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 0.2
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			set_country_flag = ITA_c_the_barracks_order
+			clr_country_flag = ITA_arm_army_keeps_the_streets
+			add_ideas = ITA_c_the_troops_in_barracks
+			add_stability = 0.05
+			army_experience = 25
+			subtract_from_variable = { var = ITA_piazza value = 8 }
+			if = {
+				limit = {
+					check_variable = {
+						var = ITA_bayonets
+						value = 1
+						compare = greater_than_or_equals
+					}
+				}
+				custom_effect_tooltip = ITA_c_tt_the_volleys_are_on_the_record
+				subtract_from_variable = { var = ITA_bayonets value = 1 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_c_tt_nothing_to_undo
+				add_stability = 0.03
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_war_support = -0.05
+				subtract_from_variable = { var = ITA_majority value = 5 }
+				random_list = {
+					60 = {
+						add_political_power = -40
+						add_to_variable = { var = ITA_piazza value = 5 }
+					}
+					40 = {
+						add_political_power = -40
+						add_to_variable = { var = ITA_piazza value = 4 }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_majority value = 6 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+			else = {
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_idea = ITA_arm_the_cannon_of_milan }
+				swap_ideas = {
+					remove_idea = ITA_arm_the_cannon_of_milan
+					add_idea = ITA_arm_the_army_is_not_a_police
+				}
+				custom_effect_tooltip = ITA_c_tt_milan_is_written_out
+			}
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_c_the_oath_that_is_not_asked
+		icon = GFX_focus_generic_self_management
+		relative_position_id = ITADNC_c_the_troops_go_back_to_barracks
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_c_the_troops_go_back_to_barracks }
+		available = {
+			date > 1909.1.1
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			set_country_flag = ITA_c_the_two_services_settled
+			if = {
+				limit = { has_idea = ITA_c_the_arma_reinforced }
+				swap_ideas = {
+					remove_idea = ITA_c_the_arma_reinforced
+					add_idea = ITA_c_the_oath_not_asked
+				}
+			}
+			else = {
+				add_ideas = ITA_c_the_oath_not_asked
+			}
+			army_experience = 25
+			add_manpower = 8000
+			add_command_power = 25
+			if = {
+				limit = {
+					check_variable = {
+						var = ITA_piazza
+						value = 40
+						compare = less_than
+					}
+				}
+				custom_effect_tooltip = ITA_c_tt_the_streets_are_quiet_enough_to_try_it
+				add_country_leader_trait = DNC_Beloved_Monarch
+				add_stability = 0.04
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+			}
+			else = {
+				custom_effect_tooltip = ITA_c_tt_the_streets_are_not_quiet_and_it_is_tried_anyway
+				add_political_power = -40
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_war_support = -0.03
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				add_war_support = 0.04
+				add_command_power = 25
+				add_manpower = 6000
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_to_variable = { var = ITA_vienna_trust value = 4 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_command_power = 25
+			}
+			else = {
+				add_political_power = 40
+			}
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_s_the_recruit_who_cannot_read
+		icon = GFX_goal_generic_allies_build_infantry
+		relative_position_id = ITADNC_arm_the_school_of_the_regiment
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_arm_the_school_of_the_regiment }
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ITA_s_the_recruit_who_cannot_read
+			set_country_flag = ITA_s_the_lists_are_marked
+			unlock_decision_tooltip = draft_dodging
+			army_experience = 25
+			add_tech_bonus = {
+				name = ITA_s_tb_the_literacy_return
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_the_figures_are_public }
+				custom_effect_tooltip = ITA_s_tt_the_figure_is_printed_with_the_census
+				add_political_power = 25
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_s_tt_the_figure_stays_in_the_ministry
+				add_stability = 0.02
+				add_to_variable = { var = ITA_prefects value = 4 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_arm_three_years }
+				add_manpower = 5000
+				army_experience = 25
+			}
+			else = {
+				add_political_power = -25
+			}
+			115 = {
+				set_state_flag = ITA_s_the_worst_districts
+			}
+			156 = {
+				set_state_flag = ITA_s_the_worst_districts
+			}
+			117 = {
+				set_state_flag = ITA_s_the_worst_districts
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+			hidden_effect = {
+				country_event = { id = ita_dnc.920 days = 15 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_s_the_regimental_primer
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = ITADNC_s_the_recruit_who_cannot_read
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_s_the_recruit_who_cannot_read }
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			army_experience = 40
+			add_political_power = -25
+			add_ideas = ITA_s_the_regimental_primer
+			set_country_flag = ITA_s_the_primer_is_issued
+			add_doctrine_cost_reduction = {
+				name = ITA_s_tb_the_primer
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = ITA_s_tb_the_written_order
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_manpower = 6000
+			if = {
+				limit = { has_country_flag = ITA_arm_the_regiment_teaches }
+				army_experience = 25
+				add_stability = 0.03
+			}
+			else = {
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				subtract_from_variable = { var = ITA_piazza value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_war_support = 0.03
+				add_to_variable = { var = ITA_prefects value = 5 }
+				subtract_from_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				add_political_power = 25
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_s_the_state_pays_the_teacher
+		icon = GFX_goal_social_reforms
+		relative_position_id = ITADNC_e_the_schools_of_the_kingdom
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_e_the_schools_of_the_kingdom }
+		available = {
+			date > 1908.1.1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.04
+			add_ideas = ITA_s_the_state_pays_the_teacher
+			set_country_flag = ITA_s_the_commune_is_relieved
+			subtract_from_variable = { var = ITA_prefects value = 8 }
+			add_to_variable = { var = ITA_pledges value = 2 }
+			custom_effect_tooltip = ITA_a_pledges_given_tt
+			add_research_slot = 1
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_s_tt_the_communes_lose_a_favour_to_sell
+				subtract_from_variable = { var = ITA_majority_bought value = 4 }
+				clamp_variable = {
+					var = ITA_majority_bought
+					min = 0
+					max = 60
+				}
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				add_stability = 0.03
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_s_tt_the_teachers_union_is_recognised
+				add_to_variable = { var = ITA_majority value = 5 }
+				subtract_from_variable = { var = ITA_piazza value = 5 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+			}
+			else = {
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_a_the_ban_lifted }
+				subtract_from_variable = { var = ITA_pledges value = 1 }
+				clamp_variable = {
+					var = ITA_pledges
+					min = 0
+					max = 12
+				}
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+			else = {
+				add_stability = 0.02
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_s_the_normal_schools
+		icon = GFX_focus_generic_university_2
+		relative_position_id = ITADNC_s_the_state_pays_the_teacher
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_s_the_state_pays_the_teacher }
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_s_the_normal_schools
+			set_country_flag = ITA_s_the_teachers_are_trained
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = ITA_s_tb_the_normal_schools
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+			add_manpower = 5000
+			162 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_s_the_normal_school
+			}
+			117 = {
+				set_state_flag = ITA_s_the_normal_school
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_the_schools_are_the_states }
+				add_stability = 0.04
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				add_to_variable = { var = ITA_piazza value = 4 }
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_stability = 0.02
+				subtract_from_variable = { var = ITA_piazza value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_political_power = 25
+				add_to_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				subtract_from_variable = { var = ITA_majority value = 2 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_s_a_kingdom_that_reads
+		icon = GFX_focus_generic_improve_the_administration_2
+		relative_position_id = ITADNC_s_the_regimental_primer
+		x = 0
+		y = 1
+		cost = 9
+		prerequisite = { focus = ITADNC_s_the_regimental_primer }
+		prerequisite = { focus = ITADNC_s_the_normal_schools }
+		available = {
+			date > 1911.1.1
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			set_country_flag = ITA_s_the_kingdom_reads
+			if = {
+				limit = { has_idea = ITA_s_the_regimental_primer }
+				swap_ideas = {
+					remove_idea = ITA_s_the_regimental_primer
+					add_idea = ITA_s_a_kingdom_that_reads
+				}
+			}
+			else = {
+				add_ideas = ITA_s_a_kingdom_that_reads
+			}
+			add_research_slot = 1
+			add_manpower = 15000
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ITA_s_tb_the_literate_class
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = ITA_s_tb_a_kingdom_that_reads
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_the_kingdom_made_whole }
+				custom_effect_tooltip = ITA_s_tt_the_two_italies_are_one_reader
+				add_stability = 0.05
+				subtract_from_variable = { var = ITA_piazza value = 6 }
+				add_country_leader_trait = DNC_Beloved_Monarch
+			}
+			else = {
+				custom_effect_tooltip = ITA_s_tt_one_italy_reads_and_the_other_signs
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_majority value = 6 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_to_variable = { var = ITA_prefects value = 8 }
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				add_political_power = 40
+			}
+			subtract_from_variable = { var = ITA_pledges value = 2 }
+			clamp_variable = {
+				var = ITA_pledges
+				min = 0
+				max = 12
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_m_the_map_of_the_fever
+		icon = GFX_focus_generic_land_reclamation
+		relative_position_id = ITADNC_e_quinine_at_the_states_price
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_e_quinine_at_the_states_price }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_manpower = 12000
+			add_ideas = ITA_m_the_map_of_the_fever
+			set_country_flag = ITA_m_the_fever_is_mapped
+			add_stability = 0.03
+			add_tech_bonus = {
+				name = ITA_m_tb_the_fever_stations
+				bonus = 0.75
+				uses = 1
+				category = construction_tech
+			}
+			117 = {
+				set_state_flag = ITA_m_the_fever_district
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			156 = {
+				set_state_flag = ITA_m_the_fever_district
+			}
+			114 = {
+				set_state_flag = ITA_m_the_fever_district
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_the_fever_is_fought }
+				custom_effect_tooltip = ITA_m_tt_the_quinine_has_somewhere_to_go
+				add_manpower = 10000
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				custom_effect_tooltip = ITA_m_tt_the_map_is_drawn_and_nothing_follows
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 2 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_to_variable = { var = ITA_majority_bought value = 2 }
+			}
+			else = {
+				add_stability = 0.02
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_m_the_ground_that_is_drained
+		icon = GFX_focus_generic_agriculture
+		relative_position_id = ITADNC_m_the_map_of_the_fever
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_m_the_map_of_the_fever }
+		available = {
+			date > 1905.1.1
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = ITA_m_the_ground_drained
+			set_country_flag = ITA_m_the_bonifica_begins
+			add_manpower = 10000
+			add_to_variable = { var = ITA_pledges value = 2 }
+			custom_effect_tooltip = ITA_a_pledges_given_tt
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_m_the_drained_ground
+			}
+			117 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_m_the_drained_ground
+			}
+			add_tech_bonus = {
+				name = ITA_m_tb_the_bonifica
+				bonus = 1.0
+				uses = 1
+				category = excavation_tech
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_the_aqueduct_is_begun }
+				add_political_power = 25
+				add_stability = 0.03
+			}
+			else = {
+				add_political_power = -25
+				subtract_from_variable = { var = ITA_majority value = 3 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_emigration_refused }
+				custom_effect_tooltip = ITA_m_tt_the_land_was_promised_and_here_it_is
+				add_manpower = 12000
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_pledges value = 1 }
+				clamp_variable = {
+					var = ITA_pledges
+					min = 0
+					max = 12
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_m_tt_the_men_who_would_have_dug_it_are_at_sea
+				add_to_variable = { var = ITA_piazza value = 3 }
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_stability = -0.03
+				subtract_from_variable = { var = ITA_prefects value = 6 }
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else = {
+				add_to_variable = { var = ITA_prefects value = 4 }
+				add_political_power = -25
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_m_the_sulphur_of_sicily
+		icon = GFX_focus_generic_industry_3
+		relative_position_id = ITADNC_e_special_laws_for_the_south
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_e_special_laws_for_the_south }
+		available = {
+			date > 1904.1.1
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_m_the_sulphur_consortium
+			set_country_flag = ITA_m_the_consortium_is_law
+			115 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_m_the_sulphur_field
+			}
+			add_tech_bonus = {
+				name = ITA_m_tb_the_sulphur
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_manpower = 4000
+			if = {
+				limit = { country_exists = USA }
+				USA = {
+					add_opinion_modifier = { target = ITA modifier = small_decrease }
+				}
+				custom_effect_tooltip = ITA_m_tt_louisiana_undersells_us
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				custom_effect_tooltip = ITA_m_tt_the_consortium_is_a_bargain_with_the_owners
+				add_to_variable = { var = ITA_prefects value = 8 }
+				add_to_variable = { var = ITA_majority_bought value = 3 }
+				add_to_variable = { var = ITA_majority value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_m_tt_the_consortium_is_forced_to_take_the_miners_in
+				subtract_from_variable = { var = ITA_piazza value = 6 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.04
+				}
+				subtract_from_variable = { var = ITA_prefects value = 4 }
+			}
+			else = {
+				add_political_power = 25
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_c_the_squadrons_ride }
+				add_stability = 0.02
+				add_to_variable = { var = ITA_prefects value = 4 }
+			}
+			else = {
+				add_to_variable = { var = ITA_piazza value = 2 }
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+			hidden_effect = {
+				country_event = { id = ita_dnc.931 days = 20 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_m_the_children_in_the_mines
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		relative_position_id = ITADNC_m_the_sulphur_of_sicily
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_m_the_sulphur_of_sicily }
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 2
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_stability = 0.04
+			add_ideas = ITA_m_the_children_out_of_the_mines
+			set_country_flag = ITA_m_the_carusi_law
+			subtract_from_variable = { var = ITA_piazza value = 6 }
+			add_manpower = -3000
+			add_to_variable = { var = ITA_pledges value = 1 }
+			custom_effect_tooltip = ITA_a_pledges_given_tt
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_labour_recognised }
+				custom_effect_tooltip = ITA_m_tt_the_labour_office_has_inspectors_to_send
+				add_to_variable = { var = ITA_majority value = 4 }
+				add_stability = 0.03
+			}
+			else = {
+				custom_effect_tooltip = ITA_m_tt_the_law_has_nobody_to_enforce_it
+				add_political_power = -25
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_m_tt_turati_calls_it_the_only_thing_worth_the_session
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+				add_to_variable = { var = ITA_majority value = 4 }
+				subtract_from_variable = { var = ITA_piazza value = 4 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_stability = 0.03
+				add_political_power = 25
+				subtract_from_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_to_variable = { var = ITA_majority_bought value = 2 }
+			}
+			if = {
+				limit = { has_idea = ITA_dnc_the_schools_of_the_kingdom }
+				add_manpower = 6000
+				add_research_slot = 1
+			}
+			else = {
+				add_political_power = 25
+			}
+			115 = {
+				set_state_flag = ITA_m_the_carusi_freed
+			}
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_m_the_third_class_deck
+		icon = GFX_focus_ARG_immigration_wave
+		relative_position_id = ITADNC_e_six_hundred_thousand_a_year
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = ITADNC_e_six_hundred_thousand_a_year }
+		available = {
+			date > 1906.1.1
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = ITA_m_the_third_class_deck
+			set_country_flag = ITA_m_the_deck_is_inspected
+			navy_experience = 25
+			989 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_m_the_subsidised_line
+			}
+			create_navy_leader = {
+				name = "Carlo Mirabello"
+				traits = { navy_career_officer old_guard_navy }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 3
+			}
+			custom_effect_tooltip = ITA_m_tt_mirabello_takes_the_auxiliaries
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Subsidised Liner"
+					type = light_cruiser_1900
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_medium_battery_1
+						fixed_ship_anti_air_slot = empty
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_1
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = empty
+						rear_1_custom_slot = empty
+					}
+				}
+				create_ship = {
+					type = light_cruiser_1900
+					equipment_variant = "Subsidised Liner"
+					creator = ITA
+					name = "Citta di Palermo"
+				}
+				create_ship = {
+					type = light_cruiser_1900
+					equipment_variant = "Subsidised Liner"
+					creator = ITA
+					name = "Duca di Genova"
+				}
+			}
+			else = {
+				navy_experience = 50
+				add_tech_bonus = {
+					name = ITA_m_tb_the_auxiliary_hulls
+					bonus = 1.0
+					uses = 1
+					category = naval_equipment
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_e_emigration_governed }
+				custom_effect_tooltip = ITA_m_tt_the_commissariat_writes_the_charter
+				set_rule = {
+					can_send_volunteers = yes
+				}
+				add_stability = 0.03
+				add_to_variable = { var = ITA_majority value = 3 }
+				if = {
+					limit = { country_exists = ARG }
+					ARG = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_m_tt_the_shipowners_write_the_charter
+				add_to_variable = { var = ITA_prefects value = 6 }
+				add_to_variable = { var = ITA_piazza value = 4 }
+				add_political_power = 25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_m_tt_the_liners_are_counted_as_cruisers
+				add_war_support = 0.03
+				add_named_threat = {
+					threat = 1
+					name = ITA_m_the_auxiliary_threat
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_to_variable = { var = ITA_vienna_trust value = 3 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				navy_experience = 25
+			}
+			else = {
+				add_political_power = 25
+			}
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_air_the_brigade_of_specialists
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = ITADNC_arm_the_army_after_adwa
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			air_experience = 15
+			army_experience = 15
+			add_political_power = 25
+			add_command_power = 25
+			add_ideas = ITA_air_the_brigade_of_specialists
+			set_country_flag = ITA_air_branch_opened
+			add_tech_bonus = {
+				name = ITA_air_tb_the_specialist_brigade
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+			if = {
+				limit = { has_character = ITA_maurizio_moris }
+				custom_effect_tooltip = ITA_air_tt_moris_is_given_the_brigade
+				add_corps_commander_role = {
+					character = ITA_maurizio_moris
+					traits = { engineer_officer organizer trait_cautious }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_arm_the_report_is_read }
+				air_experience = 15
+				add_command_power = 25
+			}
+			else = {
+				custom_effect_tooltip = ITA_air_tt_the_staff_calls_it_a_balloon_company
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_sonnino }
+				add_war_support = 0.03
+				add_to_variable = { var = ITA_prefects value = 4 }
+				subtract_from_variable = { var = ITA_majority value = 2 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_giolitti }
+				add_political_power = 25
+				add_to_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				custom_effect_tooltip = ITA_air_tt_the_chamber_laughs_and_votes_it
+				add_stability = 0.02
+			}
+			2 = {
+				set_state_flag = ITA_air_the_sheds
+			}
+			ITA_chamber_bands = yes
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = air_base
+					value = 10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_air_the_airship_park
+		icon = GFX_focus_GER_graf_zeppelin
+		relative_position_id = ITADNC_air_the_brigade_of_specialists
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_air_the_brigade_of_specialists }
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			air_experience = 25
+			add_political_power = -25
+			add_ideas = ITA_air_the_airship_park
+			set_country_flag = ITA_air_the_dirigibles_fly
+			set_technology = { ww1_zeppelin1 = 1 }
+			add_tech_bonus = {
+				name = ITA_air_tb_the_dirigible
+				bonus = 1.0
+				uses = 1
+				category = heavy_air
+			}
+			2 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_air_the_airship_hall
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_the_current_is_national }
+				add_tech_bonus = {
+					name = ITA_air_tb_the_hydrogen_plant
+					bonus = 0.75
+					uses = 1
+					category = industry
+				}
+				air_experience = 15
+			}
+			else = {
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_tech_bonus = {
+					name = ITA_air_tb_the_german_hall
+					bonus = 1.0
+					uses = 1
+					category = heavy_air
+				}
+				if = {
+					limit = { country_exists = GER }
+					GER = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				add_named_threat = {
+					threat = 1
+					name = ITA_air_the_airship_threat
+				}
+				add_war_support = 0.03
+			}
+			else = {
+				add_political_power = 25
+			}
+			army_experience = 15
+			subtract_from_variable = { var = ITA_majority value = 2 }
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_air_the_field_at_centocelle
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = ITADNC_air_the_brigade_of_specialists
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_air_the_brigade_of_specialists }
+		available = {
+			date > 1908.1.1
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			air_experience = 25
+			add_political_power = -25
+			add_ideas = ITA_air_the_field_at_centocelle
+			set_country_flag = ITA_air_the_field_is_opened
+			set_technology = {
+				airframe = 1
+				engine = 1
+				fuselage = 1
+				popup = no
+			}
+			add_tech_bonus = {
+				name = ITA_air_tb_centocelle
+				bonus = 1.0
+				uses = 2
+				category = air_equipment
+			}
+			2 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ITA_air_the_flying_field
+			}
+			if = {
+				limit = { has_character = ITA_mario_calderara }
+				custom_effect_tooltip = ITA_air_tt_calderara_is_taught_by_wilbur_wright
+				show_ideas_tooltip = ITA_mario_calderara
+				air_experience = 25
+			}
+			else = {
+				add_political_power = -25
+			}
+			if = {
+				limit = { has_country_flag = ITA_e_the_fitters_of_turin }
+				add_tech_bonus = {
+					name = ITA_air_tb_the_turin_engine
+					bonus = 1.0
+					uses = 1
+					category = air_equipment
+				}
+				add_manpower = 3000
+			}
+			else = {
+				add_political_power = -25
+				if = {
+					limit = { country_exists = FRA }
+					FRA = {
+						add_opinion_modifier = { target = ITA modifier = small_increase }
+					}
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				add_to_variable = { var = ITA_majority value = 3 }
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.03
+				}
+			}
+			else = {
+				add_political_power = 25
+				add_stability = 0.02
+			}
+			ITA_chamber_bands = yes
+		}
+	}
+
+	focus = {
+		id = ITADNC_air_the_battalion_of_aviators
+		icon = GFX_focus_generic_pilot_training
+		relative_position_id = ITADNC_air_the_airship_park
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = ITADNC_air_the_airship_park
+			focus = ITADNC_air_the_field_at_centocelle
+		}
+		available = {
+			date > 1910.1.1
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {
+			air_experience = 50
+			add_command_power = 25
+			add_political_power = -25
+			add_ideas = ITA_air_the_battalion_of_aviators
+			set_country_flag = ITA_air_the_battalion_exists
+			set_technology = {
+				RON_Fighter_1903 = 1
+				experimental_aircraft = 1
+				popup = no
+			}
+			add_equipment_to_stockpile = {
+				type = early_fighter_equipment_1906
+				amount = 30
+				producer = ITA
+			}
+			add_tech_bonus = {
+				name = ITA_air_tb_the_battalion
+				bonus = 1.0
+				uses = 2
+				category = air_equipment
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_air_tb_the_flying_school
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			if = {
+				limit = { has_character = ITA_giulio_douhet }
+				custom_effect_tooltip = ITA_air_tt_douhet_writes_the_regulations
+				show_ideas_tooltip = ITA_giulio_douhet
+				add_doctrine_cost_reduction = {
+					name = ITA_air_tb_douhet
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+			}
+			if = {
+				limit = { has_country_flag = ITA_o_the_corps_is_settled }
+				air_experience = 25
+				army_experience = 25
+			}
+			else = {
+				add_political_power = -25
+				add_to_variable = { var = ITA_prefects value = 3 }
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_air_tt_the_battalion_is_meant_for_the_alps
+				add_war_support = 0.04
+				subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				custom_effect_tooltip = ITA_air_tt_the_battalion_is_offered_to_the_alliance
+				add_to_variable = { var = ITA_vienna_trust value = 4 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				add_command_power = 25
+			}
+			else = {
+				add_political_power = 25
+			}
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			hidden_effect = {
+				add_ai_strategy = {
+					type = build_building
+					id = air_base
+					value = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_air_the_first_bomb
+		icon = GFX_goal_generic_air_bomber
+		relative_position_id = ITADNC_air_the_battalion_of_aviators
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = ITADNC_air_the_battalion_of_aviators }
+		available = {
+			has_country_flag = ITA_w_libya_war_declared
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			air_experience = 50
+			add_war_support = 0.05
+			add_command_power = 25
+			add_ideas = ITA_air_the_first_bomb
+			set_country_flag = ITA_air_the_bomb_is_dropped
+			set_technology = {
+				RON_Fighter_1906 = 1
+				popup = no
+			}
+			add_equipment_to_stockpile = {
+				type = early_fighter_equipment_1908
+				amount = 40
+				producer = ITA
+			}
+			add_tech_bonus = {
+				name = ITA_air_tb_the_first_bomb
+				bonus = 1.0
+				uses = 2
+				category = light_air
+			}
+			add_named_threat = {
+				threat = 2
+				name = ITA_air_the_first_bomb_threat
+			}
+			if = {
+				limit = { country_exists = OTT }
+				OTT = {
+					add_opinion_modifier = { target = ITA modifier = large_decrease }
+				}
+				custom_effect_tooltip = ITA_air_tt_the_porte_calls_it_murder
+			}
+			if = {
+				limit = { has_country_flag = ITA_dnc_path_free_hand }
+				custom_effect_tooltip = ITA_air_tt_the_kingdom_advertises_it
+				add_political_power = 40
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.04
+				}
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_loyal }
+				add_to_variable = { var = ITA_vienna_trust value = 3 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+				air_experience = 25
+				add_command_power = 25
+			}
+			else_if = {
+				limit = { has_country_flag = ITA_dnc_path_reformist }
+				custom_effect_tooltip = ITA_air_tt_the_extreme_left_asks_who_was_under_it
+				add_to_variable = { var = ITA_piazza value = 6 }
+				subtract_from_variable = { var = ITA_majority value = 4 }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.04
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_air_tt_the_despatch_says_reconnaissance
+				add_political_power = 25
+				add_stability = 0.02
+			}
+			random_list = {
+				55 = {
+					modifier = {
+						factor = 2
+						has_country_flag = ITA_air_the_field_is_opened
+					}
+					custom_effect_tooltip = ITA_air_tt_gavotti_comes_back
+					air_experience = 25
+					add_command_power = 25
+				}
+				45 = {
+					custom_effect_tooltip = ITA_air_tt_the_machine_does_not_come_back
+					add_political_power = -25
+					add_war_support = -0.03
+				}
+			}
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+			hidden_effect = {
+				news_event = { id = ita_dnc.942 hours = 6 }
+			}
 		}
 	}
 }
