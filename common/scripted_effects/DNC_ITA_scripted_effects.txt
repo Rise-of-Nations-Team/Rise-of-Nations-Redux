@@ -1,0 +1,1310 @@
+ITA_dnc_init = {
+	set_country_flag = ITA_dnc_systems_open
+	set_variable = { ITA_piazza = 35 }
+	if = {
+		limit = { has_idea = ITA_t_the_black_year }
+		set_variable = { ITA_piazza = 45 }
+	}
+	set_variable = { ITA_piazza_floor = 5 }
+	set_variable = { ITA_bayonets = 0 }
+	set_variable = { ITA_piazza_lock = 0 }
+	set_variable = { ITA_piazza_high_months = 0 }
+	set_variable = { ITA_p_stab = 0 }
+	set_variable = { ITA_p_pp = 0 }
+	set_variable = { ITA_p_prod = 0 }
+	set_variable = { ITA_p_ws = 0 }
+	set_variable = { ITA_p_bayonet_stab = 0 }
+	set_variable = { ITA_p_bayonet_pp = 0 }
+	set_variable = { ITA_p_bayonet_drift = 0 }
+	set_variable = { ITA_majority = 58 }
+	set_variable = { ITA_majority_bought = 0 }
+	set_variable = { ITA_prefects = 25 }
+	set_variable = { ITA_machine_now = 25 }
+	set_variable = { ITA_pledges = 0 }
+	set_variable = { ITA_pledge_clock = 0 }
+	set_variable = { ITA_c_pp = 0 }
+	set_variable = { ITA_c_stab = 0 }
+	set_variable = { ITA_election_result = 0 }
+	set_variable = { ITA_dnc_months = 0 }
+	set_variable = { ITA_circular_clock = 18 }
+	add_dynamic_modifier = { modifier = ITA_p_the_piazza }
+	add_dynamic_modifier = { modifier = ITA_c_the_chamber }
+	ITA_machine_reckon = yes
+	ITA_piazza_bands = yes
+	ITA_chamber_bands = yes
+}
+
+ITA_machine_reckon = {
+	set_variable = { ITA_machine_now = ITA_prefects }
+	if = {
+		limit = { has_variable = ITA_t_prefects }
+		set_temp_variable = { ITA_mach_t = ITA_t_prefects }
+		divide_temp_variable = { var = ITA_mach_t value = 2 }
+		add_to_variable = { var = ITA_machine_now value = ITA_mach_t }
+	}
+	clamp_variable = {
+		var = ITA_machine_now
+		min = 0
+		max = 100
+	}
+}
+
+ITA_piazza_month = {
+	set_temp_variable = { ITA_drift = 0.4 }
+	set_temp_variable = { ITA_dt = ITA_bayonets }
+	multiply_temp_variable = { var = ITA_dt value = 0.25 }
+	add_to_temp_variable = { var = ITA_drift value = ITA_dt }
+	set_temp_variable = { ITA_dt = ITA_machine_now }
+	divide_temp_variable = { var = ITA_dt value = 50 }
+	add_to_temp_variable = { var = ITA_drift value = ITA_dt }
+	if = {
+		limit = {
+			has_war = yes
+			OR = {
+				has_country_flag = ITA_w_senussi_war
+				has_country_flag = ITA_w_libya_war_declared
+			}
+		}
+		add_to_temp_variable = { var = ITA_drift value = 1 }
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = ITA_dnc_e_emigration_governed }
+			NOT = { has_idea = ITA_dnc_the_commissariat_of_emigration }
+		}
+		add_to_temp_variable = { var = ITA_drift value = 0.3 }
+	}
+	if = {
+		limit = { has_idea = ITA_a_the_state_of_siege }
+		add_to_temp_variable = { var = ITA_drift value = 0.5 }
+	}
+	if = {
+		limit = { has_idea = ITA_a_the_decrees_of_public_safety }
+		add_to_temp_variable = { var = ITA_drift value = 0.4 }
+	}
+	if = {
+		limit = { has_idea = ITA_a_the_state_takes_no_side }
+		subtract_from_temp_variable = { var = ITA_drift value = 0.6 }
+	}
+	if = {
+		limit = { has_idea = ITA_t_the_arbitration_boards }
+		subtract_from_temp_variable = { var = ITA_drift value = 0.5 }
+	}
+	if = {
+		limit = { has_idea = ITA_a_the_widened_franchise }
+		subtract_from_temp_variable = { var = ITA_drift value = 0.5 }
+	}
+	if = {
+		limit = { has_idea = ITA_dnc_the_chambers_of_labour }
+		subtract_from_temp_variable = { var = ITA_drift value = 0.4 }
+	}
+	if = {
+		limit = { has_idea = ITA_a_the_special_laws_of_the_south }
+		subtract_from_temp_variable = { var = ITA_drift value = 0.4 }
+	}
+	if = {
+		limit = { has_idea = ITA_dnc_the_commissariat_of_emigration }
+		subtract_from_temp_variable = { var = ITA_drift value = 0.3 }
+	}
+	if = {
+		limit = {
+			has_stability > 0.6
+		}
+		subtract_from_temp_variable = { var = ITA_drift value = 0.5 }
+	}
+	if = {
+		limit = { has_country_flag = ITA_t_1904_troops }
+		add_to_temp_variable = { var = ITA_drift value = 0.2 }
+	}
+	if = {
+		limit = { has_country_flag = ITA_t_red_week_crushed }
+		add_to_temp_variable = { var = ITA_drift value = 0.3 }
+	}
+	add_to_variable = { var = ITA_piazza value = ITA_drift }
+	ITA_piazza_bands = yes
+}
+
+ITA_piazza_bands = {
+	set_variable = { ITA_piazza_floor = ITA_bayonets }
+	multiply_variable = { var = ITA_piazza_floor value = 4 }
+	add_to_variable = { var = ITA_piazza_floor value = 5 }
+	clamp_variable = {
+		var = ITA_piazza_floor
+		min = 5
+		max = 45
+	}
+	clamp_variable = {
+		var = ITA_piazza
+		min = ITA_piazza_floor
+		max = 100
+	}
+
+	set_variable = { ITA_p_stab = 30 }
+	subtract_from_variable = { var = ITA_p_stab value = ITA_piazza }
+	divide_variable = { var = ITA_p_stab value = 200 }
+	clamp_variable = {
+		var = ITA_p_stab
+		min = -0.35
+		max = 0
+	}
+
+	set_variable = { ITA_p_prod = 30 }
+	subtract_from_variable = { var = ITA_p_prod value = ITA_piazza }
+	divide_variable = { var = ITA_p_prod value = 350 }
+	clamp_variable = {
+		var = ITA_p_prod
+		min = -0.20
+		max = 0
+	}
+
+	set_variable = { ITA_p_pp = 40 }
+	subtract_from_variable = { var = ITA_p_pp value = ITA_piazza }
+	divide_variable = { var = ITA_p_pp value = 300 }
+	clamp_variable = {
+		var = ITA_p_pp
+		min = -0.20
+		max = 0
+	}
+
+	set_variable = { ITA_p_ws = 50 }
+	subtract_from_variable = { var = ITA_p_ws value = ITA_piazza }
+	divide_variable = { var = ITA_p_ws value = 250 }
+	clamp_variable = {
+		var = ITA_p_ws
+		min = -0.20
+		max = 0
+	}
+
+	set_variable = { ITA_p_bayonet_stab = ITA_bayonets }
+	multiply_variable = { var = ITA_p_bayonet_stab value = -0.03 }
+	clamp_variable = {
+		var = ITA_p_bayonet_stab
+		min = -0.24
+		max = 0
+	}
+
+	set_variable = { ITA_p_bayonet_pp = ITA_bayonets }
+	multiply_variable = { var = ITA_p_bayonet_pp value = -0.02 }
+	clamp_variable = {
+		var = ITA_p_bayonet_pp
+		min = -0.16
+		max = 0
+	}
+
+	set_variable = { ITA_p_bayonet_drift = ITA_bayonets }
+	multiply_variable = { var = ITA_p_bayonet_drift value = 0.01 }
+	clamp_variable = {
+		var = ITA_p_bayonet_drift
+		min = 0
+		max = 0.08
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_bayonets
+				value = 1
+				compare = greater_than_or_equals
+			}
+			NOT = {
+				has_dynamic_modifier = { modifier = ITA_p_the_army_in_the_streets }
+			}
+		}
+		add_dynamic_modifier = { modifier = ITA_p_the_army_in_the_streets }
+	}
+}
+
+ITA_piazza_repress = {
+	subtract_from_variable = { var = ITA_piazza value = 14 }
+	add_to_variable = { var = ITA_bayonets value = 1 }
+	add_stability = -0.05
+	add_war_support = -0.05
+	add_popularity = {
+		ideology = communism
+		popularity = 0.03
+	}
+	ITA_piazza_bands = yes
+	custom_effect_tooltip = ITA_repress_tt
+}
+
+ITA_piazza_concede = {
+	subtract_from_variable = { var = ITA_piazza value = 8 }
+	subtract_from_variable = { var = ITA_majority value = 4 }
+	add_stability = 0.02
+	ITA_piazza_bands = yes
+	ITA_chamber_bands = yes
+}
+
+ITA_p_ungovern_two_states = {
+	random_owned_controlled_state = {
+		limit = {
+			OR = {
+				state = 159
+				state = 158
+				state = 161
+			}
+			NOT = { has_state_flag = ITA_p_ungoverned }
+		}
+		set_state_flag = ITA_p_ungoverned
+		add_dynamic_modifier = {
+			modifier = ITA_p_the_province_ungoverned
+			days = 240
+		}
+	}
+	random_owned_controlled_state = {
+		limit = {
+			OR = {
+				state = 162
+				state = 117
+				state = 115
+			}
+			NOT = { has_state_flag = ITA_p_ungoverned }
+		}
+		set_state_flag = ITA_p_ungoverned
+		add_dynamic_modifier = {
+			modifier = ITA_p_the_province_ungoverned
+			days = 240
+		}
+	}
+	custom_effect_tooltip = ITA_ungoverned_tt
+}
+
+ITA_p_restore_the_provinces = {
+	every_owned_state = {
+		limit = { has_state_flag = ITA_p_ungoverned }
+		clr_state_flag = ITA_p_ungoverned
+		remove_dynamic_modifier = { modifier = ITA_p_the_province_ungoverned }
+	}
+}
+
+ITA_piazza_rungs = {
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_piazza
+				value = 90
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = ITA_piazza_high_months value = 1 }
+	}
+	else = {
+		set_variable = { ITA_piazza_high_months = 0 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_piazza_lock
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_variable = { var = ITA_piazza_lock value = 1 }
+	}
+	else = {
+		if = {
+			limit = {
+				check_variable = {
+					var = ITA_piazza_high_months
+					value = 3
+					compare = greater_than_or_equals
+				}
+				NOT = { has_country_flag = ITA_p_the_insurrection }
+			}
+			set_variable = { ITA_piazza_lock = 24 }
+			country_event = { id = ita_dnc.603 days = 2 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ITA_piazza
+					value = 75
+					compare = greater_than_or_equals
+				}
+			}
+			set_variable = { ITA_piazza_lock = 14 }
+			country_event = { id = ita_dnc.602 days = 3 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ITA_piazza
+					value = 60
+					compare = greater_than_or_equals
+				}
+			}
+			set_variable = { ITA_piazza_lock = 12 }
+			country_event = { id = ita_dnc.601 days = 3 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ITA_piazza
+					value = 45
+					compare = greater_than_or_equals
+				}
+			}
+			set_variable = { ITA_piazza_lock = 10 }
+			country_event = { id = ita_dnc.600 days = 3 }
+		}
+	}
+}
+
+ITA_c_lose_a_paid_spirit = {
+	if = {
+		limit = { has_idea = ITA_a_the_giolittian_system }
+		remove_ideas = ITA_a_the_giolittian_system
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_majority_that_governs }
+		remove_ideas = ITA_a_the_majority_that_governs
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_prefects_circular }
+		remove_ideas = ITA_a_the_prefects_circular
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_kings_prerogative }
+		remove_ideas = ITA_a_the_kings_prerogative
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_a_socialist_in_the_ministry }
+		remove_ideas = ITA_a_a_socialist_in_the_ministry
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_reformists_at_the_door }
+		remove_ideas = ITA_a_the_reformists_at_the_door
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_catholic_vote }
+		remove_ideas = ITA_a_the_catholic_vote
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_labour_office }
+		remove_ideas = ITA_a_the_labour_office
+	}
+	else_if = {
+		limit = { has_idea = ITA_a_the_state_takes_no_side }
+		remove_ideas = ITA_a_the_state_takes_no_side
+	}
+	else = {
+		add_political_power = -75
+	}
+	custom_effect_tooltip = ITA_ministry_falls_tt
+}
+
+ITA_chamber_month = {
+	subtract_from_variable = { var = ITA_majority value = 0.8 }
+	set_temp_variable = { ITA_ct = ITA_machine_now }
+	divide_temp_variable = { var = ITA_ct value = 40 }
+	add_to_variable = { var = ITA_majority value = ITA_ct }
+	add_to_variable = { var = ITA_majority_bought value = ITA_ct }
+	subtract_from_variable = { var = ITA_majority_bought value = 0.4 }
+	set_temp_variable = { ITA_ct = ITA_machine_now }
+	divide_temp_variable = { var = ITA_ct value = 10 }
+	add_political_power = ITA_ct
+	if = {
+		limit = { has_idea = ITA_a_the_giolittian_system }
+		add_to_variable = { var = ITA_majority value = 0.4 }
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_piazza
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_variable = { var = ITA_majority value = 1 }
+	}
+	ITA_chamber_pledges = yes
+	ITA_chamber_bands = yes
+}
+
+ITA_chamber_pledges = {
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_pledges
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = ITA_pledge_clock value = 1 }
+		if = {
+			limit = {
+				check_variable = {
+					var = ITA_pledge_clock
+					value = 12
+					compare = greater_than_or_equals
+				}
+			}
+			set_variable = { ITA_pledge_clock = 0 }
+			subtract_from_variable = { var = ITA_pledges value = 1 }
+			if = {
+				limit = {
+					OR = {
+						has_idea = ITA_a_the_special_laws_of_the_south
+						has_idea = ITA_dnc_the_special_laws
+						has_idea = ITA_dnc_the_water_and_the_land
+						has_idea = ITA_dnc_the_land_that_holds
+					}
+				}
+				add_to_variable = { var = ITA_majority value = 2 }
+			}
+			else = {
+				subtract_from_variable = { var = ITA_majority value = 3 }
+				add_to_variable = { var = ITA_piazza value = 3 }
+			}
+		}
+	}
+}
+
+ITA_chamber_bands = {
+	clamp_variable = {
+		var = ITA_majority
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ITA_majority_bought
+		min = 0
+		max = 45
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_majority_bought
+				value = ITA_majority
+				compare = greater_than
+			}
+		}
+		set_variable = { ITA_majority_bought = ITA_majority }
+	}
+	clamp_variable = {
+		var = ITA_prefects
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ITA_pledges
+		min = 0
+		max = 12
+	}
+
+	set_variable = { ITA_c_pp = ITA_majority }
+	subtract_from_variable = { var = ITA_c_pp value = 55 }
+	divide_variable = { var = ITA_c_pp value = 200 }
+	clamp_variable = {
+		var = ITA_c_pp
+		min = -0.28
+		max = 0.22
+	}
+
+	set_variable = { ITA_c_stab = ITA_majority }
+	subtract_from_variable = { var = ITA_c_stab value = 55 }
+	divide_variable = { var = ITA_c_stab value = 250 }
+	clamp_variable = {
+		var = ITA_c_stab
+		min = -0.22
+		max = 0.18
+	}
+}
+
+ITA_election_resolve = {
+	if = {
+		limit = { has_country_flag = ITA_a_franchise_widened }
+		subtract_from_variable = { var = ITA_majority value = ITA_majority_bought }
+		set_temp_variable = { ITA_et = ITA_piazza }
+		divide_temp_variable = { var = ITA_et value = 5 }
+		subtract_from_variable = { var = ITA_majority value = ITA_et }
+		set_variable = { ITA_majority_bought = 0 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+		set_country_flag = ITA_c_the_mass_electorate
+	}
+	else = {
+		set_temp_variable = { ITA_et = ITA_majority_bought }
+		multiply_temp_variable = { var = ITA_et value = 0.5 }
+		add_to_variable = { var = ITA_majority value = ITA_et }
+		set_temp_variable = { ITA_et = ITA_piazza }
+		divide_temp_variable = { var = ITA_et value = 12 }
+		subtract_from_variable = { var = ITA_majority value = ITA_et }
+	}
+	ITA_chamber_bands = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_majority
+				value = 55
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { ITA_election_result = 1 }
+		add_political_power = 100
+		add_stability = 0.05
+		add_timed_idea = {
+			idea = ITA_c_the_majority_returned
+			days = 730
+		}
+		if = {
+			limit = { has_idea = ITA_c_the_ministry_of_transition }
+			remove_ideas = ITA_c_the_ministry_of_transition
+		}
+		if = {
+			limit = { has_idea = ITA_c_the_chamber_will_not_vote }
+			remove_ideas = ITA_c_the_chamber_will_not_vote
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = ITA_majority
+				value = 35
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { ITA_election_result = 2 }
+		add_political_power = -40
+		add_stability = -0.03
+		add_to_variable = { var = ITA_piazza value = 4 }
+		if = {
+			limit = { NOT = { has_idea = ITA_c_the_ministry_of_transition } }
+			add_timed_idea = {
+				idea = ITA_c_the_ministry_of_transition
+				days = 365
+			}
+		}
+	}
+	else = {
+		set_variable = { ITA_election_result = 3 }
+		add_political_power = -120
+		add_stability = -0.08
+		add_to_variable = { var = ITA_piazza value = 10 }
+		ITA_c_lose_a_paid_spirit = yes
+		if = {
+			limit = { NOT = { has_idea = ITA_c_the_chamber_will_not_vote } }
+			add_ideas = ITA_c_the_chamber_will_not_vote
+		}
+	}
+	ITA_piazza_bands = yes
+	ITA_chamber_bands = yes
+}
+
+ITA_election_watch = {
+	if = {
+		limit = {
+			date > 1904.11.6
+			NOT = { has_country_flag = ITA_c_election_1904 }
+		}
+		set_country_flag = ITA_c_election_1904
+		country_event = { id = ita_dnc.701 days = 2 }
+	}
+	else_if = {
+		limit = {
+			date > 1909.3.7
+			NOT = { has_country_flag = ITA_c_election_1909 }
+		}
+		set_country_flag = ITA_c_election_1909
+		country_event = { id = ita_dnc.702 days = 2 }
+	}
+	else_if = {
+		limit = {
+			date > 1913.10.26
+			NOT = { has_country_flag = ITA_c_election_1913 }
+		}
+		set_country_flag = ITA_c_election_1913
+		country_event = { id = ita_dnc.703 days = 2 }
+	}
+}
+
+ITA_circular_watch = {
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_circular_clock
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_variable = { var = ITA_circular_clock value = 1 }
+	}
+	else = {
+		set_variable = { ITA_circular_clock = 24 }
+		country_event = { id = ita_dnc.700 days = 4 }
+	}
+}
+
+ITA_dnc_monthly = {
+	if = {
+		limit = { NOT = { has_country_flag = ITA_dnc_systems_open } }
+		ITA_dnc_init = yes
+	}
+	add_to_variable = { var = ITA_dnc_months value = 1 }
+	ITA_machine_reckon = yes
+	ITA_piazza_month = yes
+	ITA_chamber_month = yes
+	ITA_election_watch = yes
+	ITA_circular_watch = yes
+	ITA_piazza_rungs = yes
+}
+
+ITA_chronicle_init = {
+	set_country_flag = ITA_chronicle_open
+	set_variable = { ITA_chron_months = 0 }
+	set_variable = { ITA_chron_beat = 0 }
+	set_variable = { ITA_chron_answered = 0 }
+	set_variable = { ITA_chron_lock = 0 }
+	set_variable = { ITA_libya_months = 0 }
+	if = {
+		limit = { date > 1900.10.1 }
+		set_country_flag = ITA_ch_b_monza
+	}
+	if = {
+		limit = { date > 1901.3.1 }
+		set_country_flag = ITA_ch_b_genoa
+	}
+	if = {
+		limit = { date > 1901.6.1 }
+		set_country_flag = ITA_ch_b_ministry
+	}
+	if = {
+		limit = { date > 1901.11.1 }
+		set_country_flag = ITA_ch_b_emigration
+	}
+	if = {
+		limit = { date > 1904.10.1 }
+		set_country_flag = ITA_ch_b_buggerru
+	}
+	if = {
+		limit = { date > 1904.10.10 }
+		set_country_flag = ITA_ch_b_general_strike
+	}
+	if = {
+		limit = { date > 1904.11.6 }
+		set_country_flag = ITA_ch_b_dissolution
+	}
+	if = {
+		limit = { date > 1908.9.1 }
+		set_country_flag = ITA_ch_b_parma
+	}
+	if = {
+		limit = { date > 1909.5.1 }
+		set_country_flag = ITA_ch_b_messina
+	}
+	if = {
+		limit = { date > 1911.4.1 }
+		set_country_flag = ITA_ch_b_nationalists
+	}
+	if = {
+		limit = { date > 1912.2.1 }
+		set_country_flag = ITA_ch_b_tripoli
+	}
+	if = {
+		limit = { date > 1912.9.1 }
+		set_country_flag = ITA_ch_b_suffrage
+	}
+	if = {
+		limit = { date > 1913.4.1 }
+		set_country_flag = ITA_ch_b_the_year
+	}
+	if = {
+		limit = { date > 1913.10.26 }
+		set_country_flag = ITA_ch_b_gentiloni
+	}
+	if = {
+		limit = { date > 1914.9.1 }
+		set_country_flag = ITA_ch_b_red_week
+	}
+}
+
+ITA_chronicle_beat_taken = {
+	add_to_variable = { var = ITA_chron_beat value = 1 }
+	set_variable = { ITA_chron_lock = 1 }
+	if = {
+		limit = { has_variable = ITA_piazza_lock }
+		set_variable = { ITA_piazza_lock = 3 }
+	}
+}
+
+ITA_chronicle_answered = {
+	add_to_variable = { var = ITA_chron_answered value = 1 }
+	custom_effect_tooltip = ITA_chronicle_answered_tt
+}
+
+ITA_libya_clock = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = ITA_w_libya_war_declared
+				has_country_flag = ITA_w_senussi_war
+			}
+			NOT = { has_country_flag = ITA_ch_libya_closed }
+		}
+		add_to_variable = { var = ITA_libya_months value = 1 }
+	}
+}
+
+ITA_chronicle_check = {
+	if = {
+		limit = { NOT = { has_country_flag = ITA_chronicle_open } }
+		ITA_chronicle_init = yes
+	}
+	add_to_variable = { var = ITA_chron_months value = 1 }
+	ITA_libya_clock = yes
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_chron_lock
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_variable = { var = ITA_chron_lock value = 1 }
+	}
+	else = {
+		ITA_chronicle_beats = yes
+	}
+}
+
+ITA_chronicle_beats = {
+	if = {
+		limit = {
+			date > 1900.8.5
+			NOT = { has_country_flag = ITA_ch_b_monza }
+		}
+		set_country_flag = ITA_ch_b_monza
+		country_event = { id = ita_dnc.610 days = 3 }
+	}
+	else_if = {
+		limit = {
+			date > 1900.12.20
+			NOT = { has_country_flag = ITA_ch_b_genoa }
+		}
+		set_country_flag = ITA_ch_b_genoa
+		country_event = { id = ita_dnc.611 days = 3 }
+	}
+	else_if = {
+		limit = {
+			date > 1901.2.15
+			NOT = { has_country_flag = ITA_ch_b_ministry }
+		}
+		set_country_flag = ITA_ch_b_ministry
+		country_event = { id = ita_dnc.612 days = 3 }
+	}
+	else_if = {
+		limit = {
+			date > 1901.7.1
+			NOT = { has_country_flag = ITA_ch_b_emigration }
+		}
+		set_country_flag = ITA_ch_b_emigration
+		country_event = { id = ita_dnc.623 days = 4 }
+	}
+	else_if = {
+		limit = {
+			date > 1904.9.6
+			NOT = { has_country_flag = ITA_ch_b_buggerru }
+		}
+		set_country_flag = ITA_ch_b_buggerru
+		country_event = { id = ita_dnc.613 days = 2 }
+	}
+	else_if = {
+		limit = {
+			date > 1904.9.25
+			NOT = { has_country_flag = ITA_ch_b_general_strike }
+		}
+		set_country_flag = ITA_ch_b_general_strike
+		country_event = { id = ita_dnc.614 days = 2 }
+	}
+	else_if = {
+		limit = {
+			date > 1904.10.14
+			date < 1904.11.6
+			NOT = { has_country_flag = ITA_ch_b_dissolution }
+		}
+		set_country_flag = ITA_ch_b_dissolution
+		country_event = { id = ita_dnc.615 days = 2 }
+	}
+	else_if = {
+		limit = {
+			date > 1908.5.10
+			NOT = { has_country_flag = ITA_ch_b_parma }
+		}
+		set_country_flag = ITA_ch_b_parma
+		country_event = { id = ita_dnc.624 days = 4 }
+	}
+	else_if = {
+		limit = {
+			date > 1909.1.8
+			NOT = { has_country_flag = ITA_ch_b_messina }
+		}
+		set_country_flag = ITA_ch_b_messina
+		country_event = { id = ita_dnc.616 days = 1 }
+	}
+	else_if = {
+		limit = {
+			date > 1910.12.4
+			NOT = { has_country_flag = ITA_ch_b_nationalists }
+		}
+		set_country_flag = ITA_ch_b_nationalists
+		country_event = { id = ita_dnc.625 days = 4 }
+	}
+	else_if = {
+		limit = {
+			date > 1911.9.29
+			NOT = { has_country_flag = ITA_ch_b_tripoli }
+		}
+		set_country_flag = ITA_ch_b_tripoli
+		country_event = { id = ita_dnc.617 days = 2 }
+	}
+	else_if = {
+		limit = {
+			date > 1912.5.15
+			NOT = { has_country_flag = ITA_ch_b_suffrage }
+		}
+		set_country_flag = ITA_ch_b_suffrage
+		country_event = { id = ita_dnc.619 days = 3 }
+	}
+	else_if = {
+		limit = {
+			NOT = { has_country_flag = ITA_ch_b_the_year }
+			NOT = { has_country_flag = ITA_ch_libya_closed }
+			OR = {
+				has_country_flag = ITA_w_libya_war_declared
+				has_country_flag = ITA_w_senussi_war
+			}
+			OR = {
+				check_variable = {
+					var = ITA_libya_months
+					value = 12
+					compare = greater_than_or_equals
+				}
+				date > 1912.9.20
+			}
+		}
+		set_country_flag = ITA_ch_b_the_year
+		country_event = { id = ita_dnc.618 days = 3 }
+	}
+	else_if = {
+		limit = {
+			date > 1913.9.20
+			date < 1913.10.26
+			NOT = { has_country_flag = ITA_ch_b_gentiloni }
+		}
+		set_country_flag = ITA_ch_b_gentiloni
+		country_event = { id = ita_dnc.620 days = 3 }
+	}
+	else_if = {
+		limit = {
+			date > 1914.6.8
+			NOT = { has_country_flag = ITA_ch_b_red_week }
+		}
+		set_country_flag = ITA_ch_b_red_week
+		country_event = { id = ita_dnc.621 days = 1 }
+	}
+	else_if = {
+		limit = {
+			date > 1914.7.25
+			NOT = { has_country_flag = ITA_ch_b_july }
+		}
+		set_country_flag = ITA_ch_b_july
+		country_event = { id = ita_dnc.622 days = 2 }
+	}
+}
+
+ITA_end_init = {
+	set_country_flag = ITA_end_systems_open
+	set_variable = { ITA_end_state = 0 }
+	set_variable = { ITA_end_brittle = 0 }
+	set_variable = { ITA_end_brittle_stab = 0 }
+	set_variable = { ITA_end_brittle_pp = 0 }
+	set_variable = { ITA_end_brittle_ws = 0 }
+	set_variable = { ITA_end_rising_months = 0 }
+	set_variable = { ITA_end_africa_months = 0 }
+}
+
+ITA_end_month = {
+	if = {
+		limit = { NOT = { has_country_flag = ITA_end_systems_open } }
+		ITA_end_init = yes
+	}
+	ITA_end_rising_watch = yes
+	ITA_end_africa_watch = yes
+	if = {
+		limit = { has_country_flag = ITA_end_by_decree }
+		ITA_end_brittle_month = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = ITA_end_army_in_africa
+			NOT = { has_country_flag = ITA_end_libya_closed }
+			NOT = { has_country_flag = ITA_end_recall_offered }
+			check_variable = {
+				var = ITA_end_africa_months
+				value = 30
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = ITA_end_recall_offered
+		country_event = { id = ita_dnc.751 days = 6 }
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = ITA_end_verdict_given }
+			NOT = { has_country_flag = ITA_end_warned }
+			date > 1913.9.1
+		}
+		set_country_flag = ITA_end_warned
+		country_event = { id = ita_dnc.701 days = 4 }
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = ITA_end_verdict_given }
+			OR = {
+				date > 1914.6.1
+				has_country_flag = ITA_end_reckoning_forced
+				check_variable = {
+					var = ITA_end_rising_months
+					value = 4
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		set_country_flag = ITA_end_verdict_given
+		country_event = { id = ita_dnc.700 days = 3 }
+	}
+}
+
+ITA_end_rising_watch = {
+	if = {
+		limit = {
+			has_variable = ITA_piazza
+			has_country_flag = ITA_p_the_insurrection
+			check_variable = {
+				var = ITA_piazza
+				value = 80
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_variable = { var = ITA_end_rising_months value = 1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = ITA_end_rising_months
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_variable = { var = ITA_end_rising_months value = 1 }
+	}
+}
+
+ITA_end_africa_watch = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = ITA_w_senussi_war
+				has_country_flag = ITA_w_libya_war_declared
+			}
+			NOT = { has_country_flag = ITA_ch_libya_closed }
+			NOT = { has_country_flag = ITA_end_libya_closed }
+		}
+		add_to_variable = { var = ITA_end_africa_months value = 1 }
+	}
+}
+
+ITA_end_brittle_bands = {
+	clamp_variable = {
+		var = ITA_end_brittle
+		min = 0
+		max = 100
+	}
+	set_variable = { ITA_end_brittle_stab = ITA_end_brittle }
+	multiply_variable = { var = ITA_end_brittle_stab value = -0.004 }
+	clamp_variable = {
+		var = ITA_end_brittle_stab
+		min = -0.40
+		max = 0
+	}
+	set_variable = { ITA_end_brittle_pp = ITA_end_brittle }
+	multiply_variable = { var = ITA_end_brittle_pp value = -0.003 }
+	clamp_variable = {
+		var = ITA_end_brittle_pp
+		min = -0.30
+		max = 0
+	}
+	set_variable = { ITA_end_brittle_ws = ITA_end_brittle }
+	multiply_variable = { var = ITA_end_brittle_ws value = -0.0035 }
+	clamp_variable = {
+		var = ITA_end_brittle_ws
+		min = -0.35
+		max = 0
+	}
+}
+
+ITA_end_brittle_month = {
+	if = {
+		limit = { has_variable = ITA_piazza }
+		set_temp_variable = { ITA_end_t = ITA_piazza }
+		subtract_from_temp_variable = { var = ITA_end_t value = 40 }
+		divide_temp_variable = { var = ITA_end_t value = 6 }
+		add_to_variable = { var = ITA_end_brittle value = ITA_end_t }
+	}
+	if = {
+		limit = { has_war = yes }
+		add_to_variable = { var = ITA_end_brittle value = 1.5 }
+	}
+	if = {
+		limit = { has_stability > 0.6 }
+		subtract_from_variable = { var = ITA_end_brittle value = 1 }
+	}
+	if = {
+		limit = { has_idea = ITA_end_the_ministry_of_the_sword }
+		add_to_variable = { var = ITA_end_brittle value = 0.4 }
+	}
+	ITA_end_brittle_bands = yes
+	if = {
+		limit = {
+			check_variable = {
+				var = ITA_end_brittle
+				value = 60
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = ITA_end_the_crack }
+		}
+		set_country_flag = ITA_end_the_crack
+		country_event = { id = ita_dnc.721 days = 5 }
+	}
+}
+
+ITA_end_close_the_systems = {
+	set_country_flag = ITA_end_verdict_given
+	if = {
+		limit = { has_variable = ITA_piazza_lock }
+		set_variable = { ITA_piazza_lock = 12 }
+	}
+	if = {
+		limit = { has_variable = ITA_chron_lock }
+		set_variable = { ITA_chron_lock = 6 }
+	}
+}
+
+ITA_end_route = {
+	if = {
+		limit = { NOT = { has_country_flag = ITA_end_systems_open } }
+		ITA_end_init = yes
+	}
+	ITA_end_close_the_systems = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = {
+					var = ITA_end_rising_months
+					value = 3
+					compare = greater_than_or_equals
+				}
+				AND = {
+					has_country_flag = ITA_p_the_insurrection
+					check_variable = {
+						var = ITA_piazza
+						value = 72
+						compare = greater_than_or_equals
+					}
+				}
+				check_variable = {
+					var = ITA_piazza
+					value = 85
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		set_variable = { ITA_end_state = 4 }
+		country_event = { id = ita_dnc.740 days = 2 }
+	}
+	else_if = {
+		limit = {
+			NOT = { has_country_flag = ITA_ch_libya_closed }
+			NOT = { has_country_flag = ITA_end_libya_closed }
+			OR = {
+				check_variable = {
+					var = ITA_end_africa_months
+					value = 16
+					compare = greater_than_or_equals
+				}
+				AND = {
+					has_idea = ITA_w_the_desert_that_does_not_end
+					check_variable = {
+						var = ITA_end_africa_months
+						value = 10
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+		set_variable = { ITA_end_state = 5 }
+		country_event = { id = ita_dnc.750 days = 2 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_flag = ITA_end_chamber_adjourned
+				AND = {
+					OR = {
+						has_idea = ITA_a_government_by_decree
+						has_idea = ITA_a_the_state_of_siege
+					}
+					check_variable = {
+						var = ITA_bayonets
+						value = 2
+						compare = greater_than_or_equals
+					}
+				}
+				AND = {
+					has_idea = ITA_a_the_statuto_restored
+					check_variable = {
+						var = ITA_bayonets
+						value = 3
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+		set_variable = { ITA_end_state = 2 }
+		country_event = { id = ita_dnc.720 days = 2 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_flag = ITA_end_left_in_government
+				AND = {
+					has_idea = ITA_a_the_popular_bloc
+					has_country_flag = ITA_a_franchise_widened
+					communism > 0.18
+					check_variable = {
+						var = ITA_piazza
+						value = 55
+						compare = less_than
+					}
+				}
+			}
+		}
+		set_variable = { ITA_end_state = 3 }
+		country_event = { id = ita_dnc.730 days = 2 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = ITA_a_franchise_widened
+			has_stability > 0.45
+			check_variable = {
+				var = ITA_piazza
+				value = 45
+				compare = less_than
+			}
+			check_variable = {
+				var = ITA_majority
+				value = 55
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = ITA_bayonets
+				value = 2
+				compare = less_than
+			}
+		}
+		set_variable = { ITA_end_state = 1 }
+		country_event = { id = ita_dnc.710 days = 2 }
+	}
+	else = {
+		set_variable = { ITA_end_state = 6 }
+		country_event = { id = ita_dnc.760 days = 2 }
+	}
+}
+
+ITA_end_the_provinces_go = {
+	add_to_temp_array = { rebel_state = 161 }
+	add_to_temp_array = { rebel_state = 157 }
+	add_to_temp_array = { rebel_state = 162 }
+	create_rebellion = yes
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 161
+				state = 157
+				state = 162
+			}
+		}
+		set_state_flag = ITA_end_province_lost
+	}
+	custom_effect_tooltip = ITA_end_provinces_go_tt
+}
+
+ITA_end_the_army_puts_it_down = {
+	add_to_variable = { var = ITA_bayonets value = 3 }
+	if = {
+		limit = { has_variable = ITA_piazza }
+		set_variable = { ITA_piazza = 30 }
+	}
+	if = {
+		limit = { has_variable = ITA_piazza_floor }
+		set_variable = { ITA_piazza_floor = 35 }
+	}
+	add_stability = -0.10
+	add_war_support = -0.10
+	add_manpower = -8000
+	add_popularity = {
+		ideology = communism
+		popularity = 0.06
+	}
+	custom_effect_tooltip = ITA_end_put_down_tt
+}
+
+ITA_end_neutral_lock = {
+	set_country_flag = ITA_end_neutral_locked
+	set_rule = {
+		can_join_factions = no
+		can_create_factions = no
+		can_declare_war_without_wargoal = no
+	}
+	custom_effect_tooltip = ITA_end_neutral_lock_tt
+}
+
+ITA_end_free_hand = {
+	set_country_flag = ITA_end_free_hand_open
+	set_rule = {
+		can_join_factions = yes
+		can_create_factions = yes
+		can_send_volunteers = yes
+	}
+	custom_effect_tooltip = ITA_end_free_hand_tt
+}
+
+ITA_end_close_libya = {
+	set_country_flag = ITA_end_libya_closed
+	set_country_flag = ITA_ch_libya_closed
+	if = {
+		limit = { has_idea = ITA_w_the_desert_that_does_not_end }
+		remove_ideas = ITA_w_the_desert_that_does_not_end
+	}
+	if = {
+		limit = { has_idea = ITA_end_the_army_that_cannot_come_home }
+		remove_ideas = ITA_end_the_army_that_cannot_come_home
+	}
+	if = {
+		limit = { NOT = { has_idea = ITA_end_the_coast_only } }
+		add_ideas = ITA_end_the_coast_only
+	}
+	if = {
+		limit = { has_variable = ITA_piazza }
+		subtract_from_variable = { var = ITA_piazza value = 10 }
+	}
+	custom_effect_tooltip = ITA_end_libya_closed_tt
+}
