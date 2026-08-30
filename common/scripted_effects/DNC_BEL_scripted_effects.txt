@@ -1,0 +1,1815 @@
+BEL_dnc_init = {
+	set_country_flag = BEL_dnc_systems_open
+	set_country_flag = BEL_army_french
+	set_variable = { BEL_dnc_months = 0 }
+	set_variable = { BEL_scandal = 12 }
+	set_variable = { BEL_chamber_congo = 8 }
+	set_variable = { BEL_congo_regime = 2 }
+	set_variable = { BEL_denials = 0 }
+	set_variable = { BEL_rung_shift = 0 }
+	set_variable = { BEL_rung_1 = 25 }
+	set_variable = { BEL_rung_2 = 40 }
+	set_variable = { BEL_rung_3 = 55 }
+	set_variable = { BEL_rung_4 = 70 }
+	set_variable = { BEL_rung_5 = 85 }
+	set_variable = { BEL_vote_cooldown = 0 }
+	set_variable = { BEL_flemish = 30 }
+	set_variable = { BEL_walloon = 70 }
+	set_variable = { BEL_flemish_refusals = 0 }
+	set_variable = { BEL_concessions = 0 }
+	set_variable = { BEL_flemish_calm = 0 }
+	set_variable = { BEL_scandal_opinion = 0 }
+	set_variable = { BEL_scandal_trade = 0 }
+	set_variable = { BEL_scandal_stability = 0 }
+	set_variable = { BEL_scandal_drift = 0 }
+	set_variable = { BEL_chamber_pp = 0 }
+	set_variable = { BEL_chamber_stability = 0 }
+	set_variable = { BEL_flemish_stability = 0 }
+	set_variable = { BEL_flemish_conscription = 0 }
+	set_variable = { BEL_flemish_org = 0 }
+	set_variable = { BEL_walloon_pp = 0 }
+	set_variable = { BEL_walloon_prod = 0 }
+	set_variable = { BEL_walloon_ic = 0 }
+	BEL_dnc_rungs = yes
+	BEL_dnc_dials = yes
+	add_dynamic_modifier = { modifier = BEL_e_the_kings_estate }
+	add_dynamic_modifier = { modifier = BEL_e_the_chamber_and_the_colony }
+	add_dynamic_modifier = { modifier = BEL_p_the_language_question }
+	add_dynamic_modifier = { modifier = BEL_p_the_walloon_bloc }
+}
+
+BEL_dnc_rungs = {
+	set_variable = { BEL_rung_shift = BEL_denials }
+	multiply_variable = { BEL_rung_shift = 3 }
+	clamp_variable = {
+		var = BEL_rung_shift
+		min = 0
+		max = 15
+	}
+	set_variable = { BEL_rung_1 = 25 }
+	subtract_from_variable = { BEL_rung_1 = BEL_rung_shift }
+	set_variable = { BEL_rung_2 = 40 }
+	subtract_from_variable = { BEL_rung_2 = BEL_rung_shift }
+	set_variable = { BEL_rung_3 = 55 }
+	subtract_from_variable = { BEL_rung_3 = BEL_rung_shift }
+	set_variable = { BEL_rung_4 = 70 }
+	subtract_from_variable = { BEL_rung_4 = BEL_rung_shift }
+	set_variable = { BEL_rung_5 = 85 }
+	subtract_from_variable = { BEL_rung_5 = BEL_rung_shift }
+}
+
+BEL_dnc_dials = {
+	clamp_variable = {
+		var = BEL_scandal
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = BEL_chamber_congo
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = BEL_flemish
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = BEL_walloon
+		min = 0
+		max = 100
+	}
+	set_variable = { BEL_scandal_opinion = BEL_scandal }
+	divide_variable = { BEL_scandal_opinion = 250 }
+	multiply_variable = { BEL_scandal_opinion = -1 }
+	set_variable = { BEL_scandal_trade = BEL_scandal }
+	divide_variable = { BEL_scandal_trade = 200 }
+	multiply_variable = { BEL_scandal_trade = -1 }
+	set_variable = { BEL_scandal_stability = BEL_scandal }
+	divide_variable = { BEL_scandal_stability = 400 }
+	multiply_variable = { BEL_scandal_stability = -1 }
+	set_variable = { BEL_scandal_drift = BEL_scandal }
+	divide_variable = { BEL_scandal_drift = 500 }
+	multiply_variable = { BEL_scandal_drift = -1 }
+	set_variable = { BEL_chamber_pp = BEL_chamber_congo }
+	subtract_from_variable = { BEL_chamber_pp = 50 }
+	divide_variable = { BEL_chamber_pp = 250 }
+	set_variable = { BEL_chamber_stability = BEL_chamber_congo }
+	subtract_from_variable = { BEL_chamber_stability = 50 }
+	divide_variable = { BEL_chamber_stability = 500 }
+	set_variable = { BEL_flemish_stability = BEL_flemish }
+	divide_variable = { BEL_flemish_stability = 400 }
+	multiply_variable = { BEL_flemish_stability = -1 }
+	set_variable = { BEL_flemish_conscription = BEL_flemish }
+	divide_variable = { BEL_flemish_conscription = 500 }
+	multiply_variable = { BEL_flemish_conscription = -1 }
+	set_variable = { BEL_flemish_org = BEL_flemish }
+	divide_variable = { BEL_flemish_org = 600 }
+	multiply_variable = { BEL_flemish_org = -1 }
+	set_variable = { BEL_walloon_pp = BEL_walloon }
+	subtract_from_variable = { BEL_walloon_pp = 50 }
+	divide_variable = { BEL_walloon_pp = 300 }
+	set_variable = { BEL_walloon_prod = BEL_walloon }
+	subtract_from_variable = { BEL_walloon_prod = 50 }
+	divide_variable = { BEL_walloon_prod = 400 }
+	set_variable = { BEL_walloon_ic = BEL_walloon }
+	subtract_from_variable = { BEL_walloon_ic = 50 }
+	divide_variable = { BEL_walloon_ic = 500 }
+}
+
+BEL_estate_deny = {
+	add_to_variable = { var = BEL_denials value = 1 }
+	clamp_variable = {
+		var = BEL_denials
+		min = 0
+		max = 8
+	}
+	subtract_from_variable = { var = BEL_scandal value = 6 }
+	BEL_dnc_rungs = yes
+	BEL_dnc_dials = yes
+}
+
+BEL_estate_month = {
+	set_temp_variable = { BEL_t_scandal_drift = 0 }
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 3
+				compare = greater_than_or_equals
+			}
+		}
+		set_temp_variable = { BEL_t_scandal_drift = 0.6 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 2
+				compare = equals
+			}
+		}
+		set_temp_variable = { BEL_t_scandal_drift = 0.4 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 1
+				compare = equals
+			}
+		}
+		set_temp_variable = { BEL_t_scandal_drift = 0.1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 0
+				compare = less_than_or_equals
+			}
+		}
+		set_temp_variable = { BEL_t_scandal_drift = -0.5 }
+	}
+
+	set_temp_variable = { BEL_t_denial_push = BEL_denials }
+	multiply_temp_variable = { BEL_t_denial_push = 0.15 }
+	add_to_temp_variable = { BEL_t_scandal_drift = BEL_t_denial_push }
+	if = {
+		limit = { has_country_flag = BEL_commission_sits }
+		add_to_temp_variable = { BEL_t_scandal_drift = 0.3 }
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_congo_annexed }
+		subtract_from_temp_variable = { BEL_t_scandal_drift = 0.2 }
+	}
+
+	add_to_variable = { var = BEL_scandal value = BEL_t_scandal_drift }
+	set_temp_variable = { BEL_t_chamber_drift = 0.1 }
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_scandal
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_temp_variable = { BEL_t_chamber_drift = 0.25 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_scandal
+				value = 65
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_temp_variable = { BEL_t_chamber_drift = 0.25 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_scandal
+				value = 85
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_temp_variable = { BEL_t_chamber_drift = 0.25 }
+	}
+
+	set_temp_variable = { BEL_t_denial_whip = BEL_denials }
+	multiply_temp_variable = { BEL_t_denial_whip = 0.1 }
+	subtract_from_temp_variable = { BEL_t_chamber_drift = BEL_t_denial_whip }
+	if = {
+		limit = { has_country_flag = BEL_congo_refused }
+		subtract_from_temp_variable = { BEL_t_chamber_drift = 0.15 }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = BEL_congo_annexed } }
+		add_to_variable = { var = BEL_chamber_congo value = BEL_t_chamber_drift }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_vote_cooldown
+				value = 0
+				compare = greater_than
+			}
+		}
+		subtract_from_variable = { var = BEL_vote_cooldown value = 1 }
+	}
+}
+
+BEL_peoples_month = {
+	set_temp_variable = { BEL_t_flemish_drift = 0.15 }
+	if = {
+		limit = { has_country_flag = BEL_army_french }
+		add_to_temp_variable = { BEL_t_flemish_drift = 0.2 }
+	}
+
+	set_temp_variable = { BEL_t_refusal_push = BEL_flemish_refusals }
+	multiply_temp_variable = { BEL_t_refusal_push = 0.1 }
+	add_to_temp_variable = { BEL_t_flemish_drift = BEL_t_refusal_push }
+	set_temp_variable = { BEL_t_concession_pull = BEL_concessions }
+	multiply_temp_variable = { BEL_t_concession_pull = 0.05 }
+	subtract_from_temp_variable = { BEL_t_flemish_drift = BEL_t_concession_pull }
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_flemish_calm
+				value = 0
+				compare = greater_than
+			}
+		}
+		subtract_from_temp_variable = { BEL_t_flemish_drift = 0.3 }
+		subtract_from_variable = { var = BEL_flemish_calm value = 1 }
+	}
+
+	add_to_variable = { var = BEL_flemish value = BEL_t_flemish_drift }
+	set_temp_variable = { BEL_t_walloon_drift = 0 }
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_walloon
+				value = 70
+				compare = less_than
+			}
+			NOT = { has_country_flag = BEL_walloon_congress_sat }
+		}
+		set_temp_variable = { BEL_t_walloon_drift = 0.15 }
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_flemish
+				value = 70
+				compare = greater_than_or_equals
+			}
+		}
+		subtract_from_temp_variable = { BEL_t_walloon_drift = 0.05 }
+	}
+
+	add_to_variable = { var = BEL_walloon value = BEL_t_walloon_drift }
+	if = {
+		limit = { has_country_flag = BEL_walloon_congress_sat }
+		clamp_variable = {
+			var = BEL_walloon
+			min = 0
+			max = 45
+		}
+	}
+}
+
+BEL_estate_check = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_rung_1_done }
+			check_variable = {
+				var = BEL_scandal
+				value = BEL_rung_1
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_rung_1_done
+		country_event = { id = bel_dnc.10 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_rung_1_done
+			NOT = { has_country_flag = BEL_rung_2_done }
+			check_variable = {
+				var = BEL_scandal
+				value = BEL_rung_2
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_rung_2_done
+		country_event = { id = bel_dnc.11 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_rung_2_done
+			NOT = { has_country_flag = BEL_rung_3_done }
+			check_variable = {
+				var = BEL_scandal
+				value = BEL_rung_3
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_rung_3_done
+		country_event = { id = bel_dnc.12 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_rung_3_done
+			NOT = { has_country_flag = BEL_rung_4_done }
+			check_variable = {
+				var = BEL_scandal
+				value = BEL_rung_4
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_rung_4_done
+		country_event = { id = bel_dnc.13 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_rung_4_done
+			NOT = { has_country_flag = BEL_rung_5_done }
+			check_variable = {
+				var = BEL_scandal
+				value = BEL_rung_5
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_rung_5_done
+		country_event = { id = bel_dnc.14 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_congo_annexed }
+			NOT = { has_country_flag = BEL_congo_lost }
+			country_exists = COG
+			check_variable = {
+				var = BEL_vote_cooldown
+				value = 0
+				compare = equals
+			}
+			check_variable = {
+				var = BEL_chamber_congo
+				value = 70
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BEL_scandal
+				value = 55
+				compare = less_than
+			}
+		}
+		set_variable = { BEL_vote_cooldown = 36 }
+		country_event = { id = bel_dnc.20 days = 5 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_rung_4_done
+			NOT = { has_country_flag = BEL_congo_annexed }
+			NOT = { has_country_flag = BEL_congo_lost }
+			NOT = { has_country_flag = BEL_terms_offered }
+			country_exists = COG
+			check_variable = {
+				var = BEL_scandal
+				value = 70
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BEL_chamber_congo
+				value = 50
+				compare = less_than
+			}
+		}
+		set_country_flag = BEL_terms_offered
+		country_event = { id = bel_dnc.21 days = 5 }
+	}
+}
+
+BEL_peoples_check = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_flemish_45_done }
+			check_variable = {
+				var = BEL_flemish
+				value = 45
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_flemish_45_done
+		country_event = { id = bel_dnc.30 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_flemish_60_done }
+			check_variable = {
+				var = BEL_flemish
+				value = 60
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_flemish_60_done
+		country_event = { id = bel_dnc.31 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_flemish_75_done }
+			check_variable = {
+				var = BEL_flemish
+				value = 75
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_flemish_75_done
+		country_event = { id = bel_dnc.32 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_flemish_90_done }
+			check_variable = {
+				var = BEL_flemish
+				value = 90
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_flemish_90_done
+		country_event = { id = bel_dnc.33 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_walloon_congress_sat }
+			check_variable = {
+				var = BEL_walloon
+				value = 30
+				compare = less_than_or_equals
+			}
+		}
+		country_event = { id = bel_dnc.34 days = 3 }
+	}
+}
+
+BEL_flemish_concede = {
+	add_to_variable = { var = BEL_concessions value = 1 }
+	set_variable = { BEL_flemish_calm = 24 }
+	clamp_variable = {
+		var = BEL_concessions
+		min = 0
+		max = 6
+	}
+}
+
+BEL_flemish_refuse = {
+	add_to_variable = { var = BEL_flemish_refusals value = 1 }
+	clamp_variable = {
+		var = BEL_flemish_refusals
+		min = 0
+		max = 8
+	}
+}
+
+BEL_annex_the_congo = {
+	set_country_flag = BEL_congo_annexed
+	set_variable = { BEL_chamber_congo = 100 }
+	if = {
+		limit = { country_exists = COG }
+		COG = {
+			drop_cosmetic_tag = yes
+		}
+		transfer_state = 295
+		transfer_state = 718
+		transfer_state = 768
+		transfer_state = 769
+		transfer_state = 538
+	}
+
+	BEL_dnc_dials = yes
+}
+
+BEL_dnc_monthly = {
+	add_to_variable = { var = BEL_dnc_months value = 1 }
+	BEL_estate_month = yes
+	BEL_peoples_month = yes
+	BEL_dnc_rungs = yes
+	BEL_dnc_dials = yes
+	BEL_estate_check = yes
+	BEL_peoples_check = yes
+}
+
+BEL_chronicle_init = {
+	set_country_flag = BEL_chronicle_open
+	set_variable = { BEL_c_forts = 0 }
+	set_variable = { BEL_c_strike_timer = 0 }
+	set_variable = { BEL_c_fort_defence = 0 }
+	set_variable = { BEL_c_fort_dig = 0 }
+	set_variable = { BEL_c_fort_speed = 0 }
+	set_variable = { BEL_c_fort_pp = 0 }
+	add_ideas = BEL_c_the_lottery_army
+	add_ideas = BEL_c_the_guarantee_of_1839
+}
+
+BEL_chronicle_dials = {
+	clamp_variable = {
+		var = BEL_c_forts
+		min = 0
+		max = 3
+	}
+	set_variable = { BEL_c_fort_defence = BEL_c_forts }
+	multiply_variable = { BEL_c_fort_defence = 0.04 }
+	set_variable = { BEL_c_fort_dig = BEL_c_forts }
+	multiply_variable = { BEL_c_fort_dig = 0.10 }
+	set_variable = { BEL_c_fort_speed = BEL_c_forts }
+	multiply_variable = { BEL_c_fort_speed = 0.10 }
+	set_variable = { BEL_c_fort_pp = BEL_c_forts }
+	multiply_variable = { BEL_c_fort_pp = -0.03 }
+}
+
+BEL_c_fort_built = {
+	add_to_variable = { var = BEL_c_forts value = 1 }
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = BEL_c_the_fortress_line } } }
+		add_dynamic_modifier = { modifier = BEL_c_the_fortress_line }
+	}
+
+	BEL_chronicle_dials = yes
+}
+
+BEL_c_strike_begins = {
+	if = {
+		limit = { NOT = { has_idea = BEL_c_the_general_strike } }
+		add_ideas = BEL_c_the_general_strike
+	}
+
+	set_variable = { BEL_c_strike_timer = 6 }
+}
+
+BEL_c_end_the_lottery = {
+	if = {
+		limit = { has_idea = BEL_c_the_lottery_army }
+		remove_ideas = BEL_c_the_lottery_army
+	}
+}
+
+BEL_chronicle_month = {
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_c_strike_timer
+				value = 0
+				compare = greater_than
+			}
+		}
+		subtract_from_variable = { var = BEL_c_strike_timer value = 1 }
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_c_strike_timer
+					value = 0
+					compare = equals
+				}
+				has_idea = BEL_c_the_general_strike
+			}
+			remove_ideas = BEL_c_the_general_strike
+		}
+	}
+
+	BEL_chronicle_dials = yes
+	BEL_chronicle_check = yes
+}
+
+BEL_chronicle_check = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_quota }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 6
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 14
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = BEL_c_bell_quota
+			country_event = { id = bel_dnc.600 days = 3 }
+		}
+		else = {
+			random_list = {
+				75 = { }
+				25 = {
+					set_country_flag = BEL_c_bell_quota
+					country_event = { id = bel_dnc.600 days = 3 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_c_bell_quota
+			NOT = { has_country_flag = BEL_c_bell_interpellation }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 18
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 26
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = BEL_c_bell_interpellation
+			country_event = { id = bel_dnc.601 days = 3 }
+		}
+		else = {
+			random_list = {
+				70 = { }
+				30 = {
+					set_country_flag = BEL_c_bell_interpellation
+					country_event = { id = bel_dnc.601 days = 3 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_strike_one }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 27
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_strike_one
+		country_event = { id = bel_dnc.602 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_consul }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 42
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_consul
+		country_event = { id = bel_dnc.603 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_c_bell_consul
+			NOT = { has_country_flag = BEL_c_bell_report }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_report
+		country_event = { id = bel_dnc.604 days = 3 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_c_bell_report
+			NOT = { has_country_flag = BEL_c_bell_association }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 54
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 60
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = BEL_c_bell_association
+			country_event = { id = bel_dnc.605 days = 3 }
+		}
+		else = {
+			random_list = {
+				65 = { }
+				35 = {
+					set_country_flag = BEL_c_bell_association
+					country_event = { id = bel_dnc.605 days = 3 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_commission }
+			NOT = { has_country_flag = BEL_commission_sits }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 62
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_commission
+		country_event = { id = bel_dnc.606 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_findings }
+			OR = {
+				has_country_flag = BEL_c_commission_named
+				has_country_flag = BEL_commission_sits
+			}
+			check_variable = {
+				var = BEL_dnc_months
+				value = 70
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_findings
+		country_event = { id = bel_dnc.607 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_annexation_debate }
+			NOT = { has_country_flag = BEL_congo_annexed }
+			NOT = { has_country_flag = BEL_congo_lost }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 76
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 86
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = BEL_c_bell_annexation_debate
+			country_event = { id = bel_dnc.608 days = 4 }
+		}
+		else = {
+			random_list = {
+				70 = { }
+				30 = {
+					set_country_flag = BEL_c_bell_annexation_debate
+					country_event = { id = bel_dnc.608 days = 4 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_brialmont }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 88
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_brialmont
+		country_event = { id = bel_dnc.609 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_charter }
+			NOT = { has_country_flag = BEL_congo_lost }
+			NOT = { has_country_flag = BEL_c_no_colony }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 100
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_charter
+		country_event = { id = bel_dnc.610 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_november }
+			NOT = { has_country_flag = BEL_congo_annexed }
+			NOT = { has_country_flag = BEL_congo_lost }
+			country_exists = COG
+			check_variable = {
+				var = BEL_dnc_months
+				value = 106
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_november
+		country_event = { id = bel_dnc.611 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_boma }
+			has_country_flag = BEL_congo_annexed
+			check_variable = {
+				var = BEL_dnc_months
+				value = 108
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_boma
+		country_event = { id = bel_dnc.612 days = 5 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_service }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 110
+				compare = greater_than_or_equals
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 117
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = BEL_c_bell_service
+			country_event = { id = bel_dnc.613 days = 3 }
+		}
+		else = {
+			random_list = {
+				70 = { }
+				30 = {
+					set_country_flag = BEL_c_bell_service
+					country_event = { id = bel_dnc.613 days = 3 }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_the_king_dies }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 119
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_the_king_dies
+		country_event = { id = bel_dnc.614 days = 2 }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = BEL_c_leopold_dead
+			NOT = { has_country_flag = BEL_c_bell_the_oath }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 121
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_the_oath
+		country_event = { id = bel_dnc.615 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_cupolas }
+			NOT = { has_country_flag = BEL_c_no_forts }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 132
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_cupolas
+		country_event = { id = bel_dnc.616 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_ghent }
+			NOT = { has_country_flag = BEL_ghent_flemish }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 140
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_ghent
+		country_event = { id = bel_dnc.617 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_last_works }
+			check_variable = {
+				var = BEL_c_forts
+				value = 1
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BEL_dnc_months
+				value = 156
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_last_works
+		country_event = { id = bel_dnc.618 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_strike_two }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 159
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_strike_two
+		country_event = { id = bel_dnc.619 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_army_law }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 162
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_army_law
+		country_event = { id = bel_dnc.620 days = 4 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_c_bell_august }
+			check_variable = {
+				var = BEL_dnc_months
+				value = 175
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_bell_august
+		country_event = { id = bel_dnc.621 days = 2 }
+	}
+}
+
+BEL_a_dials = {
+	clamp_variable = {
+		var = BEL_a_plural
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = BEL_a_prerogative
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = BEL_a_strikes
+		min = 0
+		max = 6
+	}
+	set_variable = { BEL_a_plural_stability = BEL_a_plural }
+	divide_variable = { BEL_a_plural_stability = 1000 }
+	set_variable = { BEL_a_plural_pp = BEL_a_plural }
+	divide_variable = { BEL_a_plural_pp = 2000 }
+	set_variable = { BEL_a_plural_ws = 100 }
+	subtract_from_variable = { BEL_a_plural_ws = BEL_a_plural }
+	divide_variable = { BEL_a_plural_ws = 1000 }
+	set_variable = { BEL_a_plural_conscription = 100 }
+	subtract_from_variable = { BEL_a_plural_conscription = BEL_a_plural }
+	divide_variable = { BEL_a_plural_conscription = 4000 }
+	set_variable = { BEL_a_prerog_pp = BEL_a_prerogative }
+	divide_variable = { BEL_a_prerog_pp = 500 }
+	set_variable = { BEL_a_prerog_stability = BEL_a_prerogative }
+	divide_variable = { BEL_a_prerog_stability = 400 }
+	multiply_variable = { BEL_a_prerog_stability = -1 }
+	set_variable = { BEL_a_prerog_drift = BEL_a_prerogative }
+	divide_variable = { BEL_a_prerog_drift = 300 }
+}
+
+BEL_a_open_the_chamber = {
+	set_country_flag = BEL_a_branch_open
+	set_variable = { BEL_a_plural = 100 }
+	set_variable = { BEL_a_prerogative = 10 }
+	set_variable = { BEL_a_strikes = 0 }
+	BEL_a_dials = yes
+	add_dynamic_modifier = { modifier = BEL_a_the_plural_franchise }
+	add_dynamic_modifier = { modifier = BEL_a_the_royal_prerogative }
+}
+
+BEL_a_month = {
+	set_temp_variable = { BEL_a_t_prerog = -0.15 }
+	if = {
+		limit = { has_country_flag = BEL_a_crown_governs }
+		set_temp_variable = { BEL_a_t_prerog = 0.2 }
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_a_house_prorogued }
+		add_to_temp_variable = { BEL_a_t_prerog = 0.15 }
+	}
+
+	add_to_variable = { var = BEL_a_prerogative value = BEL_a_t_prerog }
+	set_temp_variable = { BEL_a_t_plural = 0 }
+	if = {
+		limit = { has_country_flag = BEL_a_cartel }
+		subtract_from_temp_variable = { BEL_a_t_plural = 0.25 }
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_a_catholic }
+		add_to_temp_variable = { BEL_a_t_plural = 0.1 }
+	}
+
+	set_temp_variable = { BEL_a_t_strike_push = BEL_a_strikes }
+	multiply_temp_variable = { BEL_a_t_strike_push = 0.15 }
+	subtract_from_temp_variable = { BEL_a_t_plural = BEL_a_t_strike_push }
+	add_to_variable = { var = BEL_a_plural value = BEL_a_t_plural }
+	if = {
+		limit = { has_country_flag = BEL_a_crown_governs }
+		add_to_variable = { var = BEL_scandal value = 0.1 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 0.1 }
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_a_cartel }
+		add_to_variable = { var = BEL_chamber_congo value = 0.15 }
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_a_catholic }
+		add_to_variable = { var = BEL_scandal value = 0.05 }
+	}
+
+	BEL_a_dials = yes
+	BEL_dnc_dials = yes
+	BEL_a_check = yes
+}
+
+BEL_a_check = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_a_register_done }
+			check_variable = {
+				var = BEL_a_plural
+				value = 0
+				compare = less_than_or_equals
+			}
+		}
+		set_country_flag = BEL_a_register_done
+		country_event = { id = bel_dnc.113 days = 3 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_a_silent_house_done }
+			check_variable = {
+				var = BEL_a_prerogative
+				value = 70
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_a_silent_house_done
+		country_event = { id = bel_dnc.114 days = 3 }
+	}
+}
+
+BEL_c_open_the_question = {
+	set_country_flag = BEL_c_estate_branch_open
+	add_to_variable = { var = BEL_chamber_congo value = 3 }
+	BEL_dnc_dials = yes
+}
+
+BEL_c_regime_full = {
+	set_variable = { BEL_congo_regime = 3 }
+	BEL_dnc_dials = yes
+}
+
+BEL_c_regime_reformed = {
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 1
+				compare = greater_than
+			}
+		}
+		set_variable = { BEL_congo_regime = 1 }
+	}
+
+	BEL_dnc_dials = yes
+}
+
+BEL_c_regime_broken = {
+	set_variable = { BEL_congo_regime = 0 }
+	BEL_dnc_dials = yes
+}
+
+BEL_c_take_the_colony = {
+	BEL_annex_the_congo = yes
+	set_country_flag = BEL_c_colony_taken
+	if = {
+		limit = {
+			NOT = { has_idea = BEL_c_the_weight_of_the_basin }
+		}
+		add_ideas = BEL_c_the_weight_of_the_basin
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 1
+				compare = greater_than
+			}
+		}
+		set_variable = { BEL_congo_regime = 1 }
+	}
+
+	BEL_dnc_dials = yes
+}
+
+BEL_c_refuse_the_cession = {
+	set_country_flag = BEL_congo_refused
+	subtract_from_variable = { var = BEL_chamber_congo value = 30 }
+	set_variable = { BEL_vote_cooldown = 36 }
+	BEL_dnc_dials = yes
+}
+
+BEL_c_lose_the_colony = {
+	set_country_flag = BEL_congo_lost
+	set_country_flag = BEL_c_colony_lost
+	if = {
+		limit = { country_exists = COG }
+		COG = {
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	if = {
+		limit = {
+			COG = { is_subject_of = BEL }
+		}
+		end_puppet = COG
+	}
+
+	if = {
+		limit = {
+			NOT = { has_idea = BEL_c_the_basin_passed_to_others }
+		}
+		add_ideas = BEL_c_the_basin_passed_to_others
+	}
+
+	set_variable = { BEL_congo_regime = 0 }
+	set_variable = { BEL_chamber_congo = 0 }
+	BEL_dnc_dials = yes
+}
+
+BEL_v_concede = {
+	BEL_flemish_concede = yes
+	subtract_from_variable = { var = BEL_flemish value = BEL_t_flemish_drop }
+	subtract_from_variable = { var = BEL_walloon value = BEL_t_walloon_drop }
+	BEL_dnc_dials = yes
+}
+
+BEL_v_refuse = {
+	BEL_flemish_refuse = yes
+	add_to_variable = { var = BEL_flemish value = BEL_t_flemish_rise }
+	add_to_variable = { var = BEL_walloon value = BEL_t_walloon_rise }
+	BEL_dnc_dials = yes
+}
+
+BEL_v_shift = {
+	add_to_variable = { var = BEL_flemish value = BEL_t_flemish_shift }
+	add_to_variable = { var = BEL_walloon value = BEL_t_walloon_shift }
+	BEL_dnc_dials = yes
+}
+
+BEL_v_army_in_dutch = {
+	clr_country_flag = BEL_army_french
+	set_country_flag = BEL_v_command_in_dutch
+}
+
+BEL_v_army_in_french = {
+	set_country_flag = BEL_army_french
+	clr_country_flag = BEL_v_command_in_dutch
+}
+
+BEL_v_ghent_in_dutch = {
+	set_country_flag = BEL_ghent_flemish
+}
+
+BEL_v_hold_the_movement = {
+	add_to_variable = { BEL_flemish_calm = 1 }
+	clamp_variable = {
+		var = BEL_flemish_calm
+		min = 0
+		max = 60
+	}
+	BEL_dnc_dials = yes
+}
+
+BEL_f_init = {
+	if = {
+		limit = { NOT = { has_variable = BEL_c_forts } }
+		set_variable = { BEL_c_forts = 0 }
+	}
+
+	if = {
+		limit = { NOT = { has_variable = BEL_f_service } }
+		set_variable = { BEL_f_service = 0 }
+	}
+
+	set_variable = { BEL_f_fort_def = 0 }
+	set_variable = { BEL_f_fort_dig = 0 }
+	set_variable = { BEL_f_fort_speed = 0 }
+	BEL_f_dials = yes
+}
+
+BEL_f_dials = {
+	clamp_variable = {
+		var = BEL_c_forts
+		min = 0
+		max = 3
+	}
+	clamp_variable = {
+		var = BEL_f_service
+		min = 0
+		max = 3
+	}
+	set_variable = { BEL_f_fort_def = BEL_c_forts }
+	multiply_variable = { BEL_f_fort_def = 0.05 }
+	set_variable = { BEL_f_fort_dig = BEL_c_forts }
+	multiply_variable = { BEL_f_fort_dig = 0.5 }
+	set_variable = { BEL_f_fort_speed = BEL_c_forts }
+	multiply_variable = { BEL_f_fort_speed = 0.05 }
+	if = {
+		limit = { has_country_flag = BEL_f_cheap_concrete }
+		multiply_variable = { BEL_f_fort_def = 0.5 }
+		multiply_variable = { BEL_f_fort_dig = 0.5 }
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_f_garrisons_named }
+		add_to_variable = { var = BEL_f_fort_def value = 0.03 }
+	}
+}
+
+BEL_f_open_position = {
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = BEL_f_the_position_fortifiee } }
+		}
+		add_dynamic_modifier = { modifier = BEL_f_the_position_fortifiee }
+	}
+}
+
+BEL_f_stage_done = {
+	add_to_variable = { var = BEL_c_forts value = 1 }
+	BEL_f_open_position = yes
+	BEL_f_dials = yes
+}
+
+BEL_f_kings_gift = {
+	if = {
+		limit = { has_variable = BEL_scandal }
+		add_to_variable = { var = BEL_scandal value = 8 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 6 }
+		add_to_variable = { var = BEL_congo_regime value = 1 }
+		clamp_variable = {
+			var = BEL_congo_regime
+			min = 0
+			max = 3
+		}
+		BEL_dnc_dials = yes
+	}
+}
+
+BEL_f_chamber_refuses_gift = {
+	if = {
+		limit = { has_variable = BEL_scandal }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		subtract_from_variable = { var = BEL_scandal value = 2 }
+		BEL_dnc_dials = yes
+	}
+}
+
+BEL_f_august_verdict = {
+	BEL_f_dials = yes
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_c_forts
+				value = 3
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = BEL_f_cheap_concrete }
+		}
+		set_country_flag = BEL_f_august_strong
+		add_ideas = BEL_f_the_position_holds
+		add_war_support = 0.05
+		army_experience = 40
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_f_august_strong }
+			check_variable = {
+				var = BEL_c_forts
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_f_august_partial
+		add_ideas = BEL_f_the_works_unfinished
+		army_experience = 20
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_f_august_strong }
+			NOT = { has_country_flag = BEL_f_august_partial }
+		}
+		set_country_flag = BEL_f_august_weak
+		add_ideas = BEL_f_the_forts_of_plain_concrete
+		add_stability = -0.05
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_f_service
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_manpower = 40000
+		custom_effect_tooltip = BEL_f_the_classes_answer_tt
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_f_service
+				value = 0
+				compare = equals
+			}
+		}
+		add_war_support = -0.05
+		custom_effect_tooltip = BEL_f_the_register_is_thin_tt
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = BEL_army_french } }
+		custom_effect_tooltip = BEL_f_the_orders_are_understood_tt
+	}
+
+	if = {
+		limit = { has_country_flag = BEL_army_french }
+		add_to_variable = { var = BEL_flemish value = 5 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_f_the_orders_are_not_understood_tt
+	}
+}
+
+BEL_u_month = {
+	if = {
+		limit = {
+			NOT = { has_variable = BEL_u_annex_month }
+			OR = {
+				has_country_flag = BEL_congo_annexed
+				owns_state = 295
+			}
+		}
+		set_variable = { BEL_u_annex_month = BEL_dnc_months }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_inheritance_seen }
+			NOT = { has_country_flag = BEL_congo_annexed }
+			NOT = { has_country_flag = BEL_congo_lost }
+			NOT = { owns_state = 295 }
+			country_exists = COG
+			OR = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 121
+					compare = greater_than_or_equals
+				}
+				date > 1910.3.1
+			}
+		}
+		set_country_flag = BEL_u_inheritance_seen
+		country_event = { id = bel_dnc.705 days = 12 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_powers_interest }
+			NOT = { has_country_flag = BEL_congo_annexed }
+			NOT = { has_country_flag = BEL_congo_lost }
+			NOT = { owns_state = 295 }
+			country_exists = COG
+			check_variable = {
+				var = BEL_scandal
+				value = 60
+				compare = greater_than_or_equals
+			}
+			OR = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 150
+					compare = greater_than_or_equals
+				}
+				date > 1912.7.1
+			}
+		}
+		set_country_flag = BEL_u_powers_interest
+		country_event = { id = bel_dnc.706 days = 20 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_stocktaking }
+			OR = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 160
+					compare = greater_than_or_equals
+				}
+				date > 1913.2.1
+			}
+		}
+		set_country_flag = BEL_u_stocktaking
+		country_event = { id = bel_dnc.750 days = 6 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_verdict_done }
+			OR = {
+				check_variable = {
+					var = BEL_dnc_months
+					value = 176
+					compare = greater_than_or_equals
+				}
+				date > 1914.8.20
+			}
+		}
+		set_country_flag = BEL_u_verdict_done
+		country_event = { id = bel_dnc.700 days = 1 }
+	}
+}
+
+BEL_u_verdict = {
+	BEL_u_colony_verdict = yes
+	BEL_u_army_verdict = yes
+	BEL_u_language_verdict = yes
+}
+
+BEL_u_colony_verdict = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_colony_named }
+			OR = {
+				has_country_flag = BEL_congo_annexed
+				owns_state = 295
+			}
+			check_variable = {
+				var = BEL_scandal
+				value = 50
+				compare = less_than
+			}
+			check_variable = {
+				var = BEL_congo_regime
+				value = 1
+				compare = less_than_or_equals
+			}
+			OR = {
+				NOT = { has_variable = BEL_u_annex_month }
+				check_variable = {
+					var = BEL_u_annex_month
+					value = 108
+					compare = less_than
+				}
+			}
+		}
+		set_country_flag = BEL_u_colony_named
+		set_country_flag = BEL_u_colony_charter
+		country_event = { id = bel_dnc.701 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_colony_named }
+			OR = {
+				has_country_flag = BEL_congo_annexed
+				owns_state = 295
+			}
+		}
+		set_country_flag = BEL_u_colony_named
+		set_country_flag = BEL_u_colony_shame
+		country_event = { id = bel_dnc.702 days = 2 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_colony_named }
+			OR = {
+				has_country_flag = BEL_congo_lost
+				NOT = { country_exists = COG }
+			}
+		}
+		set_country_flag = BEL_u_colony_named
+		set_country_flag = BEL_u_colony_partitioned
+		country_event = { id = bel_dnc.703 days = 2 }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = BEL_u_colony_named } }
+		set_country_flag = BEL_u_colony_named
+		set_country_flag = BEL_u_colony_estate
+		country_event = { id = bel_dnc.704 days = 2 }
+	}
+}
+
+BEL_u_army_verdict = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_army_named }
+			check_variable = {
+				var = BEL_c_forts
+				value = 3
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = BEL_f_cheap_concrete }
+		}
+		set_country_flag = BEL_u_army_named
+		set_country_flag = BEL_u_army_strong
+		country_event = { id = bel_dnc.710 days = 5 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_army_named }
+			check_variable = {
+				var = BEL_c_forts
+				value = 1
+				compare = less_than_or_equals
+			}
+		}
+		set_country_flag = BEL_u_army_named
+		set_country_flag = BEL_u_army_paper
+		country_event = { id = bel_dnc.711 days = 5 }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = BEL_u_army_named } }
+		set_country_flag = BEL_u_army_named
+		set_country_flag = BEL_u_army_half
+		country_event = { id = bel_dnc.712 days = 5 }
+	}
+}
+
+BEL_u_language_verdict = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_language_named }
+			OR = {
+				check_variable = {
+					var = BEL_flemish
+					value = 65
+					compare = greater_than_or_equals
+				}
+				AND = {
+					has_country_flag = BEL_walloon_congress_sat
+					check_variable = {
+						var = BEL_walloon
+						value = 40
+						compare = less_than_or_equals
+					}
+				}
+			}
+		}
+		set_country_flag = BEL_u_language_named
+		set_country_flag = BEL_u_language_constitutional
+		country_event = { id = bel_dnc.721 days = 8 }
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_language_named }
+			check_variable = {
+				var = BEL_flemish
+				value = 40
+				compare = less_than_or_equals
+			}
+			check_variable = {
+				var = BEL_walloon
+				value = 55
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = BEL_army_french }
+		}
+		set_country_flag = BEL_u_language_named
+		set_country_flag = BEL_u_language_settled
+		country_event = { id = bel_dnc.720 days = 8 }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = BEL_u_language_named } }
+		set_country_flag = BEL_u_language_named
+		set_country_flag = BEL_u_language_endures
+		country_event = { id = bel_dnc.723 days = 8 }
+	}
+}
+
+BEL_u_the_basin_is_ours = {
+	if = {
+		limit = { NOT = { has_idea = BEL_u_the_basin_in_our_hands } }
+		add_ideas = BEL_u_the_basin_in_our_hands
+	}
+}
+
+BEL_u_service_dividend = {
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_f_service
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		add_manpower = 30000
+		add_war_support = 0.05
+		custom_effect_tooltip = BEL_u_the_classes_are_full_tt
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BEL_f_service
+				value = 1
+				compare = less_than_or_equals
+			}
+		}
+		add_war_support = -0.05
+		custom_effect_tooltip = BEL_u_the_register_is_short_tt
+	}
+}
+
+BEL_u_take_the_basin_late = {
+	if = {
+		limit = { country_exists = COG }
+		BEL_annex_the_congo = yes
+	}
+	set_country_flag = BEL_congo_annexed
+	if = {
+		limit = { NOT = { has_variable = BEL_u_annex_month } }
+		set_variable = { BEL_u_annex_month = BEL_dnc_months }
+	}
+	add_to_variable = { var = BEL_scandal value = 10 }
+	add_to_variable = { var = BEL_chamber_congo value = 20 }
+	set_variable = { BEL_congo_regime = 1 }
+	BEL_dnc_dials = yes
+}
+
+BEL_u_the_basin_is_taken_from_us = {
+	set_country_flag = BEL_congo_lost
+	if = {
+		limit = {
+			country_exists = COG
+			COG = { is_subject_of = ROOT }
+		}
+		end_puppet = COG
+	}
+	set_variable = { BEL_chamber_congo = 0 }
+	subtract_from_variable = { var = BEL_scandal value = 10 }
+	BEL_dnc_dials = yes
+}
+
+BEL_u_name_the_country = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_country_named }
+			OR = {
+				has_country_flag = BEL_u_federal
+				has_country_flag = BEL_u_unitary_strain
+			}
+		}
+		set_country_flag = BEL_u_country_named
+		set_country_flag = BEL_u_is_two_kingdoms
+		add_ideas = BEL_u_the_two_kingdoms
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_country_named }
+			has_country_flag = BEL_u_colony_charter
+		}
+		set_country_flag = BEL_u_country_named
+		set_country_flag = BEL_u_is_colonial_kingdom
+		add_ideas = BEL_u_the_colonial_kingdom
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_country_named }
+			has_country_flag = BEL_u_colony_shame
+		}
+		set_country_flag = BEL_u_country_named
+		set_country_flag = BEL_u_is_shamed_power
+		add_ideas = BEL_u_the_shamed_power
+	}
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BEL_u_country_named }
+			has_country_flag = BEL_u_army_strong
+		}
+		set_country_flag = BEL_u_country_named
+		set_country_flag = BEL_u_is_armed_neutral
+		add_ideas = BEL_u_the_armed_neutral
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = BEL_u_country_named } }
+		set_country_flag = BEL_u_country_named
+		set_country_flag = BEL_u_is_guaranteed_neutral
+		add_ideas = BEL_u_the_guaranteed_neutral
+	}
+
+	set_country_flag = BEL_u_book_closed
+}

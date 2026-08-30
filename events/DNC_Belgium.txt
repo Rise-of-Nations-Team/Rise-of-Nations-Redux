@@ -1,0 +1,3645 @@
+add_namespace = bel_dnc
+
+country_event = {
+	id = bel_dnc.10
+	title = bel_dnc.10.t
+	desc = bel_dnc.10.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.10.a
+		ai_chance = { factor = 45 }
+		add_political_power = 30
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_tt_deny
+	}
+
+	option = {
+		name = bel_dnc.10.b
+		ai_chance = { factor = 35 }
+		add_to_variable = { var = BEL_scandal value = 2 }
+		add_to_variable = { var = BEL_chamber_congo value = 3 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.10.c
+		ai_chance = { factor = 20 }
+		add_political_power = -40
+		add_stability = -0.02
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		subtract_from_variable = { var = BEL_scandal value = 3 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.11
+	title = bel_dnc.11.t
+	desc = bel_dnc.11.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.11.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_tt_deny
+	}
+
+	option = {
+		name = bel_dnc.11.b
+		ai_chance = { factor = 35 }
+		add_political_power = -50
+		add_stability = -0.04
+		add_to_variable = { var = BEL_scandal value = 5 }
+		add_to_variable = { var = BEL_chamber_congo value = 12 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.11.c
+		ai_chance = { factor = 25 }
+		trigger = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		add_political_power = -75
+		add_stability = -0.03
+		subtract_from_variable = { var = BEL_congo_regime value = 1 }
+		subtract_from_variable = { var = BEL_scandal value = 4 }
+		add_to_variable = { var = BEL_chamber_congo value = 4 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_quota_down
+	}
+}
+
+country_event = {
+	id = bel_dnc.12
+	title = bel_dnc.12.t
+	desc = bel_dnc.12.d
+	picture = GFX_report_event_generic_funeral
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.12.a
+		ai_chance = { factor = 35 }
+		add_political_power = 20
+		add_war_support = -0.02
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_tt_deny
+	}
+
+	option = {
+		name = bel_dnc.12.b
+		ai_chance = { factor = 40 }
+		add_political_power = -60
+		subtract_from_variable = { var = BEL_scandal value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.12.c
+		ai_chance = { factor = 25 }
+		add_political_power = -100
+		add_stability = -0.05
+		add_to_variable = { var = BEL_chamber_congo value = 18 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.13
+	title = bel_dnc.13.t
+	desc = bel_dnc.13.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.13.a
+		ai_chance = { factor = 30 }
+		set_country_flag = BEL_powers_note
+		add_political_power = 15
+		add_stability = -0.05
+		add_war_support = -0.03
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_tt_deny
+	}
+
+	option = {
+		name = bel_dnc.13.b
+		ai_chance = { factor = 40 }
+		set_country_flag = BEL_powers_note
+		add_political_power = -75
+		set_variable = { BEL_congo_regime = 1 }
+		subtract_from_variable = { var = BEL_scandal value = 10 }
+		add_to_variable = { var = BEL_chamber_congo value = 10 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_inspection
+	}
+
+	option = {
+		name = bel_dnc.13.c
+		ai_chance = { factor = 30 }
+		set_country_flag = BEL_powers_note
+		add_political_power = -125
+		add_stability = -0.05
+		add_to_variable = { var = BEL_chamber_congo value = 25 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.14
+	title = bel_dnc.14.t
+	desc = bel_dnc.14.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = BEL_commission_sits
+		set_variable = { BEL_congo_regime = 0 }
+		add_dynamic_modifier = { modifier = BEL_e_the_commission_sits }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.14.a
+		ai_chance = { factor = 60 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_to_variable = { var = BEL_chamber_congo value = 15 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_commission
+	}
+
+	option = {
+		name = bel_dnc.14.b
+		ai_chance = { factor = 40 }
+		add_political_power = -100
+		add_stability = -0.06
+		add_war_support = -0.03
+		add_to_variable = { var = BEL_scandal value = 8 }
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_commission
+	}
+}
+
+country_event = {
+	id = bel_dnc.20
+	title = bel_dnc.20.t
+	desc = bel_dnc.20.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.20.a
+		ai_chance = { factor = 75 }
+		add_political_power = -150
+		add_stability = 0.03
+		subtract_from_variable = { var = BEL_scandal value = 10 }
+		set_variable = { BEL_congo_regime = 1 }
+		BEL_annex_the_congo = yes
+		add_dynamic_modifier = { modifier = BEL_e_the_colony_and_the_report }
+		add_dynamic_modifier = { modifier = BEL_e_the_colony_on_our_terms }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.20.b
+		ai_chance = { factor = 25 }
+		set_country_flag = BEL_congo_refused
+		add_political_power = 50
+		add_stability = -0.03
+		subtract_from_variable = { var = BEL_chamber_congo value = 30 }
+		add_to_variable = { var = BEL_scandal value = 10 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_refused_vote
+	}
+}
+
+country_event = {
+	id = bel_dnc.21
+	title = bel_dnc.21.t
+	desc = bel_dnc.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.21.a
+		ai_chance = { factor = 70 }
+		add_political_power = -100
+		add_stability = -0.05
+		subtract_from_variable = { var = BEL_scandal value = 15 }
+		set_variable = { BEL_congo_regime = 0 }
+		BEL_annex_the_congo = yes
+		add_dynamic_modifier = { modifier = BEL_e_the_colony_and_the_report }
+		add_dynamic_modifier = { modifier = BEL_e_the_colony_on_their_terms }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.21.b
+		ai_chance = { factor = 30 }
+		add_political_power = 25
+		add_to_variable = { var = BEL_scandal value = 10 }
+		BEL_dnc_dials = yes
+		country_event = { id = bel_dnc.22 days = 180 }
+		custom_effect_tooltip = BEL_tt_refused_terms
+	}
+}
+
+country_event = {
+	id = bel_dnc.22
+	title = bel_dnc.22.t
+	desc = bel_dnc.22.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = BEL_congo_lost
+		if = {
+			limit = { NOT = { has_country_flag = BEL_commission_sits } }
+			set_country_flag = BEL_commission_sits
+			add_dynamic_modifier = { modifier = BEL_e_the_commission_sits }
+		}
+
+		set_variable = { BEL_congo_regime = 0 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.22.a
+		ai_chance = { factor = 100 }
+		add_political_power = -150
+		add_stability = -0.08
+		add_war_support = -0.05
+		set_variable = { BEL_chamber_congo = 0 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_congo_lost
+	}
+}
+
+country_event = {
+	id = bel_dnc.30
+	title = bel_dnc.30.t
+	desc = bel_dnc.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.30.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_to_variable = { var = BEL_flemish value = 8 }
+		add_to_variable = { var = BEL_walloon value = 4 }
+		BEL_flemish_refuse = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_refusal
+	}
+
+	option = {
+		name = bel_dnc.30.b
+		ai_chance = { factor = 40 }
+		add_political_power = -60
+		subtract_from_variable = { var = BEL_flemish value = 10 }
+		subtract_from_variable = { var = BEL_walloon value = 10 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_concession
+	}
+
+	option = {
+		name = bel_dnc.30.c
+		ai_chance = { factor = 20 }
+		set_country_flag = BEL_ghent_flemish
+		add_political_power = -100
+		add_stability = -0.05
+		subtract_from_variable = { var = BEL_flemish value = 18 }
+		subtract_from_variable = { var = BEL_walloon value = 18 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_concession
+	}
+}
+
+country_event = {
+	id = bel_dnc.31
+	title = bel_dnc.31.t
+	desc = bel_dnc.31.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.31.a
+		ai_chance = { factor = 55 }
+		set_country_flag = BEL_army_french
+		add_political_power = 30
+		add_to_variable = { var = BEL_flemish value = 12 }
+		add_to_variable = { var = BEL_walloon value = 5 }
+		BEL_flemish_refuse = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_army_french
+	}
+
+	option = {
+		name = bel_dnc.31.b
+		ai_chance = { factor = 45 }
+		clr_country_flag = BEL_army_french
+		add_political_power = -75
+		add_stability = -0.02
+		subtract_from_variable = { var = BEL_flemish value = 15 }
+		subtract_from_variable = { var = BEL_walloon value = 12 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_army_bilingual
+	}
+}
+
+country_event = {
+	id = bel_dnc.32
+	title = bel_dnc.32.t
+	desc = bel_dnc.32.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.32.a
+		ai_chance = { factor = 55 }
+		add_political_power = -125
+		add_stability = -0.05
+		subtract_from_variable = { var = BEL_flemish value = 22 }
+		subtract_from_variable = { var = BEL_walloon value = 20 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_concession
+	}
+
+	option = {
+		name = bel_dnc.32.b
+		ai_chance = { factor = 45 }
+		add_political_power = -175
+		add_stability = -0.10
+		add_war_support = -0.05
+		add_to_variable = { var = BEL_flemish value = 5 }
+		add_to_variable = { var = BEL_walloon value = 8 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_ministry_falls
+	}
+}
+
+country_event = {
+	id = bel_dnc.33
+	title = bel_dnc.33.t
+	desc = bel_dnc.33.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.33.a
+		ai_chance = { factor = 50 }
+		add_political_power = -50
+		add_stability = -0.05
+		add_to_variable = { var = BEL_flemish value = 3 }
+		add_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.33.b
+		ai_chance = { factor = 50 }
+		add_political_power = -200
+		add_stability = -0.08
+		subtract_from_variable = { var = BEL_flemish value = 30 }
+		subtract_from_variable = { var = BEL_walloon value = 25 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_whole_programme
+	}
+}
+
+country_event = {
+	id = bel_dnc.34
+	title = bel_dnc.34.t
+	desc = bel_dnc.34.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = BEL_walloon_congress_sat
+		add_dynamic_modifier = { modifier = BEL_p_the_walloon_congress }
+	}
+
+	option = {
+		name = bel_dnc.34.a
+		ai_chance = { factor = 100 }
+		add_political_power = -60
+		add_stability = -0.03
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_tt_walloon_congress
+	}
+}
+
+country_event = {
+	id = bel_dnc.600
+	title = bel_dnc.600.t
+	desc = bel_dnc.600.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.600.a
+		ai_chance = { factor = 45 }
+		add_political_power = 25
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_c_tt_estate_deny
+	}
+
+	option = {
+		name = bel_dnc.600.b
+		ai_chance = { factor = 35 }
+		add_political_power = -40
+		add_to_variable = { var = BEL_scandal value = 2 }
+		add_to_variable = { var = BEL_chamber_congo value = 4 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.600.c
+		ai_chance = { factor = 20 }
+		trigger = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		add_political_power = -75
+		add_stability = -0.02
+		subtract_from_variable = { var = BEL_congo_regime value = 1 }
+		subtract_from_variable = { var = BEL_scandal value = 5 }
+		add_to_variable = { var = BEL_chamber_congo value = 2 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_quota_lowered
+	}
+}
+
+country_event = {
+	id = bel_dnc.601
+	title = bel_dnc.601.t
+	desc = bel_dnc.601.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.601.a
+		ai_chance = { factor = 40 }
+		add_political_power = 20
+		add_stability = -0.02
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_c_tt_estate_deny
+	}
+
+	option = {
+		name = bel_dnc.601.b
+		ai_chance = { factor = 35 }
+		add_political_power = -30
+		add_to_variable = { var = BEL_scandal value = 3 }
+		add_to_variable = { var = BEL_chamber_congo value = 6 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.601.c
+		ai_chance = { factor = 25 }
+		add_political_power = -80
+		add_stability = -0.03
+		add_to_variable = { var = BEL_scandal value = 4 }
+		add_to_variable = { var = BEL_chamber_congo value = 10 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.602
+	title = bel_dnc.602.t
+	desc = bel_dnc.602.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.602.a
+		ai_chance = { factor = 35 }
+		add_political_power = 25
+		add_stability = -0.06
+		add_war_support = 0.02
+		subtract_from_variable = { var = BEL_walloon value = 6 }
+		BEL_c_strike_begins = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_strike
+	}
+
+	option = {
+		name = bel_dnc.602.b
+		ai_chance = { factor = 40 }
+		add_political_power = -75
+		add_stability = 0.03
+		add_ideas = BEL_c_the_second_ballot
+		add_to_variable = { var = BEL_walloon value = 5 }
+		add_to_variable = { var = BEL_flemish value = 4 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.602.c
+		ai_chance = { factor = 25 }
+		add_political_power = -20
+		add_stability = -0.10
+		add_war_support = -0.03
+		subtract_from_variable = { var = BEL_walloon value = 3 }
+		BEL_c_strike_begins = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_strike
+	}
+}
+
+country_event = {
+	id = bel_dnc.603
+	title = bel_dnc.603.t
+	desc = bel_dnc.603.d
+	picture = GFX_report_event_generic_train
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.603.a
+		ai_chance = { factor = 30 }
+		set_country_flag = BEL_c_consul_assisted
+		add_political_power = -25
+		add_to_variable = { var = BEL_scandal value = 5 }
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.603.b
+		ai_chance = { factor = 40 }
+		set_country_flag = BEL_c_consul_obstructed
+		add_political_power = 15
+		add_to_variable = { var = BEL_scandal value = 3 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 2 }
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_c_tt_estate_deny
+	}
+
+	option = {
+		name = bel_dnc.603.c
+		ai_chance = { factor = 30 }
+		trigger = {
+			check_variable = {
+				var = BEL_congo_regime
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		add_political_power = -60
+		add_stability = -0.02
+		subtract_from_variable = { var = BEL_congo_regime value = 1 }
+		subtract_from_variable = { var = BEL_scandal value = 3 }
+		add_to_variable = { var = BEL_chamber_congo value = 6 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_quota_lowered
+	}
+}
+
+country_event = {
+	id = bel_dnc.604
+	title = bel_dnc.604.t
+	desc = {
+		text = bel_dnc.604.d_assisted
+		trigger = { has_country_flag = BEL_c_consul_assisted }
+	}
+
+	desc = {
+		text = bel_dnc.604.d_obstructed
+		trigger = { has_country_flag = BEL_c_consul_obstructed }
+	}
+
+	desc = {
+		text = bel_dnc.604.d
+		trigger = { always = yes }
+	}
+
+	picture = GFX_report_event_journalists_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.604.a
+		ai_chance = { factor = 35 }
+		add_political_power = 20
+		add_stability = -0.03
+		add_war_support = -0.02
+		BEL_estate_deny = yes
+		if = {
+			limit = { has_country_flag = BEL_c_consul_assisted }
+			add_to_variable = { var = BEL_scandal value = 6 }
+			BEL_dnc_dials = yes
+		}
+
+		custom_effect_tooltip = BEL_c_tt_estate_deny
+	}
+
+	option = {
+		name = bel_dnc.604.b
+		ai_chance = { factor = 35 }
+		add_political_power = -20
+		add_to_variable = { var = BEL_scandal value = 8 }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.604.c
+		ai_chance = { factor = 30 }
+		add_political_power = -100
+		add_stability = -0.05
+		add_to_variable = { var = BEL_scandal value = 4 }
+		add_to_variable = { var = BEL_chamber_congo value = 20 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.605
+	title = bel_dnc.605.t
+	desc = bel_dnc.605.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.605.a
+		ai_chance = { factor = 30 }
+		add_political_power = -50
+		add_stability = -0.03
+		add_ideas = BEL_c_the_congo_reform_association
+		add_to_variable = { var = BEL_scandal value = 10 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 5 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.605.b
+		ai_chance = { factor = 40 }
+		add_political_power = -60
+		subtract_from_variable = { var = BEL_scandal value = 6 }
+		add_to_variable = { var = BEL_chamber_congo value = 3 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.605.c
+		ai_chance = { factor = 30 }
+		add_political_power = 25
+		add_ideas = BEL_c_the_congo_reform_association
+		add_to_variable = { var = BEL_scandal value = 6 }
+		add_to_variable = { var = BEL_chamber_congo value = 4 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.606
+	title = bel_dnc.606.t
+	desc = bel_dnc.606.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = BEL_c_commission_named
+	}
+
+	option = {
+		name = bel_dnc.606.a
+		ai_chance = { factor = 40 }
+		add_political_power = -40
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		subtract_from_variable = { var = BEL_scandal value = 3 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.606.b
+		ai_chance = { factor = 35 }
+		add_political_power = 15
+		add_to_variable = { var = BEL_scandal value = 4 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 2 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.606.c
+		ai_chance = { factor = 25 }
+		add_political_power = -90
+		add_stability = -0.03
+		add_to_variable = { var = BEL_chamber_congo value = 12 }
+		add_to_variable = { var = BEL_scandal value = 2 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.607
+	title = bel_dnc.607.t
+	desc = bel_dnc.607.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.607.a
+		ai_chance = { factor = 35 }
+		add_political_power = -80
+		add_stability = -0.05
+		add_to_variable = { var = BEL_scandal value = 12 }
+		add_to_variable = { var = BEL_chamber_congo value = 20 }
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_congo_regime
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+			subtract_from_variable = { var = BEL_congo_regime value = 1 }
+			custom_effect_tooltip = BEL_c_tt_quota_lowered
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.607.b
+		ai_chance = { factor = 40 }
+		add_political_power = -40
+		add_to_variable = { var = BEL_scandal value = 4 }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.607.c
+		ai_chance = { factor = 25 }
+		add_political_power = 25
+		add_war_support = -0.02
+		subtract_from_variable = { var = BEL_chamber_congo value = 4 }
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_c_tt_estate_deny
+	}
+}
+
+country_event = {
+	id = bel_dnc.608
+	title = bel_dnc.608.t
+	desc = bel_dnc.608.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.608.a
+		ai_chance = { factor = 45 }
+		add_political_power = -120
+		add_stability = -0.04
+		add_to_variable = { var = BEL_chamber_congo value = 25 }
+		add_to_variable = { var = BEL_scandal value = 3 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.608.b
+		ai_chance = { factor = 35 }
+		add_political_power = -20
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		add_to_variable = { var = BEL_scandal value = 5 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.608.c
+		ai_chance = { factor = 20 }
+		set_country_flag = BEL_c_no_colony
+		add_political_power = 40
+		add_stability = -0.02
+		subtract_from_variable = { var = BEL_chamber_congo value = 20 }
+		add_to_variable = { var = BEL_scandal value = 8 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_no_colony
+	}
+}
+
+country_event = {
+	id = bel_dnc.609
+	title = bel_dnc.609.t
+	desc = bel_dnc.609.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.609.a
+		ai_chance = { factor = 40 }
+		set_country_flag = BEL_c_meuse_works
+		add_political_power = -100
+		add_stability = -0.03
+		BEL_c_fort_built = yes
+		custom_effect_tooltip = BEL_c_tt_fort_built
+	}
+
+	option = {
+		name = bel_dnc.609.b
+		ai_chance = { factor = 35 }
+		set_country_flag = BEL_c_redoubt
+		add_political_power = -90
+		add_war_support = -0.02
+		add_ideas = BEL_c_the_national_redoubt
+		BEL_c_fort_built = yes
+		custom_effect_tooltip = BEL_c_tt_fort_built
+	}
+
+	option = {
+		name = bel_dnc.609.c
+		ai_chance = { factor = 25 }
+		set_country_flag = BEL_c_no_forts
+		add_political_power = 50
+		add_war_support = -0.05
+		custom_effect_tooltip = BEL_c_tt_no_forts
+	}
+}
+
+country_event = {
+	id = bel_dnc.610
+	title = bel_dnc.610.t
+	desc = bel_dnc.610.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.610.a
+		ai_chance = { factor = 45 }
+		add_political_power = -100
+		add_stability = -0.03
+		add_ideas = BEL_c_the_colonial_charter
+		add_to_variable = { var = BEL_chamber_congo value = 12 }
+		subtract_from_variable = { var = BEL_scandal value = 8 }
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_congo_regime
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			set_variable = { BEL_congo_regime = 1 }
+			custom_effect_tooltip = BEL_c_tt_quota_lowered
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.610.b
+		ai_chance = { factor = 35 }
+		add_political_power = -30
+		add_to_variable = { var = BEL_chamber_congo value = 6 }
+		add_to_variable = { var = BEL_scandal value = 6 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.610.c
+		ai_chance = { factor = 20 }
+		add_political_power = 20
+		subtract_from_variable = { var = BEL_chamber_congo value = 8 }
+		add_to_variable = { var = BEL_scandal value = 4 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.611
+	title = bel_dnc.611.t
+	desc = bel_dnc.611.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.611.a
+		ai_chance = { factor = 60 }
+		add_political_power = -150
+		add_stability = -0.05
+		subtract_from_variable = { var = BEL_scandal value = 8 }
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_congo_regime
+					value = 2
+					compare = greater_than_or_equals
+				}
+			}
+			set_variable = { BEL_congo_regime = 1 }
+		}
+
+		BEL_annex_the_congo = yes
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = BEL_e_the_colony_and_the_report } } }
+			add_dynamic_modifier = { modifier = BEL_e_the_colony_and_the_report }
+		}
+
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = BEL_e_the_colony_on_our_terms } }
+				NOT = { has_dynamic_modifier = { modifier = BEL_e_the_colony_on_their_terms } }
+			}
+			add_dynamic_modifier = { modifier = BEL_e_the_colony_on_our_terms }
+		}
+
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_cession_voted
+	}
+
+	option = {
+		name = bel_dnc.611.b
+		ai_chance = { factor = 25 }
+		add_political_power = 25
+		add_war_support = -0.02
+		add_to_variable = { var = BEL_scandal value = 10 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 15 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.611.c
+		ai_chance = { factor = 15 }
+		set_country_flag = BEL_congo_refused
+		add_political_power = 50
+		add_stability = -0.04
+		add_to_variable = { var = BEL_scandal value = 12 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 30 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_cession_refused
+	}
+}
+
+country_event = {
+	id = bel_dnc.612
+	title = bel_dnc.612.t
+	desc = bel_dnc.612.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.612.a
+		ai_chance = { factor = 30 }
+		add_political_power = 25
+		add_stability = 0.02
+		add_to_variable = { var = BEL_scandal value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.612.b
+		ai_chance = { factor = 45 }
+		add_political_power = -100
+		add_stability = -0.03
+		subtract_from_variable = { var = BEL_scandal value = 12 }
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_congo_regime
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+			subtract_from_variable = { var = BEL_congo_regime value = 1 }
+			custom_effect_tooltip = BEL_c_tt_quota_lowered
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.612.c
+		ai_chance = { factor = 25 }
+		add_political_power = -60
+		add_war_support = 0.03
+		add_army_experience = 15
+		add_to_variable = { var = BEL_scandal value = 4 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.613
+	title = bel_dnc.613.t
+	desc = bel_dnc.613.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.613.a
+		ai_chance = { factor = 45 }
+		add_political_power = -90
+		add_stability = -0.04
+		add_war_support = 0.03
+		BEL_c_end_the_lottery = yes
+		add_ideas = BEL_c_the_militia_compromise
+		if = {
+			limit = { has_country_flag = BEL_army_french }
+			add_to_variable = { var = BEL_flemish value = 4 }
+			BEL_flemish_refuse = yes
+			custom_effect_tooltip = BEL_c_tt_flemish_recruits
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.613.b
+		ai_chance = { factor = 30 }
+		add_political_power = -150
+		add_stability = -0.08
+		add_war_support = 0.05
+		BEL_c_end_the_lottery = yes
+		add_ideas = BEL_c_personal_service
+		subtract_from_variable = { var = BEL_walloon value = 6 }
+		if = {
+			limit = { has_country_flag = BEL_army_french }
+			add_to_variable = { var = BEL_flemish value = 6 }
+			BEL_flemish_refuse = yes
+			custom_effect_tooltip = BEL_c_tt_flemish_recruits
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.613.c
+		ai_chance = { factor = 25 }
+		set_country_flag = BEL_c_lottery_kept
+		add_political_power = 40
+		add_war_support = -0.05
+		add_to_variable = { var = BEL_walloon value = 3 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_lottery_kept
+	}
+}
+
+country_event = {
+	id = bel_dnc.614
+	title = bel_dnc.614.t
+	desc = bel_dnc.614.d
+	picture = GFX_report_event_generic_funeral
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = BEL_c_leopold_dead
+	}
+
+	option = {
+		name = bel_dnc.614.a
+		ai_chance = { factor = 35 }
+		add_political_power = -30
+		add_stability = -0.03
+		add_to_variable = { var = BEL_scandal value = 6 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.614.b
+		ai_chance = { factor = 40 }
+		add_political_power = -60
+		add_stability = -0.02
+		subtract_from_variable = { var = BEL_scandal value = 8 }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.614.c
+		ai_chance = { factor = 25 }
+		add_political_power = 20
+		add_war_support = -0.02
+		add_to_variable = { var = BEL_scandal value = 3 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.615
+	title = bel_dnc.615.t
+	desc = bel_dnc.615.d
+	picture = GFX_report_event_eng_royal_family
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		add_ideas = BEL_c_the_new_reign
+	}
+
+	option = {
+		name = bel_dnc.615.a
+		ai_chance = { factor = 40 }
+		add_political_power = -25
+		add_stability = 0.05
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		subtract_from_variable = { var = BEL_scandal value = 4 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.615.b
+		ai_chance = { factor = 35 }
+		remove_ideas = BEL_c_the_new_reign
+		add_ideas = BEL_c_the_soldier_king
+		add_political_power = -50
+		add_stability = -0.02
+		add_war_support = 0.05
+	}
+
+	option = {
+		name = bel_dnc.615.c
+		ai_chance = { factor = 25 }
+		add_political_power = 40
+		add_war_support = -0.03
+		subtract_from_variable = { var = BEL_chamber_congo value = 4 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.616
+	title = bel_dnc.616.t
+	desc = bel_dnc.616.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.616.a
+		ai_chance = { factor = 40 }
+		add_political_power = -80
+		add_stability = -0.02
+		BEL_c_fort_built = yes
+		custom_effect_tooltip = BEL_c_tt_fort_built
+	}
+
+	option = {
+		name = bel_dnc.616.b
+		ai_chance = { factor = 35 }
+		add_political_power = -40
+		add_war_support = 0.02
+		add_army_experience = 15
+	}
+
+	option = {
+		name = bel_dnc.616.c
+		ai_chance = { factor = 25 }
+		add_political_power = -160
+		add_stability = -0.05
+		add_army_experience = 10
+		BEL_c_fort_built = yes
+		custom_effect_tooltip = BEL_c_tt_fort_built
+	}
+}
+
+country_event = {
+	id = bel_dnc.617
+	title = bel_dnc.617.t
+	desc = bel_dnc.617.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.617.a
+		ai_chance = { factor = 35 }
+		set_country_flag = BEL_ghent_flemish
+		add_political_power = -110
+		add_stability = -0.05
+		subtract_from_variable = { var = BEL_flemish value = 18 }
+		subtract_from_variable = { var = BEL_walloon value = 14 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_ghent
+	}
+
+	option = {
+		name = bel_dnc.617.b
+		ai_chance = { factor = 40 }
+		add_political_power = -70
+		add_stability = -0.02
+		subtract_from_variable = { var = BEL_flemish value = 8 }
+		subtract_from_variable = { var = BEL_walloon value = 6 }
+		BEL_flemish_concede = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.617.c
+		ai_chance = { factor = 25 }
+		add_political_power = 30
+		add_to_variable = { var = BEL_flemish value = 10 }
+		add_to_variable = { var = BEL_walloon value = 4 }
+		BEL_flemish_refuse = yes
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.618
+	title = bel_dnc.618.t
+	desc = bel_dnc.618.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.618.a
+		ai_chance = { factor = 40 }
+		add_political_power = -90
+		add_stability = -0.03
+		if = {
+			limit = { NOT = { has_idea = BEL_c_the_national_redoubt } }
+			add_ideas = BEL_c_the_national_redoubt
+		}
+
+		BEL_c_fort_built = yes
+		custom_effect_tooltip = BEL_c_tt_fort_built
+	}
+
+	option = {
+		name = bel_dnc.618.b
+		ai_chance = { factor = 35 }
+		add_political_power = -60
+		BEL_c_fort_built = yes
+		custom_effect_tooltip = BEL_c_tt_fort_built
+	}
+
+	option = {
+		name = bel_dnc.618.c
+		ai_chance = { factor = 25 }
+		add_political_power = 40
+		add_war_support = -0.04
+	}
+}
+
+country_event = {
+	id = bel_dnc.619
+	title = bel_dnc.619.t
+	desc = bel_dnc.619.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.619.a
+		ai_chance = { factor = 40 }
+		add_political_power = -80
+		add_stability = 0.04
+		add_to_variable = { var = BEL_walloon value = 6 }
+		subtract_from_variable = { var = BEL_flemish value = 4 }
+		if = {
+			limit = { NOT = { has_idea = BEL_c_the_second_ballot } }
+			add_ideas = BEL_c_the_second_ballot
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.619.b
+		ai_chance = { factor = 35 }
+		add_political_power = 30
+		add_stability = -0.08
+		subtract_from_variable = { var = BEL_walloon value = 8 }
+		BEL_c_strike_begins = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_strike
+	}
+
+	option = {
+		name = bel_dnc.619.c
+		ai_chance = { factor = 25 }
+		add_political_power = 10
+		add_stability = -0.12
+		add_war_support = 0.03
+		subtract_from_variable = { var = BEL_walloon value = 10 }
+		add_to_variable = { var = BEL_flemish value = 4 }
+		BEL_c_strike_begins = yes
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_tt_strike
+	}
+}
+
+country_event = {
+	id = bel_dnc.620
+	title = bel_dnc.620.t
+	desc = bel_dnc.620.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.620.a
+		ai_chance = { factor = 45 }
+		add_political_power = -120
+		add_stability = -0.05
+		add_war_support = 0.05
+		BEL_c_end_the_lottery = yes
+		if = {
+			limit = { NOT = { has_idea = BEL_c_personal_service } }
+			if = {
+				limit = { has_idea = BEL_c_the_militia_compromise }
+				remove_ideas = BEL_c_the_militia_compromise
+			}
+
+			add_ideas = BEL_c_personal_service
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_army_french }
+			add_to_variable = { var = BEL_flemish value = 5 }
+			BEL_flemish_refuse = yes
+			custom_effect_tooltip = BEL_c_tt_flemish_recruits
+		}
+
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.620.b
+		ai_chance = { factor = 35 }
+		add_political_power = -50
+		add_war_support = 0.02
+		BEL_c_end_the_lottery = yes
+		if = {
+			limit = {
+				NOT = { has_idea = BEL_c_personal_service }
+				NOT = { has_idea = BEL_c_the_militia_compromise }
+			}
+			add_ideas = BEL_c_the_militia_compromise
+		}
+
+		add_to_variable = { var = BEL_flemish value = 2 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.620.c
+		ai_chance = { factor = 20 }
+		add_political_power = 40
+		add_stability = 0.02
+		add_war_support = -0.06
+	}
+}
+
+country_event = {
+	id = bel_dnc.621
+	title = bel_dnc.621.t
+	desc = {
+		text = bel_dnc.621.d_forts
+		trigger = {
+			check_variable = {
+				var = BEL_c_forts
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+	}
+
+	desc = {
+		text = bel_dnc.621.d
+		trigger = { always = yes }
+	}
+
+	picture = GFX_report_event_generic_sign_treaty3
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		if = {
+			limit = { has_idea = BEL_c_the_guarantee_of_1839 }
+			remove_ideas = BEL_c_the_guarantee_of_1839
+		}
+	}
+
+	option = {
+		name = bel_dnc.621.a
+		ai_chance = { factor = 60 }
+		add_ideas = BEL_c_the_scrap_of_paper
+		add_political_power = -50
+		add_stability = 0.05
+		add_war_support = 0.15
+		country_event = { id = bel_dnc.622 days = 5 }
+		custom_effect_tooltip = BEL_c_tt_guarantee_kept
+	}
+
+	option = {
+		name = bel_dnc.621.b
+		ai_chance = { factor = 20 }
+		set_country_flag = BEL_c_passage_granted
+		add_ideas = BEL_c_the_broken_word
+		add_political_power = -100
+		add_stability = -0.15
+		add_war_support = -0.10
+		country_event = { id = bel_dnc.622 days = 5 }
+		custom_effect_tooltip = BEL_c_tt_guarantee_broken
+	}
+
+	option = {
+		name = bel_dnc.621.c
+		ai_chance = { factor = 40 }
+		trigger = {
+			check_variable = {
+				var = BEL_c_forts
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BEL_c_liege_holds
+		add_ideas = BEL_c_the_scrap_of_paper
+		add_political_power = -80
+		add_stability = 0.03
+		add_war_support = 0.20
+		add_army_experience = 25
+		country_event = { id = bel_dnc.622 days = 5 }
+		custom_effect_tooltip = BEL_c_tt_guarantee_kept
+	}
+}
+
+country_event = {
+	id = bel_dnc.622
+	title = bel_dnc.622.t
+	desc = {
+		text = bel_dnc.622.d_hold
+		trigger = { has_country_flag = BEL_c_liege_holds }
+	}
+
+	desc = {
+		text = bel_dnc.622.d_pass
+		trigger = { has_country_flag = BEL_c_passage_granted }
+	}
+
+	desc = {
+		text = bel_dnc.622.d
+		trigger = { always = yes }
+	}
+
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.622.a
+		ai_chance = { factor = 100 }
+		trigger = { NOT = { has_country_flag = BEL_c_passage_granted } }
+		add_political_power = -50
+		add_stability = 0.02
+		add_war_support = 0.05
+		add_army_experience = 25
+	}
+
+	option = {
+		name = bel_dnc.622.b
+		ai_chance = { factor = 100 }
+		trigger = { has_country_flag = BEL_c_passage_granted }
+		add_political_power = 25
+		add_stability = -0.05
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = bel_dnc.100
+	title = bel_dnc.100.t
+	desc = bel_dnc.100.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.100.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_stability = 0.02
+		custom_effect_tooltip = BEL_a_100a_tt
+	}
+
+	option = {
+		name = bel_dnc.100.b
+		ai_chance = { factor = 30 }
+		add_political_power = -20
+		subtract_from_variable = { var = BEL_a_plural value = 5 }
+		BEL_a_dials = yes
+		custom_effect_tooltip = BEL_a_100b_tt
+	}
+
+	option = {
+		name = bel_dnc.100.c
+		ai_chance = { factor = 30 }
+		add_political_power = -30
+		add_stability = 0.03
+		set_country_flag = BEL_a_commission_promised
+		subtract_from_variable = { var = BEL_a_plural value = 10 }
+		BEL_a_dials = yes
+		custom_effect_tooltip = BEL_a_100c_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.101
+	title = bel_dnc.101.t
+	desc = bel_dnc.101.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.101.a
+		ai_chance = { factor = 40 }
+		add_political_power = 20
+		add_to_variable = { var = BEL_a_prerogative value = 10 }
+		add_to_variable = { var = BEL_scandal value = 3 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.101.b
+		ai_chance = { factor = 35 }
+		add_political_power = -40
+		add_stability = -0.04
+		subtract_from_variable = { var = BEL_a_prerogative value = 10 }
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.101.c
+		ai_chance = { factor = 25 }
+		add_political_power = -25
+		add_to_variable = { var = BEL_scandal value = 6 }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		subtract_from_variable = { var = BEL_a_prerogative value = 15 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.102
+	title = bel_dnc.102.t
+	desc = bel_dnc.102.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.102.a
+		ai_chance = { factor = 35 }
+		add_political_power = -20
+		subtract_from_variable = { var = BEL_a_plural value = 8 }
+		add_to_variable = { var = BEL_walloon value = 3 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.102.b
+		ai_chance = { factor = 35 }
+		add_stability = -0.05
+		add_war_support = 0.02
+		add_to_variable = { var = BEL_a_plural value = 5 }
+		add_to_variable = { var = BEL_a_strikes value = 1 }
+		BEL_a_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.102.c
+		ai_chance = { factor = 30 }
+		add_political_power = -30
+		add_stability = 0.02
+		set_country_flag = BEL_a_commission_promised
+		subtract_from_variable = { var = BEL_a_plural value = 4 }
+		BEL_a_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.103
+	title = bel_dnc.103.t
+	desc = bel_dnc.103.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.103.a
+		ai_chance = { factor = 55 }
+		add_political_power = -30
+		add_stability = 0.04
+		subtract_from_variable = { var = BEL_a_plural value = 15 }
+		BEL_a_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.103.b
+		ai_chance = { factor = 45 }
+		add_political_power = 20
+		add_stability = -0.06
+		add_to_variable = { var = BEL_a_strikes value = 1 }
+		BEL_a_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.104
+	title = bel_dnc.104.t
+	desc = bel_dnc.104.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.104.a
+		ai_chance = { factor = 45 }
+		add_political_power = -80
+		add_stability = -0.06
+		add_war_support = 0.08
+		set_variable = { BEL_a_plural = 0 }
+		BEL_a_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.104.b
+		ai_chance = { factor = 35 }
+		add_political_power = -40
+		add_stability = 0.02
+		subtract_from_variable = { var = BEL_a_plural value = 20 }
+		BEL_a_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.104.c
+		ai_chance = { factor = 20 }
+		add_political_power = 30
+		add_stability = -0.05
+		add_to_variable = { var = BEL_a_plural value = 5 }
+		add_to_variable = { var = BEL_a_prerogative value = 5 }
+		BEL_a_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.105
+	title = bel_dnc.105.t
+	desc = bel_dnc.105.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.105.a
+		ai_chance = { factor = 60 }
+		add_stability = -0.03
+		add_to_variable = { var = BEL_a_prerogative value = 15 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 8 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.105.b
+		ai_chance = { factor = 40 }
+		add_political_power = -30
+		subtract_from_variable = { var = BEL_a_prerogative value = 10 }
+		add_to_variable = { var = BEL_chamber_congo value = 6 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.106
+	title = bel_dnc.106.t
+	desc = bel_dnc.106.d
+	picture = GFX_report_event_generic_modern_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.106.a
+		ai_chance = { factor = 55 }
+		add_to_variable = { var = BEL_a_prerogative value = 20 }
+		add_stability = -0.08
+		subtract_from_variable = { var = BEL_chamber_congo value = 10 }
+		add_to_variable = { var = BEL_scandal value = 5 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.106.b
+		ai_chance = { factor = 45 }
+		add_political_power = -30
+		add_stability = -0.02
+		add_to_variable = { var = BEL_a_prerogative value = 5 }
+		BEL_a_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.107
+	title = bel_dnc.107.t
+	desc = bel_dnc.107.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.107.a
+		ai_chance = { factor = 55 }
+		add_political_power = 50
+		add_stability = 0.06
+		add_to_variable = { var = BEL_a_plural value = 5 }
+		add_to_variable = { var = BEL_flemish value = 3 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.107.b
+		ai_chance = { factor = 45 }
+		add_political_power = -30
+		BEL_flemish_concede = yes
+		subtract_from_variable = { var = BEL_flemish value = 8 }
+		subtract_from_variable = { var = BEL_walloon value = 6 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.108
+	title = bel_dnc.108.t
+	desc = bel_dnc.108.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.108.a
+		ai_chance = { factor = 55 }
+		add_political_power = -50
+		add_stability = -0.04
+		add_war_support = 0.03
+		set_country_flag = parti_ouvrier_win
+		add_to_variable = { var = BEL_chamber_congo value = 10 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.108.b
+		ai_chance = { factor = 45 }
+		add_political_power = -20
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		subtract_from_variable = { var = BEL_a_plural value = 10 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.109
+	title = bel_dnc.109.t
+	desc = bel_dnc.109.d
+	picture = GFX_report_event_generic_modern_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.109.a
+		ai_chance = { factor = 55 }
+		add_political_power = 60
+		add_stability = -0.06
+		add_to_variable = { var = BEL_a_prerogative value = 20 }
+		add_to_variable = { var = BEL_scandal value = 6 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 10 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.109.b
+		ai_chance = { factor = 45 }
+		add_political_power = 30
+		add_stability = -0.02
+		add_to_variable = { var = BEL_a_prerogative value = 10 }
+		BEL_a_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.110
+	title = bel_dnc.110.t
+	desc = bel_dnc.110.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.110.a
+		ai_chance = { factor = 55 }
+		add_political_power = 20
+		add_to_variable = { var = BEL_chamber_congo value = 10 }
+		add_to_variable = { var = BEL_scandal value = 4 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.110.b
+		ai_chance = { factor = 45 }
+		add_political_power = -50
+		add_to_variable = { var = BEL_chamber_congo value = 15 }
+		subtract_from_variable = { var = BEL_scandal value = 10 }
+		set_variable = { BEL_congo_regime = 0 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.111
+	title = bel_dnc.111.t
+	desc = bel_dnc.111.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.111.a
+		ai_chance = { factor = 50 }
+		add_political_power = -40
+		add_to_variable = { var = BEL_chamber_congo value = 10 }
+		set_variable = { BEL_vote_cooldown = 0 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.111.b
+		ai_chance = { factor = 50 }
+		add_political_power = -60
+		add_stability = -0.03
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		subtract_from_variable = { var = BEL_scandal value = 12 }
+		set_variable = { BEL_vote_cooldown = 0 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.112
+	title = bel_dnc.112.t
+	desc = bel_dnc.112.d
+	picture = GFX_report_event_journalists_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.112.a
+		ai_chance = { factor = 55 }
+		add_political_power = -20
+		add_to_variable = { var = BEL_scandal value = 4 }
+		add_timed_idea = {
+			idea = BEL_a_the_press_bureau
+			days = 365
+		}
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.112.b
+		ai_chance = { factor = 45 }
+		add_political_power = 25
+		add_to_variable = { var = BEL_scandal value = 2 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 5 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.113
+	title = bel_dnc.113.t
+	desc = bel_dnc.113.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.113.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+		add_war_support = 0.05
+		add_idea = BEL_a_the_single_vote
+		custom_effect_tooltip = BEL_a_113a_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.114
+	title = bel_dnc.114.t
+	desc = bel_dnc.114.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.114.a
+		ai_chance = { factor = 60 }
+		add_political_power = 50
+		add_stability = -0.05
+		add_idea = BEL_a_the_silent_house
+		custom_effect_tooltip = BEL_a_114a_tt
+	}
+
+	option = {
+		name = bel_dnc.114.b
+		ai_chance = { factor = 40 }
+		add_political_power = -60
+		add_stability = 0.05
+		subtract_from_variable = { var = BEL_a_prerogative value = 25 }
+		BEL_a_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.115
+	title = bel_dnc.115.t
+	desc = bel_dnc.115.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.115.a
+		ai_chance = { factor = 35 }
+		trigger = { NOT = { has_country_flag = BEL_ghent_flemish } }
+		add_political_power = -40
+		set_country_flag = BEL_ghent_flemish
+		BEL_flemish_concede = yes
+		subtract_from_variable = { var = BEL_flemish value = 10 }
+		subtract_from_variable = { var = BEL_walloon value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.115.b
+		ai_chance = { factor = 40 }
+		add_political_power = -20
+		subtract_from_variable = { var = BEL_flemish value = 4 }
+		subtract_from_variable = { var = BEL_walloon value = 3 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.115.c
+		ai_chance = { factor = 25 }
+		add_political_power = 15
+		BEL_flemish_refuse = yes
+		add_to_variable = { var = BEL_flemish value = 5 }
+		add_to_variable = { var = BEL_walloon value = 3 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.200
+	title = bel_dnc.200.t
+	desc = bel_dnc.200.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.200.a
+		ai_chance = { factor = 50 }
+		add_political_power = -25
+		add_to_variable = { var = BEL_chamber_congo value = 5 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.200.b
+		ai_chance = { factor = 50 }
+		add_political_power = 40
+		add_stability = 0.02
+		add_to_variable = { var = BEL_scandal value = 3 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 2 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.201
+	title = bel_dnc.201.t
+	desc = bel_dnc.201.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.201.a
+		ai_chance = { factor = 60 }
+		add_stability = 0.04
+		add_political_power = 25
+		add_to_variable = { var = BEL_scandal value = 6 }
+		BEL_dnc_dials = yes
+		6 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = bel_dnc.201.b
+		ai_chance = { factor = 40 }
+		add_political_power = 50
+		add_stability = -0.03
+		add_to_variable = { var = BEL_chamber_congo value = 3 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.202
+	title = bel_dnc.202.t
+	desc = bel_dnc.202.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.202.a
+		ai_chance = { factor = 40 }
+		add_political_power = -50
+		add_to_variable = { var = BEL_scandal value = 15 }
+		add_to_variable = { var = BEL_chamber_congo value = 14 }
+		BEL_dnc_dials = yes
+		set_country_flag = BEL_c_report_published
+	}
+
+	option = {
+		name = bel_dnc.202.b
+		ai_chance = { factor = 60 }
+		add_political_power = 40
+		add_stability = 0.03
+		BEL_estate_deny = yes
+		set_country_flag = BEL_c_report_buried
+		custom_effect_tooltip = BEL_c_the_ratchet_tt
+		country_event = { id = bel_dnc.203 days = 365 }
+	}
+}
+
+country_event = {
+	id = bel_dnc.203
+	title = bel_dnc.203.t
+	desc = bel_dnc.203.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.203.a
+		ai_chance = { factor = 50 }
+		add_political_power = -25
+		add_stability = -0.03
+		add_to_variable = { var = BEL_scandal value = 18 }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		BEL_dnc_dials = yes
+	}
+
+	option = {
+		name = bel_dnc.203.b
+		ai_chance = { factor = 50 }
+		add_political_power = -75
+		add_to_variable = { var = BEL_scandal value = 12 }
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_c_the_ratchet_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.204
+	title = bel_dnc.204.t
+	desc = bel_dnc.204.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.204.a
+		trigger = {
+			country_exists = COG
+			check_variable = {
+				var = BEL_chamber_congo
+				value = 55
+				compare = greater_than_or_equals
+			}
+		}
+		ai_chance = { factor = 60 }
+		add_political_power = -150
+		add_stability = -0.05
+		BEL_c_take_the_colony = yes
+		subtract_from_variable = { var = BEL_scandal value = 12 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_annex_tt
+		if = {
+			limit = { has_country_flag = BEL_c_charter_ready }
+			add_political_power = 75
+			add_stability = 0.03
+		}
+	}
+
+	option = {
+		name = bel_dnc.204.b
+		trigger = { country_exists = COG }
+		ai_chance = { factor = 30 }
+		add_political_power = -75
+		BEL_c_take_the_colony = yes
+		subtract_from_variable = { var = BEL_scandal value = 6 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_annex_tt
+		if = {
+			limit = {
+				NOT = { has_idea = BEL_c_the_kings_conditions }
+			}
+			add_ideas = BEL_c_the_kings_conditions
+		}
+	}
+
+	option = {
+		name = bel_dnc.204.c
+		ai_chance = { factor = 10 }
+		add_political_power = 50
+		add_stability = 0.03
+		BEL_c_refuse_the_cession = yes
+		custom_effect_tooltip = BEL_c_refuse_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.205
+	title = bel_dnc.205.t
+	desc = bel_dnc.205.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.205.a
+		trigger = { country_exists = COG }
+		ai_chance = { factor = 60 }
+		add_political_power = -100
+		add_war_support = -0.03
+		BEL_c_take_the_colony = yes
+		add_ideas = BEL_c_the_inspectorate
+		subtract_from_variable = { var = BEL_scandal value = 25 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_annex_tt
+	}
+
+	option = {
+		name = bel_dnc.205.b
+		trigger = { country_exists = COG }
+		ai_chance = { factor = 25 }
+		add_political_power = -125
+		add_war_support = 0.05
+		add_stability = -0.03
+		BEL_c_take_the_colony = yes
+		add_to_variable = { var = BEL_scandal value = 10 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_c_annex_tt
+	}
+
+	option = {
+		name = bel_dnc.205.c
+		ai_chance = { factor = 15 }
+		add_political_power = 50
+		BEL_c_lose_the_colony = yes
+		custom_effect_tooltip = BEL_c_refuse_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.206
+	title = bel_dnc.206.t
+	desc = bel_dnc.206.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.206.a
+		ai_chance = { factor = 20 }
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+		BEL_c_lose_the_colony = yes
+		add_ideas = BEL_c_the_home_kingdom
+		custom_effect_tooltip = BEL_c_refuse_tt
+		add_research_slot = 1
+		add_tech_bonus = {
+			name = bel_dnc_206_a_bonus
+			bonus = 0.5
+			uses = 2
+			category = industry
+		}
+	}
+
+	option = {
+		name = bel_dnc.206.b
+		ai_chance = { factor = 80 }
+		add_political_power = -50
+		add_to_variable = { var = BEL_chamber_congo value = 10 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.207
+	title = bel_dnc.207.t
+	desc = bel_dnc.207.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.207.a
+		ai_chance = { factor = 50 }
+		add_political_power = 25
+		BEL_estate_deny = yes
+		custom_effect_tooltip = BEL_c_the_ratchet_tt
+	}
+
+	option = {
+		name = bel_dnc.207.b
+		ai_chance = { factor = 50 }
+		add_political_power = 40
+		add_stability = 0.02
+		add_to_variable = { var = BEL_scandal value = 5 }
+		BEL_dnc_dials = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.300
+	title = bel_dnc.300.t
+	desc = bel_dnc.300.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.300.a
+		ai_chance = { base = 50 }
+		add_political_power = -20
+		set_temp_variable = { BEL_t_flemish_shift = -3 }
+		set_temp_variable = { BEL_t_walloon_shift = -2 }
+		BEL_v_shift = yes
+	}
+
+	option = {
+		name = bel_dnc.300.b
+		ai_chance = { base = 50 }
+		add_political_power = 20
+		set_temp_variable = { BEL_t_flemish_shift = 3 }
+		set_temp_variable = { BEL_t_walloon_shift = 1 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.301
+	title = bel_dnc.301.t
+	desc = bel_dnc.301.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.301.a
+		ai_chance = { base = 50 }
+		add_political_power = -20
+		set_temp_variable = { BEL_t_flemish_drop = 4 }
+		set_temp_variable = { BEL_t_walloon_drop = 3 }
+		BEL_v_concede = yes
+	}
+
+	option = {
+		name = bel_dnc.301.b
+		ai_chance = { base = 50 }
+		add_political_power = 10
+		set_temp_variable = { BEL_t_flemish_shift = 2 }
+		set_temp_variable = { BEL_t_walloon_shift = 0 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.302
+	title = bel_dnc.302.t
+	desc = bel_dnc.302.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.302.a
+		ai_chance = { base = 45 }
+		add_political_power = -30
+		add_stability = 0.02
+		set_temp_variable = { BEL_t_flemish_drop = 4 }
+		set_temp_variable = { BEL_t_walloon_drop = 4 }
+		BEL_v_concede = yes
+	}
+
+	option = {
+		name = bel_dnc.302.b
+		ai_chance = { base = 55 }
+		set_temp_variable = { BEL_t_flemish_shift = 2 }
+		set_temp_variable = { BEL_t_walloon_shift = 3 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.303
+	title = bel_dnc.303.t
+	desc = bel_dnc.303.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.303.a
+		ai_chance = { base = 60 }
+		add_political_power = 40
+		set_temp_variable = { BEL_t_flemish_rise = 4 }
+		set_temp_variable = { BEL_t_walloon_rise = 1 }
+		BEL_v_refuse = yes
+	}
+
+	option = {
+		name = bel_dnc.303.b
+		ai_chance = { base = 40 }
+		add_political_power = -20
+		set_temp_variable = { BEL_t_flemish_drop = 4 }
+		set_temp_variable = { BEL_t_walloon_drop = 2 }
+		BEL_v_concede = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.304
+	title = bel_dnc.304.t
+	desc = bel_dnc.304.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.304.a
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		set_temp_variable = { BEL_t_flemish_shift = 0 }
+		set_temp_variable = { BEL_t_walloon_shift = 5 }
+		BEL_v_shift = yes
+	}
+
+	option = {
+		name = bel_dnc.304.b
+		ai_chance = { base = 50 }
+		add_political_power = -30
+		add_tech_bonus = {
+			name = BELDNC_v_the_two_faculties_bonus
+			bonus = 0.5
+			uses = 1
+			category = electronics
+		}
+		set_temp_variable = { BEL_t_flemish_shift = -3 }
+		set_temp_variable = { BEL_t_walloon_shift = -3 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.305
+	title = bel_dnc.305.t
+	desc = bel_dnc.305.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.305.a
+		ai_chance = { base = 50 }
+		add_political_power = -30
+		army_experience = 25
+		set_temp_variable = { BEL_t_flemish_shift = -4 }
+		set_temp_variable = { BEL_t_walloon_shift = -1 }
+		BEL_v_shift = yes
+	}
+
+	option = {
+		name = bel_dnc.305.b
+		ai_chance = { base = 50 }
+		army_experience = 40
+		add_war_support = 0.02
+		set_country_flag = BEL_v_regiments_by_tongue
+		set_temp_variable = { BEL_t_flemish_shift = -2 }
+		set_temp_variable = { BEL_t_walloon_shift = 4 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.306
+	title = bel_dnc.306.t
+	desc = bel_dnc.306.d
+	picture = GFX_report_event_journalists_speech
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.306.a
+		ai_chance = { base = 55 }
+		add_political_power = 30
+		add_stability = -0.03
+		set_temp_variable = { BEL_t_flemish_rise = 6 }
+		set_temp_variable = { BEL_t_walloon_rise = 1 }
+		BEL_v_refuse = yes
+	}
+
+	option = {
+		name = bel_dnc.306.b
+		ai_chance = { base = 45 }
+		add_political_power = -20
+		remove_ideas = BEL_v_the_prosecuted_press
+		set_temp_variable = { BEL_t_flemish_shift = -4 }
+		set_temp_variable = { BEL_t_walloon_shift = -1 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.307
+	title = bel_dnc.307.t
+	desc = bel_dnc.307.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.307.a
+		ai_chance = { base = 40 }
+		add_political_power = -40
+		set_country_flag = BEL_v_leagues_recognised
+		set_temp_variable = { BEL_t_flemish_shift = 4 }
+		set_temp_variable = { BEL_t_walloon_shift = 10 }
+		BEL_v_shift = yes
+	}
+
+	option = {
+		name = bel_dnc.307.b
+		ai_chance = { base = 35 }
+		set_temp_variable = { BEL_t_flemish_shift = 2 }
+		set_temp_variable = { BEL_t_walloon_shift = 3 }
+		BEL_v_shift = yes
+	}
+
+	option = {
+		name = bel_dnc.307.c
+		ai_chance = { base = 25 }
+		add_political_power = 30
+		add_stability = -0.05
+		set_temp_variable = { BEL_t_flemish_shift = 3 }
+		set_temp_variable = { BEL_t_walloon_shift = -8 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.308
+	title = bel_dnc.308.t
+	desc = bel_dnc.308.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.308.a
+		ai_chance = { base = 50 }
+		add_political_power = -30
+		set_temp_variable = { BEL_t_flemish_drop = 5 }
+		set_temp_variable = { BEL_t_walloon_drop = 4 }
+		BEL_v_concede = yes
+	}
+
+	option = {
+		name = bel_dnc.308.b
+		ai_chance = { base = 50 }
+		add_political_power = -20
+		add_stability = 0.02
+		set_temp_variable = { BEL_t_flemish_drop = 3 }
+		set_temp_variable = { BEL_t_walloon_drop = 2 }
+		BEL_v_concede = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.309
+	title = bel_dnc.309.t
+	desc = bel_dnc.309.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.309.a
+		ai_chance = { base = 30 }
+		add_political_power = -80
+		set_temp_variable = { BEL_t_flemish_drop = 12 }
+		set_temp_variable = { BEL_t_walloon_drop = 8 }
+		BEL_v_concede = yes
+	}
+
+	option = {
+		name = bel_dnc.309.b
+		ai_chance = { base = 40 }
+		add_political_power = -40
+		set_temp_variable = { BEL_t_flemish_drop = 5 }
+		set_temp_variable = { BEL_t_walloon_drop = 3 }
+		BEL_v_concede = yes
+		set_temp_variable = { BEL_t_calm_months = 18 }
+		BEL_v_hold_the_movement = yes
+	}
+
+	option = {
+		name = bel_dnc.309.c
+		ai_chance = { base = 30 }
+		add_political_power = 40
+		add_stability = -0.03
+		set_temp_variable = { BEL_t_flemish_rise = 8 }
+		set_temp_variable = { BEL_t_walloon_rise = 2 }
+		BEL_v_refuse = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.310
+	title = bel_dnc.310.t
+	desc = bel_dnc.310.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.310.a
+		ai_chance = { base = 35 }
+		set_country_flag = BEL_walloon_congress_sat
+		add_ideas = BEL_v_the_walloon_congress
+		BEL_dnc_dials = yes
+		hidden_effect = {
+			country_event = { id = bel_dnc.315 days = 120 }
+		}
+	}
+
+	option = {
+		name = bel_dnc.310.b
+		ai_chance = { base = 40 }
+		add_political_power = -80
+		set_temp_variable = { BEL_t_flemish_rise = 6 }
+		set_temp_variable = { BEL_t_walloon_rise = 12 }
+		BEL_v_refuse = yes
+	}
+
+	option = {
+		name = bel_dnc.310.c
+		ai_chance = { base = 25 }
+		add_political_power = 30
+		add_stability = -0.08
+		set_temp_variable = { BEL_t_flemish_shift = 4 }
+		set_temp_variable = { BEL_t_walloon_shift = -10 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.311
+	title = bel_dnc.311.t
+	desc = bel_dnc.311.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.311.a
+		ai_chance = { base = 50 }
+		add_political_power = -30
+		add_stability = 0.02
+		set_temp_variable = { BEL_t_flemish_drop = 4 }
+		set_temp_variable = { BEL_t_walloon_drop = 4 }
+		BEL_v_concede = yes
+	}
+
+	option = {
+		name = bel_dnc.311.b
+		ai_chance = { base = 50 }
+		add_political_power = 20
+		set_temp_variable = { BEL_t_flemish_shift = 3 }
+		set_temp_variable = { BEL_t_walloon_shift = 3 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.312
+	title = bel_dnc.312.t
+	desc = bel_dnc.312.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.312.a
+		ai_chance = { base = 30 }
+		add_political_power = -120
+		add_war_support = -0.05
+		set_temp_variable = { BEL_t_flemish_drop = 20 }
+		set_temp_variable = { BEL_t_walloon_drop = 12 }
+		BEL_v_concede = yes
+		set_temp_variable = { BEL_t_calm_months = 24 }
+		BEL_v_hold_the_movement = yes
+	}
+
+	option = {
+		name = bel_dnc.312.b
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		set_temp_variable = { BEL_t_flemish_drop = 8 }
+		set_temp_variable = { BEL_t_walloon_drop = 5 }
+		BEL_v_concede = yes
+	}
+
+	option = {
+		name = bel_dnc.312.c
+		ai_chance = { base = 30 }
+		add_political_power = 30
+		add_ideas = BEL_v_the_movement_uncontrolled
+		set_temp_variable = { BEL_t_flemish_rise = 6 }
+		set_temp_variable = { BEL_t_walloon_rise = 2 }
+		BEL_v_refuse = yes
+		hidden_effect = {
+			country_event = { id = bel_dnc.316 days = 180 }
+		}
+	}
+}
+
+country_event = {
+	id = bel_dnc.313
+	title = bel_dnc.313.t
+	desc = bel_dnc.313.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.313.a
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_political_power = 25
+	}
+
+	option = {
+		name = bel_dnc.313.b
+		ai_chance = { base = 50 }
+		add_war_support = 0.03
+		army_experience = 25
+	}
+}
+
+country_event = {
+	id = bel_dnc.314
+	title = bel_dnc.314.t
+	desc = bel_dnc.314.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.314.a
+		ai_chance = { base = 50 }
+		add_political_power = 30
+	}
+
+	option = {
+		name = bel_dnc.314.b
+		ai_chance = { base = 50 }
+		army_experience = 30
+		set_temp_variable = { BEL_t_flemish_shift = 3 }
+		set_temp_variable = { BEL_t_walloon_shift = 2 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.315
+	title = bel_dnc.315.t
+	desc = bel_dnc.315.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.315.a
+		ai_chance = { base = 50 }
+		add_political_power = -40
+		if = {
+			limit = { NOT = { has_idea = BEL_v_the_two_sections } }
+			add_ideas = BEL_v_the_two_sections
+		}
+
+		set_temp_variable = { BEL_t_flemish_shift = 2 }
+		set_temp_variable = { BEL_t_walloon_shift = 6 }
+		BEL_v_shift = yes
+	}
+
+	option = {
+		name = bel_dnc.315.b
+		ai_chance = { base = 50 }
+		add_stability = -0.02
+		set_temp_variable = { BEL_t_flemish_shift = 0 }
+		set_temp_variable = { BEL_t_walloon_shift = 3 }
+		BEL_v_shift = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.316
+	title = bel_dnc.316.t
+	desc = bel_dnc.316.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = bel_dnc.316.a
+		ai_chance = { base = 50 }
+		add_stability = -0.03
+		set_temp_variable = { BEL_t_flemish_rise = 5 }
+		set_temp_variable = { BEL_t_walloon_rise = 0 }
+		BEL_v_refuse = yes
+	}
+
+	option = {
+		name = bel_dnc.316.b
+		ai_chance = { base = 50 }
+		add_political_power = -60
+		remove_ideas = BEL_v_the_movement_uncontrolled
+		set_temp_variable = { BEL_t_flemish_drop = 10 }
+		set_temp_variable = { BEL_t_walloon_drop = 6 }
+		BEL_v_concede = yes
+	}
+}
+
+country_event = {
+	id = bel_dnc.400
+	title = bel_dnc.400.t
+	desc = bel_dnc.400.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.400.a
+		ai_chance = { factor = 40 }
+		add_political_power = -75
+		add_stability = -0.03
+		set_country_flag = BEL_f_armoured_standard
+		add_ideas = BEL_f_the_armoured_standard
+		custom_effect_tooltip = BEL_f_400a_tt
+	}
+
+	option = {
+		name = bel_dnc.400.b
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		set_country_flag = BEL_f_cheap_concrete
+		add_ideas = BEL_f_the_commissioners_mix
+		custom_effect_tooltip = BEL_f_400b_tt
+	}
+
+	option = {
+		name = bel_dnc.400.c
+		ai_chance = { factor = 20 }
+		add_political_power = 50
+		add_stability = 0.02
+		set_country_flag = BEL_f_works_deferred
+		custom_effect_tooltip = BEL_f_400c_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.401
+	title = bel_dnc.401.t
+	desc = bel_dnc.401.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.401.a
+		ai_chance = { factor = 45 }
+		add_political_power = -50
+		BEL_flemish_concede = yes
+		subtract_from_variable = { var = BEL_flemish value = 6 }
+		subtract_from_variable = { var = BEL_walloon value = 4 }
+		BEL_dnc_dials = yes
+		set_country_flag = BEL_f_flemish_companies
+		custom_effect_tooltip = BEL_f_401a_tt
+	}
+
+	option = {
+		name = bel_dnc.401.b
+		ai_chance = { factor = 55 }
+		add_political_power = 40
+		set_country_flag = BEL_army_french
+		BEL_flemish_refuse = yes
+		add_to_variable = { var = BEL_flemish value = 5 }
+		add_to_variable = { var = BEL_walloon value = 3 }
+		BEL_dnc_dials = yes
+		custom_effect_tooltip = BEL_f_401b_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.402
+	title = bel_dnc.402.t
+	desc = bel_dnc.402.d
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.402.a
+		ai_chance = { factor = 60 }
+		army_experience = 20
+		add_command_power = 25
+		set_country_flag = BEL_f_appreciations_to_the_king
+		custom_effect_tooltip = BEL_f_402a_tt
+	}
+
+	option = {
+		name = bel_dnc.402.b
+		ai_chance = { factor = 40 }
+		add_political_power = 30
+		add_stability = 0.02
+		set_country_flag = BEL_f_appreciations_in_the_drawer
+		custom_effect_tooltip = BEL_f_402b_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.403
+	title = bel_dnc.403.t
+	desc = bel_dnc.403.d
+	picture = GFX_report_event_french_british_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.403.a
+		ai_chance = { factor = 45 }
+		army_experience = 40
+		add_command_power = 25
+		set_country_flag = BEL_f_conversations_recorded
+		add_ideas = BEL_f_the_conversations
+		if = {
+			limit = { country_exists = ENG }
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_increase
+			}
+		}
+
+		custom_effect_tooltip = BEL_f_403a_tt
+	}
+
+	option = {
+		name = bel_dnc.403.b
+		ai_chance = { factor = 55 }
+		add_political_power = 25
+		add_stability = 0.03
+		set_country_flag = BEL_f_conversations_burned
+		custom_effect_tooltip = BEL_f_403b_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.405
+	title = bel_dnc.405.t
+	desc = {
+		text = bel_dnc.405.cheap.d
+		trigger = { has_country_flag = BEL_f_cheap_concrete }
+	}
+
+	desc = {
+		text = bel_dnc.405.sound.d
+		trigger = { NOT = { has_country_flag = BEL_f_cheap_concrete } }
+	}
+
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.405.a
+		ai_chance = { factor = 50 }
+		trigger = { has_country_flag = BEL_f_cheap_concrete }
+		add_political_power = -150
+		add_stability = -0.05
+		clr_country_flag = BEL_f_cheap_concrete
+		swap_ideas = {
+			remove_idea = BEL_f_the_commissioners_mix
+			add_idea = BEL_f_the_armoured_standard
+		}
+		BEL_f_dials = yes
+		custom_effect_tooltip = BEL_f_405a_tt
+	}
+
+	option = {
+		name = bel_dnc.405.b
+		ai_chance = { factor = 50 }
+		trigger = { has_country_flag = BEL_f_cheap_concrete }
+		add_political_power = 25
+		custom_effect_tooltip = BEL_f_405b_tt
+	}
+
+	option = {
+		name = bel_dnc.405.c
+		ai_chance = { factor = 100 }
+		trigger = { NOT = { has_country_flag = BEL_f_cheap_concrete } }
+		army_experience = 25
+		add_war_support = 0.03
+		custom_effect_tooltip = BEL_f_405c_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.406
+	title = bel_dnc.406.t
+	desc = bel_dnc.406.d
+	picture = GFX_report_event_generic_prepare_for_war_early
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.406.a
+		ai_chance = { factor = 40 }
+		add_war_support = 0.05
+		army_experience = 25
+		set_country_flag = BEL_f_deploy_forward
+		custom_effect_tooltip = BEL_f_406a_tt
+	}
+
+	option = {
+		name = bel_dnc.406.b
+		ai_chance = { factor = 35 }
+		add_stability = 0.03
+		add_command_power = 25
+		set_country_flag = BEL_f_deploy_redoubt
+		custom_effect_tooltip = BEL_f_406b_tt
+	}
+
+	option = {
+		name = bel_dnc.406.c
+		ai_chance = { factor = 25 }
+		add_political_power = 50
+		add_stability = 0.02
+		set_country_flag = BEL_f_deploy_centre
+		custom_effect_tooltip = BEL_f_406c_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.407
+	title = bel_dnc.407.t
+	desc = {
+		text = bel_dnc.407.strong.d
+		trigger = {
+			check_variable = {
+				var = BEL_c_forts
+				value = 3
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = BEL_f_cheap_concrete }
+		}
+	}
+
+	desc = {
+		text = bel_dnc.407.partial.d
+		trigger = {
+			check_variable = {
+				var = BEL_c_forts
+				value = 2
+				compare = greater_than_or_equals
+			}
+			OR = {
+				has_country_flag = BEL_f_cheap_concrete
+				check_variable = {
+					var = BEL_c_forts
+					value = 3
+					compare = less_than
+				}
+			}
+		}
+	}
+
+	desc = {
+		text = bel_dnc.407.weak.d
+		trigger = {
+			check_variable = {
+				var = BEL_c_forts
+				value = 2
+				compare = less_than
+			}
+		}
+	}
+
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.407.a
+		ai_chance = { factor = 60 }
+		BEL_f_august_verdict = yes
+		custom_effect_tooltip = BEL_f_407a_tt
+	}
+
+	option = {
+		name = bel_dnc.407.b
+		ai_chance = { factor = 40 }
+		add_political_power = -50
+		add_war_support = 0.05
+		set_country_flag = BEL_f_the_note_to_the_guarantors
+		BEL_f_august_verdict = yes
+		custom_effect_tooltip = BEL_f_407b_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.409
+	title = bel_dnc.409.t
+	desc = bel_dnc.409.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { tag = BEL }
+	option = {
+		name = bel_dnc.409.a
+		ai_chance = { factor = 55 }
+		add_political_power = -75
+		add_stability = 0.03
+		BEL_f_stage_done = yes
+		custom_effect_tooltip = BEL_f_409a_tt
+	}
+
+	option = {
+		name = bel_dnc.409.b
+		ai_chance = { factor = 45 }
+		add_political_power = 50
+		add_stability = -0.04
+		set_country_flag = BEL_f_works_halted
+		add_timed_idea = {
+			idea = BEL_f_the_works_stand_still
+			days = 540
+		}
+		custom_effect_tooltip = BEL_f_409b_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.700
+	title = bel_dnc.700.t
+	desc = bel_dnc.700.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		BEL_u_verdict = yes
+	}
+	option = {
+		name = bel_dnc.700.a
+	}
+}
+
+country_event = {
+	id = bel_dnc.701
+	title = bel_dnc.701.t
+	desc = bel_dnc.701.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.701.a
+		ai_chance = { factor = 100 }
+		add_ideas = BEL_u_the_colonial_charter
+		BEL_u_the_basin_is_ours = yes
+		add_political_power = 100
+		add_stability = 0.05
+		add_research_slot = 1
+		custom_effect_tooltip = BEL_u_charter_unlock_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.702
+	title = bel_dnc.702.t
+	desc = bel_dnc.702.d
+	picture = GFX_report_event_journalists_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.702.a
+		ai_chance = { factor = 60 }
+		add_ideas = BEL_u_the_inherited_shame
+		BEL_u_the_basin_is_ours = yes
+		add_political_power = 25
+		add_stability = -0.05
+		custom_effect_tooltip = BEL_u_shame_unlock_tt
+	}
+
+	option = {
+		name = bel_dnc.702.b
+		ai_chance = { factor = 40 }
+		add_ideas = BEL_u_the_inherited_shame
+		BEL_u_the_basin_is_ours = yes
+		add_political_power = -75
+		add_war_support = 0.05
+		add_stability = 0.03
+		set_country_flag = BEL_u_shame_admitted
+		custom_effect_tooltip = BEL_u_shame_admitted_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.703
+	title = bel_dnc.703.t
+	desc = bel_dnc.703.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.703.a
+		ai_chance = { factor = 60 }
+		add_ideas = BEL_u_the_powers_decided
+		add_political_power = 50
+		add_stability = 0.03
+	}
+
+	option = {
+		name = bel_dnc.703.b
+		ai_chance = { factor = 40 }
+		add_ideas = BEL_u_the_powers_decided
+		add_war_support = 0.10
+		add_stability = -0.03
+		set_country_flag = BEL_u_protest_lodged
+		custom_effect_tooltip = BEL_u_protest_lodged_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.704
+	title = bel_dnc.704.t
+	desc = bel_dnc.704.d
+	picture = GFX_report_event_eng_royal_family
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.704.a
+		ai_chance = { factor = 50 }
+		add_ideas = BEL_u_the_kings_inheritance
+		add_political_power = -50
+		add_stability = -0.03
+	}
+
+	option = {
+		name = bel_dnc.704.b
+		ai_chance = { factor = 50 }
+		add_ideas = BEL_u_the_kings_inheritance
+		add_political_power = 50
+		add_stability = -0.08
+		set_country_flag = BEL_u_estate_disowned
+		if = {
+			limit = { has_variable = BEL_scandal }
+			subtract_from_variable = { var = BEL_scandal value = 8 }
+			set_variable = { BEL_chamber_congo = 0 }
+			BEL_dnc_dials = yes
+		}
+		custom_effect_tooltip = BEL_u_estate_disowned_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.705
+	title = bel_dnc.705.t
+	desc = bel_dnc.705.d
+	picture = GFX_report_event_generic_funeral
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.705.a
+		ai_chance = { factor = 45 }
+		add_political_power = -100
+		add_stability = -0.03
+		if = {
+			limit = { has_variable = BEL_scandal }
+			add_to_variable = { var = BEL_chamber_congo value = 12 }
+			add_to_variable = { var = BEL_scandal value = 3 }
+			BEL_dnc_dials = yes
+		}
+		custom_effect_tooltip = BEL_u_press_the_new_king_tt
+	}
+
+	option = {
+		name = bel_dnc.705.b
+		ai_chance = { factor = 35 }
+		add_political_power = 40
+		set_country_flag = BEL_u_inheritance_stands
+		if = {
+			limit = { has_variable = BEL_scandal }
+			add_to_variable = { var = BEL_scandal value = 6 }
+			subtract_from_variable = { var = BEL_chamber_congo value = 4 }
+			BEL_dnc_dials = yes
+		}
+		custom_effect_tooltip = BEL_u_inheritance_stands_tt
+	}
+
+	option = {
+		name = bel_dnc.705.c
+		ai_chance = { factor = 20 }
+		trigger = {
+			check_variable = {
+				var = BEL_chamber_congo
+				value = 35
+				compare = less_than
+			}
+		}
+		add_political_power = -25
+		add_stability = 0.05
+		set_country_flag = BEL_u_claim_renounced
+		if = {
+			limit = { has_variable = BEL_scandal }
+			set_variable = { BEL_chamber_congo = 0 }
+			subtract_from_variable = { var = BEL_scandal value = 5 }
+			BEL_dnc_dials = yes
+		}
+		custom_effect_tooltip = BEL_u_claim_renounced_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.706
+	title = bel_dnc.706.t
+	desc = bel_dnc.706.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.706.a
+		ai_chance = { factor = 60 }
+		trigger = {
+			check_variable = {
+				var = BEL_chamber_congo
+				value = 40
+				compare = greater_than_or_equals
+			}
+			NOT = { has_country_flag = BEL_u_claim_renounced }
+		}
+		add_political_power = -150
+		add_stability = -0.05
+		BEL_u_take_the_basin_late = yes
+		custom_effect_tooltip = BEL_u_last_dash_tt
+	}
+
+	option = {
+		name = bel_dnc.706.b
+		ai_chance = { factor = 40 }
+		add_political_power = 60
+		add_war_support = -0.05
+		BEL_u_the_basin_is_taken_from_us = yes
+		custom_effect_tooltip = BEL_u_stand_aside_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.710
+	title = bel_dnc.710.t
+	desc = bel_dnc.710.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.710.a
+		ai_chance = { factor = 100 }
+		add_ideas = BEL_u_the_guarantee_defended
+		add_war_support = 0.05
+		army_experience = 40
+		BEL_u_service_dividend = yes
+		custom_effect_tooltip = BEL_u_liege_holds_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.711
+	title = bel_dnc.711.t
+	desc = bel_dnc.711.d
+	picture = GFX_report_event_generic_soldiers_surrendering
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.711.a
+		ai_chance = { factor = 50 }
+		add_ideas = BEL_u_a_scrap_of_paper
+		add_political_power = 50
+		BEL_u_service_dividend = yes
+		custom_effect_tooltip = BEL_u_paper_guarantee_tt
+	}
+
+	option = {
+		name = bel_dnc.711.b
+		ai_chance = { factor = 50 }
+		add_ideas = BEL_u_a_scrap_of_paper
+		add_war_support = 0.10
+		add_stability = -0.05
+		army_experience = 15
+		set_country_flag = BEL_u_levy_in_haste
+		BEL_u_service_dividend = yes
+		custom_effect_tooltip = BEL_u_levy_in_haste_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.712
+	title = bel_dnc.712.t
+	desc = bel_dnc.712.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.712.a
+		ai_chance = { factor = 100 }
+		add_ideas = BEL_u_half_a_fortress
+		army_experience = 20
+		BEL_u_service_dividend = yes
+		custom_effect_tooltip = BEL_u_half_a_fortress_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.720
+	title = bel_dnc.720.t
+	desc = bel_dnc.720.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.720.a
+		ai_chance = { factor = 100 }
+		add_ideas = BEL_u_two_peoples_one_kingdom
+		add_stability = 0.05
+		add_political_power = 50
+		if = {
+			limit = { has_idea = WW1_BEL_language_barrier }
+			remove_ideas = WW1_BEL_language_barrier
+		}
+		country_event = { id = bel_dnc.730 days = 5 }
+		custom_effect_tooltip = BEL_u_two_peoples_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.721
+	title = bel_dnc.721.t
+	desc = bel_dnc.721.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.721.a
+		ai_chance = { factor = 40 }
+		add_ideas = BEL_u_the_federal_statute
+		set_country_flag = BEL_u_federal
+		add_political_power = -150
+		add_stability = 0.05
+		if = {
+			limit = { has_idea = WW1_BEL_language_barrier }
+			remove_ideas = WW1_BEL_language_barrier
+		}
+		if = {
+			limit = { has_variable = BEL_flemish }
+			subtract_from_variable = { var = BEL_flemish value = 25 }
+			subtract_from_variable = { var = BEL_walloon value = 10 }
+			BEL_dnc_dials = yes
+		}
+		country_event = { id = bel_dnc.730 days = 5 }
+		custom_effect_tooltip = BEL_u_federal_statute_tt
+	}
+
+	option = {
+		name = bel_dnc.721.b
+		ai_chance = { factor = 40 }
+		add_ideas = BEL_u_the_unitary_kingdom_strained
+		set_country_flag = BEL_u_unitary_strain
+		add_political_power = 50
+		add_stability = -0.10
+		add_war_support = 0.05
+		if = {
+			limit = { has_variable = BEL_flemish }
+			add_to_variable = { var = BEL_flemish value = 10 }
+			add_to_variable = { var = BEL_walloon value = 5 }
+			BEL_dnc_dials = yes
+		}
+		country_event = { id = bel_dnc.730 days = 5 }
+		custom_effect_tooltip = BEL_u_unitary_strain_tt
+	}
+
+	option = {
+		name = bel_dnc.721.c
+		ai_chance = { factor = 20 }
+		add_political_power = -50
+		set_country_flag = BEL_u_royal_commission
+		country_event = { id = bel_dnc.722 days = 60 }
+		custom_effect_tooltip = BEL_u_royal_commission_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.722
+	title = bel_dnc.722.t
+	desc = bel_dnc.722.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.722.a
+		ai_chance = { factor = 55 }
+		add_ideas = BEL_u_the_federal_statute
+		set_country_flag = BEL_u_federal
+		add_political_power = -100
+		add_stability = -0.03
+		if = {
+			limit = { has_idea = WW1_BEL_language_barrier }
+			remove_ideas = WW1_BEL_language_barrier
+		}
+		if = {
+			limit = { has_variable = BEL_flemish }
+			subtract_from_variable = { var = BEL_flemish value = 20 }
+			subtract_from_variable = { var = BEL_walloon value = 12 }
+			BEL_dnc_dials = yes
+		}
+		country_event = { id = bel_dnc.730 days = 5 }
+		custom_effect_tooltip = BEL_u_federal_statute_late_tt
+	}
+
+	option = {
+		name = bel_dnc.722.b
+		ai_chance = { factor = 45 }
+		add_ideas = BEL_u_the_unitary_kingdom_strained
+		set_country_flag = BEL_u_unitary_strain
+		add_political_power = 25
+		add_stability = -0.12
+		if = {
+			limit = { has_variable = BEL_flemish }
+			add_to_variable = { var = BEL_flemish value = 12 }
+			BEL_dnc_dials = yes
+		}
+		country_event = { id = bel_dnc.730 days = 5 }
+		custom_effect_tooltip = BEL_u_unitary_strain_late_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.723
+	title = bel_dnc.723.t
+	desc = bel_dnc.723.d
+	picture = GFX_report_event_hungary_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.723.a
+		ai_chance = { factor = 100 }
+		add_ideas = BEL_u_the_kingdom_endures
+		add_political_power = 25
+		country_event = { id = bel_dnc.730 days = 5 }
+		custom_effect_tooltip = BEL_u_kingdom_endures_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.730
+	title = bel_dnc.730.t
+	desc = {
+		text = bel_dnc.730.d.two_kingdoms
+		trigger = { has_country_flag = BEL_u_is_two_kingdoms }
+	}
+
+	desc = {
+		text = bel_dnc.730.d.colonial
+		trigger = { has_country_flag = BEL_u_is_colonial_kingdom }
+	}
+
+	desc = {
+		text = bel_dnc.730.d.shamed
+		trigger = { has_country_flag = BEL_u_is_shamed_power }
+	}
+
+	desc = {
+		text = bel_dnc.730.d.armed
+		trigger = { has_country_flag = BEL_u_is_armed_neutral }
+	}
+
+	desc = {
+		text = bel_dnc.730.d.guaranteed
+		trigger = { has_country_flag = BEL_u_is_guaranteed_neutral }
+	}
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		BEL_u_name_the_country = yes
+	}
+	option = {
+		name = bel_dnc.730.a
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+		if = {
+			limit = { has_country_flag = BEL_u_is_colonial_kingdom }
+			custom_effect_tooltip = BEL_u_can_colonial_tt
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_u_is_shamed_power }
+			custom_effect_tooltip = BEL_u_can_shamed_tt
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_u_is_two_kingdoms }
+			custom_effect_tooltip = BEL_u_can_two_kingdoms_tt
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_u_is_armed_neutral }
+			custom_effect_tooltip = BEL_u_can_armed_tt
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_u_is_guaranteed_neutral }
+			custom_effect_tooltip = BEL_u_can_guaranteed_tt
+		}
+		custom_effect_tooltip = BEL_u_epilogue_row_tt
+	}
+}
+
+country_event = {
+	id = bel_dnc.750
+	title = bel_dnc.750.t
+	desc = bel_dnc.750.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.750.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = BEL_congo_annexed
+					owns_state = 295
+				}
+			}
+			custom_effect_tooltip = BEL_u_stock_colony_ours_tt
+		}
+
+		if = {
+			limit = {
+				has_country_flag = BEL_congo_lost
+			}
+			custom_effect_tooltip = BEL_u_stock_colony_lost_tt
+		}
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = BEL_congo_annexed }
+				NOT = { has_country_flag = BEL_congo_lost }
+				NOT = { owns_state = 295 }
+			}
+			custom_effect_tooltip = BEL_u_stock_colony_estate_tt
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_c_forts
+					value = 3
+					compare = greater_than_or_equals
+				}
+				NOT = { has_country_flag = BEL_f_cheap_concrete }
+			}
+			custom_effect_tooltip = BEL_u_stock_forts_done_tt
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_c_forts
+					value = 1
+					compare = less_than_or_equals
+				}
+			}
+			custom_effect_tooltip = BEL_u_stock_forts_none_tt
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_flemish
+					value = 65
+					compare = greater_than_or_equals
+				}
+			}
+			custom_effect_tooltip = BEL_u_stock_language_loud_tt
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					var = BEL_flemish
+					value = 40
+					compare = less_than_or_equals
+				}
+			}
+			custom_effect_tooltip = BEL_u_stock_language_quiet_tt
+		}
+		custom_effect_tooltip = BEL_u_stock_footer_tt
+	}
+}

@@ -1,0 +1,134 @@
+BEL_e_the_kings_estate = {
+	icon = GFX_idea_generic_purge
+	enable = { always = yes }
+	remove_trigger = { has_country_flag = BEL_congo_annexed }
+	opinion_gain_monthly_factor = BEL_scandal_opinion
+	trade_opinion_factor = BEL_scandal_trade
+	stability_factor = BEL_scandal_stability
+	drift_defence_factor = BEL_scandal_drift
+}
+
+BEL_e_the_colony_and_the_report = {
+	icon = GFX_idea_generic_intel_bonus
+	enable = { has_country_flag = BEL_congo_annexed }
+	remove_trigger = { always = no }
+	opinion_gain_monthly_factor = BEL_scandal_opinion
+	trade_opinion_factor = BEL_scandal_trade
+	stability_factor = BEL_scandal_stability
+	drift_defence_factor = BEL_scandal_drift
+}
+
+BEL_e_the_chamber_and_the_colony = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = BEL_chamber_pp
+	stability_factor = BEL_chamber_stability
+}
+
+BEL_e_the_commission_sits = {
+	icon = GFX_idea_generic_the_london_naval_treaty
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	opinion_gain_monthly_factor = -0.25
+	trade_opinion_factor = -0.20
+	political_power_factor = -0.15
+	drift_defence_factor = -0.20
+}
+
+BEL_e_the_colony_on_our_terms = {
+	icon = GFX_idea_generic_build_infrastructure
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = 0.10
+	local_resources_factor = 0.10
+	research_speed_factor = 0.03
+	consumer_goods_factor = 0.03
+}
+
+BEL_e_the_colony_on_their_terms = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = -0.10
+	local_resources_factor = 0.05
+	consumer_goods_factor = 0.08
+	trade_opinion_factor = -0.15
+	drift_defence_factor = -0.10
+}
+
+BEL_p_the_language_question = {
+	icon = GFX_idea_generic_disjointed_gov
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = BEL_flemish_stability
+	conscription_factor = BEL_flemish_conscription
+	army_org_factor = BEL_flemish_org
+}
+
+BEL_p_the_walloon_bloc = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = BEL_walloon_pp
+	production_speed_buildings_factor = BEL_walloon_prod
+	industrial_capacity_factory = BEL_walloon_ic
+}
+
+BEL_p_the_movement_in_the_street = {
+	icon = GFX_idea_generic_crowd
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = -0.10
+	war_support_factor = -0.10
+	conscription_factor = -0.05
+	political_power_factor = -0.10
+}
+
+BEL_p_the_walloon_congress = {
+	icon = GFX_idea_generic_oppression
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = -0.08
+	industrial_capacity_factory = -0.10
+	production_speed_buildings_factor = -0.10
+	political_power_factor = -0.05
+}
+
+BEL_c_the_fortress_line = {
+	icon = GFX_idea_generic_fortify_the_borders
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	army_defence_factor = BEL_c_fort_defence
+	max_dig_in_factor = BEL_c_fort_dig
+	production_speed_bunker_factor = BEL_c_fort_speed
+	political_power_factor = BEL_c_fort_pp
+}
+
+BEL_a_the_plural_franchise = {
+	icon = GFX_idea_generic_constitutional_guarantees
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = BEL_a_plural_stability
+	political_power_factor = BEL_a_plural_pp
+	war_support_factor = BEL_a_plural_ws
+	conscription = BEL_a_plural_conscription
+}
+
+BEL_a_the_royal_prerogative = {
+	icon = GFX_idea_generic_political_support
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = BEL_a_prerog_pp
+	stability_factor = BEL_a_prerog_stability
+	drift_defence_factor = BEL_a_prerog_drift
+}
+
+BEL_f_the_position_fortifiee = {
+	icon = GFX_modifiers_generic_construction
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	army_core_defence_factor = BEL_f_fort_def
+	max_dig_in = BEL_f_fort_dig
+	production_speed_bunker_factor = BEL_f_fort_speed
+}
