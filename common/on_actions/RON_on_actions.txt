@@ -760,13 +760,6 @@ on_actions = {
 				}
 				USA_handle_election = yes
 			}
-			else_if = {
-				limit = {
-					tag = FRA
-					date < 1945.1.1
-				}
-				RON_handle_French_Elections = yes
-			}
 		}
 	}
 
@@ -942,8 +935,6 @@ on_actions = {
 	on_monthly_USA = {
 
 		effect = {
-			predection_house = yes
-
 			if = {
 				# Checks for if it is Janurary (Year of previous month is a different year of current year)
 				limit = { NOT = { check_variable = { global.last_year = global.year } } }
