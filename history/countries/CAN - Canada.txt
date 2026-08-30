@@ -2,6 +2,18 @@ capital = 276
 
 oob = "CAN_1900"
 
+# the hulls the 1900 squadron is built from
+set_technology = {
+	ww1_heavy_cruiser0 = 1
+	ww1_light_cruiser0 = 1
+}
+
+# without this the infantry regiment type is inactive and the 1900 brigades never spawn
+set_technology = {
+	early_infantry_weapons_1890 = 1
+	early_infantry_weapons_1900 = 1
+}
+
 if = {
 	limit = {
 		has_start_date < 1966.01.01
@@ -11,20 +23,20 @@ if = {
 
 add_ideas = {
 	export_focus
-	tax_average
-	tariffs_average
-	security_liberty_first
+	#tax_average
+	#tariffs_average
+	#security_liberty_first
 	civilian_economy
-	press_free
-	private_control
-	fdi_regulated
-	train_medium
-	officer_train_low
-	education_budget5
-	health_budget5
-	foreign_neutral
-	foreign_volunteers
-	police_budget5
+	#press_free
+	#private_control
+	#fdi_regulated
+	#train_medium
+	#officer_train_low
+	#education_budget5
+	#health_budget5
+	#foreign_neutral
+	#foreign_volunteers
+	#police_budget5
 }
 
 set_research_slots = 3
@@ -40,8 +52,8 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 
-promote_character = CAN_wilfrid_laurier
 recruit_character = CAN_wilfrid_laurier
+promote_character = CAN_wilfrid_laurier
 recruit_character = CAN_robert_borden
 recruit_character = CAN_julian_byng
 recruit_character = CAN_louis_lipsett
@@ -52,6 +64,44 @@ recruit_character = CAN_richard_turner
 recruit_character = CAN_newton_wesley_rowell
 
 recruit_character = CAN_first_nations_council
+
+# DNC period characters
+recruit_character = CAN_tdb_evans
+recruit_character = CAN_walter_hose
+recruit_character = CAN_je_bernier
+recruit_character = CAN_willoughby_gwatkin
+recruit_character = CAN_james_j_hill
+recruit_character = CAN_reginald_fessenden
+recruit_character = CAN_casey_baldwin
+recruit_character = CAN_balloon_section
+recruit_character = CAN_alexander_graham_bell
+recruit_character = CAN_william_wood
+recruit_character = CAN_kure_naval_mission
+recruit_character = CAN_us_army_mission
+recruit_character = CAN_ws_fielding
+recruit_character = CAN_clifford_sifton
+recruit_character = CAN_frank_oliver
+recruit_character = CAN_rodolphe_lemieux
+recruit_character = CAN_charles_fitzpatrick
+recruit_character = CAN_richard_cartwright
+recruit_character = CAN_henri_bourassa
+recruit_character = CAN_frederick_borden
+recruit_character = CAN_joseph_pope
+recruit_character = CAN_george_denison
+recruit_character = CAN_john_charlton
+recruit_character = CAN_errol_bouchette
+recruit_character = CAN_tatsugoro_nosse
+recruit_character = CAN_lord_dundonald
+recruit_character = CAN_percy_lake
+recruit_character = CAN_og_spain
+recruit_character = CAN_lp_brodeur
+recruit_character = CAN_sam_hughes
+recruit_character = CAN_ep_girouard
+recruit_character = CAN_jad_mccurdy
+recruit_character = CAN_william_otter
+recruit_character = CAN_sam_steele
+recruit_character = CAN_fl_lessard
+recruit_character = CAN_charles_kingsmill
 
 set_politics = {
 	ruling_party = democratic
@@ -185,8 +235,8 @@ recruit_character = CAN_george_volkoff
 			has_start_date > 1930.01.01
 			has_start_date < 1949.01.01
 		}
-		add_ideas = canada_tepid_war_response
-		add_ideas = quebecois_no_conscription
+		#add_ideas = canada_tepid_war_response
+		#add_ideas = quebecois_no_conscription
 	}
 
 	promote_character = CAN_r_b_bennett
