@@ -14945,6 +14945,18 @@ focus_tree = {
 				add_war_support = 0.05
 			}
 			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				add_political_power = 20
+				custom_effect_tooltip = CAN_p_wheat_west_tt
+				add_opinion_modifier = { target = JAP modifier = RI_trade_agreement }
+				add_tech_bonus = {
+					name = CAN_p_pacific_grain_bonus
+					bonus = 0.5
+					uses = 1
+					category = agriculture
+				}
+			}
+			if = {
 				limit = { has_country_flag = CAN_dnc_zollverein_joined }
 				467 = {
 					add_building_construction = {
@@ -15034,6 +15046,18 @@ focus_tree = {
 				limit = { has_country_flag = CAN_dnc_path_continental }
 				add_political_power = 25
 				add_stability = 0.05
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				add_political_power = 15
+				custom_effect_tooltip = CAN_p_wheat_west_tt
+				740 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 			else_if = {
 				limit = { has_country_flag = CAN_dnc_path_imperial }
@@ -15201,6 +15225,13 @@ focus_tree = {
 			if = {
 				limit = { has_country_flag = CAN_dnc_path_imperial }
 				add_war_support = 0.05
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				add_political_power = 20
+				custom_effect_tooltip = CAN_p_the_west_faces_out_tt
+				add_stability = -0.03
+				add_war_support = 0.03
 			}
 			if = {
 				limit = {
@@ -16066,6 +16097,12 @@ focus_tree = {
 				custom_effect_tooltip = CAN_r_wall_against_the_partner_tt
 				add_stability = -0.03
 			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_the_tariff_and_the_ocean_tt
+				add_political_power = -15
+				add_opinion_modifier = { target = JAP modifier = RI_trade_agreement_declined }
+			}
 			else_if = {
 				limit = { has_country_flag = CAN_dnc_us_tariff_war }
 				add_political_power = 25
@@ -16166,6 +16203,12 @@ focus_tree = {
 				add_war_support = 0.03
 			}
 			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_the_tariff_and_the_ocean_tt
+				add_political_power = -20
+				add_stability = -0.02
+			}
+			if = {
 				limit = {
 					NOT = {
 						has_dynamic_modifier = { modifier = CAN_r_dominion_economy }
@@ -16263,6 +16306,18 @@ focus_tree = {
 				limit = { has_country_flag = CAN_dnc_path_imperial }
 				reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
 				add_stability = -0.03
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_two_roads_one_country_tt
+				add_political_power = 10
+				470 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 			if = {
 				limit = { has_country_flag = CAN_dnc_us_tariff_war }
@@ -16371,6 +16426,12 @@ focus_tree = {
 		mutually_exclusive = { focus = CANDNC_eco_a_public_currency }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_credit_follows_the_ships_tt
+				add_political_power = 15
+				add_opinion_modifier = { target = JAP modifier = RI_trade_agreement }
+			}
 			add_ideas = CAN_r_the_chartered_banks
 			add_stability = -0.05
 			add_political_power = 50
@@ -16478,6 +16539,12 @@ focus_tree = {
 				custom_effect_tooltip = CAN_r_a_nations_money_tt
 				add_political_power = 25
 				add_stability = 0.03
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_credit_follows_the_ships_tt
+				add_political_power = 20
+				add_stability = 0.02
 			}
 			else_if = {
 				limit = { has_idea = CAN_fx_the_continental_dollar }
@@ -16705,6 +16772,17 @@ focus_tree = {
 				limit = { has_country_flag = CAN_dnc_path_sovereign }
 				add_political_power = 25
 				add_war_support = 0.02
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_the_coast_is_far_tt
+				air_experience = 15
+				add_tech_bonus = {
+					name = CAN_p_coastal_patrol_bonus
+					bonus = 0.5
+					uses = 1
+					category = naval_air
+				}
 			}
 			else_if = {
 				limit = { has_country_flag = CAN_dnc_path_imperial }
@@ -17345,6 +17423,18 @@ focus_tree = {
 				limit = { has_country_flag = CAN_dnc_path_sovereign }
 				custom_effect_tooltip = CAN_r_sovereign_roundel_tt
 				add_political_power = 50
+			}
+			if = {
+				limit = { has_country_flag = CAN_dnc_path_pacific }
+				custom_effect_tooltip = CAN_p_the_coast_is_far_tt
+				air_experience = 20
+				740 = {
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 			else_if = {
 				limit = { has_country_flag = CAN_dnc_path_imperial }
