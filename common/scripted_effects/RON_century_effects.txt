@@ -1,0 +1,155 @@
+RON_century_start = {
+	set_variable = { global.last_year = global.year }
+	set_variable = { global.RON_moy = 0 }
+	set_variable = { global.RON_mc = 0 }
+	set_variable = { global.RON_era = 1 }
+	set_variable = { global.RON_era_since = 0 }
+	set_variable = { global.RON_great_wars = 0 }
+	clr_global_flag = WW1_RON_ERA_gflg
+	clr_global_flag = INT_RON_ERA_gflg
+	clr_global_flag = CLD_RON_ERA_gflg
+	set_global_flag = DNC_RON_ERA_gflg
+}
+
+RON_century_tick = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = { global.last_year = global.year }
+			}
+		}
+		set_variable = { global.last_year = global.year }
+		set_variable = { global.RON_moy = 0 }
+		log = "RON century check: year [?global.year|0] months [?global.RON_mc|0] era [?global.RON_era|0] great wars [?global.RON_great_wars|0]"
+	}
+	else = {
+		add_to_variable = { global.RON_moy = 1 }
+	}
+	set_variable = { global.RON_mc = global.year }
+	subtract_from_variable = { global.RON_mc = 1900 }
+	multiply_variable = { global.RON_mc = 12 }
+	add_to_variable = { global.RON_mc = global.RON_moy }
+	RON_century_era_ladder = yes
+}
+
+RON_century_era_ladder = {
+	set_temp_variable = { RON_t_great_war = 0 }
+	if = {
+		limit = {
+			any_country = {
+				is_major = yes
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+		set_temp_variable = { RON_t_great_war = 1 }
+	}
+	set_temp_variable = { RON_t_dwell = global.RON_mc }
+	subtract_from_temp_variable = { RON_t_dwell = global.RON_era_since }
+	if = {
+		limit = {
+			check_variable = { global.RON_era = 1 }
+			check_variable = {
+				var = global.RON_mc
+				value = 119
+				compare = greater_than
+			}
+			OR = {
+				check_variable = { RON_t_great_war = 1 }
+				check_variable = {
+					var = global.RON_mc
+					value = 239
+					compare = greater_than
+				}
+			}
+		}
+		RON_century_enter_great_war = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { global.RON_era = 3 }
+			check_variable = { RON_t_great_war = 1 }
+			check_variable = {
+				var = RON_t_dwell
+				value = 11
+				compare = greater_than
+			}
+		}
+		RON_century_enter_great_war = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { global.RON_era = 2 }
+			check_variable = {
+				var = RON_t_dwell
+				value = 11
+				compare = greater_than
+			}
+			OR = {
+				check_variable = { RON_t_great_war = 0 }
+				check_variable = {
+					var = global.RON_mc
+					value = 299
+					compare = greater_than
+				}
+			}
+		}
+		RON_century_enter_interwar = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { global.RON_era = 3 }
+			OR = {
+				AND = {
+					check_variable = {
+						var = global.RON_great_wars
+						value = 1
+						compare = greater_than
+					}
+					check_variable = { RON_t_great_war = 0 }
+				}
+				check_variable = {
+					var = global.RON_mc
+					value = 587
+					compare = greater_than
+				}
+			}
+		}
+		RON_century_enter_cold_war = yes
+	}
+}
+
+RON_century_enter_great_war = {
+	set_variable = { global.RON_era = 2 }
+	set_variable = { global.RON_era_since = global.RON_mc }
+	add_to_variable = { global.RON_great_wars = 1 }
+	clr_global_flag = DNC_RON_ERA_gflg
+	clr_global_flag = INT_RON_ERA_gflg
+	set_global_flag = WW1_RON_ERA_gflg
+	if = {
+		limit = {
+			EGY = {
+				exists = yes
+				has_focus_tree = generic_focus
+			}
+		}
+		EGY = {
+			load_focus_tree = Egypt_WW1
+		}
+	}
+}
+
+RON_century_enter_interwar = {
+	set_variable = { global.RON_era = 3 }
+	set_variable = { global.RON_era_since = global.RON_mc }
+	clr_global_flag = WW1_RON_ERA_gflg
+	set_global_flag = INT_RON_ERA_gflg
+}
+
+RON_century_enter_cold_war = {
+	set_variable = { global.RON_era = 4 }
+	set_variable = { global.RON_era_since = global.RON_mc }
+	clr_global_flag = INT_RON_ERA_gflg
+	set_global_flag = CLD_RON_ERA_gflg
+}
