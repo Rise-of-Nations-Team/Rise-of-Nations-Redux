@@ -1063,5 +1063,212 @@ ideas = {
 				political_power_factor = 0.05
 			}
 		}
-	}
+	
+
+		BEL_a_the_register_in_the_provinces = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.08
+				stability_factor = -0.05
+				drift_defence_factor = -0.10
+			}
+		}
+
+		BEL_v_the_vote_of_the_countryside = {
+			allowed = { original_tag = BEL }
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.08
+				stability_factor = 0.03
+				war_support_factor = -0.03
+			}
+		}
+
+		BEL_v_the_walloon_leagues = {
+			allowed = { original_tag = BEL }
+			picture = generic_local_self_management
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_power_factor = -0.05
+				stability_factor = -0.03
+			}
+		}
+
+		BEL_v_the_flemish_list = {
+			allowed = { original_tag = BEL }
+			picture = generic_crowd
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.08
+				stability_factor = -0.04
+				conscription_factor = 0.03
+			}
+		}
+
+		BEL_v_the_frontier_in_law = {
+			allowed = { original_tag = BEL }
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.06
+				political_power_factor = 0.04
+				drift_defence_factor = 0.08
+			}
+		}
+
+		BEL_v_the_last_session = {
+			allowed = { original_tag = BEL }
+			picture = generic_democratic_opposition
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+
+		BEL_f_the_estimates_on_the_table = {
+			allowed = { original_tag = BEL }
+			picture = generic_fortify_the_borders
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.10
+				political_power_factor = -0.05
+			}
+		}
+
+		BEL_f_the_three_appreciations = {
+			allowed = { original_tag = BEL }
+			picture = generic_intel_bonus
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.10
+				army_org_factor = 0.03
+				war_support_factor = 0.03
+			}
+		}
+
+		BEL_f_no_plan_for_it = {
+			allowed = { original_tag = BEL }
+			picture = generic_neglected_military
+			removal_cost = -1
+			modifier = {
+				planning_speed = -0.20
+				army_org_factor = -0.05
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		BEL_f_the_notices_are_printed = {
+			allowed = { original_tag = BEL }
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				mobilization_speed = 0.15
+				war_support_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		BEL_u_the_crown_still_governs = {
+			allowed = { original_tag = BEL }
+			picture = generic_king_handled
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				drift_defence_factor = 0.10
+				war_support_factor = 0.05
+				stability_factor = -0.10
+			}
+		}
+
+		BEL_u_the_franchise_won = {
+			allowed = { original_tag = BEL }
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.05
+				conscription = 0.005
+				political_power_factor = -0.05
+			}
+		}
+
+		BEL_u_the_register_stands = {
+			allowed = { original_tag = BEL }
+			picture = generic_constitutional_guarantee
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.03
+				conscription_factor = -0.05
+			}
+		}
+
+		BEL_u_the_second_line = {
+			allowed = { original_tag = BEL }
+			picture = generic_mountain_defensive_training
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.10
+				max_dig_in = 2
+				production_speed_bunker_factor = 0.15
+			}
+		}
+
+		BEL_u_the_note_is_believed = {
+			allowed = { original_tag = BEL }
+			picture = generic_flexible_foreign_policy
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.15
+				opinion_gain_monthly_factor = 0.15
+				political_power_factor = 0.05
+			}
+		}
+
+		BEL_c_the_kingdom_renounces = {
+		picture = generic_neutrality_focus
+		allowed = { always = no }
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		modifier = {
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		consumer_goods_factor = -0.05
+		trade_opinion_factor = 0.10
+		war_support_factor = -0.05
+		}
+		}
+
+		BEL_v_the_state_speaks_french = {
+		allowed = { original_tag = BEL }
+		picture = generic_pp_unity_bonus
+		removal_cost = -1
+		modifier = {
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		conscription_factor = -0.05
+		}
+		}
+
+		BEL_f_the_kings_bequest = {
+			picture = generic_construction
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+				max_dig_in = 2
+				political_power_factor = -0.05
+			}
+		}
+}
 }

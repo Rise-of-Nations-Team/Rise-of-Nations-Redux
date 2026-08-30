@@ -133,6 +133,43 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			BEL_a_open_the_chamber = yes
+			add_stability = -0.03
+			set_country_flag = BEL_a_register_stands
+			recruit_character = BEL_Paul_janson
+			recruit_character = BEL_P_Berryer
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			if = {
+				limit = { has_country_flag = BEL_dnc_tongues_named }
+				subtract_from_variable = { var = BEL_a_plural value = 12 }
+				add_to_variable = { var = BEL_chamber_congo value = 5 }
+				add_to_variable = { var = BEL_flemish value = 3 }
+				custom_effect_tooltip = BEL_a_register_pressed_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_a_prerogative value = 8 }
+				add_political_power = 25
+				custom_effect_tooltip = BEL_a_register_quiet_tt
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_dnc_estate_named }
+				add_to_variable = { var = BEL_chamber_congo value = 6 }
+				custom_effect_tooltip = BEL_a_register_and_the_colony_tt
+			}
+
+			add_tech_bonus = {
+				name = BELDNC_a_the_plural_vote_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			BEL_a_dials = yes
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.800 days = 21 }
 			country_event = { id = bel_dnc.100 days = 3 }
 		}
 	}
@@ -149,6 +186,30 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			add_to_variable = { var = BEL_a_prerogative value = 10 }
+			add_stability = -0.02
+			set_country_flag = BEL_a_countersignature_tested
+			recruit_character = BEL_Julien_Liebaert
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				subtract_from_variable = { var = BEL_a_prerogative value = 6 }
+				add_to_variable = { var = BEL_chamber_congo value = 8 }
+				subtract_from_variable = { var = BEL_scandal value = 6 }
+				custom_effect_tooltip = BEL_a_the_new_king_signs_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_a_prerogative value = 8 }
+				add_to_variable = { var = BEL_scandal value = 4 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+				custom_effect_tooltip = BEL_a_the_old_king_signs_tt
+			}
+
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.801 days = 40 }
 			BEL_a_dials = yes
 			country_event = { id = bel_dnc.101 days = 5 }
 		}
@@ -166,6 +227,38 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.03
 			subtract_from_variable = { var = BEL_a_plural value = 5 }
+			add_to_variable = { var = BEL_a_strikes value = 2 }
+			BEL_c_strike_begins = yes
+			set_country_flag = parti_ouvrier_win
+			recruit_character = BEL_Emile_Vandervelde
+			recruit_character = BEL_Edouard_anseele
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
+			subtract_from_variable = { var = BEL_walloon value = 6 }
+			add_to_variable = { var = BEL_chamber_congo value = 5 }
+			if = {
+				limit = { has_country_flag = BEL_a_countersignature_tested }
+				add_to_variable = { var = BEL_a_prerogative value = 8 }
+				add_to_variable = { var = BEL_a_strikes value = 1 }
+				add_to_variable = { var = BEL_scandal value = 3 }
+				add_stability = -0.04
+				custom_effect_tooltip = BEL_a_crown_has_shown_its_hand_tt
+			}
+
+			else = {
+				subtract_from_variable = { var = BEL_a_plural value = 8 }
+				add_political_power = -20
+				custom_effect_tooltip = BEL_a_strike_is_still_industrial_tt
+			}
+
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.802 days = 60 }
 			BEL_a_dials = yes
 			country_event = { id = bel_dnc.102 days = 5 }
 		}
@@ -184,11 +277,38 @@ focus_tree = {
 		cost = 4
 		ai_will_do = { factor = 10 }
 		completion_reward = {
+			set_country_flag = BEL_dnc_path_settlement
 			add_political_power = 60
 			add_stability = 0.05
 			set_country_flag = BEL_a_catholic
 			set_country_flag = catholic_block_win
 			add_idea = BEL_a_the_catholic_settlement
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.02
+			}
+			add_country_leader_trait = catholic_block
+			recruit_character = BEL_francois_schollaert
+			recruit_character = BEL_P_Berryer
+			BEL_estate_deny = yes
+			set_country_flag = BEL_a_settlement_named
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = BELDNC_a_the_catholic_settlement_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
 			add_to_variable = { var = BEL_a_plural value = 5 }
 			subtract_from_variable = { var = BEL_chamber_congo value = 3 }
 			BEL_a_dials = yes
@@ -209,12 +329,32 @@ focus_tree = {
 		cost = 4
 		ai_will_do = { factor = 5 }
 		completion_reward = {
+			set_country_flag = BEL_dnc_path_cartel
 			add_political_power = -40
 			add_stability = -0.05
 			set_country_flag = BEL_a_cartel
 			clr_country_flag = catholic_block_win
 			set_country_flag = parti_liberal_win
 			add_idea = BEL_a_the_cartel_of_the_left
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.03
+			}
+			add_country_leader_trait = parti_liberal
+			set_country_flag = parti_ouvrier_win
+			set_country_flag = BEL_a_cartel_named
+			recruit_character = BEL_Emile_Vandervelde
+			recruit_character = BEL_Paul_hymans
+			add_to_variable = { var = BEL_a_strikes value = 1 }
+			add_to_variable = { var = BEL_scandal value = 5 }
 			subtract_from_variable = { var = BEL_a_plural value = 15 }
 			add_to_variable = { var = BEL_chamber_congo value = 8 }
 			add_to_variable = { var = BEL_flemish value = 4 }
@@ -236,10 +376,47 @@ focus_tree = {
 		cost = 4
 		ai_will_do = { factor = 2 }
 		completion_reward = {
+			set_country_flag = BEL_dnc_path_crown
 			add_political_power = 80
 			add_stability = -0.08
 			set_country_flag = BEL_a_crown_governs
 			add_idea = BEL_a_the_crown_governs
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			BEL_estate_deny = yes
+			set_country_flag = BEL_u_crown_governs
+			recruit_character = BEL_Julien_Liebaert
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_decrease
+				}
+			}
+
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 30
+			}
+			add_named_threat = {
+				threat = 1
+				name = BEL_a_the_crown_governs_alone
+			}
 			add_to_variable = { var = BEL_a_prerogative value = 25 }
 			add_to_variable = { var = BEL_a_plural value = 10 }
 			subtract_from_variable = { var = BEL_chamber_congo value = 6 }
@@ -307,6 +484,32 @@ focus_tree = {
 			add_stability = -0.05
 			add_war_support = 0.05
 			subtract_from_variable = { var = BEL_a_plural value = 35 }
+			set_country_flag = BEL_u_franchise_won
+			recruit_character = BEL_Paul_janson
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_to_variable = { var = BEL_a_strikes value = 1 }
+			add_to_variable = { var = BEL_chamber_congo value = 6 }
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				add_political_power = 40
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_a_single_vote_new_reign_tt
+			}
+
+			else = {
+				add_political_power = -40
+				add_to_variable = { var = BEL_a_prerogative value = 8 }
+				custom_effect_tooltip = BEL_a_single_vote_old_king_tt
+			}
+
+			BEL_dnc_dials = yes
 			BEL_a_dials = yes
 			country_event = { id = bel_dnc.104 days = 5 }
 		}
@@ -326,6 +529,45 @@ focus_tree = {
 			add_war_support = -0.05
 			add_to_variable = { var = BEL_a_strikes value = 1 }
 			subtract_from_variable = { var = BEL_a_plural value = 20 }
+			add_to_variable = { var = BEL_a_strikes value = 2 }
+			BEL_c_strike_begins = yes
+			set_country_flag = parti_ouvrier_win
+			recruit_character = BEL_Emile_Vandervelde
+			recruit_character = BEL_Camille_huysmans
+			add_popularity = {
+				ideology = communism
+				popularity = 0.06
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.04
+			}
+			subtract_from_variable = { var = BEL_walloon value = 8 }
+			add_to_variable = { var = BEL_flemish value = 4 }
+			add_to_variable = { var = BEL_chamber_congo value = 8 }
+			if = {
+				limit = {
+					check_variable = {
+						var = BEL_a_plural
+						value = 40
+						compare = less_than_or_equals
+					}
+				}
+				add_stability = -0.06
+				add_to_variable = { var = BEL_a_strikes value = 2 }
+				add_to_variable = { var = BEL_scandal value = 6 }
+				custom_effect_tooltip = BEL_a_strike_without_a_grievance_tt
+			}
+
+			else = {
+				add_political_power = 25
+				subtract_from_variable = { var = BEL_a_plural value = 12 }
+				add_to_variable = { var = BEL_chamber_congo value = 6 }
+				custom_effect_tooltip = BEL_a_strike_against_the_register_tt
+			}
+
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.805 days = 90 }
 			add_timed_idea = {
 				idea = BEL_a_the_general_strike
 				days = 180
@@ -349,6 +591,26 @@ focus_tree = {
 			add_stability = -0.04
 			add_to_variable = { var = BEL_a_prerogative value = 15 }
 			subtract_from_variable = { var = BEL_chamber_congo value = 5 }
+			set_country_flag = BEL_a_message_read
+			recruit_character = BEL_Jules_Davignon
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				add_stability = 0.03
+				add_political_power = 25
+				subtract_from_variable = { var = BEL_a_prerogative value = 5 }
+				custom_effect_tooltip = BEL_a_message_from_a_new_king_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_a_prerogative value = 10 }
+				add_to_variable = { var = BEL_scandal value = 5 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+				custom_effect_tooltip = BEL_a_message_from_leopold_tt
+			}
 			BEL_a_dials = yes
 			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.105 days = 5 }
@@ -391,6 +653,39 @@ focus_tree = {
 			add_political_power = 70
 			add_stability = 0.08
 			add_idea = BEL_a_the_settlement_holds
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+			BEL_estate_deny = yes
+			set_country_flag = BEL_u_register_stands
+			recruit_character = BEL_charles_de_broqueville
+			recruit_character = BEL_francois_schollaert
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_charles_de_broqueville
+				add_political_power = 40
+				custom_effect_tooltip = BEL_a_the_ministry_outlives_the_king_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_a_prerogative value = 5 }
+				subtract_from_variable = { var = BEL_chamber_congo value = 4 }
+				custom_effect_tooltip = BEL_a_the_ministry_serves_the_king_tt
+			}
+
+			34 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			BEL_dnc_dials = yes
 			add_to_variable = { var = BEL_a_plural value = 5 }
 			BEL_a_dials = yes
 			country_event = { id = bel_dnc.107 days = 5 }
@@ -415,6 +710,28 @@ focus_tree = {
 			subtract_from_variable = { var = BEL_a_plural value = 25 }
 			add_to_variable = { var = BEL_chamber_congo value = 10 }
 			add_to_variable = { var = BEL_flemish value = 3 }
+			set_country_flag = BEL_u_franchise_won
+			set_country_flag = BEL_a_cartel_governs
+			recruit_character = BEL_Paul_hymans
+			recruit_character = BEL_Emile_Vandervelde
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.04
+			}
+			if = {
+				limit = { NOT = { has_idea = BEL_a_the_single_vote } }
+				add_ideas = BEL_a_the_single_vote
+			}
+
+			subtract_from_variable = { var = BEL_scandal value = 5 }
 			BEL_a_dials = yes
 			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.108 days = 5 }
@@ -438,6 +755,34 @@ focus_tree = {
 			add_stability = -0.06
 			add_to_variable = { var = BEL_a_prerogative value = 25 }
 			add_to_variable = { var = BEL_scandal value = 5 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.04
+			}
+			if = {
+				limit = { NOT = { has_idea = BEL_a_the_silent_house } }
+				add_ideas = BEL_a_the_silent_house
+			}
+
+			set_country_flag = BEL_a_palace_bureau
+			recruit_character = BEL_Julien_Liebaert
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 25
+			}
 			subtract_from_variable = { var = BEL_chamber_congo value = 8 }
 			BEL_a_dials = yes
 			BEL_dnc_dials = yes
@@ -501,6 +846,76 @@ focus_tree = {
 			add_stability = -0.10
 			set_country_flag = BEL_a_house_prorogued
 			add_idea = BEL_a_the_chamber_prorogued
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.08
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.07
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			BEL_estate_deny = yes
+			BEL_c_strike_begins = yes
+			add_to_variable = { var = BEL_a_strikes value = 3 }
+			set_country_flag = BEL_u_crown_governs
+			set_country_flag = BEL_a_decree_government
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				add_stability = 0.04
+				subtract_from_variable = { var = BEL_a_prerogative value = 10 }
+				custom_effect_tooltip = BEL_a_prorogued_by_a_new_king_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_scandal value = 10 }
+				add_to_variable = { var = BEL_a_prerogative value = 10 }
+				custom_effect_tooltip = BEL_a_prorogued_by_leopold_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = {
+					target = FRA
+					modifier = large_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = {
+					target = GER
+					modifier = medium_increase
+				}
+			}
+
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 50
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = ENG
+				value = 30
+			}
+			add_named_threat = {
+				threat = 2
+				name = BEL_a_the_chamber_does_not_sit
+			}
+			country_event = { id = bel_dnc.806 days = 45 }
 			add_to_variable = { var = BEL_a_prerogative value = 30 }
 			subtract_from_variable = { var = BEL_chamber_congo value = 15 }
 			BEL_a_dials = yes
@@ -522,6 +937,36 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			BEL_c_open_the_question = yes
+			add_stability = -0.02
+			set_country_flag = BEL_c_question_open
+			recruit_character = BEL_Emile_Vandervelde
+			recruit_character = BEL_Julien_Liebaert
+			if = {
+				limit = { has_country_flag = BEL_dnc_estate_named }
+				add_to_variable = { var = BEL_chamber_congo value = 8 }
+				subtract_from_variable = { var = BEL_scandal value = 4 }
+				custom_effect_tooltip = BEL_c_the_house_was_warned_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_scandal value = 6 }
+				add_political_power = -25
+				custom_effect_tooltip = BEL_c_the_house_was_not_warned_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_decrease
+				}
+			}
+
+			add_named_threat = {
+				threat = 1
+				name = BEL_c_the_estate_is_named
+			}
+			BEL_dnc_dials = yes
 			custom_effect_tooltip = BEL_c_the_ratchet_tt
 			country_event = { id = bel_dnc.200 days = 3 }
 		}
@@ -540,6 +985,40 @@ focus_tree = {
 			add_political_power = 60
 			add_stability = 0.04
 			add_ideas = BEL_c_the_official_denial
+			set_country_flag = BEL_c_answer_given
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				add_to_variable = { var = BEL_chamber_congo value = 10 }
+				subtract_from_variable = { var = BEL_scandal value = 5 }
+				custom_effect_tooltip = BEL_c_the_answer_of_a_new_king_tt
+			}
+
+			else = {
+				subtract_from_variable = { var = BEL_chamber_congo value = 6 }
+				add_to_variable = { var = BEL_scandal value = 3 }
+				custom_effect_tooltip = BEL_c_the_answer_of_leopold_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = ENG
+				value = 30
+			}
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.810 days = 60 }
 			BEL_estate_deny = yes
 			custom_effect_tooltip = BEL_c_the_ratchet_tt
 		}
@@ -558,6 +1037,45 @@ focus_tree = {
 			add_political_power = -50
 			add_to_variable = { var = BEL_chamber_congo value = 8 }
 			add_to_variable = { var = BEL_scandal value = 4 }
+			set_country_flag = parti_ouvrier_win
+			set_country_flag = BEL_c_interpellation_heard
+			recruit_character = BEL_Emile_Vandervelde
+			recruit_character = BEL_Camille_huysmans
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+						var = BEL_denials
+						value = 3
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = { var = BEL_scandal value = 8 }
+				add_to_variable = { var = BEL_chamber_congo value = 8 }
+				custom_effect_tooltip = BEL_c_the_denials_are_read_back_tt
+			}
+
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_c_the_house_hears_it_first_tt
+			}
+
+			country_event = { id = bel_dnc.811 days = 30 }
 			BEL_dnc_dials = yes
 			add_timed_idea = {
 				idea = BEL_c_the_house_in_session
@@ -579,6 +1097,40 @@ focus_tree = {
 			BEL_c_regime_full = yes
 			add_ideas = BEL_c_the_kings_works
 			add_stability = 0.03
+			set_country_flag = BEL_c_tally_at_full
+			add_to_variable = { var = BEL_scandal value = 10 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = USA }
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_decrease
+				}
+			}
+
+			add_named_threat = {
+				threat = 2
+				name = BEL_c_the_stations_are_given_a_quota
+			}
+			34 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			BEL_dnc_dials = yes
 			6 = {
 				add_building_construction = {
 					type = infrastructure
@@ -603,6 +1155,40 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 40
 			add_ideas = BEL_c_the_press_bureau
+			set_country_flag = BEL_c_bureau_open
+			recruit_character = BEL_Jules_Davignon
+			add_to_variable = { var = BEL_scandal value = 4 }
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = USA }
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_decrease
+				}
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = ENG
+				value = 40
+			}
+			add_named_threat = {
+				threat = 1
+				name = BEL_c_the_bureau_answers_liverpool
+			}
+			add_tech_bonus = {
+				name = BELDNC_c_the_west_african_bureau_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
 			BEL_estate_deny = yes
 			custom_effect_tooltip = BEL_c_the_ratchet_tt
 			country_event = { id = bel_dnc.207 days = 120 }
@@ -623,6 +1209,32 @@ focus_tree = {
 			add_to_variable = { var = BEL_chamber_congo value = 10 }
 			BEL_dnc_dials = yes
 			set_country_flag = BEL_c_reversion_recognised
+			add_political_power = -25
+			recruit_character = BEL_auguste_beernaert
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				set_country_flag = BEL_c_reversion_dated
+				add_to_variable = { var = BEL_chamber_congo value = 15 }
+				subtract_from_variable = { var = BEL_scandal value = 6 }
+				custom_effect_tooltip = BEL_c_the_bequest_falls_due_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_scandal value = 4 }
+				subtract_from_variable = { var = BEL_chamber_congo value = 3 }
+				custom_effect_tooltip = BEL_c_the_bequest_has_no_date_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+			}
+
+			BEL_dnc_dials = yes
 			custom_effect_tooltip = BEL_c_reversion_tt
 		}
 	}
@@ -644,6 +1256,42 @@ focus_tree = {
 			subtract_from_variable = { var = BEL_scandal value = 8 }
 			BEL_dnc_dials = yes
 			set_country_flag = BEL_c_royal_commission_named
+			add_dynamic_modifier = { modifier = BEL_e_the_commission_sits }
+			add_political_power = -25
+			recruit_character = BEL_Julien_Liebaert
+			if = {
+				limit = {
+					check_variable = {
+						var = BEL_denials
+						value = 4
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = { var = BEL_scandal value = 10 }
+				add_to_variable = { var = BEL_chamber_congo value = 10 }
+				custom_effect_tooltip = BEL_c_the_commission_is_not_believed_tt
+			}
+
+			else = {
+				subtract_from_variable = { var = BEL_scandal value = 6 }
+				add_stability = 0.02
+				custom_effect_tooltip = BEL_c_the_commission_is_believed_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+			}
+
+			add_named_threat = {
+				threat = 1
+				name = BEL_c_three_judges_go_up_the_river
+			}
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.812 days = 300 }
 			country_event = { id = bel_dnc.202 days = 180 }
 		}
 	}
@@ -662,6 +1310,38 @@ focus_tree = {
 			add_stability = -0.04
 			add_to_variable = { var = BEL_chamber_congo value = 12 }
 			add_to_variable = { var = BEL_scandal value = 3 }
+			set_country_flag = parti_ouvrier_win
+			set_country_flag = BEL_c_nothing_is_unsayable
+			recruit_character = BEL_Emile_Vandervelde
+			recruit_character = BEL_Paul_janson
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.03
+			}
+			if = {
+				limit = { NOT = { has_idea = BEL_c_the_congo_reform_association } }
+				add_ideas = BEL_c_the_congo_reform_association
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_c_answer_given }
+				add_stability = -0.04
+				add_to_variable = { var = BEL_scandal value = 8 }
+				custom_effect_tooltip = BEL_c_the_motion_against_a_denial_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_chamber_congo value = 8 }
+				custom_effect_tooltip = BEL_c_the_motion_against_a_silence_tt
+			}
 			BEL_dnc_dials = yes
 		}
 	}
@@ -680,6 +1360,16 @@ focus_tree = {
 			add_to_variable = { var = BEL_chamber_congo value = 8 }
 			BEL_dnc_dials = yes
 			set_country_flag = BEL_c_charter_ready
+			set_country_flag = BEL_c_law_before_the_colony
+			recruit_character = BEL_auguste_beernaert
+			recruit_character = BEL_Paul_hymans
+			add_stability = 0.02
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			subtract_from_variable = { var = BEL_scandal value = 3 }
+			BEL_dnc_dials = yes
 			add_tech_bonus = {
 				name = BELDNC_c_the_colonial_charter_drafted_bonus
 				bonus = 0.5
@@ -712,6 +1402,59 @@ focus_tree = {
 			subtract_from_variable = { var = BEL_chamber_congo value = 20 }
 			BEL_dnc_dials = yes
 			set_country_flag = BEL_c_estate_entrenched
+			BEL_estate_deny = yes
+			BEL_c_regime_full = yes
+			set_country_flag = BEL_c_estate_stands_by_decree
+			recruit_character = BEL_charles_woeste
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.04
+			}
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				add_to_variable = { var = BEL_scandal value = 12 }
+				add_to_variable = { var = BEL_chamber_congo value = 12 }
+				custom_effect_tooltip = BEL_c_a_new_king_keeps_the_estate_tt
+			}
+
+			else = {
+				add_political_power = 40
+				add_to_variable = { var = BEL_scandal value = 4 }
+				custom_effect_tooltip = BEL_c_leopold_keeps_the_estate_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = USA }
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_decrease
+				}
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = ENG
+				value = 50
+			}
+			add_named_threat = {
+				threat = 2
+				name = BEL_c_the_question_closed_by_decree
+			}
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.815 days = 60 }
 		}
 	}
 
@@ -729,6 +1472,38 @@ focus_tree = {
 			add_stability = -0.03
 			BEL_c_regime_reformed = yes
 			add_ideas = BEL_c_the_commission_for_the_natives
+			set_country_flag = BEL_c_natives_commission_sits
+			recruit_character = BEL_Julien_Liebaert
+			subtract_from_variable = { var = BEL_scandal value = 10 }
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_e_the_commission_sits } }
+				remove_dynamic_modifier = { modifier = BEL_e_the_commission_sits }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_c_the_commission_rises_tt
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = USA }
+				add_opinion_modifier = {
+					target = USA
+					modifier = small_increase
+				}
+			}
+
+			add_tech_bonus = {
+				name = BELDNC_c_the_commission_for_the_natives_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
 			add_to_variable = { var = BEL_chamber_congo value = 4 }
 			BEL_dnc_dials = yes
 		}
@@ -756,6 +1531,30 @@ focus_tree = {
 			add_to_variable = { var = BEL_chamber_congo value = 15 }
 			BEL_dnc_dials = yes
 			set_country_flag = BEL_c_terms_agreed
+			add_dynamic_modifier = { modifier = BEL_e_the_colony_on_our_terms }
+			set_country_flag = BEL_c_cession_on_our_terms
+			recruit_character = BEL_auguste_beernaert
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				promote_character = BEL_Albert_i
+				subtract_from_variable = { var = BEL_scandal value = 10 }
+				add_to_variable = { var = BEL_chamber_congo value = 10 }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_c_terms_of_a_dead_king_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_scandal value = 6 }
+				subtract_from_variable = { var = BEL_chamber_congo value = 5 }
+				custom_effect_tooltip = BEL_c_terms_of_a_living_king_tt
+			}
+
+			add_ai_strategy = {
+				type = protect
+				id = COG
+				value = 50
+			}
+			BEL_dnc_dials = yes
 		}
 	}
 
@@ -783,6 +1582,58 @@ focus_tree = {
 		ai_will_do = { factor = 0 }
 		completion_reward = {
 			add_political_power = 25
+			add_stability = 0.03
+			set_country_flag = BEL_c_renunciation_moved
+			set_variable = { BEL_chamber_congo = 0 }
+			set_variable = { BEL_denials = 0 }
+			BEL_dnc_rungs = yes
+			if = {
+				limit = { NOT = { has_idea = BEL_c_the_kingdom_renounces } }
+				add_ideas = BEL_c_the_kingdom_renounces
+			}
+
+			recruit_character = BEL_Ernest_solvay
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = {
+					target = GER
+					modifier = small_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = {
+					target = FRA
+					modifier = small_increase
+				}
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = COG
+				value = 100
+			}
+			6 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.206 days = 5 }
 		}
 	}
@@ -817,6 +1668,48 @@ focus_tree = {
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -25
+			add_dynamic_modifier = { modifier = BEL_e_the_colony_on_their_terms }
+			set_country_flag = BEL_c_note_received
+			add_stability = -0.03
+			add_to_variable = { var = BEL_chamber_congo value = 20 }
+			add_to_variable = { var = BEL_scandal value = 5 }
+			add_named_threat = {
+				threat = 2
+				name = BEL_c_the_powers_ask_what_we_intend
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = {
+					target = GER
+					modifier = medium_decrease
+				}
+			}
+
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 40
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 30
+			}
+			add_ai_strategy = {
+				type = protect
+				id = COG
+				value = 50
+			}
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.817 days = 30 }
 			country_event = { id = bel_dnc.205 days = 5 }
 		}
 	}
@@ -848,6 +1741,43 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -50
+			add_stability = -0.04
+			set_country_flag = BEL_c_cession_put_to_the_house
+			recruit_character = BEL_charles_de_broqueville
+			recruit_character = BEL_Emile_Vandervelde
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			subtract_from_variable = { var = BEL_chamber_congo value = 20 }
+			subtract_from_variable = { var = BEL_denials value = 2 }
+			BEL_dnc_rungs = yes
+			if = {
+				limit = { has_country_flag = BEL_c_law_before_the_colony }
+				add_political_power = 50
+				add_stability = 0.03
+				subtract_from_variable = { var = BEL_scandal value = 8 }
+				custom_effect_tooltip = BEL_c_the_house_votes_a_law_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_scandal value = 6 }
+				add_political_power = -25
+				custom_effect_tooltip = BEL_c_the_house_votes_a_treaty_tt
+			}
+
+			if = {
+				limit = { owns_state = 295 }
+				295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.204 days = 5 }
 		}
 	}
@@ -869,6 +1799,64 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.03
 			add_ideas = BEL_c_the_colonial_charter
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_e_the_kings_estate } }
+				remove_dynamic_modifier = { modifier = BEL_e_the_kings_estate }
+			}
+
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = BEL_e_the_colony_and_the_report } } }
+				add_dynamic_modifier = { modifier = BEL_e_the_colony_and_the_report }
+			}
+
+			BEL_c_regime_reformed = yes
+			set_country_flag = BEL_c_colony_under_law
+			set_variable = { BEL_denials = 0 }
+			BEL_dnc_rungs = yes
+			subtract_from_variable = { var = BEL_scandal value = 12 }
+			recruit_character = BEL_charles_de_broqueville
+			recruit_character = BEL_Julien_Liebaert
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			if = {
+				limit = { owns_state = 295 }
+				295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { owns_state = 718 }
+				718 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 30
+			}
+			BEL_dnc_dials = yes
+			country_event = { id = bel_dnc.819 days = 45 }
 			if = {
 				limit = { has_country_flag = BEL_c_charter_ready }
 				add_political_power = 50
@@ -893,6 +1881,36 @@ focus_tree = {
 			subtract_from_variable = { var = BEL_scandal value = 10 }
 			BEL_dnc_dials = yes
 			add_ideas = BEL_c_the_end_of_the_concessions
+			set_country_flag = BEL_c_concessions_ended
+			recruit_character = BEL_Ernest_solvay
+			subtract_from_variable = { var = BEL_scandal value = 8 }
+			add_to_variable = { var = BEL_chamber_congo value = 8 }
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+
+			if = {
+				limit = { owns_state = 295 }
+				295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			add_tech_bonus = {
+				name = BELDNC_c_the_end_of_the_concessions_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			BEL_dnc_dials = yes
 		}
 	}
 
@@ -910,6 +1928,67 @@ focus_tree = {
 			army_experience = 30
 			add_manpower = 8000
 			add_ideas = BEL_c_the_force_publique
+			set_country_flag = BEL_c_force_publique_of_the_state
+			add_command_power = 30
+			recruit_character = BEL_alphonse_jacques_de_dixmude
+			add_advisor_role = {
+				character = BEL_alphonse_jacques_de_dixmude
+				advisor = {
+					slot = high_command
+					cost = 100
+					idea_token = BEL_c_the_force_publique_school
+					ledger = army
+					traits = { army_infantry_1 }
+				}
+				activate = no
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = BEL_congo_regime
+						value = 1
+						compare = greater_than_or_equals
+					}
+				}
+				set_variable = { BEL_congo_regime = 1 }
+				add_to_variable = { var = BEL_scandal value = 8 }
+				custom_effect_tooltip = BEL_c_the_force_keeps_its_habits_tt
+			}
+
+			else = {
+				subtract_from_variable = { var = BEL_scandal value = 6 }
+				add_manpower = 6000
+				custom_effect_tooltip = BEL_c_the_force_is_re_enlisted_tt
+			}
+
+			if = {
+				limit = { owns_state = 295 }
+				295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { owns_state = 768 }
+				768 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			add_tech_bonus = {
+				name = BELDNC_c_the_force_publique_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 			add_to_variable = { var = BEL_scandal value = 4 }
 			BEL_dnc_dials = yes
 		}
@@ -1003,6 +2082,28 @@ focus_tree = {
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = 50
+			set_country_flag = BEL_c_council_sits
+			recruit_character = BEL_Paul_hymans
+			recruit_character = BEL_P_Berryer
+			add_stability = 0.03
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			subtract_from_variable = { var = BEL_scandal value = 8 }
+			add_to_variable = { var = BEL_chamber_congo value = 10 }
+			if = {
+				limit = { has_country_flag = BEL_c_law_before_the_colony }
+				add_political_power = 40
+				custom_effect_tooltip = BEL_c_the_council_was_drafted_tt
+			}
+
+			else = {
+				add_political_power = -25
+				custom_effect_tooltip = BEL_c_the_council_is_improvised_tt
+			}
+
+			BEL_dnc_dials = yes
 			if = {
 				limit = { has_idea = BEL_c_the_weight_of_the_basin }
 				swap_ideas = {
@@ -1033,6 +2134,69 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_ideas = BEL_c_the_question_closed
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_e_the_kings_estate } }
+				remove_dynamic_modifier = { modifier = BEL_e_the_kings_estate }
+			}
+
+			BEL_c_regime_broken = yes
+			set_country_flag = BEL_c_question_answered
+			set_variable = { BEL_denials = 0 }
+			BEL_dnc_rungs = yes
+			recruit_character = BEL_charles_de_broqueville
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.03
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = USA }
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_increase
+				}
+			}
+
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 40
+			}
+			if = {
+				limit = { owns_state = 295 }
+				295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_c_colony_under_law }
+				add_political_power = 50
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_c_closed_by_charter_tt
+			}
+
+			else = {
+				add_to_variable = { var = BEL_scandal value = 5 }
+				custom_effect_tooltip = BEL_c_closed_without_a_charter_tt
+			}
+
+			country_event = { id = bel_dnc.821 days = 30 }
 			subtract_from_variable = { var = BEL_scandal value = 15 }
 			BEL_dnc_dials = yes
 		}
@@ -1051,6 +2215,39 @@ focus_tree = {
 			add_political_power = 40
 			add_stability = 0.03
 			set_country_flag = BEL_v_question_open
+			set_country_flag = BEL_v_branch_open
+			add_to_variable = { var = BEL_walloon value = 2 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_advisor_role = {
+				character = BEL_Camille_huysmans
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_v_huysmans_in_the_house
+					traits = { socialist_novelist }
+				}
+				activate = no
+			}
+			add_tech_bonus = {
+				name = BELDNC_v_the_equality_law_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			if = {
+				limit = { has_country_flag = BEL_dnc_tongues_named }
+				add_political_power = 25
+				add_stability = 0.02
+				custom_effect_tooltip = BEL_v_the_question_was_named_tt
+			}
+			else = {
+				set_country_flag = BEL_dnc_tongues_named
+				add_political_power = -25
+				custom_effect_tooltip = BEL_v_the_question_names_itself_tt
+			}
 			subtract_from_variable = { var = BEL_flemish value = 2 }
 			BEL_dnc_dials = yes
 			custom_effect_tooltip = BELDNC_v_the_equality_law_tt
@@ -1072,6 +2269,30 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			set_country_flag = BEL_v_petitions_heard
+			add_stability = -0.02
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			if = {
+				limit = { country_exists = HOL }
+				add_opinion_modifier = {
+					target = HOL
+					modifier = small_increase
+				}
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_v_state_is_french }
+				add_to_variable = { var = BEL_flemish value = 5 }
+				add_war_support = -0.03
+				custom_effect_tooltip = BEL_v_petitions_after_the_refusal_tt
+			}
+			else = {
+				set_country_flag = BEL_v_petitions_came_first
+				add_political_power = 15
+				custom_effect_tooltip = BEL_v_petitions_came_first_tt
+			}
 			set_temp_variable = { BEL_t_flemish_drop = 3 }
 			set_temp_variable = { BEL_t_walloon_drop = 2 }
 			BEL_v_concede = yes
@@ -1095,6 +2316,45 @@ focus_tree = {
 			add_political_power = 60
 			add_stability = 0.03
 			set_country_flag = BEL_v_state_is_french
+			add_ideas = BEL_v_the_state_speaks_french
+			add_command_power = 25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_Paul_hymans
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_v_hymans_for_the_state
+					traits = { liberal_journalist parti_liberal }
+				}
+				activate = no
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = FRA
+				value = 20
+			}
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_increase
+				}
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_v_petitions_came_first }
+				add_stability = -0.03
+				add_to_variable = { var = BEL_flemish value = 4 }
+				custom_effect_tooltip = BEL_v_the_answer_follows_the_petitions_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_v_the_answer_comes_first_tt
+			}
 			set_temp_variable = { BEL_t_flemish_rise = 5 }
 			set_temp_variable = { BEL_t_walloon_rise = 5 }
 			BEL_v_refuse = yes
@@ -1115,6 +2375,28 @@ focus_tree = {
 			add_political_power = -50
 			add_stability = 0.02
 			set_country_flag = BEL_v_courts_bilingual
+			set_country_flag = BEL_v_law_is_bilingual
+			add_political_power = -20
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_tech_bonus = {
+				name = BELDNC_v_dutch_in_the_courts_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_petitions_came_first }
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_v_the_bench_was_warned_tt
+			}
+			else = {
+				add_stability = -0.02
+				add_political_power = -20
+				custom_effect_tooltip = BEL_v_the_bench_was_not_warned_tt
+			}
 			set_temp_variable = { BEL_t_flemish_drop = 6 }
 			set_temp_variable = { BEL_t_walloon_drop = 5 }
 			BEL_v_concede = yes
@@ -1136,6 +2418,26 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			add_stability = 0.02
+			set_country_flag = BEL_v_schools_in_dutch
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = BEL_ghent_flemish }
+				add_political_power = 25
+				custom_effect_tooltip = BEL_v_the_schools_feed_the_university_tt
+			}
+			else = {
+				custom_effect_tooltip = BEL_v_the_schools_feed_nothing_yet_tt
+			}
 			add_tech_bonus = {
 				name = BELDNC_v_the_flemish_schools_bonus
 				bonus = 0.5
@@ -1159,6 +2461,37 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = 80
+			set_country_flag = BEL_v_countryside_banked
+			add_ideas = BEL_v_the_vote_of_the_countryside
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
+			add_advisor_role = {
+				character = BEL_Jules_Davignon
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_v_davignon_for_the_countryside
+					traits = { ideological_crusader catholic_block }
+				}
+				activate = no
+			}
+			if = {
+				limit = { has_country_flag = BEL_a_catholic }
+				add_political_power = 40
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_v_the_settlement_banks_flanders_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_a_cartel }
+				add_stability = -0.04
+				add_to_variable = { var = BEL_flemish value = 4 }
+				custom_effect_tooltip = BEL_v_the_cartel_cannot_bank_flanders_tt
+			}
+			else = {
+				custom_effect_tooltip = BEL_v_nobody_has_banked_flanders_tt
+			}
 			add_stability = 0.04
 			set_temp_variable = { BEL_t_flemish_rise = 6 }
 			set_temp_variable = { BEL_t_walloon_rise = 3 }
@@ -1183,6 +2516,31 @@ focus_tree = {
 			add_war_support = 0.03
 			army_experience = 40
 			BEL_v_army_in_french = yes
+			set_country_flag = BEL_v_command_stays_french
+			add_command_power = 25
+			add_tech_bonus = {
+				name = BELDNC_v_the_word_of_command_stays_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			if = {
+				limit = {
+					has_variable = BEL_f_service
+					check_variable = {
+						var = BEL_f_service
+						value = 1
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = { var = BEL_flemish value = 6 }
+				add_war_support = -0.03
+				custom_effect_tooltip = BEL_v_french_orders_to_conscripts_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_v_french_orders_to_volunteers_tt
+			}
 			set_temp_variable = { BEL_t_flemish_rise = 8 }
 			set_temp_variable = { BEL_t_walloon_rise = 4 }
 			BEL_v_refuse = yes
@@ -1204,6 +2562,33 @@ focus_tree = {
 			add_political_power = -60
 			add_war_support = -0.05
 			BEL_v_army_in_dutch = yes
+			set_country_flag = BEL_f_command_in_two_tongues
+			add_command_power = -25
+			add_to_variable = { var = BEL_walloon value = 6 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_cyriaque_gillain
+				advisor = {
+					slot = high_command
+					cost = 100
+					idea_token = BEL_v_gillain_in_two_tongues
+					ledger = army
+					traits = { army_infantry_2 }
+				}
+				activate = no
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_countryside_banked }
+				add_stability = -0.04
+				custom_effect_tooltip = BEL_v_the_countryside_was_promised_nothing_tt
+			}
+			else = {
+				add_war_support = 0.03
+				custom_effect_tooltip = BEL_v_the_ranks_understand_the_order_tt
+			}
 			if = {
 				limit = { has_idea = WW1_BEL_language_barrier }
 				remove_ideas = WW1_BEL_language_barrier
@@ -1236,6 +2621,33 @@ focus_tree = {
 			add_political_power = -75
 			add_stability = -0.03
 			BEL_v_ghent_in_dutch = yes
+			add_to_variable = { var = BEL_walloon value = 5 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_schools_in_dutch }
+				add_political_power = 25
+				add_tech_bonus = {
+					name = BELDNC_v_the_university_at_ghent_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+				custom_effect_tooltip = BEL_v_ghent_has_its_pupils_tt
+			}
+			else = {
+				add_political_power = -40
+				custom_effect_tooltip = BEL_v_ghent_has_no_pupils_tt
+			}
 			add_tech_bonus = {
 				name = BELDNC_v_the_university_at_ghent_bonus
 				bonus = 0.5
@@ -1264,6 +2676,25 @@ focus_tree = {
 			add_political_power = 60
 			add_stability = -0.05
 			add_ideas = BEL_v_the_prosecuted_press
+			set_country_flag = BEL_v_press_prosecuted
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_movement_is_a_party }
+				add_stability = -0.05
+				add_to_variable = { var = BEL_flemish value = 6 }
+				custom_effect_tooltip = BEL_v_prosecuting_a_party_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_v_prosecuting_a_newspaper_tt
+			}
 			set_temp_variable = { BEL_t_flemish_rise = 10 }
 			set_temp_variable = { BEL_t_walloon_rise = 2 }
 			BEL_v_refuse = yes
@@ -1289,6 +2720,44 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.02
 			set_country_flag = BEL_v_administration_french
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_francois_schollaert
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_v_schollaert_at_the_circular
+					traits = { silent_workhorse catholic_block }
+				}
+				activate = no
+			}
+			34 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			813 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_law_is_bilingual }
+				add_political_power = -40
+				add_to_variable = { var = BEL_flemish value = 6 }
+				custom_effect_tooltip = BEL_v_the_circular_contradicts_the_bench_tt
+			}
+			else = {
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_v_the_circular_stands_alone_tt
+			}
 			set_temp_variable = { BEL_t_flemish_rise = 7 }
 			set_temp_variable = { BEL_t_walloon_rise = 6 }
 			BEL_v_refuse = yes
@@ -1309,6 +2778,42 @@ focus_tree = {
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -30
+			add_stability = -0.03
+			set_country_flag = BEL_v_leagues_on_the_desk
+			add_ideas = BEL_v_the_walloon_leagues
+			add_to_variable = { var = BEL_walloon value = 6 }
+			BEL_dnc_dials = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_Paul_janson
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_v_janson_for_wallonia
+					traits = { silent_workhorse parti_liberal }
+				}
+				activate = no
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = BEL_concessions
+						value = 3
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = BEL_v_wallingantism_organised
+				add_to_variable = { var = BEL_walloon value = 6 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_v_leagues_become_a_programme_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_v_leagues_remain_a_grievance_tt
+			}
 			custom_effect_tooltip = BELDNC_v_the_walloon_leagues_tt
 			country_event = { id = bel_dnc.307 days = 3 }
 		}
@@ -1327,6 +2832,26 @@ focus_tree = {
 			add_political_power = -60
 			add_stability = 0.04
 			add_ideas = BEL_v_the_two_sections
+			set_country_flag = BEL_v_sections_divided
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_tech_bonus = {
+				name = BELDNC_v_the_two_sections_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_administration_french }
+				add_political_power = -50
+				custom_effect_tooltip = BEL_v_the_sections_undo_the_circular_tt
+			}
+			else = {
+				add_stability = 0.02
+				custom_effect_tooltip = BEL_v_the_sections_were_first_tt
+			}
 			set_temp_variable = { BEL_t_flemish_drop = 8 }
 			set_temp_variable = { BEL_t_walloon_drop = 4 }
 			BEL_v_concede = yes
@@ -1357,6 +2882,40 @@ focus_tree = {
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_stability = -0.04
+			add_political_power = -40
+			set_country_flag = BEL_v_movement_is_a_party
+			add_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street }
+			add_ideas = BEL_v_the_flemish_list
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_advisor_role = {
+				character = BEL_Edouard_anseele
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_v_anseele_at_ghent
+					traits = { linchpin_of_infrastructure parti_ouvrier_belge }
+				}
+				activate = no
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = BEL_flemish
+						value = 50
+						compare = less_than
+					}
+				}
+				set_variable = { BEL_flemish = 50 }
+				BEL_dnc_dials = yes
+			}
+
+			custom_effect_tooltip = BEL_v_the_movement_has_a_floor_tt
+			hidden_effect = {
+				country_event = { id = bel_dnc.850 days = 30 }
+			}
 			custom_effect_tooltip = BELDNC_v_the_movement_turns_political_tt
 			country_event = { id = bel_dnc.309 days = 3 }
 		}
@@ -1387,6 +2946,29 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			custom_effect_tooltip = BELDNC_v_the_congress_of_wallonia_tt
+			add_political_power = -40
+			add_stability = -0.05
+			set_country_flag = BEL_walloon_congress_sat
+			add_dynamic_modifier = { modifier = BEL_p_the_walloon_congress }
+			add_to_variable = { var = BEL_walloon value = 8 }
+			BEL_dnc_dials = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			if = {
+				limit = { has_country_flag = BEL_v_wallingantism_organised }
+				add_political_power = -40
+				add_war_support = -0.03
+				custom_effect_tooltip = BEL_v_the_leagues_carry_the_congress_tt
+			}
+			else = {
+				add_stability = 0.02
+				custom_effect_tooltip = BEL_v_the_congress_sits_alone_tt
+			}
+			hidden_effect = {
+				country_event = { id = bel_dnc.851 days = 60 }
+			}
 			country_event = { id = bel_dnc.310 days = 3 }
 		}
 	}
@@ -1404,6 +2986,35 @@ focus_tree = {
 			add_political_power = -80
 			add_stability = 0.05
 			set_country_flag = BEL_v_frontier_fixed
+			add_ideas = BEL_v_the_frontier_in_law
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			34 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = BEL_walloon_congress_sat }
+				subtract_from_variable = { var = BEL_walloon value = 6 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_v_the_frontier_answers_the_congress_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_v_the_frontier_before_the_congress_tt
+			}
 			set_temp_variable = { BEL_t_flemish_drop = 10 }
 			set_temp_variable = { BEL_t_walloon_drop = 6 }
 			BEL_v_concede = yes
@@ -1431,6 +3042,31 @@ focus_tree = {
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			custom_effect_tooltip = BELDNC_v_the_hour_is_late_tt
+			add_political_power = -50
+			add_stability = -0.03
+			set_country_flag = BEL_v_last_session
+			add_timed_idea = {
+				idea = BEL_v_the_last_session
+				days = 365
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street } }
+				add_war_support = -0.05
+				add_to_variable = { var = BEL_flemish value = 5 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_v_the_movement_sets_the_terms_tt
+			}
+			else = {
+				add_political_power = 50
+				custom_effect_tooltip = BEL_v_the_ministry_sets_the_terms_tt
+			}
+			hidden_effect = {
+				country_event = { id = bel_dnc.852 days = 14 }
+			}
 			country_event = { id = bel_dnc.312 days = 3 }
 		}
 	}
@@ -1456,9 +3092,43 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 6 }
 		completion_reward = {
+			set_country_flag = BEL_dnc_path_two_peoples
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_ideas = BEL_v_belgium_of_two_peoples
+			set_country_flag = BEL_v_two_peoples_in_law
+			add_political_power = -75
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_tech_bonus = {
+				name = BELDNC_v_the_belgium_of_two_peoples_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street }
+				add_stability = 0.05
+				custom_effect_tooltip = BEL_v_the_street_goes_home_tt
+			}
+
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_walloon_congress } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_walloon_congress }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_v_the_congress_is_answered_tt
+			}
+
+			if = {
+				limit = { country_exists = HOL }
+				add_opinion_modifier = {
+					target = HOL
+					modifier = medium_increase
+				}
+			}
 			if = {
 				limit = { has_idea = WW1_BEL_language_barrier }
 				remove_ideas = WW1_BEL_language_barrier
@@ -1496,8 +3166,33 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 6 }
 		completion_reward = {
+			set_country_flag = BEL_dnc_path_unitary
 			add_political_power = 100
 			add_ideas = BEL_v_the_unitary_kingdom
+			set_country_flag = BEL_v_unitary_law
+			add_command_power = 25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street } }
+				add_stability = -0.05
+				add_war_support = -0.05
+				add_ideas = BEL_v_the_movement_uncontrolled
+				custom_effect_tooltip = BEL_v_the_street_is_not_dispersed_tt
+			}
+			else = {
+				add_stability = 0.05
+				custom_effect_tooltip = BEL_v_no_street_to_disperse_tt
+			}
+
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_walloon_congress } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_walloon_congress }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_v_wallonia_is_content_tt
+			}
 			BEL_v_army_in_french = yes
 			set_temp_variable = { BEL_t_flemish_rise = 10 }
 			set_temp_variable = { BEL_t_walloon_rise = 8 }
@@ -1617,6 +3312,49 @@ focus_tree = {
 			add_war_support = 0.03
 			army_experience = 20
 			set_country_flag = BEL_f_branch_open
+			add_command_power = 25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
+			add_advisor_role = {
+				character = BEL_Ridder_de_Selliers_de_Moranville
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = BEL_f_moranville_at_the_staff
+					traits = { army_chief_defensive_2 }
+				}
+				activate = no
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 30
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = FRA
+				value = 20
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 20
+			}
+			add_ai_strategy = {
+				type = declare_war
+				id = HOL
+				value = -200
+			}
+			if = {
+				limit = { has_country_flag = BEL_dnc_fork_reached }
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_the_question_was_put_tt
+			}
+			else = {
+				custom_effect_tooltip = BEL_f_the_question_puts_itself_tt
+			}
 			BEL_f_init = yes
 			BEL_f_open_position = yes
 			add_ideas = BEL_f_the_powers_who_signed
@@ -1642,6 +3380,22 @@ focus_tree = {
 			add_political_power = -25
 			army_experience = 25
 			set_country_flag = BEL_f_register_opened
+			add_manpower = 5000
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			if = {
+				limit = { has_country_flag = BEL_a_branch_open }
+				add_political_power = -25
+				add_to_variable = { var = BEL_chamber_congo value = 3 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_f_the_register_meets_the_chamber_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_the_register_meets_nobody_tt
+			}
 			add_ideas = BEL_f_the_militia_lottery
 			add_tech_bonus = {
 				name = BELDNC_f_the_lottery_and_the_substitute_bonus
@@ -1679,6 +3433,37 @@ focus_tree = {
 				add_idea = BEL_f_personal_service
 			}
 			set_variable = { BEL_f_service = 1 }
+			BEL_c_end_the_lottery = yes
+			set_country_flag = BEL_c_bell_service
+			set_country_flag = BEL_f_personal_service_carried
+			add_manpower = 20000
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = arms_factory
+				value = 10
+			}
+			if = {
+				limit = { has_country_flag = BEL_a_catholic }
+				add_political_power = -50
+				add_stability = -0.03
+				subtract_from_variable = { var = BEL_a_plural value = 5 }
+				BEL_a_dials = yes
+				custom_effect_tooltip = BEL_f_the_right_pays_for_service_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_a_crown_governs }
+				add_political_power = 50
+				add_to_variable = { var = BEL_a_prerogative value = 5 }
+				BEL_a_dials = yes
+				custom_effect_tooltip = BEL_f_the_crown_carries_service_tt
+			}
+			else = {
+				custom_effect_tooltip = BEL_f_service_carried_without_the_chamber_tt
+			}
 			add_to_variable = { var = BEL_flemish value = 8 }
 			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.401 days = 5 }
@@ -1700,6 +3485,27 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = -0.03
 			set_country_flag = BEL_f_lottery_kept
+			set_variable = { BEL_f_service = 0 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = infrastructure
+				value = 10
+			}
+			if = {
+				limit = { has_country_flag = BEL_a_catholic }
+				add_political_power = 40
+				add_to_variable = { var = BEL_a_plural value = 5 }
+				BEL_a_dials = yes
+				custom_effect_tooltip = BEL_f_the_notables_keep_their_sons_tt
+			}
+			else = {
+				add_stability = 0.02
+				custom_effect_tooltip = BEL_f_the_bill_dies_quietly_tt
+			}
 			subtract_from_variable = { var = BEL_flemish value = 3 }
 			add_to_variable = { var = BEL_walloon value = 3 }
 			BEL_dnc_dials = yes
@@ -1723,6 +3529,38 @@ focus_tree = {
 			add_stability = -0.03
 			clr_country_flag = BEL_army_french
 			set_country_flag = BEL_f_command_in_two_tongues
+			add_command_power = -25
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_alphonse_jacques_de_dixmude
+				advisor = {
+					slot = high_command
+					cost = 100
+					idea_token = BEL_f_jacques_of_the_ranks
+					ledger = army
+					traits = { army_entrenchment_2 }
+				}
+				activate = no
+			}
+			add_tech_bonus = {
+				name = BELDNC_f_the_language_of_command_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			if = {
+				limit = { has_idea = WW1_BEL_language_barrier }
+				remove_ideas = WW1_BEL_language_barrier
+				add_war_support = 0.03
+				custom_effect_tooltip = BEL_f_the_barrier_comes_down_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_the_barrier_was_already_down_tt
+			}
 			BEL_flemish_concede = yes
 			subtract_from_variable = { var = BEL_flemish value = 10 }
 			subtract_from_variable = { var = BEL_walloon value = 6 }
@@ -1761,6 +3599,71 @@ focus_tree = {
 				add_idea = BEL_f_the_general_levy
 			}
 			set_variable = { BEL_f_service = 2 }
+			set_country_flag = BEL_f_general_service
+			add_manpower = 30000
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_joseph_hellebaut
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_f_hellebaut_at_the_ministry
+					traits = { armaments_organizer }
+				}
+				activate = no
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = arms_factory
+				value = 15
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				813 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_the_class_goes_east_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_threat_south }
+				51 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_the_class_goes_south_tt
+			}
+			else = {
+				6 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_the_class_goes_to_the_redoubt_tt
+			}
 			if = {
 				limit = { has_country_flag = BEL_army_french }
 				add_to_variable = { var = BEL_flemish value = 6 }
@@ -1794,6 +3697,30 @@ focus_tree = {
 			add_political_power = -25
 			army_experience = 20
 			set_country_flag = BEL_f_estimates_read
+			add_ideas = BEL_f_the_estimates_on_the_table
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = bunker
+				value = 20
+			}
+			if = {
+				limit = { has_country_flag = BEL_a_crown_governs }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_f_the_crown_reads_the_estimates_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_a_cartel }
+				add_political_power = -50
+				add_stability = -0.03
+				custom_effect_tooltip = BEL_f_the_cartel_reads_the_estimates_tt
+			}
+			else = {
+				custom_effect_tooltip = BEL_f_the_house_reads_the_estimates_tt
+			}
 			add_advisor_role = {
 				character = BEL_henri_brialmont
 				advisor = {
@@ -1839,6 +3766,42 @@ focus_tree = {
 			add_stability = -0.02
 			army_experience = 25
 			set_country_flag = BEL_f_meuse_works_done
+			add_manpower = 5000
+			813 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = {
+					target = GER
+					modifier = small_decrease
+				}
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				add_war_support = 0.03
+				813 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_the_works_face_the_named_threat_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_the_works_face_nobody_tt
+			}
 			BEL_f_stage_done = yes
 			813 = {
 				add_building_construction = {
@@ -1895,6 +3858,39 @@ focus_tree = {
 			add_stability = -0.02
 			army_experience = 25
 			set_country_flag = BEL_f_redoubt_works_done
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = bunker
+				value = 15
+			}
+			add_named_threat = {
+				threat = 1
+				name = BEL_f_the_redoubt_at_antwerp
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = ENG
+					value = 30
+				}
+				custom_effect_tooltip = BEL_f_the_redoubt_looks_to_the_sea_tt
+			}
 			BEL_f_stage_done = yes
 			6 = {
 				add_building_construction = {
@@ -1938,6 +3934,43 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			set_country_flag = BEL_f_kings_gift_taken
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_named_threat = {
+				threat = 1
+				name = BEL_f_the_basin_pays_for_the_forts
+			}
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_decrease
+				}
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				set_country_flag = BEL_f_kings_gift_inherited
+				add_political_power = -50
+				add_ideas = BEL_f_the_kings_bequest
+				custom_effect_tooltip = BEL_f_the_gift_comes_from_a_dead_king_tt
+				if = {
+					limit = { NOT = { has_country_flag = BEL_c_albert_crowned } }
+					set_country_flag = BEL_c_albert_crowned
+					retire_character = BEL_Leopold_ii
+					promote_character = BEL_Albert_i
+				}
+			}
+			else = {
+				custom_effect_tooltip = BEL_f_the_gift_is_the_kings_own_tt
+				if = {
+					limit = { has_country_flag = BEL_a_branch_open }
+					add_to_variable = { var = BEL_a_prerogative value = 8 }
+					BEL_a_dials = yes
+				}
+			}
 			add_ideas = BEL_f_the_kings_gift
 			BEL_f_stage_done = yes
 			BEL_f_kings_gift = yes
@@ -1969,6 +4002,39 @@ focus_tree = {
 			add_political_power = -100
 			add_stability = -0.03
 			set_country_flag = BEL_f_kings_gift_refused
+			add_to_variable = { var = BEL_walloon value = 4 }
+			BEL_dnc_dials = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_advisor_role = {
+				character = BEL_Emile_Vandervelde
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_f_vandervelde_against_the_gift
+					traits = { socialist_justice parti_ouvrier_belge }
+				}
+				activate = no
+			}
+			if = {
+				limit = { has_country_flag = BEL_c_leopold_dead }
+				add_political_power = 50
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_f_refusing_a_dead_kings_gift_tt
+				if = {
+					limit = { NOT = { has_country_flag = BEL_c_albert_crowned } }
+					set_country_flag = BEL_c_albert_crowned
+					retire_character = BEL_Leopold_ii
+					promote_character = BEL_Albert_i
+				}
+			}
+			else = {
+				add_to_variable = { var = BEL_scandal value = 4 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_f_refusing_the_kings_gift_tt
+			}
 			add_ideas = BEL_f_the_chamber_holds_the_estimates
 			BEL_f_chamber_refuses_gift = yes
 			country_event = { id = bel_dnc.409 days = 20 }
@@ -1992,6 +4058,34 @@ focus_tree = {
 			add_political_power = -50
 			army_experience = 30
 			set_country_flag = BEL_f_cupolas_armed
+			34 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = arms_factory
+				value = 10
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_cheap_concrete }
+				add_political_power = 25
+				add_war_support = -0.03
+				custom_effect_tooltip = BEL_f_guns_in_cheap_concrete_tt
+			}
+			else = {
+				add_war_support = 0.03
+				add_tech_bonus = {
+					name = BELDNC_f_cupolas_and_guns_steel_bonus
+					bonus = 0.5
+					uses = 1
+					category = artillery
+				}
+				custom_effect_tooltip = BEL_f_guns_in_good_concrete_tt
+			}
 			BEL_f_stage_done = yes
 			add_tech_bonus = {
 				name = BELDNC_f_cupolas_and_guns_bonus
@@ -2017,6 +4111,57 @@ focus_tree = {
 			add_war_support = 0.03
 			army_experience = 25
 			set_country_flag = BEL_f_garrisons_named
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+			if = {
+				limit = { NOT = { has_character = BEL_henri_brialmont } }
+				recruit_character = BEL_henri_brialmont
+			}
+
+			add_advisor_role = {
+				character = BEL_henri_brialmont
+				advisor = {
+					slot = theorist
+					cost = 100
+					idea_token = BEL_f_brialmont_the_theorist
+					ledger = army
+					traits = { military_theorist }
+				}
+				activate = no
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_meuse_works_done }
+				813 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_garrisons_for_the_meuse_tt
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_f_redoubt_works_done }
+				6 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_garrisons_for_the_redoubt_tt
+			}
 			add_ideas = BEL_f_the_fortress_troops
 			if = {
 				limit = {
@@ -2057,6 +4202,21 @@ focus_tree = {
 			add_political_power = -50
 			army_experience = 20
 			set_country_flag = BEL_f_appreciations_read
+			add_ideas = BEL_f_the_three_appreciations
+			add_command_power = 25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_estimates_read }
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_the_engineer_read_first_tt
+			}
+			else = {
+				add_political_power = -25
+				custom_effect_tooltip = BEL_f_the_staff_read_first_tt
+			}
 			add_tech_bonus = {
 				name = BELDNC_f_which_guarantor_is_the_threat_bonus
 				bonus = 0.5
@@ -2082,6 +4242,58 @@ focus_tree = {
 			add_war_support = 0.05
 			army_experience = 25
 			set_country_flag = BEL_f_threat_east
+			add_named_threat = {
+				threat = 2
+				name = BEL_f_the_railways_toward_aachen
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = GER
+				value = 40
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 50
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = FRA
+				value = 30
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = bunker
+				value = 20
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_to_variable = { var = BEL_walloon value = 4 }
+			BEL_dnc_dials = yes
+			if = {
+				limit = { has_country_flag = BEL_f_meuse_works_done }
+				813 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				custom_effect_tooltip = BEL_f_the_works_are_already_east_tt
+			}
+			else = {
+				add_political_power = -25
+				custom_effect_tooltip = BEL_f_the_works_are_not_yet_east_tt
+			}
+			hidden_effect = {
+				country_event = { id = bel_dnc.860 days = 60 }
+			}
 			add_ideas = BEL_f_the_meuse_is_the_frontier
 			if = {
 				limit = { country_exists = GER }
@@ -2118,6 +4330,43 @@ focus_tree = {
 			add_war_support = 0.04
 			army_experience = 25
 			set_country_flag = BEL_f_threat_south
+			add_named_threat = {
+				threat = 2
+				name = BEL_f_the_army_of_the_sambre
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = FRA
+				value = 40
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 30
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = bunker
+				value = 20
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
+			add_stability = -0.03
+			if = {
+				limit = { has_country_flag = BEL_walloon_congress_sat }
+				add_stability = -0.05
+				subtract_from_variable = { var = BEL_walloon value = 6 }
+				custom_effect_tooltip = BEL_f_the_congress_reads_paris_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_wallonia_grumbles_tt
+			}
+			hidden_effect = {
+				country_event = { id = bel_dnc.861 days = 45 }
+			}
 			add_ideas = BEL_f_the_sambre_is_the_frontier
 			if = {
 				limit = { country_exists = FRA }
@@ -2158,6 +4407,64 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.05
 			set_country_flag = BEL_f_threat_none
+			add_ideas = BEL_f_no_plan_for_it
+			add_command_power = -25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.06
+			}
+			add_ai_strategy = {
+				type = declare_war
+				id = GER
+				value = -200
+			}
+			add_ai_strategy = {
+				type = declare_war
+				id = FRA
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = GER
+				value = 20
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = FRA
+				value = 20
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 20
+			}
+			if = {
+				limit = { country_exists = GER }
+				add_opinion_modifier = {
+					target = GER
+					modifier = small_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = FRA }
+				add_opinion_modifier = {
+					target = FRA
+					modifier = small_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = small_increase
+				}
+			}
+
+			hidden_effect = {
+				country_event = { id = bel_dnc.861 days = 90 }
+			}
 			add_ideas = BEL_f_no_enemy_named
 		}
 	}
@@ -2180,6 +4487,55 @@ focus_tree = {
 			army_experience = 50
 			add_command_power = 50
 			set_country_flag = BEL_f_field_army_raised
+			add_manpower = 25000
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = arms_factory
+				value = 15
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				add_ai_strategy = {
+					type = contain
+					id = GER
+					value = 40
+				}
+				custom_effect_tooltip = BEL_f_the_line_deploys_east_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_threat_south }
+				add_ai_strategy = {
+					type = contain
+					id = FRA
+					value = 40
+				}
+				custom_effect_tooltip = BEL_f_the_line_deploys_south_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_f_the_line_deploys_nowhere_tt
+			}
+
+			if = {
+				limit = {
+					has_variable = BEL_f_service
+					check_variable = {
+						var = BEL_f_service
+						value = 1
+						compare = greater_than_or_equals
+					}
+				}
+				add_manpower = 25000
+				custom_effect_tooltip = BEL_f_the_line_has_classes_tt
+			}
+			else = {
+				add_war_support = -0.03
+				custom_effect_tooltip = BEL_f_the_line_has_no_classes_tt
+			}
 			add_ideas = BEL_f_the_field_army
 			add_tech_bonus = {
 				name = BELDNC_f_the_field_army_of_the_line_bonus
@@ -2216,6 +4572,61 @@ focus_tree = {
 			army_experience = 40
 			add_command_power = 50
 			set_country_flag = BEL_f_guarantee_called
+			add_ideas = BEL_f_the_notices_are_printed
+			add_manpower = 20000
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_named_threat = {
+				threat = 3
+				name = BEL_f_the_guarantee_is_tested
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				add_ai_strategy = {
+					type = befriend
+					id = ENG
+					value = 100
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = FRA
+					value = 60
+				}
+				custom_effect_tooltip = BEL_f_the_guarantee_is_called_east_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_threat_south }
+				add_ai_strategy = {
+					type = befriend
+					id = GER
+					value = 60
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = ENG
+					value = 60
+				}
+				custom_effect_tooltip = BEL_f_the_guarantee_is_called_south_tt
+			}
+			else = {
+				add_political_power = -50
+				add_stability = -0.03
+				custom_effect_tooltip = BEL_f_the_guarantee_is_called_on_nobody_tt
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_f_kings_gift_refused }
+				add_stability = 0.05
+				custom_effect_tooltip = BEL_f_the_chamber_paid_for_this_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_kings_gift_taken }
+				add_to_variable = { var = BEL_scandal value = 5 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_f_the_basin_paid_for_this_tt
+			}
 			country_event = { id = bel_dnc.406 days = 3 }
 		}
 	}
@@ -2233,6 +4644,70 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = 120
+			add_war_support = 0.03
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			if = {
+				limit = { has_country_flag = BEL_a_branch_open }
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = BEL_a_house_prorogued
+							check_variable = {
+								var = BEL_a_prerogative
+								value = 60
+								compare = greater_than_or_equals
+							}
+						}
+					}
+					set_country_flag = BEL_u_chamber_named
+					set_country_flag = BEL_u_crown_governs
+					add_ideas = BEL_u_the_crown_still_governs
+					country_event = { id = bel_dnc.871 days = 6 }
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = BEL_a_plural
+							value = 20
+							compare = less_than_or_equals
+						}
+					}
+					set_country_flag = BEL_u_chamber_named
+					set_country_flag = BEL_u_franchise_won
+					add_ideas = BEL_u_the_franchise_won
+					country_event = { id = bel_dnc.872 days = 6 }
+				}
+				else = {
+					set_country_flag = BEL_u_chamber_named
+					set_country_flag = BEL_u_register_stands
+					add_ideas = BEL_u_the_register_stands
+					country_event = { id = bel_dnc.873 days = 6 }
+				}
+			}
+			else = {
+				set_country_flag = BEL_u_chamber_named
+				set_country_flag = BEL_u_register_stands
+				add_ideas = BEL_u_the_register_stands
+				custom_effect_tooltip = BEL_u_the_house_was_never_opened_tt
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				army_experience = 25
+				custom_effect_tooltip = BEL_u_the_appreciation_was_east_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_threat_south }
+				army_experience = 25
+				custom_effect_tooltip = BEL_u_the_appreciation_was_south_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_u_no_appreciation_was_made_tt
+			}
 			add_stability = 0.05
 			custom_effect_tooltip = BEL_u_epilogue_row_tt
 		}
@@ -2257,6 +4732,49 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -75
 			add_ideas = BEL_u_the_congo_under_review
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_advisor_role = {
+				character = BEL_charles_de_broqueville
+				advisor = {
+					slot = political_advisor
+					cost = 100
+					idea_token = BEL_u_broqueville_at_the_colonies
+					traits = { silent_workhorse catholic_block }
+				}
+				activate = no
+			}
+			if = {
+				limit = { owns_state = 768 }
+				768 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_u_colony_shame }
+				add_political_power = -50
+				add_stability = -0.03
+				custom_effect_tooltip = BEL_u_the_ministry_inherits_the_shame_tt
+			}
+			else = {
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_u_the_ministry_inherits_a_charter_tt
+			}
 			if = {
 				limit = { has_variable = BEL_scandal }
 				subtract_from_variable = { var = BEL_scandal value = 10 }
@@ -2294,6 +4812,50 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			army_experience = 30
+			add_ideas = BEL_u_the_second_line
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = bunker
+				value = 25
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				add_named_threat = {
+					threat = 2
+					name = BEL_u_the_second_line_faces_east
+				}
+				if = {
+					limit = { country_exists = GER }
+					add_opinion_modifier = {
+						target = GER
+						modifier = medium_decrease
+					}
+				}
+				custom_effect_tooltip = BEL_u_the_concrete_faces_east_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_threat_south }
+				add_named_threat = {
+					threat = 2
+					name = BEL_u_the_second_line_faces_south
+				}
+				if = {
+					limit = { country_exists = FRA }
+					add_opinion_modifier = {
+						target = FRA
+						modifier = medium_decrease
+					}
+				}
+				custom_effect_tooltip = BEL_u_the_concrete_faces_south_tt
+			}
+			else = {
+				add_political_power = 25
+				custom_effect_tooltip = BEL_u_the_concrete_faces_all_five_tt
+			}
 			add_war_support = 0.05
 			if = {
 				limit = { owns_state = 813 }
@@ -2361,6 +4923,38 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			set_country_flag = BEL_u_federal
+			add_stability = 0.03
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			34 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_walloon_congress } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_walloon_congress }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_u_the_congress_gets_its_statute_tt
+			}
+
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street }
+				add_stability = 0.05
+				custom_effect_tooltip = BEL_u_the_street_gets_its_statute_tt
+			}
 			if = {
 				limit = { has_idea = BEL_u_the_unitary_kingdom_strained }
 				remove_ideas = BEL_u_the_unitary_kingdom_strained
@@ -2406,6 +5000,53 @@ focus_tree = {
 			add_political_power = -100
 			remove_ideas = BEL_u_the_congo_under_review
 			add_ideas = BEL_u_the_charter_of_the_basin
+			set_country_flag = BEL_u_charter_read
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ENG
+				value = 30
+			}
+			if = {
+				limit = { owns_state = 295 }
+				295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { owns_state = 718 }
+				718 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { country_exists = ENG }
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_increase
+				}
+			}
+
+			if = {
+				limit = { country_exists = USA }
+				add_opinion_modifier = {
+					target = USA
+					modifier = medium_increase
+				}
+			}
 			if = {
 				limit = { has_idea = BEL_u_the_inherited_shame }
 				remove_ideas = BEL_u_the_inherited_shame
@@ -2434,6 +5075,82 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_ideas = BEL_u_the_guarantors_word
+			add_command_power = 25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.04
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_threat_east }
+				if = {
+					limit = { country_exists = ENG }
+					add_opinion_modifier = {
+						target = ENG
+						modifier = large_increase
+					}
+				}
+				if = {
+					limit = { country_exists = GER }
+					add_opinion_modifier = {
+						target = GER
+						modifier = medium_decrease
+					}
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = ENG
+					value = 60
+				}
+				custom_effect_tooltip = BEL_u_the_note_names_berlin_tt
+			}
+			else_if = {
+				limit = { has_country_flag = BEL_f_threat_south }
+				if = {
+					limit = { country_exists = GER }
+					add_opinion_modifier = {
+						target = GER
+						modifier = medium_increase
+					}
+				}
+				if = {
+					limit = { country_exists = FRA }
+					add_opinion_modifier = {
+						target = FRA
+						modifier = medium_decrease
+					}
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = GER
+					value = 40
+				}
+				custom_effect_tooltip = BEL_u_the_note_names_paris_tt
+			}
+			else = {
+				add_political_power = 50
+				if = {
+					limit = { country_exists = ENG }
+					add_opinion_modifier = {
+						target = ENG
+						modifier = small_increase
+					}
+				}
+				custom_effect_tooltip = BEL_u_the_note_names_nobody_tt
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_u_army_strong }
+				add_war_support = 0.05
+				add_ideas = BEL_u_the_note_is_believed
+				custom_effect_tooltip = BEL_u_the_note_has_an_army_behind_it_tt
+			}
+			else = {
+				add_stability = -0.02
+				custom_effect_tooltip = BEL_u_the_note_has_nothing_behind_it_tt
+			}
+			hidden_effect = {
+				country_event = { id = bel_dnc.870 days = 21 }
+			}
 			add_stability = 0.03
 			custom_effect_tooltip = BEL_u_signature_tt
 		}
@@ -2456,6 +5173,45 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -75
 			add_ideas = BEL_u_the_nation_in_arms
+			BEL_u_service_dividend = yes
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_advisor_role = {
+				character = BEL_cyriaque_gillain
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = BEL_u_gillain_of_the_nation
+					traits = { army_chief_morale_2 }
+				}
+				activate = no
+			}
+			add_ai_strategy = {
+				type = build_building
+				id = arms_factory
+				value = 20
+			}
+			6 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = BEL_f_command_in_two_tongues }
+				add_war_support = 0.05
+				add_manpower = 25000
+				custom_effect_tooltip = BEL_u_the_orders_are_understood_tt
+			}
+			else = {
+				add_stability = -0.03
+				add_to_variable = { var = BEL_flemish value = 5 }
+				BEL_dnc_dials = yes
+				custom_effect_tooltip = BEL_u_the_orders_are_not_understood_tt
+			}
 			add_manpower = 50000
 			army_experience = 25
 			custom_effect_tooltip = BEL_u_nation_in_arms_tt
@@ -2475,6 +5231,40 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -100
 			add_ideas = BEL_u_the_statute_of_two_communities
+			set_country_flag = BEL_u_statute_signed
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_movement_in_the_street }
+				add_stability = 0.05
+				custom_effect_tooltip = BEL_u_the_movement_signs_tt
+			}
+
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BEL_p_the_walloon_congress } }
+				remove_dynamic_modifier = { modifier = BEL_p_the_walloon_congress }
+				add_political_power = 50
+				custom_effect_tooltip = BEL_u_the_congress_signs_tt
+			}
+
+			if = {
+				limit = { has_country_flag = BEL_v_frontier_fixed }
+				add_political_power = 50
+				add_stability = 0.03
+				custom_effect_tooltip = BEL_u_the_frontier_was_already_drawn_tt
+			}
+			else = {
+				add_political_power = -50
+				custom_effect_tooltip = BEL_u_the_frontier_is_drawn_now_tt
+			}
+
+			if = {
+				limit = { has_idea = WW1_BEL_language_barrier }
+				remove_ideas = WW1_BEL_language_barrier
+			}
 			if = {
 				limit = { has_idea = BEL_u_the_unitary_kingdom_strained }
 				remove_ideas = BEL_u_the_unitary_kingdom_strained
