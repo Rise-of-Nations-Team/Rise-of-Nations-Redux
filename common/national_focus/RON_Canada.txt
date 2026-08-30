@@ -7292,9 +7292,12 @@ focus_tree = {
 			focus = CANDNC_p_the_other_ocean
 		}
 		available = { has_country_flag = CAN_dnc_question_posed }
-		ai_will_do = { factor = 1 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			set_country_flag = CAN_dnc_path_sovereign
+			set_country_flag = CAN_dnc_road_historical
 			set_country_flag = CAN_dnc_no_precedent
 			set_country_flag = CAN_dnc_refused_contingent
 			add_political_power = 75
