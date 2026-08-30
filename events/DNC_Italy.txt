@@ -8103,3 +8103,1563 @@ country_event = {
 		set_country_flag = ITA_r_the_passed_over_get_a_command
 	}
 }
+
+country_event = {
+	id = ita_dnc.1100
+	title = ita_dnc.1100.t
+	desc = ita_dnc.1100.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.1100.a
+		ai_chance = {
+			base = 65
+		}
+		add_political_power = 30
+		add_to_variable = { var = ITA_prefects value = 10 }
+		add_to_variable = { var = ITA_majority_bought value = 5 }
+		add_to_variable = { var = ITA_piazza value = 3 }
+		set_country_flag = ITA_g_the_second_half_is_kept
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1100.b
+		ai_chance = {
+			base = 35
+		}
+		add_stability = 0.05
+		subtract_from_variable = { var = ITA_prefects value = 12 }
+		subtract_from_variable = { var = ITA_majority_bought value = 6 }
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		set_country_flag = ITA_g_the_second_half_is_burned
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1101
+	title = ita_dnc.1101.t
+	desc = ita_dnc.1101.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.1101.a
+		ai_chance = {
+			base = 70
+		}
+		add_political_power = 40
+		add_stability = 0.05
+		subtract_from_variable = { var = ITA_piazza value = 10 }
+		add_to_variable = { var = ITA_majority value = 6 }
+		add_to_variable = { var = ITA_majority_bought value = 4 }
+		add_popularity = {
+			ideology = communism
+			popularity = -0.04
+		}
+		set_country_flag = ITA_g_the_country_was_asked_in_1904
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1101.b
+		ai_chance = {
+			base = 20
+		}
+		add_stability = -0.03
+		subtract_from_variable = { var = ITA_piazza value = 4 }
+		add_political_power = 20
+		add_to_variable = { var = ITA_pledges value = 2 }
+		custom_effect_tooltip = ITA_a_pledges_given_tt
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1101.c
+		ai_chance = {
+			base = 10
+		}
+		ITA_piazza_repress = yes
+		add_war_support = 0.04
+		add_political_power = -30
+		subtract_from_variable = { var = ITA_majority value = 5 }
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1102
+	title = ita_dnc.1102.t
+	desc = ita_dnc.1102.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.1102.a
+		ai_chance = {
+			base = 45
+		}
+		add_political_power = -20
+		add_stability = 0.04
+		subtract_from_variable = { var = ITA_prefects value = 10 }
+		subtract_from_variable = { var = ITA_piazza value = 6 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+		set_country_flag = ITA_g_a_commission_goes_south
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1102.b
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 40
+		add_to_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		add_stability = -0.02
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1102.c
+		ai_chance = {
+			base = 15
+		}
+		add_political_power = -40
+		add_to_variable = { var = ITA_piazza value = 8 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		set_country_flag = ITA_g_the_pamphlet_was_prosecuted
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1103
+	title = ita_dnc.1103.t
+	desc = ita_dnc.1103.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.1103.a
+		ai_chance = {
+			base = 55
+		}
+		add_political_power = 30
+		add_to_variable = { var = ITA_majority value = 5 }
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.04
+		}
+		set_country_flag = ITA_g_the_reformists_are_split
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1103.b
+		ai_chance = {
+			base = 45
+		}
+		add_political_power = 45
+		add_stability = 0.03
+		add_to_variable = { var = ITA_pledges value = 3 }
+		custom_effect_tooltip = ITA_a_pledges_given_tt
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1104
+	title = ita_dnc.1104.t
+	desc = ita_dnc.1104.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.1104.a
+		ai_chance = {
+			base = 60
+		}
+		add_political_power = 25
+		add_stability = 0.05
+		subtract_from_variable = { var = ITA_piazza value = 6 }
+		add_to_variable = { var = ITA_majority value = 4 }
+		add_manpower = 6000
+		117 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1104.b
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 50
+		add_to_variable = { var = ITA_prefects value = 10 }
+		add_to_variable = { var = ITA_majority_bought value = 5 }
+		add_to_variable = { var = ITA_pledges value = 2 }
+		custom_effect_tooltip = ITA_a_pledges_given_tt
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1105
+	title = ita_dnc.1105.t
+	desc = ita_dnc.1105.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.1105.a
+		ai_chance = {
+			base = 55
+		}
+		add_political_power = -40
+		add_to_variable = { var = ITA_prefects value = 14 }
+		add_to_variable = { var = ITA_majority_bought value = 6 }
+		add_to_variable = { var = ITA_piazza value = 4 }
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1105.b
+		ai_chance = {
+			base = 45
+		}
+		add_stability = 0.05
+		subtract_from_variable = { var = ITA_piazza value = 8 }
+		subtract_from_variable = { var = ITA_majority_bought value = 8 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		set_country_flag = ITA_g_the_register_is_left_alone
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1106
+	title = ita_dnc.1106.t
+	desc = ita_dnc.1106.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = ITA_g_the_last_chamber_is_seated
+	}
+	option = {
+		name = ita_dnc.1106.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 50
+		add_stability = 0.05
+		add_to_variable = { var = ITA_majority value = 6 }
+		subtract_from_variable = { var = ITA_majority_bought value = 6 }
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		add_ideas = ITA_g_the_system_outlived_its_arithmetic
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1106.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 70
+		add_to_variable = { var = ITA_prefects value = 12 }
+		add_to_variable = { var = ITA_majority_bought value = 8 }
+		add_to_variable = { var = ITA_piazza value = 6 }
+		add_stability = -0.04
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1106.c
+		ai_chance = {
+			base = 20
+		}
+		add_stability = 0.03
+		add_political_power = -60
+		subtract_from_variable = { var = ITA_piazza value = 10 }
+		subtract_from_variable = { var = ITA_majority value = 8 }
+		subtract_from_variable = { var = ITA_prefects value = 25 }
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		set_country_flag = ITA_g_the_machine_is_dismantled
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1200
+	title = ita_dnc.1200.t
+	desc = ita_dnc.1200.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1200.a
+		ai_chance = { base = 60 }
+		add_political_power = 40
+		add_to_variable = { var = ITA_prefects value = 6 }
+		subtract_from_variable = { var = ITA_majority value = 4 }
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1200.b
+		ai_chance = { base = 40 }
+		add_stability = 0.04
+		add_to_variable = { var = ITA_majority value = 3 }
+		subtract_from_variable = { var = ITA_prefects value = 4 }
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1201
+	title = ita_dnc.1201.t
+	desc = ita_dnc.1201.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1201.a
+		ai_chance = { base = 55 }
+		ITA_piazza_repress = yes
+		add_war_support = 0.04
+		set_country_flag = ITA_s_the_general_strike_is_broken
+	}
+	option = {
+		name = ita_dnc.1201.b
+		ai_chance = { base = 45 }
+		ITA_piazza_concede = yes
+		add_political_power = -30
+		set_country_flag = ITA_s_the_sequestration_is_lifted
+	}
+}
+
+country_event = {
+	id = ita_dnc.1202
+	title = ita_dnc.1202.t
+	desc = ita_dnc.1202.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1202.a
+		ai_chance = { base = 55 }
+		add_political_power = 50
+		add_stability = -0.04
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.04
+		}
+	}
+	option = {
+		name = ita_dnc.1202.b
+		ai_chance = { base = 45 }
+		add_stability = 0.05
+		add_to_variable = { var = ITA_majority value = 4 }
+		subtract_from_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1203
+	title = ita_dnc.1203.t
+	desc = ita_dnc.1203.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1203.a
+		ai_chance = { base = 50 }
+		add_political_power = 35
+		subtract_from_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1203.b
+		ai_chance = { base = 50 }
+		add_stability = 0.03
+		add_to_variable = { var = ITA_piazza value = 3 }
+		add_political_power = -20
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1204
+	title = ita_dnc.1204.t
+	desc = ita_dnc.1204.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1204.a
+		ai_chance = { base = 60 }
+		add_to_variable = { var = ITA_majority value = 8 }
+		add_to_variable = { var = ITA_majority_bought value = 6 }
+		add_to_variable = { var = ITA_piazza value = 4 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1204.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_stability = 0.03
+		subtract_from_variable = { var = ITA_piazza value = 2 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1205
+	title = ita_dnc.1205.t
+	desc = ita_dnc.1205.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1205.a
+		ai_chance = { base = 55 }
+		add_war_support = 0.05
+		army_experience = 20
+		add_to_variable = { var = ITA_bayonets value = 1 }
+		add_stability = -0.05
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1205.b
+		ai_chance = { base = 45 }
+		add_political_power = -35
+		add_stability = 0.04
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1206
+	title = ita_dnc.1206.t
+	desc = ita_dnc.1206.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1206.a
+		ai_chance = { base = 55 }
+		add_political_power = 60
+		add_to_variable = { var = ITA_prefects value = 8 }
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1206.b
+		ai_chance = { base = 45 }
+		add_stability = 0.06
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		add_political_power = -25
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1207
+	title = ita_dnc.1207.t
+	desc = ita_dnc.1207.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1207.a
+		ai_chance = { base = 60 }
+		add_political_power = 50
+		subtract_from_variable = { var = ITA_majority value = 4 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.04
+		}
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1207.b
+		ai_chance = { base = 40 }
+		add_stability = 0.05
+		add_to_variable = { var = ITA_majority value = 5 }
+		add_political_power = -30
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1208
+	title = ita_dnc.1208.t
+	desc = ita_dnc.1208.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1208.a
+		trigger = {
+			check_variable = {
+				var = ITA_bayonets
+				value = 3
+				compare = greater_than_or_equals
+			}
+		}
+		ai_chance = { base = 50 }
+		add_war_support = 0.06
+		add_stability = -0.05
+		add_to_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.04
+		}
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1208.b
+		ai_chance = { base = 50 }
+		add_political_power = 60
+		add_stability = 0.04
+		subtract_from_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.04
+		}
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1300
+	title = ita_dnc.1300.t
+	desc = ita_dnc.1300.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1300.a
+		ai_chance = { base = 60 }
+		add_stability = 0.04
+		add_to_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1300.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		subtract_from_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1301
+	title = ita_dnc.1301.t
+	desc = ita_dnc.1301.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1301.a
+		ai_chance = { base = 60 }
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		add_stability = 0.03
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1301.b
+		ai_chance = { base = 40 }
+		add_political_power = 35
+		subtract_from_variable = { var = ITA_majority value = 2 }
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1302
+	title = ita_dnc.1302.t
+	desc = ita_dnc.1302.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1302.a
+		ai_chance = { base = 55 }
+		add_political_power = -25
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+	}
+	option = {
+		name = ita_dnc.1302.b
+		ai_chance = { base = 45 }
+		add_political_power = 30
+		subtract_from_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1303
+	title = ita_dnc.1303.t
+	desc = ita_dnc.1303.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1303.a
+		ai_chance = { base = 55 }
+		subtract_from_variable = { var = ITA_piazza value = 6 }
+		add_stability = 0.04
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1303.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1304
+	title = ita_dnc.1304.t
+	desc = ita_dnc.1304.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1304.a
+		ai_chance = { base = 60 }
+		add_political_power = 35
+		add_stability = 0.03
+	}
+	option = {
+		name = ita_dnc.1304.b
+		ai_chance = { base = 40 }
+		add_to_variable = { var = ITA_majority value = 3 }
+		add_political_power = -20
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1305
+	title = ita_dnc.1305.t
+	desc = ita_dnc.1305.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1305.a
+		ai_chance = { base = 55 }
+		add_to_variable = { var = ITA_majority value = 4 }
+		add_stability = 0.03
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1305.b
+		ai_chance = { base = 45 }
+		add_political_power = 30
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = ita_dnc.1306
+	title = ita_dnc.1306.t
+	desc = ita_dnc.1306.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1306.a
+		ai_chance = { base = 55 }
+		add_stability = 0.05
+		add_manpower = 6000
+	}
+	option = {
+		name = ita_dnc.1306.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_to_variable = { var = ITA_prefects value = 6 }
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1307
+	title = ita_dnc.1307.t
+	desc = ita_dnc.1307.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1307.a
+		ai_chance = { base = 55 }
+		add_stability = 0.04
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+	}
+	option = {
+		name = ita_dnc.1307.b
+		ai_chance = { base = 45 }
+		add_political_power = 45
+		add_to_variable = { var = ITA_piazza value = 4 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1308
+	title = ita_dnc.1308.t
+	desc = ita_dnc.1308.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1308.a
+		ai_chance = { base = 60 }
+		ITA_piazza_concede = yes
+		add_stability = 0.03
+	}
+	option = {
+		name = ita_dnc.1308.b
+		ai_chance = { base = 40 }
+		add_political_power = 35
+		add_to_variable = { var = ITA_piazza value = 4 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1309
+	title = ita_dnc.1309.t
+	desc = ita_dnc.1309.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1309.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1309.b
+		ai_chance = { base = 40 }
+		add_war_support = 0.04
+		add_command_power = 25
+		subtract_from_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1310
+	title = ita_dnc.1310.t
+	desc = ita_dnc.1310.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1310.a
+		ai_chance = { base = 55 }
+		add_command_power = 30
+		add_political_power = -30
+	}
+	option = {
+		name = ita_dnc.1310.b
+		ai_chance = { base = 45 }
+		add_stability = -0.04
+		add_political_power = 40
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = ita_dnc.1311
+	title = ita_dnc.1311.t
+	desc = ita_dnc.1311.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1311.a
+		ai_chance = { base = 60 }
+		add_manpower = 15000
+		add_war_support = -0.03
+	}
+	option = {
+		name = ita_dnc.1311.b
+		ai_chance = { base = 40 }
+		add_command_power = 30
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = ita_dnc.1312
+	title = ita_dnc.1312.t
+	desc = ita_dnc.1312.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1312.a
+		ai_chance = { base = 55 }
+		add_political_power = -35
+		add_stability = 0.04
+	}
+	option = {
+		name = ita_dnc.1312.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_to_variable = { var = ITA_piazza value = 4 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1313
+	title = ita_dnc.1313.t
+	desc = ita_dnc.1313.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1313.a
+		ai_chance = { base = 60 }
+		add_political_power = 45
+		add_stability = 0.03
+	}
+	option = {
+		name = ita_dnc.1313.b
+		ai_chance = { base = 40 }
+		add_to_variable = { var = ITA_majority value = 4 }
+		add_political_power = -25
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1314
+	title = ita_dnc.1314.t
+	desc = ita_dnc.1314.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1314.a
+		ai_chance = { base = 55 }
+		add_stability = 0.04
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.04
+		}
+	}
+	option = {
+		name = ita_dnc.1314.b
+		ai_chance = { base = 45 }
+		add_political_power = 35
+		add_to_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1315
+	title = ita_dnc.1315.t
+	desc = ita_dnc.1315.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1315.a
+		ai_chance = { base = 60 }
+		add_stability = 0.05
+		add_manpower = 8000
+	}
+	option = {
+		name = ita_dnc.1315.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		subtract_from_variable = { var = ITA_majority value = 2 }
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1316
+	title = ita_dnc.1316.t
+	desc = ita_dnc.1316.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1316.a
+		ai_chance = { base = 55 }
+		subtract_from_variable = { var = ITA_piazza value = 6 }
+		add_stability = 0.03
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1316.b
+		ai_chance = { base = 45 }
+		add_political_power = 35
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1317
+	title = ita_dnc.1317.t
+	desc = ita_dnc.1317.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1317.a
+		ai_chance = { base = 60 }
+		add_stability = 0.06
+		add_political_power = 60
+	}
+	option = {
+		name = ita_dnc.1317.b
+		ai_chance = { base = 40 }
+		add_to_variable = { var = ITA_majority value = 5 }
+		add_war_support = 0.04
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1400
+	title = ita_dnc.1400.t
+	desc = ita_dnc.1400.d
+	picture = GFX_report_event_journalists_speech
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1400.a
+		ai_chance = { base = 60 }
+		add_political_power = 40
+		add_war_support = 0.04
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		set_country_flag = ITA_z_the_phrase_is_official
+	}
+	option = {
+		name = ita_dnc.1400.b
+		ai_chance = { base = 40 }
+		add_stability = 0.04
+		subtract_from_variable = { var = ITA_piazza value = 4 }
+		add_to_variable = { var = ITA_majority value = 3 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1401
+	title = ita_dnc.1401.t
+	desc = ita_dnc.1401.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1401.a
+		ai_chance = { base = 55 }
+		add_political_power = -30
+		add_war_support = 0.05
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		set_country_flag = ITA_z_the_editor_is_not_prosecuted
+	}
+	option = {
+		name = ita_dnc.1401.b
+		ai_chance = { base = 45 }
+		add_political_power = 30
+		add_stability = 0.03
+		subtract_from_variable = { var = ITA_majority value = 2 }
+		add_to_variable = { var = ITA_prefects value = 5 }
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1402
+	title = ita_dnc.1402.t
+	desc = ita_dnc.1402.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1402.a
+		ai_chance = { base = 60 }
+		add_political_power = 35
+		add_to_variable = { var = ITA_majority value = 4 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		ITA_chamber_bands = yes
+		set_country_flag = ITA_z_the_association_sits_with_the_right
+	}
+	option = {
+		name = ita_dnc.1402.b
+		ai_chance = { base = 40 }
+		add_war_support = 0.06
+		subtract_from_variable = { var = ITA_majority value = 4 }
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+		set_country_flag = ITA_z_the_association_sits_alone
+	}
+}
+
+country_event = {
+	id = ita_dnc.1403
+	title = ita_dnc.1403.t
+	desc = ita_dnc.1403.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1403.a
+		ai_chance = { base = 50 }
+		add_war_support = 0.06
+		add_to_variable = { var = ITA_piazza value = 4 }
+		subtract_from_variable = { var = ITA_vienna_trust value = 10 }
+		clamp_variable = {
+			var = ITA_vienna_trust
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = ITA_w_vienna_trust_tt
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1403.b
+		ai_chance = { base = 50 }
+		add_political_power = -25
+		add_stability = 0.03
+		add_to_variable = { var = ITA_prefects value = 6 }
+		ITA_machine_reckon = yes
+		custom_effect_tooltip = ITA_z_tt_the_students_are_moved_on_quietly
+	}
+}
+
+country_event = {
+	id = ita_dnc.1404
+	title = ita_dnc.1404.t
+	desc = ita_dnc.1404.d
+	picture = GFX_report_event_merchant_ship_01
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1404.a
+		ai_chance = { base = 55 }
+		add_manpower = 12000
+		add_political_power = -30
+		add_stability = 0.03
+		set_country_flag = ITA_z_the_emigrant_is_asked_to_stay
+	}
+	option = {
+		name = ita_dnc.1404.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_war_support = 0.04
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		set_country_flag = ITA_z_the_emigrant_is_a_colonist
+	}
+}
+
+country_event = {
+	id = ita_dnc.1405
+	title = ita_dnc.1405.t
+	desc = ita_dnc.1405.d
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1405.a
+		ai_chance = { base = 45 }
+		add_war_support = 0.05
+		add_to_variable = { var = ITA_piazza value = 4 }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		ITA_piazza_bands = yes
+	}
+	option = {
+		name = ita_dnc.1405.b
+		ai_chance = { base = 55 }
+		add_political_power = 40
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		add_stability = 0.03
+		ITA_piazza_bands = yes
+		custom_effect_tooltip = ITA_z_tt_the_doctrine_is_left_in_the_reviews
+	}
+}
+
+country_event = {
+	id = ita_dnc.1406
+	title = ita_dnc.1406.t
+	desc = ita_dnc.1406.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1406.a
+		ai_chance = { base = 50 }
+		add_political_power = 40
+		add_to_variable = { var = ITA_vienna_trust value = 5 }
+		clamp_variable = {
+			var = ITA_vienna_trust
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = ITA_w_vienna_trust_tt
+		add_to_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.1406.b
+		ai_chance = { base = 50 }
+		add_war_support = 0.06
+		subtract_from_variable = { var = ITA_vienna_trust value = 12 }
+		clamp_variable = {
+			var = ITA_vienna_trust
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = ITA_w_vienna_trust_tt
+		add_named_threat = {
+			threat = 1
+			name = ITA_z_threat_the_terms_are_published
+		}
+	}
+}
+
+country_event = {
+	id = ita_dnc.1407
+	title = ita_dnc.1407.t
+	desc = ita_dnc.1407.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1407.a
+		ai_chance = { base = 55 }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		ITA_piazza_bands = yes
+		set_country_flag = ITA_z_the_crossers_are_seated
+	}
+	option = {
+		name = ita_dnc.1407.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_to_variable = { var = ITA_majority value = 3 }
+		add_to_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+		custom_effect_tooltip = ITA_z_tt_the_notables_keep_the_committee
+	}
+}
+
+country_event = {
+	id = ita_dnc.1408
+	title = ita_dnc.1408.t
+	desc = ita_dnc.1408.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1408.a
+		ai_chance = { base = 50 }
+		add_political_power = 45
+		add_stability = 0.03
+		add_to_variable = { var = ITA_vienna_trust value = 8 }
+		clamp_variable = {
+			var = ITA_vienna_trust
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = ITA_w_vienna_trust_tt
+	}
+	option = {
+		name = ita_dnc.1408.b
+		ai_chance = { base = 50 }
+		add_war_support = 0.07
+		add_to_variable = { var = ITA_piazza value = 4 }
+		subtract_from_variable = { var = ITA_vienna_trust value = 15 }
+		clamp_variable = {
+			var = ITA_vienna_trust
+			min = 0
+			max = 100
+		}
+		custom_effect_tooltip = ITA_w_vienna_trust_tt
+		ITA_piazza_bands = yes
+		set_country_flag = ITA_z_the_bill_is_read_in_the_chamber
+	}
+}
+
+country_event = {
+	id = ita_dnc.1409
+	title = ita_dnc.1409.t
+	desc = ita_dnc.1409.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1409.a
+		ai_chance = { base = 45 }
+		ITA_piazza_repress = yes
+		add_war_support = 0.05
+		add_political_power = 25
+		custom_effect_tooltip = ITA_z_tt_the_floor_never_comes_down_again
+	}
+	option = {
+		name = ita_dnc.1409.b
+		ai_chance = { base = 55 }
+		add_political_power = -40
+		add_to_variable = { var = ITA_prefects value = 10 }
+		subtract_from_variable = { var = ITA_piazza value = 3 }
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1410
+	title = ita_dnc.1410.t
+	desc = ita_dnc.1410.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1410.a
+		ai_chance = { base = 55 }
+		add_war_support = 0.06
+		add_political_power = -30
+		add_named_threat = {
+			threat = 1
+			name = ITA_z_threat_the_settlement_scheme
+		}
+		set_country_flag = ITA_z_the_settlers_are_promised_land
+	}
+	option = {
+		name = ita_dnc.1410.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_stability = 0.03
+		add_to_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+		custom_effect_tooltip = ITA_z_tt_the_prospectus_is_left_on_the_table
+	}
+}
+
+country_event = {
+	id = ita_dnc.1411
+	title = ita_dnc.1411.t
+	desc = ita_dnc.1411.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1411.a
+		ai_chance = { base = 50 }
+		add_political_power = 45
+		add_to_variable = { var = ITA_majority value = 4 }
+		ITA_chamber_bands = yes
+		set_country_flag = ITA_z_the_receipt_is_filed
+	}
+	option = {
+		name = ita_dnc.1411.b
+		ai_chance = { base = 50 }
+		add_war_support = 0.07
+		set_variable = { ITA_vienna_trust = 0 }
+		custom_effect_tooltip = ITA_w_vienna_trust_tt
+		add_named_threat = {
+			threat = 2
+			name = ITA_z_threat_the_receipt_torn_up
+		}
+		set_country_flag = ITA_z_the_receipt_is_torn_up
+	}
+}
+
+country_event = {
+	id = ita_dnc.1412
+	title = ita_dnc.1412.t
+	desc = ita_dnc.1412.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1412.a
+		ai_chance = { base = 60 }
+		add_manpower = 15000
+		army_experience = 30
+		add_political_power = -30
+		set_country_flag = ITA_z_the_clubs_are_official
+	}
+	option = {
+		name = ita_dnc.1412.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_stability = 0.04
+		subtract_from_variable = { var = ITA_piazza value = 3 }
+		ITA_piazza_bands = yes
+		custom_effect_tooltip = ITA_z_tt_the_rifles_stay_in_the_armoury
+	}
+}
+
+country_event = {
+	id = ita_dnc.1413
+	title = ita_dnc.1413.t
+	desc = ita_dnc.1413.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1413.a
+		ai_chance = { base = 60 }
+		add_war_support = 0.08
+		add_to_variable = { var = ITA_piazza value = 4 }
+		add_stability = -0.03
+		ITA_piazza_bands = yes
+		set_country_flag = ITA_z_the_ministry_leads_the_procession
+	}
+	option = {
+		name = ita_dnc.1413.b
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		ITA_c_lose_a_paid_spirit = yes
+		add_stability = 0.03
+		subtract_from_variable = { var = ITA_piazza value = 5 }
+		ITA_piazza_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.1414
+	title = ita_dnc.1414.t
+	desc = ita_dnc.1414.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1414.a
+		ai_chance = { base = 55 }
+		navy_experience = 40
+		add_war_support = 0.05
+		add_named_threat = {
+			threat = 2
+			name = ITA_z_threat_the_adriatic_squadron
+		}
+		set_country_flag = ITA_z_the_squadron_moves_to_venice
+	}
+	option = {
+		name = ita_dnc.1414.b
+		ai_chance = { base = 45 }
+		add_political_power = 40
+		add_stability = 0.03
+		add_to_variable = { var = ITA_majority value = 3 }
+		ITA_chamber_bands = yes
+		custom_effect_tooltip = ITA_z_tt_the_squadron_stays_at_taranto
+	}
+}
+
+country_event = {
+	id = ita_dnc.1415
+	title = ita_dnc.1415.t
+	desc = ita_dnc.1415.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	option = {
+		name = ita_dnc.1415.a
+		ai_chance = { base = 55 }
+		add_war_support = 0.08
+		add_political_power = 50
+		add_command_power = 30
+		set_country_flag = ITA_z_the_programme_has_a_date
+		add_named_threat = {
+			threat = 2
+			name = ITA_z_threat_the_programme_has_a_date
+		}
+	}
+	option = {
+		name = ita_dnc.1415.b
+		ai_chance = { base = 45 }
+		add_stability = 0.05
+		add_political_power = 40
+		add_to_variable = { var = ITA_majority value = 4 }
+		ITA_chamber_bands = yes
+		set_country_flag = ITA_z_the_programme_has_no_date
+	}
+}
+
+country_event = {
+	id = ita_dnc.980
+	title = ita_dnc.980.t
+	desc = ita_dnc.980.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.980.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+		}
+		air_experience = 40
+		add_political_power = -25
+		set_country_flag = ITA_air_the_memoranda_are_circulated
+		add_doctrine_cost_reduction = {
+			name = ITA_air_tb_the_memoranda
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+		}
+		if = {
+			limit = { has_country_flag = ITA_dnc_path_giolitti }
+			subtract_from_variable = { var = ITA_majority value = 2 }
+		}
+		else = {
+			add_war_support = 0.02
+		}
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.980.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+		add_political_power = 50
+		add_command_power = 25
+		set_country_flag = ITA_air_the_memoranda_are_shelved
+		add_to_variable = { var = ITA_prefects value = 2 }
+		add_stability = 0.02
+		ITA_machine_reckon = yes
+		ITA_chamber_bands = yes
+	}
+}
+
+country_event = {
+	id = ita_dnc.981
+	title = ita_dnc.981.t
+	desc = ita_dnc.981.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ita_dnc.981.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+		}
+		add_war_support = 0.04
+		add_political_power = -25
+		set_country_flag = ITA_air_the_kingdom_regrets_nothing
+		add_named_threat = {
+			threat = 2
+			name = ITA_air_the_answer_threat
+		}
+		if = {
+			limit = { has_country_flag = ITA_dnc_path_reformist }
+			add_to_variable = { var = ITA_piazza value = 4 }
+			subtract_from_variable = { var = ITA_majority value = 3 }
+		}
+		else = {
+			add_political_power = 25
+		}
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+	option = {
+		name = ita_dnc.981.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+		add_political_power = 25
+		add_stability = 0.03
+		set_country_flag = ITA_air_a_note_of_regret
+		if = {
+			limit = { country_exists = OTT }
+			OTT = {
+				add_opinion_modifier = { target = ITA modifier = small_increase }
+			}
+		}
+		if = {
+			limit = { has_country_flag = ITA_dnc_path_reformist }
+			add_to_variable = { var = ITA_majority value = 3 }
+			subtract_from_variable = { var = ITA_piazza value = 3 }
+		}
+		else = {
+			subtract_from_variable = { var = ITA_majority value = 2 }
+		}
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+	}
+}
