@@ -1,0 +1,1087 @@
+ITA_dnc_piazza_cat = {
+
+	ITA_p_the_prefect_reads_the_square = {
+		icon = GFX_decision_generic_decision
+		cost = 10
+		days_remove = 14
+		days_re_enable = 60
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_read_the_square_tt
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+			add_political_power = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ITA_p_the_boards_sit = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 35
+		days_remove = 45
+		days_re_enable = 120
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_piazza
+				value = 30
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_piazza value = 9 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			add_stability = 0.02
+			custom_effect_tooltip = ITA_dec_the_boards_sit_tt
+			ITA_piazza_bands = yes
+			if = {
+				limit = {
+					has_country_flag = ITA_dnc_path_reformist
+				}
+				add_to_variable = { var = ITA_majority value = 2 }
+				ITA_chamber_bands = yes
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 4
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+			modifier = {
+				factor = 0.2
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+	}
+
+	ITA_p_the_troops_are_asked_for = {
+		icon = GFX_decision_generic_military
+		cost = 25
+		days_remove = 21
+		days_re_enable = 90
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_piazza
+				value = 45
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			ITA_piazza_repress = yes
+			custom_effect_tooltip = ITA_dec_the_troops_tt
+			add_to_variable = { var = ITA_piazza_floor value = 2 }
+			clamp_variable = {
+				var = ITA_piazza_floor
+				min = 0
+				max = 45
+			}
+			if = {
+				limit = {
+					has_country_flag = ITA_dnc_path_reformist
+				}
+				subtract_from_variable = { var = ITA_majority value = 6 }
+				ITA_chamber_bands = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				OR = {
+					has_country_flag = ITA_dnc_path_sonnino
+					has_country_flag = ITA_dnc_path_nazionale
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+	}
+
+	ITA_p_the_chamber_of_labour_is_closed = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 30
+		days_remove = 30
+		days_re_enable = 150
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_piazza
+				value = 35
+				compare = greater_than
+			}
+			NOT = { has_country_flag = ITA_dnc_path_reformist }
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_piazza value = 12 }
+			add_to_variable = { var = ITA_piazza_floor value = 1 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			add_stability = -0.02
+			custom_effect_tooltip = ITA_dec_the_chamber_closed_tt
+			set_country_flag = {
+				flag = ITA_dec_a_chamber_is_shut
+				value = 1
+				days = 365
+			}
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+	}
+
+	ITA_p_the_duty_on_bread_suspended = {
+		icon = GFX_decision_generic_civil_support
+		cost = 50
+		days_remove = 60
+		days_re_enable = 240
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_piazza
+				value = 40
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			ITA_piazza_concede = yes
+			custom_effect_tooltip = ITA_dec_the_bread_duty_tt
+			add_stability = 0.03
+			subtract_from_variable = { var = ITA_piazza value = 6 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+	}
+}
+
+ITA_dnc_chamber_cat = {
+
+	ITA_c_a_bridge_for_the_college = {
+		icon = GFX_decision_generic_construction
+		cost = 40
+		days_remove = 60
+		days_re_enable = 120
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_majority
+				value = 85
+				compare = less_than
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = ITA_majority value = 5 }
+			add_to_variable = { var = ITA_majority_bought value = 5 }
+			add_to_variable = { var = ITA_pledges value = 2 }
+			clamp_variable = {
+				var = ITA_majority
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_a_bridge_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ITA
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			ITA_chamber_bands = yes
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 4
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+	}
+
+	ITA_c_the_portfolio_offered = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 55
+		days_remove = 30
+		days_re_enable = 150
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_majority
+				value = 80
+				compare = less_than
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = ITA_majority value = 7 }
+			add_to_variable = { var = ITA_majority_bought value = 7 }
+			add_to_variable = { var = ITA_pledges value = 3 }
+			clamp_variable = {
+				var = ITA_majority
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_the_portfolio_tt
+			ITA_chamber_bands = yes
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+	}
+
+	ITA_c_the_prefect_makes_the_list = {
+		icon = GFX_decision_generic_nationalism
+		cost = 30
+		days_remove = 45
+		days_re_enable = 180
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_prefects
+				value = 40
+				compare = greater_than_or_equals
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = ITA_majority value = 6 }
+			subtract_from_variable = { var = ITA_prefects value = 4 }
+			add_to_variable = { var = ITA_piazza value = 3 }
+			clamp_variable = {
+				var = ITA_majority
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = ITA_prefects
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_the_prefect_list_tt
+			ITA_machine_reckon = yes
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 4
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+	}
+
+	ITA_c_the_pledges_fall_due = {
+		icon = GFX_decision_generic_decision
+		cost = 0
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 90
+		visible = {
+			check_variable = {
+				var = ITA_pledges
+				value = 8
+				compare = greater_than
+			}
+		}
+		available = {
+			command_power > 0
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_pledges value = 6 }
+			clamp_variable = {
+				var = ITA_pledges
+				min = 0
+				max = 60
+			}
+			add_political_power = -60
+			custom_effect_tooltip = ITA_dec_pledges_due_tt
+			ITA_chamber_bands = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	ITA_c_the_register_is_reprinted = {
+		icon = GFX_decision_generic_decision
+		cost = 45
+		days_remove = 60
+		days_re_enable = 240
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_prefects
+				value = 90
+				compare = less_than
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = ITA_prefects value = 6 }
+			clamp_variable = {
+				var = ITA_prefects
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_the_register_tt
+			ITA_machine_reckon = yes
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	ITA_c_dissolve_the_chamber = {
+		icon = GFX_decision_eng_install_government
+		cost = 75
+		days_remove = 90
+		days_re_enable = 730
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+			NOT = { has_war = yes }
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_dissolve_tt
+			ITA_election_resolve = yes
+			ITA_chamber_bands = yes
+			ITA_machine_reckon = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 4
+				check_variable = {
+					var = ITA_majority
+					value = 55
+					compare = less_than
+				}
+			}
+		}
+	}
+}
+
+ITA_dnc_prefects_cat = {
+
+	ITA_pr_the_circular_goes_out = {
+		icon = GFX_decision_generic_decision
+		cost = 25
+		days_remove = 30
+		days_re_enable = 120
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_prefects
+				value = 95
+				compare = less_than
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = ITA_prefects value = 4 }
+			clamp_variable = {
+				var = ITA_prefects
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_the_circular_tt
+			ITA_machine_reckon = yes
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	ITA_pr_the_prefect_is_transferred = {
+		icon = GFX_decision_generic_nationalism
+		cost = 35
+		days_remove = 45
+		days_re_enable = 180
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_piazza
+				value = 35
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_piazza value = 5 }
+			add_to_variable = { var = ITA_prefects value = 3 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			clamp_variable = {
+				var = ITA_prefects
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_transfer_prefect_tt
+			ITA_piazza_bands = yes
+			ITA_machine_reckon = yes
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	ITA_pr_the_questore_is_replaced = {
+		icon = GFX_decision_generic_operation
+		cost = 20
+		days_remove = 21
+		days_re_enable = 120
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_piazza value = 3 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			add_political_power = 15
+			custom_effect_tooltip = ITA_dec_the_questore_tt
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	ITA_pr_the_provinces_are_restored = {
+		icon = GFX_decision_generic_civil_support
+		cost = 60
+		days_remove = 60
+		fire_only_once = no
+		days_re_enable = 180
+		visible = {
+			any_owned_state = {
+				has_state_flag = ITA_p_ungoverned
+			}
+		}
+		available = {
+			check_variable = {
+				var = ITA_piazza
+				value = 45
+				compare = less_than
+			}
+		}
+		remove_effect = {
+			ITA_p_restore_the_provinces = yes
+			custom_effect_tooltip = ITA_dec_restore_provinces_tt
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 6
+		}
+	}
+}
+
+ITA_dnc_south_cat = {
+
+	ITA_s_quinine_for_the_south = {
+		icon = GFX_decision_gre_investment_decisions
+		cost = 40
+		days_remove = 90
+		days_re_enable = 365
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_quinine_tt
+			add_manpower = 4000
+			subtract_from_variable = { var = ITA_piazza value = 3 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			add_stability = 0.02
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	ITA_s_water_for_apulia = {
+		icon = GFX_decision_railway_building
+		cost = 60
+		days_remove = 120
+		days_re_enable = 365
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_water_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ITA
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.02
+			subtract_from_variable = { var = ITA_piazza value = 4 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	ITA_s_the_sulphur_inspectors = {
+		icon = GFX_decision_generic_factory
+		cost = 35
+		days_remove = 60
+		days_re_enable = 240
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_sulphur_tt
+			add_stability = 0.02
+			subtract_from_variable = { var = ITA_piazza value = 5 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			if = {
+				limit = {
+					has_country_flag = ITA_dnc_path_reformist
+				}
+				add_to_variable = { var = ITA_majority value = 2 }
+				ITA_chamber_bands = yes
+			}
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+	}
+
+	ITA_s_the_special_laws_extended = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 150
+		days_re_enable = 730
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_majority
+				value = 55
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_special_laws_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ITA
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			subtract_from_variable = { var = ITA_majority value = 3 }
+			subtract_from_variable = { var = ITA_piazza value = 4 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	ITA_s_the_south_at_a_glance = {
+		icon = GFX_decision_generic_decision
+		cost = 5
+		days_remove = 7
+		days_re_enable = 60
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_south_glance_tt
+			ITA_machine_reckon = yes
+			ITA_piazza_bands = yes
+			ITA_chamber_bands = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+ITA_dnc_emigration_cat = {
+
+	ITA_e_the_commissariat_inspects_the_ship = {
+		icon = GFX_decision_generic_naval
+		cost = 30
+		days_remove = 45
+		days_re_enable = 180
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_inspect_ship_tt
+			add_political_power = 20
+			add_stability = 0.01
+			subtract_from_variable = { var = ITA_piazza value = 2 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	ITA_e_the_remittance_office_opens = {
+		icon = GFX_decision_gre_investment_decisions
+		cost = 45
+		days_remove = 90
+		days_re_enable = 365
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_remittance_tt
+			add_political_power = 40
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ITA
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	ITA_e_the_agent_is_prosecuted = {
+		icon = GFX_decision_generic_operation
+		cost = 25
+		days_remove = 30
+		days_re_enable = 150
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_the_agent_tt
+			add_stability = 0.02
+			add_manpower = 2000
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	ITA_e_the_land_before_the_ship = {
+		icon = GFX_decision_generic_construction
+		cost = 60
+		days_remove = 120
+		days_re_enable = 365
+		fire_only_once = no
+		available = {
+			check_variable = {
+				var = ITA_majority
+				value = 50
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_land_before_ship_tt
+			add_manpower = 8000
+			subtract_from_variable = { var = ITA_majority value = 4 }
+			subtract_from_variable = { var = ITA_piazza value = 5 }
+			clamp_variable = {
+				var = ITA_piazza
+				min = ITA_piazza_floor
+				max = 100
+			}
+			ITA_chamber_bands = yes
+			ITA_piazza_bands = yes
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+	}
+
+	ITA_e_the_ships_that_carry_our_own = {
+		icon = GFX_decision_generic_naval
+		cost = 50
+		days_remove = 90
+		days_re_enable = 365
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_our_own_ships_tt
+			add_political_power = 25
+			if = {
+				limit = {
+					has_country_flag = ITA_dnc_path_nazionale
+				}
+				add_war_support = 0.02
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ITA
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+		}
+	}
+}
+
+ITA_dnc_consulta_cat = {
+
+	ITA_w_the_note_to_vienna = {
+		icon = GFX_decision_generic_decision
+		cost = 30
+		days_remove = 45
+		days_re_enable = 180
+		fire_only_once = no
+		available = {
+			country_exists = AUH
+			NOT = { has_war_with = AUH }
+			check_variable = {
+				var = ITA_vienna_trust
+				value = 90
+				compare = less_than
+			}
+		}
+		remove_effect = {
+			add_to_variable = { var = ITA_vienna_trust value = 6 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_note_to_vienna_tt
+			AUH = {
+				add_opinion_modifier = { target = ITA modifier = small_increase }
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0.1
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+		}
+	}
+
+	ITA_w_the_visit_to_racconigi = {
+		icon = GFX_decision_eng_install_government
+		cost = 60
+		days_remove = 60
+		days_re_enable = 365
+		fire_only_once = no
+		available = {
+			country_exists = RUS
+			NOT = { has_war_with = RUS }
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_vienna_trust value = 8 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_racconigi_tt
+			RUS = {
+				add_opinion_modifier = { target = ITA modifier = medium_increase }
+			}
+			if = {
+				limit = { country_exists = AUH }
+				AUH = {
+					add_opinion_modifier = { target = ITA modifier = small_decrease }
+				}
+			}
+			add_political_power = 25
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+		}
+	}
+
+	ITA_w_article_seven_is_invoked = {
+		icon = GFX_decision_generic_nationalism
+		cost = 80
+		days_remove = 60
+		days_re_enable = 545
+		fire_only_once = no
+		available = {
+			country_exists = AUH
+			NOT = { has_war_with = AUH }
+			check_variable = {
+				var = ITA_vienna_trust
+				value = 25
+				compare = greater_than
+			}
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_vienna_trust value = 14 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_article_seven_tt
+			add_political_power = 50
+			add_war_support = 0.03
+			AUH = {
+				add_opinion_modifier = { target = ITA modifier = medium_decrease }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+			modifier = {
+				factor = 0.2
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+	}
+
+	ITA_w_the_consul_at_trieste = {
+		icon = GFX_decision_generic_operation
+		cost = 40
+		days_remove = 45
+		days_re_enable = 240
+		fire_only_once = no
+		available = {
+			country_exists = AUH
+			NOT = { has_war_with = AUH }
+		}
+		remove_effect = {
+			subtract_from_variable = { var = ITA_vienna_trust value = 5 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_dec_consul_trieste_tt
+			add_war_support = 0.02
+			add_political_power = 15
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+			modifier = {
+				factor = 0.2
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+	}
+
+	ITA_w_the_dante_alighieri_subscription = {
+		icon = GFX_decision_generic_propaganda
+		cost = 25
+		days_remove = 60
+		days_re_enable = 180
+		fire_only_once = no
+		available = {
+			has_country_flag = ITA_dnc_systems_open
+		}
+		remove_effect = {
+			custom_effect_tooltip = ITA_dec_dante_tt
+			add_war_support = 0.02
+			add_political_power = 10
+			if = {
+				limit = { country_exists = AUH }
+				subtract_from_variable = { var = ITA_vienna_trust value = 3 }
+				clamp_variable = {
+					var = ITA_vienna_trust
+					min = 0
+					max = 100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+		}
+	}
+
+	ITA_w_the_denunciation_is_drafted = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 150
+		days_remove = 90
+		fire_only_once = yes
+		visible = {
+			check_variable = {
+				var = ITA_vienna_trust
+				value = 25
+				compare = less_than
+			}
+		}
+		available = {
+			country_exists = AUH
+			NOT = { has_war_with = AUH }
+			NOT = { has_country_flag = ITA_w_alliance_denounced }
+		}
+		remove_effect = {
+			set_country_flag = ITA_w_alliance_denounced
+			set_variable = { ITA_vienna_trust = 0 }
+			custom_effect_tooltip = ITA_dec_denunciation_tt
+			add_war_support = 0.05
+			add_political_power = -40
+			AUH = {
+				add_opinion_modifier = { target = ITA modifier = large_decrease }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				FRA = {
+					add_opinion_modifier = { target = ITA modifier = medium_increase }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 6
+				has_country_flag = ITA_dnc_path_nazionale
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+	}
+}

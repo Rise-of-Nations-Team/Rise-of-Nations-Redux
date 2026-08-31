@@ -14,32 +14,44 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2600 }
 
 	shortcut = {
-		name = ITA_dnc_trunk_sc
+		name = ITA_dnc_political_sc
 		target = ITADNC_the_kingdom
 		scroll_wheel_factor = 0.6
 	}
 
 	shortcut = {
-		name = ITA_dnc_crown_sc
-		target = ITADNC_t_the_question_of_order
+		name = ITA_dnc_diplomacy_sc
+		target = ITADNC_w_the_consulta
 		scroll_wheel_factor = 0.6
 	}
 
 	shortcut = {
-		name = ITA_dnc_society_sc
-		target = ITADNC_t_the_coal_that_is_not_ours
+		name = ITA_dnc_army_sc
+		target = ITADNC_arm_the_army_after_adwa
 		scroll_wheel_factor = 0.6
 	}
 
 	shortcut = {
-		name = ITA_dnc_war_sc
-		target = ITADNC_t_the_road_from_adwa
+		name = ITA_dnc_navy_sc
+		target = ITADNC_n_the_naval_estimates
+		scroll_wheel_factor = 0.6
+	}
+
+	shortcut = {
+		name = ITA_dnc_economy_sc
+		target = ITADNC_e_the_country_beneath_the_state
+		scroll_wheel_factor = 0.6
+	}
+
+	shortcut = {
+		name = ITA_dnc_airforce_sc
+		target = ITADNC_air_the_brigade_of_specialists
 		scroll_wheel_factor = 0.6
 	}
 
 	focus = {
 		id = ITADNC_the_kingdom
-		x = 34
+		x = 58
 		y = 0
 		icon = GFX_focus_generic_monarchy_2
 		cost = 5
@@ -102,7 +114,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_t_monza
 		relative_position_id = ITADNC_the_kingdom
-		x = -13
+		x = -20
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_goal_generic_national_unity
@@ -178,7 +190,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_t_the_question_of_order
 		relative_position_id = ITADNC_t_monza
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_t_monza }
 		icon = GFX_focus_generic_strike_at_democracy1
@@ -246,10 +258,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_t_the_coal_that_is_not_ours
-		relative_position_id = ITADNC_t_the_question_of_order
+		relative_position_id = ITADNC_t_monza
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_t_the_question_of_order }
+		prerequisite = { focus = ITADNC_t_monza }
 		icon = GFX_focus_generic_industry_3
 		cost = 5
 		ai_will_do = {
@@ -308,10 +320,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_t_the_road_from_adwa
-		relative_position_id = ITADNC_t_the_coal_that_is_not_ours
-		x = 0
+		relative_position_id = ITADNC_t_monza
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_t_the_coal_that_is_not_ours }
+		prerequisite = { focus = ITADNC_t_monza }
 		icon = GFX_goal_generic_army_doctrines
 		cost = 5
 		ai_will_do = {
@@ -371,7 +383,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_a_the_chamber_and_the_crown
 		relative_position_id = ITADNC_the_kingdom
-		x = -9
+		x = -13
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_focus_generic_monarchy_1
@@ -426,7 +438,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_s_return_to_the_statuto
 		relative_position_id = ITADNC_the_kingdom
-		x = -27
+		x = -46
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		mutually_exclusive = { focus = ITADNC_g_the_neutral_state }
@@ -500,10 +512,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_the_decrees_revived
-		relative_position_id = ITADNC_a_the_crown_names_the_cabinet
+		relative_position_id = ITADNC_a_the_chamber_and_the_crown
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_crown_names_the_cabinet }
+		prerequisite = { focus = ITADNC_a_the_chamber_and_the_crown }
 		icon = GFX_focus_generic_oppression
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -573,7 +585,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_a_the_crown_names_the_cabinet
 		relative_position_id = ITADNC_a_the_chamber_and_the_crown
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_a_the_chamber_and_the_crown }
 		icon = GFX_goal_generic_national_unity
@@ -630,10 +642,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_a_vote_for_every_man
-		relative_position_id = ITADNC_a_the_chamber_governed_past
-		x = -1
+		relative_position_id = ITADNC_a_the_crown_names_the_cabinet
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_chamber_governed_past }
+		prerequisite = { focus = ITADNC_a_the_crown_names_the_cabinet focus = ITADNC_a_the_decrees_revived focus = ITADNC_a_the_chamber_governed_past }
 		mutually_exclusive = { focus = ITADNC_a_the_duty_on_bread }
 		icon = GFX_focus_generic_election
 		cost = 5
@@ -700,9 +712,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_a_the_reformists_at_the_door
 		relative_position_id = ITADNC_a_a_vote_for_every_man
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_a_a_vote_for_every_man focus = ITADNC_a_the_duty_on_bread }
+		mutually_exclusive = { focus = ITADNC_a_a_socialist_in_the_ministry }
 		icon = GFX_goal_social_reforms
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -750,10 +763,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_the_chamber_governed_past
-		relative_position_id = ITADNC_a_the_decrees_revived
-		x = 0
+		relative_position_id = ITADNC_a_the_chamber_and_the_crown
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_decrees_revived }
+		prerequisite = { focus = ITADNC_a_the_chamber_and_the_crown }
 		icon = GFX_goal_generic_plotting
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -824,10 +837,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_the_army_at_the_prefects_call
-		relative_position_id = ITADNC_a_the_southern_question
-		x = 0
+		relative_position_id = ITADNC_a_the_sacristies_are_opened
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_southern_question }
+		prerequisite = { focus = ITADNC_a_the_sacristies_are_opened focus = ITADNC_a_the_ban_holds }
 		icon = GFX_focus_generic_court
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -912,10 +925,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_the_duty_on_bread
-		relative_position_id = ITADNC_a_the_chamber_governed_past
-		x = 1
+		relative_position_id = ITADNC_a_the_crown_names_the_cabinet
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_chamber_governed_past }
+		prerequisite = { focus = ITADNC_a_the_crown_names_the_cabinet focus = ITADNC_a_the_decrees_revived focus = ITADNC_a_the_chamber_governed_past }
 		mutually_exclusive = { focus = ITADNC_a_a_vote_for_every_man }
 		icon = GFX_focus_generic_agriculture
 		cost = 5
@@ -989,10 +1002,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_a_socialist_in_the_ministry
-		relative_position_id = ITADNC_a_the_reformists_at_the_door
-		x = 0
+		relative_position_id = ITADNC_a_a_vote_for_every_man
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_reformists_at_the_door }
+		prerequisite = { focus = ITADNC_a_a_vote_for_every_man focus = ITADNC_a_the_duty_on_bread }
+		mutually_exclusive = { focus = ITADNC_a_the_reformists_at_the_door }
 		icon = GFX_goal_syndicalist_workers
 		cost = 5
 		ai_will_do = { factor = 5 }
@@ -1095,10 +1109,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_the_non_expedit_weighed
-		relative_position_id = ITADNC_a_a_socialist_in_the_ministry
-		x = 0
+		relative_position_id = ITADNC_a_the_reformists_at_the_door
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_a_a_socialist_in_the_ministry }
+		prerequisite = { focus = ITADNC_a_the_reformists_at_the_door focus = ITADNC_a_a_socialist_in_the_ministry }
 		icon = GFX_focus_por_concordat
 		cost = 5
 		available = { date > 1903.8.4 }
@@ -1269,7 +1283,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_a_the_southern_question
 		relative_position_id = ITADNC_a_the_sacristies_are_opened
-		x = 1
+		x = -1
 		y = 1
 		prerequisite = { focus = ITADNC_a_the_sacristies_are_opened focus = ITADNC_a_the_ban_holds }
 		icon = GFX_focus_generic_railroad
@@ -1360,10 +1374,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_a_the_majority_that_governs
-		relative_position_id = ITADNC_a_the_army_at_the_prefects_call
-		x = 0
+		relative_position_id = ITADNC_a_the_sacristies_are_opened
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_a_the_army_at_the_prefects_call }
+		prerequisite = { focus = ITADNC_a_the_sacristies_are_opened focus = ITADNC_a_the_ban_holds }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
 		available = { date > 1907.1.1 }
@@ -1458,7 +1472,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_e_the_country_beneath_the_state
 		relative_position_id = ITADNC_the_kingdom
-		x = -4
+		x = -5
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_focus_generic_population_growth
@@ -1630,10 +1644,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_wires_between_three_cities
-		relative_position_id = ITADNC_e_reservoirs_in_the_alps
+		relative_position_id = ITADNC_e_white_coal
 		x = -1
 		y = 1
-		prerequisite = { focus = ITADNC_e_reservoirs_in_the_alps }
+		prerequisite = { focus = ITADNC_e_white_coal }
 		mutually_exclusive = { focus = ITADNC_e_the_state_orders_from_terni }
 		icon = GFX_focus_generic_electrification
 		cost = 4
@@ -1701,10 +1715,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_state_orders_from_terni
-		relative_position_id = ITADNC_e_reservoirs_in_the_alps
+		relative_position_id = ITADNC_e_white_coal
 		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_e_reservoirs_in_the_alps }
+		prerequisite = { focus = ITADNC_e_white_coal }
 		mutually_exclusive = { focus = ITADNC_e_the_wires_between_three_cities }
 		icon = GFX_focus_generic_steel_mill
 		cost = 4
@@ -1791,9 +1805,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_e_the_workshops_of_turin
 		relative_position_id = ITADNC_e_a_current_for_every_wheel
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = ITADNC_e_a_current_for_every_wheel }
+		mutually_exclusive = { focus = ITADNC_e_reservoirs_in_the_alps }
 		icon = GFX_focus_generic_industry_investment
 		cost = 4
 		ai_will_do = {
@@ -1863,10 +1878,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_reservoirs_in_the_alps
-		relative_position_id = ITADNC_e_white_coal
-		x = 0
+		relative_position_id = ITADNC_e_a_current_for_every_wheel
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_e_white_coal }
+		prerequisite = { focus = ITADNC_e_a_current_for_every_wheel }
+		mutually_exclusive = { focus = ITADNC_e_the_workshops_of_turin }
 		icon = GFX_focus_SMB_a_land_of_mountains
 		cost = 4
 		ai_will_do = {
@@ -2024,10 +2040,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_special_laws_for_the_south
-		relative_position_id = ITADNC_e_two_italies_one_kingdom
-		x = 0
+		relative_position_id = ITADNC_e_the_workshops_of_turin
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_e_two_italies_one_kingdom }
+		prerequisite = { focus = ITADNC_e_the_workshops_of_turin focus = ITADNC_e_reservoirs_in_the_alps }
 		icon = GFX_goal_social_reforms
 		cost = 4
 		ai_will_do = {
@@ -2121,10 +2137,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_quinine_at_the_states_price
-		relative_position_id = ITADNC_e_water_before_anything_else
+		relative_position_id = ITADNC_e_the_schools_of_the_kingdom
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_e_water_before_anything_else }
+		prerequisite = { focus = ITADNC_e_the_schools_of_the_kingdom focus = ITADNC_e_two_italies_one_kingdom focus = ITADNC_e_special_laws_for_the_south focus = ITADNC_e_water_before_anything_else }
 		icon = GFX_focus_generic_land_reclamation
 		cost = 3
 		ai_will_do = {
@@ -2184,10 +2200,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_water_before_anything_else
-		relative_position_id = ITADNC_e_special_laws_for_the_south
-		x = 0
+		relative_position_id = ITADNC_e_the_workshops_of_turin
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_e_special_laws_for_the_south }
+		prerequisite = { focus = ITADNC_e_the_workshops_of_turin focus = ITADNC_e_reservoirs_in_the_alps }
 		icon = GFX_focus_generic_agriculture
 		cost = 4
 		ai_will_do = {
@@ -2247,10 +2263,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_land_that_holds_its_people
-		relative_position_id = ITADNC_e_quinine_at_the_states_price
-		x = 0
+		relative_position_id = ITADNC_e_the_schools_of_the_kingdom
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_e_quinine_at_the_states_price }
+		prerequisite = { focus = ITADNC_e_the_schools_of_the_kingdom focus = ITADNC_e_two_italies_one_kingdom focus = ITADNC_e_special_laws_for_the_south focus = ITADNC_e_water_before_anything_else }
 		icon = GFX_focus_generic_farmland
 		cost = 5
 		available = {
@@ -2343,10 +2359,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_six_hundred_thousand_a_year
-		relative_position_id = ITADNC_e_the_land_that_holds_its_people
-		x = 0
+		relative_position_id = ITADNC_e_the_schools_of_the_kingdom
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_land_that_holds_its_people }
+		prerequisite = { focus = ITADNC_e_the_schools_of_the_kingdom focus = ITADNC_e_two_italies_one_kingdom focus = ITADNC_e_special_laws_for_the_south focus = ITADNC_e_water_before_anything_else }
 		icon = GFX_focus_generic_immigration
 		cost = 3
 		ai_will_do = {
@@ -2412,10 +2428,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_commissariat_of_emigration
-		relative_position_id = ITADNC_e_six_hundred_thousand_a_year
-		x = 0
+		relative_position_id = ITADNC_e_the_schools_of_the_kingdom
+		x = 6
 		y = 1
-		prerequisite = { focus = ITADNC_e_six_hundred_thousand_a_year }
+		prerequisite = { focus = ITADNC_e_the_schools_of_the_kingdom focus = ITADNC_e_two_italies_one_kingdom focus = ITADNC_e_special_laws_for_the_south focus = ITADNC_e_water_before_anything_else }
 		icon = GFX_focus_ARG_immigration_wave
 		cost = 4
 		ai_will_do = {
@@ -2482,10 +2498,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_land_before_the_ship
-		relative_position_id = ITADNC_e_the_commissariat_of_emigration
-		x = -1
+		relative_position_id = ITADNC_e_quinine_at_the_states_price
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_commissariat_of_emigration }
+		prerequisite = { focus = ITADNC_e_quinine_at_the_states_price focus = ITADNC_e_the_land_that_holds_its_people focus = ITADNC_e_six_hundred_thousand_a_year focus = ITADNC_e_the_commissariat_of_emigration }
 		mutually_exclusive = { focus = ITADNC_e_the_italians_beyond_the_sea }
 		icon = GFX_focus_generic_agricultural_subsidies
 		cost = 4
@@ -2559,10 +2575,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_italians_beyond_the_sea
-		relative_position_id = ITADNC_e_the_commissariat_of_emigration
-		x = 1
+		relative_position_id = ITADNC_e_quinine_at_the_states_price
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_commissariat_of_emigration }
+		prerequisite = { focus = ITADNC_e_quinine_at_the_states_price focus = ITADNC_e_the_land_that_holds_its_people focus = ITADNC_e_six_hundred_thousand_a_year focus = ITADNC_e_the_commissariat_of_emigration }
 		mutually_exclusive = { focus = ITADNC_e_the_land_before_the_ship }
 		icon = GFX_focus_BRA_north_and_south_america
 		cost = 4
@@ -2641,7 +2657,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_e_the_bread_that_stays
 		relative_position_id = ITADNC_e_the_land_before_the_ship
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_e_the_land_before_the_ship focus = ITADNC_e_the_italians_beyond_the_sea }
 		icon = GFX_focus_generic_agriculture
@@ -2692,10 +2708,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_state_is_neutral_in_the_strike
-		relative_position_id = ITADNC_e_the_bread_that_stays
-		x = 0
+		relative_position_id = ITADNC_e_the_land_before_the_ship
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_bread_that_stays }
+		prerequisite = { focus = ITADNC_e_the_land_before_the_ship focus = ITADNC_e_the_italians_beyond_the_sea }
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 4
 		ai_will_do = {
@@ -2751,10 +2767,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_chambers_of_labour
-		relative_position_id = ITADNC_e_the_state_is_neutral_in_the_strike
-		x = -1
+		relative_position_id = ITADNC_e_the_bread_that_stays
+		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_state_is_neutral_in_the_strike }
+		prerequisite = { focus = ITADNC_e_the_bread_that_stays focus = ITADNC_e_the_state_is_neutral_in_the_strike }
 		mutually_exclusive = { focus = ITADNC_e_the_prefect_settles_it }
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 4
@@ -2829,10 +2845,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_the_prefect_settles_it
-		relative_position_id = ITADNC_e_the_state_is_neutral_in_the_strike
-		x = 1
+		relative_position_id = ITADNC_e_the_bread_that_stays
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_state_is_neutral_in_the_strike }
+		prerequisite = { focus = ITADNC_e_the_bread_that_stays focus = ITADNC_e_the_state_is_neutral_in_the_strike }
 		mutually_exclusive = { focus = ITADNC_e_the_chambers_of_labour }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 4
@@ -2898,9 +2914,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_e_the_schools_of_the_kingdom
 		relative_position_id = ITADNC_e_the_workshops_of_turin
-		x = 0
+		x = -2
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_workshops_of_turin }
+		prerequisite = { focus = ITADNC_e_the_workshops_of_turin focus = ITADNC_e_reservoirs_in_the_alps }
 		icon = GFX_focus_generic_university_2
 		cost = 5
 		available = {
@@ -3060,10 +3076,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_e_two_italies_one_kingdom
-		relative_position_id = ITADNC_e_the_schools_of_the_kingdom
+		relative_position_id = ITADNC_e_the_workshops_of_turin
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_e_the_schools_of_the_kingdom }
+		prerequisite = { focus = ITADNC_e_the_workshops_of_turin focus = ITADNC_e_reservoirs_in_the_alps }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
 		available = {
@@ -3158,7 +3174,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_arm_the_army_after_adwa
 		relative_position_id = ITADNC_the_kingdom
-		x = 4
+		x = 9
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_focus_ITA_capo_supremo
@@ -3220,10 +3236,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_promotion_lists
-		relative_position_id = ITADNC_arm_the_school_of_the_regiment
+		relative_position_id = ITADNC_arm_the_army_estimates
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_school_of_the_regiment }
+		prerequisite = { focus = ITADNC_arm_the_army_estimates focus = ITADNC_arm_the_annual_class }
+		mutually_exclusive = { focus = ITADNC_arm_the_school_of_the_regiment }
 		icon = GFX_goal_generic_army_doctrines
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3295,10 +3312,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_annual_class
-		relative_position_id = ITADNC_arm_the_army_estimates
-		x = 0
+		relative_position_id = ITADNC_arm_the_army_after_adwa
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_army_estimates }
+		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3369,9 +3386,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_arm_the_field_gun_question
 		relative_position_id = ITADNC_arm_the_promotion_lists
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_promotion_lists }
+		prerequisite = { focus = ITADNC_arm_the_promotion_lists focus = ITADNC_arm_the_school_of_the_regiment }
 		icon = GFX_goal_generic_army_artillery
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3438,10 +3455,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_alpine_frontier
-		relative_position_id = ITADNC_arm_the_alpini
+		relative_position_id = ITADNC_arm_the_cadre_establishment
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_alpini }
+		prerequisite = { focus = ITADNC_arm_the_cadre_establishment focus = ITADNC_arm_the_alpini }
+		mutually_exclusive = { focus = ITADNC_arm_the_army_of_africa }
 		icon = GFX_goal_generic_fortify_city
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3516,10 +3534,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_never_again_milan
-		relative_position_id = ITADNC_arm_the_plan_against_the_ally
+		relative_position_id = ITADNC_arm_the_works_in_the_cadore
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_plan_against_the_ally }
+		prerequisite = { focus = ITADNC_arm_the_works_in_the_cadore focus = ITADNC_arm_the_mountain_batteries }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3584,10 +3602,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_school_of_the_regiment
-		relative_position_id = ITADNC_arm_the_annual_class
-		x = 0
+		relative_position_id = ITADNC_arm_the_army_estimates
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_annual_class }
+		prerequisite = { focus = ITADNC_arm_the_army_estimates focus = ITADNC_arm_the_annual_class }
+		mutually_exclusive = { focus = ITADNC_arm_the_promotion_lists }
 		icon = GFX_goal_generic_small_arms
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3708,10 +3727,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_alpini
-		relative_position_id = ITADNC_arm_the_cadre_establishment
-		x = 0
+		relative_position_id = ITADNC_arm_the_arsenals
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_cadre_establishment }
+		prerequisite = { focus = ITADNC_arm_the_arsenals focus = ITADNC_arm_a_smaller_army }
 		icon = GFX_focus_ITA_alpine_division
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -3752,7 +3771,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_arm_the_army_estimates
 		relative_position_id = ITADNC_arm_the_army_after_adwa
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = ITADNC_arm_the_army_after_adwa }
 		icon = GFX_goal_generic_position_armies
@@ -3803,9 +3822,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_arm_the_army_of_the_alps
 		relative_position_id = ITADNC_arm_the_alpine_frontier
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_alpine_frontier }
+		prerequisite = { focus = ITADNC_arm_the_alpine_frontier focus = ITADNC_arm_the_army_of_africa }
 		icon = GFX_focus_AFG_mountain_training
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -4055,7 +4074,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_arm_the_plan_against_the_ally
 		relative_position_id = ITADNC_arm_the_works_in_the_cadore
-		x = 1
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_arm_the_works_in_the_cadore focus = ITADNC_arm_the_mountain_batteries }
 		icon = GFX_goal_generic_territory_or_war
@@ -4108,10 +4127,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_army_of_africa
-		relative_position_id = ITADNC_arm_the_army_gives_way
-		x = 0
+		relative_position_id = ITADNC_arm_the_cadre_establishment
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_army_gives_way }
+		prerequisite = { focus = ITADNC_arm_the_cadre_establishment focus = ITADNC_arm_the_alpini }
+		mutually_exclusive = { focus = ITADNC_arm_the_alpine_frontier }
 		icon = GFX_focus_ITA_a_colonial_empire
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -4195,10 +4215,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_ascari_regiments
-		relative_position_id = ITADNC_arm_the_army_of_africa
-		x = 0
+		relative_position_id = ITADNC_arm_the_works_in_the_cadore
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_army_of_africa }
+		prerequisite = { focus = ITADNC_arm_the_works_in_the_cadore focus = ITADNC_arm_the_mountain_batteries }
 		icon = GFX_focus_ITA_strengthen_ascari_corps
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -4271,10 +4291,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_expedition_to_tripoli
-		relative_position_id = ITADNC_arm_the_ascari_regiments
-		x = 0
+		relative_position_id = ITADNC_arm_the_plan_against_the_ally
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_ascari_regiments }
+		prerequisite = { focus = ITADNC_arm_the_plan_against_the_ally focus = ITADNC_arm_never_again_milan focus = ITADNC_arm_the_army_gives_way focus = ITADNC_arm_the_ascari_regiments }
 		icon = GFX_goal_generic_occupy_start_war
 		cost = 5
 		available = {
@@ -4466,7 +4486,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_arm_the_cadre_establishment
 		relative_position_id = ITADNC_arm_the_arsenals
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_arm_the_arsenals focus = ITADNC_arm_a_smaller_army }
 		icon = GFX_goal_generic_military_sphere
@@ -4528,10 +4548,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_army_gives_way
-		relative_position_id = ITADNC_arm_never_again_milan
-		x = 0
+		relative_position_id = ITADNC_arm_the_works_in_the_cadore
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_arm_never_again_milan }
+		prerequisite = { focus = ITADNC_arm_the_works_in_the_cadore focus = ITADNC_arm_the_mountain_batteries }
 		icon = GFX_goal_generic_build_navy
 		cost = 5
 		ai_will_do = { factor = 1 }
@@ -4608,10 +4628,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_arm_the_army_of_the_new_century
-		relative_position_id = ITADNC_arm_the_expedition_to_tripoli
-		x = 0
+		relative_position_id = ITADNC_arm_the_plan_against_the_ally
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_arm_the_expedition_to_tripoli }
+		prerequisite = { focus = ITADNC_arm_the_plan_against_the_ally focus = ITADNC_arm_never_again_milan focus = ITADNC_arm_the_army_gives_way focus = ITADNC_arm_the_ascari_regiments }
 		icon = GFX_focus_ITA_king_vittorio
 		cost = 5
 		available = {
@@ -4730,7 +4750,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_n_the_naval_estimates
 		relative_position_id = ITADNC_the_kingdom
-		x = 17
+		x = 32
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_goal_naval_spending_bill
@@ -4811,7 +4831,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_n_the_design_office
 		relative_position_id = ITADNC_n_the_naval_estimates
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_n_the_naval_estimates }
 		icon = GFX_focus_generic_navy_research_bonus
@@ -4860,10 +4880,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_building_ways
-		relative_position_id = ITADNC_n_the_design_office
+		relative_position_id = ITADNC_n_the_naval_estimates
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_design_office }
+		prerequisite = { focus = ITADNC_n_the_naval_estimates }
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5
 		ai_will_do = { factor = 10 }
@@ -4944,10 +4964,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_whitehead_licence
-		relative_position_id = ITADNC_n_the_building_ways
-		x = 0
+		relative_position_id = ITADNC_n_the_naval_estimates
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_building_ways }
+		prerequisite = { focus = ITADNC_n_the_naval_estimates }
 		icon = GFX_focus_generic_mine_warfare
 		cost = 4
 		ai_will_do = { factor = 7 }
@@ -5011,10 +5031,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_all_big_gun_ship
-		relative_position_id = ITADNC_n_the_petersburg_drawings
-		x = 0
+		relative_position_id = ITADNC_n_the_fleet_base_at_taranto
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_petersburg_drawings }
+		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto focus = ITADNC_n_the_race_with_pola }
 		icon = GFX_focus_generic_battleship_guns
 		cost = 5
 		available = {
@@ -5104,10 +5124,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_article_in_janes
-		relative_position_id = ITADNC_n_the_race_with_pola
+		relative_position_id = ITADNC_n_the_fleet_base_at_taranto
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_race_with_pola }
+		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto focus = ITADNC_n_the_race_with_pola }
 		icon = GFX_goal_cut_naval_budget
 		cost = 4
 		available = {
@@ -5163,9 +5183,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_n_the_fleet_base_at_taranto
 		relative_position_id = ITADNC_n_the_narrow_sea_doctrine
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_n_the_narrow_sea_doctrine focus = ITADNC_n_the_high_seas_fleet }
+		mutually_exclusive = { focus = ITADNC_n_the_race_with_pola }
 		icon = GFX_goal_generic_occupy_states_coastal
 		cost = 5
 		available = {
@@ -5261,10 +5282,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_glauco_boats
-		relative_position_id = ITADNC_n_the_whitehead_licence
-		x = 0
+		relative_position_id = ITADNC_n_the_design_office
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_whitehead_licence }
+		prerequisite = { focus = ITADNC_n_the_design_office focus = ITADNC_n_the_building_ways focus = ITADNC_n_the_whitehead_licence }
+		mutually_exclusive = { focus = ITADNC_n_the_laurenti_hull }
 		icon = GFX_goal_generic_navy_submarine
 		cost = 5
 		available = {
@@ -5312,10 +5334,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_triple_turret
-		relative_position_id = ITADNC_n_the_all_big_gun_ship
-		x = 0
+		relative_position_id = ITADNC_n_the_night_attack
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_all_big_gun_ship }
+		prerequisite = { focus = ITADNC_n_the_night_attack focus = ITADNC_n_the_article_in_janes focus = ITADNC_n_the_petersburg_drawings focus = ITADNC_n_the_all_big_gun_ship }
 		icon = GFX_focus_generic_navy_battleship2
 		cost = 5
 		available = {
@@ -5347,10 +5369,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_petersburg_drawings
-		relative_position_id = ITADNC_n_the_article_in_janes
-		x = 0
+		relative_position_id = ITADNC_n_the_fleet_base_at_taranto
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_article_in_janes }
+		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto focus = ITADNC_n_the_race_with_pola }
 		icon = GFX_focus_ron_generic_export_focus
 		cost = 4
 		available = {
@@ -5411,10 +5433,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_naval_academy_study
-		relative_position_id = ITADNC_n_the_laurenti_hull
+		relative_position_id = ITADNC_n_the_glauco_boats
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_laurenti_hull }
+		prerequisite = { focus = ITADNC_n_the_glauco_boats focus = ITADNC_n_the_laurenti_hull }
 		icon = GFX_focus_AUS_promote_admirals
 		cost = 4
 		ai_will_do = { factor = 6 }
@@ -5493,10 +5515,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_adriatic_is_a_closed_sea
-		relative_position_id = ITADNC_n_the_naval_academy_study
-		x = 0
+		relative_position_id = ITADNC_n_the_glauco_boats
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_naval_academy_study }
+		prerequisite = { focus = ITADNC_n_the_glauco_boats focus = ITADNC_n_the_laurenti_hull }
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -5547,10 +5569,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_laurenti_hull
-		relative_position_id = ITADNC_n_the_glauco_boats
-		x = 0
+		relative_position_id = ITADNC_n_the_design_office
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_glauco_boats }
+		prerequisite = { focus = ITADNC_n_the_design_office focus = ITADNC_n_the_building_ways focus = ITADNC_n_the_whitehead_licence }
+		mutually_exclusive = { focus = ITADNC_n_the_glauco_boats }
 		icon = GFX_focus_generic_cruiser_submarines
 		cost = 5
 		available = {
@@ -5649,10 +5672,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_dante_alighieri
-		relative_position_id = ITADNC_n_the_triple_turret
-		x = 0
+		relative_position_id = ITADNC_n_the_night_attack
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_triple_turret }
+		prerequisite = { focus = ITADNC_n_the_night_attack focus = ITADNC_n_the_article_in_janes focus = ITADNC_n_the_petersburg_drawings focus = ITADNC_n_the_all_big_gun_ship }
 		icon = GFX_goal_generic_navy_battleship
 		cost = 5
 		available = {
@@ -5780,10 +5803,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_armoured_cruiser_answer
-		relative_position_id = ITADNC_n_the_dante_alighieri
-		x = 1
+		relative_position_id = ITADNC_n_the_triple_turret
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_dante_alighieri }
+		prerequisite = { focus = ITADNC_n_the_triple_turret focus = ITADNC_n_the_dante_alighieri }
 		mutually_exclusive = { focus = ITADNC_n_the_cavour_class }
 		icon = GFX_goal_generic_naval_cruiser2
 		cost = 5
@@ -5829,9 +5852,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_n_the_night_attack
 		relative_position_id = ITADNC_n_the_fleet_base_at_taranto
-		x = 0
+		x = -2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto }
+		prerequisite = { focus = ITADNC_n_the_fleet_base_at_taranto focus = ITADNC_n_the_race_with_pola }
 		icon = GFX_focus_generic_naval_discipline
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -5887,10 +5910,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_race_with_pola
-		relative_position_id = ITADNC_n_the_night_attack
-		x = 0
+		relative_position_id = ITADNC_n_the_narrow_sea_doctrine
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_night_attack }
+		prerequisite = { focus = ITADNC_n_the_narrow_sea_doctrine focus = ITADNC_n_the_high_seas_fleet }
+		mutually_exclusive = { focus = ITADNC_n_the_fleet_base_at_taranto }
 		icon = GFX_focus_generic_large_navy
 		cost = 5
 		available = {
@@ -5997,10 +6021,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_cavour_class
-		relative_position_id = ITADNC_n_the_dante_alighieri
-		x = -1
+		relative_position_id = ITADNC_n_the_triple_turret
+		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_dante_alighieri }
+		prerequisite = { focus = ITADNC_n_the_triple_turret focus = ITADNC_n_the_dante_alighieri }
 		mutually_exclusive = { focus = ITADNC_n_the_armoured_cruiser_answer }
 		icon = GFX_goal_generic_multiple_ships
 		cost = 5
@@ -6190,10 +6214,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_high_seas_fleet
-		relative_position_id = ITADNC_n_the_adriatic_is_a_closed_sea
-		x = 1
+		relative_position_id = ITADNC_n_the_naval_academy_study
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_adriatic_is_a_closed_sea }
+		prerequisite = { focus = ITADNC_n_the_naval_academy_study focus = ITADNC_n_the_adriatic_is_a_closed_sea }
 		mutually_exclusive = { focus = ITADNC_n_the_narrow_sea_doctrine }
 		icon = GFX_goal_generic_build_navy
 		cost = 5
@@ -6303,10 +6327,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_n_the_narrow_sea_doctrine
-		relative_position_id = ITADNC_n_the_adriatic_is_a_closed_sea
-		x = -1
+		relative_position_id = ITADNC_n_the_naval_academy_study
+		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_n_the_adriatic_is_a_closed_sea }
+		prerequisite = { focus = ITADNC_n_the_naval_academy_study focus = ITADNC_n_the_adriatic_is_a_closed_sea }
 		mutually_exclusive = { focus = ITADNC_n_the_high_seas_fleet }
 		icon = GFX_focus_generic_coastal_fort
 		cost = 5
@@ -6437,7 +6461,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_consulta
 		relative_position_id = ITADNC_the_kingdom
-		x = 27
+		x = 50
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -6697,10 +6721,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_notice_of_denunciation
-		relative_position_id = ITADNC_w_trento_and_trieste
+		relative_position_id = ITADNC_w_the_double_book
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_w_trento_and_trieste }
+		prerequisite = { focus = ITADNC_w_the_double_book focus = ITADNC_w_trento_and_trieste }
+		mutually_exclusive = { focus = ITADNC_w_the_staff_talks_at_berlin }
 		icon = GFX_goal_generic_attack_allies
 		cost = 5
 		available = {
@@ -6740,9 +6765,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_staff_talks_at_berlin
 		relative_position_id = ITADNC_w_the_double_book
-		x = 0
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_double_book }
+		prerequisite = { focus = ITADNC_w_the_double_book focus = ITADNC_w_trento_and_trieste }
+		mutually_exclusive = { focus = ITADNC_w_the_notice_of_denunciation }
 		icon = GFX_focus_generic_military_mission
 		cost = 5
 		available = {
@@ -6832,7 +6858,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_double_book
 		relative_position_id = ITADNC_w_the_loyal_third
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_w_the_loyal_third focus = ITADNC_w_prinettis_note_to_paris }
 		icon = GFX_goal_generic_intelligence_exchange
@@ -6874,10 +6900,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_trento_and_trieste
-		relative_position_id = ITADNC_w_the_staff_talks_at_berlin
-		x = 0
+		relative_position_id = ITADNC_w_the_loyal_third
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_staff_talks_at_berlin }
+		prerequisite = { focus = ITADNC_w_the_loyal_third focus = ITADNC_w_prinettis_note_to_paris }
 		icon = GFX_goal_generic_demand_territory
 		cost = 5
 		available = {
@@ -6964,9 +6990,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_bargain_at_racconigi
 		relative_position_id = ITADNC_w_the_notice_of_denunciation
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_notice_of_denunciation }
+		prerequisite = { focus = ITADNC_w_the_notice_of_denunciation focus = ITADNC_w_the_staff_talks_at_berlin }
 		icon = GFX_focus_generic_balkan_diplomacy
 		cost = 5
 		available = {
@@ -7053,9 +7079,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_albanian_shore
 		relative_position_id = ITADNC_w_the_bargain_at_racconigi
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = ITADNC_w_the_bargain_at_racconigi }
+		mutually_exclusive = { focus = ITADNC_w_the_two_colonies }
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 5
 		available = {
@@ -7102,10 +7129,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_two_colonies
-		relative_position_id = ITADNC_w_the_albanian_shore
-		x = 0
+		relative_position_id = ITADNC_w_the_bargain_at_racconigi
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_albanian_shore }
+		prerequisite = { focus = ITADNC_w_the_bargain_at_racconigi }
+		mutually_exclusive = { focus = ITADNC_w_the_albanian_shore }
 		icon = GFX_focus_generic_africa_infrastructure
 		cost = 5
 		available = {
@@ -7195,10 +7223,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_buying_out_the_benadir_company
-		relative_position_id = ITADNC_w_the_two_colonies
+		relative_position_id = ITADNC_w_the_albanian_shore
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_two_colonies }
+		prerequisite = { focus = ITADNC_w_the_albanian_shore focus = ITADNC_w_the_two_colonies }
 		icon = GFX_focus_generic_concessions
 		cost = 5
 		available = {
@@ -7256,10 +7284,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_ascari_battalions
-		relative_position_id = ITADNC_w_buying_out_the_benadir_company
-		x = 0
+		relative_position_id = ITADNC_w_the_albanian_shore
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_w_buying_out_the_benadir_company }
+		prerequisite = { focus = ITADNC_w_the_albanian_shore focus = ITADNC_w_the_two_colonies }
 		icon = GFX_focus_generic_diverse_army
 		cost = 5
 		available = {
@@ -7334,10 +7362,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_treaty_with_menelik
-		relative_position_id = ITADNC_w_the_ascari_battalions
-		x = 0
+		relative_position_id = ITADNC_w_buying_out_the_benadir_company
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_ascari_battalions }
+		prerequisite = { focus = ITADNC_w_buying_out_the_benadir_company focus = ITADNC_w_the_ascari_battalions }
+		mutually_exclusive = { focus = ITADNC_w_the_march_back_to_adwa }
 		icon = GFX_goal_generic_improve_relations
 		cost = 5
 		available = {
@@ -7380,10 +7409,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_march_back_to_adwa
-		relative_position_id = ITADNC_w_the_treaty_with_menelik
+		relative_position_id = ITADNC_w_buying_out_the_benadir_company
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_treaty_with_menelik }
+		prerequisite = { focus = ITADNC_w_buying_out_the_benadir_company focus = ITADNC_w_the_ascari_battalions }
+		mutually_exclusive = { focus = ITADNC_w_the_treaty_with_menelik }
 		icon = GFX_goal_generic_major_war
 		cost = 5
 		available = {
@@ -7459,9 +7489,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_tripoli_question
 		relative_position_id = ITADNC_w_the_march_back_to_adwa
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_march_back_to_adwa }
+		prerequisite = { focus = ITADNC_w_the_march_back_to_adwa focus = ITADNC_w_the_treaty_with_menelik }
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
 		available = {
@@ -7703,7 +7733,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_w_the_islands_as_a_pledge
 		relative_position_id = ITADNC_w_the_ultimatum_to_the_porte
-		x = 1
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_goal_generic_amphibious_assault
@@ -7758,10 +7788,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_peace_of_ouchy
-		relative_position_id = ITADNC_w_the_war_that_does_not_end
-		x = 0
+		relative_position_id = ITADNC_w_the_ultimatum_to_the_porte
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_war_that_does_not_end }
+		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_focus_generic_treaty
 		cost = 5
 		available = {
@@ -7868,10 +7898,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_war_that_does_not_end
-		relative_position_id = ITADNC_w_the_islands_as_a_pledge
+		relative_position_id = ITADNC_w_the_ultimatum_to_the_porte
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_islands_as_a_pledge }
+		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_focus_generic_hill_training
 		cost = 5
 		available = {
@@ -7914,10 +7944,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_w_the_fourth_shore
-		relative_position_id = ITADNC_w_the_peace_of_ouchy
-		x = 0
+		relative_position_id = ITADNC_w_the_ultimatum_to_the_porte
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_w_the_peace_of_ouchy }
+		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_focus_generic_immigration
 		cost = 5
 		available = {
@@ -7975,9 +8005,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_z_the_chamber_adjourned_indefinitely
 		relative_position_id = ITADNC_z_the_strike_that_is_treason
-		x = -1
+		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_strike_that_is_treason }
+		prerequisite = { focus = ITADNC_z_the_strike_that_is_treason focus = ITADNC_z_the_syndicalists_who_crossed }
 		mutually_exclusive = { focus = ITADNC_z_the_ministry_of_the_extreme_left }
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 5
@@ -8082,9 +8112,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_z_the_ministry_of_the_extreme_left
 		relative_position_id = ITADNC_z_the_strike_that_is_treason
-		x = 1
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_strike_that_is_treason }
+		prerequisite = { focus = ITADNC_z_the_strike_that_is_treason focus = ITADNC_z_the_syndicalists_who_crossed }
 		mutually_exclusive = { focus = ITADNC_z_the_chamber_adjourned_indefinitely }
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5
@@ -8171,10 +8201,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_reckoning_of_the_decade
-		relative_position_id = ITADNC_z_the_country_that_cannot_climb_down
-		x = 0
+		relative_position_id = ITADNC_z_the_sea_that_must_be_ours
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_country_that_cannot_climb_down }
+		prerequisite = { focus = ITADNC_z_the_sea_that_must_be_ours focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
 		available = {
@@ -8300,10 +8330,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_columns_come_home
-		relative_position_id = ITADNC_z_the_nation_in_arms
-		x = 0
+		relative_position_id = ITADNC_z_the_chamber_adjourned_indefinitely
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_nation_in_arms }
+		prerequisite = { focus = ITADNC_z_the_chamber_adjourned_indefinitely focus = ITADNC_z_the_ministry_of_the_extreme_left }
 		icon = GFX_focus_generic_concessions
 		cost = 5
 		available = {
@@ -8374,7 +8404,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_o_the_seniority_board
 		relative_position_id = ITADNC_the_kingdom
-		x = 8
+		x = 18
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_goal_generic_army_doctrines
@@ -8466,7 +8496,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_o_the_war_school_at_turin
 		relative_position_id = ITADNC_o_the_seniority_board
-		x = 0
+		x = -3
 		y = 1
 		prerequisite = { focus = ITADNC_o_the_seniority_board }
 		icon = GFX_focus_generic_university_2
@@ -8543,10 +8573,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_o_the_ministry_and_the_staff
-		relative_position_id = ITADNC_o_the_war_school_at_turin
-		x = 0
+		relative_position_id = ITADNC_o_the_seniority_board
+		x = -1
 		y = 1
-		prerequisite = { focus = ITADNC_o_the_war_school_at_turin }
+		prerequisite = { focus = ITADNC_o_the_seniority_board }
 		icon = GFX_focus_generic_military_mission
 		cost = 5
 		ai_will_do = {
@@ -8615,10 +8645,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_o_the_pay_of_a_lieutenant
-		relative_position_id = ITADNC_o_the_ministry_and_the_staff
-		x = 0
+		relative_position_id = ITADNC_o_the_seniority_board
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_o_the_ministry_and_the_staff }
+		prerequisite = { focus = ITADNC_o_the_seniority_board }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
 		available = {
@@ -8675,10 +8705,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_o_the_list_is_printed
-		relative_position_id = ITADNC_o_the_pay_of_a_lieutenant
-		x = 0
+		relative_position_id = ITADNC_o_the_seniority_board
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_o_the_pay_of_a_lieutenant }
+		prerequisite = { focus = ITADNC_o_the_seniority_board }
 		icon = GFX_focus_ITA_capo_supremo
 		cost = 5
 		available = {
@@ -8761,9 +8791,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_g_the_batteries_rearmed
 		relative_position_id = ITADNC_g_the_ministry_of_the_lobby
-		x = 64
+		x = 110
 		y = 1
-		prerequisite = { focus = ITADNC_the_kingdom }
+		prerequisite = { focus = ITADNC_g_the_ministry_of_the_lobby }
 		icon = GFX_goal_generic_army_artillery
 		cost = 5
 		ai_will_do = {
@@ -9013,7 +9043,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_g_the_heavy_batteries
 		relative_position_id = ITADNC_g_ansaldo_at_sampierdarena
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_g_ansaldo_at_sampierdarena focus = ITADNC_g_the_gun_shop_at_terni }
 		icon = GFX_goal_generic_army_artillery2
@@ -9101,10 +9131,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_shell_and_the_fuse
-		relative_position_id = ITADNC_g_the_heavy_batteries
-		x = 0
+		relative_position_id = ITADNC_g_ansaldo_at_sampierdarena
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_heavy_batteries }
+		prerequisite = { focus = ITADNC_g_ansaldo_at_sampierdarena focus = ITADNC_g_the_gun_shop_at_terni }
 		icon = GFX_goal_generic_construct_military
 		cost = 5
 		available = {
@@ -9198,7 +9228,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_c_the_arm_that_is_not_the_army
 		relative_position_id = ITADNC_the_kingdom
-		x = 12
+		x = 25
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_focus_generic_court
@@ -9418,7 +9448,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_c_the_troops_go_back_to_barracks
 		relative_position_id = ITADNC_c_the_guards_of_public_safety
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_c_the_guards_of_public_safety focus = ITADNC_c_the_mobile_squadrons }
 		icon = GFX_goal_generic_national_unity
@@ -9503,10 +9533,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_c_the_oath_that_is_not_asked
-		relative_position_id = ITADNC_c_the_troops_go_back_to_barracks
-		x = 0
+		relative_position_id = ITADNC_c_the_guards_of_public_safety
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_c_the_troops_go_back_to_barracks }
+		prerequisite = { focus = ITADNC_c_the_guards_of_public_safety focus = ITADNC_c_the_mobile_squadrons }
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		available = {
@@ -9577,10 +9607,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_recruit_who_cannot_read
-		relative_position_id = ITADNC_s_the_aqueduct_without_a_deputy
-		x = 0
+		relative_position_id = ITADNC_s_the_bench_reappointed
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_aqueduct_without_a_deputy }
+		prerequisite = { focus = ITADNC_s_the_bench_reappointed focus = ITADNC_s_the_colleges_redrawn focus = ITADNC_s_the_south_governed_not_bought focus = ITADNC_s_the_aqueduct_without_a_deputy }
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
 		ai_will_do = {
@@ -9641,10 +9671,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_regimental_primer
-		relative_position_id = ITADNC_s_the_recruit_who_cannot_read
-		x = 0
+		relative_position_id = ITADNC_s_the_bench_reappointed
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_recruit_who_cannot_read }
+		prerequisite = { focus = ITADNC_s_the_bench_reappointed focus = ITADNC_s_the_colleges_redrawn focus = ITADNC_s_the_south_governed_not_bought focus = ITADNC_s_the_aqueduct_without_a_deputy }
 		icon = GFX_goal_generic_small_arms
 		cost = 5
 		ai_will_do = {
@@ -9702,10 +9732,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_state_pays_the_teacher
-		relative_position_id = ITADNC_s_the_regimental_primer
+		relative_position_id = ITADNC_s_the_recruit_who_cannot_read
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_regimental_primer }
+		prerequisite = { focus = ITADNC_s_the_recruit_who_cannot_read focus = ITADNC_s_the_regimental_primer }
+		mutually_exclusive = { focus = ITADNC_s_the_normal_schools }
 		icon = GFX_goal_social_reforms
 		cost = 5
 		available = {
@@ -9770,10 +9801,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_normal_schools
-		relative_position_id = ITADNC_s_the_state_pays_the_teacher
-		x = 0
+		relative_position_id = ITADNC_s_the_recruit_who_cannot_read
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_state_pays_the_teacher }
+		prerequisite = { focus = ITADNC_s_the_recruit_who_cannot_read focus = ITADNC_s_the_regimental_primer }
+		mutually_exclusive = { focus = ITADNC_s_the_state_pays_the_teacher }
 		icon = GFX_focus_generic_university_2
 		cost = 5
 		ai_will_do = {
@@ -9837,10 +9869,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_a_kingdom_that_reads
-		relative_position_id = ITADNC_s_the_normal_schools
-		x = 0
+		relative_position_id = ITADNC_s_the_state_pays_the_teacher
+		x = -2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_normal_schools }
+		prerequisite = { focus = ITADNC_s_the_state_pays_the_teacher focus = ITADNC_s_the_normal_schools }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
 		available = {
@@ -9921,7 +9953,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_m_the_map_of_the_fever
 		relative_position_id = ITADNC_the_kingdom
-		x = 0
+		x = 2
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_focus_generic_land_reclamation
@@ -9997,9 +10029,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_m_the_ground_that_is_drained
 		relative_position_id = ITADNC_m_the_map_of_the_fever
-		x = 0
+		x = -1
 		y = 1
 		prerequisite = { focus = ITADNC_m_the_map_of_the_fever }
+		mutually_exclusive = { focus = ITADNC_m_the_sulphur_of_sicily }
 		icon = GFX_focus_generic_agriculture
 		cost = 5
 		available = {
@@ -10082,10 +10115,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_m_the_sulphur_of_sicily
-		relative_position_id = ITADNC_m_the_ground_that_is_drained
-		x = 0
+		relative_position_id = ITADNC_m_the_map_of_the_fever
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_m_the_ground_that_is_drained }
+		prerequisite = { focus = ITADNC_m_the_map_of_the_fever }
+		mutually_exclusive = { focus = ITADNC_m_the_ground_that_is_drained }
 		icon = GFX_focus_generic_industry_3
 		cost = 5
 		available = {
@@ -10161,10 +10195,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_m_the_children_in_the_mines
-		relative_position_id = ITADNC_m_the_sulphur_of_sicily
+		relative_position_id = ITADNC_m_the_ground_that_is_drained
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_m_the_sulphur_of_sicily }
+		prerequisite = { focus = ITADNC_m_the_ground_that_is_drained focus = ITADNC_m_the_sulphur_of_sicily }
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5
 		ai_will_do = {
@@ -10232,10 +10266,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_m_the_third_class_deck
-		relative_position_id = ITADNC_m_the_children_in_the_mines
-		x = 0
+		relative_position_id = ITADNC_m_the_ground_that_is_drained
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_m_the_children_in_the_mines }
+		prerequisite = { focus = ITADNC_m_the_ground_that_is_drained focus = ITADNC_m_the_sulphur_of_sicily }
 		icon = GFX_focus_ARG_immigration_wave
 		cost = 5
 		available = {
@@ -10359,7 +10393,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_air_the_brigade_of_specialists
 		relative_position_id = ITADNC_the_kingdom
-		x = 22
+		x = 41
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		icon = GFX_goal_generic_build_airforce
@@ -10434,7 +10468,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_air_the_airship_park
 		relative_position_id = ITADNC_air_the_brigade_of_specialists
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_air_the_brigade_of_specialists }
 		icon = GFX_focus_GER_graf_zeppelin
@@ -10509,10 +10543,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_field_at_centocelle
-		relative_position_id = ITADNC_air_the_lesson_of_wilbur_wright
+		relative_position_id = ITADNC_air_the_dirigible_lobby
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_lesson_of_wilbur_wright }
+		prerequisite = { focus = ITADNC_air_the_dirigible_lobby focus = ITADNC_air_the_lesson_of_wilbur_wright }
 		icon = GFX_goal_generic_air_fighter
 		cost = 5
 		available = {
@@ -10592,10 +10626,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_battalion_of_aviators
-		relative_position_id = ITADNC_air_the_field_at_centocelle
-		x = 0
+		relative_position_id = ITADNC_air_the_dirigible_lobby
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_field_at_centocelle }
+		prerequisite = { focus = ITADNC_air_the_dirigible_lobby focus = ITADNC_air_the_lesson_of_wilbur_wright }
 		icon = GFX_focus_generic_pilot_training
 		cost = 5
 		available = {
@@ -10691,10 +10725,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_first_bomb
-		relative_position_id = ITADNC_air_the_memoranda_of_douhet
-		x = 0
+		relative_position_id = ITADNC_air_the_lobby_is_answered
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_memoranda_of_douhet }
+		prerequisite = { focus = ITADNC_air_the_lobby_is_answered focus = ITADNC_air_the_caproni_trimotor focus = ITADNC_air_the_seaplane_station focus = ITADNC_air_the_naval_flying_service }
+		mutually_exclusive = { focus = ITADNC_air_the_memoranda_of_douhet }
 		icon = GFX_goal_generic_air_bomber
 		cost = 5
 		available = {
@@ -10797,7 +10832,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_g_the_neutral_state
 		relative_position_id = ITADNC_the_kingdom
-		x = -32
+		x = -55
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		mutually_exclusive = { focus = ITADNC_s_return_to_the_statuto }
@@ -10875,10 +10910,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_prefects_instructed
-		relative_position_id = ITADNC_g_the_leagues_are_lawful
-		x = 0
+		relative_position_id = ITADNC_g_the_labour_office
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_leagues_are_lawful }
+		prerequisite = { focus = ITADNC_g_the_labour_office focus = ITADNC_g_the_boards_of_conciliation }
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		ai_will_do = { factor = 14 }
@@ -10987,10 +11022,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_ministry_of_the_lobby
-		relative_position_id = ITADNC_g_the_apulian_aqueduct
-		x = 0
+		relative_position_id = ITADNC_g_the_book_of_the_ninety
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_apulian_aqueduct }
+		prerequisite = { focus = ITADNC_g_the_book_of_the_ninety focus = ITADNC_g_the_list_that_goes_astray }
 		icon = GFX_goal_generic_plotting
 		cost = 5
 		ai_will_do = { factor = 12 }
@@ -11050,9 +11085,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_g_the_book_of_the_ninety
 		relative_position_id = ITADNC_g_the_men_who_will_vote_for_it
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_g_the_men_who_will_vote_for_it focus = ITADNC_g_a_bridge_for_every_vote }
+		mutually_exclusive = { focus = ITADNC_g_the_list_that_goes_astray }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 5
 		ai_will_do = { factor = 12 }
@@ -11097,10 +11133,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_special_laws_for_the_south
-		relative_position_id = ITADNC_g_the_list_that_goes_astray
-		x = 0
+		relative_position_id = ITADNC_g_the_book_of_the_ninety
+		x = -1
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_list_that_goes_astray }
+		prerequisite = { focus = ITADNC_g_the_book_of_the_ninety focus = ITADNC_g_the_list_that_goes_astray }
 		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 		ai_will_do = { factor = 12 }
@@ -11285,10 +11321,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_men_who_will_vote_for_it
-		relative_position_id = ITADNC_g_the_prefects_instructed
-		x = -1
+		relative_position_id = ITADNC_g_the_strike_that_is_counted
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_prefects_instructed }
+		prerequisite = { focus = ITADNC_g_the_strike_that_is_counted focus = ITADNC_g_the_leagues_are_lawful focus = ITADNC_g_the_prefects_instructed }
 		mutually_exclusive = { focus = ITADNC_g_a_bridge_for_every_vote }
 		icon = GFX_focus_generic_court
 		cost = 5
@@ -11335,10 +11371,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_a_bridge_for_every_vote
-		relative_position_id = ITADNC_g_the_prefects_instructed
-		x = 1
+		relative_position_id = ITADNC_g_the_strike_that_is_counted
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_prefects_instructed }
+		prerequisite = { focus = ITADNC_g_the_strike_that_is_counted focus = ITADNC_g_the_leagues_are_lawful focus = ITADNC_g_the_prefects_instructed }
 		mutually_exclusive = { focus = ITADNC_g_the_men_who_will_vote_for_it }
 		icon = GFX_focus_generic_industry_investment
 		cost = 5
@@ -11406,10 +11442,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_list_that_goes_astray
-		relative_position_id = ITADNC_g_the_book_of_the_ninety
-		x = 0
+		relative_position_id = ITADNC_g_the_men_who_will_vote_for_it
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_book_of_the_ninety }
+		prerequisite = { focus = ITADNC_g_the_men_who_will_vote_for_it focus = ITADNC_g_a_bridge_for_every_vote }
+		mutually_exclusive = { focus = ITADNC_g_the_book_of_the_ninety }
 		icon = GFX_goal_generic_elections
 		cost = 5
 		ai_will_do = { factor = 10 }
@@ -11455,10 +11492,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_apulian_aqueduct
-		relative_position_id = ITADNC_g_the_special_laws_for_the_south
-		x = 0
+		relative_position_id = ITADNC_g_the_book_of_the_ninety
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_special_laws_for_the_south }
+		prerequisite = { focus = ITADNC_g_the_book_of_the_ninety focus = ITADNC_g_the_list_that_goes_astray }
 		icon = GFX_focus_generic_land_reclamation
 		cost = 5
 		ai_will_do = { factor = 11 }
@@ -11517,7 +11554,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_g_the_strike_that_is_counted
 		relative_position_id = ITADNC_g_the_labour_office
-		x = 1
+		x = -1
 		y = 1
 		prerequisite = { focus = ITADNC_g_the_labour_office focus = ITADNC_g_the_boards_of_conciliation }
 		icon = GFX_goal_syndicalist_workers
@@ -11571,10 +11608,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_leagues_are_lawful
-		relative_position_id = ITADNC_g_the_strike_that_is_counted
-		x = 0
+		relative_position_id = ITADNC_g_the_labour_office
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_strike_that_is_counted }
+		prerequisite = { focus = ITADNC_g_the_labour_office focus = ITADNC_g_the_boards_of_conciliation }
 		icon = GFX_goal_trade_union_deal
 		cost = 5
 		ai_will_do = { factor = 10 }
@@ -11622,10 +11659,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_portfolio_they_cannot_take
-		relative_position_id = ITADNC_g_the_ministry_of_the_lobby
-		x = 0
+		relative_position_id = ITADNC_g_the_special_laws_for_the_south
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_ministry_of_the_lobby }
+		prerequisite = { focus = ITADNC_g_the_special_laws_for_the_south focus = ITADNC_g_the_apulian_aqueduct focus = ITADNC_g_the_ministry_of_the_lobby }
+		mutually_exclusive = { focus = ITADNC_g_the_seats_that_are_paid_for }
 		icon = GFX_goal_generic_improve_relations
 		cost = 5
 		available = { date > 1903.11.1 }
@@ -11673,10 +11711,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_seats_that_are_paid_for
-		relative_position_id = ITADNC_g_the_portfolio_they_cannot_take
-		x = 0
+		relative_position_id = ITADNC_g_the_special_laws_for_the_south
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_portfolio_they_cannot_take }
+		prerequisite = { focus = ITADNC_g_the_special_laws_for_the_south focus = ITADNC_g_the_apulian_aqueduct focus = ITADNC_g_the_ministry_of_the_lobby }
+		mutually_exclusive = { focus = ITADNC_g_the_portfolio_they_cannot_take }
 		icon = GFX_focus_generic_concessions
 		cost = 5
 		ai_will_do = { factor = 10 }
@@ -11725,10 +11764,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_minister_of_the_underworld
-		relative_position_id = ITADNC_g_the_seats_that_are_paid_for
-		x = 0
+		relative_position_id = ITADNC_g_the_portfolio_they_cannot_take
+		x = -2
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_seats_that_are_paid_for }
+		prerequisite = { focus = ITADNC_g_the_portfolio_they_cannot_take focus = ITADNC_g_the_seats_that_are_paid_for }
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 5
 		available = { date > 1908.1.1 }
@@ -11776,10 +11815,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_men_we_domesticated
-		relative_position_id = ITADNC_g_the_minister_of_the_underworld
+		relative_position_id = ITADNC_g_the_portfolio_they_cannot_take
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_minister_of_the_underworld }
+		prerequisite = { focus = ITADNC_g_the_portfolio_they_cannot_take focus = ITADNC_g_the_seats_that_are_paid_for }
 		icon = GFX_goal_social_reforms
 		cost = 5
 		available = { date > 1906.10.1 }
@@ -11826,10 +11865,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_majority_is_bought_again
-		relative_position_id = ITADNC_g_the_men_we_domesticated
-		x = 0
+		relative_position_id = ITADNC_g_the_portfolio_they_cannot_take
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_men_we_domesticated }
+		prerequisite = { focus = ITADNC_g_the_portfolio_they_cannot_take focus = ITADNC_g_the_seats_that_are_paid_for }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
 		ai_will_do = { factor = 10 }
@@ -11870,10 +11909,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_majority_that_governs
-		relative_position_id = ITADNC_g_the_register_is_reprinted
-		x = 0
+		relative_position_id = ITADNC_g_the_minister_of_the_underworld
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_register_is_reprinted }
+		prerequisite = { focus = ITADNC_g_the_minister_of_the_underworld focus = ITADNC_g_the_men_we_domesticated focus = ITADNC_g_the_majority_is_bought_again focus = ITADNC_g_the_register_is_reprinted }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
 		available = { date > 1909.1.1 }
@@ -11949,10 +11988,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_register_is_reprinted
-		relative_position_id = ITADNC_g_the_majority_is_bought_again
-		x = 0
+		relative_position_id = ITADNC_g_the_portfolio_they_cannot_take
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_majority_is_bought_again }
+		prerequisite = { focus = ITADNC_g_the_portfolio_they_cannot_take focus = ITADNC_g_the_seats_that_are_paid_for }
 		icon = GFX_focus_generic_election
 		cost = 5
 		available = { date > 1911.6.1 }
@@ -12020,10 +12059,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_g_the_last_giolittian_chamber
-		relative_position_id = ITADNC_g_the_majority_that_governs
-		x = 0
+		relative_position_id = ITADNC_g_the_minister_of_the_underworld
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_g_the_majority_that_governs }
+		prerequisite = { focus = ITADNC_g_the_minister_of_the_underworld focus = ITADNC_g_the_men_we_domesticated focus = ITADNC_g_the_majority_is_bought_again focus = ITADNC_g_the_register_is_reprinted }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
 		available = {
@@ -12273,10 +12312,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_south_governed_not_bought
-		relative_position_id = ITADNC_s_the_colleges_redrawn
-		x = 0
+		relative_position_id = ITADNC_s_the_state_of_siege_by_telegram
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_colleges_redrawn }
+		prerequisite = { focus = ITADNC_s_the_state_of_siege_by_telegram focus = ITADNC_s_the_code_of_public_safety }
 		icon = GFX_focus_generic_africa_infrastructure
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -12425,10 +12464,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_bench_reappointed
-		relative_position_id = ITADNC_s_the_code_of_public_safety
-		x = 0
+		relative_position_id = ITADNC_s_the_state_of_siege_by_telegram
+		x = -2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_code_of_public_safety }
+		prerequisite = { focus = ITADNC_s_the_state_of_siege_by_telegram focus = ITADNC_s_the_code_of_public_safety }
 		icon = GFX_goal_generic_plotting
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -12479,10 +12518,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_colleges_redrawn
-		relative_position_id = ITADNC_s_the_bench_reappointed
+		relative_position_id = ITADNC_s_the_state_of_siege_by_telegram
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_bench_reappointed }
+		prerequisite = { focus = ITADNC_s_the_state_of_siege_by_telegram focus = ITADNC_s_the_code_of_public_safety }
 		icon = GFX_goal_generic_elections
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -12523,9 +12562,10 @@ focus_tree = {
 	focus = {
 		id = ITADNC_s_the_state_of_siege_by_telegram
 		relative_position_id = ITADNC_s_the_licence_to_print
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_s_the_licence_to_print focus = ITADNC_s_the_cassation_overruled }
+		mutually_exclusive = { focus = ITADNC_s_the_code_of_public_safety }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -12583,10 +12623,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_aqueduct_without_a_deputy
-		relative_position_id = ITADNC_s_the_south_governed_not_bought
-		x = 0
+		relative_position_id = ITADNC_s_the_state_of_siege_by_telegram
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_south_governed_not_bought }
+		prerequisite = { focus = ITADNC_s_the_state_of_siege_by_telegram focus = ITADNC_s_the_code_of_public_safety }
 		icon = GFX_focus_generic_land_reclamation
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -12638,10 +12678,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_code_of_public_safety
-		relative_position_id = ITADNC_s_the_state_of_siege_by_telegram
-		x = 0
+		relative_position_id = ITADNC_s_the_licence_to_print
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_state_of_siege_by_telegram }
+		prerequisite = { focus = ITADNC_s_the_licence_to_print focus = ITADNC_s_the_cassation_overruled }
+		mutually_exclusive = { focus = ITADNC_s_the_state_of_siege_by_telegram }
 		icon = GFX_goal_constitutional_guarantees
 		cost = 5
 		ai_will_do = { factor = 9 }
@@ -12699,10 +12740,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_ministry_that_cannot_fall
-		relative_position_id = ITADNC_s_a_kingdom_that_reads
+		relative_position_id = ITADNC_s_the_state_pays_the_teacher
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_s_a_kingdom_that_reads }
+		prerequisite = { focus = ITADNC_s_the_state_pays_the_teacher focus = ITADNC_s_the_normal_schools }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 5
 		ai_will_do = { factor = 9 }
@@ -12751,10 +12792,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_administration_that_governs
-		relative_position_id = ITADNC_s_the_ministry_that_cannot_fall
-		x = 0
+		relative_position_id = ITADNC_s_the_state_pays_the_teacher
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_ministry_that_cannot_fall }
+		prerequisite = { focus = ITADNC_s_the_state_pays_the_teacher focus = ITADNC_s_the_normal_schools }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
 		ai_will_do = { factor = 9 }
@@ -12801,10 +12842,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_state_that_is_obeyed
-		relative_position_id = ITADNC_s_the_administration_that_governs
-		x = 0
+		relative_position_id = ITADNC_s_the_state_pays_the_teacher
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_administration_that_governs }
+		prerequisite = { focus = ITADNC_s_the_state_pays_the_teacher focus = ITADNC_s_the_normal_schools }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
 		ai_will_do = { factor = 9 }
@@ -12857,10 +12898,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_s_the_statuto_kept
-		relative_position_id = ITADNC_s_the_state_that_is_obeyed
-		x = 0
+		relative_position_id = ITADNC_s_a_kingdom_that_reads
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_s_the_state_that_is_obeyed }
+		prerequisite = { focus = ITADNC_s_a_kingdom_that_reads focus = ITADNC_s_the_ministry_that_cannot_fall focus = ITADNC_s_the_administration_that_governs focus = ITADNC_s_the_state_that_is_obeyed }
 		icon = GFX_focus_ITA_king_vittorio
 		cost = 5
 		available = {
@@ -12923,7 +12964,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_r_the_hand_offered_to_turati
 		relative_position_id = ITADNC_the_kingdom
-		x = -22
+		x = -37
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		mutually_exclusive = { focus = ITADNC_g_the_neutral_state }
@@ -13059,10 +13100,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_illiterate_voter
-		relative_position_id = ITADNC_r_the_eight_hours_in_the_state_yards
-		x = 0
+		relative_position_id = ITADNC_r_the_chambers_enter_the_state
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_eight_hours_in_the_state_yards }
+		prerequisite = { focus = ITADNC_r_the_chambers_enter_the_state focus = ITADNC_r_the_men_who_walked_out }
 		icon = GFX_focus_generic_university_2
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -13113,10 +13154,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_contract_has_the_force_of_law
-		relative_position_id = ITADNC_r_a_ministry_of_labour
+		relative_position_id = ITADNC_r_the_chambers_enter_the_state
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_r_a_ministry_of_labour }
+		prerequisite = { focus = ITADNC_r_the_chambers_enter_the_state focus = ITADNC_r_the_men_who_walked_out }
 		icon = GFX_focus_generic_concessions
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -13171,7 +13212,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_r_a_ministry_of_labour
 		relative_position_id = ITADNC_r_the_chambers_enter_the_state
-		x = 1
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_r_the_chambers_enter_the_state focus = ITADNC_r_the_men_who_walked_out }
 		icon = GFX_focus_generic_improve_the_administration
@@ -13225,10 +13266,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_white_leagues
-		relative_position_id = ITADNC_r_the_south_votes_now
-		x = 0
+		relative_position_id = ITADNC_r_a_ministry_of_labour
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_south_votes_now }
+		prerequisite = { focus = ITADNC_r_a_ministry_of_labour focus = ITADNC_r_the_contract_has_the_force_of_law focus = ITADNC_r_the_illiterate_voter focus = ITADNC_r_the_south_votes_now }
 		icon = GFX_focus_generic_catholic_dominion
 		cost = 5
 		ai_will_do = { factor = 5 }
@@ -13272,10 +13313,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_south_votes_now
-		relative_position_id = ITADNC_r_the_illiterate_voter
-		x = 0
+		relative_position_id = ITADNC_r_the_chambers_enter_the_state
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_illiterate_voter }
+		prerequisite = { focus = ITADNC_r_the_chambers_enter_the_state focus = ITADNC_r_the_men_who_walked_out }
 		icon = GFX_goal_generic_elections
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -13444,10 +13485,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_ministry_without_the_army
-		relative_position_id = ITADNC_r_the_terms_offered_to_the_banks
-		x = -1
+		relative_position_id = ITADNC_r_the_money_leaves_milan
+		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_terms_offered_to_the_banks }
+		prerequisite = { focus = ITADNC_r_the_money_leaves_milan focus = ITADNC_r_the_terms_offered_to_the_banks }
 		mutually_exclusive = { focus = ITADNC_r_the_army_the_reformists_will_pay_for }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
@@ -13503,7 +13544,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_r_the_officers_petition
 		relative_position_id = ITADNC_r_the_ministry_without_the_army
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_r_the_ministry_without_the_army focus = ITADNC_r_the_army_the_reformists_will_pay_for }
 		icon = GFX_goal_generic_position_armies
@@ -13544,10 +13585,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_army_the_reformists_will_pay_for
-		relative_position_id = ITADNC_r_the_terms_offered_to_the_banks
-		x = 1
+		relative_position_id = ITADNC_r_the_money_leaves_milan
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_terms_offered_to_the_banks }
+		prerequisite = { focus = ITADNC_r_the_money_leaves_milan focus = ITADNC_r_the_terms_offered_to_the_banks }
 		mutually_exclusive = { focus = ITADNC_r_the_ministry_without_the_army }
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
@@ -13593,7 +13634,8 @@ focus_tree = {
 		relative_position_id = ITADNC_r_the_pension_that_is_not_charity
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_pension_that_is_not_charity }
+		prerequisite = { focus = ITADNC_r_the_pension_that_is_not_charity focus = ITADNC_r_the_eight_hours_in_the_state_yards }
+		mutually_exclusive = { focus = ITADNC_r_the_terms_offered_to_the_banks }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -13637,10 +13679,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_terms_offered_to_the_banks
-		relative_position_id = ITADNC_r_the_money_leaves_milan
-		x = 0
+		relative_position_id = ITADNC_r_the_pension_that_is_not_charity
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_money_leaves_milan }
+		prerequisite = { focus = ITADNC_r_the_pension_that_is_not_charity focus = ITADNC_r_the_eight_hours_in_the_state_yards }
+		mutually_exclusive = { focus = ITADNC_r_the_money_leaves_milan }
 		icon = GFX_focus_generic_industry_investment
 		cost = 5
 		ai_will_do = { factor = 7 }
@@ -13693,10 +13736,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_answer_to_the_parish
-		relative_position_id = ITADNC_r_the_white_leagues
-		x = 0
+		relative_position_id = ITADNC_r_a_ministry_of_labour
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_white_leagues }
+		prerequisite = { focus = ITADNC_r_a_ministry_of_labour focus = ITADNC_r_the_contract_has_the_force_of_law focus = ITADNC_r_the_illiterate_voter focus = ITADNC_r_the_south_votes_now }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -13747,10 +13790,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_pension_that_is_not_charity
-		relative_position_id = ITADNC_r_the_answer_to_the_parish
+		relative_position_id = ITADNC_r_the_white_leagues
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_answer_to_the_parish }
+		prerequisite = { focus = ITADNC_r_the_white_leagues focus = ITADNC_r_the_answer_to_the_parish }
+		mutually_exclusive = { focus = ITADNC_r_the_eight_hours_in_the_state_yards }
 		icon = GFX_goal_generic_solidarity
 		cost = 5
 		ai_will_do = { factor = 6 }
@@ -13791,10 +13835,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_eight_hours_in_the_state_yards
-		relative_position_id = ITADNC_r_the_contract_has_the_force_of_law
-		x = 0
+		relative_position_id = ITADNC_r_the_white_leagues
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_contract_has_the_force_of_law }
+		prerequisite = { focus = ITADNC_r_the_white_leagues focus = ITADNC_r_the_answer_to_the_parish }
+		mutually_exclusive = { focus = ITADNC_r_the_pension_that_is_not_charity }
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5
 		ai_will_do = { factor = 5 }
@@ -13842,10 +13887,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_r_the_kingdom_of_all_italians
-		relative_position_id = ITADNC_r_the_officers_petition
-		x = 0
+		relative_position_id = ITADNC_r_the_ministry_without_the_army
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_r_the_officers_petition }
+		prerequisite = { focus = ITADNC_r_the_ministry_without_the_army focus = ITADNC_r_the_army_the_reformists_will_pay_for }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
 		available = { date > 1909.1.1 }
@@ -13909,7 +13954,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_z_the_proletarian_nation
 		relative_position_id = ITADNC_the_kingdom
-		x = -17
+		x = -28
 		y = 1
 		prerequisite = { focus = ITADNC_the_kingdom }
 		mutually_exclusive = { focus = ITADNC_g_the_neutral_state }
@@ -13993,7 +14038,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_z_the_idea_nazionale
 		relative_position_id = ITADNC_z_the_proletarian_nation
-		x = 0
+		x = -3
 		y = 1
 		prerequisite = { focus = ITADNC_z_the_proletarian_nation }
 		icon = GFX_goal_generic_political_pressure
@@ -14053,10 +14098,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_association_of_the_nation
-		relative_position_id = ITADNC_z_the_lecture_and_the_lantern
-		x = 0
+		relative_position_id = ITADNC_z_the_proletarian_nation
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_lecture_and_the_lantern }
+		prerequisite = { focus = ITADNC_z_the_proletarian_nation }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 5
 		ai_will_do = { factor = 10 }
@@ -14102,10 +14147,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_unredeemed_provinces
-		relative_position_id = ITADNC_z_the_consuls_on_the_adriatic
-		x = 0
+		relative_position_id = ITADNC_z_the_idea_nazionale
+		x = 6
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_consuls_on_the_adriatic }
+		prerequisite = { focus = ITADNC_z_the_idea_nazionale focus = ITADNC_z_the_paper_read_aloud focus = ITADNC_z_the_lecture_and_the_lantern focus = ITADNC_z_the_association_of_the_nation }
 		icon = GFX_goal_generic_demand_territory
 		cost = 5
 		ai_will_do = {
@@ -14161,10 +14206,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_paper_read_aloud
-		relative_position_id = ITADNC_z_the_idea_nazionale
-		x = 0
+		relative_position_id = ITADNC_z_the_proletarian_nation
+		x = -1
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_idea_nazionale }
+		prerequisite = { focus = ITADNC_z_the_proletarian_nation }
 		icon = GFX_focus_generic_university_2
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -14214,10 +14259,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_emigrant_is_not_a_loss
-		relative_position_id = ITADNC_z_the_association_of_the_nation
+		relative_position_id = ITADNC_z_the_idea_nazionale
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_association_of_the_nation }
+		prerequisite = { focus = ITADNC_z_the_idea_nazionale focus = ITADNC_z_the_paper_read_aloud focus = ITADNC_z_the_lecture_and_the_lantern focus = ITADNC_z_the_association_of_the_nation }
 		icon = GFX_focus_generic_immigration
 		cost = 5
 		ai_will_do = { factor = 9 }
@@ -14258,10 +14303,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_nation_before_the_class
-		relative_position_id = ITADNC_z_the_national_subscription
-		x = 0
+		relative_position_id = ITADNC_z_the_alliance_is_a_receipt
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_national_subscription }
+		prerequisite = { focus = ITADNC_z_the_alliance_is_a_receipt focus = ITADNC_z_the_fourth_shore_is_a_programme }
 		icon = GFX_goal_generic_solidarity
 		cost = 5
 		ai_will_do = { factor = 9 }
@@ -14314,10 +14359,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_schools_beyond_the_frontier
-		relative_position_id = ITADNC_z_the_ships_that_carry_our_own
-		x = 0
+		relative_position_id = ITADNC_z_the_nation_in_arms
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_ships_that_carry_our_own }
+		prerequisite = { focus = ITADNC_z_the_nation_in_arms focus = ITADNC_z_the_columns_come_home }
+		mutually_exclusive = { focus = ITADNC_z_the_sea_that_must_be_ours }
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		available = {
@@ -14374,10 +14420,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_alliance_that_must_pay
-		relative_position_id = ITADNC_z_the_unredeemed_provinces
-		x = 0
+		relative_position_id = ITADNC_z_the_emigrant_is_not_a_loss
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_unredeemed_provinces }
+		prerequisite = { focus = ITADNC_z_the_emigrant_is_not_a_loss focus = ITADNC_z_the_ships_that_carry_our_own focus = ITADNC_z_the_consuls_on_the_adriatic focus = ITADNC_z_the_unredeemed_provinces }
 		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -14426,10 +14472,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_lecture_and_the_lantern
-		relative_position_id = ITADNC_z_the_paper_read_aloud
-		x = 0
+		relative_position_id = ITADNC_z_the_proletarian_nation
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_paper_read_aloud }
+		prerequisite = { focus = ITADNC_z_the_proletarian_nation }
 		icon = GFX_focus_generic_population_growth
 		cost = 5
 		ai_will_do = { factor = 7 }
@@ -14480,10 +14526,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_ships_that_carry_our_own
-		relative_position_id = ITADNC_z_the_emigrant_is_not_a_loss
-		x = 0
+		relative_position_id = ITADNC_z_the_idea_nazionale
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_emigrant_is_not_a_loss }
+		prerequisite = { focus = ITADNC_z_the_idea_nazionale focus = ITADNC_z_the_paper_read_aloud focus = ITADNC_z_the_lecture_and_the_lantern focus = ITADNC_z_the_association_of_the_nation }
 		icon = GFX_focus_ron_generic_export_focus
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -14538,10 +14584,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_syndicalists_who_crossed
-		relative_position_id = ITADNC_z_the_chamber_adjourned_indefinitely
-		x = 1
+		relative_position_id = ITADNC_z_the_national_subscription
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_chamber_adjourned_indefinitely focus = ITADNC_z_the_ministry_of_the_extreme_left }
+		prerequisite = { focus = ITADNC_z_the_national_subscription focus = ITADNC_z_the_nation_before_the_class }
+		mutually_exclusive = { focus = ITADNC_z_the_strike_that_is_treason }
 		icon = GFX_goal_syndicalist_workers
 		cost = 5
 		available = {
@@ -14591,10 +14638,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_consuls_on_the_adriatic
-		relative_position_id = ITADNC_z_the_schools_beyond_the_frontier
-		x = 0
+		relative_position_id = ITADNC_z_the_idea_nazionale
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_schools_beyond_the_frontier }
+		prerequisite = { focus = ITADNC_z_the_idea_nazionale focus = ITADNC_z_the_paper_read_aloud focus = ITADNC_z_the_lecture_and_the_lantern focus = ITADNC_z_the_association_of_the_nation }
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 5
 		ai_will_do = { factor = 8 }
@@ -14644,10 +14691,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_price_of_article_seven
-		relative_position_id = ITADNC_z_the_alliance_that_must_pay
-		x = 0
+		relative_position_id = ITADNC_z_the_emigrant_is_not_a_loss
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_alliance_that_must_pay }
+		prerequisite = { focus = ITADNC_z_the_emigrant_is_not_a_loss focus = ITADNC_z_the_ships_that_carry_our_own focus = ITADNC_z_the_consuls_on_the_adriatic focus = ITADNC_z_the_unredeemed_provinces }
 		icon = GFX_focus_generic_balkan_diplomacy
 		cost = 5
 		available = {
@@ -14707,7 +14754,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_z_the_national_subscription
 		relative_position_id = ITADNC_z_the_alliance_is_a_receipt
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = ITADNC_z_the_alliance_is_a_receipt focus = ITADNC_z_the_fourth_shore_is_a_programme }
 		icon = GFX_goal_generic_positive_trade_relations
@@ -14761,10 +14808,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_strike_that_is_treason
-		relative_position_id = ITADNC_z_the_nation_before_the_class
+		relative_position_id = ITADNC_z_the_national_subscription
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_nation_before_the_class }
+		prerequisite = { focus = ITADNC_z_the_national_subscription focus = ITADNC_z_the_nation_before_the_class }
+		mutually_exclusive = { focus = ITADNC_z_the_syndicalists_who_crossed }
 		icon = GFX_focus_generic_oppression
 		cost = 5
 		available = {
@@ -14830,10 +14878,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_fourth_shore_is_a_programme
-		relative_position_id = ITADNC_z_the_price_of_article_seven
-		x = 1
+		relative_position_id = ITADNC_z_the_alliance_that_must_pay
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_price_of_article_seven }
+		prerequisite = { focus = ITADNC_z_the_alliance_that_must_pay focus = ITADNC_z_the_price_of_article_seven }
 		mutually_exclusive = { focus = ITADNC_z_the_alliance_is_a_receipt }
 		icon = GFX_focus_generic_africa_infrastructure
 		cost = 5
@@ -14893,10 +14941,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_alliance_is_a_receipt
-		relative_position_id = ITADNC_z_the_price_of_article_seven
-		x = -1
+		relative_position_id = ITADNC_z_the_alliance_that_must_pay
+		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_price_of_article_seven }
+		prerequisite = { focus = ITADNC_z_the_alliance_that_must_pay focus = ITADNC_z_the_price_of_article_seven }
 		mutually_exclusive = { focus = ITADNC_z_the_fourth_shore_is_a_programme }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
@@ -14957,10 +15005,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_nation_in_arms
-		relative_position_id = ITADNC_z_the_syndicalists_who_crossed
+		relative_position_id = ITADNC_z_the_chamber_adjourned_indefinitely
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_syndicalists_who_crossed }
+		prerequisite = { focus = ITADNC_z_the_chamber_adjourned_indefinitely focus = ITADNC_z_the_ministry_of_the_extreme_left }
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
 		available = {
@@ -15010,9 +15058,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_z_the_country_that_cannot_climb_down
 		relative_position_id = ITADNC_z_the_sea_that_must_be_ours
-		x = 0
+		x = -1
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_sea_that_must_be_ours }
+		prerequisite = { focus = ITADNC_z_the_sea_that_must_be_ours focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
 		available = {
@@ -15073,10 +15121,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_sea_that_must_be_ours
-		relative_position_id = ITADNC_z_the_columns_come_home
+		relative_position_id = ITADNC_z_the_nation_in_arms
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_columns_come_home }
+		prerequisite = { focus = ITADNC_z_the_nation_in_arms focus = ITADNC_z_the_columns_come_home }
+		mutually_exclusive = { focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_navy_battleship
 		cost = 5
 		available = {
@@ -15135,10 +15184,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_z_the_greater_italy
-		relative_position_id = ITADNC_z_the_reckoning_of_the_decade
-		x = 0
+		relative_position_id = ITADNC_z_the_sea_that_must_be_ours
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_z_the_reckoning_of_the_decade }
+		prerequisite = { focus = ITADNC_z_the_sea_that_must_be_ours focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_major_war
 		cost = 5
 		available = {
@@ -15211,10 +15260,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_lesson_of_wilbur_wright
-		relative_position_id = ITADNC_air_the_airship_goes_to_sea
-		x = 0
+		relative_position_id = ITADNC_air_the_airship_park
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_airship_goes_to_sea }
+		prerequisite = { focus = ITADNC_air_the_airship_park focus = ITADNC_air_the_shed_at_vizzola focus = ITADNC_air_the_airship_of_the_kingdom }
+		mutually_exclusive = { focus = ITADNC_air_the_dirigible_lobby }
 		icon = GFX_focus_generic_air_research_boost
 		cost = 5
 		available = {
@@ -15293,10 +15343,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_dirigible_lobby
-		relative_position_id = ITADNC_air_the_airship_of_the_kingdom
-		x = 0
+		relative_position_id = ITADNC_air_the_airship_park
+		x = 1
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_airship_of_the_kingdom }
+		prerequisite = { focus = ITADNC_air_the_airship_park focus = ITADNC_air_the_shed_at_vizzola focus = ITADNC_air_the_airship_of_the_kingdom }
+		mutually_exclusive = { focus = ITADNC_air_the_lesson_of_wilbur_wright }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
 		available = {
@@ -15370,10 +15421,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_shed_at_vizzola
-		relative_position_id = ITADNC_air_the_airship_park
+		relative_position_id = ITADNC_air_the_brigade_of_specialists
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_airship_park }
+		prerequisite = { focus = ITADNC_air_the_brigade_of_specialists }
 		icon = GFX_focus_generic_aircraft_production
 		cost = 5
 		available = {
@@ -15460,10 +15511,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_airship_of_the_kingdom
-		relative_position_id = ITADNC_air_the_shed_at_vizzola
-		x = 0
+		relative_position_id = ITADNC_air_the_brigade_of_specialists
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_shed_at_vizzola }
+		prerequisite = { focus = ITADNC_air_the_brigade_of_specialists }
 		icon = GFX_focus_AUS_osterreichische_luftstreitkrafte
 		cost = 5
 		ai_will_do = {
@@ -15528,10 +15579,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_answer_of_the_world
-		relative_position_id = ITADNC_air_the_battalion_of_aviators
-		x = 0
+		relative_position_id = ITADNC_air_the_dirigible_lobby
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_battalion_of_aviators }
+		prerequisite = { focus = ITADNC_air_the_dirigible_lobby focus = ITADNC_air_the_lesson_of_wilbur_wright }
 		icon = GFX_goal_generic_propaganda
 		cost = 5
 		available = {
@@ -15612,10 +15663,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_makers_of_the_kingdom
-		relative_position_id = ITADNC_air_the_answer_of_the_world
-		x = 0
+		relative_position_id = ITADNC_air_the_airship_goes_to_sea
+		x = 3
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_answer_of_the_world }
+		prerequisite = { focus = ITADNC_air_the_airship_goes_to_sea focus = ITADNC_air_the_field_at_centocelle focus = ITADNC_air_the_battalion_of_aviators focus = ITADNC_air_the_answer_of_the_world }
 		icon = GFX_goal_generic_air_production
 		cost = 5
 		ai_will_do = {
@@ -15680,7 +15731,7 @@ focus_tree = {
 	focus = {
 		id = ITADNC_air_the_hangars_of_the_north
 		relative_position_id = ITADNC_air_the_engine_that_is_ours
-		x = 1
+		x = -2
 		y = 1
 		prerequisite = { focus = ITADNC_air_the_engine_that_is_ours focus = ITADNC_air_the_shop_at_the_ansaldo }
 		icon = GFX_focus_generic_air_bases
@@ -15753,9 +15804,9 @@ focus_tree = {
 	focus = {
 		id = ITADNC_air_the_airship_goes_to_sea
 		relative_position_id = ITADNC_air_the_dirigible_lobby
-		x = 0
+		x = -2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_dirigible_lobby }
+		prerequisite = { focus = ITADNC_air_the_dirigible_lobby focus = ITADNC_air_the_lesson_of_wilbur_wright }
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 5
 		ai_will_do = {
@@ -15833,10 +15884,11 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_memoranda_of_douhet
-		relative_position_id = ITADNC_air_the_naval_flying_service
-		x = 0
+		relative_position_id = ITADNC_air_the_lobby_is_answered
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_naval_flying_service }
+		prerequisite = { focus = ITADNC_air_the_lobby_is_answered focus = ITADNC_air_the_caproni_trimotor focus = ITADNC_air_the_seaplane_station focus = ITADNC_air_the_naval_flying_service }
+		mutually_exclusive = { focus = ITADNC_air_the_first_bomb }
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 5
 		ai_will_do = {
@@ -16040,10 +16092,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_schools_at_the_makers_fields
-		relative_position_id = ITADNC_air_the_hangars_of_the_north
+		relative_position_id = ITADNC_air_the_engine_that_is_ours
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_hangars_of_the_north }
+		prerequisite = { focus = ITADNC_air_the_engine_that_is_ours focus = ITADNC_air_the_shop_at_the_ansaldo }
 		icon = GFX_focus_generic_pilot_training
 		cost = 5
 		ai_will_do = {
@@ -16099,10 +16151,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_lobby_is_answered
-		relative_position_id = ITADNC_air_the_orders_of_the_ministry
+		relative_position_id = ITADNC_air_the_hangars_of_the_north
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_orders_of_the_ministry }
+		prerequisite = { focus = ITADNC_air_the_hangars_of_the_north focus = ITADNC_air_the_schools_at_the_makers_fields focus = ITADNC_air_the_reserve_of_pilots focus = ITADNC_air_the_orders_of_the_ministry }
 		icon = GFX_focus_generic_conference
 		cost = 5
 		ai_will_do = {
@@ -16171,10 +16223,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_seaplane_station
-		relative_position_id = ITADNC_air_the_caproni_trimotor
-		x = 0
+		relative_position_id = ITADNC_air_the_hangars_of_the_north
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_caproni_trimotor }
+		prerequisite = { focus = ITADNC_air_the_hangars_of_the_north focus = ITADNC_air_the_schools_at_the_makers_fields focus = ITADNC_air_the_reserve_of_pilots focus = ITADNC_air_the_orders_of_the_ministry }
 		icon = GFX_focus_generic_coastal_fort
 		cost = 5
 		available = {
@@ -16243,10 +16295,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_command_of_the_air
-		relative_position_id = ITADNC_air_the_first_bomb
+		relative_position_id = ITADNC_air_the_memoranda_of_douhet
 		x = 0
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_first_bomb }
+		prerequisite = { focus = ITADNC_air_the_memoranda_of_douhet focus = ITADNC_air_the_first_bomb }
 		icon = GFX_goal_generic_air_bomber
 		cost = 5
 		available = {
@@ -16337,10 +16389,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_caproni_trimotor
-		relative_position_id = ITADNC_air_the_lobby_is_answered
-		x = 0
+		relative_position_id = ITADNC_air_the_hangars_of_the_north
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_lobby_is_answered }
+		prerequisite = { focus = ITADNC_air_the_hangars_of_the_north focus = ITADNC_air_the_schools_at_the_makers_fields focus = ITADNC_air_the_reserve_of_pilots focus = ITADNC_air_the_orders_of_the_ministry }
 		icon = GFX_goal_generic_air_fighter
 		cost = 5
 		available = {
@@ -16423,10 +16475,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_orders_of_the_ministry
-		relative_position_id = ITADNC_air_the_reserve_of_pilots
-		x = 0
+		relative_position_id = ITADNC_air_the_engine_that_is_ours
+		x = 4
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_reserve_of_pilots }
+		prerequisite = { focus = ITADNC_air_the_engine_that_is_ours focus = ITADNC_air_the_shop_at_the_ansaldo }
 		icon = GFX_focus_generic_industry_investment
 		cost = 5
 		ai_will_do = {
@@ -16490,10 +16542,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_reserve_of_pilots
-		relative_position_id = ITADNC_air_the_schools_at_the_makers_fields
-		x = 0
+		relative_position_id = ITADNC_air_the_engine_that_is_ours
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_schools_at_the_makers_fields }
+		prerequisite = { focus = ITADNC_air_the_engine_that_is_ours focus = ITADNC_air_the_shop_at_the_ansaldo }
 		icon = GFX_focus_generic_manpower
 		cost = 5
 		ai_will_do = {
@@ -16552,10 +16604,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_naval_flying_service
-		relative_position_id = ITADNC_air_the_seaplane_station
-		x = 0
+		relative_position_id = ITADNC_air_the_hangars_of_the_north
+		x = 6
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_seaplane_station }
+		prerequisite = { focus = ITADNC_air_the_hangars_of_the_north focus = ITADNC_air_the_schools_at_the_makers_fields focus = ITADNC_air_the_reserve_of_pilots focus = ITADNC_air_the_orders_of_the_ministry }
 		icon = GFX_focus_generic_navy_research_bonus
 		cost = 5
 		ai_will_do = {
@@ -16617,10 +16669,10 @@ focus_tree = {
 
 	focus = {
 		id = ITADNC_air_the_arm_of_its_own
-		relative_position_id = ITADNC_air_the_command_of_the_air
-		x = 0
+		relative_position_id = ITADNC_air_the_memoranda_of_douhet
+		x = 2
 		y = 1
-		prerequisite = { focus = ITADNC_air_the_command_of_the_air }
+		prerequisite = { focus = ITADNC_air_the_memoranda_of_douhet focus = ITADNC_air_the_first_bomb }
 		icon = GFX_goal_generic_build_airforce
 		cost = 5
 		available = {
