@@ -531,6 +531,10 @@ BEL_annex_the_congo = {
 }
 
 BEL_dnc_monthly = {
+	if = {
+		limit = { NOT = { has_country_flag = BEL_dnc_systems_open } }
+		BEL_dnc_init = yes
+	}
 	add_to_variable = { var = BEL_dnc_months value = 1 }
 	BEL_estate_month = yes
 	BEL_peoples_month = yes
