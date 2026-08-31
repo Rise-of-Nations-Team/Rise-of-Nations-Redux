@@ -3191,7 +3191,8 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = bel_dnc.313 days = 7 }
 			}
-		}
+					set_cosmetic_tag = BEL_TWO
+}
 	}
 
 	focus = {
@@ -4552,6 +4553,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_name_no_enemy }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
+		will_lead_to_war_with = GER
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -4642,7 +4644,8 @@ focus_tree = {
 			}
 
 			country_event = { id = bel_dnc.403 days = 25 }
-		}
+					add_named_threat = { threat = 2 name = BEL_arm_threat_the_east }
+}
 	}
 
 	focus = {
@@ -5474,7 +5477,8 @@ focus_tree = {
 				BEL_a_dials = yes
 				custom_effect_tooltip = BEL_u_the_crown_signs_a_federal_statute_tt
 			}
-		}
+					set_cosmetic_tag = BEL_TWO
+}
 	}
 
 	focus = {
@@ -7316,6 +7320,13 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
+		bypass = {
+			OR = {
+				owns_state = 1060
+			}
+		}
+		cancel_if_invalid = yes
+		will_lead_to_war_with = HOL
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -7413,7 +7424,13 @@ focus_tree = {
 					}
 				}
 			}
-		}
+					if = {
+				limit = { NOT = { owns_state = 1060 } }
+				add_state_claim = 1060
+			}
+			custom_effect_tooltip = BEL_eco_tt_limburg_claimed
+			add_named_threat = { threat = 2 name = BEL_eco_threat_scheldt }
+}
 	}
 
 	focus = {
@@ -11015,7 +11032,17 @@ focus_tree = {
 			BEL_a_dials = yes
 			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.1112 days = 10 }
-		}
+					promote_character = BEL_charles_de_broqueville
+			set_party_name = {
+				ideology = democratic
+				long_name = BEL_catholic_union_long
+				name = BEL_catholic_union
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+}
 	}
 
 	focus = {
@@ -12117,7 +12144,17 @@ focus_tree = {
 
 			BEL_a_dials = yes
 			BEL_dnc_dials = yes
-		}
+					promote_character = BEL_Emile_Vandervelde
+			set_party_name = {
+				ideology = democratic
+				long_name = BEL_cartel_of_the_left_long
+				name = BEL_cartel_of_the_left
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+}
 	}
 
 	focus = {
@@ -13419,7 +13456,21 @@ focus_tree = {
 			BEL_a_dials = yes
 			BEL_dnc_dials = yes
 			country_event = { id = bel_dnc.1330 days = 5 }
-		}
+					promote_character = BEL_Albert_i
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = BEL_the_crown_long
+				name = BEL_the_crown
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+}
 	}
 
 	focus = {
@@ -14757,7 +14808,17 @@ focus_tree = {
 				category = land_doctrine
 			}
 			country_event = { id = bel_dnc.1406 days = 5 }
-		}
+					promote_character = BEL_Paul_janson
+			set_party_name = {
+				ideology = democratic
+				long_name = BEL_liberal_union_long
+				name = BEL_liberal_union
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+}
 	}
 
 	focus = {
