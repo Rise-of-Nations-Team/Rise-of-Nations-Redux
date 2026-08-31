@@ -8,8 +8,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1900.7.29
-		date < 1901.1.1
 		NOT = {
 			has_country_flag = ITA_t_regicide
 		}
@@ -74,8 +72,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1900.12.20
-		date < 1901.4.1
 		NOT = {
 			has_country_flag = ITA_t_genoa
 		}
@@ -166,8 +162,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1904.9.16
-		date < 1905.4.1
 		NOT = {
 			has_country_flag = ITA_t_strike_1904
 		}
@@ -244,8 +238,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1908.12.28
-		date < 1909.7.1
 		NOT = {
 			has_country_flag = ITA_t_messina
 		}
@@ -316,8 +308,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1914.6.7
-		date < 1914.10.1
 		NOT = {
 			has_country_flag = ITA_t_red_week
 		}
@@ -1828,9 +1818,6 @@ country_event = {
 	picture = GFX_report_event_airplane_crash
 	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = {
-		date > 1907.1.1
-	}
 	option = {
 		name = ita_dnc.309.a
 		ai_chance = { factor = 60 }
@@ -6215,8 +6202,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_t_1904_troops
-		date > 1911.9.4
-		date < 1912.6.1
 		NOT = {
 			has_country_flag = ITA_r_buggerru_remembered
 		}
@@ -6350,7 +6335,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_dnc_systems_open
-		date > 1907.1.1
 		OR = {
 			has_country_flag = ITA_a_the_circular_is_out
 			has_country_flag = ITA_a_the_machine_learns_the_rolls
@@ -6455,7 +6439,6 @@ country_event = {
 		tag = ITA
 		has_country_flag = ITA_dnc_systems_open
 		has_country_flag = ITA_dnc_path_giolitti
-		date > 1910.1.1
 		check_variable = {
 			var = ITA_machine_now
 			value = 40
@@ -6550,7 +6533,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_dnc_path_sonnino
-		date > 1909.6.1
 		OR = {
 			has_country_flag = ITA_a_the_decrees_stand
 			has_country_flag = ITA_a_the_estimates_go_by_decree
@@ -6648,7 +6630,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_dnc_path_reformist
-		date > 1910.6.1
 		OR = {
 			has_country_flag = ITA_a_turati_will_sit
 			has_country_flag = ITA_a_a_portfolio_for_the_left
@@ -6780,7 +6761,6 @@ country_event = {
 			has_country_flag = ITA_w_libya_war_declared
 			has_country_flag = ITA_w_senussi_war
 		}
-		date > 1911.10.15
 		NOT = {
 			has_country_flag = ITA_r_the_ballhausplatz_note
 		}
@@ -6892,7 +6872,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		country_exists = AUH
-		date > 1909.3.15
 		OR = {
 			has_country_flag = ITA_w_the_denial
 			has_idea = ITA_w_the_broken_word
@@ -7004,7 +6983,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_t_messina
-		date > 1911.12.28
 		NOT = {
 			has_country_flag = ITA_r_the_huts_of_messina
 		}
@@ -7112,7 +7090,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_w_the_reprisals
-		date > 1913.6.1
 		NOT = {
 			has_country_flag = ITA_r_the_photographs
 		}
@@ -7259,7 +7236,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1912.3.1
 		OR = {
 			has_country_flag = ITA_arm_the_exemptions_stand
 			has_country_flag = ITA_arm_two_years
@@ -7359,7 +7335,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_arm_the_gun_is_bought
-		date > 1912.2.1
 		OR = {
 			has_country_flag = ITA_w_libya_war_declared
 			has_country_flag = ITA_w_senussi_war
@@ -7475,7 +7450,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_e_the_ledger_is_edited
-		date > 1912.6.1
 		NOT = {
 			has_country_flag = ITA_r_the_first_copy
 		}
@@ -7604,7 +7578,6 @@ country_event = {
 	trigger = {
 		tag = ITA
 		has_country_flag = ITA_dnc_systems_open
-		date > 1908.1.1
 		check_variable = {
 			var = ITA_bayonets
 			value = 3
@@ -7701,7 +7674,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1911.11.1
 		OR = {
 			has_country_flag = ITA_dnc_e_emigration_governed
 			has_country_flag = ITA_e_our_blood_abroad
@@ -7808,7 +7780,6 @@ country_event = {
 		tag = ITA
 		has_country_flag = ITA_s_the_lists_are_marked
 		has_country_flag = ITA_a_franchise_widened
-		date > 1912.10.1
 		NOT = {
 			has_country_flag = ITA_r_the_register_is_read_against_us
 		}
@@ -7898,7 +7869,6 @@ country_event = {
 		tag = ITA
 		country_exists = AUH
 		has_country_flag = ITA_w_racconigi_is_read_in_vienna
-		date > 1911.10.15
 		NOT = {
 			has_country_flag = ITA_r_racconigi_quoted_back
 		}
@@ -8010,7 +7980,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ITA
-		date > 1911.6.1
 		OR = {
 			has_country_flag = ITA_o_the_board_is_published
 			has_country_flag = ITA_arm_promotion_by_merit
