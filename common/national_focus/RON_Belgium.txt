@@ -63,6 +63,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_decade_opens }
 		icon = GFX_focus_generic_industry_3
 		cost = 3
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 40
@@ -85,6 +86,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_kingdom_and_its_king focus = BELDNC_the_kingdom_of_nine_provinces focus = BELDNC_the_crown_in_two_places focus = BELDNC_the_kings_second_crown }
 		icon = GFX_focus_BEL_multi_language_courses
 		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 30
@@ -102,6 +104,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_decade_opens }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 30
@@ -120,6 +123,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_focus_generic_conference
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -139,6 +143,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_a_the_partys_weapon }
 		icon = GFX_focus_eng_the_kings_party
 		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -25
@@ -181,6 +186,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_a_the_kings_prerogative }
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_stability = -0.03
@@ -239,6 +245,7 @@ focus_tree = {
 		icon = GFX_focus_generic_court
 		available = { country_exists = COG }
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -60
@@ -273,6 +280,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_focus_eng_the_kings_party
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -350,6 +358,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_interpellation }
 		icon = GFX_focus_rom_handle_king
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = 60
@@ -420,6 +429,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_kings_answer }
 		icon = GFX_focus_generic_public_meetings
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -50
@@ -496,6 +506,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_west_african_bureau }
 		icon = GFX_focus_generic_oppression
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			BEL_c_regime_full = yes
@@ -572,6 +583,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_quota_at_full_tally }
 		icon = GFX_Goal_generic_propaganda_britain
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 40
@@ -642,6 +654,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_quota_at_full_tally focus = BELDNC_c_the_west_african_bureau }
 		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = 40
@@ -703,6 +716,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_motion_of_the_left focus = BELDNC_c_the_colonial_charter_drafted }
 		icon = GFX_focus_generic_conference
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 25
@@ -777,6 +791,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_colonial_charter_drafted }
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -75
@@ -843,6 +858,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_motion_of_the_left }
 		icon = GFX_focus_bo_constitution
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -50
@@ -890,6 +906,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_motion_of_the_left focus = BELDNC_c_the_colonial_charter_drafted }
 		icon = GFX_focus_rom_royal_dictatorship
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		available = {
 			check_variable = {
 				var = BEL_congo_regime
@@ -983,6 +1000,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_motion_of_the_left focus = BELDNC_c_the_colonial_charter_drafted }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -75
@@ -1053,6 +1071,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_belgium_declines focus = BELDNC_c_the_note_of_the_powers }
 		icon = GFX_generic_focus_treaty_sign
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		available = {
 			country_exists = COG
 			NOT = { has_country_flag = BEL_congo_lost }
@@ -1117,6 +1136,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_the_note_of_the_powers }
 		icon = GFX_focus_SWI_neutrality_on_the_move
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			NOT = { has_country_flag = BEL_congo_annexed }
 			NOT = { has_country_flag = BEL_congo_lost }
@@ -1214,6 +1234,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_c_belgium_declines }
 		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		available = {
 			country_exists = COG
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -1302,6 +1323,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_belgium_declines focus = BELDNC_c_the_note_of_the_powers }
 		icon = GFX_focus_generic_election
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		available = {
 			country_exists = COG
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -1389,6 +1411,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_belgium_declines focus = BELDNC_c_the_note_of_the_powers }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -1484,6 +1507,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_belgium_declines focus = BELDNC_c_the_note_of_the_powers }
 		icon = GFX_focus_generic_self_management
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -1552,6 +1576,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_terms_of_cession focus = BELDNC_c_the_vote_on_the_cession focus = BELDNC_c_the_colonial_charter focus = BELDNC_c_the_end_of_the_concessions }
 		icon = GFX_focus_generic_manpower
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -1647,6 +1672,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_terms_of_cession focus = BELDNC_c_the_vote_on_the_cession focus = BELDNC_c_the_colonial_charter focus = BELDNC_c_the_end_of_the_concessions }
 		icon = GFX_focus_generic_africa_infrastructure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -1714,6 +1740,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_terms_of_cession focus = BELDNC_c_the_vote_on_the_cession focus = BELDNC_c_the_colonial_charter focus = BELDNC_c_the_end_of_the_concessions }
 		icon = GFX_focus_generic_population_growth
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -1758,6 +1785,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_terms_of_cession focus = BELDNC_c_the_vote_on_the_cession focus = BELDNC_c_the_colonial_charter focus = BELDNC_c_the_end_of_the_concessions }
 		icon = GFX_focus_generic_worker_administration
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -1821,6 +1849,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_c_the_force_publique focus = BELDNC_c_the_colonial_council focus = BELDNC_c_the_katanga_line focus = BELDNC_c_the_sleeping_sickness_service }
 		icon = GFX_focus_ITA_a_colonial_empire
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -1929,6 +1958,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_parliament
 		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 12 }
 		completion_reward = {
@@ -2009,6 +2039,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_equality_law }
 		icon = GFX_focus_generic_public_meetings
 		cost = 3
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -25
@@ -2071,6 +2102,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_equality_law }
 		icon = GFX_goal_generic_national_unity
 		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 60
@@ -2149,6 +2181,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_v_the_ministry_speaks_french }
 		icon = GFX_focus_generic_court
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -50
@@ -2206,6 +2239,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_dutch_in_the_courts focus = BELDNC_v_the_ministry_speaks_french }
 		icon = GFX_goal_generic_political_pressure
 		cost = 4
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -50
@@ -2269,6 +2303,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_dutch_in_the_courts focus = BELDNC_v_the_ministry_speaks_french }
 		icon = GFX_focus_generic_catholic_dominion
 		cost = 4
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = 80
@@ -2333,6 +2368,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_v_the_language_of_command }
 		icon = GFX_goal_generic_political_pressure
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_war_support = 0.03
@@ -2398,6 +2434,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_v_the_word_of_command_stays }
 		icon = GFX_goal_generic_officers
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -60
@@ -2470,6 +2507,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_language_of_command focus = BELDNC_v_the_word_of_command_stays }
 		icon = GFX_focus_generic_university_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { NOT = { has_country_flag = BEL_ghent_flemish } }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -2543,6 +2581,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_language_of_command focus = BELDNC_v_the_word_of_command_stays }
 		icon = GFX_goal_generic_political_pressure
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 60
@@ -2605,6 +2644,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_v_dutch_in_the_courts }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 4
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 50
@@ -2676,6 +2716,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_language_of_command focus = BELDNC_v_the_word_of_command_stays }
 		icon = GFX_goal_generic_solidarity
 		cost = 4
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -30
@@ -2745,6 +2786,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_university_at_ghent focus = BELDNC_v_the_flamingant_press focus = BELDNC_v_the_walloon_leagues focus = BELDNC_v_the_congress_of_wallonia }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -2801,6 +2843,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_university_at_ghent focus = BELDNC_v_the_flamingant_press focus = BELDNC_v_the_walloon_leagues focus = BELDNC_v_the_congress_of_wallonia }
 		icon = GFX_goal_generic_political_pressure
 		cost = 4
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		available = {
 			check_variable = {
 				var = BEL_flemish
@@ -2877,6 +2920,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_language_of_command focus = BELDNC_v_the_word_of_command_stays }
 		icon = GFX_focus_generic_conference
 		cost = 5
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		available = {
 			OR = {
 				check_variable = {
@@ -2944,6 +2988,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_university_at_ghent focus = BELDNC_v_the_flamingant_press focus = BELDNC_v_the_walloon_leagues focus = BELDNC_v_the_congress_of_wallonia }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -80
@@ -3009,6 +3054,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_university_at_ghent focus = BELDNC_v_the_flamingant_press focus = BELDNC_v_the_walloon_leagues focus = BELDNC_v_the_congress_of_wallonia }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		available = {
 			check_variable = {
 				var = BEL_flemish
@@ -3085,6 +3131,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_v_the_unitary_kingdom }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			check_variable = {
 				var = BEL_flemish
@@ -3156,6 +3203,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_v_the_belgium_of_two_peoples }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		available = {
 			check_variable = {
 				var = BEL_walloon
@@ -3208,6 +3256,7 @@ focus_tree = {
 		y = 0
 		icon = GFX_focus_generic_treaty
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -3231,6 +3280,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_decade_opens }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 40
@@ -3248,6 +3298,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_decade_opens }
 		icon = GFX_focus_generic_court
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 30
@@ -3269,6 +3320,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_v_the_hour_is_late }
 		icon = GFX_focus_BEL_multi_language_courses
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 30
@@ -3285,6 +3337,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_kingdom_and_its_king focus = BELDNC_the_kingdom_of_nine_provinces focus = BELDNC_the_crown_in_two_places focus = BELDNC_the_kings_second_crown }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 60
@@ -3303,6 +3356,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -3395,6 +3449,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_the_powers_who_signed }
 		icon = GFX_goal_generic_small_arms
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -25
@@ -3456,6 +3511,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_the_lottery_stands }
 		icon = GFX_focus_generic_full_social_mobilization
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -3536,6 +3592,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_one_son_from_every_house }
 		icon = GFX_goal_generic_political_pressure
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -3596,6 +3653,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_one_son_from_every_house focus = BELDNC_arm_the_lottery_stands }
 		icon = GFX_focus_BEL_multi_language_courses
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -120
@@ -3669,6 +3727,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_one_son_from_every_house focus = BELDNC_arm_the_lottery_stands }
 		icon = GFX_focus_generic_manpower
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -3796,6 +3855,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_one_son_from_every_house focus = BELDNC_arm_the_lottery_stands }
 		icon = GFX_goal_nested_fortifications
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -25
@@ -3870,6 +3930,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_the_national_redoubt }
 		icon = GFX_focus_generic_mountain_fortification
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = {
 			OR = {
 				NOT = { has_country_flag = BEL_f_works_deferred }
@@ -3977,6 +4038,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_the_forts_of_the_meuse }
 		icon = GFX_focus_generic_coastal_fort
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = {
 			OR = {
 				NOT = { has_country_flag = BEL_f_works_deferred }
@@ -4079,6 +4141,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_not_one_franc_from_the_basin }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -4171,6 +4234,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_the_kings_money_for_the_kings_forts }
 		icon = GFX_goal_generic_parliament
 		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -100
@@ -4254,6 +4318,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_the_forts_of_the_meuse focus = BELDNC_arm_the_national_redoubt }
 		icon = GFX_goal_trench_artillery
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -50
@@ -4319,6 +4384,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_the_forts_of_the_meuse focus = BELDNC_arm_the_national_redoubt }
 		icon = GFX_focus_generic_home_defense
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = -50
@@ -4426,6 +4492,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_the_kings_money_for_the_kings_forts focus = BELDNC_arm_not_one_franc_from_the_basin }
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -50
@@ -4485,6 +4552,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_name_no_enemy }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_war_support = 0.05
@@ -4587,6 +4655,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_name_no_enemy }
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.04
@@ -4680,6 +4749,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_the_neighbour_to_the_south }
 		icon = GFX_focus_generic_treaty
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_political_power = 75
@@ -4769,6 +4839,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_one_son_from_every_house focus = BELDNC_arm_the_lottery_stands }
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = -75
@@ -4858,6 +4929,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_arm_the_neighbour_to_the_east focus = BELDNC_arm_the_neighbour_to_the_south focus = BELDNC_arm_name_no_enemy }
 		icon = GFX_goal_generic_major_war
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -4964,6 +5036,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_belgian_question }
 		icon = GFX_CANDNC_goal_generic_parliament
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			has_country_flag = BEL_u_country_named
@@ -5077,6 +5150,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			OR = {
@@ -5183,6 +5257,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		icon = GFX_focus_generic_mountain_fortification
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			has_country_flag = BEL_u_army_strong
@@ -5308,6 +5383,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_word_of_a_signature focus = BELDNC_u_the_guarantee_in_concrete focus = BELDNC_u_the_army_of_the_nation focus = BELDNC_u_the_congo_of_the_chamber }
 		icon = GFX_focus_YUG_devolved_croatia
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			OR = {
@@ -5409,6 +5485,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_word_of_a_signature focus = BELDNC_u_the_guarantee_in_concrete focus = BELDNC_u_the_army_of_the_nation focus = BELDNC_u_the_congo_of_the_chamber }
 		icon = GFX_focus_generic_concessions
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			has_idea = BEL_u_the_congo_under_review
@@ -5505,6 +5582,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -5617,6 +5695,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_country_we_became }
 		icon = GFX_focus_generic_full_social_mobilization
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		available = {
 			NOT = { has_idea = BEL_u_the_unitary_kingdom_strained }
@@ -5695,6 +5774,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_u_the_word_of_a_signature focus = BELDNC_u_the_guarantee_in_concrete focus = BELDNC_u_the_army_of_the_nation focus = BELDNC_u_the_congo_of_the_chamber }
 		icon = GFX_focus_YUG_banovina_of_croatia
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		allow_branch = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -5786,6 +5866,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_levy_in_kind_ends }
 		icon = GFX_focus_bo_constitution
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -5868,6 +5949,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_four_provinces }
 		icon = GFX_focus_generic_worker_administration
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -5938,6 +6020,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_governor_general_at_boma }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6023,6 +6106,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_governor_general_at_boma focus = BELDNC_k_the_four_provinces }
 		icon = GFX_goal_generic_parliament
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6104,6 +6188,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_governor_general_at_boma focus = BELDNC_k_the_four_provinces }
 		icon = GFX_focus_generic_court
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6176,6 +6261,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_governor_general_at_boma focus = BELDNC_k_the_four_provinces }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6246,6 +6332,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_governor_general_at_boma focus = BELDNC_k_the_four_provinces }
 		icon = GFX_focus_SWI_neutrality_on_the_move
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6315,6 +6402,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_school_at_boma focus = BELDNC_k_the_chefferies_in_law }
 		icon = GFX_focus_generic_manpower
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -6424,6 +6512,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_levy_in_kind_ends }
 		icon = GFX_focus_generic_africa_infrastructure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6501,6 +6590,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_chefferies_in_law }
 		icon = GFX_focus_generic_university_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6577,6 +6667,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_school_at_boma }
 		icon = GFX_focus_generic_self_management
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6649,6 +6740,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_school_at_boma focus = BELDNC_k_the_chefferies_in_law }
 		icon = GFX_goal_generic_officers
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -6719,6 +6811,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_levy_in_kind_ends }
 		icon = GFX_focus_generic_mining_industry
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6794,6 +6887,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_line_that_leaves_the_kingdom }
 		icon = GFX_focus_generic_industry_investment
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -6875,6 +6969,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_copper_at_elisabethville }
 		icon = GFX_focus_generic_railroad
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -6953,6 +7048,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_copper_at_elisabethville focus = BELDNC_k_the_line_that_leaves_the_kingdom }
 		icon = GFX_focus_generic_develop_rail_network
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_congo_annexed }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -7045,6 +7141,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_political_pressure
 		cost = 4
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -7134,6 +7231,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -40
@@ -7218,6 +7316,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -30
@@ -7325,6 +7424,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		icon = GFX_focus_ron_trade_navy
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -7397,6 +7497,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		icon = GFX_focus_generic_industry_3
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -7467,6 +7568,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_mouth_that_is_not_ours }
 		icon = GFX_focus_generic_naval_discipline
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 50
@@ -7526,6 +7628,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_eco_the_note_to_the_hague }
 		icon = GFX_focus_generic_africa_naval
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -80
@@ -7600,6 +7703,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_works_at_antwerp focus = BELDNC_eco_the_docks_of_the_left_bank focus = BELDNC_eco_the_fortress_and_the_port focus = BELDNC_eco_ostend_and_the_packet }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -25
@@ -7667,6 +7771,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_works_at_antwerp focus = BELDNC_eco_the_docks_of_the_left_bank focus = BELDNC_eco_the_fortress_and_the_port focus = BELDNC_eco_ostend_and_the_packet }
 		icon = GFX_focus_generic_coastal_fort
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -50
@@ -7742,6 +7847,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_note_to_the_hague focus = BELDNC_eco_the_canal_that_avoids_the_dutch }
 		icon = GFX_goal_generic_fortify_city
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -7819,6 +7925,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_eco_the_state_marine }
 		icon = GFX_goal_generic_occupy_states_coastal
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -7916,6 +8023,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_eco_the_coast_is_a_flank }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -60
@@ -8025,6 +8133,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_eco_the_coast_is_a_flank focus = BELDNC_eco_the_state_marine }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 75
@@ -8125,6 +8234,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_political_pressure
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
@@ -8191,6 +8301,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_s_the_grant_to_the_free_schools }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -50
@@ -8278,6 +8389,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_s_the_communal_schools }
 		icon = GFX_focus_generic_catholic_dominion
 		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 40
@@ -8340,6 +8452,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_s_the_communal_schools focus = BELDNC_s_the_grant_to_the_free_schools }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -40
@@ -8409,6 +8522,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_s_the_communal_schools focus = BELDNC_s_the_grant_to_the_free_schools }
 		icon = GFX_focus_generic_population_growth
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -80
@@ -8484,6 +8598,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_s_the_school_question_closed }
 		icon = GFX_focus_generic_workers
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -8558,6 +8673,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_s_the_communal_schools focus = BELDNC_s_the_grant_to_the_free_schools }
 		icon = GFX_focus_generic_public_meetings
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -8622,6 +8738,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_s_the_school_and_the_pithead focus = BELDNC_s_the_school_question_closed }
 		icon = GFX_focus_BEL_multi_language_courses
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -8690,6 +8807,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_s_the_school_and_the_pithead }
 		icon = GFX_focus_generic_university_2
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = 80
@@ -8781,6 +8899,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_focus_generic_mining_industry
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -25
@@ -8846,6 +8965,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_b_the_gendarmes_at_the_pithead }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -50
@@ -8924,6 +9044,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_b_the_inspectorate_of_mines }
 		icon = GFX_focus_generic_strike_at_democracy3
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 40
@@ -9002,6 +9123,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines focus = BELDNC_b_the_gendarmes_at_the_pithead }
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -9068,6 +9190,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines focus = BELDNC_b_the_gendarmes_at_the_pithead }
 		icon = GFX_goal_generic_political_pressure
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -9138,6 +9261,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines focus = BELDNC_b_the_gendarmes_at_the_pithead }
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -75
@@ -9217,6 +9341,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_b_the_inspectorate_of_mines focus = BELDNC_b_the_gendarmes_at_the_pithead }
 		icon = GFX_focus_generic_industry_3
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 60
@@ -9312,6 +9437,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_focus_generic_treaty
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -9402,6 +9528,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_g_who_guarantees_the_guarantee }
 		icon = GFX_generic_focus_treaty_sign
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -40
@@ -9503,6 +9630,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_g_the_letter_from_berlin }
 		icon = GFX_Goal_generic_propaganda_britain
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -9593,6 +9721,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_g_the_letter_from_london }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_political_power = 60
@@ -9681,6 +9810,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_g_the_letter_from_london focus = BELDNC_g_the_letter_from_berlin }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 50
@@ -9833,6 +9963,7 @@ focus_tree = {
 		icon = GFX_focus_generic_catholic_dominion
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			set_country_flag = BEL_dnc_path_settlement
@@ -9882,6 +10013,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_catholic_settlement }
 		icon = GFX_focus_generic_election
 		cost = 3
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			add_political_power = 45
@@ -9926,6 +10058,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_kings_prerogative focus = BELDNC_a_the_partys_weapon }
 		icon = GFX_focus_generic_oppression
 		cost = 3
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = 40
@@ -9976,6 +10109,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_register_of_three_ballots focus = BELDNC_a_woestes_right focus = BELDNC_a_the_school_and_the_ballot focus = BELDNC_a_the_ministry_that_does_not_fall }
 		icon = GFX_focus_generic_industry_investment
 		cost = 3
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = -30
@@ -10023,6 +10157,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_kings_prerogative focus = BELDNC_a_the_partys_weapon }
 		icon = GFX_goal_generic_parliament
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = 50
@@ -10075,6 +10210,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_kings_prerogative focus = BELDNC_a_the_partys_weapon }
 		icon = GFX_focus_BEL_multi_language_courses
 		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = -30
@@ -10116,6 +10252,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_register_of_three_ballots focus = BELDNC_a_woestes_right focus = BELDNC_a_the_school_and_the_ballot focus = BELDNC_a_the_ministry_that_does_not_fall }
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = 45
@@ -10167,6 +10304,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_a_the_language_laws_conceded }
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 12 }
 		completion_reward = {
 			add_political_power = 40
@@ -10214,6 +10352,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_kings_prerogative focus = BELDNC_a_the_partys_weapon }
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 18 }
 		completion_reward = {
 			add_political_power = 60
@@ -10260,6 +10399,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_a_the_left_kept_apart }
 		icon = GFX_focus_YUG_devolved_croatia
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 18 }
 		completion_reward = {
 			add_political_power = -40
@@ -10306,6 +10446,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_language_laws_conceded focus = BELDNC_a_the_left_kept_apart }
 		icon = GFX_focus_generic_strike_at_democracy3
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = 40
@@ -10358,6 +10499,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_language_laws_conceded focus = BELDNC_a_the_left_kept_apart }
 		icon = GFX_CANDNC_goal_generic_parliament
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 25 }
 		completion_reward = {
 			add_political_power = 80
@@ -10412,6 +10554,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_language_laws_conceded focus = BELDNC_a_the_left_kept_apart }
 		icon = GFX_focus_generic_university_2
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = 50
@@ -10459,6 +10602,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_language_laws_conceded focus = BELDNC_a_the_left_kept_apart }
 		icon = GFX_focus_generic_court
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			add_political_power = -30
@@ -10505,6 +10649,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_strike_that_does_not_come focus = BELDNC_a_the_settlement_holds focus = BELDNC_a_the_bishops_are_content focus = BELDNC_a_the_commission_of_inquiry }
 		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			add_political_power = -25
@@ -10562,6 +10707,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_terms_of_cession focus = BELDNC_a_the_kings_price }
 		icon = GFX_focus_generic_improve_the_administration_2
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 18 }
 		completion_reward = {
 			add_political_power = 40
@@ -10611,6 +10757,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_a_the_kings_price }
 		icon = GFX_generic_focus_treaty_sign
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			add_political_power = -40
@@ -10651,6 +10798,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_a_the_terms_of_cession }
 		icon = GFX_focus_rom_handle_king
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 18 }
 		completion_reward = {
 			add_political_power = -35
@@ -10695,6 +10843,7 @@ focus_tree = {
 		icon = GFX_focus_generic_annex_country
 		available = { country_exists = COG }
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 30 }
 		completion_reward = {
 			add_political_power = -50
@@ -10740,6 +10889,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_terms_of_cession focus = BELDNC_a_the_kings_price }
 		icon = GFX_focus_ITA_a_colonial_empire
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			add_political_power = 40
@@ -10779,6 +10929,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_estate_is_valued focus = BELDNC_a_the_house_votes_the_estate focus = BELDNC_a_the_right_votes_the_colony focus = BELDNC_a_the_colonial_charter_of_the_right }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			add_political_power = 50
@@ -10821,6 +10972,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_estate_is_valued focus = BELDNC_a_the_house_votes_the_estate focus = BELDNC_a_the_right_votes_the_colony focus = BELDNC_a_the_colonial_charter_of_the_right }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 25 }
 		completion_reward = {
 			add_political_power = 100
@@ -10878,6 +11030,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			set_country_flag = BEL_dnc_path_cartel
@@ -10939,6 +11092,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_schools_of_the_commune focus = BELDNC_k_the_grant_is_withdrawn }
 		icon = GFX_focus_generic_election
 		cost = 4
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -60
@@ -10985,6 +11139,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_bloc_of_the_left }
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 3
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 40
@@ -11044,6 +11199,7 @@ focus_tree = {
 		icon = GFX_focus_generic_annex_country
 		available = { country_exists = COG }
 		cost = 4
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -30
@@ -11088,6 +11244,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_senate_holds_out }
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 3
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_stability = -0.08
@@ -11142,6 +11299,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_second_general_strike }
 		icon = GFX_focus_bo_constitution
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -40
@@ -11194,6 +11352,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_grant_is_withdrawn }
 		icon = GFX_focus_generic_university_2
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -35
@@ -11241,6 +11400,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_schools_of_the_commune }
 		icon = GFX_focus_generic_oppression
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 40
@@ -11294,6 +11454,7 @@ focus_tree = {
 		icon = GFX_CANDNC_goal_generic_parliament
 		available = { country_exists = COG }
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -40
@@ -11340,6 +11501,7 @@ focus_tree = {
 		icon = GFX_focus_generic_diplomatic_treaty
 		available = { country_exists = COG }
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -30
@@ -11384,6 +11546,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_second_general_strike focus = BELDNC_k_the_senate_holds_out }
 		icon = GFX_focus_generic_full_social_mobilization
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -50
@@ -11435,6 +11598,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_schools_of_the_commune focus = BELDNC_k_the_grant_is_withdrawn }
 		icon = GFX_focus_generic_worker_administration
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -30
@@ -11479,6 +11643,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_schools_of_the_commune focus = BELDNC_k_the_grant_is_withdrawn }
 		icon = GFX_focus_generic_catholic_dominion
 		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -35
@@ -11532,6 +11697,7 @@ focus_tree = {
 			}
 		}
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = -60
@@ -11574,6 +11740,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_vote_is_taken_early focus = BELDNC_k_the_colony_before_the_king focus = BELDNC_k_the_commission_the_chamber_names focus = BELDNC_k_the_terms_are_ours_to_write }
 		icon = GFX_focus_generic_court
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -30
@@ -11616,6 +11783,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_vote_the_party_fears }
 		icon = GFX_focus_generic_public_meetings
 		cost = 4
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -40
@@ -11667,6 +11835,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_k_the_register_rewritten }
 		icon = GFX_focus_generic_population_growth
 		cost = 4
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -50
@@ -11713,6 +11882,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_schools_of_the_commune focus = BELDNC_k_the_grant_is_withdrawn }
 		icon = GFX_focus_BEL_multi_language_courses
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -40
@@ -11758,6 +11928,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_annual_report_to_the_chamber focus = BELDNC_k_the_tribunal_at_boma focus = BELDNC_k_the_colony_keeps_its_own_law focus = BELDNC_k_no_congolese_for_europe }
 		icon = GFX_focus_ITA_a_colonial_empire
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -40
@@ -11801,6 +11972,7 @@ focus_tree = {
 		icon = GFX_focus_generic_concessions
 		available = { has_country_flag = BEL_congo_annexed }
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -40
@@ -11850,6 +12022,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_vote_is_taken_early focus = BELDNC_k_the_colony_before_the_king focus = BELDNC_k_the_commission_the_chamber_names focus = BELDNC_k_the_terms_are_ours_to_write }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			add_political_power = -50
@@ -11905,6 +12078,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_annual_report_to_the_chamber focus = BELDNC_k_the_tribunal_at_boma focus = BELDNC_k_the_colony_keeps_its_own_law focus = BELDNC_k_no_congolese_for_europe }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			add_political_power = 100
@@ -11958,6 +12132,7 @@ focus_tree = {
 		icon = GFX_focus_generic_monarchist_sentiment
 		available = { has_country_flag = BEL_dnc_systems_open }
 		cost = 4
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -12052,6 +12227,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 50
@@ -12108,6 +12284,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
 		icon = GFX_focus_generic_court
 		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 40
@@ -12170,6 +12347,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_deputies_go_home focus = BELDNC_r_the_officer_corps_swears_to_him }
 		icon = GFX_focus_generic_annex_country
 		cost = 3
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 30
@@ -12219,6 +12397,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
 		icon = GFX_focus_generic_oppression
 		cost = 3
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -20
@@ -12269,6 +12448,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_govern_past_the_chamber }
 		icon = GFX_focus_generic_monarchy_2
 		cost = 4
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 60
@@ -12335,6 +12515,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_royal_message focus = BELDNC_r_the_press_bureau focus = BELDNC_r_the_ministers_of_the_king focus = BELDNC_r_the_crown_rules }
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 45
@@ -12391,6 +12572,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_deputies_go_home focus = BELDNC_r_the_officer_corps_swears_to_him }
 		icon = GFX_focus_generic_concessions
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 30
@@ -12439,6 +12621,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_deputies_go_home focus = BELDNC_r_the_officer_corps_swears_to_him }
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 20
@@ -12501,6 +12684,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_royal_message focus = BELDNC_r_the_press_bureau focus = BELDNC_r_the_ministers_of_the_king focus = BELDNC_r_the_crown_rules }
 		icon = GFX_goal_generic_position_armies
 		cost = 3.5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -12555,6 +12739,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_royal_message focus = BELDNC_r_the_press_bureau focus = BELDNC_r_the_ministers_of_the_king focus = BELDNC_r_the_crown_rules }
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 100
@@ -12654,6 +12839,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_deputies_go_home focus = BELDNC_r_the_officer_corps_swears_to_him }
 		icon = GFX_focus_generic_court
 		cost = 3
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 35
@@ -12699,6 +12885,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_congo_is_the_kings focus = BELDNC_r_the_domaine_de_la_couronne focus = BELDNC_r_the_kings_works focus = BELDNC_r_the_civil_list_untouched }
 		icon = GFX_goal_generic_fortify_city
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 30
@@ -12747,6 +12934,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_r_the_officer_corps_swears_to_him }
 		icon = GFX_CANDNC_goal_generic_parliament
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 60
@@ -12802,6 +12990,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_r_the_deputies_go_home }
 		icon = GFX_goal_generic_officers
 		cost = 4
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 25
@@ -12856,6 +13045,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_a_colonial_empire
 		available = { country_exists = COG }
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 40
@@ -12907,6 +13097,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_r_the_colony_of_one_man }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 4
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 30
@@ -12976,6 +13167,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_colony_of_one_man focus = BELDNC_r_the_understanding_with_berlin }
 		icon = GFX_focus_rom_handle_king
 		cost = 4
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 25
@@ -13018,6 +13210,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_colony_of_one_man focus = BELDNC_r_the_understanding_with_berlin }
 		icon = GFX_focus_generic_self_management
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 40
@@ -13073,6 +13266,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_colony_of_one_man focus = BELDNC_r_the_understanding_with_berlin }
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 30
@@ -13124,6 +13318,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_colony_of_one_man focus = BELDNC_r_the_understanding_with_berlin }
 		icon = GFX_focus_generic_monarchy_1
 		cost = 4.5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 50
@@ -13178,6 +13373,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_r_the_king_is_old focus = BELDNC_r_the_guarantee_of_a_strong_hand focus = BELDNC_r_alberts_inheritance focus = BELDNC_r_the_quiet_kingdom }
 		icon = GFX_focus_rom_royal_dictatorship
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = 120
@@ -13237,6 +13433,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_r_govern_past_the_chamber }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 4
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -13304,6 +13501,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
 		icon = GFX_goal_generic_parliament
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 40
@@ -13350,6 +13548,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
 		icon = GFX_generic_focus_treaty_sign
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = BEL_n_estate_disowned }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13408,6 +13607,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
 		icon = GFX_focus_AUS_diplomatic_effort
 		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_POLITICAL }
 		available = {
 			has_country_flag = BEL_n_preference_surrendered
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -13463,6 +13663,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_no_empire_for_a_small_state }
 		icon = GFX_focus_generic_annex_country
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		available = {
 			has_country_flag = BEL_n_conference_invited
 			NOT = { has_country_flag = BEL_congo_annexed }
@@ -13519,6 +13720,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_a_kingdom_of_nine_provinces_only }
 		icon = GFX_focus_generic_public_meetings
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 50
@@ -13570,6 +13772,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_nothing_left_to_deny }
 		icon = GFX_focus_generic_self_management
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = 40
@@ -13616,6 +13819,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_garde_civique_in_the_provinces focus = BELDNC_n_officers_who_came_from_the_ranks }
 		icon = GFX_goal_nested_fortifications
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -75
@@ -13678,6 +13882,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_the_redoubt_is_the_country }
 		icon = GFX_focus_generic_mountain_fortification
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_n_full_estimate_voted }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -13744,6 +13949,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_the_frontier_is_the_meuse }
 		icon = GFX_focus_generic_coastal_fort
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { has_country_flag = BEL_n_full_estimate_voted }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -13814,6 +14020,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_frontier_is_the_meuse focus = BELDNC_n_the_redoubt_is_the_country }
 		icon = GFX_goal_trench_artillery
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -60
@@ -13880,6 +14087,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_frontier_is_the_meuse focus = BELDNC_n_the_redoubt_is_the_country }
 		icon = GFX_goal_generic_fortify_city
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -13961,6 +14169,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_nothing_left_to_deny focus = BELDNC_n_a_kingdom_of_nine_provinces_only }
 		icon = GFX_goal_generic_small_arms
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -14005,6 +14214,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_nothing_left_to_deny focus = BELDNC_n_a_kingdom_of_nine_provinces_only }
 		icon = GFX_focus_generic_full_social_mobilization
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		available = { has_country_flag = BEL_n_lottery_condemned }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -14070,6 +14280,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_officers_who_came_from_the_ranks }
 		icon = GFX_focus_generic_home_defense
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -14129,6 +14340,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_the_garde_civique_in_the_provinces }
 		icon = GFX_goal_generic_officers
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -50
@@ -14183,6 +14395,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_frontier_is_the_meuse focus = BELDNC_n_the_redoubt_is_the_country }
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -40
@@ -14238,6 +14451,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_the_appreciation_goes_to_the_five }
 		icon = GFX_focus_generic_public_meetings
 		cost = 5
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = BEL_n_danger_named }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
@@ -14292,6 +14506,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_n_the_appreciation_is_read_in_the_chamber }
 		icon = GFX_generic_focus_treaty_sign
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = { has_country_flag = BEL_n_danger_named }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
@@ -14348,6 +14563,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_appreciation_is_read_in_the_chamber focus = BELDNC_n_the_appreciation_goes_to_the_five }
 		icon = GFX_focus_generic_treaty
 		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = 50
@@ -14406,6 +14622,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_appreciation_is_read_in_the_chamber focus = BELDNC_n_the_appreciation_goes_to_the_five }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 50
@@ -14482,6 +14699,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_n_the_appreciation_is_read_in_the_chamber focus = BELDNC_n_the_appreciation_goes_to_the_five }
 		icon = GFX_goal_generic_national_unity
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = {
 			check_variable = {
 				var = BEL_dnc_months
@@ -14550,6 +14768,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_generic_build_airforce
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = { has_country_flag = BEL_dnc_fork_reached }
 		ai_will_do = {
 			factor = 1
@@ -14612,6 +14831,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_air_the_machines_come_from_france }
 		icon = GFX_goal_generic_propaganda
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -14665,6 +14885,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_antwerp_devil focus = BELDNC_air_the_machines_come_from_france }
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -14720,6 +14941,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_air_the_antwerp_devil }
 		icon = GFX_goal_generic_air_fighter
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -14776,6 +14998,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_company_of_aerostiers }
 		icon = GFX_focus_generic_air_research_boost
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -14834,6 +15057,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_air_the_note_to_the_guarantors }
 		icon = GFX_focus_generic_pilot_training
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -14916,6 +15140,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_air_the_school_at_brasschaat }
 		icon = GFX_focus_generic_conference
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -14971,6 +15196,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_antwerp_devil focus = BELDNC_air_the_machines_come_from_france }
 		icon = GFX_goal_generic_air_production
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15031,6 +15257,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_school_at_brasschaat focus = BELDNC_air_the_note_to_the_guarantors }
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15095,6 +15322,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_school_at_brasschaat focus = BELDNC_air_the_note_to_the_guarantors }
 		icon = GFX_goal_CAN_coa_air_force
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15171,6 +15399,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_school_at_brasschaat focus = BELDNC_air_the_note_to_the_guarantors }
 		icon = GFX_focus_generic_air_research_boost
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15239,6 +15468,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_school_at_brasschaat focus = BELDNC_air_the_note_to_the_guarantors }
 		icon = GFX_goal_generic_air_bomber
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15309,6 +15539,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_pilots_brevet focus = BELDNC_air_the_compagnie_des_aviateurs focus = BELDNC_air_the_machine_that_sees focus = BELDNC_air_the_river_from_above }
 		icon = GFX_focus_generic_air_bases
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15380,6 +15611,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_air_the_pilots_brevet focus = BELDNC_air_the_compagnie_des_aviateurs focus = BELDNC_air_the_machine_that_sees focus = BELDNC_air_the_river_from_above }
 		icon = GFX_goal_generic_air_fighter
 		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15469,6 +15701,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_the_guarantee }
 		icon = GFX_goal_navy_decision
 		cost = 4
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		available = { has_country_flag = BEL_dnc_systems_open }
 		ai_will_do = {
 			factor = 5
@@ -15549,6 +15782,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
 		icon = GFX_focus_ron_trade_navy
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = -20
@@ -15628,6 +15862,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_estimates_are_read_out focus = BELDNC_m_the_torpedo_boats }
 		icon = GFX_goal_generic_build_navy
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -20
@@ -15710,6 +15945,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
 		icon = GFX_goal_generic_navy_cruiser
 		cost = 4
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 9 }
 		completion_reward = {
 			add_political_power = -15
@@ -15787,6 +16023,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
 		icon = GFX_focus_generic_manpower
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
 			add_political_power = -25
@@ -15864,6 +16101,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_packets_are_the_navy focus = BELDNC_m_liable_at_sea focus = BELDNC_m_the_school_ship focus = BELDNC_m_the_officers_of_the_kingdom }
 		icon = GFX_goal_generic_occupy_states_coastal
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -15947,6 +16185,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_m_the_lake_and_the_frontier }
 		icon = GFX_focus_ron_patrol_boats
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -30
@@ -16036,6 +16275,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_m_the_gunboats_for_the_river }
 		icon = GFX_focus_generic_africa_infrastructure
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -25
@@ -16134,6 +16374,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_question_of_a_fleet }
 		icon = GFX_focus_AUS_promote_admirals
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -16204,6 +16445,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_m_the_torpedo_boats }
 		icon = GFX_goal_naval_spending_bill
 		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -50
@@ -16285,6 +16527,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_m_the_estimates_are_read_out }
 		icon = GFX_goal_generic_multiple_ships
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -35
@@ -16393,6 +16636,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_estimates_are_read_out focus = BELDNC_m_the_torpedo_boats }
 		icon = GFX_focus_generic_coastal_fort
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -25
@@ -16465,6 +16709,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_estimates_are_read_out focus = BELDNC_m_the_torpedo_boats }
 		icon = GFX_focus_generic_mine_warfare
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -40
@@ -16552,6 +16797,7 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_m_the_gunboats_for_the_river focus = BELDNC_m_the_lake_and_the_frontier }
 		icon = GFX_focus_bo_big_navy
 		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -60
