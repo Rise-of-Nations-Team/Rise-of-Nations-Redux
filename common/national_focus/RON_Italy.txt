@@ -7120,6 +7120,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ITADNC_w_the_two_colonies }
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 5
+		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -7157,7 +7158,13 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			country_event = { id = ita_dnc.509 days = 10 }
-		}
+					if = {
+				limit = { NOT = { owns_state = 44 } }
+				add_state_claim = 44
+			}
+			custom_effect_tooltip = ITA_w_tt_valona_claimed
+			add_named_threat = { threat = 2 name = ITA_w_threat_valona }
+}
 	}
 
 	focus = {
@@ -7527,6 +7534,15 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_w_the_march_back_to_adwa focus = ITADNC_w_the_treaty_with_menelik }
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
+		bypass = {
+			OR = {
+				owns_state = 448
+				owns_state = 661
+				owns_state = 663
+			}
+		}
+		cancel_if_invalid = yes
+		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			OTT = { exists = yes }
@@ -7570,7 +7586,21 @@ focus_tree = {
 				category = naval_equipment
 			}
 			add_opinion_modifier = { target = ENG modifier = improve_relation }
-		}
+					if = {
+				limit = { NOT = { owns_state = 448 } }
+				add_state_claim = 448
+			}
+			if = {
+				limit = { NOT = { owns_state = 661 } }
+				add_state_claim = 661
+			}
+			if = {
+				limit = { NOT = { owns_state = 663 } }
+				add_state_claim = 663
+			}
+			custom_effect_tooltip = ITA_w_tt_tripoli_claimed
+			add_named_threat = { threat = 2 name = ITA_w_threat_tripoli }
+}
 	}
 
 	focus = {
@@ -7772,6 +7802,7 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_goal_generic_amphibious_assault
 		cost = 5
+		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_NAVY_XP }
 		available = {
 			has_war_with = OTT
@@ -7818,7 +7849,18 @@ focus_tree = {
 				}
 			}
 			country_event = { id = ita_dnc.506 days = 5 }
-		}
+					if = {
+				limit = { NOT = { owns_state = 164 } }
+				add_state_claim = 164
+			}
+			custom_effect_tooltip = ITA_w_tt_islands_claimed
+			create_wargoal = {
+				type = take_state_focus
+				target = OTT
+				generator = { 164 }
+			}
+			add_named_threat = { threat = 3 name = ITA_w_threat_islands }
+}
 	}
 
 	focus = {
@@ -7829,6 +7871,12 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_w_the_ultimatum_to_the_porte focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_focus_generic_treaty
 		cost = 5
+		bypass = {
+			OR = {
+				has_war_with = OTT
+			}
+		}
+		cancel_if_invalid = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
 		available = {
 			has_war_with = OTT
@@ -7929,7 +7977,20 @@ focus_tree = {
 				days = 20
 			}
 			custom_effect_tooltip = ITA_w_ouchy_tt
-		}
+					if = {
+				limit = { owns_state = 448 }
+				add_state_core = 448
+			}
+			if = {
+				limit = { owns_state = 661 }
+				add_state_core = 661
+			}
+			if = {
+				limit = { owns_state = 663 }
+				add_state_core = 663
+			}
+			custom_effect_tooltip = ITA_w_tt_ouchy_cored
+}
 	}
 
 	focus = {
@@ -8037,7 +8098,20 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}
+					if = {
+				limit = { owns_state = 448 }
+				add_state_core = 448
+			}
+			if = {
+				limit = { owns_state = 661 }
+				add_state_core = 661
+			}
+			if = {
+				limit = { owns_state = 663 }
+				add_state_core = 663
+			}
+			custom_effect_tooltip = ITA_w_tt_fourth_shore_cored
+}
 	}
 	focus = {
 		id = ITADNC_z_the_chamber_adjourned_indefinitely
@@ -12164,7 +12238,17 @@ focus_tree = {
 			ITA_chamber_bands = yes
 			country_event = { id = ita_dnc.1106 days = 10 }
 			country_event = { id = ita_dnc.863 days = 25 }
-		}
+					promote_character = ITA_giovanni_giolitti
+			set_party_name = {
+				ideology = democratic
+				long_name = ITA_liberal_left_long
+				name = ITA_liberal_left
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+}
 	}
 
 	focus = {
@@ -13017,7 +13101,21 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-		}
+					promote_character = ITA_vittorio_emanuele_iii
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = ITA_constitutional_right_long
+				name = ITA_constitutional_right
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+}
 	}
 
 	focus = {
@@ -14024,7 +14122,18 @@ focus_tree = {
 			ITA_piazza_bands = yes
 			ITA_chamber_bands = yes
 			country_event = { id = ita_dnc.1317 days = 20 }
-		}
+					promote_character = ITA_francesco_saverio_nitti
+			set_party_name = {
+				ideology = democratic
+				long_name = ITA_popular_bloc_long
+				name = ITA_popular_bloc
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			set_cosmetic_tag = ITA_ALL
+}
 	}
 
 	focus = {
@@ -14232,6 +14341,7 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_z_the_idea_nazionale focus = ITADNC_z_the_paper_read_aloud focus = ITADNC_z_the_lecture_and_the_lantern focus = ITADNC_z_the_association_of_the_nation }
 		icon = GFX_goal_generic_demand_territory
 		cost = 5
+		will_lead_to_war_with = AUH
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = {
 			factor = 8
@@ -14281,7 +14391,21 @@ focus_tree = {
 				popularity = 0.05
 			}
 			country_event = { id = ita_dnc.1403 days = 35 }
-		}
+					if = {
+				limit = { NOT = { owns_state = 867 } }
+				add_state_claim = 867
+			}
+			if = {
+				limit = { NOT = { owns_state = 993 } }
+				add_state_claim = 993
+			}
+			if = {
+				limit = { NOT = { owns_state = 736 } }
+				add_state_claim = 736
+			}
+			custom_effect_tooltip = ITA_z_tt_provinces_claimed
+			add_named_threat = { threat = 4 name = ITA_z_threat_provinces }
+}
 	}
 
 	focus = {
@@ -15145,6 +15269,7 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_z_the_sea_that_must_be_ours focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_territory_or_war
 		cost = 5
+		will_lead_to_war_with = AUH
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 7 }
 		completion_reward = {
@@ -15196,7 +15321,12 @@ focus_tree = {
 				name = ITA_z_threat_the_country_that_cannot_climb_down
 			}
 			country_event = { id = ita_dnc.1413 days = 20 }
-		}
+					create_wargoal = {
+				type = take_claimed_state
+				target = AUH
+			}
+			add_named_threat = { threat = 5 name = ITA_z_threat_no_climbdown }
+}
 	}
 
 	focus = {
@@ -15208,6 +15338,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_navy_battleship
 		cost = 5
+		will_lead_to_war_with = AUH
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -15257,7 +15388,17 @@ focus_tree = {
 				popularity = 0.04
 			}
 			country_event = { id = ita_dnc.1414 days = 25 }
-		}
+					if = {
+				limit = { NOT = { owns_state = 163 } }
+				add_state_claim = 163
+			}
+			if = {
+				limit = { NOT = { owns_state = 939 } }
+				add_state_claim = 939
+			}
+			custom_effect_tooltip = ITA_z_tt_adriatic_claimed
+			add_named_threat = { threat = 4 name = ITA_z_threat_adriatic }
+}
 	}
 
 	focus = {
@@ -15331,7 +15472,51 @@ focus_tree = {
 				category = land_doctrine
 			}
 			country_event = { id = ita_dnc.1415 days = 15 }
-		}
+					promote_character = ITA_enrico_corradini
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = ITA_nationalist_union_long
+				name = ITA_nationalist_union
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			set_cosmetic_tag = ITA_GRE
+			if = {
+				limit = { owns_state = 448 }
+				add_state_core = 448
+			}
+			if = {
+				limit = { owns_state = 661 }
+				add_state_core = 661
+			}
+			if = {
+				limit = { owns_state = 663 }
+				add_state_core = 663
+			}
+			if = {
+				limit = { owns_state = 867 }
+				add_state_core = 867
+			}
+			if = {
+				limit = { owns_state = 993 }
+				add_state_core = 993
+			}
+			if = {
+				limit = { owns_state = 736 }
+				add_state_core = 736
+			}
+			if = {
+				limit = { owns_state = 44 }
+				add_state_core = 44
+			}
+			custom_effect_tooltip = ITA_z_tt_greater_italy_cored
+}
 	}
 
 	focus = {
