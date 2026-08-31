@@ -48,6 +48,7 @@ focus_tree = {
 		x = 42
 		y = 0
 		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -114,6 +115,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_one_flag_one_fleet_one_throne
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 50
@@ -185,6 +187,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_a_paardebergs_battle_honour }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
@@ -241,6 +244,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_coronation_conference }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_alaska_award_accepted
@@ -279,6 +283,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_alaska_award }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_head_tax_ledger
@@ -311,6 +316,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_the_five_hundred_dollar_head_tax
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 50
@@ -369,6 +375,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_dundonald_goes_home }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -413,6 +420,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_autonomy_bills }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_fortresses_transferred
@@ -507,6 +515,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_the_keys_of_halifax_and_esquimalt
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			276 = {
@@ -538,6 +547,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_niagara_at_cost }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -575,6 +585,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_lemieux_act }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = JAP modifier = small_increase }
@@ -609,6 +620,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_riot_on_powell_street }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -664,6 +676,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_the_imperial_conference_of_1907
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_a_the_intermediate_tariff
@@ -707,6 +720,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_a_fieldings_three_columns }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -764,6 +778,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_panic_of_1907 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -806,6 +821,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_tercentenary_of_quebec }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_three_from_each_side
@@ -856,6 +872,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_boundary_waters_treaty }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -898,6 +915,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_boundary_waters_treaty }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 25
@@ -936,6 +954,7 @@ focus_tree = {
 			focus = CANDNC_a_external_affairs_above_a_shop_on_bank_street
 		}
 		mutually_exclusive = { focus = CANDNC_a_neither_ships_nor_cheque }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -978,6 +997,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_a_naval_service_of_our_own }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -1036,6 +1056,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_a_the_fleet_unit_promised }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
@@ -1154,6 +1175,7 @@ focus_tree = {
 			focus = CANDNC_a_external_affairs_above_a_shop_on_bank_street
 		}
 		mutually_exclusive = { focus = CANDNC_a_a_naval_service_of_our_own }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -1212,6 +1234,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_neither_ships_nor_cheque }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = -0.03
@@ -1256,6 +1279,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_a_every_case_on_its_own_merits
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_unguarded_dominion
@@ -1375,6 +1399,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_a_the_coronation_conference }
 		mutually_exclusive = { focus = CANDNC_a_the_blair_plan }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_national_transcontinental
@@ -1421,6 +1446,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_the_national_transcontinental
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			473 = {
@@ -1469,6 +1495,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_grand_trunk_pacific }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -1509,6 +1536,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_camps_on_the_line }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -1549,6 +1577,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_a_the_national_transcontinental
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_blair_plan
@@ -1594,6 +1623,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_blair_plan }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			464 = {
@@ -1637,6 +1667,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_halifax_the_winter_port }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -1683,6 +1714,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_the_board_of_railway_commissioners
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 15000
@@ -1718,6 +1750,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_a_the_autonomy_bills }
 		mutually_exclusive = { focus = CANDNC_a_the_province_of_buffalo }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_two_provinces
@@ -1748,6 +1781,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_two_provinces_by_a_meridian }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_prairie_machines
@@ -1776,6 +1810,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_rutherford_and_scott }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -1805,6 +1840,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_the_provinces_take_the_telephones
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_prairie_colleges
@@ -1848,6 +1884,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_a_the_autonomy_bills }
 		mutually_exclusive = { focus = CANDNC_a_two_provinces_by_a_meridian }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_buffalo
@@ -1879,6 +1916,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_province_of_buffalo }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -1912,6 +1950,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_haultain_forms_the_government
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_a_buffalos_own_land
@@ -1934,6 +1973,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_land_belongs_to_buffalo }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_buffalo_bloc
@@ -1963,6 +2003,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_a_a_natal_act_for_british_columbia
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_increase }
@@ -2004,6 +2045,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_lemieux_mission }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_door_shut_by_timetable
@@ -2036,6 +2078,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_continuous_journey }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = QIN modifier = medium_increase }
@@ -2071,6 +2114,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_a_the_riot_on_powell_street }
 		mutually_exclusive = { focus = CANDNC_a_the_lemieux_mission }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_decrease }
@@ -2118,6 +2162,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_a_a_natal_act_for_british_columbia
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -2175,6 +2220,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_a_the_door_shut_by_statute }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_a_the_exclusion_league
@@ -2216,6 +2262,7 @@ focus_tree = {
 			focus = CANDNC_d_not_one_more_man_for_the_transvaal
 			focus = CANDNC_p_the_other_ocean
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = { has_country_flag = CAN_dnc_question_posed }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -2344,6 +2391,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_one_flag_one_fleet_one_throne
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_empires_willing_partner
@@ -2413,6 +2461,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_coronation_conference_three_yeses
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = {
 			OR = {
 				has_country_flag = CAN_dnc_imperial_council_seat
@@ -2479,6 +2528,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_coronation_conference_three_yeses
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -2528,6 +2578,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_coronation_conference_three_yeses
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			OR = {
 				has_country_flag = CAN_dnc_zollverein_offered
@@ -2585,6 +2636,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_a_seat_on_the_imperial_council
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.05
@@ -2656,6 +2708,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_b_ships_under_the_white_ensign
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -2716,6 +2769,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_defence_contribution }
 		mutually_exclusive = { focus = CANDNC_b_the_cheque_to_the_admiralty }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_navy_ships
@@ -2769,6 +2823,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_imperial_council_sits }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			has_country_flag = CAN_dnc_imperial_council_seat
 		}
@@ -2836,6 +2891,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_defence_contribution }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
@@ -2877,6 +2933,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_cheque_to_the_admiralty }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_fortresses_imperial
@@ -2923,6 +2980,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_chamberlain_goes_to_the_country
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -2956,6 +3014,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_ships_under_the_white_ensign
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_b_the_royal_naval_reserve
@@ -2991,6 +3050,7 @@ focus_tree = {
 			focus = CANDNC_b_chamberlain_goes_to_the_country
 		}
 		mutually_exclusive = { focus = CANDNC_b_the_free_traders_hold }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		available = {
 			has_country_flag = CAN_dnc_zollverein_carried
 		}
@@ -3033,6 +3093,7 @@ focus_tree = {
 			focus = CANDNC_b_chamberlain_goes_to_the_country
 		}
 		mutually_exclusive = { focus = CANDNC_b_the_empires_granary }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = CAN_dnc_zollverein_dead }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -3077,6 +3138,7 @@ focus_tree = {
 			focus = CANDNC_b_the_ligue_nationaliste_marches
 		}
 		mutually_exclusive = { focus = CANDNC_b_the_orange_majority_governs }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_schools_guaranteed
@@ -3127,6 +3189,7 @@ focus_tree = {
 			focus = CANDNC_b_the_ligue_nationaliste_marches
 		}
 		mutually_exclusive = { focus = CANDNC_b_buy_quebec_with_the_schools }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_schools_provincial
@@ -3161,6 +3224,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_ligue_nationaliste_marches
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_r_the_sydney_contracts
@@ -3199,6 +3263,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_empires_granary }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			466 = {
@@ -3240,6 +3305,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_free_traders_hold }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_us_tariff_war
@@ -3285,6 +3351,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_buy_quebec_with_the_schools }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_sixty_five
@@ -3324,6 +3391,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_orange_majority_governs }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = -0.02
@@ -3362,6 +3430,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_squadron_stays_at_halifax
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -3416,6 +3485,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_furnaces_of_sydney }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_b_the_nickel_of_the_empire
@@ -3459,6 +3529,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_royal_naval_reserve_of_canada
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 50
@@ -3510,6 +3581,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_wheat_for_liverpool_at_preference
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_marquis_wheat
@@ -3540,6 +3612,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_hold_the_imperial_tariff_anyway
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = medium_decrease }
@@ -3595,6 +3668,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_sixty_five_seats_guaranteed
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -3656,6 +3730,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_the_nationalist_press_sued }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_tercentenary_imperial
@@ -3692,6 +3767,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_sudbury_refines_at_home }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -3743,6 +3819,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_naval_scare_of_1909 }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		available = {
 			OR = {
 				has_country_flag = CAN_dnc_b_admiralty_one
@@ -3877,6 +3954,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_pacific_cable_and_marconi
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_dominion_arsenal
@@ -3927,6 +4005,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_fleet_unit_under_the_white_ensign
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 25
@@ -3958,6 +4037,7 @@ focus_tree = {
 			focus = CANDNC_b_the_imperial_munitions_contracts
 		}
 		mutually_exclusive = { focus = CANDNC_b_siftons_agents_keep_paying }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_british_west
@@ -3999,6 +4079,7 @@ focus_tree = {
 			focus = CANDNC_b_the_imperial_munitions_contracts
 		}
 		mutually_exclusive = { focus = CANDNC_b_a_british_west }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_open_west
@@ -4034,6 +4115,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_the_imperial_munitions_contracts
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
@@ -4110,6 +4192,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_a_british_west }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 30000
@@ -4138,6 +4221,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_siftons_agents_keep_paying }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			469 = {
@@ -4174,6 +4258,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_b_a_dreadnought_for_the_king }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_guarded_by_treaty
@@ -4234,6 +4319,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_imperial_secretariat }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_state_claim = 331
@@ -4276,6 +4362,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_canadian_yards_for_imperial_hulls
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_fortresses_imperial
@@ -4326,6 +4413,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_b_the_tenth_province }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		available = {
 			has_country_flag = CAN_dnc_newfoundland_offered
 		}
@@ -4389,6 +4477,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_b_the_admiraltys_guarantee }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_corps_commander_role = {
@@ -4528,6 +4617,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_esquimalt_manned_by_canadians
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_corps_commander_role = {
@@ -4682,6 +4772,7 @@ focus_tree = {
 			focus = CANDNC_d_not_one_more_man_for_the_transvaal
 			focus = CANDNC_p_the_other_ocean
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { has_country_flag = CAN_dnc_question_posed }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -4754,6 +4845,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_c_unrestricted_reciprocity }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_alaska_award_accepted
@@ -4813,6 +4905,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_accept_the_award_with_grace }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_american_capital
@@ -4854,6 +4947,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c_accept_the_award_with_grace }
 		mutually_exclusive = { focus = CANDNC_c_the_dingley_wall_holds }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			has_country_flag = CAN_dnc_us_reciprocity_offered
 		}
@@ -4920,6 +5014,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_c_the_treaty_of_natural_products
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			has_country_flag = CAN_dnc_us_reciprocity_refused
 		}
@@ -4974,6 +5069,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_dollar_comes_north }
 		mutually_exclusive = { focus = CANDNC_c_hills_lines_from_st_paul }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_national_transcontinental
@@ -5012,6 +5108,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_dollar_comes_north }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_afl_unions
@@ -5057,6 +5154,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_dollar_comes_north }
 		mutually_exclusive = { focus = CANDNC_c_hayss_line_to_prince_rupert }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_hill_lines
@@ -5122,6 +5220,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_hayss_line_to_prince_rupert }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			471 = { }
@@ -5165,6 +5264,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_international_unions }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_american_west
@@ -5212,6 +5312,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_hills_lines_from_st_paul }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			swap_ideas = {
@@ -5281,6 +5382,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_north_coast_port }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_c_bridge_collapse_tt
@@ -5334,6 +5436,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_the_last_best_west_for_americans
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_resource = {
@@ -5379,6 +5482,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_grain_goes_by_duluth }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -5418,6 +5522,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_bridge_falls_at_quebec }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_c_the_portland_terminus
@@ -5472,6 +5577,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_the_winnipeg_exchange_loses_its_grip
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_sintaluta_precedent
@@ -5512,6 +5618,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_silver_of_cobalt }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -5579,6 +5686,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_under_the_monroe_doctrine }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_fortresses_transferred
@@ -5651,6 +5759,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_fortresses_are_ottawas }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.05
@@ -5700,6 +5809,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_fortresses_are_ottawas }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_vancouver_riot
@@ -5756,6 +5866,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_the_coast_follows_washingtons_line
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_customs_union_usa
@@ -5887,6 +5998,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_customs_union }
 		mutually_exclusive = { focus = CANDNC_c_defy_london }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_bowed_to_london
@@ -5961,6 +6073,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_customs_union }
 		mutually_exclusive = { focus = CANDNC_c_bow_to_london }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_no_veto_but_our_own
@@ -6024,6 +6137,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_bow_to_london }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_ijc_created
@@ -6065,6 +6179,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_bow_to_london }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_us_reciprocity
@@ -6122,6 +6237,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_c_defy_london }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -6189,6 +6305,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_reciprocity_without_the_union
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -6236,6 +6353,7 @@ focus_tree = {
 			focus = CANDNC_c_the_treaty_of_union
 			focus = CANDNC_c_the_associate_not_the_state
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.05
@@ -6279,6 +6397,7 @@ focus_tree = {
 			focus = CANDNC_c_the_plebiscite_on_union
 			focus = CANDNC_c_the_associate_not_the_state
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
@@ -6338,6 +6457,7 @@ focus_tree = {
 			focus = CANDNC_c_the_plebiscite_on_union
 			focus = CANDNC_c_the_treaty_of_union
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
@@ -6395,6 +6515,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_c_the_loyalists_answered }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_crown_east_commerce_south
@@ -6492,6 +6613,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_plebiscite_on_union }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.10
@@ -6560,6 +6682,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_treaty_of_union }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
@@ -6611,6 +6734,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_associate_not_the_state }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_junior_partner
@@ -6666,6 +6790,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_campaign }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		available = { has_country_flag = CAN_dnc_c_campaign_closed }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -6703,6 +6828,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_terms_of_union }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -6755,6 +6881,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_the_junior_partner_of_a_giant
 		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_crown_leaves_tt
@@ -6850,6 +6977,7 @@ focus_tree = {
 		cost = 20
 		prerequisite = { focus = CANDNC_c_the_vote }
 		mutually_exclusive = { focus = CANDNC_c_the_west_goes_south }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		available = { has_country_flag = CAN_dnc_c_vote_yes }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -6918,6 +7046,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_c_the_vote }
 		mutually_exclusive = { focus = CANDNC_c_admission_to_the_union }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			has_country_flag = CAN_dnc_c_vote_no
 			has_country_flag = CAN_dnc_american_west
@@ -6993,6 +7122,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_c_the_junior_partner_by_default
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
 		available = { has_country_flag = CAN_dnc_c_treaty_ratified }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -7078,6 +7208,7 @@ focus_tree = {
 		cost = 20
 		prerequisite = { focus = CANDNC_c_the_senate_votes }
 		mutually_exclusive = { focus = CANDNC_c_nine_new_states }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		available = { has_country_flag = CAN_dnc_c_treaty_rejected }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -7178,6 +7309,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_the_governor_general_goes_home
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_northern_associate_tt
@@ -7291,6 +7423,7 @@ focus_tree = {
 			focus = CANDNC_c_unrestricted_reciprocity
 			focus = CANDNC_p_the_other_ocean
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_question_posed }
 		ai_will_do = {
 			factor = 10
@@ -7397,6 +7530,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_not_one_more_man_for_the_transvaal
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_commons_holds_the_sword
@@ -7455,6 +7589,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_not_one_more_man_for_the_transvaal
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -7499,6 +7634,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_motion_of_13_march_carried
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 40
@@ -7558,6 +7694,7 @@ focus_tree = {
 			focus = CANDNC_d_the_motion_of_13_march_carried
 		}
 		prerequisite = { focus = CANDNC_d_a_private_regiment_refused }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -7613,6 +7750,7 @@ focus_tree = {
 			focus = CANDNC_d_the_sting_of_the_alaska_award
 		}
 		mutually_exclusive = { focus = CANDNC_d_the_power_to_treat }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_alaska_denounced
@@ -7667,6 +7805,7 @@ focus_tree = {
 			focus = CANDNC_d_the_sting_of_the_alaska_award
 		}
 		mutually_exclusive = { focus = CANDNC_d_denounce_the_arbitration }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = FRA modifier = small_increase }
@@ -7721,6 +7860,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_denounce_the_arbitration }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -7781,6 +7921,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_sting_of_the_alaska_award
 		}
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_militia_council
@@ -7834,6 +7975,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_power_to_treat }
 		mutually_exclusive = { focus = CANDNC_d_the_commercial_treaty_power }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = {
 			has_country_flag = CAN_dnc_treaty_power_refused
 		}
@@ -7917,6 +8059,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_d_if_london_refuses_we_sign_anyway
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = {
 			OR = {
 				has_country_flag = CAN_dnc_treaty_power_limited
@@ -7995,6 +8138,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_yukon_field_force_returns
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_posts_in_stone_tt
@@ -8040,6 +8184,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_dundonald_goes_home }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_fortresses_transferred
@@ -8108,6 +8253,7 @@ focus_tree = {
 			focus = CANDNC_d_if_london_refuses_we_sign_anyway
 			focus = CANDNC_d_the_commercial_treaty_power
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -8176,6 +8322,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_line_at_the_chilkoot }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_alaska_claimed
@@ -8223,6 +8370,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_keys_of_halifax_and_esquimalt
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_own_fleet_begun
@@ -8316,6 +8464,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_agents_before_ambassadors }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -8381,6 +8530,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_fisheries_protection_fleet_armed
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.02
@@ -8426,6 +8576,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_fisheries_protection_fleet_armed
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = DNC_Has_Declined_Imperial_Federation
@@ -8511,6 +8662,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_the_independence_resolution }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 		available = {
 			has_country_flag = CAN_dnc_dominion_chastened
 			NOT = { has_country_flag = CAN_dnc_independent }
@@ -8646,6 +8798,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_the_independence_resolution }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -8699,6 +8852,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_the_independence_resolution }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -8753,6 +8907,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_independence_resolution }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -8791,6 +8946,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_loyalists_protest }
 		prerequisite = { focus = CANDNC_d_the_independence_resolution }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -8861,6 +9017,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_negotiate_alone_with_washington
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -8903,6 +9060,7 @@ focus_tree = {
 			focus = CANDNC_d_negotiate_alone_with_washington
 		}
 		prerequisite = { focus = CANDNC_d_negotiate_alone_with_london }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -8992,6 +9150,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_negotiate_alone_with_london }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9038,6 +9197,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_the_loan_denied_in_london }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9100,6 +9260,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_the_loan_denied_in_london }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9209,6 +9370,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_tokyo_treats_directly }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9244,6 +9406,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_naval_militia }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9281,6 +9444,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_imperial_preference_lapses
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		available = {
 			has_country_flag = CAN_dnc_independent
 			NOT = { is_subject = yes }
@@ -9395,6 +9559,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_d_a_navy_from_esquimalt }
 		mutually_exclusive = { focus = CANDNC_d_the_republic_of_canada }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9489,6 +9654,7 @@ focus_tree = {
 		cost = 15
 		prerequisite = { focus = CANDNC_d_a_navy_from_esquimalt }
 		mutually_exclusive = { focus = CANDNC_d_the_kingdom_of_canada }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		available = { has_country_flag = CAN_dnc_independent }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -9602,6 +9768,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_marquis_wheat }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		available = {
 			has_country_flag = CAN_dnc_independent
 			ENG = { owns_state = 331 }
@@ -9649,6 +9816,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_kingdom_of_canada }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_crown_advised_at_home
@@ -9709,6 +9877,7 @@ focus_tree = {
 			focus = CANDNC_d_the_kingdom_of_canada
 			focus = CANDNC_d_the_republic_of_canada
 		}
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 25
@@ -9747,6 +9916,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_republic_of_canada }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
@@ -9803,6 +9973,7 @@ focus_tree = {
 			focus = CANDNC_d_the_governor_general_named_in_ottawa
 		}
 		prerequisite = { focus = CANDNC_d_a_flag_of_our_own }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
@@ -9908,6 +10079,7 @@ focus_tree = {
 		cost = 20
 		prerequisite = { focus = CANDNC_d_the_first_president }
 		prerequisite = { focus = CANDNC_d_a_flag_of_our_own }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
@@ -10015,6 +10187,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_not_one_more_man_for_the_transvaal
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_binational
@@ -10087,6 +10260,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_one_flag_one_fleet_one_throne
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_unilingual
@@ -10149,6 +10323,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_a_country_of_two_nations }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_three_articles
@@ -10197,6 +10372,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_the_ligue_nationaliste_is_founded
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 15000
@@ -10261,6 +10437,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_b_one_flag_one_fleet_one_throne
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -10287,6 +10464,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_gouin_takes_quebec }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -10321,6 +10499,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_delegate_apostolic }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = -0.05
@@ -10378,6 +10557,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_bourassa_beats_gouin_in_saint_jacques
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 25
@@ -10415,6 +10595,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_the_ligue_nationaliste_is_founded
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -10479,6 +10660,7 @@ focus_tree = {
 			focus = CANDNC_e_le_nationaliste_and_the_acjc
 			focus = CANDNC_e_the_ligues_programme
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_schools_guaranteed
@@ -10540,6 +10722,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_clause_sixteen_as_written }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			467 = { }
@@ -10598,6 +10781,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_the_ligues_programme }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_opinion_modifier = { target = FRA modifier = medium_increase }
@@ -10666,6 +10850,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_e_the_tercentenary_as_an_imperial_fete
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_tercentenary_french
@@ -10727,6 +10912,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_one_language_for_one_dominion
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -10787,6 +10973,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_the_answer_voted_down }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_english_schoolhouse
@@ -10850,6 +11037,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_the_regina_ordinance_for_all
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_r_the_lords_day_act
@@ -10894,6 +11082,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_fallons_church }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -10949,6 +11138,7 @@ focus_tree = {
 			focus = CANDNC_e_the_sixty_five_seats_questioned
 		}
 		mutually_exclusive = { focus = CANDNC_e_the_sixty_five_seats_locked }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		available = { has_country_flag = CAN_dnc_e_london_opens_51 }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -11004,6 +11194,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_the_sunday_law_enforced }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_fallon
@@ -11057,6 +11248,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_nationalist_ministry }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		available = { has_country_flag = CAN_dnc_binational }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -11113,6 +11305,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_bilingual_civil_service }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		available = { has_country_flag = CAN_dnc_binational }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -11189,6 +11382,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_the_representation_act_amended
 		}
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MANPOWER }
 		available = { has_country_flag = CAN_dnc_unilingual }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -11249,6 +11443,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_e_no_navy_without_quebecs_assent
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_e_sf2_gilded
@@ -11281,6 +11476,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_a_special_status_for_quebec }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_quebec_special_status
@@ -11345,6 +11541,7 @@ focus_tree = {
 			focus = CANDNC_e_the_tercentenary_of_1608_a_french_fete
 			focus = CANDNC_e_the_tercentenary_as_an_imperial_fete
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -11410,6 +11607,7 @@ focus_tree = {
 			focus = CANDNC_e_the_naval_question_comes_to_quebec
 		}
 		mutually_exclusive = { focus = CANDNC_e_the_gilded_minority }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_no_navy_1909
@@ -11462,6 +11660,7 @@ focus_tree = {
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_statute_of_quebec }
 		prerequisite = { focus = CANDNC_e_a_nationalist_canada }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
@@ -11561,6 +11760,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_french_from_the_red_river_west
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_e_a_bilingual_interior
@@ -11623,6 +11823,7 @@ focus_tree = {
 			focus = CANDNC_e_french_from_the_red_river_west
 			focus = CANDNC_e_the_tercentenary_of_1608_a_french_fete
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_e_the_bilingual_civil_service
@@ -11675,6 +11876,7 @@ focus_tree = {
 			focus = CANDNC_e_a_french_regiment_of_the_line
 			focus = CANDNC_e_the_nationalist_ministry
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_no_navy_1909
@@ -11745,6 +11947,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_autonomy_in_the_empire }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
@@ -11832,6 +12035,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_coerce_quebec }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_navy_forced
@@ -11899,6 +12103,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_the_naval_contribution_over_quebecs_head
 		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.10
@@ -11966,6 +12171,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_e_two_peoples_one_order_in_council
 		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		available = { has_country_flag = CAN_dnc_e_crisis_open }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -12036,6 +12242,7 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_riot_act_in_montreal }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		available = {
 			NOT = { has_war_with = QUE }
 		}
@@ -12135,6 +12342,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_the_gilded_minority }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			466 = { }
@@ -12168,6 +12376,7 @@ focus_tree = {
 			focus = CANDNC_e_gouins_machine
 			focus = CANDNC_e_the_navy_deferred_the_contracts_placed
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_e_ontario_ws_p3_tt
@@ -12217,6 +12426,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_no_navy_without_quebecs_assent
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_navy_deferred
@@ -12273,6 +12483,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_the_plains_of_abraham_bought
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
@@ -12339,6 +12550,7 @@ focus_tree = {
 		x = 101
 		y = 0
 		cost = 8
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -12434,6 +12646,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_army_keep_the_general_officer_commanding
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -12496,6 +12709,7 @@ focus_tree = {
 			focus = CANDNC_army_the_south_african_contingents
 		}
 		mutually_exclusive = { focus = CANDNC_army_the_militia_act }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -12561,6 +12775,7 @@ focus_tree = {
 			focus = CANDNC_army_keep_the_general_officer_commanding
 		}
 		mutually_exclusive = { focus = CANDNC_army_liable_to_serve_abroad }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_shield_of_our_own_homes
@@ -12651,6 +12866,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_army_service_within_the_dominion
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -12722,6 +12938,7 @@ focus_tree = {
 			focus = CANDNC_army_service_within_the_dominion
 			focus = CANDNC_army_liable_to_serve_abroad
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -12775,6 +12992,7 @@ focus_tree = {
 			focus = CANDNC_army_service_within_the_dominion
 			focus = CANDNC_army_liable_to_serve_abroad
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -12839,6 +13057,7 @@ focus_tree = {
 			focus = CANDNC_army_service_within_the_dominion
 			focus = CANDNC_army_liable_to_serve_abroad
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 15000
@@ -12969,6 +13188,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_army_the_royal_military_college
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 15000
@@ -13021,6 +13241,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_army_the_first_canadian_chief_of_staff
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -13093,6 +13314,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_army_take_over_the_imperial_fortresses
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -13160,6 +13382,7 @@ focus_tree = {
 			focus = CANDNC_army_the_strathcona_trust
 		}
 		mutually_exclusive = { focus = CANDNC_army_the_lee_enfield }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			466 = {
@@ -13228,6 +13451,7 @@ focus_tree = {
 			focus = CANDNC_army_the_strathcona_trust
 		}
 		mutually_exclusive = { focus = CANDNC_army_the_ross_rifle }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 25
@@ -13293,6 +13517,7 @@ focus_tree = {
 			focus = CANDNC_army_the_ross_rifle
 			focus = CANDNC_army_the_lee_enfield
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			466 = {
@@ -13354,6 +13579,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_army_a_permanent_force_worth_the_name
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 25000
@@ -13447,6 +13673,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_army_the_dominion_arsenal }
 		mutually_exclusive = { focus = CANDNC_army_a_nation_of_marksmen }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_corps_commander_role = {
@@ -13545,6 +13772,7 @@ focus_tree = {
 		x = 108
 		y = 0
 		cost = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			464 = { add_extra_state_shared_building_slots = 2 }
@@ -13626,6 +13854,7 @@ focus_tree = {
 			focus = CANDNC_navy_the_new_zealand_example
 			focus = CANDNC_navy_no_naval_policy_without_the_people
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			464 = {
@@ -13698,6 +13927,7 @@ focus_tree = {
 			focus = CANDNC_navy_a_navy_under_our_own_flag
 			focus = CANDNC_navy_no_naval_policy_without_the_people
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = large_increase }
@@ -13762,6 +13992,7 @@ focus_tree = {
 			focus = CANDNC_navy_a_navy_under_our_own_flag
 			focus = CANDNC_navy_the_new_zealand_example
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_no_ships_without_the_people
@@ -13817,6 +14048,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_navy_order_from_the_british_yards
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_built_on_canadian_ways
@@ -13898,6 +14130,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_navy_the_yards_at_halifax_and_esquimalt
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 25
@@ -13965,6 +14198,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_navy_the_new_zealand_example }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -14034,6 +14268,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_navy_no_naval_policy_without_the_people
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			469 = {
@@ -14114,6 +14349,7 @@ focus_tree = {
 			focus = CANDNC_navy_the_yards_at_halifax_and_esquimalt
 			focus = CANDNC_navy_order_from_the_british_yards
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 25
@@ -14186,6 +14422,7 @@ focus_tree = {
 			focus = CANDNC_navy_the_yards_at_halifax_and_esquimalt
 			focus = CANDNC_navy_order_from_the_british_yards
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 25
@@ -14236,6 +14473,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_navy_a_permanent_naval_service
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			464 = {
@@ -14303,6 +14541,7 @@ focus_tree = {
 			focus = CANDNC_navy_the_coastal_wireless_stations
 		}
 		mutually_exclusive = { focus = CANDNC_navy_a_naval_militia }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 50
@@ -14354,6 +14593,7 @@ focus_tree = {
 			focus = CANDNC_navy_a_naval_militia
 			focus = CANDNC_navy_a_permanent_naval_service
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_naval_commander_role = {
@@ -14449,6 +14689,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_navy_the_naval_service_act }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -14533,6 +14774,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_navy_the_naval_service_act }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -14589,6 +14831,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_navy_dreadnoughts_for_the_empire
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			464 = {
@@ -14725,6 +14968,7 @@ focus_tree = {
 			focus = CANDNC_navy_the_royal_naval_college
 		}
 		mutually_exclusive = { focus = CANDNC_navy_a_fleet_unit_of_our_own }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = large_increase }
@@ -14817,6 +15061,7 @@ focus_tree = {
 		x = 115
 		y = 0
 		cost = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 30000
@@ -14900,6 +15145,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_eco_the_last_best_west }
 		mutually_exclusive = { focus = CANDNC_eco_wheat_for_the_continent }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_imperial_granary
@@ -15002,6 +15248,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_eco_the_last_best_west }
 		mutually_exclusive = { focus = CANDNC_eco_wheat_for_the_empire }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_r_the_continental_granary
@@ -15108,6 +15355,7 @@ focus_tree = {
 			focus = CANDNC_eco_wheat_for_the_continent
 		}
 		mutually_exclusive = { focus = CANDNC_eco_a_british_west }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 40000
@@ -15182,6 +15430,7 @@ focus_tree = {
 			focus = CANDNC_eco_wheat_for_the_continent
 		}
 		mutually_exclusive = { focus = CANDNC_eco_the_sheepskin_coat_men }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_a_british_west
@@ -15263,6 +15512,7 @@ focus_tree = {
 			focus = CANDNC_eco_the_sheepskin_coat_men
 			focus = CANDNC_eco_a_british_west
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -15390,6 +15640,7 @@ focus_tree = {
 		x = 120
 		y = 0
 		cost = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -15485,6 +15736,7 @@ focus_tree = {
 			focus = CANDNC_eco_bounties_of_iron_and_steel
 		}
 		mutually_exclusive = { focus = CANDNC_eco_one_road_is_enough }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -75
@@ -15597,6 +15849,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_eco_three_roads_to_the_pacific
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_debt_not_taken
@@ -15679,6 +15932,7 @@ focus_tree = {
 			focus = CANDNC_eco_three_roads_to_the_pacific
 			focus = CANDNC_eco_one_road_is_enough
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -15775,6 +16029,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_eco_the_syndicate_at_the_falls
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_peoples_current
@@ -15845,6 +16100,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_eco_the_railway_commission }
 		mutually_exclusive = { focus = CANDNC_eco_power_at_cost }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_r_the_syndicate_at_the_falls
@@ -15927,6 +16183,7 @@ focus_tree = {
 			focus = CANDNC_eco_power_at_cost
 			focus = CANDNC_eco_the_syndicate_at_the_falls
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_resource = {
@@ -16060,6 +16317,7 @@ focus_tree = {
 		x = 125
 		y = 0
 		cost = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_r_the_national_policy
@@ -16139,6 +16397,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_eco_the_national_policy }
 		mutually_exclusive = { focus = CANDNC_eco_the_road_south }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -16248,6 +16507,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_eco_the_national_policy }
 		mutually_exclusive = { focus = CANDNC_eco_the_tariff_wall }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -16358,6 +16618,7 @@ focus_tree = {
 			focus = CANDNC_eco_the_tariff_wall
 			focus = CANDNC_eco_the_road_south
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -16427,6 +16688,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_eco_the_bank_act_revision }
 		mutually_exclusive = { focus = CANDNC_eco_a_public_currency }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -16511,6 +16773,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_eco_leave_it_to_the_chartered_banks
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_dominion_note
@@ -16589,6 +16852,7 @@ focus_tree = {
 			focus = CANDNC_eco_leave_it_to_the_chartered_banks
 			focus = CANDNC_eco_a_public_currency
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -16674,6 +16938,7 @@ focus_tree = {
 		x = 130
 		y = 0
 		cost = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 25
@@ -16746,6 +17011,7 @@ focus_tree = {
 			focus = CANDNC_air_the_aerial_experiment_association
 		}
 		mutually_exclusive = { focus = CANDNC_air_a_service_for_the_empire }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 25
@@ -16823,6 +17089,7 @@ focus_tree = {
 			focus = CANDNC_air_the_aerial_experiment_association
 		}
 		mutually_exclusive = { focus = CANDNC_air_a_service_for_the_country }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -16910,6 +17177,7 @@ focus_tree = {
 			focus = CANDNC_air_a_service_for_the_country
 			focus = CANDNC_air_a_service_for_the_empire
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 25
@@ -16968,6 +17236,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_air_the_tetrahedral_kites }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 50
@@ -17052,6 +17321,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_air_the_silver_dart }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			276 = {
@@ -17111,6 +17381,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_air_the_petawawa_trials }
 		mutually_exclusive = { focus = CANDNC_air_no_use_for_the_aeroplane }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 35
@@ -17184,6 +17455,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = CANDNC_air_the_petawawa_trials }
 		mutually_exclusive = { focus = CANDNC_air_a_militia_aviation_branch }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -17246,6 +17518,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_air_a_militia_aviation_branch }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 25
@@ -17313,6 +17586,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_air_no_use_for_the_aeroplane }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_wings_under_other_flags
@@ -17368,6 +17642,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_air_the_royal_flying_corps_canada
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			air_experience = 50
@@ -17494,6 +17769,7 @@ focus_tree = {
 			focus = CANDNC_air_the_canadian_aerodrome_company
 		}
 		mutually_exclusive = { focus = CANDNC_air_a_flying_corps_of_our_own }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			276 = {
@@ -17604,6 +17880,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		prerequisite = { focus = CANDNC_air_the_flying_canadians }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = large_increase }
@@ -17679,6 +17956,7 @@ focus_tree = {
 			focus = CANDNC_c_unrestricted_reciprocity
 			focus = CANDNC_d_not_one_more_man_for_the_transvaal
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		available = { has_country_flag = CAN_dnc_question_posed }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -17744,6 +18022,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_other_ocean }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_increase }
@@ -17791,6 +18070,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_other_ocean }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -17832,6 +18112,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_p_under_the_umbrella_of_the_alliance
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -17882,6 +18163,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_silk_tea_and_steamers }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_silk_express
@@ -17959,6 +18241,7 @@ focus_tree = {
 			focus = CANDNC_p_a_commissioner_at_yokohama
 			focus = CANDNC_p_the_silk_trains
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -18007,6 +18290,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_a_minister_sails_for_tokyo }
 		mutually_exclusive = { focus = CANDNC_p_signed_in_our_own_name }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_autonomy_ratio = {
@@ -18047,6 +18331,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_a_minister_sails_for_tokyo }
 		mutually_exclusive = { focus = CANDNC_p_the_ambassador_countersigns }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_autonomy_ratio = {
@@ -18091,6 +18376,7 @@ focus_tree = {
 			focus = CANDNC_p_the_ambassador_countersigns
 			focus = CANDNC_p_signed_in_our_own_name
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_p_the_japanese_treaty
@@ -18170,6 +18456,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_treaty_in_force }
 		mutually_exclusive = { focus = CANDNC_p_the_city_keeps_our_paper }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_p_yen_capital
@@ -18214,6 +18501,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_treaty_in_force }
 		mutually_exclusive = { focus = CANDNC_p_the_yokohama_specie_bank }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_lombard_street_terms
@@ -18256,6 +18544,7 @@ focus_tree = {
 			focus = CANDNC_p_the_yokohama_specie_bank
 			focus = CANDNC_p_the_city_keeps_our_paper
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -18306,6 +18595,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_treaty_in_force }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = JAP modifier = medium_decrease }
@@ -18353,6 +18643,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_p_the_kings_peace_and_a_quiet_word
 		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -18398,6 +18689,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_city_against_the_treaty }
 		mutually_exclusive = { focus = CANDNC_p_break_the_exclusion_league }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -75
@@ -18428,6 +18720,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_break_the_exclusion_league }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 25000
@@ -18468,6 +18761,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_door_stays_open }
 		mutually_exclusive = { focus = CANDNC_p_keels_from_kure }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -18533,6 +18827,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_door_stays_open }
 		mutually_exclusive = { focus = CANDNC_p_the_rising_sun_at_esquimalt }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 50
@@ -18596,6 +18891,7 @@ focus_tree = {
 			focus = CANDNC_p_the_rising_sun_at_esquimalt
 			focus = CANDNC_p_keels_from_kure
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -18657,6 +18953,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_a_legation_in_tokyo }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_naval_commander_role = {
@@ -18805,6 +19102,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_p_the_kings_peace_and_a_quiet_word
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_gentlemens_agreement
@@ -18843,6 +19141,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_hayashi_understanding }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = medium_increase }
@@ -18889,6 +19188,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p_trade_without_the_flag }
 		prerequisite = { focus = CANDNC_p_five_hundred_miles_closer }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_p_the_entrepot
@@ -18933,6 +19233,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_p_the_entrepot_of_the_north_pacific
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_naval_commander_role = {
@@ -19074,6 +19375,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_customs_union }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_one_dollar_tt
@@ -19131,6 +19433,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_one_dollar_for_the_continent
 		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -19171,6 +19474,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_customs_union }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 20000
@@ -19233,6 +19537,7 @@ focus_tree = {
 			focus = CANDNC_c_hills_lines_from_st_paul
 			focus = CANDNC_c_the_border_posts_come_down
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 150
@@ -19307,6 +19612,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_border_posts_come_down }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 50
@@ -19378,6 +19684,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_imperial_preference_lapses
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = small_decrease }
@@ -19452,6 +19759,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_loan_denied_in_london }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 150
@@ -19502,6 +19810,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_silver_dart_bought }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			464 = {
@@ -19561,6 +19870,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_a_wall_against_both }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -19634,6 +19944,7 @@ focus_tree = {
 			focus = CANDNC_d_a_wall_against_both
 			focus = CANDNC_d_otters_general_staff
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -19721,6 +20032,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_border_garrisons }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -25
@@ -19792,6 +20104,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_pacific_gateway }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -19854,6 +20167,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_p2_a_battalion_from_powell_street
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -19923,6 +20237,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_p2_joint_keels_at_esquimalt_and_kure
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 50
@@ -20006,6 +20321,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_pacific_squadron }
 		mutually_exclusive = { focus = CANDNC_p2_the_panhandle_bargain }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -20084,6 +20400,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_pacific_defence_compact
 		}
 		mutually_exclusive = { focus = CANDNC_p2_a_power_in_our_own_right }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = ENG modifier = large_increase }
@@ -20137,6 +20454,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_pacific_defence_compact
 		}
 		mutually_exclusive = { focus = CANDNC_p2_the_empires_pacific_gate }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_autonomy_ratio = {
@@ -20196,6 +20514,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_empires_pacific_gate
 			focus = CANDNC_p2_a_power_in_our_own_right
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_pacific_recognized
@@ -20322,6 +20641,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_the_pacific_gateway }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -20377,6 +20697,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_victoria_conference }
 		mutually_exclusive = { focus = CANDNC_p2_a_thumb_on_the_scale }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -20433,6 +20754,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_victoria_conference }
 		mutually_exclusive = { focus = CANDNC_p2_the_honest_broker }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = JAP modifier = large_increase }
@@ -20496,6 +20818,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_honest_broker
 			focus = CANDNC_p2_a_thumb_on_the_scale
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -20558,6 +20881,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_rate_war
 			focus = CANDNC_p2_the_gentlemens_conference
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_war_support = 0.10
@@ -20610,6 +20934,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_white_fleet_off_esquimalt
 		}
 		mutually_exclusive = { focus = CANDNC_p2_the_modus_vivendi }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -20668,6 +20993,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_white_fleet_off_esquimalt
 		}
 		mutually_exclusive = { focus = CANDNC_p2_hold_the_line }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -20734,6 +21060,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_p2_the_pacific_defence_compact
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_state_claim = 463
@@ -20798,6 +21125,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_panhandle_bargain }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		available = { has_country_flag = CAN_dnc_panhandle_sold }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -20841,6 +21169,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_two_markets_one_dominion }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			276 = { }
@@ -20890,6 +21219,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p_two_markets_one_dominion }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			470 = {
@@ -20944,6 +21274,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_silk_trains }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			swap_ideas = {
@@ -20994,6 +21325,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_yen_finishes_the_line }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 20000
@@ -21032,6 +21364,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_empress_run }
 		mutually_exclusive = { focus = CANDNC_p2_the_gentlemens_conference }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -21079,6 +21412,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_the_empress_run }
 		mutually_exclusive = { focus = CANDNC_p2_the_rate_war }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -21128,6 +21462,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_villages_on_the_skeena }
 		mutually_exclusive = { focus = CANDNC_p2_the_company_coast }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -21179,6 +21514,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_villages_on_the_skeena }
 		mutually_exclusive = { focus = CANDNC_p2_a_province_in_two_tongues }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -21223,6 +21559,7 @@ focus_tree = {
 			focus = CANDNC_p2_the_rate_war
 			focus = CANDNC_p2_the_gentlemens_conference
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			466 = {
@@ -21284,6 +21621,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_p2_all_the_silk_of_asia }
 		prerequisite = { focus = CANDNC_p2_the_modus_vivendi }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_golden_corridor
@@ -21402,6 +21740,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c_the_junior_partner_by_default
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			276 = {
@@ -21455,6 +21794,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_permanent_tariff_board }
 		mutually_exclusive = { focus = CANDNC_c2_let_the_zollverein_ripen }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_halfway_house
@@ -21506,6 +21846,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_permanent_tariff_board }
 		mutually_exclusive = { focus = CANDNC_c2_a_zollverein_and_no_more }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -21560,6 +21901,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_a_zollverein_and_no_more }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_c2_perpetual_treaty
@@ -21602,6 +21944,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_let_the_zollverein_ripen }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = medium_increase }
@@ -21652,6 +21995,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_treaty_made_perpetual }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_two_flags_tt
@@ -21747,6 +22091,7 @@ focus_tree = {
 			focus = CANDNC_c_the_dollar_comes_north
 			focus = CANDNC_c_under_the_monroe_doctrine
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -21807,6 +22152,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_c2_the_continental_secretariat
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			471 = {
@@ -21877,6 +22223,7 @@ focus_tree = {
 			focus = CANDNC_c_the_northern_associate
 			focus = CANDNC_c_the_junior_partner_by_default
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_state_claim = 331
@@ -21925,6 +22272,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_newfoundland_at_the_door }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = small_increase }
@@ -21965,6 +22313,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_the_northern_associate }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_treaty_of_relations_tt
@@ -22019,6 +22368,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_treaty_of_relations }
 		mutually_exclusive = { focus = CANDNC_c2_the_garrison_remains_ours }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -22058,6 +22408,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_treaty_of_relations }
 		mutually_exclusive = { focus = CANDNC_c2_the_esquimalt_lease }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_garrisons_kept
@@ -22129,6 +22480,7 @@ focus_tree = {
 			focus = CANDNC_c2_the_esquimalt_lease
 			focus = CANDNC_c2_the_garrison_remains_ours
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -22170,6 +22522,7 @@ focus_tree = {
 			focus = CANDNC_c2_the_league_against_the_treaty
 		}
 		mutually_exclusive = { focus = CANDNC_c2_take_back_the_treaty }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = USA modifier = large_increase }
@@ -22243,6 +22596,7 @@ focus_tree = {
 			focus = CANDNC_c2_the_league_against_the_treaty
 		}
 		mutually_exclusive = { focus = CANDNC_c2_ask_for_the_stars }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_our_own_signatures_freedom
@@ -22297,6 +22651,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_take_back_the_treaty }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -22352,6 +22707,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_advisers_go_home }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_guarantee_outgrown_tt
@@ -22468,6 +22824,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_c_nine_new_states }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_c2_statehood_transition
@@ -22524,6 +22881,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_stars_sewn_on }
 		mutually_exclusive = { focus = CANDNC_c2_party_men_not_a_bloc }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -22581,6 +22939,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_c2_the_stars_sewn_on }
 		mutually_exclusive = { focus = CANDNC_c2_the_northern_bloc }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_committee_chairs
@@ -22634,6 +22993,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_c2_free_passage_for_the_irreconcilables
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 15000
@@ -22679,6 +23039,7 @@ focus_tree = {
 			focus = CANDNC_c2_party_men_not_a_bloc
 		}
 		mutually_exclusive = { focus = CANDNC_c2_the_loyalists_reconciled }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNATIONAL_TRADE }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -22728,6 +23089,7 @@ focus_tree = {
 			focus = CANDNC_c2_the_loyalists_reconciled
 			focus = CANDNC_c2_free_passage_for_the_irreconcilables
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
@@ -22776,6 +23138,7 @@ focus_tree = {
 			focus = CANDNC_c2_the_continental_delegations
 			focus = CANDNC_c2_ask_for_the_stars
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_long_way_tt
@@ -22876,6 +23239,7 @@ focus_tree = {
 			focus = CANDNC_c2_the_quebec_clause_at_the_court
 			focus = CANDNC_c2_the_long_way_to_the_union
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_president_north_tt
@@ -22987,6 +23351,7 @@ focus_tree = {
 			focus = CANDNC_d_the_kingdom_of_canada_proclaimed
 			focus = CANDNC_d_the_republic_of_canada_proclaimed
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_d2_armed_neutrality
@@ -23058,6 +23423,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_d2_the_permanent_force_of_the_fortress
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_d2_swiss_militia
@@ -23134,6 +23500,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_d2_a_militia_after_the_swiss_pattern
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_d2_fortress_force
@@ -23234,6 +23601,7 @@ focus_tree = {
 			focus = CANDNC_d2_a_militia_after_the_swiss_pattern
 			focus = CANDNC_d2_the_permanent_force_of_the_fortress
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -23299,6 +23667,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d2_the_doctrine_of_armed_neutrality
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -23381,6 +23750,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d2_the_mosquito_flotilla }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -23466,6 +23836,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d2_the_ross_perfected }
 		prerequisite = { focus = CANDNC_d2_the_fessenden_net }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			army_experience = 35
@@ -23544,6 +23915,7 @@ focus_tree = {
 			focus = CANDNC_d2_the_hermit_dominion
 			focus = CANDNC_d2_the_empire_of_the_cold
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_garrison_state
@@ -23715,6 +24087,7 @@ focus_tree = {
 			focus = CANDNC_d_a_wall_against_both
 			focus = CANDNC_d_nothing_bought_abroad
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -23773,6 +24146,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d2_emparons_nous_de_lindustrie
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -25
@@ -23839,6 +24213,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d2_the_white_coal_of_the_people
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_d2_nitrogen
@@ -23892,6 +24267,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d2_emparons_nous_de_lindustrie
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -25
@@ -23952,6 +24328,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_cobalt_reserve }
 		mutually_exclusive = { focus = CANDNC_d2_a_bank_upon_gold }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -23987,6 +24364,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d_the_cobalt_reserve }
 		mutually_exclusive = { focus = CANDNC_d2_a_bank_upon_silver }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -24030,6 +24408,7 @@ focus_tree = {
 			focus = CANDNC_d2_the_trust_of_three_forges
 		}
 		mutually_exclusive = { focus = CANDNC_d2_the_narrow_door }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 40000
@@ -24073,6 +24452,7 @@ focus_tree = {
 			focus = CANDNC_d2_the_trust_of_three_forges
 		}
 		mutually_exclusive = { focus = CANDNC_d2_bring_home_the_mill_hands }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.10
@@ -24121,6 +24501,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d_a_wall_against_both }
 		mutually_exclusive = { focus = CANDNC_d2_the_grain_growers_defied }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -50
@@ -24162,6 +24543,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d_a_wall_against_both }
 		mutually_exclusive = { focus = CANDNC_d2_the_public_elevators }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -24225,6 +24607,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_d2_the_georgian_bay_ship_canal
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -25
@@ -24277,6 +24660,7 @@ focus_tree = {
 			focus = CANDNC_d2_a_bank_upon_gold
 		}
 		mutually_exclusive = { focus = CANDNC_d2_the_hudson_bay_railway }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -25
@@ -24328,6 +24712,7 @@ focus_tree = {
 			focus = CANDNC_d2_the_hudson_bay_railway
 			focus = CANDNC_d2_the_georgian_bay_ship_canal
 		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_manpower = 25000
@@ -24356,6 +24741,7 @@ focus_tree = {
 			focus = CANDNC_d_the_kingdom_of_canada_proclaimed
 			focus = CANDNC_d_the_republic_of_canada_proclaimed
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -24404,6 +24790,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		prerequisite = { focus = CANDNC_d2_constables_in_the_ice }
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -24440,6 +24827,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = CANDNC_d2_the_poirier_sector }
 		prerequisite = { focus = CANDNC_d2_the_fessenden_net }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			navy_experience = 35
@@ -24505,6 +24893,7 @@ focus_tree = {
 			focus = CANDNC_d2_the_garrison_state
 			focus = CANDNC_d2_the_empire_of_the_cold
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_hermit_dominion
@@ -24591,6 +24980,7 @@ focus_tree = {
 			focus = CANDNC_d2_the_garrison_state
 			focus = CANDNC_d2_the_hermit_dominion
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_empire_of_cold
@@ -24683,6 +25073,7 @@ focus_tree = {
 		cost = 20
 		prerequisite = { focus = CANDNC_a_monks_motion }
 		mutually_exclusive = { focus = CANDNC_a_the_dominion_waits }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_case_by_case
@@ -24725,6 +25116,7 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_e_a_country_of_two_nations }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 75
@@ -24773,6 +25165,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_e_le_nationaliste_and_the_acjc
 		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = -25
@@ -24822,6 +25215,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_e_the_representation_act_amended
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = CAN_fx_the_sixty_five
@@ -24868,6 +25262,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CANDNC_e_the_tercentenary_of_1608_a_french_fete
 		}
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 50
@@ -24917,6 +25312,7 @@ focus_tree = {
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_separatist_crisis }
 		mutually_exclusive = { focus = CANDNC_e_the_riot_act_in_montreal }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 		available = { has_country_flag = CAN_dnc_e_crisis_open }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
