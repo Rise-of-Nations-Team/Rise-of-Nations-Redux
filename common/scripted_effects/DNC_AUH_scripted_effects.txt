@@ -10476,3 +10476,13 @@ AUH_redl_smoke_seen = {
 		max = 4
 	}
 }
+
+AUH_dnc_months_tick = {
+	if = {
+		limit = {
+			NOT = { has_variable = AUH_dnc_months }
+		}
+		set_variable = { AUH_dnc_months = 0 }
+	}
+	add_to_variable = { var = AUH_dnc_months value = 1 }
+}
