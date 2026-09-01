@@ -3142,6 +3142,190 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ITADNC_arm_the_question_of_succession
+		relative_position_id = ITADNC_arm_the_promotion_lists
+		x = 2
+		y = 1
+		prerequisite = { focus = ITADNC_arm_the_promotion_lists focus = ITADNC_arm_the_school_of_the_regiment }
+		icon = GFX_focus_generic_improve_the_administration_2
+		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_POLITICAL_CHARACTER }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			set_country_flag = ITA_arm_succession_opened
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_pollio_keeps_the_staff
+		relative_position_id = ITADNC_arm_the_question_of_succession
+		x = 2
+		y = 1
+		prerequisite = { focus = ITADNC_arm_the_question_of_succession }
+		mutually_exclusive = { focus = ITADNC_arm_spingardi_at_the_ministry focus = ITADNC_arm_cadornas_hour }
+		icon = GFX_focus_ITA_capo_supremo
+		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_reformist
+			}
+			modifier = {
+				factor = 0.3
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+		}
+		completion_reward = {
+			army_experience = 25
+			set_country_flag = ITA_arm_the_continuity_school
+			if = {
+				limit = { has_character = ITA_alberto_pollio }
+				custom_effect_tooltip = ITA_arm_tt_pollio_stays
+				add_advisor_role = {
+					character = ITA_alberto_pollio
+					advisor = {
+						slot = army_chief
+						cost = 100
+						idea_token = ITA_arm_pollio_confirmed
+						ledger = army
+						traits = { army_chief_reform_2 }
+					}
+					activate = no
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_continuity_school
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_to_variable = { var = ITA_vienna_trust value = 5 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_spingardi_at_the_ministry
+		relative_position_id = ITADNC_arm_the_question_of_succession
+		x = 4
+		y = 1
+		prerequisite = { focus = ITADNC_arm_the_question_of_succession }
+		mutually_exclusive = { focus = ITADNC_arm_pollio_keeps_the_staff focus = ITADNC_arm_cadornas_hour }
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+			modifier = {
+				factor = 0.5
+				has_country_flag = ITA_dnc_path_reformist
+			}
+		}
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			set_country_flag = ITA_arm_the_administrators_school
+			if = {
+				limit = { has_character = ITA_paolo_spingardi }
+				custom_effect_tooltip = ITA_arm_tt_spingardi_reorganizes
+				add_advisor_role = {
+					character = ITA_paolo_spingardi
+					advisor = {
+						slot = high_command
+						cost = 100
+						idea_token = ITA_arm_spingardi_confirmed
+						ledger = army
+						traits = { army_artillery_2 }
+					}
+					activate = no
+				}
+			}
+			550 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_arm_tb_the_administrators_office
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = ITADNC_arm_cadornas_hour
+		relative_position_id = ITADNC_arm_the_question_of_succession
+		x = 6
+		y = 1
+		prerequisite = { focus = ITADNC_arm_the_question_of_succession }
+		mutually_exclusive = { focus = ITADNC_arm_pollio_keeps_the_staff focus = ITADNC_arm_spingardi_at_the_ministry }
+		icon = GFX_focus_generic_army_doctrines_2
+		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_country_flag = ITA_dnc_path_sonnino
+			}
+			modifier = {
+				factor = 0.3
+				has_country_flag = ITA_dnc_path_giolitti
+			}
+		}
+		completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			set_country_flag = ITA_arm_the_offensive_school
+			if = {
+				limit = { has_character = ITA_luigi_cadorna }
+				custom_effect_tooltip = ITA_arm_tt_cadorna_takes_the_staff
+				add_advisor_role = {
+					character = ITA_luigi_cadorna
+					advisor = {
+						slot = army_chief
+						cost = 100
+						idea_token = ITA_arm_cadorna_confirmed
+						ledger = army
+						traits = { army_chief_offensive_2 }
+					}
+					activate = no
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = ITA_arm_tb_the_offensive_school
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			subtract_from_variable = { var = ITA_vienna_trust value = 8 }
+			clamp_variable = {
+				var = ITA_vienna_trust
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = ITA_w_vienna_trust_tt
+		}
+	}
+
+	focus = {
 		id = ITADNC_arm_the_alpine_frontier
 		relative_position_id = ITADNC_arm_the_cadre_establishment
 		x = 0
@@ -3957,6 +4141,7 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_arm_the_plan_against_the_ally focus = ITADNC_arm_never_again_milan focus = ITADNC_arm_the_army_gives_way focus = ITADNC_arm_the_ascari_regiments }
 		icon = GFX_goal_generic_occupy_start_war
 		cost = 5
+		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
@@ -6457,6 +6642,13 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_w_the_loyal_third focus = ITADNC_w_prinettis_note_to_paris }
 		icon = GFX_goal_generic_demand_territory
 		cost = 5
+		bypass = {
+			owns_state = 867
+			owns_state = 993
+			owns_state = 736
+		}
+		cancel_if_invalid = yes
+		will_lead_to_war_with = AUH
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		available = {
 			has_country_flag = ITA_w_alliance_denounced
@@ -6618,7 +6810,6 @@ focus_tree = {
 		mutually_exclusive = { focus = ITADNC_w_the_two_colonies }
 		icon = GFX_focus_generic_adriatic_sea_focus
 		cost = 5
-		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -6654,13 +6845,13 @@ focus_tree = {
 				category = naval_doctrine
 			}
 			country_event = { id = ita_dnc.509 days = 10 }
-					if = {
+			if = {
 				limit = { NOT = { owns_state = 44 } }
 				add_state_claim = 44
 			}
 			custom_effect_tooltip = ITA_w_tt_valona_claimed
 			add_named_threat = { threat = 2 name = ITA_w_threat_valona }
-}
+		}
 	}
 
 	focus = {
@@ -6931,6 +7122,11 @@ focus_tree = {
 		mutually_exclusive = { focus = ITADNC_w_the_treaty_with_menelik }
 		icon = GFX_goal_generic_major_war
 		cost = 5
+		bypass = {
+			NOT = { country_exists = ETH }
+		}
+		cancel_if_invalid = yes
+		will_lead_to_war_with = ETH
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
 		available = {
 			ETH = { exists = yes }
@@ -7014,7 +7210,6 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = {
 			OTT = { exists = yes }
@@ -7055,7 +7250,7 @@ focus_tree = {
 				category = naval_equipment
 			}
 			add_opinion_modifier = { target = ENG modifier = medium_increase }
-					if = {
+			if = {
 				limit = { NOT = { owns_state = 448 } }
 				add_state_claim = 448
 			}
@@ -7069,7 +7264,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ITA_w_tt_tripoli_claimed
 			add_named_threat = { threat = 2 name = ITA_w_threat_tripoli }
-}
+		}
 	}
 
 	focus = {
@@ -7081,6 +7276,14 @@ focus_tree = {
 		mutually_exclusive = { focus = ITADNC_w_the_banco_di_roma_instead }
 		icon = GFX_goal_generic_occupy_start_war
 		cost = 5
+		bypass = {
+			OR = {
+				NOT = { country_exists = OTT }
+				has_war_with = OTT
+			}
+		}
+		cancel_if_invalid = yes
+		will_lead_to_war_with = OTT
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		available = {
 			has_country_flag = ITA_w_tripoli_opened
@@ -7298,18 +7501,13 @@ focus_tree = {
 				}
 			}
 			country_event = { id = ita_dnc.506 days = 5 }
-					if = {
+			if = {
 				limit = { NOT = { owns_state = 164 } }
 				add_state_claim = 164
 			}
 			custom_effect_tooltip = ITA_w_tt_islands_claimed
-			create_wargoal = {
-				type = take_state_focus
-				target = OTT
-				generator = { 164 }
-			}
 			add_named_threat = { threat = 3 name = ITA_w_threat_islands }
-}
+		}
 	}
 
 	focus = {
@@ -7421,7 +7619,7 @@ focus_tree = {
 				days = 20
 			}
 			custom_effect_tooltip = ITA_w_ouchy_tt
-					if = {
+			if = {
 				limit = { owns_state = 448 }
 				add_state_core = 448
 			}
@@ -7434,7 +7632,7 @@ focus_tree = {
 				add_state_core = 663
 			}
 			custom_effect_tooltip = ITA_w_tt_ouchy_cored
-}
+		}
 	}
 
 	focus = {
@@ -7539,7 +7737,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-					if = {
+			if = {
 				limit = { owns_state = 448 }
 				add_state_core = 448
 			}
@@ -7552,7 +7750,7 @@ focus_tree = {
 				add_state_core = 663
 			}
 			custom_effect_tooltip = ITA_w_tt_fourth_shore_cored
-}
+		}
 	}
 	focus = {
 		id = ITADNC_z_the_chamber_adjourned_indefinitely
@@ -11295,13 +11493,13 @@ focus_tree = {
 			ITA_chamber_bands = yes
 			country_event = { id = ita_dnc.1106 days = 10 }
 			country_event = { id = ita_dnc.863 days = 25 }
-					promote_character = ITA_giovanni_giolitti
+			promote_character = ITA_giovanni_giolitti
 			set_party_name = {
 				ideology = democratic
 				long_name = ITA_liberal_left_long
 				name = ITA_liberal_left
 			}
-}
+		}
 	}
 
 	focus = {
@@ -12039,7 +12237,7 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-					promote_character = ITA_vittorio_emanuele_iii
+			promote_character = ITA_vittorio_emanuele_iii
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
@@ -12049,7 +12247,7 @@ focus_tree = {
 				long_name = ITA_constitutional_right_long
 				name = ITA_constitutional_right
 			}
-}
+		}
 	}
 
 	focus = {
@@ -12908,14 +13106,14 @@ focus_tree = {
 			ITA_piazza_bands = yes
 			ITA_chamber_bands = yes
 			country_event = { id = ita_dnc.1317 days = 20 }
-					promote_character = ITA_francesco_saverio_nitti
+			promote_character = ITA_francesco_saverio_nitti
 			set_party_name = {
 				ideology = democratic
 				long_name = ITA_popular_bloc_long
 				name = ITA_popular_bloc
 			}
 			set_cosmetic_tag = ITA_ALL
-}
+		}
 	}
 
 	focus = {
@@ -13089,7 +13287,12 @@ focus_tree = {
 		prerequisite = { focus = ITADNC_z_the_idea_nazionale focus = ITADNC_z_the_paper_read_aloud focus = ITADNC_z_the_lecture_and_the_lantern focus = ITADNC_z_the_association_of_the_nation }
 		icon = GFX_goal_generic_demand_territory
 		cost = 5
-		will_lead_to_war_with = AUH
+		bypass = {
+			owns_state = 867
+			owns_state = 993
+			owns_state = 736
+		}
+		cancel_if_invalid = yes
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = {
 			factor = 8
@@ -13131,7 +13334,7 @@ focus_tree = {
 			ITA_piazza_bands = yes
 			ITA_chamber_bands = yes
 			country_event = { id = ita_dnc.1403 days = 35 }
-					if = {
+			if = {
 				limit = { NOT = { owns_state = 867 } }
 				add_state_claim = 867
 			}
@@ -13145,7 +13348,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ITA_z_tt_provinces_claimed
 			add_named_threat = { threat = 4 name = ITA_z_threat_provinces }
-}
+		}
 	}
 
 	focus = {
@@ -13911,12 +14114,12 @@ focus_tree = {
 				name = ITA_z_threat_the_country_that_cannot_climb_down
 			}
 			country_event = { id = ita_dnc.1413 days = 20 }
-					create_wargoal = {
+			create_wargoal = {
 				type = take_claimed_state
 				target = AUH
 			}
 			add_named_threat = { threat = 5 name = ITA_z_threat_no_climbdown }
-}
+		}
 	}
 
 	focus = {
@@ -13928,7 +14131,11 @@ focus_tree = {
 		mutually_exclusive = { focus = ITADNC_z_the_schools_beyond_the_frontier }
 		icon = GFX_goal_generic_navy_battleship
 		cost = 5
-		will_lead_to_war_with = AUH
+		bypass = {
+			owns_state = 163
+			owns_state = 939
+		}
+		cancel_if_invalid = yes
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
 		ai_will_do = { factor = 8 }
 		completion_reward = {
@@ -13971,7 +14178,7 @@ focus_tree = {
 			ITA_piazza_bands = yes
 			ITA_chamber_bands = yes
 			country_event = { id = ita_dnc.1414 days = 25 }
-					if = {
+			if = {
 				limit = { NOT = { owns_state = 163 } }
 				add_state_claim = 163
 			}
@@ -13981,7 +14188,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ITA_z_tt_adriatic_claimed
 			add_named_threat = { threat = 4 name = ITA_z_threat_adriatic }
-}
+		}
 	}
 
 	focus = {
@@ -14045,7 +14252,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 			country_event = { id = ita_dnc.1415 days = 15 }
-					promote_character = ITA_enrico_corradini
+			promote_character = ITA_enrico_corradini
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
@@ -14085,7 +14292,7 @@ focus_tree = {
 				add_state_core = 44
 			}
 			custom_effect_tooltip = ITA_z_tt_greater_italy_cored
-}
+		}
 	}
 
 	focus = {
