@@ -12,6 +12,7 @@ focus_tree = {
 	default = no
 	reset_on_civilwar = no
 	continuous_focus_position = { x = 50 y = 2600 }
+	alternate_icon_set = FOCUS_ICON_SET_HISTORICAL_KEY_FOCUS
 
 	shortcut = {
 		name = BEL_dnc_political_sc
@@ -236,6 +237,8 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_a_the_terms_of_cession focus = BELDNC_a_the_kings_price }
 		icon = GFX_focus_generic_court
 		available = { country_exists = COG }
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 4
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 10 }
@@ -4095,7 +4098,6 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_arm_name_no_enemy }
 		icon = GFX_goal_generic_position_armies
 		cost = 5
-		will_lead_to_war_with = GER
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 3 }
 		completion_reward = {
@@ -6603,7 +6605,6 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = yes
-		will_lead_to_war_with = HOL
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 6 }
 		completion_reward = {
@@ -8801,6 +8802,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = BELDNC_g_the_letter_from_london focus = BELDNC_g_the_letter_from_berlin }
 		icon = GFX_goal_generic_neutrality_focus
+		alternate_icon = GFX_focus_generic_home_defense
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 6 }
@@ -9709,7 +9711,10 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = BELDNC_a_the_terms_of_cession focus = BELDNC_a_the_kings_price }
 		icon = GFX_focus_generic_annex_country
+		alternate_icon = GFX_focus_generic_conference
 		available = { country_exists = COG }
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 		ai_will_do = { factor = 30 }
@@ -10010,6 +10015,8 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_register_rewritten focus = BELDNC_k_the_vote_the_party_fears }
 		icon = GFX_focus_generic_annex_country
 		available = { country_exists = COG }
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 4
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
@@ -10237,6 +10244,8 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_register_rewritten focus = BELDNC_k_the_vote_the_party_fears }
 		icon = GFX_CANDNC_goal_generic_parliament
 		available = { country_exists = COG }
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 4
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -10279,6 +10288,8 @@ focus_tree = {
 		prerequisite = { focus = BELDNC_k_the_register_rewritten focus = BELDNC_k_the_vote_the_party_fears }
 		icon = GFX_focus_generic_diplomatic_treaty
 		available = { country_exists = COG }
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 4
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -10434,6 +10445,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = BELDNC_k_the_register_rewritten focus = BELDNC_k_the_vote_the_party_fears }
 		icon = GFX_goal_generic_parliament
+		alternate_icon = GFX_focus_generic_annex_country
 		available = {
 			country_exists = COG
 			check_variable = {
@@ -10442,6 +10454,8 @@ focus_tree = {
 				compare = greater_than_or_equals
 			}
 		}
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 15 }
@@ -11635,6 +11649,8 @@ focus_tree = {
 		mutually_exclusive = { focus = BELDNC_r_the_understanding_with_berlin }
 		icon = GFX_focus_ITA_a_colonial_empire
 		available = { country_exists = COG }
+		bypass = { NOT = { country_exists = COG } }
+		cancel_if_invalid = yes
 		cost = 4.5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 5 }

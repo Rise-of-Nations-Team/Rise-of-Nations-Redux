@@ -4476,10 +4476,486 @@ country_event = {
 	}
 }
 
-Twelve country_event blocks (bel_dnc.900, .902, .904, .905, .910, .911, .912, .913, .920, .930, .931, .935) are written in full, brace-balanced and loc-complete, at:
-C:\Users\Admin\AppData\Local\Temp\claude\C--Users-Admin-Documents-lolcoach\95a94c32-7fe6-4056-96c4-b1e4da4a937c\scratchpad\events.txt
-Every id referenced by a focus exists in that file and vice versa (verified). Example block:
+country_event = {
+	id = bel_dnc.900
+	title = bel_dnc.900.t
+	desc = bel_dnc.900.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.900.a
+		ai_chance = { factor = 55 }
+		add_political_power = 40
+		add_stability = 0.03
+		set_country_flag = BEL_p_joint_commission
+		if = {
+			limit = { country_exists = HOL }
+			add_opinion_modifier = {
+				target = HOL
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = HOL
+				value = 40
+			}
+		}
 
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_settlement }
+			add_political_power = 25
+			custom_effect_tooltip = BEL_tt_the_settlement_governs
+		}
+	}
+
+	option = {
+		name = bel_dnc.900.b
+		ai_chance = { factor = 45 }
+		add_political_power = -25
+		add_war_support = 0.03
+		add_named_threat = {
+			threat = 1
+			name = BEL_p_the_kingdom_raises_the_scheldt
+		}
+		if = {
+			limit = { country_exists = HOL }
+			add_opinion_modifier = {
+				target = HOL
+				modifier = small_decrease
+			}
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_crown }
+			add_to_variable = { var = BEL_a_prerogative value = 6 }
+			BEL_a_dials = yes
+			custom_effect_tooltip = BEL_tt_the_crown_governs
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.902
+	title = bel_dnc.902.t
+	desc = bel_dnc.902.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.902.a
+		ai_chance = { factor = 70 }
+		add_stability = 0.03
+		navy_experience = 15
+		if = {
+			limit = { country_exists = HOL }
+			add_opinion_modifier = {
+				target = HOL
+				modifier = medium_increase
+			}
+		}
+
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_two_peoples }
+			subtract_from_variable = { var = BEL_flemish value = 4 }
+			BEL_dnc_dials = yes
+			custom_effect_tooltip = BEL_tt_two_peoples_in_law
+		}
+	}
+
+	option = {
+		name = bel_dnc.902.b
+		ai_chance = { factor = 30 }
+		add_political_power = 25
+		add_war_support = -0.02
+		add_manpower = 3000
+		custom_effect_tooltip = BEL_p_the_hague_keeps_the_pilotage_tt
+	}
+}
+country_event = {
+	id = bel_dnc.904
+	title = bel_dnc.904.t
+	desc = bel_dnc.904.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.904.a
+		ai_chance = { factor = 60 }
+		navy_experience = 20
+		6 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				province = 6560
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { country_exists = ENG }
+			add_opinion_modifier = {
+				target = ENG
+				modifier = small_decrease
+			}
+			custom_effect_tooltip = BEL_p_london_measures_the_mole_tt
+		}
+	}
+
+	option = {
+		name = bel_dnc.904.b
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_war_support = 0.03
+		6 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = BEL_f_redoubt_works_done }
+			BEL_f_stage_done = yes
+			custom_effect_tooltip = BEL_tt_the_redoubt_exists
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.905
+	title = bel_dnc.905.t
+	desc = bel_dnc.905.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.905.a
+		ai_chance = { factor = 60 }
+		add_manpower = 5000
+		navy_experience = 15
+		add_political_power = -25
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_two_peoples }
+			subtract_from_variable = { var = BEL_flemish value = 5 }
+			BEL_dnc_dials = yes
+			custom_effect_tooltip = BEL_tt_two_peoples_in_law
+		}
+
+		else_if = {
+			limit = { has_country_flag = BEL_dnc_path_unitary }
+			add_to_variable = { var = BEL_flemish value = 4 }
+			BEL_dnc_dials = yes
+			custom_effect_tooltip = BEL_tt_one_kingdom_one_law
+		}
+	}
+
+	option = {
+		name = bel_dnc.905.b
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_stability = 0.02
+		custom_effect_tooltip = BEL_tt_nobody_has_settled_this
+	}
+}
+country_event = {
+	id = bel_dnc.910
+	title = bel_dnc.910.t
+	desc = bel_dnc.910.d
+	picture = GFX_report_event_generic_cabinet_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.910.a
+		ai_chance = { factor = 50 }
+		add_political_power = -25
+		subtract_from_variable = { var = BEL_scandal value = 6 }
+		add_to_variable = { var = BEL_chamber_congo value = 6 }
+		BEL_dnc_dials = yes
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_cartel }
+			add_to_variable = { var = BEL_chamber_congo value = 6 }
+			BEL_dnc_dials = yes
+			custom_effect_tooltip = BEL_tt_the_cartel_governs
+		}
+	}
+
+	option = {
+		name = bel_dnc.910.b
+		ai_chance = { factor = 50 }
+		add_political_power = 40
+		BEL_estate_deny = yes
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_crown }
+			add_to_variable = { var = BEL_a_prerogative value = 8 }
+			BEL_a_dials = yes
+			custom_effect_tooltip = BEL_tt_the_crown_governs
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.911
+	title = bel_dnc.911.t
+	desc = bel_dnc.911.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.911.a
+		ai_chance = { factor = 55 }
+		add_political_power = -40
+		add_stability = 0.03
+		subtract_from_variable = { var = BEL_scandal value = 10 }
+		add_to_variable = { var = BEL_chamber_congo value = 8 }
+		BEL_dnc_dials = yes
+		if = {
+			limit = { country_exists = ENG }
+			add_opinion_modifier = {
+				target = ENG
+				modifier = medium_increase
+			}
+		}
+	}
+
+	option = {
+		name = bel_dnc.911.b
+		ai_chance = { factor = 45 }
+		add_political_power = 50
+		add_to_variable = { var = BEL_scandal value = 5 }
+		subtract_from_variable = { var = BEL_chamber_congo value = 6 }
+		BEL_dnc_dials = yes
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_settlement }
+			add_stability = 0.02
+			custom_effect_tooltip = BEL_tt_the_settlement_governs
+		}
+
+		else_if = {
+			limit = { has_country_flag = BEL_dnc_path_crown }
+			add_to_variable = { var = BEL_a_prerogative value = 6 }
+			BEL_a_dials = yes
+			custom_effect_tooltip = BEL_tt_the_crown_governs
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.913
+	title = bel_dnc.913.t
+	desc = bel_dnc.913.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.913.a
+		ai_chance = { factor = 65 }
+		army_experience = 20
+		add_manpower = 10000
+		add_command_power = 20
+		subtract_from_variable = { var = BEL_scandal value = 6 }
+		BEL_dnc_dials = yes
+		set_country_flag = BEL_k_warrants_issued
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_cartel }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			custom_effect_tooltip = BEL_tt_the_cartel_governs
+		}
+	}
+
+	option = {
+		name = bel_dnc.913.b
+		ai_chance = { factor = 35 }
+		add_political_power = 25
+		add_stability = 0.02
+		army_experience = 10
+		custom_effect_tooltip = BEL_tt_the_settlement_governs
+	}
+}
+country_event = {
+	id = bel_dnc.920
+	title = bel_dnc.920.t
+	desc = bel_dnc.920.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.920.a
+		ai_chance = { factor = 50 }
+		add_political_power = 40
+		add_stability = 0.03
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_settlement }
+			add_political_power = 25
+			custom_effect_tooltip = BEL_tt_the_settlement_governs
+		}
+	}
+
+	option = {
+		name = bel_dnc.920.b
+		ai_chance = { factor = 50 }
+		add_political_power = -50
+		add_stability = -0.04
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		set_country_flag = BEL_s_letter_answered_from_the_tribune
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_cartel }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			custom_effect_tooltip = BEL_s_the_bishops_speak_against_the_ministry_tt
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.930
+	title = bel_dnc.930.t
+	desc = bel_dnc.930.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.930.a
+		ai_chance = { factor = 55 }
+		add_political_power = -40
+		add_stability = 0.04
+		subtract_from_variable = { var = BEL_walloon value = 5 }
+		BEL_dnc_dials = yes
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_cartel }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02
+			}
+			custom_effect_tooltip = BEL_b_the_inspectors_are_believed_tt
+		}
+	}
+
+	option = {
+		name = bel_dnc.930.b
+		ai_chance = { factor = 45 }
+		add_political_power = 40
+		34 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_to_variable = { var = BEL_walloon value = 4 }
+		BEL_dnc_dials = yes
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_settlement }
+			add_stability = 0.02
+			custom_effect_tooltip = BEL_b_the_inspectors_are_few_tt
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.931
+	title = bel_dnc.931.t
+	desc = bel_dnc.931.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.931.a
+		ai_chance = { factor = 45 }
+		add_stability = -0.05
+		add_to_variable = { var = BEL_walloon value = 8 }
+		add_to_variable = { var = BEL_a_strikes value = 1 }
+		BEL_a_dials = yes
+		BEL_dnc_dials = yes
+		add_named_threat = {
+			threat = 1
+			name = BEL_b_the_basin_is_held_by_the_gendarmerie
+		}
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_crown }
+			add_political_power = 40
+			custom_effect_tooltip = BEL_tt_the_crown_governs
+		}
+	}
+
+	option = {
+		name = bel_dnc.931.b
+		ai_chance = { factor = 55 }
+		add_political_power = -50
+		add_stability = 0.03
+		subtract_from_variable = { var = BEL_walloon value = 6 }
+		BEL_dnc_dials = yes
+		clr_country_flag = BEL_b_gendarmes_posted
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_cartel }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			custom_effect_tooltip = BEL_tt_the_cartel_governs
+		}
+	}
+}
+country_event = {
+	id = bel_dnc.935
+	title = bel_dnc.935.t
+	desc = bel_dnc.935.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bel_dnc.935.a
+		ai_chance = { factor = 50 }
+		add_political_power = 40
+		army_experience = 20
+		set_country_flag = BEL_g_replies_compared
+		if = {
+			limit = { has_country_flag = BEL_f_threat_east }
+			add_war_support = 0.03
+			custom_effect_tooltip = BEL_tt_a_danger_is_named
+		}
+
+		else = {
+			add_stability = 0.02
+			custom_effect_tooltip = BEL_tt_no_danger_is_named
+		}
+	}
+
+	option = {
+		name = bel_dnc.935.b
+		ai_chance = { factor = 50 }
+		add_political_power = -40
+		add_stability = -0.03
+		add_war_support = 0.05
+		army_experience = 30
+		add_command_power = 25
+		set_country_flag = BEL_g_replies_published
+		if = {
+			limit = { has_country_flag = BEL_dnc_path_cartel }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			custom_effect_tooltip = BEL_tt_the_cartel_governs
+		}
+
+		else_if = {
+			limit = { has_country_flag = BEL_dnc_path_crown }
+			add_to_variable = { var = BEL_a_prerogative value = 6 }
+			BEL_a_dials = yes
+			custom_effect_tooltip = BEL_g_the_replies_are_not_laid_before_the_house_tt
+		}
+	}
+}
 country_event = {
 	id = bel_dnc.912
 	title = bel_dnc.912.t
