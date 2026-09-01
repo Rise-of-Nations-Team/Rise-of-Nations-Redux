@@ -1824,6 +1824,14 @@ focus_tree = {
 			}
 			set_country_flag = AUH_dnc_era_end
 			custom_effect_tooltip = AUH_a_era_end_tt
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			create_country_leader = {
+				character = AUH_karl_i
+				ideology = constitutional_monarchism
+			}
 		}
 	}
 
@@ -3371,6 +3379,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = AUHDNC_arm_the_recruit_contingent }
 		icon = GFX_focus_generic_diverse_army
+		alternate_icon = GFX_focus_generic_soldier_salute
 		cost = 7.5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = {
@@ -5452,6 +5461,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = AUHDNC_bp_the_meeting_at_buchlovice }
 		icon = GFX_focus_AUS_proclaim_austrian_empire
+		alternate_icon = GFX_focus_generic_conference
 		cost = 10
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY }
 		available = {
@@ -8824,6 +8834,15 @@ focus_tree = {
 			custom_effect_tooltip = AUH_h_cores_of_the_crown_tt
 			set_country_flag = AUH_h_personal_union_declared
 			custom_effect_tooltip = AUH_h_cosmetic_union_tt
+			set_cosmetic_tag = AUH_HUN
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			create_country_leader = {
+				character = AUH_gyula_andrassy
+				ideology = dual_monarchy
+			}
 			set_country_flag = AUH_dnc_era_end
 			country_event = { id = auh_clock.164 days = 3 }
 			add_to_variable = { AUH_gemeinsamkeit = -20 }
@@ -10252,6 +10271,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INTERNATIONAL_TRADE }
+		bypass = { NOT = { country_exists = OTT } }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_ideas = AUH_m_the_gesture_of_moderation
@@ -10368,6 +10388,14 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = AUH_dnc_era_end
 			set_country_flag = AUH_m_the_army_above_the_nations
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			create_country_leader = {
+				character = AUH_conrad_von_hotzendorf
+				ideology = militarism
+			}
 			swap_ideas = {
 				remove_idea = AUH_m_the_sword_settles_it
 				add_idea = AUH_m_an_army_above_the_nations
@@ -10524,11 +10552,14 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		cost = 7.5
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		will_lead_to_war_with = SER
+		will_lead_to_war_with = MNT
 		available = {
 			has_country_flag = AUH_m_the_window_is_open
 			has_country_flag = AUH_m_conrad_at_the_staff
 			country_exists = SER
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			swap_ideas = {
@@ -10787,6 +10818,7 @@ focus_tree = {
 		x = 176
 		y = 0
 		icon = GFX_focus_generic_adriatic_sea_focus
+		alternate_icon = GFX_goal_generic_national_unity
 		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = {
@@ -13735,6 +13767,14 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = AUH_dnc_era_end
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			create_country_leader = {
+				character = AUH_franz_joseph_i
+				ideology = semi_constitutional_monarchy
+			}
 			add_manpower = 20000
 			army_experience = 50
 			add_command_power = 50
@@ -14630,6 +14670,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		cost = 3
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		will_lead_to_war_with = SER
 		allow_branch = { has_country_flag = AUH_clock_bell_konak }
 		available = {
 			has_completed_focus = AUHDNC_arm_the_army_bill
@@ -14639,6 +14680,7 @@ focus_tree = {
 			}
 			country_exists = SER
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -15094,6 +15136,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 8 }
 		completion_reward = {
 			add_political_power = 75
@@ -16106,6 +16149,15 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = AUH_dnc_era_end
 			custom_effect_tooltip = AUH_b_third_crown_era_tt
+			set_cosmetic_tag = AUH_USG
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			create_country_leader = {
+				character = AUH_franz_ferdinand_i
+				ideology = catholic_monarchism
+			}
 			add_political_power = 75
 			add_to_variable = { var = AUH_gemeinsamkeit value = 5 }
 			clamp_variable = {
@@ -17869,6 +17921,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
 		available = { country_exists = SER }
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -18272,6 +18325,7 @@ focus_tree = {
 			country_exists = SER
 			NOT = { has_war_with = SER }
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -18403,6 +18457,7 @@ focus_tree = {
 			country_exists = GER
 			NOT = { has_war_with = GER }
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			set_country_flag = AUH_bp_berlin_cover
@@ -18475,6 +18530,7 @@ focus_tree = {
 		cost = 7.5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 		available = { country_exists = ITA }
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_command_power = 25
@@ -18577,6 +18633,7 @@ focus_tree = {
 			NOT = { has_war_with = ITA }
 			NOT = { has_country_flag = AUH_clock_messina_war }
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -18663,6 +18720,7 @@ focus_tree = {
 			country_exists = ITA
 			NOT = { has_war_with = ITA }
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			set_country_flag = AUH_bp_the_seventh_article_paid
@@ -18923,6 +18981,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		cost = 3
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		will_lead_to_war_with = ITA
 		allow_branch = { has_country_flag = AUH_clock_messina_fired }
 		available = {
 			country_exists = ITA
@@ -18956,6 +19015,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -19042,6 +19102,7 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 3
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		will_lead_to_war_with = OTT
 		allow_branch = { has_country_flag = AUH_sanjak_line_built }
 		available = {
 			country_exists = OTT
@@ -19074,6 +19135,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -19167,6 +19229,7 @@ focus_tree = {
 		icon = GFX_focus_generic_polish_deal
 		cost = 4
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		will_lead_to_war_with = RUS
 		allow_branch = {
 			OR = {
 				has_country_flag = AUH_clock_bell_east
@@ -19196,6 +19259,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -19891,6 +19955,7 @@ focus_tree = {
 				country_exists = GAL
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -10
@@ -19939,6 +20004,7 @@ focus_tree = {
 				country_exists = UKR
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			add_political_power = -10
@@ -19992,6 +20058,7 @@ focus_tree = {
 				country_exists = SLO
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			add_political_power = -20
@@ -20057,6 +20124,7 @@ focus_tree = {
 			NOT = { has_country_flag = AUH_z_march_running }
 			country_exists = HUN
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			add_political_power = -25
@@ -20972,6 +21040,7 @@ focus_tree = {
 				has_country_flag = AUH_eco_the_tauern_is_open
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_ideas = AUH_two_roads_to_the_sea
@@ -21249,6 +21318,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available = { owns_state = 91 }
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			set_country_flag = AUH_eco_the_field_is_open
@@ -21318,6 +21388,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		available = { owns_state = 887 }
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 3 }
 		completion_reward = {
 			add_ideas = AUH_eco_the_institute_of_radium
@@ -21419,6 +21490,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -21749,6 +21821,7 @@ focus_tree = {
 				compare = greater_than_or_equals
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -21834,6 +21907,7 @@ focus_tree = {
 				compare = greater_than_or_equals
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			set_country_flag = AUH_g_the_old_right_revived
@@ -21929,6 +22003,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -22060,6 +22135,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -22195,6 +22271,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 4 }
 		completion_reward = {
 			set_country_flag = AUH_g_the_coin_is_common
@@ -22296,6 +22373,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 6 }
 		completion_reward = {
 			set_country_flag = AUH_g_mitteleuropa_crowned
@@ -22636,6 +22714,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -22700,6 +22779,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		cost = 10
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		will_lead_to_war_with = GER
 		available = {
 			country_exists = GER
 			NOT = { has_war_with = GER }
@@ -22724,6 +22804,7 @@ focus_tree = {
 				has_country_flag = AUH_arm_the_new_military_law_passed
 			}
 		}
+		cancel_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 			modifier = {
