@@ -8928,12 +8928,18 @@ focus_tree = {
 		prerequisite = {
 			focus = CANDNC_d_the_imperial_preference_lapses
 		}
+		will_lead_to_war_with = USA
+		bypass = {
+			463 = { is_owned_by = CAN }
+		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 		available = {
 			has_country_flag = CAN_dnc_independent
 			NOT = { is_subject = yes }
 			NOT = { has_war_with = USA }
 		}
+		cancel = { is_subject = yes }
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = CAN_r_the_border_redrawn_by_hand_tt
@@ -9235,6 +9241,9 @@ focus_tree = {
 		y = 1
 		cost = 15
 		prerequisite = { focus = CANDNC_d_marquis_wheat }
+		bypass = {
+			ENG = { NOT = { owns_state = 331 } }
+		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 		available = {
 			has_country_flag = CAN_dnc_independent
@@ -9430,7 +9439,7 @@ focus_tree = {
 			set_country_flag = CAN_dnc_sovereign
 			set_country_flag = CAN_dnc_end_sovereign_kingdom
 			set_country_flag = CAN_dnc_kingdom
-			set_cosmetic_tag = CAN_OLD
+			set_cosmetic_tag = CAN_KOC
 			add_manpower = 20000
 			navy_experience = 25
 			add_command_power = 25
@@ -9533,7 +9542,7 @@ focus_tree = {
 			set_country_flag = CAN_dnc_sovereign
 			set_country_flag = CAN_dnc_end_sovereign_republic
 			set_country_flag = CAN_dnc_republic
-			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CAN_REP
 			add_manpower = 20000
 			army_experience = 25
 			navy_experience = 25
@@ -11540,10 +11549,13 @@ focus_tree = {
 		y = 1
 		cost = 20
 		prerequisite = { focus = CANDNC_e_the_riot_act_in_montreal }
+		will_lead_to_war_with = QUE
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH }
 		available = {
 			NOT = { has_war_with = QUE }
 		}
+		cancel = { has_war_with = QUE }
+		cancel_if_invalid = yes
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_country_flag = CAN_dnc_era_end
