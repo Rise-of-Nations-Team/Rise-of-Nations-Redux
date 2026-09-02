@@ -1,0 +1,84 @@
+on_actions = {
+	on_monthly_AUH = {
+		effect = {
+			AUH_dnc_months_tick = yes
+			if = {
+				limit = {
+					has_country_flag = AUH_dnc_ausgleich_open
+					NOT = { has_country_flag = AUH_dnc_union_dissolved }
+				}
+				AUH_dnc_ausgleich_monthly = yes
+			}
+		}
+	}
+
+	on_monthly_AUH = {
+		effect = {
+			if = {
+				limit = {
+					tag = AUH
+					has_variable = AUH_register_erosion
+				}
+				AUH_nat_monthly = yes
+				add_to_variable = { var = AUH_clock_months value = 1 }
+				subtract_from_variable = { AUH_old_man_health = 0.5 }
+				if = {
+					limit = { has_variable = AUH_old_man_decay_bonus }
+					subtract_from_variable = { AUH_old_man_health = AUH_old_man_decay_bonus }
+				}
+				clamp_variable = {
+					var = AUH_old_man_health
+					min = 0
+					max = 100
+				}
+				AUH_clock_check = yes
+				AUH_war_clock_check = yes
+				AUH_nat_register_pulse = yes
+				AUH_house_pulse = yes
+				AUH_eco_treasury_month = yes
+				random_list = {
+					780 = { }
+					17 = {
+						country_event = { id = auh_court.1 }
+					}
+					17 = {
+						country_event = { id = auh_court.2 }
+					}
+					17 = {
+						country_event = { id = auh_court.3 }
+					}
+					17 = {
+						country_event = { id = auh_court.4 }
+					}
+					17 = {
+						country_event = { id = auh_court.5 }
+					}
+					17 = {
+						country_event = { id = auh_court.6 }
+					}
+					17 = {
+						country_event = { id = auh_court.7 }
+					}
+					17 = {
+						country_event = { id = auh_court.8 }
+					}
+					17 = {
+						country_event = { id = auh_court.9 }
+					}
+					17 = {
+						country_event = { id = auh_court.10 }
+					}
+					17 = {
+						country_event = { id = auh_court.11 }
+					}
+					17 = {
+						country_event = { id = auh_court.12 }
+					}
+					17 = {
+						country_event = { id = auh_court.13 }
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,182 @@
+AUH_dnc_nationalities_cat = {
+	icon = generic_political_actions
+	priority = 60
+	allowed = { original_tag = AUH }
+	visible = { has_variable = AUH_register_erosion }
+	visible_when_empty = no
+}
+
+AUH_dnc_delegations_cat = {
+	icon = generic_economy
+	priority = 59
+	allowed = { original_tag = AUH }
+	visible = { has_country_flag = AUH_dnc_question_posed }
+	visible_when_empty = no
+}
+
+AUH_dnc_serbia_ladder_cat = {
+	icon = border_conflicts
+	priority = 58
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		has_country_flag = AUH_clock_bell_konak
+		country_exists = SER
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_county_instruments_cat = {
+	icon = generic_crisis
+	priority = 57
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		OR = {
+			check_variable = {
+				var = AUH_county_resistance
+				value = 0
+				compare = greater_than
+			}
+			has_country_flag = AUH_dnc_path_sword
+			has_country_flag = AUH_x_county_instruments_drafted
+		}
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_heirs_chancellery_cat = {
+	icon = generic_monarchism
+	priority = 56
+	allowed = { original_tag = AUH }
+	visible = {
+		has_completed_focus = AUHDNC_b_the_card_index_of_the_heir
+		NOT = { has_country_flag = AUH_old_man_dead }
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_memoranda_cat = {
+	icon = generic_propaganda
+	priority = 55
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		OR = {
+			has_country_flag = AUH_clock_bell_east
+			AND = {
+				check_variable = {
+					var = AUH_forgery_ledger
+					value = 0
+					compare = greater_than
+				}
+				check_variable = {
+					var = AUH_clock_months
+					value = 60
+					compare = greater_than_or_equals
+				}
+			}
+		}
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_collapse_cat = {
+	icon = generic_crisis
+	priority = 52
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		has_country_flag = AUH_z_collapse_cat_open
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_kriegsfaelle_cat = {
+	icon = border_conflicts
+	priority = 54
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		OR = {
+			has_country_flag = AUH_kf_drawer_open
+			has_country_flag = AUH_kf_memoranda_open
+			has_country_flag = AUH_kf_circular_open
+			has_country_flag = AUH_kf_albania_open
+			has_country_flag = AUH_kf_lovcen_open
+			has_country_flag = AUH_kf_hunt_open
+			has_country_flag = AUH_kf_corridor_held
+			has_country_flag = AUH_kf_export_credit_open
+			has_country_flag = AUH_kf_straits_office_open
+			has_country_flag = AUH_kf_press_office_open
+			has_country_flag = AUH_bp_berlin_cover
+			has_country_flag = AUH_bp_the_ally_is_read
+			has_country_flag = AUH_bp_the_seventh_article_paid
+			check_variable = {
+				var = AUH_redl_smoke
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_public_works_cat = {
+	icon = generic_economy
+	priority = 56
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		has_country_flag = AUH_dnc_public_works_open
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_services_cat = {
+	icon = generic_economy
+	priority = 54
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		has_country_flag = AUH_dnc_services_estimates
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_court_calendar_cat = {
+	icon = generic_monarchism
+	priority = 53
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		OR = {
+			has_country_flag = AUH_c_court_calendar_open
+			has_country_flag = AUH_c_scandals_open
+			has_country_flag = AUH_c_sophie_ladder_open
+		}
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_twilight_cat = {
+	icon = generic_crisis
+	priority = 58
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		has_country_flag = AUH_dnc_twilight_open
+	}
+	visible_when_empty = no
+}
+
+AUH_dnc_reconquest_cat = {
+	icon = border_conflicts
+	priority = 57
+	allowed = { original_tag = AUH }
+	visible = {
+		has_country_flag = AUH_dnc_question_posed
+		has_country_flag = AUH_dnc_reconquest_open
+	}
+	visible_when_empty = no
+}
