@@ -35,13 +35,18 @@ ITA_dnc_init = {
 	set_variable = { ITA_e_remittance_cost = 45 }
 	set_variable = { ITA_circular_clock = 18 }
 	set_variable = { ITA_bayonets = 0 }
-	add_dynamic_modifier = { modifier = ITA_p_the_piazza }
-	add_dynamic_modifier = { modifier = ITA_c_the_chamber }
-	add_dynamic_modifier = { modifier = ITA_c_the_crown }
-	ITA_machine_reckon = yes
-	ITA_piazza_bands = yes
-	ITA_chamber_bands = yes
-	ITA_crown_bands = yes
+	hidden_effect = {
+		add_dynamic_modifier = { modifier = ITA_p_the_piazza }
+		add_dynamic_modifier = { modifier = ITA_c_the_chamber }
+		add_dynamic_modifier = { modifier = ITA_c_the_crown }
+		ITA_machine_reckon = yes
+		ITA_piazza_bands = yes
+		ITA_chamber_bands = yes
+		ITA_crown_bands = yes
+	}
+	custom_effect_tooltip = ITA_tt_the_piazza_opens
+	custom_effect_tooltip = ITA_tt_the_chamber_opens
+	custom_effect_tooltip = ITA_tt_the_crown_opens
 }
 
 ITA_machine_reckon = {
