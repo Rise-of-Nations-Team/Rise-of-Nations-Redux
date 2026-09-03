@@ -11,28 +11,4 @@ on_actions = {
 			}
 		}
 	}
-
-	on_monthly_ITA = {
-		effect = {
-			if = {
-				limit = {
-					tag = ITA
-					NOT = { has_country_flag = ITA_dnc_chronicle_off }
-				}
-				ITA_chronicle_check = yes
-			}
-		}
-	}
-
-	on_monthly_ITA = {
-		effect = {
-			if = {
-				limit = {
-					tag = ITA
-					has_country_flag = ITA_dnc_systems_open
-				}
-				ITA_end_month = yes
-			}
-		}
-	}
 }

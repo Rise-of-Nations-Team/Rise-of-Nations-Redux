@@ -37,11 +37,17 @@ ITA_p_the_province_ungoverned = {
 	local_building_slots = -2
 }
 
-ITA_end_the_brittle_kingdom = {
-	icon = GFX_idea_generic_oppression
+ITA_p_the_league_settles = {
+	icon = GFX_idea_generic_agrarian_reform
 	enable = { always = yes }
-	remove_trigger = { has_country_flag = ITA_end_chamber_back }
-	stability_factor = ITA_end_brittle_stab
-	political_power_factor = ITA_end_brittle_pp
-	war_support_factor = ITA_end_brittle_ws
+	recruitable_population_factor = -0.05
+	production_speed_buildings_factor = 0.05
+}
+
+ITA_c_the_crown = {
+	icon = GFX_idea_generic_constitutional_guarantees
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	political_power_factor = ITA_c_crown_pp
+	stability_factor = ITA_c_crown_stab
 }

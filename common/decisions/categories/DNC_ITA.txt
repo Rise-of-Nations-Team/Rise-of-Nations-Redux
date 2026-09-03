@@ -10,7 +10,16 @@ ITA_dnc_chamber_cat = {
 	icon = generic_political_actions
 	priority = 65
 	allowed = { original_tag = ITA }
-	visible = { has_country_flag = ITA_dnc_systems_open }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_completed_focus = ITADNC_g_the_dissolution
+			has_completed_focus = ITADNC_s_the_chambers_dissolved
+			has_completed_focus = ITADNC_r_the_chambers_enter_the_state
+			has_completed_focus = ITADNC_z_the_chamber_tears_the_treaty
+			has_completed_focus = ITADNC_v_the_deputies_nobody_admits
+		}
+	}
 	visible_when_empty = no
 }
 
@@ -18,7 +27,16 @@ ITA_dnc_prefects_cat = {
 	icon = generic_monarchism
 	priority = 60
 	allowed = { original_tag = ITA }
-	visible = { has_country_flag = ITA_dnc_systems_open }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_completed_focus = ITADNC_g_the_prefects_instructed
+			has_completed_focus = ITADNC_s_the_decrees_revived
+			has_completed_focus = ITADNC_r_the_chambers_enter_the_state
+			has_completed_focus = ITADNC_z_the_unredeemed_provinces
+			has_completed_focus = ITADNC_v_the_law_of_guarantees_reread
+		}
+	}
 	visible_when_empty = no
 }
 
@@ -26,7 +44,17 @@ ITA_dnc_south_cat = {
 	icon = generic_economy
 	priority = 55
 	allowed = { original_tag = ITA }
-	visible = { has_country_flag = ITA_dnc_systems_open }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_completed_focus = ITADNC_g_the_law_for_naples
+			has_completed_focus = ITADNC_s_the_south_governed
+			has_completed_focus = ITADNC_r_the_sunday_rest
+			has_completed_focus = ITADNC_r_the_eight_hours
+			has_completed_focus = ITADNC_z_the_emigrant
+			has_completed_focus = ITADNC_v_the_unions_founded
+		}
+	}
 	visible_when_empty = no
 }
 
@@ -34,7 +62,16 @@ ITA_dnc_emigration_cat = {
 	icon = generic_propaganda
 	priority = 50
 	allowed = { original_tag = ITA }
-	visible = { has_country_flag = ITA_dnc_systems_open }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_completed_focus = ITADNC_g_the_commissariat_of_emigration
+			has_completed_focus = ITADNC_s_the_law_of_suspects
+			has_completed_focus = ITADNC_r_the_illiterate_voter
+			has_completed_focus = ITADNC_z_the_emigrant
+			has_completed_focus = ITADNC_v_the_missions_of_the_levant
+		}
+	}
 	visible_when_empty = no
 }
 
@@ -43,5 +80,181 @@ ITA_dnc_consulta_cat = {
 	priority = 45
 	allowed = { original_tag = ITA }
 	visible = { has_country_flag = ITA_dnc_systems_open }
+	visible_when_empty = no
+}
+
+ITA_dnc_crown_cat = {
+	icon = generic_monarchism
+	priority = 44
+	allowed = { original_tag = ITA }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_church_cat = {
+	icon = spr_carlism
+	priority = 42
+	allowed = { original_tag = ITA }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_completed_focus = ITADNC_g_the_divorce_bill
+			has_completed_focus = ITADNC_s_the_altar_and_the_throne
+			has_completed_focus = ITADNC_r_the_answer_to_the_parish
+			has_completed_focus = ITADNC_v_the_law_of_guarantees_reread
+		}
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_bloc_cat = {
+	icon = eng_concessions_to_the_trade_unions
+	priority = 40
+	allowed = { original_tag = ITA }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		has_country_flag = ITA_dnc_path_reformist
+		has_completed_focus = ITADNC_r_the_chambers_enter_the_state
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_irredenta_cat = {
+	icon = border_war
+	priority = 38
+	allowed = { original_tag = ITA }
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_country_flag = ITA_dnc_path_nazionale
+			AND = {
+				has_country_flag = ITA_dnc_path_giolitti
+				has_country_flag = ITA_w_racconigi
+			}
+		}
+	}
+	visible_when_empty = no
+}
+ITA_dnc_colonies_cat = {
+	icon = generic_foreign_policy
+	priority = 35
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_works_cat = {
+	icon = generic_industry
+	priority = 34
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_plans_cat = {
+	icon = military_operation
+	priority = 33
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+		OR = {
+			has_completed_focus = ITADNC_arm_the_plan_against_the_ally
+			has_completed_focus = ITADNC_arm_plan_west
+			has_war = yes
+		}
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_ministry_cat = {
+	icon = generic_political_actions
+	priority = 32
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_press_cat = {
+	icon = generic_propaganda
+	priority = 31
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_country_flag = ITA_dnc_systems_open
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_wars_cat = {
+	icon = generic_arms_trade
+	priority = 30
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_war = yes
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_adriatic_cat = {
+	icon = border_conflicts
+	priority = 29
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		OR = {
+			has_country_flag = ITA_dnc_path_nazionale
+			has_country_flag = ITA_g_antivari
+			has_country_flag = ITA_z_antivari_base
+			has_country_flag = ITA_w_valona_claimed
+		}
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_messina_cat = {
+	icon = generic_crisis
+	priority = 28
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		has_country_flag = ITA_t_messina
+	}
+	visible_when_empty = no
+}
+
+ITA_dnc_siege_cat = {
+	icon = generic_crisis
+	priority = 27
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+		OR = {
+			has_idea = ITA_a_the_state_of_siege
+			has_country_flag = ITA_s_siege
+			has_country_flag = ITA_dnc_path_sonnino
+		}
+	}
 	visible_when_empty = no
 }
