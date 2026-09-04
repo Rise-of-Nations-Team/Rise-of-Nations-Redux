@@ -3775,6 +3775,31 @@ country_event = {
 }
 
 country_event = {
+	id = ita_dnc.2103
+	title = ita_dnc.2103.t
+	desc = ita_dnc.2103.d
+	picture = GFX_report_event_generic_funeral
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ita_dnc.2103.a
+		ai_chance = { factor = 9 }
+		country_event = { id = ita_dnc.2100 hours = 6 }
+	}
+
+	option = {
+		name = ita_dnc.2103.b
+		ai_chance = { factor = 1 }
+		set_country_flag = ITA_ch_monza_survived
+		add_to_variable = { var = ITA_piazza value = 5 }
+		add_to_variable = { var = ITA_crown value = 5 }
+		ITA_piazza_bands = yes
+		ITA_crown_bands = yes
+	}
+}
+
+country_event = {
 	id = ita_dnc.2100
 	title = ita_dnc.2100.t
 	desc = ita_dnc.2100.d
@@ -3833,18 +3858,6 @@ country_event = {
 		}
 		add_war_support = 0.05
 		country_event = { id = ita_dnc.2101 days = 4 }
-	}
-
-	option = {
-		name = ita_dnc.2100.f
-		ai_chance = {
-			factor = 1
-		}
-		set_country_flag = ITA_ch_monza_survived
-		add_to_variable = { var = ITA_piazza value = 5 }
-		add_to_variable = { var = ITA_crown value = 5 }
-		ITA_piazza_bands = yes
-		ITA_crown_bands = yes
 	}
 }
 
